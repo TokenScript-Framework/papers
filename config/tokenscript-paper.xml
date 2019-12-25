@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <deliverable id="pdf">
+    <context name="TokenScript Design Paper">
+      <input href="../src/tokenscript-paper.ditamap"/>
+    </context>
+    <output href="../out/tokenscript-paper"/>
+    <publication transtype="pdf2">
+      <param name="include.rellinks" value="#default external"/>
+      <param name="outputFile.base" value="tokenscript-paper"/>
+      <profile>
+        <ditaval href="pdf.ditaval"/>
+      </profile>
+    </publication>
+  </deliverable>
+</project>
