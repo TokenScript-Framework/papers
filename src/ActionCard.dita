@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_gm1_2hl_mmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>ActionCard</title>
+    <shortdesc>An action card results in a transaction, an attestation or a component of a
+        transaction.</shortdesc>
     <conbody>
-        <p></p>
+        <p>Action card is a type of card that triggers an action in the wallet or dapp browser. They
+            allow a dApp to interact with the most important features of the wallet: The usage of
+            keys. But they are not restricted to this.</p>
+        <p>Action Cards can be triggered by the user, for example by touching a button in the
+            wallet. But they can also be triggered by websites or dApps through JavaScript. They
+            either appear as a pop up in the browser or directly in your wallet. </p>
+        <p>Action Cards never happens on a website or any third party host. Those can just trigger
+            it. Action cards separate operations and websites. In many cases Action Cards can
+            replace a minimalist website, for example when such a website just helps users to do a
+            simple transaction to a smart contract.</p>
+        <p>If you are a token issuer, you probably already have a Dapp website that helps your users
+            to do transactions with your token. With Action Cards the user will be able to do the
+            same in their own wallet or on other website that uses your token (not owned by
+            you).</p>
+        <p>As one example, if you have deposited a token to a DEFI project and want to redeem (or
+            "withdraw") it, this can be done by clicking a button which triggers an action card. </p>
+        <p>Action Cards can trigger onchain operations like transactions. But they also allow a
+            token creator to enable offchain operations: The user can sign a message, start a
+            process to attest his email address, send an authorise to let someone else to use your
+            token (if the underlying token's smart contract accepts such authorisations) or create a
+            deal to share (requires underlying contract's support).</p>
+        <p>Some action cards can only be available in a specific context, like "Show entrance Pass"
+            is an action only available at a gate of a stadium, or "Prolong rental" is only avaiable
+            if you have a car-rental (not your own car).</p>
+        <p>It is possible to use two action cards at the same time or in combination. This is called
+            a deck. One successful Action Card can enable another, or the combination of two action
+            cards can unlock a new operation. </p>
     </conbody>
 </concept>
