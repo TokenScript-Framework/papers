@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_rpz_3jl_mmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>ActivityCard</title>
+    <shortdesc>Activity Card shows relevant blockchain events, as well as relevant off-chain
+        activities</shortdesc>
     <conbody>
-        <p></p>
+        <p>Activity Cards are something like a library of activities. They store data assigned to
+            token and are closely related to Data Objects.</p>
+        <p>In the current version of TokenScript Activity Cards show the history of a token. This
+            might seem trivial. But if you ever used dApps with a standard wallet like MetaMask, you
+            know how important Activity Cards are. Usually the wallet just shows transactions, in
+            best cases, it also shows the token involved. This might be enough for plain value
+            transfers. </p>
+        <p>But if you have token interacting with smart contracts - like, renting a car, lending a
+            token, exchanging tokens and so on - the information of a plain transaction gets close
+            to zero. With Data Objects loaded with an Activity Card, the wallet can become smart: It
+            knows what the transactions did: That they rented a car, lended or exchanged a token and
+            so on. </p>
+        <p>In future releases of TokenScript Activity Cards will support more functions and data
+            objects. They can structure what a user can do with a token, like allowing it to redeem
+            some other token, restricting its transferability or linking it to something which
+            happens in the future.</p>
     </conbody>
 </concept>
