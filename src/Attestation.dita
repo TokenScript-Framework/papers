@@ -2,10 +2,11 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_adj_mnz_mmb">
     <title>Attestation</title>
-    <shortdesc>An attestation is a claim on something which is signed by an attestor. This can be a
-        marriage certificate, a university degree, a nation state ID, an email address, an Ethereum
-        address or anything else.</shortdesc>
+    <shortdesc>An attestation is a claim on something which is signed by an attestor. TokenScript
+        enables wallets to create and manage attestations.</shortdesc>
     <conbody>
+        <p dir="ltr">This can be a marriage certificate, a university degree, a nation state ID, an
+            email address, an Ethereum address or anything else.</p>
         <p dir="ltr">Attestations are usually signed data objects. They are useful on the web: They
             prove identity or possession of something. An email address attestations helps a website
             to be sure that the user owns the email address without having to resort to sending
