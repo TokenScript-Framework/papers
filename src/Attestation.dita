@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_adj_mnz_mmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Attestation</title>
+    <shortdesc>An attestation is a claim on something which is signed by an attestor. This can be a
+        marriage certificate, a university degree, a nation state ID, an email address, an Ethereum
+        address or anything else.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr">Attestations are usually signed data objects. They are useful on the web: They
+            prove identity or possession of something. An email address attestations helps a website
+            to be sure that the user owns the email address without having to resort to sending
+            email verification code. An attestation of a car insurance can be used as a proof when
+            you login on a car sharing platform, an identity attestation can be used to register a
+            bank account, and an attestation of being an accredited investor can be used to
+            streamline user experience of a STO.</p>
+        <p dir="ltr">An attestation is usually signed by an attestor, like a processor of video
+            identification or an email verification service. However, an attestation can be self
+            signed, like having the keys for certain blockchain addresses. In this case the
+            attestation links a dataObject to an address.</p>
+        <p dir="ltr">A standardized attestation format has an enormous potential to smoothly
+            integrate identity and other claims into the web.</p>
     </conbody>
 </concept>
