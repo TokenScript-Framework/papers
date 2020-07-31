@@ -11,28 +11,26 @@
             operations.</p>
         <p>Action Cards can be triggered by a third party. But they never take place on a website or
             a server, but exclusively in the wallet or as a browser pop up in a browser plugin
-            wallet.</p>
-        <p>A third party can only start, but not change an action card. Action Cards transform the
-            way users interact with smart contracts and token. Currently most people visit a
-            website, get the transaction from the website, and sign it with their wallet. Action
-            Cards enable the wallet to built the specific transactions needed to use a smart
-            contracts by itself. </p>
+            wallet. A third party can only start, but not change an action card. </p>
+        <p>Action Cards transform the way users interact with smart contracts and token. Currently
+            most people visit a website, get the transaction from the website, and sign it with
+            their wallet. Action Cards enable the wallet to built the specific transactions needed
+            to use a smart contracts by itself. </p>
         <p>If you are a token issuer, you probably already have a Dapp website that helps your users
             to compose transactions with your token. With Action Cards the user will be able to do
-            the same in their own wallet or on other website that uses your token but are not own by
-            you. As one example, if you have deposited a token to a DEFI project and want to redeem
-            or "withdraw" it, this can be done by clicking a button which triggers an action card,
-            instead of being dependent on a website to create the transaction for you. </p>
-        <p>Action Cards can trigger onchain operations like transactions. But they also allow a
-            token creator to enable offchain operations: The user can sign a message, start a
-            process to attest his email address, send an authorise to let someone else to use your
-            token (if the underlying token's smart contract accepts such authorisations) or create a
-            deal to share (requires underlying contract's support). Action Cards could also be
-            helpful to transfer an asset to second layer networks like sidechain or offchain
-            networks.</p>
-        <p>Some action cards can only be available in a specific context, like "Show entrance Pass"
-            is an action only available at a gate of a stadium, or "Prolong rental" is only
-            available if you have a car-rental (not your own car).</p>
+            the same in their own wallet or on other websites that uses your token but are not owned
+            by you. As one example, if you have deposited a token to a DEFI project and want to
+            redeem or "withdraw" it, this can be done by clicking a button which triggers an action
+            card, instead of being dependent on a website to create the transaction for you. </p>
+        <p>Action Cards can launch onchain operations like transactions. But they also allow a token
+            creator to enable offchain operations: The user can sign a message, start a process to
+            attest his email address, send an authorisation to let someone else use your token (if
+            the underlying token's smart contract accepts such authorisations) or create a deal to
+            share (requires underlying contract's support). Action Cards could also be helpful to
+            transfer an asset to second layer networks like sidechains or offchain networks.</p>
+        <p>Some action cards can only be available in a specific context. For example, if a token
+            represents a soccer game ticket, the action "Show entrance Pass" should only be
+            available at a gate of a stadium.</p>
         <p>It is possible to use two action cards at the same time or in combination. This is called
             a deck. One successful Action Card can enable another, or the combination of two action
             cards can unlock a new operation. </p>
@@ -43,5 +41,24 @@
                 <codeph>&lt;/ts:transaction></codeph></p>
         <p>The Code to create the transaction is stored in a separate file. Visible actions in the
             wallet - like putting specific info in a form - are in the JavaScript file.</p>
+        <p>Here is an example of an Action Card starting an attestation process:</p>
+        <p><codeph>&lt;ts:card type="action" name="attest"></codeph></p>
+        <p><codeph>&lt;ts:label></codeph></p>
+        <p><codeph>&lt;ts:string xml:lang="en">Attestations&lt;/ts:string></codeph></p>
+        <p><codeph>&lt;ts:string xml:lang="zh">认证&lt;/ts:string></codeph></p>
+        <p><codeph>&lt;/ts:label></codeph></p>
+        <p><codeph>&lt;ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"></codeph></p>
+        <p><codeph>&lt;style type="text/css">&amp;style;&lt;/style></codeph></p>
+        <p><codeph>&lt;body>&amp;attestations.en;&lt;/body></codeph></p>
+        <p><codeph>&lt;/ts:view></codeph></p>
+        <p>&lt;/ts:card></p>
+        <p>The attestation process is launched by starting the file attestations.en.shtml. The
+            example is from the <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/Karma"
+                format="html" scope="external">Karmacoin TokenScript demo</xref>.</p>
+        <p>When an action card triggers a transaction, the transaction builder needs to be expressed
+            in another JavaScript file. See for an example <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/blob/master/examples/ENS/recordsBundle.en.js"
+                format="html" scope="external">this file as part of the ENS TokenScript</xref>.</p>
     </conbody>
 </concept>
