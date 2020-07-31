@@ -6,5 +6,15 @@
     <topicref href="TokenScript.dita">
         <topicref href="WhatTokenscriptCanDo.dita"/>
     </topicref>
-    <topicref href="TokenScript-Framework.dita"/>
+    <topicref href="BasicConcepts.dita">
+        <topicref href="TokenScript-Framework.dita"/>
+        <topicref href="Attributes.dita"/>
+        <topicref href="Card.dita">
+            <topicref href="TokenCard.dita"/>
+            <topicref href="ActionCard.dita"/>
+            <topicref href="ActivityCard.dita"/>
+            <topicref href="Attestation.dita"/>
+        </topicref>
+        <topicref href="DataObjects.dita"/>
+    </topicref>
 </map>
