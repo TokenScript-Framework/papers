@@ -6,49 +6,57 @@
         enables wallets to create and manage attestations. This is done by an Attestation
         Card.</shortdesc>
     <conbody>
-        <p dir="ltr">This can be a marriage certificate, a university degree, a nation state ID, an
-            email address, an Ethereum address or anything else.</p>
-        <p dir="ltr">Attestations are usually signed data objects. They are useful on the web: They
-            prove identity or possession of something. An email address attestations helps a website
-            to be sure that the user owns the email address without having to resort to sending
-            email verification code. An attestation of a car insurance can be used as a proof when
-            you login on a car sharing platform, an identity attestation can be used to register a
-            bank account, and an attestation of being an accredited investor can be used to
-            streamline user experience of a STO.</p>
-        <p dir="ltr">An attestation is usually signed by an attestor, like a processor of video
-            identification or an email verification service. However, an attestation can be self
-            signed, like having the keys for certain blockchain addresses. In this case the
-            attestation links a dataObject to an address.</p>
+        <p>Sometimes in an interaction you want the other party to proof something: That he is
+            married, that he has an university degree, that he really is who he claims to be, or
+            just that he has an email or Ethereum address.</p>
+        <p>For example, if you rent a tokenized car, you want to make sure, that the seller has an
+            insurance police on the car. And if you trade something with someone, you might want to
+            be sure that he has verified his identity. And so on. </p>
+        <p>All those cases require an attestation: A data object (or file) which proofs a claim on
+            something. An attestor can attestate an national identity or the possession of an email
+            address, an insurance company can attestate an insurance certificate and so on. Those
+            files attestations are usually signed by an attestor, but in some cases can be self
+            signed, for example when the claim is to own an address of a cryptocurrency.</p>
         <p dir="ltr">A standardized attestation format has an enormous potential to smoothly
-            integrate identity and other claims into the web.</p>
+            integrate identity and other claims into the web and to streamline a lot of processes,
+            like signing up for an exchange, registering a bank account, verifying as an accredited
+            investor for an Security Token Offer.</p>
+        <p>TokenScript fully support the integration of attestation processes, triggered by an
+            action card directly in the wallet. You can integrate an attestation circuit into the
+            life cycle of a token. </p>
         <p><b>Attestation and Token</b></p>
         <p dir="ltr" id="docs-internal-guid-c17d42c9-7fff-776a-6d10-82e4537e3178">Attestation
             doesn’t need blockchain and token, but it can do a lot for a token, while at the same
-            time token makes attestations more powerful.</p>
+            time token make attestations more powerful.</p>
         <p dir="ltr">An attestation can be connected to an Ethereum entity like the holder of a key
             pair. This allows to create cheques - the transfer of coins from a smart contract to
             someone who can provide an attestation for an identifier like an email address. Also,
             attestations of anything can be required to use a smart contract. You could create an
-            ICO smart contract which requires an attestation of being a verified investor, or you
-            could create a car sharing smart contract requiring an attestation of insurance. </p>
+            ICO smart contract which requires an attestation of being a verified investor.</p>
+        <p>Another example is a car sharing platform: To offer her car on a platform, Alice has to
+            provide an insurance attestation. She gets this attestation by using a Card in the
+            TokenScript of her car token, which launches the insurance process straight from the
+            wallet. Since Alice, the car sharing platform and Bob, who rents the car, all have
+            TokenScript installed, they silently validate in each step, if Alice's car is
+            insured.</p>
         <p dir="ltr">Any delivery vs payment operation can integrate any kind of attestation which
             might be required for the process. </p>
-        <p dir="ltr">TokenScript is tailored to use attestations in a wallet and to make them part
-            of the interaction with a token.</p>
         <p><b>Offchain Attestations</b></p>
         <p dir="ltr" id="docs-internal-guid-04a84172-7fff-258d-adc5-22fc03caa689">Attestations are
             usually offchain. They often carry private information, like identity, birth date or
             mobile phone number. This kind of information should never be saved on a public
             blockchain. Offchain attestations are data objects signed by an attestor stored on a
-            local device. </p>
+            local device. However, attestations can also be token, which don't disclose private
+            information, but attest that an attestation was given.</p>
         <p dir="ltr">Attestations can be used to create a proof of attestations which can be part of
             a transaction. For example, if you have a cheque smart contract the receiver needs to
             create a transaction which includes a proof of the attestation of the required
             identifier, like a phone number.</p>
         <p><b>Attestation Format</b></p>
         <p dir="ltr" id="docs-internal-guid-5d145ec5-7fff-8581-76f9-a734957f6ca7">An attestation is
-            a dataObject. The dataObject can contain any information, including public and private
-            information. It can be signed by an Ethereum entity and attested to a token.</p>
+            a <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
+            information, including public and private information. It can be signed by an Ethereum
+            entity and attested to a token.</p>
         <p dir="ltr">Attestations are non-transferable, but transferability can be achieved by
             attesting to another attestation.</p>
         <p dir="ltr">Attestations can be fully expressed by an URI for easy and cross-compatible
