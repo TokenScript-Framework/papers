@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_qz1_23g_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>What Can TokenScript Do?</title>
+    <shortdesc>Explore how TokenScript can help your token, smart contract, dapp or website. This
+        article covers the most relevant features TokenScript can add.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr" id="docs-internal-guid-e32088fa-7fff-9cd2-5782-f31ffa582fc2">TokenScript can do
+            so much that it would be easier to explain what it can’t do. But here are some examples
+            for what TokenScript can add to your wallet:</p>
+        <p dir="ltr"><b>Information</b>: The name of your token and its abbreviation; a tagline or a
+            slogan, translated in most major languages; an API connection, e. G. to a weather
+            station or an exchange. This information can adapt to the context.</p>
+        <p dir="ltr"><b>History</b>: The wallet can show the detailed history of operations a token
+            was involved, both onchain and offchain. Natively a wallet only knows transactions. With
+            TokenScript it can tell the complete history of its token.</p>
+        <p dir="ltr"><b>Create customized transactions</b>: Smart contracts often require users to
+            craft very customized transactions. Mostly this is done by a third party website and
+            signed by your wallet. TokenScript instructs the wallet how to craft these transactions
+            and can display a button to trigger them.</p>
+        <p dir="ltr"><b>Integration with other token</b>: Some operations of your token might
+            require that the user holds another token. For example, a car sharing token might need
+            you to own a car token and an insurance token. TokenScript defines and structures these
+            integrations.</p>
+        <p dir="ltr"><b>Attestations</b>: You might have a use case for your token which requires
+            attestations, be it per e-mail or from a government agency. TokenScript can trigger an
+            attestation process directly in the wallet of the user and allow other parties to verify
+            it. The wallet can store and use any kind of attestation file in privately.</p>
+        <p dir="ltr"><b>Restrict operations</b>: TokenScript can restrict the scope of operations.
+            For examples, if you have a token for a world cup game, you can sell it - but only as
+            long as the game has not ended. TokenScript can define any kind of rule for token
+            transfers and usecases.</p>
+        <p dir="ltr"><b>Proofs</b>: TokenScript allows to add private or public proofs to Token
+            operations. For example, an operation could only be valid if someone proofs to own 1000
+            Ether. With Zero-Knowledge-Proofs this can be done without revealing an address.</p>
     </conbody>
 </concept>
