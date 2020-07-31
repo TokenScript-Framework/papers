@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_nfl_3mg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Deploy TokenScript</title>
+    <shortdesc>After you created a TokenScript, you want wallets to use it. Learn how wallets can
+        get a TokenScript.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr" id="docs-internal-guid-ade3c5c2-7fff-bbb2-f7e3-666b8e29bb00">To be operated in
+            a wallet or any other user agent software, the TokenScript engine is required. Currently
+            it is only integrated in Alphawallet and forks of Alphawallet. In the future a library
+            and a web library will be available for easy integration.</p>
+        <p dir="ltr" id="docs-internal-guid-dba7f87a-7fff-e4aa-0500-0712723876d9">If your
+            TokenScript is signed and uploaded to the TokenScript repository, it’s easy for
+            Alphawallet to know about it: If the user receives a token, Alphawallet will scan the
+            repository for a TokenScript and install it.</p>
+        <p>Other wallets don’t need to implement the whole TokenScript engine or the whole
+            TokenScript. They can fetch it on demand, when a website uses a card, the wallet can
+            download the required part of the TokenScript from the website to process the card. </p>
     </conbody>
 </concept>
