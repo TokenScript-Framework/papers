@@ -21,7 +21,11 @@
             manifold way than a smart contract can do. </p>
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
-        <p>There are 4 kind of cards: Token Cards, Action Cards, Activity Cards, and Attestation
-            Cards.</p>
+        <p>There are 4 kind of cards: <xref href="TokenCard.dita">Token Cards</xref>, <xref
+                href="ActionCard.dita">Action Cards</xref>, <xref href="ActivityCard.dita">Activity
+                Cards</xref>, and <xref href="Attestation.dita">Attestation Cards</xref>.</p>
+        <p><b>Code</b></p>
+        <p>In the Tokenscript XML file cards are declared by
+                <codeph>&lt;ts:cards></codeph>...<codeph>&lt;/ts:cards></codeph></p>
     </conbody>
 </concept>
