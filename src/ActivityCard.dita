@@ -7,21 +7,26 @@
         happened.</shortdesc>
     <conbody>
         <p>In the current version of TokenScript Activity Cards show the history of a token. This
-            might seem trivial, since any wallets connects to a blockchain which is a shared
-            historiy of transactions.</p>
-        <p>But if you ever used dApps with a standard wallet like MetaMask, you know how important
-            Activity Cards are. Usually the wallet just shows transactions, in best cases, it also
-            shows the token involved. This might be enough for plain value transfers. </p>
+            might seem trivial, since any wallets connects to a blockchain, which already serves a
+            shared history of transactions.</p>
+        <p>But if you ever used dApps with a standard wallet, you know how important Activity Cards
+            are. Usually the wallet just shows transactions, in best cases, it also shows the token
+            involved. This might be enough for plain value transfers. </p>
         <p>But if you have token interacting with smart contracts - like, renting a car, lending a
             token, exchanging tokens and so on - the information of a plain transaction gets close
-            to zero. Your wallet simply doesn't understand what happened.</p>
-        <p>An Activity Card is assigned to a token and creates, stores and loads Data Objects. By
-            this, wallets suddenly become smart: They remember not only the transaction, but also
-            the purpose of the transaction - that a user rented a car, lended or exchanged a token
-            and so on. </p>
+            to zero. Your wallet simply doesn't understand what happened. To make it understand what
+            has happened, the wallet developers need to understand each smart contract and implement
+            its logic in the wallet.</p>
+        <p>Activity Cards solve this problem. The card is assigned to a token and creates, stores
+            and loads <xref href="DataObjects.dita"><xref href="DataObjects.dita">Data
+                    Objects</xref></xref>. This makes wallets suddenly smart: They remember not only
+            the transaction, but also the purpose of the transaction - that a user rented a car,
+            lended or exchanged a token and so on. And all the wallet has to do is to download the
+            TokenScript.</p>
         <p>In future releases of TokenScript Activity Cards will support more functions and data
             objects. They can structure what a user can do with a token, like allowing it to redeem
             some other token, restricting its transferability or linking it to something which
             happens in the future.</p>
+        <p><b>Code</b></p>
     </conbody>
 </concept>
