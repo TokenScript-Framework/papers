@@ -4,8 +4,9 @@
     <title>Introduction to TokenScript</title>
     <body>
         <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
-            framework for JavaScript and XML markup which allows the creator of a token or a trusted
-            authority to declare properties of and rules for the token. </p>
+                <xref href="TokenScript-Framework.dita">framework for JavaScript and XML
+                markup</xref> which allows the creator of a token or a trusted authority to declare
+            properties of and rules for the token. </p>
         <p dir="ltr">TokenScript enables <b>token creators</b> to leave the restrictions of smart
             contracts behind. It allows to add a lot of information, even image files or API lookups
             to a token, and design a set of business rules and interaction logics for it, including
@@ -14,23 +15,23 @@
         <p dir="ltr">For <b>wallets</b>, TokenScript levels up their capability as the user agent
             for blockchain interactions. Currently most dApps require a third party website to
             interprete the state of the blockchain and to craft smart contract transactions. When a
-            wallet imports TokenScript, it is able to fully understand the smart contract, add a lot
-            of information about the token and create all kind of complex transactions. TokenScript
-            eliminates the need for third party websites and puts the user at the helmet.</p>
+            wallet imports TokenScript, it learns to fully understand the smart contract, add a lot
+            of information about the token to the GUI and create all kind of complex transactions.
+            TokenScript eliminates the need for third party websites and puts the user at the
+            helmet.</p>
         <p dir="ltr"><b>Web and app developers</b> can import TokenScript into their app. It allows
             them to securely integrate the full scope of token functionality and to trigger specific
             token related actions in the user wallet. Without TokenScript they would need to deeply
-            understand blockchain and smart contracts for this. With TokenScript only a very basic
-            knowledge is required.</p>
-        <p dir="ltr">TokenScript files are signed by the creator of the token smart contract or a
-            trusted source with a public key. Wallets and dApps can import and verify the files.</p>
+            understand blockchain and smart contracts and invest a lot of work to integrate every
+            single token. With TokenScript only a very basic knowledge is required.</p>
+        <p dir="ltr">TokenScript files are <xref href="Signing.dita">signed by the creator of the
+                token smart contract or a trusted source</xref> with a public key. Wallets and dApps
+            can import and verify the files.</p>
         <p dir="ltr">TokenScript is blockchain agnostic. The main focus of our development is based
             on Ethereum token. But it can be adopted to other blockchains and even combine token and
             interactions of different blockchains. </p>
-        <p dir="ltr">This guide will lead you through the process to set up a TokenScript as a token
-            creator and implement it in a wallet or app. It also provides an overview over the
-            concepts of TokenScript and describes the cryptography it uses and the SDK and libraries
-            we created. You also find some examples how TokenScript improves Tokenization, e. G. for
-            carsharing or for soccer cards.</p>
+        <p dir="ltr">This guide will educate you about the<xref href="BasicConcepts.dita"> basic
+                concepts of TokenScript</xref> and the <xref href="Deployment.dita"
+                >deployment</xref> of a TokenScript.</p>
     </body>
 </topic>
