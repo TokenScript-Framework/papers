@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_tvg_xkg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Attributes</title>
+    <shortdesc>Attributes in TokenScript define the properties of a token.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr" id="docs-internal-guid-6f535edd-7fff-c20b-1017-137517f57393">In TokenScript you
+            declare “attributes”. These are properties of the token. For example, if a token
+            represents a ticket for a soccer match, its attributes should contain the information
+            when and where the match happens, which teams play, which seat is reserved and so on. If
+            the token allows you to lease a car, it needs an attribute like “expiry”. </p>
+        <p dir="ltr">Attributes can be nested and contain subcategories. The declaration “label”
+            translates information to different languages. </p>
+        <p dir="ltr">Attributes are just declarations. They are never directly shown to a wallet.
+            They are just here to let the wallet know and to allow TokenScript to build further
+            operations and representations on it. To make them visible you need cards.</p>
+        <p dir="ltr">Attribute is a categorical declaration. There are other declarations inside the
+            &lt;attribute> tags, for example &lt;origins> or &lt;token>. </p>
+        <p dir="ltr">If you TokenScript wants to querry an API for information, like weather or
+            exchange prices, this will not be part of the attribute tag, but part of an action
+            card.</p>
     </conbody>
 </concept>
