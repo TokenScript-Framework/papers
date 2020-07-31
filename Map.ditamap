@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title></title>
+    <title>Content TokenScript docu</title>
+    <topicref href="Tokenization.dita"/>
+    <topicref href="TokenScript.dita">
+        <topicref href="WhatTokenscriptCanDo.dita"/>
+    </topicref>
+    <topicref href="TokenScript-Framework.dita"/>
 </map>
