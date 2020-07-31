@@ -17,4 +17,9 @@
         </topicref>
         <topicref href="DataObjects.dita"/>
     </topicref>
+    <topicref href="Deployment.dita">
+        <topicref href="Signing.dita"/>
+        <topicref href="Deploy.dita"/>
+        <topicref href="MagicLinks.dita"/>
+    </topicref>
 </map>
