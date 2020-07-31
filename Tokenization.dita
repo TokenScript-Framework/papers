@@ -5,30 +5,33 @@
     <body>
         <p dir="ltr" id="docs-internal-guid-09ccc131-7fff-4f2d-dc4e-aad7501f309b">There is a lot of
             talk about tokenization, but often it is hardly understood. Tokenization is much more
-            than ICOs or Security Token. It is at the heart of the Web 3.0 which uses token as a
+            than ICOs or Security Token: It is at the heart of the Web 3.0 which uses token as a
             layer of interaction with decentralized applications, so called dApps.</p>
         <p dir="ltr">Tokens do not just represent items of values - like fiat currencies, crypto
             currencies, collectibles or securities - but also identity, attestations, permissions
-            and much more. To understand tokenization, you have to get over the limits of money or
+            and much more. To understand Tokenization, you have to get over the limits of money or
             security-like tokens. Token should understood <xref
                 href="https://medium.com/alphawallet/what-is-a-token-token-economy-101-29593afa13d2"
-                format="html" scope="external"><u>as any stake in a smart contract</u></xref>.</p>
+                format="html" scope="external"><u>as any stake in a smart contract</u></xref>. </p>
+        <p>The Tokenization of everything will create new markets, bring more liquidity to existing
+            markets and break the silo architecture of current ecosystems through the fundamental
+            interoperability of blockchains. Learn more about Tokenization in our <xref
+                href="https://github.com/AlphaWallet/TokenScript/blob/master/doc/design_paper.md"
+                format="html" scope="external"><u>Design Paper</u></xref>.</p>
         <p dir="ltr">Each token is attached to a public key, for which the user exclusively owns the
-            private key. Users can hold and manage their token in a wallet like Alphawallet. With
-            the help of a mnemonic seed phrase the whole wallet can be reconstructed. This setup
-            makes token an elemental brick of decentralizing the web and redirect control to
-            users.</p>
+            private key. Users can hold and manage their token autonomously in a wallet like
+            Alphawallet. With the help of a mnemonic seed phrase the whole wallet can be
+            reconstructed. This setup makes token an elemental brick of decentralizing the web and
+            redirect control to users.</p>
         <p dir="ltr">Token allow to separate permissions and websites. They can be used on any
             website or dApp, without the website being their issuer. The separation between dApps
             and token is an important aspects of Tokenization. An over-simplistic analogy would be
             to think of login with google - but with the account stored locally, in your wallet, not
             on google's server. </p>
-        <p dir="ltr">Learn more about Tokenization in our <xref
-                href="https://github.com/AlphaWallet/TokenScript/blob/master/doc/design_paper.md"
-                format="html" scope="external"><u>Design Paper</u></xref>.</p>
         <p dir="ltr">Token are created on a blockchain with a smart contract. TokenScript is a layer
             between the blockchain and the user or the dApp. It is like a high level language to
             design token based user interactions. We believe that TokenScript enables token to
-            unleash their power as never seen before. </p>
+            unleash their power as never seen before and become a building brick of
+            Tokenization.</p>
     </body>
 </topic>
