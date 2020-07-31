@@ -5,9 +5,12 @@
     <shortdesc>Learn about the basic concepts of TokenScript, which are used for creating a
         TokenScript.</shortdesc>
     <conbody>
-        <p></p>
-        <p>TokenScript is a framework for JavaScript / WebAssembly and XML markup. In it, several
-            basic concepts come into play: Cards (Action Cards, Activity Cards, Token Cards,
-            Attestations), as well as Attributes and Data Objects.</p>
+        <p>TokenScript is a <xref href="TokenScript-Framework.dita">framework for JavaScript /
+                WebAssembly and XML markup</xref>. In it, several basic concepts come into play:
+                <xref href="Card.dita">Cards</xref> (<xref href="ActionCard.dita">Action
+                Cards</xref>, <xref href="ActivityCard.dita">Activity Cards</xref>, <xref
+                href="TokenCard.dita">Token Cards</xref>, <xref href="Attestation.dita"
+                >Attestations</xref>), as well as <xref href="Attributes.dita">Attributes</xref> and
+                <xref href="DataObjects.dita">Data Objects</xref>.</p>
     </conbody>
 </concept>
