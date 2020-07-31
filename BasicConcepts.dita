@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_onn_jpg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Basic Concepts</title>
+    <shortdesc>Learn about the basic concepts of TokenScript, which are used for creating a
+        TokenScript.</shortdesc>
     <conbody>
         <p></p>
+        <p>TokenScript is a framework for JavaScript / WebAssembly and XML markup. In it, several
+            basic concepts come into play: Cards (Action Cards, Activity Cards, Token Cards,
+            Attestations), as well as Attributes and Data Objects.</p>
     </conbody>
 </concept>
