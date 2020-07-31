@@ -2,17 +2,20 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_nff_y3l_mmb">
     <title>Token Card</title>
-    <shortdesc>TokenCard is the visual representation of a token.</shortdesc>
+    <shortdesc>TokenCards determine how a wallet represents a token visually.</shortdesc>
     <conbody>
         <p>Token Cards instruct a wallet, a dapp browser or a website how to represent a token. This
-            can include visible instructions, like icon, color, description or buttons. These
-            visible properties are set with the <codeph>&lt;view></codeph> declaration. With it
-            token issuers can design how the token appears in the wallet or on websites. You can
+            can include visible instructions, like icons, colors, a text description or buttons.
+            These visible properties are set with the <codeph>&lt;view></codeph> declaration. With
+            it token issuers can design how the token appears in the wallet or on websites. You can
             think of it similar to a library of CSS code. </p>
         <p>There are also invisible aspects of the token cards. They can define important security
-            parameters and other technical properties which are useful for wallets to know.</p>
+            parameters like a serial number and other technical properties which are useful for
+            wallets to know.</p>
         <p>A token card can have different properties in different circumstances. A soccer ticket
             token can change its appearance after the game started, and a car leasing token can show
             different properties depending on your position in the car leasing chain. </p>
+        <p>Token Cards are declared in the XML-file, but expressed in JavaScript, for example by
+            creating a token class and rendering html code in it. </p>
     </conbody>
 </concept>
