@@ -10,16 +10,16 @@
             files. </p>
         <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
             it must contain a reference to it and can interact with it.</p>
-        <p dir="ltr">The TokenScript files are written and signed by the issuer of a token or a
-            trusted party. They can be updated with another signature. Users can download the
-            TokenScript files on any website or the TokenScript repository and validate the
-            signature. This makes it impossible to fake a TokenScript. </p>
+        <p dir="ltr">The TokenScript files are written and <xref href="Signing.dita">signed by the
+                issuer of a token or a trusted party</xref>. They can be updated with another
+            signature. Users can download the TokenScript files on any website or the TokenScript
+            repository and validate the signature. This makes it impossible to fake a TokenScript. </p>
         <p dir="ltr">Wallets which understand TokenScript can import it and render the user
             experience according to the TokenScript instructions.</p>
         <p><b>The XML markup</b></p>
-        <p dir="ltr" id="docs-internal-guid-f87167c3-7fff-e895-9671-be989e591192">The XML is usually
-            expressed in a file and uses standard XML syntax. It is mostly a declarative language,
-            with declarations sometimes being nested.</p>
+        <p dir="ltr" id="docs-internal-guid-f87167c3-7fff-e895-9671-be989e591192">The XML markup is
+            usually expressed in a file and uses standard XML syntax. It is mostly a declarative
+            language, with declarations sometimes being nested.</p>
         <p dir="ltr">The XML markup describes properties of the token: The functions it provides,
             the smart contract it relies upon, the behavior of the token, information of the token
             and much more. </p>
@@ -31,8 +31,8 @@
         <p><b>JavaScript / WebAssembly</b></p>
         <p dir="ltr" id="docs-internal-guid-164e561b-7fff-349a-545c-506c6cb992db">The JavaScript
             part integrates TokenScript in the wallet or dApps. It constructs transactions and
-            renders the display of the token. Broadly explained, it is the dynamic part of the
-            TokenScript. </p>
+            renders the display of the token. Broadly, it is the dynamic part of the TokenScript,
+            while XML is the static one.</p>
         <p dir="ltr">Everything what happens in the wallet and everything a user can see is
             described with JavaScript: The rendering of the environment, the building of
             transactions, the display of text and images and so on. In term of TokenScript,
