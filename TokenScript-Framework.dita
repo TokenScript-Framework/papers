@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_yph_nkg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>The TokenScript Framework</title>
+    <shortdesc>TokenScript is a framework for XML and JavaScript / WebAssembly which allows token
+        creators to structure the user agent's interaction with the token.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">TokenScript is a
+            framework for JavaScript / WebAssembly and an XML markup. Both are usually expressed in
+            files. </p>
+        <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
+            it must contain a reference to it and can interact with it.</p>
+        <p dir="ltr">The TokenScript files are written and signed by the issuer of a token or a
+            trusted party. They can be updated with another signature. Users can download the
+            TokenScript files on any website or the TokenScript repository and validate the
+            signature. This makes it impossible to fake a TokenScript. </p>
+        <p dir="ltr">Wallets which understand TokenScript can import it and render the user
+            experience according to the TokenScript instructions.</p>
+        <p><b>The XML markup</b></p>
+        <p dir="ltr" id="docs-internal-guid-f87167c3-7fff-e895-9671-be989e591192">The XML is usually
+            expressed in a file and uses standard XML syntax. It is mostly a declarative language,
+            with declarations sometimes being nested.</p>
+        <p dir="ltr">The XML markup describes properties of the token: The functions it provides,
+            the smart contract it relies upon, the behavior of the token, information of the token
+            and much more. </p>
+        <p dir="ltr">There is a list of XML declarations developed by TokenScript. For most cases
+            you only need a few of them.</p>
+        <p dir="ltr">TokenScript uses XML according the the c14n canonicalization. This allows to
+            create standardized digital signatures for XML and to enforce standardized static types
+            like ASN.1 data modules.</p>
+        <p><b>JavaScript / WebAssembly</b></p>
+        <p dir="ltr" id="docs-internal-guid-164e561b-7fff-349a-545c-506c6cb992db">The JavaScript
+            part integrates TokenScript in the wallet or dApps. It constructs transactions and
+            renders the display of the token. Broadly explained, it is the dynamic part of the
+            TokenScript. </p>
+        <p dir="ltr">Everything what happens in the wallet and everything a user can see is
+            described with JavaScript: The rendering of the environment, the building of
+            transactions, the display of text and images and so on. In term of TokenScript,
+            JavaScript is used when a card is triggered.</p>
+        <p dir="ltr">The creators of TokenScript use JavaScript. But any WeAssembly compatible
+            language like Ruby or C can be used. The wallet importing TokenScript needs to
+            understand these languages.</p>
     </conbody>
 </concept>
