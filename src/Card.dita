@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_dhv_3dl_mmb">
-    <title>Card</title>
+    <title>Cards</title>
     <shortdesc>Cards are a fundamental part of Tokenscript. They define how the token behaves in the
-        wallet and are the only part of Tokenscript visible to the user.</shortdesc>
+        wallet and are the only part of Tokenscript which is visible for the user.</shortdesc>
     <conbody>
-        <p>In Tokenscript, Cards trigger actions. They determine how the token behaves in the
-            wallet: How it appears, how the wallet processes it and what users can do with it. Cards
-            are like little programs which extend the functionality and style of a wallet, tailored
-            for a specific token. </p>
+        <p>In Tokenscript, Cards trigger actions. Whenever something happens, a <i>Card</i> is
+            involved. Cards determine how the token behaves in the wallet: How it appears, how the
+            wallet processes it and what users can do with it. Cards are like little programs which
+            extend the functionality and style of a wallet, tailored for a specific token. </p>
         <p>While other parts of Tokenscript are written mostly in XML, cards are built in JavaScript
-            (WebAssembly support will be supported too) and declared in XML.</p>
+            (WebAssembly support will be supported too), but declared in XML.</p>
         <p>An important aspect of cards is that they are not in a website or app. They are in the
             TokenScript files and execute solely in the wallet or a TokenScript enabled dapp
             browser. Like a card in a game, a dApp can play it, but is not able to transform it. In
@@ -18,7 +18,10 @@
             operations and information from websites to wallets. They protect the user and reduce
             the risks of database heists.</p>
         <p>Cards allow dApps to use token to interact with wallets in a much more specific and
-            manifold way than a smart contract can do. </p>
+            manifold way than a smart contract can do. They are used to display specific icons for a
+            token, to query an API to get accompanying information, to craft specific and complex
+            transactions, to structure the record of past transactions in a meaningful way and much
+            more.</p>
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
         <p>There are 4 kind of cards: <xref href="TokenCard.dita">Token Cards</xref>, <xref
