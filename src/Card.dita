@@ -2,25 +2,26 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_dhv_3dl_mmb">
     <title>Card</title>
-    <shortdesc>It's the only part of Tokenscript visible to the user.</shortdesc>
+    <shortdesc>Cards are a fundamental part of Tokenscript. They define how the token behaves in the
+        wallet and are the only part of Tokenscript visible to the user.</shortdesc>
     <conbody>
-        <p>Cards are a fundamental part of TokenScript. They define how the token behaves in the
+        <p>In Tokenscript, Cards trigger actions. They determine how the token behaves in the
             wallet: How it appears, how the wallet processes it and what users can do with it. Cards
-            are the only part of TokenScript which can be seen by the user.</p>
-        <p>A Token issuer can create user interface and the transaction building code in JavaScript
-            (WASM support planned too).</p>
+            are like little programs which extend the functionality and style of a wallet, tailored
+            for a specific token. </p>
+        <p>While other parts of Tokenscript are written mostly in XML, cards are built in JavaScript
+            (WebAssembly support will be supported too) and declared in XML.</p>
         <p>An important aspect of cards is that they are not in a website or app. They are in the
-            TokenScript file and execute solely in the wallet or TokenScript enabled dapp browser.
-            Like a card in a game, a dApp can play it, but is not able to transform it. In the web
-            3.0 cards can become an important enabler of privacy and security: They offload
+            TokenScript files and execute solely in the wallet or a TokenScript enabled dapp
+            browser. Like a card in a game, a dApp can play it, but is not able to transform it. In
+            the web 3.0 cards can become an important enabler of privacy and security: They offload
             operations and information from websites to wallets. They protect the user and reduce
             the risks of database heists.</p>
         <p>Cards allow dApps to use token to interact with wallets in a much more specific and
-            manifold way than a smart contract can do. Due to the dynamic natures of cards they are
-            declared in XML but written in JavaScript / WebAssembly.</p>
+            manifold way than a smart contract can do. </p>
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
         <p>There are 4 kind of cards: Token Cards, Action Cards, Activity Cards, and Attestation
-            Cards</p>
+            Cards.</p>
     </conbody>
 </concept>
