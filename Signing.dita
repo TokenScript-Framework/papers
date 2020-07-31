@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_mq2_zlg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Signing a TokenScript</title>
+    <shortdesc>TokenScript files are signed by the token issuer or a trusted third party, so that a
+        wallet can verify the TokenScript. Learn about the underlying trust models and how to sign
+        your TokenScript.</shortdesc>
     <conbody>
-        <p></p>
+        <p dir="ltr" id="docs-internal-guid-1d4e618f-7fff-5cbf-a973-b4ead0df755d">The TokenScript
+            files should be signed by an XML signature. Any signature algorithmus supported by XML
+            is accepted, including ECDSA.</p>
+        <p dir="ltr">There are two ways to establish trust into the signer: <i>Providing
+                Authenticity</i> and <i>Express of Trust</i>. Both should be available in the
+            future, but currently only Express of Trust is.</p>
+        <p dir="ltr">Express of Trust requires to sign the files with a key assosiated with
+            TokenScript. This can be done by the Token issuer himself with a key associated with the
+            smart contract which created the token. </p>
+        <p dir="ltr">But it can also be done by another party, which gained trust from the token
+            issuer. This can be done by a transaction to the public key of the TokenScript author or
+            by a modification of the token smart contract to return the TokenScript author’s key.
+            Another method to gain trust is by having established a trustworthy reputation. When a
+            user uses a TokenScript, his wallet displays the domain name or organisation name of the
+            certificate. It's up to the user if he trusts the TokenScript.</p>
+        <p dir="ltr">It is important to be able to delegate the trust from the token issuer to other
+            parties. For example, someone created a dollar token, but doesn’t want to create all the
+            TokenScrips necessary. So another party can write them to cover all kinds of smart
+            contracts. It would even be possible for the authors of smart contracts to write
+            TokenScripts coverings their contract on behalf of token issuers.</p>
+        <p dir="ltr">Proof of Authenticity can be used in the future. In this model, a smart
+            contract returns the signing key needed for TokenScript. </p>
+        <p dir="ltr">Any data reference - icons, images and language packs - used by the TokenScript
+            must be referred to in the &lt;SignedInfo> section of the XML signature using the
+            &lt;Reference> element. If they don’t, they will not be available for the user agent.
+            Each reference is downloaded and its digest verified as part of the TokenScript
+            signature verification process. If any of the references fails to download or the digest
+            doesn't match, the entire XML signature is considered invalid.</p>
+        <p><b>How to sign a TokenScript</b></p>
     </conbody>
 </concept>
