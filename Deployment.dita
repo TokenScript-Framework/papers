@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_tfy_zpg_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Deployment</title>
+    <shortdesc>After you created your TokenScript you need to deploy it. Learn here how to do
+        this.</shortdesc>
     <conbody>
-        <p></p>
+        <p>The deployment of a TokenScript involves several steps: You need to sign it, upload it to
+            the TokenScript repository and allow wallets to know about it.</p>
     </conbody>
 </concept>
