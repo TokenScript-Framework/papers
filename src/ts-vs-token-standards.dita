@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_uhp_4dv_nmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Is TokenScript a standardisation effort?</title>
+    <shortdesc>Is TokenScript a standardisation effort?</shortdesc>
     <conbody>
-        <p></p>
+        <p>TokenScript provides a token layer, which consists of data layer and cards.</p>
+        <p>The creation of Token Layer inevitable requires some standardisation, but that is not
+            like ERC20, where the token interface is standardised.</p>
+        <p>In fact, contrary to ERC20, TokenScript allows any contract interface and events to be
+            defined, following ERCs or not. You can create a token that is not conforming to ERC20,
+            ERC721 or any known ERCs and write a TokenScript for it, it will work just like the
+            ERC20 tokens. In that sense, TokenScript is "counter token standard" as it doesn't
+            define any token interfaces. An example of Token that doesn't follow a known ERC is the
+            Line of Credit token in AAVE.</p>
+        <p>TokenScript however does provide a standard way to build TokenLayer, following the
+            structure layed out by TokenScript. Much of these structures can be built after the
+            smart contract is written, so it generally doesn't affect how a token contract is
+            written, unless the token wish to support higher level security through DvP
+            Security.</p>
+        <p>For an analogy, token interfaces are like paths. Most websites do have
+                <codeph>/contact</codeph> and <codeph>/about</codeph> paths, but TokenScript is like
+            HTML which does not require specific path, as long as it is defined and accessible.</p>
     </conbody>
 </concept>
