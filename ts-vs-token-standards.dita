@@ -10,9 +10,10 @@
         <p>In fact, contrary to ERC20, TokenScript allows any contract interface and events to be
             defined, following ERCs or not. You can create a token that is not conforming to ERC20,
             ERC721 or any known ERCs and write a TokenScript for it, it will work just like the
-            ERC20 tokens. In that sense, TokenScript is "counter token standard" as it doesn't
-            define any token interfaces. An example of Token that doesn't follow a known ERC is the
-            Line of Credit token in AAVE.</p>
+            ERC20 tokens. In that sense, TokenScript is a <i>counter token standard</i> as it allow
+            wallets and websites to work with a token without it following a specific token
+            interface ERC. An example of Token that doesn't follow a known ERC is the Line of Credit
+            token in AAVE.</p>
         <p>TokenScript however does provide a standard way to build TokenLayer, following the
             structure layed out by TokenScript. Much of these structures can be built after the
             smart contract is written, so it generally doesn't affect how a token contract is
