@@ -18,8 +18,7 @@
             has happened, the wallet developers need to understand each smart contract and implement
             its logic in the wallet.</p>
         <p>Activity Cards solve this problem. The card is assigned to a token and creates, stores
-            and loads <xref href="DataObjects.dita"><xref href="DataObjects.dita">Data
-                    Objects</xref></xref>. This makes wallets suddenly smart: They remember not only
+            and loads <xref href="DataObjects.dita">Data Objects</xref>. This makes wallets suddenly smart: They remember not only
             the transaction, but also the purpose of the transaction - that a user rented a car,
             lended or exchanged a token and so on. And all the wallet has to do is to download the
             TokenScript.</p>
