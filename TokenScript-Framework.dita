@@ -2,8 +2,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_yph_nkg_nmb">
     <title>The TokenScript Framework</title>
-    <shortdesc>TokenScript is a framework for XML and JavaScript / WebAssembly which allows token
-        creators to structure the user agent's interaction with the token.</shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">TokenScript is a
             framework for JavaScript / WebAssembly and an XML markup. Both are usually expressed in
