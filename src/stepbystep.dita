@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_pwj_hsr_4mb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>TokenScript Step by Step</title>
+    <shortdesc>In this guide we will explain step by step how you can create and use your own
+        TokenScript.</shortdesc>
     <conbody>
-        <p></p>
+        <p>We assume you have created a token on Ethereum or on an Ethereum Testnet. For testing
+            purposes you can also use any existing token smart contract.</p>
+        <p><b>Create TokenScript files: Overview</b></p>
+        <p>(1) Use ABI to TokenScript: <xref
+                href="https://alphawallet.github.io/ABI-to-TokenScript/" format="html"
+                scope="external">https://alphawallet.github.io/ABI-to-TokenScript/</xref></p>
+        <p>(2) Create the files by yourself: XML as the skeletton, JavaScript-files for Action
+            Cards, CSS for style, Makefile as instruction how to make. Helpful: Ethereum Studio.</p>
+        <p><b>A very simple example</b></p>
+        <p>(1) We assume a very simple ERC token, and we assume you only want the wallet to receive
+            a bit of information</p>
+        <p>(2) ABI to TokenScript. Understand the code: (a) xml (b) JavaScript</p>
+        <p>(3) Small edits: (a) Add Action Card (b) Write message, load picture</p>
+        <p>(4) Deploy: (a) Makefile (b) rename file (c ) copy on phone</p>
+        <p>(5) Enjoy: See the Action Card</p>
+        <p>(6) Outlook: Can do everything. For example, if you have something like cWBTC in
+            AlphaWallet, you can deposit and withdraw cWTBC directly from the wallet. It is far from
+            covering all compound functions, but a lot more than other wallets can do.</p>
+        <p><b>Make it publicly available</b></p>
+        <p>(1) Sign it</p>
+        <p>(2) Upload on TokenScript Repo</p>
     </conbody>
 </concept>
