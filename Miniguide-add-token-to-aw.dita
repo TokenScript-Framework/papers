@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_vmv_xty_4mb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Miniguide: Add a Ropsten token to AlphaWallet</title>
+    <shortdesc>This guide explains how to add a token on Ropsten testnet to AlphaWallet.</shortdesc>
     <conbody>
-        <p></p>
+        <p><xref href="https://alphawallet.com/" format="html" scope="external">AlphaWallet</xref>
+            is a wallet for Ethereum. It allows to manage any token on the Ethereum main chain as
+            well as on Ropsten test net and xDai sidechain. This guide explains how to add any token
+            to your wallet.</p>
+        <p><b>Tap "Add / Hide Tokens" on the start page of AlphaWallet.</b></p>
+        <p><image href="aw-guide-add-token-0.jpg" id="image_ghl_5bz_4mb" width="240px"/></p>
+        <p><b>Tap the Plus Symbol</b></p>
+        <p><image href="aw-guide-add-token-0-1.jpg" id="image_xrh_jcz_4mb" width="240px"/></p>
+        <p><b>Enter network and token contract address</b></p>
+        <p><image href="aw-guide-add-token-1.jpg" id="image_o3f_pcz_4mb" width="240px"/></p>
+        <p>In this screen, you have to select the network the token runs on - in this demo it is the
+            Ropsten test net - and insert the contract address of the token. Usually AlphaWallet
+            will fill the other form elements as it is able to detect the token properties.</p>
+        <p><b>Activate token and show zero balance token</b></p>
+        <p><image href="aw-guide-add-token-2.jpg" id="image_zh1_xcz_4mb" width="240px" /></p>
+        <p>After saving the new token, you need to deactivate the "hide zero balance tokens"
+            checkbox and switch on the new token - in this example called Coin.</p>
+        <p><b>Watch the new token on the start page of AlphaWallet</b></p>
+        <p><image href="aw-guide-add-token-3.jpg" id="image_uxg_ddz_4mb" width="240px"/></p>
+        <p>As you see, when you return to the front page of AlphaWallet, it now knows about the
+            token you specified. </p>
     </conbody>
 </concept>
