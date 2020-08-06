@@ -37,10 +37,12 @@
                 scope="external">ABI to TokenScript</xref>, a simple tool to get the TokenScript
             files from the smart contract ABI. You can find it either in Studio or get it from
             Etherscan.io.</p>
-        <p>Now download the files in a folder on your computer and inspect them. Most important is
-            the token.xml file. It declares the TokenScript structure. Also important are the
-            JavaScript files. They contain the dynamic code for Action Cards which is executed in
-            AlphaWallet. You will need the Makefile to finish the TokenScript creation.</p>
+        <p>Now download the files in a folder on your computer and inspect them. </p>
+        <p><image href="ts-folder.png" id="image_gg4_tty_4mb"/></p>
+        <p>Most important is the token.xml file (here: Coin.xml). It declares the TokenScript
+            structure. Also important are the JavaScript files. They contain the dynamic code for
+            Action Cards which is executed in AlphaWallet. You will need the Makefile to finish the
+            TokenScript creation.</p>
         <p><b>The XML file</b></p>
         <p>In this guide we will only present the parts of the XML file you will need for this task.
             To learn more about the syntax, you find an overview here.</p>
