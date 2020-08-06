@@ -29,7 +29,9 @@
         <p><b>Create the TokenScript files</b></p>
         <p>You could create the TokenScript file from scratch. To do so, you should understand the
             basic concepts and study the code of the examples. But for this exercise you don't need
-            to. Fortunately you can use ABI to TokenScript, a simple tool to get the TokenScript
+            to. Fortunately you can use <xref
+                href="https://alphawallet.github.io/ABI-to-TokenScript/" format="html"
+                scope="external">ABI to TokenScript</xref>, a simple tool to get the TokenScript
             files from the smart contract ABI. You can find it either in Studio or get it from
             Etherscan.io.</p>
         <p>Now download the files in a folder on your computer and inspect them. Most important is
@@ -41,6 +43,7 @@
             To learn more about the syntax, you find an overview here.</p>
         <p><i>The header</i></p>
         <p>The file header will look like this:</p>
+        <p><image href="ts-xml-header.png" id="image_d3l_pry_4mb"/></p>
         <p><codeph>&lt;?xml version="1.0" encoding="UTF-8"?></codeph></p>
         <p><codeph>&lt;!DOCTYPE token [</codeph></p>
         <p><codeph> &lt;!ENTITY style SYSTEM "shared.css"></codeph></p>
@@ -54,6 +57,7 @@
         <p>Every TokenScript file needs to contain some basic info about the token: On which network
             does it run, what is the address of its smart contract, and what is its name? This is
             declared with this code:</p>
+        <p><image href="ts-xml-contract-origin.png" id="image_dmr_qry_4mb"/></p>
         <p><codeph>&lt;ts:contract interface="erc20" name="Coin"></codeph></p>
         <p><codeph> &lt;ts:address
                 network="3">0xe35FE4A1B17d50A8022078d98162DB25bC860834&lt;/ts:address></codeph></p>
@@ -65,6 +69,7 @@
         <p><i>Action Cards</i></p>
         <p>Now we will talk about Action Cards. This is where the fun begins and where we can add
             individual information to our token.</p>
+        <p><image href="ts-xml-action-card.png" id="image_nt5_rry_4mb"/></p>
         <p>In the xml file, the part with Cards starts with the <codeph>&lt;ts:cards></codeph> tag
             and ends with <codeph>&lt;/ts:cards></codeph>. Inside of these tags we put the
             individual cards. With the following card we simply add information:</p>
@@ -85,6 +90,7 @@
         <p><b>The JavaScript file</b></p>
         <p>You should have two JavaScript files in your folder: about.en.js and approve.en.js. We
             ignore the approve file and open the about.en.js file to inspect it:</p>
+        <p><image href="ts-javascript-ui-segment.png" id="image_h1z_sry_4mb"/></p>
         <p>The file starts with the declaration of the Token class, and ends with a web3 command. In
             this guide we only focus on one part inside the Token class - the render() function:</p>
         <p><codeph> render() {</codeph></p>
