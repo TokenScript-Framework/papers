@@ -8,6 +8,7 @@
         <topicref href="LivingExamples.dita"/>
         <topicref href="WhatTokenscriptCanDo.dita"/>
     </topicref>
+    <topicref href="QuickStart.dita"/>
     <topicref href="BasicConcepts.dita">
         <topicref href="TokenScript-Framework.dita"/>
         <topicref href="Attributes.dita"/>
