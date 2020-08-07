@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_mlb_5yc_pmb">
-    <title>Feature implemented</title>
+    <title>Features implemented</title>
     <shortdesc>This is a matrix that reports the current progress in implementing various
         TokenScript directives</shortdesc>
     <refbody>
@@ -15,17 +15,17 @@
                 <thead>
                     <row>
                         <entry>Feature</entry>
-                        <entry>AlphaWallet - iOS</entry>
-                        <entry>AlphaWalelt - Android</entry>
-                        <entry>TokenScript Web</entry>
+                        <entry>iOS - (AlphaWallet - 3.05)</entry>
+                        <entry>Android (AlphaWalelt 3.1.1)</entry>
+                        <entry>TokenScript Debugger (in-development)</entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry/>
-                        <entry/>
-                        <entry/>
-                        <entry/>
+                        <entry><xref href="DistinctAttributes.dita"/></entry>
+                        <entry>n.a.</entry>
+                        <entry>n.a.</entry>
+                        <entry>n.a.</entry>
                     </row>
                     <row>
                         <entry/>
