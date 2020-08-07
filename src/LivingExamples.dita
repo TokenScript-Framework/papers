@@ -2,34 +2,42 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_g4b_kkx_4mb">
     <title>TokenScript examples in AlphaWallet</title>
-    <shortdesc>Meet how AlphaWallet already uses TokenScript to improve the user experience for
-        several token.</shortdesc>
+    <shortdesc>Meet the TokenScripts AlphaWallet implemented to improve the user experience for
+        popular token.</shortdesc>
     <conbody>
-        <p>The AlphaWallet team created several TokenScripts for several popular token which improve
-            their usability tremendously. To experience it, just import a wallet holding these coins
-            in AlphaWallet or send them to a fresh AlphaWallet account.</p>
+        <p>The <xref href="https://alphawallet.com/" format="html" scope="external"
+                >AlphaWallet</xref> team created<xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20"
+                format="html" scope="external"> TokenScripts for several popular token</xref> which
+            tremendously improve the user experience. To try it, just import a wallet holding these
+            coins in AlphaWallet or send them to a fresh AlphaWallet account.</p>
         <p><b>DAI</b></p>
         <p>If you don't know DAI, you missed something. DAI is a Dollar token on Ethereum, which is
-            not centrally managed by a bank account holding a Dollar equivalent, but by a DAO
-            holding and trading a reserve in Ether and other token. It's one of the prime examples
-            of the power of smart contracts.</p>
+            not centrally backed by a bank account holding a Dollar equivalent, but by a DAO holding
+            and trading a reserve in Ether and other token. It's one of the prime examples of the
+            power of smart contracts.</p>
         <p>AlphaWallet's TokenScript implementation adds two functionality to the user interface of
-            your DAI Dollar:</p>
+            your DAI Dollar. Select your DAI Dollar and tap on the […] button on the buttom on the
+            right sight to see the options.</p>
+        <p><image href="aw-dai-to-xdai.jpg" id="image_hw4_5v2_pmb"/></p>
         <p>
             <ol id="ol_lsk_zkx_4mb">
-                <li>You can convert it to xDai and vice versa. This brings a powerful xDai bridge
-                    straight into your wallet. With it AlphaWallet supports the offchain scaling
-                    Ethereum badly needs.</li>
+                <li>You can convert it to xDai and vice versa. xDai is a sidechain which allows
+                    cheap transactions. Thanks to TokenScript AlphaWallet contains a powerful xDai
+                    bridge straight in your wallet to support scaling Ethereum.</li>
                 <li>Get your best rates to lend DAI. One of the practical differences between Dollar
                     in your bank account and DAI Dollar is that you can use smart contracts to get
-                    an interest on your Dollar. AlphaWallet supports this by displaying the best
-                    DeFi rates for DAI Dollar.</li>
+                    an interest on your DAI. AlphaWallet supports this by displaying the best DeFi
+                    rates for DAI Dollar.</li>
             </ol>
         </p>
-        <p>This features where just mostly created as a demo. They can be broadly extended: You
-            could bridge DAI to the OMG blockchain, create the transactions required to lend it,
-            allow to borrow more DAI or to pay back a DAI loan and withdraw your collateral and much
-            more.</p>
+        <image href="aw-dai-best-rates.jpg" id="image_clz_1w2_pmb"/>
+        <p>These features where mostly created for demonstration purposes. They can be broadly
+            extended: You could bridge DAI to the OMG blockchain or to the Raiden network, create
+            the transactions required to lend it for an interest, allow to borrow more DAI or to pay
+            back a DAI loan and withdraw your collateral and much more. Token are more than just
+            surrogates for money and value - they add functionality to values. A smart wallet needs
+            to know these functionalities and integrate them in the user experience.</p>
         <p>Basically, any smart contract author can implement his Smart Contract for DAI dollar as
             an Action Card in the <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20/DAI"
@@ -37,27 +45,35 @@
             by the TokenScript team. After reviewing your pull request in the example folder it can
             become part of AlphaWallet.</p>
         <p><b>Compound, AAVE and other DeFi</b></p>
-        <p>Usually, a wallet doesn't know a DeFi app until the wallet authors manually integrated
-            its logic. For AlphaWallet we did this too - but as an author of a DeFi app you can do
-            it yourself and submit it to our TokenScript repository for implementation in
-            AlphaWallet.</p>
-        <p>Our TokenScript creates customized functionalities for <xref
+        <p>Maybe you heard about Decentralized Finance (DeFi). It is the technology to use smart
+            contracts and token to decentralize not just money but also traditional financial
+            services like lending, borrowing or exchanging. </p>
+        <p>However, a wallet doesn't know a DeFi app until the wallet authors manually integrated
+            the logic of its smart contracts. For AlphaWallet we did this too - but as an author of
+            a DeFi app you can do it yourself and submit it to our TokenScript repository for
+            implementation in AlphaWallet. We created <xref href="TokenScript-Framework.dita">an
+                open source infrastructure</xref> for this.</p>
+        <p>Take Compound for example. To participate in the money market smart contract you need to
+            transform token like DAI or WBTC into cDai or cWBTC. A normal wallet doesn't know much
+            about these token and is unable to craft the transactions required to lend, borrow,
+            deposit or redeem them. AlphaWallet uses a <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20/Compound"
-                format="html" scope="external">Compound token</xref> like cDAI or cWBTC as well
-                a<xref
+                format="html" scope="external">Compound TokenScript</xref> to allow you to deposit
+            cWBTC, to withdraw them and to even see the interest rate as well as the conversion rate
+            of cWBTC and WBTC.</p>
+        <p><image href="aw-compound-deposit.jpg" id="image_otn_jx2_pmb"/><image
+                href="aw-compound-withdraw.jpg" id="image_mrk_kx2_pmb"/></p>
+        <p>A similar TokenScript exists for AAVE's <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20/AAVE"
-                format="html" scope="external"> aDAI</xref> (DAI token in AAVE). If you have those
-            coins in AlphaWallet, you can deposit more or redeem them in the wallet. AlphaWallet can
-            also show information about the interest rates your token get. </p>
-        <p>There are also TokenScripts for other DeFis, for example for <xref
+                format="html" scope="external"> aDAI</xref> token, for <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20/Uniswap"
                 format="html" scope="external">UniSwap</xref> or <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20/DDEX"
-                format="html" scope="external">DDEX</xref>. But they are very rudimentary, just
-            catching those token and adding information. </p>
-        <p>If you are interested in AlphaWallet, TokenScript or have authored a DeFi token, you are
-            invited to learn the basics of TokenScript, scan through our examples and contribute to
-                <xref
+                format="html" scope="external">DDEX</xref>. While being very rudimentary, these
+            TokenScripts already improve the DeFi user experience of AlphaWallet users tremendously. </p>
+        <p>If you are interested in AlphaWallet or TokenScript or have authored a DeFi token, you
+            are invited to learn the <xref href="BasicConcepts.dita">basics of TokenScript</xref>,
+            scan through our examples and contribute to <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20"
                 format="html" scope="external">existing TokenScripts </xref>or create new ones. </p>
     </conbody>
