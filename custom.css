@@ -20,11 +20,5 @@ nav[role=toc] li.active > a {
 }
 
 nav[role="toc"] {
-/*  background-color: #343a40; */
-}
-
-pre.codeblock {
-	background: #eeffcc;
-	border: thin solid #e1e4e5;
-	margin-top: 0.5ex;
+  background-color: #343a40;
 }
