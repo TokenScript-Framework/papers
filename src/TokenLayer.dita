@@ -29,10 +29,11 @@
             use, prove the token's ownership or other information if needed. Furthermore, the way
             token invoke each other requires a common expression which benefits from
           standardisation.</p>
-        <p>On the infrastructure side, a TokenLayer implementation like TokenScript access
-            blockchain data on behalf of the token code (in TokenScript files) and the website,
-            provides a private and secure channel to run TokenCards, and provide security features
-            to safe guard user's assets.</p>
+        <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
+                blockchain data on behalf of the token code (in TokenScript files) and the website,
+                run the necessary cryptographic proofs and mathematical marvels, provides a private
+                and secure environment to run Token Cards, and provide security features to safe
+                guard user's assets.</p>
         </section>
     </conbody>
 </concept>
