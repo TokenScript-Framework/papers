@@ -11,9 +11,9 @@
                 similar to how a Paymanet Rail allows a e-commerce site to on-board users of various
                 credit card and payment methods. However, Tokens can provide more important role
                 than just payment. For example, a Car Token allows a car owner to securely authorise
-                your website to find a new rental customer of the car and to give that customer
-                direct access to the car door. More about interesting ways to use tokens on websites
-                see <xref href="Tokenization.dita"/></p></section>
+                your website to find a new rental customer of the car, and, when found, to give that
+                customer direct access to the car door. More about interesting ways to use tokens on
+                websites see <xref href="Tokenization.dita"/></p></section>
       <section><title>For the Token Issuers</title>
         <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution channel
             to make your tokens available to all websites that also uses a TokenLayer. This is vital to token issuer's business model whcih is directly affected by the token's reach. A TokenLayer solution supports
