@@ -16,7 +16,9 @@
                 websites see <xref href="Tokenization.dita"/></p></section>
       <section><title>For the Token Issuers</title>
         <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution channel
-            to make your tokens available to all websites that also uses a TokenLayer. This is vital to token issuer's business model whcih is directly affected by the token's reach. A TokenLayer solution supports
+            to make your tokens available to all websites that also uses a TokenLayer. This is 
+            vital to token issuer's business model which is directly affected by the token's reach. 
+            A TokenLayer solution supports
             various transaction security features and a packaged user experience. For
             example, if you issue Car Token to car owners, they will be able to use it on websites
             to rent their cars out, or access car status and services with that token. </p></section>
@@ -24,14 +26,14 @@
   <title>A TokenLayer is both a standardisation effort and an infrastructure.</title>
 
         <p>Speaking of standardisation, take, for example, the process of matching Tokens with
-            Websites that uses them: TokenNegotiation, requires a common conversation channel for
-            the website to check what tokens the user have, and for the user to choose the token to
+            Websites that use them: TokenNegotiation, requires a common conversation channel for
+            the website to check what tokens the user has, and for the user to choose the token to
             use, prove the token's ownership or other information if needed. Furthermore, the way
             token invoke each other requires a common expression which benefits from
           standardisation.</p>
         <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
                 blockchain data on behalf of the token code (in TokenScript files) and the website,
-                run the necessary cryptographic proofs and mathematical marvels, provides a private
+                run the necessary cryptographic proofs plus mathematical gymnastics, provides a private
                 and secure environment to run Token Cards, and provide security features to safe
                 guard user's assets.</p>
         </section>
