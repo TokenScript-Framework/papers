@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_hkf_tdd_pmb">
-    <title>TokenLayer</title>
+    <title><?oxy_comment_start author="theBergmann" timestamp="20200807T182405+0200" comment="is TokenLayer a product / a brand? If not, better write it as &quot;the Token Layer&quot;"?>TokenLayer<?oxy_comment_end?></title>
     <shortdesc>TokenLayer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
         <p>TokenLayer sits between Blockchain and Websites to provide token functions with the level
             of trust provided by the blockchain and the user experience of a website.</p>
       <section><title>For the web</title>
         <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
-                similar to how a Paymanet Rail allows a e-commerce site to on-board users of various
-                credit card and payment methods. However, Tokens can provide more important role
+                similar to how a Payment Rail allows an e-commerce site to on-board users of various
+                credit card and payment methods. However, Tokens can provide more important roles
                 than just payment. For example, a Car Token allows a car owner to securely authorise
                 your website to find a new rental customer of the car, and, when found, to give that
                 customer direct access to the car door. More about innovative ways to use tokens on
@@ -32,10 +32,10 @@
             token invoke each other requires a common expression which benefits from
           standardisation.</p>
         <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
-                blockchain data on behalf of the token code (in TokenScript files) and the website,
-                run the necessary cryptographic proofs plus mathematical gymnastics, provides a private
-                and secure environment to run Token Cards, and provide security features to safe
-                guard user's assets.</p>
+                blockchain data on behalf of the token code (in TokenScript files) and the website
+                run the necessary cryptographic proofs plus mathematical gymnastics, provides a
+                private and secure environment to run Token Cards, and provide security features to
+                safe guard user's assets.</p>
         </section>
     </conbody>
 </concept>
