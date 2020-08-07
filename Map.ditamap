@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title>Content TokenScript docu</title>
+    <title>Content TokenScript docs</title>
     <topicref href="Tokenization.dita"/>
     <topicref href="TokenScript.dita">
         <topicref href="defiwithandwithoutts.dita"/>
@@ -24,5 +24,8 @@
         <topicref href="Signing.dita"/>
         <topicref href="Deploy.dita"/>
         <topicref href="MagicLinks.dita"/>
+    </topicref>
+    <topicref href="FeatureImplementation.dita">
+        <topicref href="DistinctAttributes.dita"/>
     </topicref>
 </map>
