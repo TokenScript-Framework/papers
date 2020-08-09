@@ -10,7 +10,7 @@
     </topicref>
     <topicref href="QuickStart.dita"/>
     <topicref href="BasicConcepts.dita">
-        <topicref href="TokenScript-Framework.dita"/>
+        <topicref href="TokenScript-Component.dita"/>
         <topicref href="Attributes.dita"/>
         <topicref href="Card.dita">
             <topicref href="TokenCard.dita"/>
