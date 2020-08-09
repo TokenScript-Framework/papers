@@ -2,7 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_tvg_xkg_nmb">
     <title>Attributes</title>
-    <shortdesc>Attributes in TokenScript define the properties of a token.</shortdesc>
+    <shortdesc>In TokenScript, by defining attributes, token data becomes available to Cards and
+        Websites </shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-6f535edd-7fff-c20b-1017-137517f57393">In TokenScript you
             can declare “attributes”. These are properties of the token.</p>
@@ -24,9 +25,9 @@
     &lt;/ts:attribute></codeblock>
         <p dir="ltr">An token attribute is defined, so that the TokenScript engine knows how to get
             its value when needed.</p>
-        <p>Once defined, the attribute is available to all of the cards defined for this token in
-            the same TokenScript file without special permissions. It also became available in the
-                <xref href="TokenLayer.dita"/> to allow functionalities like:</p>
+        <p>Once defined, the attribute is available to all of the <xref href="Card.dita"/> defined
+            for this token in the same TokenScript file without special permissions. It also became
+            available in the <xref href="TokenLayer.dita"/> to allow functionalities like:</p>
         <ul id="ul_g3m_mst_pmb">
             <li><xref href="TokenNegotiation.dita"/></li>
             <li>Search / index of a token (e.g. in a market place)</li>
