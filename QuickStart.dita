@@ -20,7 +20,7 @@
         <p>To create your own token we recommend that you use <xref
                 href="https://studio.ethereum.org/" format="html" scope="external">Ethereum
                 studio</xref> to create the files for a standard ERC token. Studio has a good
-            template for a simple token, which is enough for this purpose. Than you need to recreate
+            template for a simple token, which is enough for this purpose. Then you need to recreate
             the files in<xref href="https://remix.ethereum.org/" format="html" scope="external">
                 Remix</xref>. To deploy them on Ropsten, you need to connect your wallet, like
             AlphaWallet or Metamask, and get some testnet coins from the faucet. If you know the
