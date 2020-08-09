@@ -28,3 +28,7 @@ pre.codeblock {
 	border: thin solid #e1e4e5;
 	margin-top: 0.5ex;
 }
+
+a.navbar-brand::first-letter {
+	font-size: larger;
+}
