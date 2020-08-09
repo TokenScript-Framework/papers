@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_wg5_gvs_pmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Context-based</title>
+    <shortdesc>Token's availability, status and use are affected by context</shortdesc>
     <conbody>
-        <p></p>
+<p>TokenLayer allows Token Actions to be defined based on context. a TokenLayer provides actions to
+                be performed under the right context.</p>
+            <p>Take American Express Travel Credit Token as an example. Instead of launching a web
+                application called American Express Travel, where the user is able to choose a hotel
+                and spend such travel credit, having a Token Layer allows the user to go to book a
+                hotel in any hotel booking website that supports the use of such a token, and pay
+                with the credit at the checkout.</p>
+            <p>Similarly, though a Token token can be associated with a specific time, location or
+                environment. For example, an airline passenger is able to swipe open the turnstile
+                at the airport check-in without having to open his Airline mobile app first, as the
+                use of such a token (boarding pass) is associated with the right context. A
+                TokenLayer implementation like TokenScript allows the tokens to be associated with
+                context by declaration or authorisation, instead of having each token running a
+                process on user's device.</p>
     </conbody>
 </concept>
