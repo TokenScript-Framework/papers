@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_jrl_h5q_4mb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Token Negotiation</title>
+    <shortdesc>Token Negotiation is how a website discovers tokens it can use</shortdesc>
     <conbody>
-        <p></p>
+        <p>Token Negotiation is the process by which Tokens and Websites negotiate to find the
+            match.</p>
+        <p>For example, a travel booking website like booking.com might negotiate for the following
+            tokens:</p>
+        <ul id="ul_yqp_k5t_pmb">
+            <li>Travel agent's status token which allows special travel-agent booking.</li>
+            <li>Any airfare token which included free overnight stay for certain hotels.</li>
+            <li>Priority Guest Rewards tokens, which might allows free upgrades for certain
+                hotels.</li>
+            <li>Any Payment Token that can be used to pay for the booking (e.g. American Express
+                Explorer Credit).
+            </li>
+        </ul>
+        <p>The website booking.com find and allow the users to use such tokens through
+            TokenNegitation.</p>
+      <p>TokenScript provides the following negotiation methods:<ol id="ol_egq_bvt_pmb">
+                <li>Attribute based negotiation, which requires the negotiable attributes to be
+                    declared in TokenScripts.</li>
+                <li>White-list based negotiation, by which a token explicitly list the websites that
+                    can use the token. </li>
+                <li>Expectation based negotiation, by which a token declare being able to do certain
+                    things (e.g. let the website receives up to 1ETH in payment).</li>
+            </ol></p><p>More on this later. Token Negotiation is a work in progress.</p>
     </conbody>
 </concept>
