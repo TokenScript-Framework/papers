@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_oql_t3s_pmb">
-    <title>Data/Even Driven</title>
+    <title>Data/Event Driven</title>
     <shortdesc>TokenScript takes a data-driven, event-driven design approach</shortdesc>
     <conbody>
         <p>As of 2020, most of the token's function that goes beyond typical ERC20 transfer requires
