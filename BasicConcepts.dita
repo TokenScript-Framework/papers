@@ -5,7 +5,7 @@
     <shortdesc>Learn about the basic concepts of TokenScript, which are used for creating a
         TokenScript.</shortdesc>
     <conbody>
-        <p>TokenScript is a <xref href="TokenScript-Framework.dita">framework for JavaScript /
+        <p>TokenScript is a <xref href="TokenScript-Component.dita">framework for JavaScript /
                 WebAssembly and XML markup</xref>. In it, several basic concepts come into play:
                 <xref href="Card.dita">Cards</xref> (<xref href="ActionCard.dita">Action
                 Cards</xref>, <xref href="ActivityCard.dita">Activity Cards</xref>, <xref

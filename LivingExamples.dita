@@ -51,7 +51,7 @@
         <p>However, a wallet doesn't know a DeFi app until the wallet authors manually integrated
             the logic of its smart contracts. For AlphaWallet we did this too - but as an author of
             a DeFi app you can do it yourself and submit it to our TokenScript repository for
-            implementation in AlphaWallet. We created <xref href="TokenScript-Framework.dita">an
+            implementation in AlphaWallet. We created <xref href="TokenScript-Component.dita">an
                 open source infrastructure</xref> for this.</p>
         <p>Take Compound for example. To participate in the money market smart contract you need to
             transform token like DAI or WBTC into cDai or cWBTC. A normal wallet doesn't know much
