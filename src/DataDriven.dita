@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_oql_t3s_pmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Data/Even Driven</title>
+    <shortdesc>TokenScript takes a data-driven, event-driven design approach</shortdesc>
     <conbody>
-        <p></p>
+        <p>As of 2020, most of the token's function that goes beyond typical ERC20 transfer requires
+            a host application. A user visits a dapp website that is specifically serving the
+            functionality of that dapp. The existence of a host dapp is always assumed.</p>
+        <p>For example, if an AAVE token is nearing its liquidation position, a host Dapp can check
+            the current collateralisation position and provide a warning on the host Dapp. If the
+            host Dapp is not running, the user would not have learned of the dangerous
+            situation.</p>
+        <p>There are various "fixes" for this. A minified host Dapp can be made to run on the user's
+            wallet, monitoring user's token status even when the user is not actively visiting the
+            host Dapp website. Alternatively, website push notification can be made, albeit less
+            reliable. Finally, a token can make their own wallet app, but it doesn't scale up when a
+            user needs more tokens working properly in one wallet.</p>
+        <p>In TokenScript, a TokenEngine is at work on the web or in user's wallet. It maintains a
+            set of token attributes and utilises the declarations in TokenScript file:</p>
+        <ol id="ol_pyb_mls_pmb">
+            <li>How to fetch relevant data for tokens. For example, how to extract data from a smart
+                contract function calls, to listen to an oracle or to examine an attestation.</li>
+            <li>Which event might trigger which token attributes or status to update.</li>
+            <li>What kind of events or changes are worth triggering higher level UX logic, for
+                example, producing a warning, or trigger a pre-signed deal to execute.</li>
+        </ol>
+      <p>This is achieved by having Token Attributes, events and data modules declared in a
+            TokenScript file in a XML dialect, and having them signed by a Token Issuer.</p>
     </conbody>
 </concept>
