@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_hkf_tdd_pmb">
-    <title>TokenLayer</title>
-    <shortdesc>TokenLayer is a set of intrastructure to support Tokenisation use-cases</shortdesc>
+    <title><?oxy_comment_start author="theBergmann" timestamp="20200807T182405+0200" comment="is TokenLayer a product / a brand? If not, better write it as &quot;the Token Layer&quot;"?>TokenLayer<?oxy_comment_end?></title>
+    <shortdesc>TokenLayer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
-        <p>TokenLayer is a set of intructure that supports upper layer Tokenisation use-cases by
-            combining the lower layer technology like Blockchain and Attestation. TokenScript's core
-            task is to provide such a TokenLayer. We envision a TokenLayer with the following
-            characteristics.</p>
-        <p/>
-      <section><title>Data-driven and Event-driven</title><p>Instead of running an application and repeatedly enquire the blockchain for data updates, a
-                TokenLayer provides data that is declared relevant. A token's status, available
-                actions and roles are affected by the token's data, which we collectively call Token
-                Attributes.</p>
-            <p>In TokenScript's design, Token Attributes are either collected from the blockchain
-                directly through Smart Contract calls, or through an Attestation. Similarly, a
-                wallet or web application built on token layer declares interest on receives updates
-                of blockchain events, timed events (like opening a previous commit) or incoming
-                attestations, instead of actively looking for them.</p></section>
-      <section><title>Context-based</title><p>TokenLayer allows Token Actions to be defined based on context. a TokenLayer provides actions to
-                be performed under the right context.</p>
-            <p>Take American Express Travel Credit Token as an example. Instead of launching a web
-                application called American Express Travel, where the user is able to choose a hotel
-                and spend such travel credit, having a Token Layer allows the user to go to book a
-                hotel in any hotel booking website that supports the use of such a token, and pay
-                with the credit at the checkout.</p>
-            <p>Similarly, though a Token token can be associated with a specific time, location or
-                environment. For example, an airline passenger is able to swipe open the turnstile
-                at the airport check-in without having to open his Airline mobile app first, as the
-                use of such a token (boarding pass) is associated with the right context. A
-                TokenLayer implementation like TokenScript allows the tokens to be associated with
-                context by declaration or authorisation, instead of having each token running a
-                process on user's device.</p></section>
-        <section id="section_afb_pgd_pmb">
-            <title>Composite</title>
-            <p>Token actions directly run on TokenLayer are designed to be composible…</p>
+        <p>TokenLayer sits between Blockchain and Websites to provide token functions with the level
+            of trust provided by the blockchain and the user experience of a website.</p>
+      <section><title>For the web</title>
+        <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
+                similar to how a Payment Rail allows an e-commerce site to on-board users of various
+                credit card and payment methods. However, Tokens can provide more important roles
+                than just payment. For example, a Car Token allows a car owner to securely authorise
+                your website to find a new rental customer of the car, and, when found, to give that
+                customer direct access to the car door. More about innovative ways to use tokens on
+                websites see <xref href="Tokenization.dita"/></p></section>
+      <section><title>For the Token Issuers</title>
+        <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution channel
+            to make your tokens available to all websites that also uses a TokenLayer. This is 
+            vital to token issuer's business model which is directly affected by the token's reach. 
+            A TokenLayer solution supports
+            various transaction security features and a packaged user experience. For
+            example, if you issue Car Token to car owners, they will be able to use it on websites
+            to rent their cars out, or access car status and services with that token. </p></section>
+                  <section>
+  <title>A TokenLayer is both a standardisation effort and an infrastructure.</title>
+
+        <p>Speaking of standardisation, take, for example, the process of matching Tokens with
+            Websites that use them: TokenNegotiation, requires a common conversation channel for
+            the website to check what tokens the user has, and for the user to choose the token to
+            use, prove the token's ownership or other information if needed. Furthermore, the way
+            token invoke each other requires a common expression which benefits from
+          standardisation.</p>
+        <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
+                blockchain data on behalf of the token code (in TokenScript files) and the website
+                run the necessary cryptographic proofs plus mathematical gymnastics, provides a
+                private and secure environment to run Token Cards, and provide security features to
+                safe guard user's assets.</p>
         </section>
     </conbody>
 </concept>
