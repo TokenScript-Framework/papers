@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_yph_nkg_nmb">
-    <title>The TokenScript Framework</title>
+    <title>TokenScript File</title>
     <conbody>
-        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">TokenScript is a
-            framework for JavaScript / WebAssembly and an XML markup. Both are usually expressed in
-            files. </p>
+        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">TokenScript file  is an overlay of XML Mark-up and JavaScript.</p>
         <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
             it must contain a reference to it and can interact with it.</p>
         <p dir="ltr">The TokenScript files are written and <xref href="Signing.dita">signed by the
