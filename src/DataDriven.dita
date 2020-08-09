@@ -8,14 +8,13 @@
             a host application. A user visits a dapp website that is specifically serving the
             functionality of that dapp. The existence of a host dapp is always assumed.</p>
         <p>For example, if an AAVE token is nearing its liquidation position, a host Dapp can check
-            the current collateralisation position and provide a warning on the host Dapp. If the
-            host Dapp is not running, the user would not have learned of the dangerous
+            the current collateralisation position and provide a warning on the host Dapp. But, if
+            the host Dapp is not running, the user would not have learned of the dangerous
             situation.</p>
-        <p>There are various "fixes" for this. A minified host Dapp can be made to run on the user's
-            wallet, monitoring user's token status even when the user is not actively visiting the
-            host Dapp website. Alternatively, website push notification can be made, albeit less
-            reliable. Finally, a token can make their own wallet app, but it doesn't scale up when a
-            user needs more tokens working properly in one wallet.</p>
+        <p>Instead of having a host Dapp continuesly running repeatedly enquire the blockchain for
+            data updates, in TokenScript's design, a token's relevent data is defined as <xref
+                href="Attributes.dita"/>. </p>
+        <p/>
         <p>In TokenScript, a TokenEngine is at work on the web or in user's wallet. It maintains a
             set of token attributes and utilises the declarations in TokenScript file:</p>
         <ol id="ol_pyb_mls_pmb">
