@@ -15,20 +15,20 @@
             attribute like “expiry”.</p>
         <p>Attributes are declared in TokenScript. The following is a minimalist declaration, where
             an attribute "balance" is defined. The value originates from an Ethereum function call
-                <codeph>balanceOf</codeph><codeblock>    &lt;ts:attribute name="balance">
+          <codeph>balanceOf</codeph>.</p><codeblock>    &lt;ts:attribute name="balance">
         &lt;ts:origins>
             &lt;ethereum:call function="balanceOf" as="uint">
                 &lt;ts:data>&lt;ts:address ref="ownerAddress"/>&lt;/ts:data>
             &lt;/ethereum:call>
         &lt;/ts:origins>
-    &lt;/ts:attribute></codeblock></p>
+    &lt;/ts:attribute></codeblock>
         <p dir="ltr">An token attribute is defined, so that the TokenScript engine knows how to get
             its value when needed.</p>
         <p>Once defined, the attribute is available to all of the cards defined for this token in
             the same TokenScript file without special permissions. It also became available in the
-            Data Layer to allow functionalities like:</p>
+                <xref href="TokenLayer.dita"/> to allow functionalities like:</p>
         <ul id="ul_g3m_mst_pmb">
-            <li>TokenNegotiation</li>
+            <li><xref href="TokenNegotiation.dita"/></li>
             <li>Search / index of a token (e.g. in a market place)</li>
             <li>Selection</li>
             <li>Describe criteria of actions</li>
