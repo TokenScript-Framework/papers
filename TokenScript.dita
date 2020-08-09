@@ -9,10 +9,10 @@
             <li>TokenScript Engine, which works in the user's wallet, on the web or in a browser
                 plugin, to provide the runtime infrustructure so that various Tokens can be used on
                 various websites.</li>
-            <li>TokenScript files, each issued and signed by the corresponding Token Issuer,
-                providing a Token's UX, rules, data models, transaction security measurements for a
-                specific token to be used on various websites when loaded in a TokenScript
-                Engine.</li>
+            <li><xref href="TokenScript-Component.dita"/>, each issued and signed by the
+                corresponding Token Issuer, providing a Token's UX, rules, data models, transaction
+                security measurements for a specific token to be used on various websites when
+                loaded in a TokenScript Engine.</li>
         </ul>
         <p dir="ltr">TokenScript enables <b>token creators</b> to leave the restrictions of smart
             contracts behind. It allows to add a lot of information, even image files or API lookups
