@@ -25,7 +25,5 @@
         <topicref href="Deploy.dita"/>
         <topicref href="MagicLinks.dita"/>
     </topicref>
-    <topicref href="FeatureImplementation.dita">
-        <topicref href="DistinctAttributes.dita"/>
-    </topicref>
+    <mapref href="features/features.ditamap"/>
 </map>
