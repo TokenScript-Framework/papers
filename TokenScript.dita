@@ -3,10 +3,17 @@
 <topic id="topic_nlj_qhg_nmb">
     <title>Introduction to TokenScript</title>
     <body>
-        <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
-                <xref href="TokenScript-Framework.dita">framework for JavaScript and XML
-                markup</xref> which allows the creator of a token or a trusted authority to declare
-            properties of and rules for the token. </p>
+        <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a <xref href="DataDriven.dita"/>
+               , Context based <xref href="TokenLayer.dita"/>. TokenScript consists of:</p>
+        <ul id="ul_qws_mms_pmb">
+            <li>TokenScript Engine, which works in the user's wallet, on the web or in a browser
+                plugin, to provide the runtime infrustructure so that various Tokens can be used on
+                various websites.</li>
+            <li>TokenScript files, each issued and signed by the corresponding Token Issuer,
+                providing a Token's UX, rules, data models, transaction security measurements for a
+                specific token to be used on various websites when loaded in a TokenScript
+                Engine.</li>
+        </ul>
         <p dir="ltr">TokenScript enables <b>token creators</b> to leave the restrictions of smart
             contracts behind. It allows to add a lot of information, even image files or API lookups
             to a token, and design a set of business rules and interaction logics for it, including
@@ -19,7 +26,7 @@
             of information about the token to the GUI and create all kind of complex transactions.
             TokenScript eliminates the need for third party websites and puts the user at the
             helmet.</p>
-        <p dir="ltr"><b>Web and app developers</b> can import TokenScript into their app. It allows
+        <p dir="ltr"><b>Web and app developers</b> can deploy TokenScript into their app. It allows
             them to securely integrate the full scope of token functionality and to trigger specific
             token related actions in the user wallet. Without TokenScript they would need to deeply
             understand blockchain and smart contracts and invest a lot of work to integrate every
