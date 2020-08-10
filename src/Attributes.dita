@@ -16,7 +16,7 @@
             attribute like “expiry”.</p>
         <p>Attributes are declared in TokenScript. The following is a minimalist declaration, where
             an attribute "balance" is defined. The value originates from an Ethereum function call
-          <codeph>balanceOf</codeph>.</p><codeblock>    &lt;ts:attribute name="balance">
+          <codeph>balanceOf</codeph>.</p><codeblock outputclass="language-xml">    &lt;ts:attribute name="balance">
         &lt;ts:origins>
             &lt;ethereum:call function="balanceOf" as="uint">
                 &lt;ts:data>&lt;ts:address ref="ownerAddress"/>&lt;/ts:data>
