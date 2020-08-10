@@ -22,8 +22,9 @@
       <p>TokenScript provides the following negotiation methods:<ol id="ol_egq_bvt_pmb">
                 <li>Attribute based negotiation, which requires the negotiable attributes to be
                     declared in TokenScripts.</li>
-                <li>White-list based negotiation, by which a token explicitly list the websites that
-                    can use the token. </li>
+                <li>Attestation based negotiation, by which a website provides an attestation signed
+                    by a token issuer's trust key, showing that the token is intended to be usable
+                    on that website;</li>
                 <li>Expectation based negotiation, by which a token declare being able to do certain
                     things (e.g. let the website receives up to 1ETH in payment).</li>
             </ol></p><p>More on this later. Token Negotiation is a work in progress.</p>

@@ -27,7 +27,7 @@
             <li>Search / index of a token (e.g. in a market place)</li>
             <li>Selection</li>
             <li>Describe criteria of actions</li>
-            <li>Set the role of a token.</li>
+            <li>Set the role of a token</li>
         </ul>
         <p dir="ltr">An token's attribute is a data object.</p>
         <p dir="ltr">Attributes are just declarations. They are never directly shown to a wallet.
