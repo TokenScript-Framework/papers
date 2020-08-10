@@ -16,7 +16,8 @@
             attribute like “expiry”.</p>
         <p>Attributes are declared in TokenScript. The following is a minimalist declaration, where
             an attribute "balance" is defined. The value originates from an Ethereum function call
-	<codeph>balanceOf</codeph>.</p>
+                <codeph>balanceOf</codeph>.</p>
+      <codeblock conref="elements/Attribute.dita#concept_bfd_tgl_mmb/minimal_attribute"/>
         <p dir="ltr">An token attribute is defined, so that the TokenScript engine knows how to get
             its value when needed.</p>
         <p>Once defined, the attribute is available to all of the <xref href="Card.dita"/> defined
