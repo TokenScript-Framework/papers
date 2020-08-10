@@ -3,10 +3,15 @@
 <topic id="topic_nlj_qhg_nmb">
     <title>Introduction to TokenScript</title>
     <body>
-	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a <xref href="DataDriven.dita"/>, 
-	    <xref href="ContextBased.dita"/> <xref href="TokenLayer.dita"/> technology.</p>
-
-	    <p>TokenScript consists of:</p>
+	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
+                
+            <xref href="TokenLayer.dita"/> technology.<note>A Token Layer sits between apps and
+                blockchain, providing Trust, Interoperability, Privacy and (transaction) Security,
+                for various tokens to be used on various websites. See <xref href="TokenLayer.dita"
+                />.</note></p>
+      
+      <p dir="ltr">TokenScript is <xref href="DataDriven.dita"/>, <xref href="ContextBased.dita"/>.</p>
+	    <p dir="ltr">TokenScript consists of:</p>
         <ul id="ul_qws_mms_pmb">
             <li>TokenScript Engine, which works in the user's wallet, on the web or in a browser
                 plugin, to provide the runtime infrustructure so that various Tokens can be used on
