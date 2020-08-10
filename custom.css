@@ -1,3 +1,4 @@
+@import url(https://www.dita-ot.org/css/main.css);
 /* Style navigation as sidebar */
 nav[role=toc] {
   float: left;
