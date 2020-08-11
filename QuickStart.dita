@@ -70,15 +70,12 @@
         <p>Every TokenScript file needs to contain some basic info about the token: On which network
             does it run, what is the address of its smart contract, and what is its name? This is
             declared with this code:</p>
-        <p><image href="ts-xml-contract-origin.png" id="image_dmr_qry_4mb"/></p>
-        <p><codeph>&lt;ts:contract interface="erc20" name="Coin"></codeph></p>
-        <p><codeph> &lt;ts:address
-                network="3">0xe35FE4A1B17d50A8022078d98162DB25bC860834&lt;/ts:address></codeph></p>
-        <p><codeph> &lt;/ts:contract></codeph></p>
-        <p><codeph> &lt;ts:origins></codeph></p>
-        <p><codeph> &lt;ts:ethereum contract="Coin"/></codeph></p>
-        <p><codeph> &lt;/ts:origins></codeph></p>
-        <p><codeph> &lt;ts:cards></codeph></p>
+        <p><image href="ts-xml-contract-origin.png" id="image_dmr_qry_4mb"
+            /><codeblock>&lt;ts:contract interface="erc20" name="Coin">
+     &lt;ts:address network="3">0xe35FE4A1B17d50A8022078d98162DB25bC860834&lt;/ts:address>&lt;/ts:contract>
+&lt;ts:origins>
+     &lt;ts:ethereum contract="Coin"/>
+&lt;/ts:origins></codeblock></p>
         <p>As you see, the Coin token is an ERC20 smart contract. The network number 3 means that it
             is on Ropsten testnet.</p>
         <p><i>Action Cards</i></p>
