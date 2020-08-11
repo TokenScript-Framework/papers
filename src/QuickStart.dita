@@ -85,17 +85,16 @@
         <p><image href="ts-xml-action-card.png" id="image_nt5_rry_4mb"/></p>
         <p>The part we are interested in starts with the <codeph>&lt;ts:cards></codeph> tag and ends
             with <codeph>&lt;/ts:cards></codeph>. Inside of these tags we put the individual cards.
-            In this example an Action Card is added which provides information about the token:</p>
-        <p><codeph> &lt;ts:card type="action"></codeph></p>
-        <p><codeph> &lt;ts:label></codeph></p>
-        <p><codeph> &lt;ts:string xml:lang="en">About this token&lt;/ts:string></codeph></p>
-        <p><codeph> &lt;/ts:label></codeph></p>
-        <p><codeph> &lt;ts:view</codeph></p>
-        <p><codeph> xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"></codeph></p>
-        <p><codeph> &lt;style type="text/css">&amp;style;&lt;/style></codeph></p>
-        <p><codeph> &lt;script type="text/javascript">&amp;about.en;&lt;/script></codeph></p>
-        <p><codeph> &lt;/ts:view></codeph></p>
-        <p><codeph> &lt;/ts:card></codeph></p>
+            In this example an Action Card is added which provides information about the
+            token:<codeblock> &lt;ts:card type="action">
+     &lt;ts:label>
+          &lt;ts:string xml:lang="en">About this token&lt;/ts:string>
+     &lt;/ts:label>
+     &lt;ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+         &lt;style type="text/css">&amp;style;&lt;/style>
+         &lt;script type="text/javascript">&amp;about.en;&lt;/script>
+     &lt;/ts:view>
+ &lt;/ts:card></codeblock></p>
         <p>The starting tag explains TokenScript that this is an Action Card. AlphaWallet will know
             how to deal with it. Inside the label tags we find the english version of what will be
             on the button to show information: "About this token". The "view" tags declare what the
@@ -105,19 +104,17 @@
             ignore the approve file and open the about.en.js file to inspect it:</p>
         <p><image href="ts-javascript-ui-segment.png" id="image_h1z_sry_4mb"/></p>
         <p>The file starts with the declaration of the Token class, and ends with a web3 command. In
-            this guide we only focus on one part inside the Token class - the render() function:</p>
-        <p><codeph> render() {</codeph></p>
-        <p><codeph> return`</codeph></p>
-        <p><codeph> &lt;div class="ui container"></codeph></p>
-        <p><codeph> &lt;div class="ui segment"></codeph></p>
-        <p><codeph> &lt;img src="https://www.bitcoin-buch.org/bitcoin-geschichte-front-1.jpg"
-                /></codeph></p>
-        <p><codeph> &lt;span>&lt;bold>&lt;h1>This is the Token of Christoph!&lt;/h1>&lt;/bold>&lt;br
-                />&lt;br />It is a one of the century chance to invest!&lt;/span></codeph></p>
-        <p><codeph> &lt;/div></codeph></p>
-        <p><codeph> &lt;/div></codeph></p>
-        <p><codeph>`;</codeph></p>
-        <p><codeph> }</codeph></p>
+            this guide we only focus on one part inside the Token class - the render()
+            function:<codeblock> render() {
+     return`
+     &lt;div class="ui container">
+         &lt;div class="ui segment">
+             &lt;img src="https://www.bitcoin-buch.org/bitcoin-geschichte-front-1.jpg" />
+             &lt;span>&lt;bold>&lt;h1>This is the Token of Christoph!&lt;/h1>&lt;/bold>&lt;br />&lt;br />It                     is a one of the century chance to invest!&lt;/span>
+         &lt;/div>
+     &lt;/div>
+     `;
+ }</codeblock></p>
         <p>This function renders the display after the user tapped the "about the token" button.
             Inside you find some basic HTML: A div of the class "ui container", and in it a div of
             the class "ui segment". Inside this div there is a picture, a headline and a text. </p>
