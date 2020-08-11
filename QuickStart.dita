@@ -56,16 +56,16 @@
         <p><i>The header</i></p>
         <p>The file header will look like this:</p>
         <p><image href="ts-xml-header.png" id="image_d3l_pry_4mb"/></p>
-        <p><codeph>&lt;?xml version="1.0" encoding="UTF-8"?></codeph></p>
-        <p><codeph>&lt;!DOCTYPE token [</codeph></p>
-        <p><codeph> &lt;!ENTITY style SYSTEM "shared.css"></codeph></p>
-        <p><codeph> &lt;!ENTITY about.en SYSTEM "about.en.js"></codeph></p>
-        <p><codeph> &lt;!ENTITY approve.en SYSTEM "approve.en.js"></codeph></p>
-        <p><codeph> &lt;!ENTITY foryou.en SYSTEM "foryou.en.js"></codeph></p>
-        <p><codeph> ]></codeph></p>
-        <p>The first line declares the XML version of the document. Inside the !DOCTYPE tag you
-            declare other files to use. In this case it are the JavaScript files to use in Action
-            Cards. Keep this in mind.</p>
+        <p><codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE token [
+  &lt;!ENTITY style SYSTEM "shared.css">
+  &lt;!ENTITY about.en SYSTEM "about.en.js">
+  &lt;!ENTITY approve.en SYSTEM "approve.en.js">
+  &lt;!ENTITY foryou.en SYSTEM "foryou.en.js">
+]></codeblock>The
+            first line declares the XML version of the document. Inside the !DOCTYPE tag you declare
+            other files to use. In this case it are the JavaScript files to use in Action Cards.
+            Keep this in mind.</p>
         <p><i>Declare contract, network and name</i></p>
         <p>Every TokenScript file needs to contain some basic info about the token: On which network
             does it run, what is the address of its smart contract, and what is its name? This is
