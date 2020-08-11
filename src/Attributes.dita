@@ -18,8 +18,33 @@
             an attribute "balance" is defined. The value originates from an Ethereum function call
                 <codeph>balanceOf</codeph>.</p>
       <codeblock conref="elements/Attribute.dita#concept_bfd_tgl_mmb/minimal_attribute"/>
+        <p>Another example of an Attribute declaration declares the locality of a soccer match in
+            the <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/EntryToken"
+                format="html" scope="external">TokenScript for an entry token</xref>:</p>
+        <p>
+            <codeblock> &lt;ts:attribute name="locality">
+      &lt;ts:type>&lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.15&lt;/ts:syntax>&lt;/ts:type>
+      &lt;ts:origins>
+          &lt;ethereum:call function="getLocality" contract="EntryToken" as="utf8">
+              &lt;ts:data>
+                  &lt;ts:uint256 ref="tokenId"/>
+              &lt;/ts:data>
+          &lt;/ethereum:call>
+      &lt;/ts:origins>
+&lt;/ts:attribute></codeblock>
+        </p>
         <p dir="ltr">An token attribute is defined, so that the TokenScript engine knows how to get
-            its value when needed.</p>
+            its value when needed. For example, an Action Card of an <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS"
+                format="html" scope="external">ENS TokenScript</xref> renews the ENS domain and uses
+            the attribute
+            ensName:<codeblock>constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.props.baseNode = ".eth";
+        this.props.fullName = this.props.ensName + this.props.baseNode;
+        ...
+    }</codeblock></p>
         <p>Once defined, the attribute is available to all of the <xref href="Card.dita"/> defined
             for this token in the same TokenScript file without special permissions. It also became
             available in the <xref href="TokenLayer.dita"/> to allow functionalities like:</p>
