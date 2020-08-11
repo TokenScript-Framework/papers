@@ -38,8 +38,8 @@
             its value when needed. For example, an Action Card of an <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS"
                 format="html" scope="external">ENS TokenScript</xref> renews the ENS domain and uses
-            the attribute
-            ensName:<codeblock>constructor(tokenInstance) {
+            the attribute ensName, which was declared in the XML
+            file:<codeblock>constructor(tokenInstance) {
         this.props = tokenInstance;
         this.props.baseNode = ".eth";
         this.props.fullName = this.props.ensName + this.props.baseNode;
