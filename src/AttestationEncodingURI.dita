@@ -5,6 +5,6 @@
     <body>
         <p>Tthe TokenScript Attestation can be encoded in an URI format, in order to pass
             attestations on the Web. </p>
-        <p/>
+        <p><task conref="EncodingAttestationInURI.dita"/></p>
     </body>
 </topic>
