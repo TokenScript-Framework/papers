@@ -3,7 +3,14 @@
 <concept id="concept_jtt_cgj_qmb">
     <title>TokenScript Elements</title>
     <shortdesc>The most important declarative terms used in the TokenScript XML file</shortdesc>
-    <conbody>
+    <conbody><note>
+               <p
+            conref="TokenScript-Component.dita#concept_yph_nkg_nmb/docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1"
+                  id="section_d5x_gpm_qmb"/><p> More on that see <xref href="TokenScript-Component.dita"/></p></note>
+        <p>The root element of a TokenScript File can be one of the following:</p>
+        <ul id="ul_dmn_srm_qmb">
+            <li>Card</li>
+        </ul>
         <p>address</p>
         <p>asxn:module</p>
         <p>attribute</p>
