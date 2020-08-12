@@ -17,23 +17,6 @@
         <note type="tip"><p>If a Token Issuer issues multiple tokens, it's important to define them in a single TokenScript
                 file using <xref href="elements/tokens.dita"/>, for TokenScript release management
                 reason.</p></note>
-        <p>asxn:module</p>
-        <p>attribute</p>
-        <p>card</p>
-        <p>contract</p>
-        <p>data</p>
-        <p>ethereum</p>
-        <p>item-view</p>
-        <p>label</p>
-        <p>origins</p>
-        <p>plurals</p>
-        <p>selection</p>
-        <p>string</p>
-        <p>syntax</p>
-        <p>token</p>
-        <p>transaction</p>
-        <p>type</p>
-        <p>uint256</p>
-        <p>view</p>
+        <p>Work is in progress to introduce other TokenScript elements such as: asxn:module</p>
     </conbody>
 </concept>
