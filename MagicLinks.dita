@@ -5,12 +5,12 @@
     <shortdesc>Magic Links does something magic, with cryptography!</shortdesc>
     <conbody>
         <p>Magic Links are action-triggering links that contains cryptographic information.
-            Technically, it's an <xref href="AttestationEncodingURI.dita"/>  in an URI format.</p>
+            Technically, it's an <xref href="EncodingAttestationInURI.dita"/>.</p>
         <p>Technically, it's an encoded attestation  links in which information about transactions,
             token, TokenScript and much more can be embedded. When a wallet imports a Magic Link, it
             gets a lot of information and instructions. Magic Links can help you to deploy and use a
             TokenScript.</p>
-        <p><b>Withdrawl transactions</b></p>
+        <p><b>Withdraw transactions</b></p>
         <p dir="ltr" id="docs-internal-guid-cc2d1346-7fff-f5eb-3caf-c17f48dd8176">One case for Magic
             Links is to pay someone without knowing his address. For this you can create a Magic
             Link which contains an allowance to withdraw a certain amount of Ether or a token like
