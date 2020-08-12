@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_qhc_wrn_qmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Attested Transaction</title>
+    <shortdesc>With an attestation, a user can send an attested transaction</shortdesc>
     <conbody>
-        <p></p>
+        <p>An attested transaction is one that uses an attestation to prove something that the
+            receiving Smart Contract can validate.</p>
+        <p>Examples are:</p>
+        <ul id="ul_zxz_zrn_qmb">
+            <li>In an ICO purchase limited to residents of certain countries, one can send an
+                attested transaction that attests to his residency country. The Smart Contract would
+                revert the transaction if the residency country isn't allowed.</li>
+            <li>Similarly, one can send an attested transaction that proves the sender is above the
+                legal age without giving away the actual age. </li>
+            <li>If you purchase prescription medicine from a Smart Contract, you can send an
+                attested transaction that you have a prescription for it, if the prescription was
+                issued to you as an attestation.</li>
+            <li>If you are authorised to draw x amount of money from a line of credit or someone's
+                wallet, that authorisation is provided as an attestation, and you draw the money by
+                creating an attested transaction using it.</li>
+   
+        </ul>
+      <p>Attested transactions often need to use certain cryptographic proofs. For a person who
+            proves his residency country, he should not reveal his national ID card number to the
+            blockchain, or risk all his transactions are associated by an observer of the blockchain
+            data. The TokenScript team produced one of such prove mechanism in a paper <xref
+                href="https://github.com/AlphaWallet/blockchain-attestation/releases" format="html"
+                scope="external">on Ethereum attestation in 2018</xref>.</p>
     </conbody>
 </concept>
