@@ -17,19 +17,19 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry>token</entry>
+                        <entry><codeph>&lt;token&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>tokens</entry>
+                        <entry><codeph>&lt;tokens&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>card</entry>
+                        <entry><codeph>&lt;card&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>cards</entry>
+                        <entry><codeph>&lt;cards&gt;</codeph></entry>
                         <entry/>
                     </row>
                 </tbody>
@@ -45,38 +45,11 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry>attribute</entry>
+                        <entry><codeph>&lt;attribute&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>origins</entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry>selection</entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry>grouping</entry>
+                        <entry><codeph>&lt;origins&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
@@ -99,15 +72,42 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry>label</entry>
+                        <entry><codeph>&lt;selection&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>string</entry>
+                        <entry><codeph>&lt;grouping&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>plural</entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph>&lt;label&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;string&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;plural&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
@@ -126,19 +126,19 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry>ethereum:contract</entry>
+                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>ethereum:call</entry>
+                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>ethereum:transaction</entry>
+                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>ethereum:event</entry>
+                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
                         <entry/>
                     </row>
                 </tbody>
@@ -153,11 +153,11 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry>asnx:module</entry>
+                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
-                        <entry>type</entry>
+                        <entry><codeph>&lt;type&gt;</codeph></entry>
                         <entry/>
                     </row>
                     <row>
