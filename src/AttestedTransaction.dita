@@ -29,10 +29,11 @@
         <p>The TokenScript team produced one of such prove mechanism in a paper <xref
                 href="https://github.com/AlphaWallet/blockchain-attestation/releases" format="html"
                 scope="external">on Ethereum attestation in 2018</xref>.</p>
-      <section><title>Alternative to attested transaction</title><p>If, between the sender of the transaction and the smart contract, an accountable 3rd party exists
-                that can assume the responsibility of confidentiality, you may use a white-list
-                approach instead of attested transaction. And indeed it was the model used by almost
-                all 2017 ICO projects with KYC requirements.</p>
+      <section><title>Alternative to attested transaction</title><p>If, between the sender of the transaction and the smart contract, an 3rd party exists that can
+                assume accountability and confidentiality, you may use a white-list approach instead
+                of attested transaction. Indeed, it was the model used by almost all 2017 ICO
+                projects with KYC requirements.</p>
+            <p>The process would be like this:</p>
             <ol id="ol_qmw_qvn_qmb">
                 <li>The sender of the transaction visit the confidential 3rd party's website,
                     providing his Ethereum address and his identity, e.g. by taking a photo holding
@@ -44,10 +45,11 @@
             </ol>
       <p>Compared with Attested Transaction, this method requires confidentiality and accountability
                 from the 3rd party, meaning that they should do their best to protect the sender's
-                identity. The best way to protect the privacy is to discard the data, yet, for
-                accountability reasons, they need to show that they have done KYC probably,
-                therefore can't discard the data. With Attested Transaction, a smart contract would
-                revert if the sender fails to meet the criteria, therefore doing away the
-                responsibility of the 3rd party altogether.</p></section>
+                identity. The best way to protect the privacy is to discard the private data, yet,
+                for accountability reasons, they need to show that they have done KYC probably,
+                therefore can't discard the private data.</p>
+            <p>With Attested Transaction, a smart contract would revert if the sender fails to meet
+                the criteria, therefore doing away the responsibility of the 3rd party
+                altogether.</p></section>
     </conbody>
 </concept>
