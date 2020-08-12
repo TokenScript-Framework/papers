@@ -18,7 +18,16 @@
             the corresponding Smart Contracts;</p>
         <p>For example, if you rent a tokenized car, you want to make sure, that the seller has an
             insurance police on the car. And if you trade something with someone, you might want to
-            be sure that he has verified his identity. And so on. </p>
+            be sure that he has verified his identity. And so on.</p>
+        <p>There are typically 3 ways to use an attestation:</p>
+        <ul id="ul_hdn_xv4_qmb">
+            <li>As the payload of an attested transactions. The underlying smart contract will check
+                the validity of such attestations.</li>
+            <li>To prove something to a 3rd party. For example, you can construct a proof of your
+                email address with an email address attestation.</li>
+            <li>To provide dependency for other attestations. Since <xref
+                    href="AttestationChained.dita"/>.</li>
+        </ul>
         <p>All those cases require an attestation: A data object (or file) which proofs a claim on
             something. An attestor can attestate an national identity or the possession of an email
             address, an insurance company can attestate an insurance certificate and so on. Those
