@@ -27,10 +27,20 @@
         <p>TokenScript fully support the integration of attestation processes, triggered by an
             action card directly in the wallet. You can integrate an attestation circuit into the
             life cycle of a token. </p>
-        <p><b>Attestation and Token</b></p>
-        <p dir="ltr" id="docs-internal-guid-c17d42c9-7fff-776a-6d10-82e4537e3178">Attestation
-            doesn’t need blockchain and token, but it can do a lot for a token, while at the same
-            time token make attestations more powerful.</p>
+        <p><b>Attestation versus Blockchain Token</b></p>
+        <p dir="ltr" id="docs-internal-guid-c17d42c9-7fff-776a-6d10-82e4537e3178">Attestation and
+            blockchain token, are related concepts. Both of them require the user having a private
+            key.</p>
+        <p>In some use-cases they are interchangeable. For example, a FIFA ticket can be eiether an
+            attestation or a blockchain token. When it is an attestation, it attests the
+            key-holder's right to enter the venue. When it is a blockchain token, it serves the same
+            purpose, and also might be transferable within the Smart Contract rules.</p>
+        <p>That reveals the first difference: an attestation isn't transferable, and a token's
+            transferability depends on the smart contract. The second difference, is that
+            attestations are private, not stored on the blockchain. The proof of an attestation,
+            however, might be written to the blockchain.</p>
+        <p dir="ltr"> but it can do a lot for a token, while at the same time token make
+            attestations more powerful.</p>
         <p dir="ltr">An attestation can be connected to an Ethereum entity like the holder of a key
             pair. This allows to create cheques - the transfer of coins from a smart contract to
             someone who can provide an attestation for an identifier like an email address. Also,
