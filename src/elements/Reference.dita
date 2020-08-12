@@ -5,19 +5,159 @@
     <shortdesc>Reference of all elements that can be used in a TokenScript</shortdesc>
     <refbody>
         <table id="table_dl4_w5m_qmb">
-            <title/>
+            <title>Root elements</title>
             <tgroup cols="2">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
                 <thead>
                     <row>
-                        <entry>Element</entry>
+                        <entry>Elements</entry>
                         <entry>Use</entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
+                        <entry>token</entry>
                         <entry/>
+                    </row>
+                    <row>
+                        <entry>tokens</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>card</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>cards</entry>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>attribute</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>origins</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>selection</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>grouping</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>label</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>string</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>plural</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements in <codeph>ethereum</codeph> namespace </entry>
+                        <entry>Use on the Ethereum blockchain</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>ethereum:contract</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>ethereum:call</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>ethereum:transaction</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>ethereum:event</entry>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>asnx:module</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>type</entry>
                         <entry/>
                     </row>
                     <row>
@@ -31,5 +171,6 @@
                 </tbody>
             </tgroup>
         </table>
+      
     </refbody>
 </reference>
