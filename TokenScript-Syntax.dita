@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_jtt_cgj_qmb">
-    <title>TokenScript Syntax</title>
-    <shortdesc>This glossar contains the most important declarative terms used in the TokenScript
-        XML file</shortdesc>
+    <title>TokenScript Elements</title>
+    <shortdesc>The most important declarative terms used in the TokenScript XML file</shortdesc>
     <conbody>
         <p>address</p>
         <p>asxn:module</p>
