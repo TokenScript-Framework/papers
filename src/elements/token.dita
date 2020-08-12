@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bfd_tgl_mmb">
+	<title><codeph>token</codeph> element</title>
+    <shortdesc><codeph>token</codeph> element defines a Token</shortdesc>
+    <conbody>
+	    <p>A <codeph>token</codeph> element defines a Token. It can be used as a root element of a TokenScript File.</p>
+    </conbody>
+</concept>
