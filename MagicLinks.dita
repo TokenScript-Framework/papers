@@ -2,13 +2,13 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_ilx_nmg_nmb">
     <title>Magic Links</title>
-    <shortdesc>Magic Links is an invention of AlphaWallet. It allows to create conditional
-        withdrawal, to help a wallet to find and use a TokenScript and an app to trigger an action
-        card in the wallet of the user.</shortdesc>
+    <shortdesc>Magic Links does something magic, with cryptography!</shortdesc>
     <conbody>
-        <p>Magic Links are links in which information about transactions, token, TokenScript and
-            much more can be embedded. When a wallet imports a Magic Link, it gets a lot of
-            information and instructions. Magic Links can help you to deploy and use a
+        <p>Magic Links are action-triggering links that contains cryptographic information.
+            Technically, it's an attestation encoded in an URI format.</p>
+        <p>Technically, it's an encoded attestation  links in which information about transactions,
+            token, TokenScript and much more can be embedded. When a wallet imports a Magic Link, it
+            gets a lot of information and instructions. Magic Links can help you to deploy and use a
             TokenScript.</p>
         <p><b>Withdrawl transactions</b></p>
         <p dir="ltr" id="docs-internal-guid-cc2d1346-7fff-f5eb-3caf-c17f48dd8176">One case for Magic
