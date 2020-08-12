@@ -2,8 +2,15 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_yph_nkg_nmb">
     <title>TokenScript File</title>
+  <shortdesc>TokenScript file
+            is an overlay of XML Mark-up and JavaScript.</shortdesc>
     <conbody>
-        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">TokenScript file  is an overlay of XML Mark-up and JavaScript.</p>
+      <section  id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">
+        <p dir="ltr">A TokenScript file
+            is Token Cards, presently in JavaScript and HTML, overplayed with XML mark-up.</p>
+        <p dir="ltr">The XML mark-up is for a TokenScript Engine to work out how to identify, index
+            and search a token, provide data for its actions and connecting it to the web. The
+            JavaScript is used in TokenCards to render token UX and carry out token actions.</p></section>
         <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
             it must contain a reference to it and can interact with it.</p>
         <p dir="ltr">The TokenScript files are written and <xref href="Signing.dita">signed by the
