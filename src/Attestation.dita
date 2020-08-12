@@ -7,9 +7,15 @@
     <conbody>
       <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
             attestation can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"/>. </note>
-        <p>Sometimes in an interaction you want the other party to proof something: That he is
-            married, that he has an university degree, that he really is who he claims to be, or
-            just that he has an email or Ethereum address.</p>
+        <p>Attestation can be about anything. To individual identity, one can be attested to have
+            the legal drinking / voting age, or an university degree, or that he owns an email
+            address.</p>
+        <p>There can be attestations to a token. For example, an insurance company can issue an
+            attestation attesting a specific car is insured.</p>
+        <p>There can be attestations to an activity. For example, a smart contract may allow
+            blockchain payment redeemed on the condition that a specific job is attested as well
+            done. Such a job can be, for example, a car painting job, identified by the job id in
+            the corresponding Smart Contracts;</p>
         <p>For example, if you rent a tokenized car, you want to make sure, that the seller has an
             insurance police on the car. And if you trade something with someone, you might want to
             be sure that he has verified his identity. And so on. </p>
