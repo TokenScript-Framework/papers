@@ -2,10 +2,13 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_adj_mnz_mmb">
     <title>Attestation</title>
-    <shortdesc>An attestation is a claim on something which is signed by an attestor. TokenScript
-        enables wallets to create and manage attestations. This is done by an Attestation
-        Card.</shortdesc>
+    <shortdesc>An attestation is a claim cryptographically attested by an attestor's signature.
+        TokenScript enables wallets to create and manage attestations.</shortdesc>
     <conbody>
+      <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
+            attestation  can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"
+            />. It's content is a signed <xref href="DataObjects.dita"/><xref
+                href="DataObjects.dita"/></note>
         <p>Sometimes in an interaction you want the other party to proof something: That he is
             married, that he has an university degree, that he really is who he claims to be, or
             just that he has an email or Ethereum address.</p>
