@@ -6,12 +6,17 @@
     <conbody><note>
                <p
             conref="TokenScript-Component.dita#concept_yph_nkg_nmb/docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1"
-                  id="section_d5x_gpm_qmb"/><p> More on that see <xref href="TokenScript-Component.dita"/></p></note>
+                  id="section_d5x_gpm_qmb"/><p> More on that see <xref href="TokenScript-Component.dita"/>.</p></note>
         <p>The root element of a TokenScript File can be one of the following:</p>
         <ul id="ul_dmn_srm_qmb">
-            <li>Card</li>
+            <li><xref href="elements/cards.dita"/></li>            <li><xref href="elements/card.dita"/></li>
+            <li><xref href="elements/tokens.dita"/></li>
+            <li><xref href="elements/token.dita"/></li>
+
         </ul>
-        <p>address</p>
+        <note type="tip"><p>If a Token Issuer issues multiple tokens, it's important to define them in a single TokenScript
+                file using <xref href="elements/tokens.dita"/>, for TokenScript release management
+                reason.</p></note>
         <p>asxn:module</p>
         <p>attribute</p>
         <p>card</p>
