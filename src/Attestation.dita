@@ -6,9 +6,7 @@
         TokenScript enables wallets to create and manage attestations.</shortdesc>
     <conbody>
       <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
-            attestation  can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"
-            />. It's content is a signed <xref href="DataObjects.dita"/><xref
-                href="DataObjects.dita"/></note>
+            attestation can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"/>. </note>
         <p>Sometimes in an interaction you want the other party to proof something: That he is
             married, that he has an university degree, that he really is who he claims to be, or
             just that he has an email or Ethereum address.</p>
@@ -40,8 +38,8 @@
             attestations are private, not stored on the blockchain. The proof of an attestation,
             however, might be written to the blockchain in an <xref href="AttestedTransaction.dita"
             />.</p>
-        <p dir="ltr"> but it can do a lot for a token, while at the same time token make
-            attestations more powerful.</p>
+        <p dir="ltr">[Editor's note: the following paragraph says the same as the previous, consider
+            consolidating.]</p>
         <p dir="ltr">An attestation can be connected to an Ethereum entity like the holder of a key
             pair. This allows to create cheques - the transfer of coins from a smart contract to
             someone who can provide an attestation for an identifier like an email address. Also,
@@ -68,7 +66,7 @@
             identifier, like a phone number.</p>
         <p><b>Attestation Format</b></p>
         <p dir="ltr" id="docs-internal-guid-5d145ec5-7fff-8581-76f9-a734957f6ca7">An attestation is
-            a <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
+            a signed <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
             information, including public and private information. It can be signed by an Ethereum
             entity and attested to a token.</p>
         <p dir="ltr">Attestations are non-transferable, but transferability can be achieved by
