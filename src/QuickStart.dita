@@ -16,7 +16,7 @@
                 href="https://ropsten.etherscan.io/address/0xe35FE4A1B17d50A8022078d98162DB25bC860834"
                 format="html" scope="external">Etherscan</xref>). You don't need to have tokens, but
             you must enable "show zero balance token" in AlphaWallet. If you need help adding the
-            token, read this <xref href="Miniguide-add-token-to-aw.dita">mini guide</xref>.</p>
+            token, read this <xref href="guides/Miniguide-add-token-to-aw.dita">mini guide</xref>.</p>
         <p>To create your own token we recommend that you use <xref
                 href="https://studio.ethereum.org/" format="html" scope="external">Ethereum
                 studio</xref> to create the files for a standard ERC token. Studio has a good
@@ -25,7 +25,7 @@
                 Remix</xref>. To deploy them on Ropsten, you need to connect your wallet, like
             AlphaWallet or Metamask, and get some testnet coins from the faucet. If you know the
             tools, this should be easy, if you don't know, it is an interesting experience. Our
-                <xref href="Miniguide-deploy-token-on-ropsten.dita">mini guide</xref> explains in
+                <xref href="guides/Miniguide-deploy-token-on-ropsten.dita">mini guide</xref> explains in
             detail how to do. Alternatively you can follow this <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/tutorial"
                 format="html" scope="external">more detailed tutorial</xref>.</p>
