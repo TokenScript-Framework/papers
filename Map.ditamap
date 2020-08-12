@@ -19,7 +19,7 @@
             <topicref href="Attestation.dita"/>
         </topicref>
         <topicref href="DataObjects.dita"/>
-              <topicref href="TokenScript-Sytax.dita"/>
+              <topicref href="TokenScript-Syntax.dita"/>
 
     </topicref>
     <topicref href="Deployment.dita">
