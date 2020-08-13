@@ -16,16 +16,16 @@
             <topicref href="TokenCard.dita"/>
             <topicref href="ActionCard.dita"/>
             <topicref href="ActivityCard.dita"/>
-            <topicref href="Attestation.dita"/>
         </topicref>
         <topicref href="DataObjects.dita"/>
+        <topicref href="Attestation.dita"/>
               <topicref href="TokenScript-Syntax.dita"/>
+        <topicref href="MagicLinks.dita"/>
 
     </topicref>
     <topicref href="Deployment.dita">
         <topicref href="Signing.dita"/>
         <topicref href="Deploy.dita"/>
-        <topicref href="MagicLinks.dita"/>
     </topicref>
     <mapref href="features/features.ditamap"/>
 </map>
