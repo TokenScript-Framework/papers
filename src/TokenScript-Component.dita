@@ -5,10 +5,11 @@
   <shortdesc>TokenScript file
             is an overlay of XML Mark-up and JavaScript.</shortdesc>
     <conbody>
-        <p dir="ltr"  id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">A TokenScript file
-            consists of Token Cards, presently in JavaScript and HTML, overplayed with XML mark-up.</p>
-        <p dir="ltr">The XML mark-up is for a TokenScript Engine to work out how to identify, index
-            and search a token, provide data for its actions and connecting it to the web. The
+        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">A TokenScript file
+            consists of Token Cards, presently in JavaScript and HTML, overlayed with XML
+            mark-up.</p>
+        <p dir="ltr">The XML mark-up tells a TokenScript Engine to work out how to identify, index
+            and search a token, provide data for its actions and connect it to the web. The
             JavaScript is used in TokenCards to render token UX and carry out token actions.</p>
         <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
             it must contain a reference to it and can interact with it.</p>
@@ -25,11 +26,14 @@
         <p dir="ltr">The XML markup describes properties of the token: The functions it provides,
             the smart contract it relies upon, the behavior of the token, information of the token
             and much more. </p>
-        <p dir="ltr">There is a list of XML declarations developed by TokenScript. For most cases
-            you only need a few of them.</p>
+        <p dir="ltr">There is a <xref href="elements/Reference.dita">list of XML declarations</xref>
+            developed by TokenScript. For most cases you only need a few of them.</p>
         <p dir="ltr">TokenScript uses XML according the the c14n canonicalization. This allows to
             create standardized digital signatures for XML and to enforce standardized static types
             like ASN.1 data modules.</p>
+        <p>The best way to understand how the XML files are structured, study <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples" format="html"
+                scope="external">our TokenScript example</xref> repo.</p>
         <p><b>JavaScript / WebAssembly</b></p>
         <p dir="ltr" id="docs-internal-guid-164e561b-7fff-349a-545c-506c6cb992db">The JavaScript
             part integrates TokenScript in the wallet or dApps. It constructs transactions and
@@ -37,7 +41,7 @@
             while XML is the static one.</p>
         <p dir="ltr">Everything what happens in the wallet and everything a user can see is
             described with JavaScript: The rendering of the environment, the building of
-            transactions, the display of text and images and so on. In term of TokenScript,
+            transactions, the display of text and images and so on. In terms of TokenScript,
             JavaScript is used when a card is triggered.</p>
         <p dir="ltr">The creators of TokenScript use JavaScript. But any WeAssembly compatible
             language like Ruby or C can be used. The wallet importing TokenScript needs to
