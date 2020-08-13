@@ -6,26 +6,51 @@
         activities. They serve as a library of what is possible and a timeline of what
         happened.</shortdesc>
     <conbody>
-        <p>In the current version of TokenScript Activity Cards show the history of a token. This
-            might seem trivial, since any wallets connects to a blockchain, which already serves a
-            shared history of transactions.</p>
+        <p><i>Note: In the current version of AlphaWallet Activity Cards are not supported. But
+                AlphaWallet will soon release a version which supports Activity Cards. In this
+                version the "transaction" tab will be renamed to "activity" tab.</i></p>
+        <p>Activity Cards are meant to show the history of a token. This might seem trivial, since
+            any wallets connects to a blockchain, which already serves a shared history of
+            transactions.</p>
         <p>But if you ever used dApps with a standard wallet, you know how important Activity Cards
-            are. Usually the wallet just shows transactions, in best cases, it also shows the token
+            are. Usually the wallet shows only transactions, in best cases, it also shows the token
             involved. This might be enough for plain value transfers. </p>
         <p>But if you have token interacting with smart contracts - like, renting a car, lending a
             token, exchanging tokens and so on - the information of a plain transaction gets close
             to zero. Your wallet simply doesn't understand what happened. To make it understand what
             has happened, the wallet developers need to understand each smart contract and implement
-            its logic in the wallet.</p>
+            its logic in the wallet. This might work for a few popular token - but it can never
+            scale to a large and diversified token universe.</p>
         <p>Activity Cards solve this problem. The card is assigned to a token and creates, stores
             and loads <xref href="DataObjects.dita">Data Objects</xref>. This makes wallets suddenly smart: They remember not only
             the transaction, but also the purpose of the transaction - that a user rented a car,
             lended or exchanged a token and so on. And all the wallet has to do is to download the
             TokenScript.</p>
-        <p>In future releases of TokenScript Activity Cards will support more functions and data
-            objects. They can structure what a user can do with a token, like allowing it to redeem
-            some other token, restricting its transferability or linking it to something which
-            happens in the future.</p>
+        <p>Furthermore, Activity Cards remember offchain activities: That you created a Magic Link
+            to allow someone else to withdraw tokens from your wallet, than your wallet displayed a
+            QR code at a gate, that you called an API with an Action Card and so on.</p>
         <p><b>Code</b></p>
+        <p>Since there is no device which implemented Activity Cards, we don't provide a code example
+            for Activity Cards.</p>
+        <p>Instead we provide an example of how to build the data module to store some data about a
+            transaction:</p>
+        <p>
+            <codeblock>&lt;asnx:module name="Coin-event-Sent">
+        &lt;namedType name="Sent">
+            &lt;sequence>
+                &lt;element name="from" ethereum:type="address" ethereum:indexed="false">       
+                &lt;/element>
+                &lt;element name="to" ethereum:type="address" ethereum:indexed="false">
+                &lt;/element>
+                &lt;element name="amount" ethereum:type="uint256" ethereum:indexed="false">
+                &lt;/element>
+            &lt;/sequence>
+        &lt;/namedType>
+&lt;/asnx:module></codeblock>
+        </p>
+        <p>This lines create a data object when a coin is sent and stores the sending and receiving
+            address as well as the sent amount. It doesn't add information which can not be easily
+            fetched from the blockchain when a wallet stores the transaction id. But you can add any
+            information you like to describe what happened in the transaction.</p>
     </conbody>
 </concept>
