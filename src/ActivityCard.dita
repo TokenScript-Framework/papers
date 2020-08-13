@@ -29,6 +29,8 @@
         <p>Furthermore, Activity Cards remember offchain activities: That you created a Magic Link
             to allow someone else to withdraw tokens from your wallet, than your wallet displayed a
             QR code at a gate, that you called an API with an Action Card and so on.</p>
+        <p>To sum it up: Activity Cards allow token issuers to create customized history records for
+            their token.</p>
         <p><b>Code</b></p>
         <p>We demonstrate the current code for an Activity Card which can be used to document an
             approval for an ERC token. Note that this code might change with the release of
@@ -67,6 +69,41 @@
         &lt;/ts:card>
 &lt;/ts:cards></codeblock>
         </p>
-        <p/>
+        <p>When it is implemented in AlphaWallet, this Activity Card will be visible in the Activity
+            tab. By clicking on it, users can view more information about what happened. Like in an
+            Action Card this information is produced by a JavaScript file like
+            item-view-ownerApproved.en.js:</p>
+        <codeblock>class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.setConfirm();
+    }
+
+    setConfirm() {
+        window.onConfirm = function() {
+            window.close();
+        }
+    }
+
+    render() {
+        return`
+        &lt;div class="ui container">
+          &lt;div class="ui segment">
+            &lt;img src="data:image/png;base64,i...g==">
+            &lt;span>&lt;bold>&lt;h3>Gave approval to move ${this.props.amount} ${this.props.symbol} to ${this.props.to}&lt;/h3>&lt;/bold>&lt;/span>
+          &lt;/div>
+        &lt;/div>
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};</codeblock>
+        <p>As in Action Cards, the JavaScript file renders what the user will see: It displays the
+            message that he gave approval for address x to move y token. It would also be possible
+            to add a link to the transaction on any blockchain explorer and more.</p>
     </conbody>
 </concept>
