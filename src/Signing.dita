@@ -7,8 +7,22 @@
         your TokenScript.</shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-1d4e618f-7fff-5cbf-a973-b4ead0df755d">The TokenScript
-            files should be signed by an XML signature. Any signature algorithmus supported by XML
-            is accepted, including ECDSA.</p>
+            files can be signed by two keys:<dl>
+                <dlentry>
+                    <dt>Reputation Key</dt>
+                    <dd>This key goes together with a certificate that associates the signer with a
+                        website or a real world organisation.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Trust Key</dt>
+                    <dd>This key associates the signer with the smart contract to which transactions
+                        are sent, showing that the smart contract team trusts the TokenScript's
+                        signer (which could be the same people).</dd>
+                </dlentry>
+            </dl>
+        </p>
+        <p dir="ltr">should be signed by an XML signature. Any signature algorithmus supported by
+            XML is accepted, including ECDSA.</p>
         <p dir="ltr">There are two ways to establish trust into the signer: <i>Providing
                 Authenticity</i> and <i>Express of Trust</i>. Both should be available in the
             future, but currently only Express of Trust is.</p>
