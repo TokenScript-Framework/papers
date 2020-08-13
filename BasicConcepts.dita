@@ -9,8 +9,7 @@
                 WebAssembly and XML markup</xref>. In it, several basic concepts come into play:
                 <xref href="Card.dita">Cards</xref> (<xref href="ActionCard.dita">Action
                 Cards</xref>, <xref href="ActivityCard.dita">Activity Cards</xref>, <xref
-                href="TokenCard.dita">Token Cards</xref>, <xref href="Attestation.dita"
-                >Attestations</xref>), as well as <xref href="Attributes.dita">Attributes</xref> and
-                <xref href="DataObjects.dita">Data Objects</xref>.</p>
+                href="TokenCard.dita">Token Cards</xref>,), as well as <xref href="Attributes.dita"
+                >Attributes</xref> and <xref href="DataObjects.dita">Data Objects</xref>.</p>
     </conbody>
 </concept>
