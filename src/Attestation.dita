@@ -7,19 +7,15 @@
     <conbody>
       <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
             attestation can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"/>. </note>
-        <p>Attestation can be about anything. To individual identity, one can be attested to have
-            the legal drinking / voting age, or an university degree, or that he owns an email
-            address.</p>
-        <p>There can be attestations to a token. For example, an insurance company can issue an
-            attestation attesting a specific car is insured.</p>
-        <p>There can be attestations to an activity. For example, a smart contract may allow
-            blockchain payment redeemed on the condition that a specific job is attested as well
-            done. Such a job can be, for example, a car painting job, identified by the job id in
-            the corresponding Smart Contracts;</p>
-        <p>For example, if you rent a tokenized car, you want to make sure, that the seller has an
-            insurance police on the car. And if you trade something with someone, you might want to
-            be sure that he has verified his identity. And so on.</p>
-        <p>There are typically 3 ways to use an attestation:</p>
+        <p><b>What is an attestation?</b></p>
+        <p>Attestation are a claim on something: On a national identity, on the legal drinking /
+            voting age, an university degree, the ownership of an email address, an insurance and so
+            on.</p>
+        <p>Technically, an attestation is a data object (or file) which claims something and is
+            signed by an attestor. In some cases an attestation can be self signed, for example when
+            the claim is to own a certain amount of cryptocurrency (which can be done more privately
+            through attestations).</p>
+        <p>There are typically three ways to use an attestation:</p>
         <ul id="ul_hdn_xv4_qmb">
             <li>As the payload of an attested transactions. The underlying smart contract will check
                 the validity of such attestations.</li>
@@ -28,57 +24,46 @@
             <li>To provide dependency for other attestations. Since <xref
                     href="AttestationChained.dita"/>.</li>
         </ul>
-        <p>All those cases require an attestation: A data object (or file) which proofs a claim on
-            something. An attestor can attestate an national identity or the possession of an email
-            address, an insurance company can attestate an insurance certificate and so on. Those
-            files attestations are usually signed by an attestor, but in some cases can be self
-            signed, for example when the claim is to own an address of a cryptocurrency.</p>
-        <p dir="ltr">A standardized attestation format has an enormous potential to smoothly
-            integrate identity and other claims into the web and to streamline a lot of processes,
-            like signing up for an exchange, registering a bank account, verifying as an accredited
-            investor for an Security Token Offer.</p>
-        <p>TokenScript fully support the integration of attestation processes, triggered by an
-            action card directly in the wallet. You can integrate an attestation circuit into the
-            life cycle of a token. </p>
+        <p>TokenScript supports the integration of attestation processes, triggered by an action
+            card directly in the wallet. You can integrate an attestation circuit into the life
+            cycle of a token.</p>
+        <p><b>Attestation use cases</b></p>
+        <p>A standardized attestation format has an enormous potential to smoothly integrate
+            identity and other claims into the web and to streamline a wide range of processes, like
+            signing up for an exchange, registering a bank account, verifying as an accredited
+            investor for an Security Token Offer or renting a car.</p>
+        <p>For example, you could create a smart contract for an ICO which requires that
+            participants provide an attestation to be an accredited investor. With TokenScript a QR
+            code to the smart contract can trigger the attestation process directly in the wallet,
+            and the wallet can use the attestation for any ICO in the future.</p>
+        <p>Another example would be a car token. When you have the token in your wallet, you can
+            have the option to start an insurance process which will create an insurance attestation
+            connected to the car token.  When the wallet has the attestation, TokenScript can unlock
+            the option to take lend the car on a car sharing platform.</p>
+        <p>There can also be attestations for an activity. For example, a smart contract may allow a
+            blockchain payment to be redeemed on the condition that a specific job is attested as
+            well done. Such a job can be, for example, a car painting job, identified by the job id
+            in the corresponding Smart Contract.</p>
+        <p>An attestation can also be connected to an Ethereum entity like the holder of a key pair.
+            This allows to create cheques - the transfer of coins from a smart contract to someone
+            who can provide an attestation for an identifier like an email address. </p>
+        <p>In short: Any delivery vs payment operation can integrate any kind of attestation which
+            might be required for the process. </p>
         <p><b>Attestation versus Blockchain Token</b></p>
         <p dir="ltr" id="docs-internal-guid-c17d42c9-7fff-776a-6d10-82e4537e3178">Attestation and
-            blockchain token, are related concepts. Both of them require the user having a private
+            blockchain token are related concepts: Both of them require the user to have a private
             key.</p>
-        <p>In some use-cases they are interchangeable. For example, a FIFA ticket can be eiether an
-            attestation or a blockchain token. When it is an attestation, it attests the
-            key-holder's right to enter the venue. When it is a blockchain token, it serves the same
-            purpose, and also might be transferable within the Smart Contract rules.</p>
+        <p>In some use cases attestations and token are interchangeable: For example, a FIFA ticket
+            can be either an attestation or a blockchain token. When it is an attestation, it
+            attests the key-holder's right to enter the venue. When it is a blockchain token, it
+            serves the same purpose, and also might be transferable within the Smart Contract
+            rules.</p>
         <p>That reveals the first difference: an attestation isn't transferable, and a token's
-            transferability depends on the smart contract. The second difference, is that
-            attestations are private, not stored on the blockchain. The proof of an attestation,
-            however, might be written to the blockchain in an <xref href="AttestedTransaction.dita"
-            />.</p>
-        <p dir="ltr">[Editor's note: the following paragraph says the same as the previous, consider
-            consolidating.]</p>
-        <p dir="ltr">An attestation can be connected to an Ethereum entity like the holder of a key
-            pair. This allows to create cheques - the transfer of coins from a smart contract to
-            someone who can provide an attestation for an identifier like an email address. Also,
-            attestations of anything can be required to use a smart contract. You could create an
-            ICO smart contract which requires an attestation of being a verified investor.</p>
-        <p>Another example is a car sharing platform: To offer her car on a platform, Alice has to
-            provide an insurance attestation. She gets this attestation by using a Card in the
-            TokenScript of her car token, which launches the insurance process straight from the
-            wallet. Since Alice, the car sharing platform and Bob, who rents the car, all have
-            TokenScript installed, they silently validate in each step, if Alice's car is
-            insured.</p>
-        <p dir="ltr">Any delivery vs payment operation can integrate any kind of attestation which
-            might be required for the process. </p>
-        <p><b>Offchain Attestations</b></p>
-        <p dir="ltr" id="docs-internal-guid-04a84172-7fff-258d-adc5-22fc03caa689">Attestations are
-            usually offchain. They often carry private information, like identity, birth date or
-            mobile phone number. This kind of information should never be saved on a public
-            blockchain. Offchain attestations are data objects signed by an attestor stored on a
-            local device. However, attestations can also be token, which don't disclose private
-            information, but attest that an attestation was given.</p>
-        <p dir="ltr">Attestations can be used to create a proof of attestations which can be part of
-            a transaction. For example, if you have a cheque smart contract the receiver needs to
-            create a transaction which includes a proof of the attestation of the required
-            identifier, like a phone number.</p>
+            transferability depends on the smart contract. </p>
+        <p>The second difference is that attestations are private: They are not stored on the
+            blockchain. Since they often carry private information, they should never hit a
+            blockchain. The proof of an attestation, however, might be written to the blockchain in
+            an <xref href="AttestedTransaction.dita"/>.</p>
         <p><b>Attestation Format</b></p>
         <p dir="ltr" id="docs-internal-guid-5d145ec5-7fff-8581-76f9-a734957f6ca7">An attestation is
             a signed <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
@@ -87,13 +72,32 @@
         <p dir="ltr">Attestations are non-transferable, but transferability can be achieved by
             attesting to another attestation.</p>
         <p dir="ltr">Attestations can be fully expressed by an URI for easy and cross-compatible
-            usage.</p>
+            usage. This allows to create <xref href="MagicLinks.dita">Magic Links</xref> which
+            contain an attestation.</p>
         <p dir="ltr">The attestation format takes close inspiration from the X.509 certificate
             specification, RFC-5280, but makes several fields optional, adds a few new ones and
             changes some formats.</p>
         <p dir="ltr">There is still much work to be done. For example, we need a format that can do
             partial attestation by using Merkle Tree, or even zero-knowledge proof of
             attestation.</p>
-        <p><b>Attestation Card</b></p>
+        <p><b>Code fragments</b></p>
+        <p>In the Karma Token example a simple demo of an attestation process was implemented. It is
+            declared as an Action Card:</p>
+        <codeblock>&lt;ts:card type="action" name="attest">
+     &lt;ts:label>
+            &lt;ts:string xml:lang="en">Attestations&lt;/ts:string>
+            &lt;ts:string xml:lang="zh">认证&lt;/ts:string>
+            &lt;ts:string xml:lang="es">Attestationes&lt;/ts:string>
+     &lt;/ts:label>
+     &lt;ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+             &lt;style type="text/css">&amp;style;&lt;/style>
+             &lt;body>&amp;attestations.en;&lt;/body>
+     &lt;/ts:view>
+&lt;/ts:card></codeblock>
+        <p>The "view" tag loads the JavaScript file attestations.en.js, which creates an attestation
+            app in the wallet.</p>
+        <p/>
+        <p/>
+        <p/>
     </conbody>
 </concept>
