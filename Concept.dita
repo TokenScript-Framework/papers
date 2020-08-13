@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_f54_yfw_qmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>TokneScript Key</title>
+    <shortdesc>The TokenScript key is the key explicitly trusted by the smart contract to sign
+        TokenScript</shortdesc>
     <conbody>
-        <p></p>
+        <p>The TokenScript Key is trusted by the smart contract to sign a TokenScript that can
+            generate transaction for this smart contract.</p>
+        <p>There are two ways to express trust from the Smart Contract to the TokenScript Key:</p>
+      <section><title>Configure the smart contract to return the fingreprint of the key</title>
+        <p>A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</p>
+        </section>
+      <section><title>Send an Express-of-Trust transaction</title>
+        <p>…Steps…</p>
+        <p>Presently we restrict the TokenScript key to be using secp256k1 curve to make
+            implementation simple, therefore, it is also a valid Ethereum key. This key does not
+            need to be used on the blockchain at all, and in fact we advise not to use it on the
+            blockchain, since the life cycle of a TokenScript key is different then the life cycle
+            of an Ethereum key. One might discard a TokenScript key and unawaringly lost the Ethers,
+            or spent all the Ether and discard the key only to find later that it has other
+            uses.</p></section>
     </conbody>
 </concept>
