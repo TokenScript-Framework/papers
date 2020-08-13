@@ -19,9 +19,8 @@
             the risks of database heists.</p>
         <p>Cards allow dApps to use token to interact with wallets in a much more specific and
             manifold way than a smart contract can do. They are used to display specific icons for a
-            token, to query an API to get accompanying information, to structure the record of past
-            transactions in a meaningful way and much more. They can also be used to create the
-            transaction payload, if required, but this is a special case.</p>
+            token, to query an API to get accompanying information, to create transactions, to
+            structure the record of past transactions in a meaningful way and much more. </p>
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
         <p>There are 4 kind of cards: <xref href="TokenCard.dita">Token Cards</xref>, <xref
