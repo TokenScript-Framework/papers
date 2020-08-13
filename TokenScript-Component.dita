@@ -110,13 +110,13 @@
 </codeblock></p>
         <p><b>JavaScript / WebAssembly</b></p>
         <p dir="ltr" id="docs-internal-guid-164e561b-7fff-349a-545c-506c6cb992db">The JavaScript
-            part integrates TokenScript in the wallet or dApps. It constructs transactions and
-            renders the display of the token. Broadly, it is the dynamic part of the TokenScript,
-            while XML is the static one.</p>
+            part integrates TokenScript in the wallet or dApps. It renders the display of the token
+            and can execute custom offchain functionalities. Broadly, it is the dynamic part of the
+            TokenScript, while XML is the static one.</p>
         <p dir="ltr">Everything what happens in the wallet and everything a user can see is
-            described with JavaScript: The rendering of the environment, the building of
-            transactions, the display of text and images and so on. In terms of TokenScript,
-            JavaScript is used when a card is triggered.</p>
+            described with JavaScript: The rendering of the environment, the display of text and
+            images and so on. In terms of TokenScript, JavaScript is used when a card is
+            triggered.</p>
         <p dir="ltr">The creators of TokenScript use JavaScript. But any WeAssembly compatible
             language like Ruby or C can be used. The wallet importing TokenScript needs to
             understand these languages.</p>
