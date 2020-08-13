@@ -30,27 +30,43 @@
             to allow someone else to withdraw tokens from your wallet, than your wallet displayed a
             QR code at a gate, that you called an API with an Action Card and so on.</p>
         <p><b>Code</b></p>
-        <p>Since there is no device which implemented Activity Cards, we don't provide a code example
-            for Activity Cards.</p>
-        <p>Instead we provide an example of how to build the data module to store some data about a
-            transaction:</p>
+        <p>We demonstrate the current code for an Activity Card which can be used to document an
+            approval for an ERC token. Note that this code might change with the release of
+            AlphaWallet implementing Activity Cards.</p>
+        <p>Before you create an activity card, you need to create a data object.</p>
         <p>
-            <codeblock>&lt;asnx:module name="Coin-event-Sent">
-        &lt;namedType name="Sent">
-            &lt;sequence>
-                &lt;element name="from" ethereum:type="address" ethereum:indexed="false">       
-                &lt;/element>
-                &lt;element name="to" ethereum:type="address" ethereum:indexed="false">
-                &lt;/element>
-                &lt;element name="amount" ethereum:type="uint256" ethereum:indexed="false">
-                &lt;/element>
-            &lt;/sequence>
+            <codeblock>&lt;asnx:module name="ERC20-Events">
+        &lt;namedType name="Approval">
+            &lt;type>
+                &lt;sequence>
+                    &lt;element name="owner" ethereum:type="address" ethereum:indexed="true"/>
+                    &lt;element name="spender" ethereum:type="address" ethereum:indexed="true"/>
+                    &lt;element name="value" ethereum:type="uint256" ethereum:indexed="false"/>
+                &lt;/sequence>
+            &lt;/type>
         &lt;/namedType>
 &lt;/asnx:module></codeblock>
         </p>
-        <p>This lines create a data object when a coin is sent and stores the sending and receiving
-            address as well as the sent amount. It doesn't add information which can not be easily
-            fetched from the blockchain when a wallet stores the transaction id. But you can add any
-            information you like to describe what happened in the transaction.</p>
+        <p>In this data object TokenScript records that the owner of an ERC token approved someone
+            else to spent a certain amount of the token. This information can be used to create an
+            Activity Card:</p>
+        <p>
+            <codeblock>&lt;ts:cards>
+        &lt;ts:card type="activity" name="ownerApproved">
+            &lt;ts:origins>
+                &lt;ethereum:event type="Approval" filter="owner=${ownerAddress}"/>
+            &lt;/ts:origins>
+            &lt;ts:item-view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;item-view-ownerApproved.en;&lt;/script>
+            &lt;/ts:item-view>
+            &lt;ts:view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;gaveApproval.en;&lt;/script>
+            &lt;/ts:view>
+        &lt;/ts:card>
+&lt;/ts:cards></codeblock>
+        </p>
+        <p/>
     </conbody>
 </concept>
