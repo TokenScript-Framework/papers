@@ -5,18 +5,20 @@
     <conbody>
         <p dir="ltr" id="docs-internal-guid-e32088fa-7fff-9cd2-5782-f31ffa582fc2">TokenScript can do
             so much that it would be easier to explain what it can’t do. Here are some examples for
-            what TokenScript can add to token and wallets:</p>
-        <p dir="ltr"><b>Information</b>: When a token implements TokenScript, a wallet can instantly
-            learn about its name and abbreviation, get a description in several languages and an
-            image file as a logo. The wallet can even querry an API, e. G. to get weather or
+            what TokenScript can add to a token:</p>
+        <p dir="ltr"><b>Information</b>: When a token implements TokenScript, a wallet or webapp can
+            instantly learn about its name and abbreviation, get a description in several languages
+            and an image file as a logo. The wallet can even querry an API, e. G. to get weather or
             exchange data. This information can adapt to the context.</p>
-        <p dir="ltr"><b>History</b>: The wallet can show the detailed history of operations a token
-            was involved, both onchain and offchain. Natively a wallet only knows transactions. With
-            TokenScript it can tell the complete history of its token.</p>
+        <p dir="ltr"><b>History</b>: The wallet can remember the detailed history of operations a
+            token was involved, both onchain and offchain. Natively a wallet only knows
+            transactions. With TokenScript it can tell the complete history of its token.</p>
         <p dir="ltr"><b>Create customized transactions</b>: Smart contracts often require users to
             craft very customized transactions. Mostly this is done by a third party website and
-            signed by your wallet. TokenScript instructs the wallet how to craft these transactions
-            and can display a button to trigger them.</p>
+            signed by your wallet. TokenScript instructs the wallet or webapp how to craft these
+            transactions and can display a button to trigger them. Especially for websites this is
+            no small deal: Instead of studying each smart contract and crafting the transactions by
+            themselves, the web developers just need to import a TokenScript.</p>
         <p dir="ltr"><b>Integration with other token</b>: Some operations of your token might
             require that the user holds another token. For example, a car sharing token might need
             you to own a car token and an insurance token. TokenScript defines and structures these
