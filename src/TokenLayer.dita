@@ -4,16 +4,20 @@
     <title><?oxy_comment_start author="theBergmann" timestamp="20200807T182405+0200" comment="is TokenLayer a product / a brand? If not, better write it as &quot;the Token Layer&quot;"?>TokenLayer<?oxy_comment_end?></title>
     <shortdesc>TokenLayer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
-        <p>TokenLayer sits between Blockchain and Websites to provide token functions with the level
-            of trust provided by the blockchain and the user experience of a website.</p>
+        <p>A TokenLayer sits between a Blockchain and Websites. It provides token with
+            functionalities which have the level of trust of a blockchain but the user experience of
+            a website. It mediates the inconvenience of blockchain technologies and allows
+            developers to easily integrate the full scope of token based applications.</p>
       <section><title>For the web</title>
         <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
                 similar to how a Payment Rail allows an e-commerce site to on-board users of various
                 credit card and payment methods. However, Tokens can provide more important roles
-                than just payment. For example, a Car Token allows a car owner to securely authorise
-                your website to find a new rental customer of the car, and, when found, to give that
-                customer direct access to the car door. More about innovative ways to use tokens on
-                websites see <xref href="Tokenization.dita"/></p></section>
+                than just payment: They represent any stake in any contractualized relationship. </p>
+            <p>For example: One token can represent a car, another token an insurance, and when
+                taken together, the car can be lend on a website. The borrower gets a third token,
+                which allows him to start the engine for a certain timeframe. Token can become the
+                building blocks of the next web. More about innovative ways to use tokens on
+                websites see</p></section>
       <section><title>For the Token Issuers</title>
         <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution channel
             to make your tokens available to all websites that also uses a TokenLayer. This is 
