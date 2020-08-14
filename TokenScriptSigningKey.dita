@@ -2,13 +2,18 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_f54_yfw_qmb">
     <title>Smart Contract Trust Key</title>
-    <shortdesc>The Smart Contract Turst Key (Trust-key for short) is the key explicitly trusted by
+    <shortdesc>The Smart Contract Trust Key (Trust-key for short) is the key explicitly trusted by
         the smart contract to sign TokenScript.</shortdesc>
     <conbody>
         <p>If a TokenScript generates a transaction to be sent to a smart contract, the smart
             contract needs to express trust towards the TokenScript's signing key, here to referred
             as "Trust Key".</p>
-        <p>This mechanism is important for providing trust.</p>
+        <p>This mechanism is important for providing trust from a highly trusted token to a less
+            trusted website. Furthermore, the trust key is  also used as a package identifier, so
+            two TokenScript files that are of different package should not share the trust key.</p>
+      
+      <section>
+        <title>Express Trust from Smart Contract to a Trust Key</title>
         <p>There are two ways to express trust from the Smart Contract to the TokenScript Key:</p>
       <section><title>Configure the smart contract to return the fingreprint of the key</title>
         <p>A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</p>
@@ -22,5 +27,13 @@
             of an Ethereum key. One might discard a TokenScript key and unawaringly lost the Ethers,
             or spent all the Ether and discard the key only to find later that it has other
             uses.</p></section>
+      </section>
+      <section>
+        <title>Use Trust Key for package management</title>
+        <p>When a TokenScript is cached in a user's wallet (as apposed to being distributed and used in a web page), the Trust Key that signs it is used as the package ID for the life-cycle management purpose. That is, if a user installs a new tokenscript file or file-bundled, all previously cached TokenScript signed by the same key are replaced by it, discarded.</p>
+        </section>
+      <section>
+        <title>Using a trust Key as a canary</title>
+        <p>Normally, a trust key should not be an asset key.</p></section>
     </conbody>
 </concept>
