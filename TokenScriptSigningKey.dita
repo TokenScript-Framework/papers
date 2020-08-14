@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_f54_yfw_qmb">
-    <title>TokneScript Key</title>
-    <shortdesc>The TokenScript key is the key explicitly trusted by the smart contract to sign
-        TokenScript</shortdesc>
+    <title>Smart Contract Trust Key</title>
+    <shortdesc>The Smart Contract Turst Key (Trust-key for short) is the key explicitly trusted by
+        the smart contract to sign TokenScript.</shortdesc>
     <conbody>
-        <p>The TokenScript Key is trusted by the smart contract to sign a TokenScript that can
-            generate transaction for this smart contract.</p>
+        <p>If a TokenScript generates a transaction to be sent to a smart contract, the smart
+            contract needs to express trust towards the TokenScript's signing key, here to referred
+            as "Trust Key".</p>
+        <p>This mechanism is important for providing trust.</p>
         <p>There are two ways to express trust from the Smart Contract to the TokenScript Key:</p>
       <section><title>Configure the smart contract to return the fingreprint of the key</title>
         <p>A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</p>
