@@ -15,25 +15,33 @@
       <section>
         <title>Express Trust from Smart Contract to a Trust Key</title>
         <p>There are two ways to express trust from the Smart Contract to the TokenScript Key:</p>
-      <section><title>Configure the smart contract to return the fingreprint of the key</title>
-        <p>A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</p>
-        </section>
-      <section><title>Send an Express-of-Trust transaction</title>
-        <p>…Steps…</p>
-        <p>Presently we restrict the TokenScript key to be using secp256k1 curve to make
-            implementation simple, therefore, it is also a valid Ethereum key. This key does not
-            need to be used on the blockchain at all, and in fact we advise not to use it on the
-            blockchain, since the life cycle of a TokenScript key is different then the life cycle
-            of an Ethereum key. One might discard a TokenScript key and unawaringly lost the Ethers,
-            or spent all the Ether and discard the key only to find later that it has other
-            uses.</p></section>
+      <ul><li>Configure the smart contract to return the fingreprint of the key - 
+      A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</li>
+        <li>Send an Express-of-Trust transaction</li>
+        </ul>
       </section>
       <section>
         <title>Use Trust Key for package management</title>
-        <p>When a TokenScript is cached in a user's wallet (as apposed to being distributed and used in a web page), the Trust Key that signs it is used as the package ID for the life-cycle management purpose. That is, if a user installs a new tokenscript file or file-bundled, all previously cached TokenScript signed by the same key are replaced by it, discarded.</p>
+        <p>When a TokenScript is cached in a user's wallet (as apposed to being distributed and used
+                in a web page), the Trust Key that signs it is used as the package ID for the
+                life-cycle management purpose. That is, if a user installs a new Tokenscript file or
+                file-bundled, all previously cached TokenScript signed by the same key are replaced
+                by it, discarded.</p>
         </section>
       <section>
         <title>Using a trust Key as a canary</title>
-        <p>Normally, a trust key should not be an asset key.</p></section>
+        <p>Normally, a trust key should not be an asset key. Presently we restrict it to use
+                secp256k1 curve to make implementation simple, therefore, it is also a valid
+                Ethereum key. This key does not need to be used on the blockchain at all, and better
+                not, since the life cycle of a TokenScript key is different then the life cycle of
+                an Ethereum key. One might discard a TokenScript key and unawaringly lost the
+                Ethers, or spent all the Ether and discard the key only to find later that it has
+                other uses.</p>
+            <p>However, with the use of the trust key for signing TokenScript file, you might
+                intentionally keep some ether on the Ethereum address controlled by this key.
+                Sometimes, in a team environment, the key might be kept in a USB stick with mutiple
+                people having access to it. Should the key be leaked, an adversary would then
+                proceed on robbing the money on its Ethereum address, therefore making the
+                management aware that the key is leaked.</p></section>
     </conbody>
 </concept>
