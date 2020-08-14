@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_mln_ky2_rmb">
-    <title></title>
+    <title>About Tokenization</title>
     <shortdesc></shortdesc>
     <conbody>
-        <p></p>
+        <p><b>The Wallet</b></p>
+        <p>In a tokenized World your wallet is your digital base. It contains your token. It is your
+            account to everything, your daily guide, your digital fault. You will use your wallet
+            daily like you use your mobile phone.</p>
+        <p>In a tokenized world, the wallet is the user agent. It is an app on a phone, a plugin for
+            the browser, a microchip on a machine. Every human can own as many wallets as he wishes,
+            and wallets can be reproducted on any device.</p>
+        <p><b>A tokenized creation</b></p>
+        <p>At the awakening of literacy, there was not the word, but the token. When Babylonian
+            emperors carved runes in tablets of clay they didn't want to <i>say</i> something. They
+            represented material goods and dept. This was when Tokenization started.</p>
+        <p>A word is a virtual representation of any thing in the physical and imaginated world. It
+            allows to <i>communicate</i> things. Words are free, nobody owns them. A token however
+            represents any thing in the physical and imaginated world in a way that it is not free
+            but <i>owned</i> by someone. A token <i>is</i> a claim on something.</p>
+        <p><b>Hardening a token</b></p>
+        <p>In a world before blockchain, humans had a hard time to protect token against double
+            spends and counterfeits. They made it hart to reproduce a token. By hammering the claim
+            in a stone table, melting it in a crown or in coins, signing the document it is
+            recorded, close the letter with a seal, and so on.</p>
+        <p>All methods had their shortcoming. Double spend and counterfeit remained epidemic, and
+            only central authorities could narrow its scope. While digitalization gave the written
+            word the ultimate medium in human history, token often have to adhere to outdated medial
+            forms. Tokenization did hardly break the limits of the Babylonian model. It didn't
+            arrive at the digital age yet.</p>
+        <p>With blockchain, token become truly digitized. A new era of Tokenization has begun. Most
+            people  don't know what it means yet.</p>
+        <p><b>New ownership for everything</b></p>
+        <p>Any stake in contract is an ownership. Whenever you or someone else signs something, an
+            ownership emerges. A token represents such ownerships. They become digitalized and can
+            be used anywhere on the web for anything.</p>
+        <p><b>Integration everyhwere</b></p>
+        <p>Like words, token become powerful when they gather.</p>
+        <p>You have a membership token of your fishing club. With it, you can unlock the clubhouse's
+            door and get a rebate when you pay with your wallet at the local fishing store. If you
+            have a boat driver licence's token too, the membership token can also start the engine
+            of the club's boat. All this happens automatically in your wallet. </p>
+        <p>You have a subscription token for a magazine. This token allows you to read a few
+            articles of other magazines. You can exchange it against other subscription tokens. If
+            you have a library membership token, you can co-use the library's subscription token to
+            read articles. </p>
+        <p>You give an employee a one time signing token. He negotiates a deal with a business
+            partner, and when the contract is created as a token, both parties need to provide their
+            signing token, maybe more token, like a company token. Only when the signing token are
+            available, the smart contract of the business relationship can create new token. The
+            smart contract can also define other conditions: It could need a collateral of both
+            parties, which is another token, a proof of being solvent, provided by a token, or a
+            token proofing that a shipment arrived or a product has a clean supply chain. When the
+            contract is signed, let's say a promise on a shipment, payment and delivery are
+            automatically made with the same transaction - the </p>
+        <p>An unlimited number of token can gather, each providing its proof or claim on something.
+            An unlimited number of smart contracts can process and melt the tokens. The payment is
+            made - or an advance - and a token as a claim on a shipment is minted. </p>
     </conbody>
 </concept>
