@@ -6,20 +6,25 @@
     <conbody>
         <p>Magic Links are action-triggering links that contains cryptographic information.
             Technically, it's an <xref href="EncodingAttestationInURI.dita"/>.</p>
-        <p>Technically, it's an encoded attestation  links in which information about transactions,
+        <p>Technically, it's an encoded attestation links in which information about transactions,
             token, TokenScript and much more can be embedded. When a wallet imports a Magic Link, it
-            gets a lot of information and instructions. Magic Links can help you to deploy and use a
-            TokenScript.</p>
-        <p><b>Withdraw transactions</b></p>
+            gets a lot of information and instructions. </p>
+        <p>It can, among others, do the following</p>
+      <section><title>Pass an attestation to a user</title>
+        <p>A magic link contains an encoded attestation. The recipient of such a link can save this attestation in her wallet. It might enable him/her to do some transactions, depending on the nature of the attestation.</p>
+        
+        </section>
+      <section><title>Redeeom a tokekn</title>
         <p dir="ltr" id="docs-internal-guid-cc2d1346-7fff-f5eb-3caf-c17f48dd8176">One case for Magic
             Links is to pay someone without knowing his address. For this you can create a Magic
             Link which contains an allowance to withdraw a certain amount of Ether or a token like
             DAI by anybody who can prove to own a certain email. If the receiver imports the Magic
             Link in his wallet, the wallet knows where to find the TokenScript to attestate the
             email-address and to create the transaction. </p>
-        <p dir="ltr">To allow such withdrawl-transactions, the funds need to be placed in a specific
-            smart contract.</p>
-        <p><b>Magic Links and TokenScript</b></p>
+        <p dir="ltr">To allow such withdrawl-transactions, the funds or token need to be placed in a specific
+          smart contract, or the Smart Contract be written in a way to spawn such a token when called to redeemed.</p></section>
+      <section>
+        <title>Magic Links and TokenScript</title>
         <p dir="ltr" id="docs-internal-guid-7091f6fc-7fff-3bc9-f10b-ffcba202ea8f">Magic Links can be
             an important tool to integrate TokenScript in your apps. </p>
         <p dir="ltr">First, if you send a token a with a Magic Link, you tell the receiving wallet
@@ -30,7 +35,6 @@
             - the link starts a token specific attestation procedure, directing to email, id or
             another token. It could also be a complex transaction pattern or some kind of signed
             message and so on. Everything what can be done with an Action Card can be launched with
-            a Magic Link. </p>
-        <p><b>Create Magic Links</b></p>
+            a Magic Link. </p></section>
     </conbody>
 </concept>
