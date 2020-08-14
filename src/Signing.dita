@@ -14,7 +14,7 @@
                         website or a real world organisation.</dd>
                 </dlentry>
                 <dlentry>
-                    <dt>Trust Key</dt>
+			<dt><xref href="TokenScript-SigningKey.dita"/></dt>
                     <dd>This key associates the signer with the smart contract to which transactions
                         are sent, showing that the smart contract team trusts the TokenScript's
                         signer (which could be the same people).</dd>
