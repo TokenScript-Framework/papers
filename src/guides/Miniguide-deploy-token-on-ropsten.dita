@@ -7,13 +7,13 @@
     <conbody>
         <p>Building on Ethereum can be infrightening. But there are great tools available which make
             it really easy and secure. </p>
-        <p><b>Use a Browser-Wallet and get some Ropsten coins</b></p>
+        <section><title>Use a Browser-Wallet and get some Ropsten coins</title>
         <p>To deploy a token on Ropsten testnet you need a browser wallet like MetaMask. In MetaMask
             you can switch to Ropsten testnet. </p>
         <p><image href="miniguide-rt-5.png" id="image_iqg_skz_4mb"/></p>
         <p>To get a Ropsten Ether, you should visit the<xref href="https://faucet.ropsten.be/"
                 format="html" scope="external"> Ropsten faucet</xref>. </p>
-        <p><b>Create token file with Ethereum Studio</b></p>
+        </section><section><title>Create token file with Ethereum Studio</title>
         <p>To start creating your own Ropsten testnet token, browse to <xref
                 href="https://studio.ethereum.org/" format="html" scope="external">Ethereum
                 Studio</xref>. On the front page, select the Token template and create project. </p>
@@ -23,7 +23,7 @@
         <p><image href="miniguide-rt-2.png" id="image_g4b_5kz_4mb"/></p>
         <p>But don't forget to also rename the token.sol file to [newname].sol. This file is the
             smart contract. Select all in it and copy it.</p>
-        <p><b>Deploy token on Ropsten with Remix</b></p>
+        </section><section><title>Deploy token on Ropsten with Remix</title>
         <p>Browser to Remix. Select Solidity as environment and create new file. </p>
         <p><image href="miniguide-rt-3.png" id="image_cpx_5kz_4mb"/></p>
         <p>The name of the file must be [your-token-name].sol. Then paste what you copied from
@@ -36,7 +36,7 @@
         <p><image href="miniguide-rt-7.png" id="image_os1_zkz_4mb"/></p>
         <p>Now you can push the orange button "Deploy". Remix will give the transaction to MetaMask,
             which will ask you to confirm it. After you did so, the contract is created.</p>
-        <p><b>Mint Coins and transfer to Alphawallet</b></p>
+        </section><section><title>Mint Coins and transfer to Alphawallet</title>
         <p>To mint coins of the token, you need to click on "token at …" on the right side in Remix. </p>
         <p>Here you will find a menue to manage the token contract.</p>
         <p>Minting coins is easy: Select the form beside the orange field "mint", paste in your
@@ -45,6 +45,6 @@
         <p>You can mint the coins directly to your AlphaWallet address, or you can mint it to your
             MetaMask address and then transfer it to AlphaWallet with the button on Remix. Or you
             simply import your MetaMask wallet to AlphaWallet with the seed.
-            <?oxy_comment_start author="theBergmann" timestamp="20200806T171420+0200" comment="Ok --- It didn&apos;t really work. AlphaWallet was unable to acknowledge the token. Did I do something wrong on the way?"?></p><?oxy_comment_end?>
+	<?oxy_comment_start author="theBergmann" timestamp="20200806T171420+0200" comment="Ok --- It didn&apos;t really work. AlphaWallet was unable to acknowledge the token. Did I do something wrong on the way?"?></p><?oxy_comment_end?></section>
     </conbody>
 </concept>
