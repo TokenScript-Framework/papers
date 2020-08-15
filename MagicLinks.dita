@@ -5,7 +5,7 @@
     <shortdesc>Magic Links does something magic, with cryptography!</shortdesc>
     <conbody>
         <p>Magic Links are action-triggering links that contain cryptographic information.
-            Technically, it's an <xref href="EncodingAttestationInURI.dita"/>.</p>
+		Technically, it's an <xref href="specs/EncodingAttestationInURI.dita"/>.</p>
         <p>These encoded attestation links embed information about transactions, token, TokenScript
             and much more. When a wallet imports a Magic Link, it gets a lot of information and
             instructions. </p>
@@ -44,6 +44,7 @@
             another token. It could also be a complex transaction pattern or some kind of signed
             message and so on. Everything what can be done with an Action Card can be launched with
             a Magic Link. </p>
+    </section><section>
             <title>Examples for Magic Links</title>
             <p>A demo token for an EDCON ticket running on xDai implements an hardcoded Magic Link.
                 When you have the token in AlphaWallet and go to the option "transfer", you can

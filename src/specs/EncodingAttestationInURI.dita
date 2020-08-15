@@ -3,7 +3,7 @@
 <task id="task_t51_w4p_qmb">
     <title>Encoding Attestation in URI</title>
     <shortdesc>Encoding an attestation in URI format that is colloquially called <xref
-            href="MagicLinks.dita"/>.</shortdesc>
+	    href="../MagicLinks.dita"/>.</shortdesc>
     <taskbody>
         <context>
             <p>Encoding takes as argument the address of `a smart contract which the attestation
