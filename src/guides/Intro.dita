@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gxp_ngm_rmb">
+    <title>TokenScript Guides</title>
+    <body>
+        <p>The guides cover creation of tokenscript, the use of tools and deployment of
+            TokenScripts.</p>
+    </body>
+</topic>
