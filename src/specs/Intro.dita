@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_c3l_4fm_rmb">
+    <title>TokenScript Specs</title>
+    <body>
+        <p>There are 3 types of TokenScript specifications. Throughout a standardisation process
+            they may eventually become separate standards, but presently they are all housed under
+            TokenScript in 3 streams of development.<dl>
+                <dlentry>
+                    <dt>JavaScript API</dt>
+                    <dd>These include: how to use TokenScript engine features, like creating and
+                        reading a DataObject, passing Payload for signing, and how to select a token
+                        or launch a Token Card from a website.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>TokenScript XML</dt>
+                    <dd>These are specs about TokenScript XML elements and their uses.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Attestation</dt>
+                    <dd>About the attestations and data objects accessible to TokenScript
+                        Engines.</dd>
+                </dlentry>
+            </dl></p>
+    </body>
+</topic>
