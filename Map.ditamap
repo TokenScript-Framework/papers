@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Content TokenScript docs</title>
+    <topicref href="Tokenization.dita"/>
+    <topicref href="TokenScript.dita">
+        <topicref href="defiwithandwithoutts.dita"/>
+        <topicref href="LivingExamples.dita"/>
+        <topicref href="WhatTokenscriptCanDo.dita"/>
+    </topicref>
+    <topicref href="QuickStart.dita"/>
+    <topicref href="BasicConcepts.dita">
+        <topicref href="TokenScript-Component.dita"/>
+        <topicref href="Attributes.dita"/>
+        <topicref href="Card.dita">
+            <topicref href="TokenCard.dita"/>
+            <topicref href="ActionCard.dita"/>
+            <topicref href="ActivityCard.dita"/>
+            <topicref href="Attestation.dita"/>
+        </topicref>
+        <topicref href="DataObjects.dita"/>
+    </topicref>
+    <topicref href="Deployment.dita">
+        <topicref href="Signing.dita"/>
+        <topicref href="Deploy.dita"/>
+        <topicref href="MagicLinks.dita"/>
+    </topicref>
+    <mapref href="features/features.ditamap"/>
+</map>
