@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "technicalContent/dtd/concept.dtd" [
+
+<!-- Begin Document Specific Declarations -->
+<?Fm Validation Off?>
+
+
+<!-- End Document Specific Declarations -->
+
 ]>
 
-<concept id="id208HH0TC0CG"><title></title>
-<shortdesc></shortdesc>
-<prolog><author></author></prolog>
-<conbody><p></p></conbody></concept>
+<concept id="id208HH0TC0CG"><title>Item View vs Token View</title>
+<shortdesc>Item view describes how a token can be listed.</shortdesc>
+<conbody><p><p><simpletable relcolwidth="50* 50*" frame="all">
+<sthead>
+<stentry>Token View</stentry>
+<stentry>Item View</stentry>
+</sthead>
+<strow>
+<stentry>Token view is the view dedicated for each token. The token view
+will show the user full details of each token, including the actions
+associated with the token. </stentry>
+<stentry>Item view shows only the key relevant attributes associated with
+a particular type of token, such as balance, network, issuer, expiry
+etc.</stentry>
+</strow>
+</simpletable>
+<b></b>
+Item View can populate token balance and expiry time
+Item View of tokens enables websites to display token payment options,
+along with the number of available tokens. The examples below illustrates
+the art of possible.
+1. Balance of available tokens
+2. Expiry of available tokens if applicable
+
+
+<b>AlphaWallet Mobile App (Available Today)</b>
+<image href="TokenView_Vs_ItemView.svg" placement="break"  height="297.249"
+width="336.124" />
+
+
+
+<b>Partner Website or APP (Concept under development)</b>
+
+<image href="ItemView in Web.svg" placement="break"  /></p></p></conbody></concept>
