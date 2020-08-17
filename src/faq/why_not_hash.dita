@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
+<topic id="why_not_hash">
+  <title>Why don't we embed the TokenScript's hash in Smart Contract's</title>
+  <shortdesc>Currently, a TokenScript is "trusted" by a smart contract through the TokenScript's
+    signing key. Why don't we chuck tokenscript on an IPFS and keep hash of this code is embedded
+    into contract?</shortdesc>
+  <body>
+    <p>In fact earlier TokenScripts were designed like that. However, as we experimented with
+      TokenScript on various types of tokens, we found that the frequency of updating is quite high.
+      Since TokenScript has the Cards, which is the interface for Token Contracts, trivial things
+      like correcting spelling on user's interface adds transactions to the already crowded Ethereum
+      network.</p>
+    <p>We also observed that the roles emerge in Token teams. Those who have admin access to a smart
+      contract, therefore can update the "hash" included in the contract for TS, are often not the
+      same persons responsible for editing and updating TokenScripts. If the trust is expressed by
+      file hash, not by keys, the person responsible for updating TokenScript would repeatedly ask
+      the person with admin access to send new transactions.</p>
+    <p>Furthermore, AlphaWallet created many TokenScripts for existing Tokens, who would express
+      trust towards AlphaWallet's TokenScript authors but does not want to be called upon in day to
+      day updates.</p>
+  </body>
+</topic>

@@ -5,29 +5,28 @@
     <shortdesc>An action card triggers actions in the wallet. For example, a transaction, an
         attestation, a component of a transaction or a signature.</shortdesc>
     <conbody>
+        <p><b>Concept</b></p>
         <p>Action Cards enable wallets and dapp browsers to launch token specific operations. They
             can be triggered by an external source like a website, but also by a button in the
-            wallet. With Actions Cards each token can have its specific and structured scope of
-            operations.</p>
-        <p>Action Cards can be triggered by a third party. But they never take place on a website or
-            a server, but exclusively in the wallet or as a browser pop up in a browser plugin
-            wallet. A third party can only start, but not change an action card. </p>
-        <p>Action Cards transform the way users interact with smart contracts and token. Currently
-            most people visit a website, get the transaction from the website, and sign it with
-            their wallet. Action Cards enable the wallet to built the specific transactions needed
-            to use a smart contracts by itself. </p>
-        <p>If you are a token issuer, you probably already have a Dapp website that helps your users
-            to compose transactions with your token. With Action Cards the user will be able to do
-            the same in their own wallet or on other websites that uses your token but are not owned
-            by you. As one example, if you have deposited a token to a DEFI project and want to
-            redeem or "withdraw" it, this can be done by clicking a button which triggers an action
-            card, instead of being dependent on a website to create the transaction for you. </p>
+            wallet. </p>
+        <p>Action Cards can be launched by a third party. But they never take place on a website or
+            a server, but exclusively in the wallet. A third party can only start, but not change an
+            action card. </p>
+        <p>Action Cards enable wallets to add offchain operations to a token and create token
+            specific transactions, which are currently delivered by a website (dApp). For example,
+            if you have deposited a token to a DEFI project and want to redeem or withdraw it, this
+            can be done by clicking a button in the wallet, instead of being dependent on a website
+            to create the transaction for you. At the same time, any website can integrate a
+            TokenScript and offer buttons for token specific operations without needing to know the
+            smart contract.</p>
         <p>Action Cards can launch onchain operations like transactions. But they also allow a token
-            creator to enable offchain operations: The user can sign a message, start a process to
-            attest his email address, send an authorisation to let someone else use your token (if
-            the underlying token's smart contract accepts such authorisations) or create a deal to
-            share (requires underlying contract's support). Action Cards could also be helpful to
-            transfer an asset to second layer networks like sidechains or offchain networks.</p>
+            creator to add information to his token or integrate offchain operations: The user can
+            sign a message, start a process to attest his email address, send an authorisation to
+            let someone else use your token (if the underlying token's smart contract accepts such
+            authorisations) or create a deal to share (which requires underlying contract's
+            support). Action Cards can also help to transfer an asset to second layer networks like
+            sidechains or offchain networks. They streamline everything what can be done with a
+            token.</p>
         <p>Some action cards can only be available in a specific context. For example, if a token
             represents a soccer game ticket, the action "Show entrance Pass" should only be
             available at a gate of a stadium.</p>
@@ -35,30 +34,156 @@
             a deck. One successful Action Card can enable another, or the combination of two action
             cards can unlock a new operation. </p>
         <p><b>Code</b></p>
+        <p><i>The XML file</i></p>
         <p>In the XML file, the <codeph>&lt;ts:action></codeph>...<codeph>&lt;/ts:action></codeph>
-            tag starts and ends an Action Card. If the action involves creating a transaction, it
-            can be injected inside the action tags by <codeph>&lt;ts:transaction></codeph> …
-                <codeph>&lt;/ts:transaction></codeph></p>
-        <p>The Code to create the transaction is stored in a separate file. Visible actions in the
-            wallet - like putting specific info in a form - are in the JavaScript file.</p>
-        <p>Here is an example of an Action Card starting an attestation process:</p>
-        <p><codeph>&lt;ts:card type="action" name="attest"></codeph></p>
-        <p><codeph>&lt;ts:label></codeph></p>
-        <p><codeph>&lt;ts:string xml:lang="en">Attestations&lt;/ts:string></codeph></p>
-        <p><codeph>&lt;ts:string xml:lang="zh">认证&lt;/ts:string></codeph></p>
-        <p><codeph>&lt;/ts:label></codeph></p>
-        <p><codeph>&lt;ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"></codeph></p>
-        <p><codeph>&lt;style type="text/css">&amp;style;&lt;/style></codeph></p>
-        <p><codeph>&lt;body>&amp;attestations.en;&lt;/body></codeph></p>
-        <p><codeph>&lt;/ts:view></codeph></p>
-        <p>&lt;/ts:card></p>
-        <p>The attestation process is launched by starting the file attestations.en.shtml. The
-            example is from the <xref
-                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/Karma"
-                format="html" scope="external">Karmacoin TokenScript demo</xref>.</p>
-        <p>When an action card triggers a transaction, the transaction builder needs to be expressed
-            in another JavaScript file. See for an example <xref
-                href="https://github.com/AlphaWallet/TokenScript-Examples/blob/master/examples/ENS/recordsBundle.en.js"
-                format="html" scope="external">this file as part of the ENS TokenScript</xref>.</p>
+            tag starts and ends an Action Card. As an easy example, this is how you declare a simple
+            Action Card which adds an "About" page to a
+            token:<codeblock> &lt;ts:card type="action">
+     &lt;ts:label>
+          &lt;ts:string xml:lang="en">About this token&lt;/ts:string>
+     &lt;/ts:label>
+     &lt;ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+         &lt;style type="text/css">&amp;style;&lt;/style>
+         &lt;script type="text/javascript">&amp;about.en;&lt;/script>
+     &lt;/ts:view>
+ &lt;/ts:card></codeblock></p>
+        <p>In the XML code you find the reference to a Script, usually written in JavaScript. In
+            this Script you execute the Action Card. As you see, the Script is placed in the "view"
+            tags. </p>
+        <p>Often you will need more advanced Action Cards, which might involve to use onchain data
+            to create a transaction. A more sophisticated example is an Action Card to renew an ENS
+            domain:<codeblock>&lt;ts:card type="action" name="renew">
+      &lt;ts:label>
+          &lt;ts:string xml:lang="en">Renew&lt;/ts:string>
+      &lt;/ts:label>
+      &lt;ts:attribute name="renewalPricePerYear">
+            &lt;ts:type>&lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.36&lt;/ts:syntax>&lt;/ts:type>
+            &lt;ts:label>
+                &lt;ts:string xml:lang="en">renewal price per year&lt;/ts:string>
+            &lt;/ts:label>
+            &lt;ts:origins>
+                &lt;ethereum:call function="rentPrice" contract="ETHRegistrarController" as="uint">
+                    &lt;ts:data>
+                        &lt;ts:string local-ref="userEnsName"/>
+                        &lt;ts:uint256>31556952&lt;/ts:uint256>
+                    &lt;/ts:data>
+                &lt;/ethereum:call>
+            &lt;/ts:origins>
+      &lt;/ts:attribute>
+      &lt;ts:transaction>
+          &lt;ethereum:transaction function="renew" contract="ETHRegistrarController" as="uint">
+              &lt;ts:data>
+                  &lt;ts:string local-ref="userEnsName"/>
+                  &lt;ts:uint256>31556952&lt;/ts:uint256>
+              &lt;/ts:data>
+              &lt;ethereum:value local-ref="renewalPricePerYear"/>
+          &lt;/ethereum:transaction>
+      &lt;/ts:transaction>
+      &lt;ts:view xml:lang="en">
+            &lt;xhtml:style type="text/css">&amp;style;&lt;/xhtml:style>
+            &lt;xhtml:script type="text/javascript">&amp;renew.en;&lt;/xhtml:script>
+      &lt;/ts:view>
+&lt;/ts:card></codeblock></p>
+        <p>In this example a few things happen: In the &lt;ts:attribute> part you declare <xref
+                href="Attributes.dita">Attributes</xref> you will later use in the JavaScript file.
+            With an Ethereum call you learn the renewal price per year - an important information to
+            build a transaction. With the &lt;ts:transaction> tag you create the transaction to
+            renew the ENS domain. Finally, inside the view tags, you link to a renew.en.js
+            JavaScript file.</p>
+        <p><i>The JavaScript file</i></p>
+        <p>The operations of an Action Card are written in an JavaScript file. All JavaScript files
+            must be declared at the top of the xml file (as well as css files and images you
+            use):<codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE token  [
+        &lt;!ENTITY style SYSTEM "shared.css">
+        &lt;!ENTITY about.en SYSTEM "about.en.js">
+        &lt;!ENTITY approve.en SYSTEM "approve.en.js">
+        ]></codeblock></p>
+        <p>Here is a simple example for a very simple Action Card displaying an about page in the
+            wallet.<codeblock>class Token {
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.setConfirm();
+    }
+    setConfirm() {
+        window.onConfirm = function() {
+            window.close();
+        }
+    }
+    render() {
+        return`
+        &lt;div class="ui container">
+          &lt;div class="ui segment">
+            &lt;span>&lt;bold>&lt;h1>This is my token!&lt;/span>
+          &lt;/div>
+        &lt;/div>
+`;
+    }
+}
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};</codeblock></p>
+        <p>The file starts with declaring a Token class. Here you can define properties of the token
+            and import attributes. In the "render()" part you can put your individual message in
+            html. In this case it is simply the message "This is my token!". But you can also add
+            images from websites, API calls and much more.</p>
+        <p>For a more complicated example, we turn to the ENS TokenScript again and show how to it
+            renews an ENS domain. It is important to note that the renewal transaction is not
+            created in the JavaScript file, but on the XML layer. The JavaScript file just renders
+            the user interface, so that the user exactly knows what he is doing. It could also be
+            used to import information from a third party, process a QR code (like scanning a
+            ticket) and much more.</p>
+        <p>
+            <codeblock>class Token {
+
+    //TODO add slider to determine the duration by year
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.props.baseNode = ".eth";
+        this.props.fullName = this.props.ensName + this.props.baseNode;
+        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
+            // if ENS name cannot be retrieved by events because it is legacy, use the opensea format
+            this.props.fullName = this.props.name;
+            //remove .eth
+            this.props.ensName = this.props.name.replace(this.props.baseNode, "");
+        }
+        web3.action.setProps({
+            userEnsName: this.props.ensName
+        });
+    }
+
+    formatTimeStamp(UNIX_timestamp) {
+        let a = new Date(UNIX_timestamp * 1000);
+        let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        let year = a.getFullYear();
+        let month = months[a.getMonth()];
+        let date = a.getDate();
+        return date + ' ' + month + ' ' + year;
+    }
+
+    render() {
+        return`
+        &lt;div class="ui container">
+          &lt;div class="ui segment">
+              &lt;img src="data:image/png;base64,i...C">
+              &lt;span>&lt;bold>&lt;h3>Renew &lt;strong>${this.props.fullName}&lt;/strong> for one year&lt;/h3>&lt;/bold>&lt;/span>
+              &lt;div id="inputBox">
+                 &lt;h3>Price of one year renewal: ${(this.props.renewalPricePerYear / 1e+18).toFixed(3)} ETH&lt;/h3>
+                 &lt;h3>Name expires: ${this.formatTimeStamp(this.props.nameExpires)}&lt;/h3>
+                 &lt;br>
+              &lt;/div>
+          &lt;/div>
+        &lt;/div>`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) => {
+    const currentTokenInstance = updatedTokens.currentInstance;
+    let token = new Token(currentTokenInstance);
+    document.getElementById(tokenCardId).innerHTML = token.render();
+};</codeblock>
+        </p>
+        <p/>
     </conbody>
 </concept>
