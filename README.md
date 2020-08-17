@@ -17,11 +17,7 @@ $ dita --install net.infotexture.dita-bootstrap
 3. Make the documents
 
 ````
-<<<<<<< HEAD
-$ dita --input=Map.ditamap --format=html5-bootstrap --args.hdr=$PWD/navbar.xml --args.css=custom.css --args.cssroot=$PWD
-=======
-$ dita --input=Map.ditamap --format=html5-bootstrap --args.hdr=$PWD/navbar.xml --args.css=$PWD/custom.css
->>>>>>> 6d4e68d24a057d5a3ca5108e15b03bff4c716951
+$ dita --input=Documents.ditamap --format=html5-bootstrap --args.hdr=$PWD/navbar.xml --args.css=custom.css --args.cssroot=$PWD
 ````
 
 Which will create the document output from Map.ditamap in the `out/` directory.

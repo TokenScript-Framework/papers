@@ -21,11 +21,12 @@
                 security measurements for a specific token to be used on various websites when
                 loaded in a TokenScript Engine.</li>
         </ul>
-        <p dir="ltr">TokenScript enables <b>token creators</b> to leave the restrictions of smart
+        <p dir="ltr">TokenScript enables <b>token issuers</b> to leave the restrictions of smart
             contracts behind. It allows to add a lot of information, even image files or API lookups
             to a token, and design a set of business rules and interaction logics for it, including
-            attestations and structured interactions with other tokens. Moreover, with TokenScript
-            token issuers can easily and securely update the token rules.</p>
+                <xref href="Attestation.dita">attestations</xref> and structured interactions with
+            other tokens. Moreover, with TokenScript token issuers can easily and securely update
+            the token rules.</p>
         <p dir="ltr">For <b>wallets</b>, TokenScript levels up their capability as the user agent
             for blockchain interactions. Currently most dApps require a third party website to
             interprete the state of the blockchain and to craft smart contract transactions. When a

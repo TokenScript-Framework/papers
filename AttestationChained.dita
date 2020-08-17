@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_a2y_fw4_qmb">
+    <title>Attestation can be chained</title>
+    <shortdesc>Attestations that doesn't have a subject public key may depends on other
+        attestations</shortdesc>
+    <conbody>
+        <p>In X.509 certificates, which typically certifies an organisation or a website,
+            certificates are chained through public keys. When it comes to attestation </p>
+    </conbody>
+</concept>
