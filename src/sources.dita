@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_l1d_2cx_qmb">
+    <title>Tools and Sources</title>
+    <shortdesc>Important web sources and tools to build with TokenScript</shortdesc>
+    <conbody>
+        <p>ABI to TokenScript</p>
+        <p>TokenScript Examples</p>
+        <p>TokenScript GitHub</p>
+        <p>Community TokenScript</p>
+        <p>XML guide</p>
+    </conbody>
+</concept>

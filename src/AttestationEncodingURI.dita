@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_p5c_f4p_qmb">
+    <title>Encoding Attestation</title>
+    <body>
+        <p>Tthe TokenScript Attestation can be encoded in an URI format, in order to pass
+            attestations on the Web. </p>
+    <p><task conref="specs/EncodingAttestationInURI.dita"/></p>
+    </body>
+</topic>
