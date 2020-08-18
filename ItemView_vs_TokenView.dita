@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA 1.3 Topic//EN" "technicalContent/dtd/topic.dtd" [
-
-<!-- Begin Document Specific Declarations -->
-<?Fm Validation Off?>
-
-
-<!-- End Document Specific Declarations -->
-
 ]>
 
 <topic id="id208IJD0M0BE"><title>ItemView Vs TokenView</title>
@@ -25,14 +18,25 @@ and TokenView</shortdesc>
 </thead>
 <tbody>
 <row rowsep="0">
-<entry colname="1">Token view is the view dedicated for each token. The
-token view will show the user full details of each token, including
+<entry colname="1">Token view is the view dedicated for each token.
+The token view will show the user full details of each token, including
 the actions associated with the token. </entry>
-<entry colname="2">Item view shows only the key relevant attributes associated
-with a particular type of token, such as balance, network, issuer,
-expiry etc.</entry>
+<entry colname="2">Item view shows only the key relevant attributes
+associated with a particular type of token, such as balance, network,
+issuer, expiry etc.</entry>
 </row>
 </tbody>
 </tgroup></table>
-<p>New Paragraph</p>
-</body></topic>
+<p>Item View can populate token balance and expiry timeItem View
+of tokens enables websites to display token payment options, along
+with the number of available tokens. The examples below illustrates
+the art of possible.</p>
+<p>1. Balance of available tokens2. Expiry of available tokens if
+applicable</p>
+<p></p>
+<p>AlphaWallet Mobile App (Available Today)</p>
+<p><image href="TokenView_Vs_ItemView.svg" placement="break"  scale="100.00"
+/></p>
+<p></p>
+<p>Partner Website or APP (Concept under development)</p>
+<p><image href="Item View in Web.svg" placement="break"  /></p></body></topic>
