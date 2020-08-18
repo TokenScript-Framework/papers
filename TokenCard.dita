@@ -8,7 +8,7 @@ visually.</shortdesc>
 <conbody><p>Token Cards instruct a wallet, a dapp browser or a website
 how to represent a token. This can include visible instructions,
 like icons, colors, a text description or buttons. These visible
-properties are set with the <codeph>&lt;view></codeph> declaration <xref outputclass="fm:" href="ItemView.dita#id208HH0TC0CG" />.
+properties are set with the <codeph>&lt;view></codeph> declaration <xref outputclass="fm:" href="ItemView_vs_TokenView.dita" />.
 With it token issuers can design how the token appears in the wallet
 or on websites. You can think of it similar to a library of CSS
 code.</p>

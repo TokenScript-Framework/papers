@@ -13,7 +13,7 @@
 <shortdesc>The section here brings out the differences between ItemView
 and TokenView</shortdesc>
 <prolog><author></author></prolog>
-<body><p><p><table frame="all" colsep="1" rowsep="1"><title>ItemVi</title>
+<body><table frame="all" colsep="1" rowsep="1"><title>ItemVi</title>
 <tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
 <colspec colnum="1" colname="1" colwidth="50*"/>
 <colspec colnum="2" colname="2" colwidth="50*"/>
@@ -33,4 +33,4 @@ with a particular type of token, such as balance, network, issuer,
 expiry etc.</entry>
 </row>
 </tbody>
-</tgroup></table></p></p></body></topic>
+</tgroup></table></body></topic>
