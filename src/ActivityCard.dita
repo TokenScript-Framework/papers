@@ -11,6 +11,7 @@
                 AlphaWallet will soon release a version which supports Activity Cards. In this
                 version the "transaction" tab will be renamed to "activity" tab.</note>
         </p>
+      <section><title>Concept</title>
         <p>Activity Cards are meant to show the history of a token. This might seem trivial, since
             any wallets connects to a blockchain, which already serves a shared history of
             transactions.</p>
@@ -33,7 +34,8 @@
             QR code at a gate, that you called an API with an Action Card and so on.</p>
         <p>To sum it up: Activity Cards allow token issuers to create customized history records for
             their token.</p>
-        <p><b>Code</b></p>
+        </section><section>
+        <title>Code</title>
         <p>
             <note>that this code might change with the release of AlphaWallet implementing Activity
                 Cards.</note>
@@ -110,5 +112,6 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
         <p>As in Action Cards, the JavaScript file renders what the user will see: It displays the
             message that he gave approval for address x to move y token. It would also be possible
             to add a link to the transaction on any blockchain explorer and more.</p>
+        </section>
     </conbody>
 </concept>
