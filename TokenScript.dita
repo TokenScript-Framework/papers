@@ -6,8 +6,8 @@
 	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
             Tokenisation framework.</p>
             
-            <ol><li>It wraps around HTML and JavaScript for Token functionalities, and makes them deployable in the
-                wallet, so that any token can unluck its customized mini Dapp.</li>
+            <ol><li>It wraps around HTML and JavaScript for Token functionalities and makes them deployable in the
+                wallet, so that any token can unlock its customized mini Dapp.</li>
             <li>It provides a <xref href="TokenLayer.dita"/>, so
             Tokens can be deployed on various websites and apps.</li>
             </ol>
@@ -51,8 +51,11 @@
                 token smart contract or a trusted source</xref> with a public key. Wallets and dApps
             can import and verify the files.</p>
         <p dir="ltr">TokenScript is blockchain agnostic. The main focus of our development is based
-            on Ethereum token. But it can be adopted to other blockchains and even combine token and
-            interactions of different blockchains. </p>
+                on Ethereum token. But it can be adopted to other blockchains and even combine token
+                and interactions of different blockchains. TokenScript is not a standard for token,
+                but <xref href="ts-vs-token-standards.dita">a standard for a Token Layer</xref>,
+                which enables wallets and apps and websites to work with any non-standardized token
+                as easy as with ERC token.</p>
         <p dir="ltr">This guide will educate you about the<xref href="BasicConcepts.dita"> basic
                 concepts of TokenScript</xref> and the <xref href="Deployment.dita"
                                                              >deployment</xref> of a TokenScript.</p></section>
