@@ -11,7 +11,7 @@
                 format="html" scope="external"> TokenScripts for several popular token</xref> which
             tremendously improve the user experience. To try it, just import a wallet holding these
             coins in AlphaWallet or send them to a fresh AlphaWallet account.</p>
-        <p><b>DAI</b></p>
+        <section><title>DAI</title>
         <p>If you don't know DAI, you missed something. DAI is a Dollar token on Ethereum, which is
             not centrally backed by a bank account holding a Dollar equivalent, but by a DAO holding
             and trading a reserve in Ether and other token. It's one of the prime examples of the
@@ -44,7 +44,7 @@
                 format="html" scope="external">DAI TokenScript</xref>, which is currently maintained
             by the TokenScript team. After reviewing your pull request in the example folder it can
             become part of AlphaWallet.</p>
-        <p><b>Compound, AAVE and other DeFi</b></p>
+        </section><section><title>Compound, AAVE and other DeFi</title>
         <p>Maybe you heard about Decentralized Finance (DeFi). It is the technology to use smart
             contracts and token to decentralize not just money but also traditional financial
             services like lending, borrowing or exchanging. </p>
@@ -75,6 +75,6 @@
             are invited to learn the <xref href="BasicConcepts.dita">basics of TokenScript</xref>,
             scan through our examples and contribute to <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/erc20"
-                format="html" scope="external">existing TokenScripts </xref>or create new ones. </p>
+                format="html" scope="external">existing TokenScripts </xref>or create new ones. </p></section>
     </conbody>
 </concept>
