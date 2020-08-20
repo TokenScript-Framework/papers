@@ -15,8 +15,9 @@
       <section>
         <title>Express Trust from Smart Contract to a Trust Key</title>
         <p>There are two ways to express trust from the Smart Contract to the TokenScript Key:</p>
-      <ul><li>Configure the smart contract to return the fingreprint of the key - 
-      A smart contract with key management feature can return the currently trusted TokenScript key through a 256-bit fingerprint.</li>
+      <ul><li>Configure the smart contract to return the fingerprint of the key - A smart contract with key
+                    management features can return the currently trusted TokenScript key through a
+                    256-bit fingerprint.</li>
         <li>Send an Express-of-Trust transaction</li>
         </ul>
       </section>
