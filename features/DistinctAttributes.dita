@@ -2,11 +2,12 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_y3c_tv2_pmb">
     <title>Distinct Attributes</title>
-    <shortdesc>Distinct attributes defines whether or not three is a token, or how many are
+    <shortdesc>Distinct attributes defines whether or not there is a token, or how many are
         there.</shortdesc>
     <conbody>
-      <p>A distinct attribute is a Token Attribute that have <codeph>distinct</codeph> set to
-          true:<codeblock>&lt;attribute name="balance" distinct="true">
+      <p>A distinct attribute is a <xref href="../Attributes.dita">Token Attribute</xref> that has
+                <codeph>distinct</codeph> set to
+            true:<codeblock>&lt;attribute name="balance" distinct="true">
 …
 &lt;/attribute></codeblock></p>
         <p>It instructs the TokenScript engine to create the number of tokens equal to the number of
