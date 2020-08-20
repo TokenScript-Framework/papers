@@ -10,9 +10,10 @@
         <p>For example, if an AAVE token is nearing its liquidation position, a host Dapp can check
             the current collateralisation position and provide a warning on the host Dapp. But, if
             the host Dapp is not running, the user would not have learned of the dangerous
-            situation.</p>
+            situation. His main user agent - the wallet - remains dumb.</p>
         <p>Instead of needing a host Dapp to repeatedly enquiring the blockchain for data updates,
-            in TokenScript's design <xref href="Attributes.dita"/> define a token's relevent data. </p>
+            in TokenScript's design <xref href="Attributes.dita"/> define a token's relevent data.
+            This enables the wallet to do substitute the service of a Dapp.</p>
         <p/>
         <p>In TokenScript, a TokenEngine is at work on the web or in user's wallet. It maintains a
             set of token attributes and utilises the declarations in TokenScript file:</p>
