@@ -2,19 +2,17 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_n4y_1gj_qmb">
     <title>TokenScript XML Markup elements</title>
-    <shortdesc>Reference of all elements that can be used in a TokenScript</shortdesc>
+    <shortdesc>Reference of all elements that can be used in a TokenScript.</shortdesc>
     <refbody>
         <table id="table_dl4_w5m_qmb">
             <title>Root elements</title>
-            <tgroup cols="3">
+            <tgroup cols="2">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
-             	 <colspec colname="c3" colnum="3" colwidth="1*"/>
                 <thead>
                     <row>
                         <entry>Elements</entry>
                         <entry>Use</entry>
-                      	<entry>Inside Root</entry>
                     </row>
                 </thead>
                 <tbody>
@@ -59,7 +57,7 @@
                 </tbody>
             </tgroup>
           <title>Other Elements</title>
-            <tgroup cols="2">
+            <tgroup cols="3">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
                 <colspec colname="c3" colnum="3" colwidth="1*"/>
@@ -71,8 +69,49 @@
                     </row>
                 </thead>
                 <tbody>
-                    <row>
+                   <row>
+                        <entry><codeph>&lt;address></codeph></entry>
                         <entry/>
+                      	<entry>Contract</entry>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;bytes32&gt;</codeph></entry>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;data&gt;</codeph></entry>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;element></codeph></entry>
+                        <entry/>
+                      	<entry>Data Module</entry>
+                    </row>
+                 	<row>
+                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
+                        <entry>Calls a smart contract, for example fetching the balance.</entry>
+                    	<entry>Attributes</entry>
+                    </row>
+                  	<row>
+                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
+                        <entry>Defines the Token's contract</entry>
+                      	<entry>Contract</entry>
+                    </row>
+                  	<row>
+                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  	<row>
+                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
+                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
+                            transaction.</entry>
+                    	<entry>Card</entry>
+                    </row>
+                  	<row>
+                        <entry><codeph>&lt;ethereum:value&gt;</codeph></entry>
                         <entry/>
                       	<entry/>
                     </row>
@@ -81,180 +120,86 @@
                         <entry/>
                       	<entry/>
                     </row>
+                  	<row>
+                        <entry><codeph>&lt;item-view&gt;</codeph></entry>
+                      <entry>Defines how the wallet must view the token</entry>
+                      <entry>Card (Token Card)</entry>
+                    </row>
                     <row>
                         <entry><codeph>&lt;label&gt;</codeph></entry>
                         <entry>Labels allow to localize the TokenScript by adding language specific
                             files or names.</entry>
-                      	<entry/>
+                      	<entry>Attributes / Cards</entry>
                     </row>
                     <row>
-                        <entry/>
-                        <entry/>
-                      	<entry/>
-                    </row>
-                  <row>
-                        <entry/>
+                        <entry><codeph>&lt;mapping></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
                   <row>
-                        <entry/>
+                        <entry><codeph>&lt;option></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
-                  <row>
+                  	<row>
                         <entry><codeph>&lt;plural&gt;</codeph></entry>
                         <entry>Adds the correct designation when there is more than one
                             token.</entry>
-                    	<entry/>
+                    	<entry>Attributes / Cards</entry>
                     </row>
                   <row>
                         <entry><codeph>&lt;selection&gt;</codeph></entry>
                         <entry>Selection is a way to categorise token instances. It allows you to
                             select multiple token at once or define an action for them. </entry>
-                    	<entry/>
+                    	<entry>Attributes / Cards</entry>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;sequence></codeph></entry>
+                        <entry/>
+                    	<entry>Data Module</entry>
                     </row>
                   <row>
                         <entry><codeph>&lt;string&gt;</codeph></entry>
                         <entry>Is a simple string.</entry>
-                    	<entry/>
+                    	<entry>Attributes / Cards</entry>
                     </row>
-                  <row>
-                        <entry/>
-                        <entry/>
-                    	<entry/>
-                    </row>
-                  <row>
-                        <entry/>
+                   <row>
+                        <entry><codeph>&lt;syntax></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
-                  <row>
-                        <entry/>
+                   <row>
+                        <entry><codeph>&lt;token-id></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
                   <row>
+                        <entry><codeph>&lt;type></codeph></entry>
                         <entry/>
+                    	<entry/>
+                    </row>
+                   <row>
+                    <entry><codeph>&lt;uint256></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
                   <row>
+                    <entry><codeph>&lt;user-entry></codeph></entry>
                         <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;value></codeph></entry>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                    <entry><codeph>&lt;view></codeph></entry>
                         <entry/>
                     	<entry/>
                     </row>
                 </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements in <codeph>ethereum</codeph> namespace </entry>
-                        <entry>Use on the Ethereum blockchain</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
-                        <entry>Calls a smart contract, for example fetching the balance.</entry>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
-                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
-                            transaction.</entry>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;type&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>
+            </tgroup>          
         </table>
       
     </refbody>
