@@ -14,7 +14,7 @@
             certificates or as X.509 like for the Estonian e-residency.</p>
         <p dir="ltr">Data objects can be stored offchain as a file on the wallet device, or onchain
             as part of a smart contract.</p>
-        <p><b>Data Structure</b></p>
+        <section><title>Data Structure</title>
         <p dir="ltr" id="docs-internal-guid-9cfcb9e7-7fff-ed55-0a83-60c4178928ef">TokenScript
             created its own format for DataObjects, relying on well established technology. The data
             is structured in a way that it can be put on the blockchain with low gas costs, but also
@@ -28,7 +28,7 @@
             reduces gas cost by more than 50%. As a string of DER-encoded bytes it is useful for
             signing, like for an attestation. This data structure has also a better interoperability
             than JSON, and it can be easily extended.</p>
-        <p><b>Using Data Objects</b></p>
+        </section><section><title>Using Data Objects</title>
         <p dir="ltr" id="docs-internal-guid-02889378-7fff-5fcb-10e8-53f68e6218f4">Data objects can
             be used in multiple ways: They can transport information about the token, like a ticket
             number or the date of a soccer match or even a icon or a picture. They can also be the
@@ -42,6 +42,6 @@
             don’t need to be onchain. It is enough when the tickets are data objects ascribed to an
             Ethereum address and signed by the issuer. They can be just a data object. However, when
             the tickets are sold and transfered, the data objects can be used to create an Ethereum
-            transaction which proof that the ticket is valid.</p>
+          transaction which proof that the ticket is valid.</p></section>
     </conbody>
 </concept>
