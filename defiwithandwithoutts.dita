@@ -8,7 +8,7 @@
         <p>Assume you have a DeFi app which allows user to lend and borrow digital token and
             distributes its own token via yield farming to its users. This is a common model in
             DeFi.</p>
-        <p><b>User experience without TokenScript </b></p>
+        <section><title>User experience without TokenScript </title>
         <p>The user needs to visit a website, usually called a dApp. Despite the app being a smart
             contract on the Ethereum blockchain, users have to access it by a centralized website.
             There they connect their wallet to the website, which harms privacy. </p>
@@ -32,7 +32,7 @@
             also hardcode some information about the smart contract, so that the wallet knows that
             the user lended money. But this is very cumbersome, incomplete and doesn't scale at
             all.</p>
-        <p><b>User experience with TokenScript</b></p>
+        </section><section><title>User experience with TokenScript</title>
         <p>If the DeFi app introduced TokenScript, things would look drastically different.</p>
         <p>To start, the user needs to visit the website, too. He also needs the website to provide
             a transaction to exchange the token he wants to lend to customized DeFi token. But then
@@ -54,6 +54,7 @@
             yield rate.</p>
         <p>TokenScript enables your wallet to do everything you formerly needed a website for. It
             also allows other websites to easily integrate your token into their service without the
-            need to integrate it again from scratch.</p>
+          need to integrate it again from scratch.</p>
+            <p>ode</p></section>
     </conbody>
 </concept>
