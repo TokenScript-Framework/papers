@@ -18,7 +18,8 @@
         <p>There are typically three ways to use an attestation:</p>
         <ul id="ul_hdn_xv4_qmb">
             <li>As the payload of an attested transactions. The underlying smart contract will check
-                the validity of such attestations.</li>
+                    the validity of such attestations. <xref href="ChequeProtocol.dita"/> makes
+                    heavy use of attestations in such a way.</li>
             <li>To prove something to a 3rd party. For example, you can construct a proof of your
                 email address with an email address attestation.</li>
             <li>To provide dependency for other attestations. Since <xref
