@@ -6,7 +6,9 @@
     <conbody>
         <p dir="ltr" id="docs-internal-guid-6f535edd-7fff-c20b-1017-137517f57393">In TokenScript you
             can declare “attributes”. These are properties of the token. They can be pulled from the
-            blockchain or declared on your own will.</p>
+            blockchain or declared on your own will. Due to attributes TokenScript enables a <xref
+                href="DataDriven.dita">data-driven and event-driven approach</xref> to token
+            management in a wallet.</p>
         <p dir="ltr">TokenScript does not define or assume any specific token attributes, however
             any token must have at least one attribute.</p>
         <p>The most commonly used attribute is "balance" as defined in ERC20. Let's take another
