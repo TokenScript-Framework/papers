@@ -54,7 +54,7 @@
             on Ethereum token. But it can be adopted to other blockchains and even combine token and
             interactions of different blockchains. </p>
         <p dir="ltr">This guide will educate you about the<xref href="BasicConcepts.dita"> basic
-                concepts of TokenScript</xref> and the <xref href="Deployment.dita"
+                concepts of TokenScript</xref> and the <xref href="Deploy.dita"
                                                              >deployment</xref> of a TokenScript.</p></section>
     </body>
 </topic>

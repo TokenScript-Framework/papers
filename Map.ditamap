@@ -17,7 +17,7 @@
 <topicref href="ActivityCard.dita"></topicref>
 <topicref href="Attestation.dita"></topicref></topicref>
 <topicref href="DataObjects.dita"></topicref></topicref>
-<topicref href="Deployment.dita"><topicref href="Signing.dita"></topicref>
+<topicref href="Signing.dita"></topicref>
 <topicref href="Deploy.dita"></topicref>
 <topicref href="MagicLinks.dita"></topicref></topicref>
 <mapref href="features/features.ditamap"></mapref></map>
