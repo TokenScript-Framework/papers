@@ -4,12 +4,14 @@
     <title>Cheque protocol</title>
     <shortdesc>Cheque protocol solves a common multi-sig use-cases</shortdesc>
     <conbody>
-        <p>There are many scenarios multi-sig can be used to achieve efficiency and privacy. Cheque
-            protocol introduce a set of standard and crypto library to address such scenarios. It
-            requires wallet support.</p>
-        <p>The current protocol description is described in the document of our <xref
-                href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
-                format="html" scope="external">send ether by identifier attestation MVP</xref>.</p>
+        <p>There are many scenarios multi-sig can be used to achieve efficiency and privacy.</p>
+        <p>Cheque protocol is an in-development multi-sig protocol with privacy protection and
+            extensibility. TokenScript will support it natively smart contract's support will be
+            enabled through a new ERC.</p>
+        <note><p>We take an MVP-first, paper-later appraoch. The paper will be based on the protocol for <xref
+                    href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
+                    format="html" scope="external">send ether by identifier attestation
+                MVP</xref>.</p></note>
         <section><title>Multi-sig is efficient</title>
         <p>Take the following scenario:</p><ol id="ol_jz2_hhw_smb">
                 <li>A CEO authories an employee to withdraw up to 500USD per day from an
@@ -36,16 +38,16 @@
             observer. Cheque protocol included the necessary crypto - in this case Pedersen
             Commitment and Zero Knowledge Proof - so that blockchain Token developers can implement
             their version of such protocol in their business scenario.</p>
-            <p>This use-case is our <xref
-                    href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
-                    format="html" scope="external">MVP implementation of Cheque protocol</xref>. The
+            <p>This use-case is our <xref href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md" format="html" scope="external">MVP implementation of Cheque protocol</xref>. The
                 cheque protocol paper will be published based on this MVP result.</p></section>
         <section><title>Cheque protocol can improve security</title>
-            <p>Some uses of Cheque protocol can prevent counter-party risk.</p>
+            <p>Smart use of Cheque protocol can improve security through minimising counter-party
+                risk and attack surface.</p>
             <p>For example, an exchange can get an order from a user to sell their cryptocurrency at
                 certain price. Later when the order can be filled, the exchange can counter-sign the
-                order and execute it. This can happen even when the user is offline. Therefore the
-                user does not need to deposite their cryptocurrency into the exchange's account
-                prior to the trade, minimising counter party risk.</p></section>
+                order and execute it. This can happen even when the user is offline.</p>
+            <p>Therefore the user does not need to deposite their cryptocurrency into the exchange's
+                account prior to the trade, minimising counter party risk. The exchange account will
+                be holding cryptocurrency only for a short time, minimising attack surface.</p></section>
     </conbody>
 </concept>
