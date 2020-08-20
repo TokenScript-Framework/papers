@@ -7,7 +7,7 @@
     <conbody>
       <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
             attestation can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"/>. </note>
-        <p><b>What is an attestation?</b></p>
+        <section><title>What is an attestation?</title>
         <p>Attestation are a claim on something: On a national identity, on the legal drinking /
             voting age, an university degree, the ownership of an email address, an insurance and so
             on.</p>
@@ -27,7 +27,7 @@
         <p>TokenScript supports the integration of attestation processes, triggered by an action
             card directly in the wallet. You can integrate an attestation circuit into the life
             cycle of a token.</p>
-        <p><b>Attestation use cases</b></p>
+        </section><section><title>Attestation use cases</title>
         <p>A standardized attestation format has an enormous potential to smoothly integrate
             identity and other claims into the web and to streamline a wide range of processes, like
             signing up for an exchange, registering a bank account, verifying as an accredited
@@ -49,7 +49,7 @@
             who can provide an attestation for an identifier like an email address. </p>
         <p>In short: Any delivery vs payment operation can integrate any kind of attestation which
             might be required for the process. </p>
-        <p><b>Attestation versus Blockchain Token</b></p>
+        </section><section><title>Attestation versus Blockchain Token</title>
         <p dir="ltr" id="docs-internal-guid-c17d42c9-7fff-776a-6d10-82e4537e3178">Attestation and
             blockchain token are related concepts: Both of them require the user to have a private
             key.</p>
@@ -64,7 +64,7 @@
             blockchain. Since they often carry private information, they should never hit a
             blockchain. The proof of an attestation, however, might be written to the blockchain in
             an <xref href="AttestedTransaction.dita"/>.</p>
-        <p><b>Attestation Format</b></p>
+        </section><section><title>Attestation Format</title>
         <p dir="ltr" id="docs-internal-guid-5d145ec5-7fff-8581-76f9-a734957f6ca7">An attestation is
             a signed <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
             information, including public and private information. It can be signed by an Ethereum
@@ -80,7 +80,7 @@
         <p dir="ltr">There is still much work to be done. For example, we need a format that can do
             partial attestation by using Merkle Tree, or even zero-knowledge proof of
             attestation.</p>
-        <p><b>Code fragments</b></p>
+        </section><section><title>Code fragments</title>
         <p>In the Karma Token example a simple demo of an attestation process was implemented. It is
             declared as an Action Card:</p>
         <codeblock>&lt;ts:card type="action" name="attest">
@@ -98,6 +98,6 @@
             app in the wallet.</p>
         <p/>
         <p/>
-        <p/>
+      <p/></section>
     </conbody>
 </concept>
