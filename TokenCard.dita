@@ -22,16 +22,15 @@ your position in the car leasing chain.</p>
 <p>Token Cards are declared in the XML-file, but expressed in JavaScript,
 for example by creating a token class and rendering html code in
 it.</p>
-<p><b>Code</b></p>
-<p>Here is an example of how a Token Card is declared in the XML
-file of TokenScript:</p>
-<p><codeph>&lt;ts:cards></codeph></p>
-<p><codeph>&lt;ts:card type="token" name="main"></codeph></p>
-<p><codeph>&lt;ts:item-view xml:lang="en"></codeph></p>
-<p><codeph>&lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style></codeph></p>
-<p><codeph>&lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script></codeph></p>
-<p><codeph>&lt;/ts:item-view></codeph></p>
-<p><codeph>&lt;/ts:card></codeph></p>
+<section><title>Code</title>
+<p>Here is an example of how a Token Card is declared in the XML file of
+TokenScript:<codeblock>&lt;ts:cards>
+&lt;ts:card type="token" name="main">
+&lt;ts:item-view xml:lang="en">
+&lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style>
+&lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script>
+&lt;/ts:item-view>
+&lt;/ts:card></codeblock></p>
 <p>This code fragment instructs the wallet to use a JavaScript file
 (item-view.en.js) and a CSS file (item-view-file.css) to display
-the token. You can lookup these files in the <xref  href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS" format="html" scope="external">ENS example for TokenScript</xref>.</p></conbody></concept>
+the token. You can lookup these files in the <xref  href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS" format="html" scope="external">ENS example for TokenScript</xref>.</p></section></conbody></concept>
