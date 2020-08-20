@@ -2,8 +2,16 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_n4y_1gj_qmb">
     <title>TokenScript XML Markup elements</title>
-    <shortdesc>Reference of all elements that can be used in a TokenScript.</shortdesc>
+    <shortdesc>Reference of all elements that can be used in a TokenScript. </shortdesc>
     <refbody>
+        <example>
+            <p>
+                <note>Most elements start with "ts:", like &lt;ts:token> or &lt;ts:card>. However,
+                    elements like &lt;ethereum:call> or &lt;asxn:module> and some other like
+                    &lt;sequence> don't. If an element doesn't begin with "ts:", it will be
+                    noted.</note>
+            </p>
+        </example>
         <table id="table_dl4_w5m_qmb">
             <title>Root elements</title>
             <tgroup cols="2">
@@ -18,11 +26,16 @@
                 <tbody>
                     <row>
                         <entry><codeph>&lt;token&gt;</codeph></entry>
-                        <entry>Starts and ends the token specific tokenscript</entry>
+                        <entry>Starts and ends the token specific tokenscript. Can be used as the
+                            root element of TokenScript. <xref href="elements/token.dita">More
+                                information</xref>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;tokens&gt;</codeph></entry>
-                        <entry/>
+                        <entry>A <codeph>tokens</codeph> element contains definitions for a list of
+                            Tokens. They must all come from the same token issuer as they are signed
+                            by the same trust key. <xref href="elements/tokens.dita">Learn
+                                more</xref>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;card&gt;</codeph></entry>
@@ -31,7 +44,8 @@
                     </row>
                     <row>
                         <entry><codeph>&lt;cards&gt;</codeph></entry>
-                        <entry/>
+                        <entry>A container of multiple Cards. Can be used as the root element of
+                            card. <xref href="elements/cards.dita">More information</xref>.</entry>
                     </row>
                   <row>
                         <entry><codeph>&lt;attribute&gt;</codeph></entry>
@@ -41,8 +55,9 @@
                     </row>
                   <row>
                         <entry><codeph>&lt;origins&gt;</codeph></entry>
-                        <entry>Is part of Attributes and declares where to get the value of an
-                            attribute, for example by an Ethereum call. </entry>
+                        <entry>Can be a root element to define the contract a token uses, but can
+                            also be inside attributes to get the source of an attribute, like
+                            through an ethereum call.</entry>
                     </row>
                   <row>
                         <entry><codeph>&lt;contract></codeph></entry>
@@ -71,7 +86,8 @@
                 <tbody>
                    <row>
                         <entry><codeph>&lt;address></codeph></entry>
-                        <entry/>
+                        <entry>Declares the address of the token's smart contract. Is usually based
+                            inside the contract-tags.</entry>
                       	<entry>Contract</entry>
                     </row>
                   <row>
@@ -81,12 +97,14 @@
                     </row>
                   <row>
                         <entry><codeph>&lt;data&gt;</codeph></entry>
-                        <entry/>
-                    	<entry/>
+                        <entry>Declares data, for example required to create a transaction to
+                            approve someone for a smart contract.</entry>
+                    	<entry>Card</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;element></codeph></entry>
-                        <entry/>
+                        <entry>creates an element for a data module. Usually inside &lt;sequence>
+                            tags. </entry>
                       	<entry>Data Module</entry>
                     </row>
                  	<row>
@@ -122,7 +140,8 @@
                     </row>
                   	<row>
                         <entry><codeph>&lt;item-view&gt;</codeph></entry>
-                      <entry>Defines how the wallet must view the token</entry>
+                      <entry>Defines how the wallet must view the token. Read more about the concept
+                                <xref href="ItemView.dita">here</xref>.</entry>
                       <entry>Card (Token Card)</entry>
                     </row>
                     <row>
@@ -155,7 +174,8 @@
                     </row>
                   <row>
                         <entry><codeph>&lt;sequence></codeph></entry>
-                        <entry/>
+                        <entry>Orders the sequence of elements in a data module. No "ts:" in the tag
+                            required.</entry>
                     	<entry>Data Module</entry>
                     </row>
                   <row>
@@ -195,8 +215,10 @@
                     </row>
                   <row>
                     <entry><codeph>&lt;view></codeph></entry>
-                        <entry/>
-                    	<entry/>
+                        <entry>Marks the part which will be visible in the user interface. Is
+                            usually inside an Action Card and refers to a CSS and JavaScript file to
+                            create the view in HTML.</entry>
+                    	<entry>Cards</entry>
                     </row>
                 </tbody>
             </tgroup>          
