@@ -61,9 +61,11 @@
         <p>That reveals the first difference: an attestation isn't transferable, and a token's
             transferability depends on the smart contract. </p>
         <p>The second difference is that attestations are private: They are not stored on the
-            blockchain. Since they often carry private information, they should never hit a
-            blockchain. The proof of an attestation, however, might be written to the blockchain in
-            an <xref href="AttestedTransaction.dita"/>.</p>
+                blockchain. Since they often carry private information, they should never hit a
+                blockchain. </p>
+            <p>The proof of an attestation, however, might be written to the blockchain in an <xref
+                    href="AttestedTransaction.dita"/>. This method to process attestations has many
+                advantages over the commonly used approach of third party whitelists. </p>
         </section><section><title>Attestation Format</title>
         <p dir="ltr" id="docs-internal-guid-5d145ec5-7fff-8581-76f9-a734957f6ca7">An attestation is
             a signed <xref href="DataObjects.dita">dataObject</xref>. The dataObject can contain any
