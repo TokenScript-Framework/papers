@@ -23,7 +23,7 @@
                 the wallets, and append rules, data moduls, transaction security measurements and
                 much more. </li>
         </ul>
-        <p><b>For Token Issuers</b></p>
+        <title>For Token Issuers</title>
         <p dir="ltr">TokenScript enables token issuers to <b>leave the restrictions of smart
                 contracts behind</b>. It allows to add a lot of information, even image files or API
             lookups to a token, and design a set of business rules and interaction logics for it,
@@ -31,7 +31,7 @@
             with other tokens. </p>
         <p dir="ltr">Moreover, with TokenScript token issuers can easily and securely update the
             token rules.</p>
-        <p><b>For Wallets</b></p>
+        <title>For Wallets</title>
         <p dir="ltr">For<b> wallets, </b>TokenScript levels up their capability as the user agent
             for blockchain interactions. Currently most dApps require a third party website to
             interprete the state of the blockchain and to craft smart contract transactions. When a
@@ -40,13 +40,13 @@
         <p>Furthermore, TokenScript allows Token issuers to design the token GUI in the wallet,
             create all kind of complex transactions and append offchain functions. <b>With
                 TokenScript, any token can unlock custom mini apps in the wallet</b>.</p>
-        <p><b>For Web and app developer</b></p>
+        <title>For Web and app developer</title>
         <p dir="ltr">Web and app developers can deploy TokenScript into their app. It allows them to
             securely integrate the full scope of token functionality and to trigger specific token
             related actions in the user wallet. Without TokenScript they would need to deeply
             understand blockchain and smart contracts and invest a lot of work to integrate every
             single token. With TokenScript only a very basic knowledge is required.</p>
-        <p><b>TokenScript properties</b></p>
+        <title>TokenScript properties</title>
         <p dir="ltr">TokenScript files are <xref href="Signing.dita">signed by the creator of the
                 token smart contract or a trusted source</xref> with a public key. Wallets and dApps
             can import and verify the files.</p>
