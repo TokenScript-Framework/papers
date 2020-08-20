@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_n4y_1gj_qmb">
+    <title>TokenScript XML Markup elements</title>
+    <shortdesc>Reference of all elements that can be used in a TokenScript</shortdesc>
+    <refbody>
+        <table id="table_dl4_w5m_qmb">
+            <title>Root elements</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+             	 <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                      	<entry>Inside Root</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph>&lt;token&gt;</codeph></entry>
+                        <entry>Starts and ends the token specific tokenscript</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;tokens&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;card&gt;</codeph></entry>
+                        <entry>Declares card, can be token, action or activity cards. For more
+                            information see <xref href="../Card.dita">Cards</xref>.</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;cards&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;attribute&gt;</codeph></entry>
+                        <entry>Defines properties of a token. Read more about <xref
+                                href="../Attributes.dita"><xref href="../Attributes.dita"
+                                    >Attributes</xref></xref>.</entry>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;origins&gt;</codeph></entry>
+                        <entry>Is part of Attributes and declares where to get the value of an
+                            attribute, for example by an Ethereum call. </entry>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;contract></codeph></entry>
+                        <entry>Defines information about the smart contracts to interact
+                            with.</entry>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
+                        <entry>Creates / Defines data objects for TokenScript. More information
+                            about <xref href="../DataObjects.dita">Data Modules</xref>.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+          <title>Other Elements</title>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements </entry>
+                        <entry>Use</entry>
+                      	<entry>In Root</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry/>
+                        <entry/>
+                      	<entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;grouping&gt;</codeph></entry>
+                        <entry/>
+                      	<entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;label&gt;</codeph></entry>
+                        <entry>Labels allow to localize the TokenScript by adding language specific
+                            files or names.</entry>
+                      	<entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                      	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;plural&gt;</codeph></entry>
+                        <entry>Adds the correct designation when there is more than one
+                            token.</entry>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;selection&gt;</codeph></entry>
+                        <entry>Selection is a way to categorise token instances. It allows you to
+                            select multiple token at once or define an action for them. </entry>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry><codeph>&lt;string&gt;</codeph></entry>
+                        <entry>Is a simple string.</entry>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                  <row>
+                        <entry/>
+                        <entry/>
+                    	<entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements in <codeph>ethereum</codeph> namespace </entry>
+                        <entry>Use on the Ethereum blockchain</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
+                        <entry>Calls a smart contract, for example fetching the balance.</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
+                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
+                            transaction.</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Elements</entry>
+                        <entry>Use</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;type&gt;</codeph></entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+      
+    </refbody>
+</reference>
