@@ -5,7 +5,7 @@
     <shortdesc>An action card triggers actions in the wallet. For example, a transaction, an
         attestation, a component of a transaction or a signature.</shortdesc>
     <conbody>
-        <p><b>Concept</b></p>
+        <section><title>Concept</title>
         <p>Action Cards enable wallets and dapp browsers to launch token specific operations. They
             can be triggered by an external source like a website, but also by a button in the
             wallet. </p>
@@ -33,8 +33,9 @@
         <p>It is possible to use two action cards at the same time or in combination. This is called
             a deck. One successful Action Card can enable another, or the combination of two action
             cards can unlock a new operation. </p>
-        <p><b>Code</b></p>
-        <p><i>The XML file</i></p>
+      </section>
+       <section><title>Code</title>
+        <p><b>The XML file</b></p>
         <p>In the XML file, the <codeph>&lt;ts:action></codeph>...<codeph>&lt;/ts:action></codeph>
             tag starts and ends an Action Card. As an easy example, this is how you declare a simple
             Action Card which adds an "About" page to a
@@ -85,12 +86,12 @@
       &lt;/ts:view>
 &lt;/ts:card></codeblock></p>
         <p>In this example a few things happen: In the &lt;ts:attribute> part you declare <xref
-                href="Attributes.dita">Attributes</xref> you will later use in the JavaScript file.
-            With an Ethereum call you learn the renewal price per year - an important information to
-            build a transaction. With the &lt;ts:transaction> tag you create the transaction to
-            renew the ENS domain. Finally, inside the view tags, you link to a renew.en.js
-            JavaScript file.</p>
-        <p><i>The JavaScript file</i></p>
+                    href="Attributes.dita">Attributes</xref> you will later use in the JavaScript
+                file. With an Ethereum call you learn the renewal price per year - an important
+                information to build a transaction. With the &lt;ts:transaction> tag you create the
+                transaction to renew the ENS do▷The JavaScript file◁main. Finally, inside the view
+                tags, you link to a renew.en.js JavaScript file.</p>
+        <p><b>The JavaScript file</b></p>
         <p>The operations of an Action Card are written in an JavaScript file. All JavaScript files
             must be declared at the top of the xml file (as well as css files and images you
             use):<codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -185,5 +186,6 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) => {
 };</codeblock>
         </p>
         <p/>
+         <p/></section>
     </conbody>
 </concept>
