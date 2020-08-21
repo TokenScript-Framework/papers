@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_hkf_tdd_pmb">
-    <title><?oxy_comment_start author="theBergmann" timestamp="20200807T182405+0200" comment="is TokenLayer a product / a brand? If not, better write it as &quot;the Token Layer&quot;"?>TokenLayer<?oxy_comment_end?></title>
-    <shortdesc>TokenLayer connects the applications (websites) and blockchain</shortdesc>
+    <title>The
+        <?oxy_comment_start author="theBergmann" timestamp="20200807T182405+0200" comment="is TokenLayer a product / a brand? If not, better write it as &quot;the Token Layer&quot;" flag="done"?>Token
+        Layer<?oxy_comment_end?></title>
+    <shortdesc>The Token Layer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
-        <p>A TokenLayer sits between a Blockchain and Websites. It provides token with
-            functionalities which have the level of trust of a blockchain but the user experience of
-            a website. It mediates the inconvenience of blockchain technologies and allows
-            developers to easily integrate the full scope of token based applications.</p>
-      <section><title>For the web</title>
-        <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
+        <p>The Token Layer is what we call the general infrustructure and standardisation needed to
+            achieve <xref href="TIPS.dita"/>, the core requirements of tokenisation.</p>
+        <section><title>The Token Layer is for Web3</title>
+            <p>A TokenLayer sits between a Blockchain and a Web3 websites. It provides token with
+                functionalities which have the level of trust of a blockchain but the user
+                experience of a website. It mediates the inconvenience of blockchain technologies
+                and allows developers to easily integrate the full scope of token based
+                applications.</p></section>
+        <section/>
+
+        <section>
+            <title>A TokenLayer is both an infrastructure and standardisation</title>
+            <p>Speaking of standardisation, take, for example, the process of matching Tokens with
+                Websites that use them: TokenNegotiation, requires a common conversation channel for
+                the website to check what tokens the user has, and for the user to choose the token
+                to use, prove the token's ownership or other information if needed. Furthermore, the
+                way token invoke each other requires a common expression which benefits from
+                standardisation.</p>
+            <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
+                blockchain data on behalf of the token code (in TokenScript files) and the website
+                run the necessary cryptographic proofs plus mathematical gymnastics, provides a
+                private and secure environment to run Token Cards, and provide security features to
+                safe guard user's assets.</p>
+        </section>
+    </conbody>
+    <concept id="tokenlayer_for_web_builder">
+
+        <title>Token Layer for the web builders</title>
+        <conbody>
+            <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
                 similar to how a Payment Rail allows an e-commerce site to on-board users of various
                 credit card and payment methods. However, Tokens can provide more important roles
                 than just payment: They represent any stake in any contractualized relationship. </p>
@@ -17,29 +43,19 @@
                 taken together, the car can be lend on a website. The borrower gets a third token,
                 which allows him to start the engine for a certain timeframe. Token can become the
                 building blocks of the next web. More about innovative ways to use tokens on
-                websites see</p></section>
-      <section><title>For the Token Issuers</title>
-        <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution channel
-            to make your tokens available to all websites that also uses a TokenLayer. This is 
-            vital to token issuer's business model which is directly affected by the token's reach. 
-            A TokenLayer solution supports
-            various transaction security features and a packaged user experience. For
-            example, if you issue Car Token to car owners, they will be able to use it on websites
-            to rent their cars out, or access car status and services with that token. </p></section>
-                  <section>
-  <title>A TokenLayer is both a standardisation effort and an infrastructure.</title>
-
-        <p>Speaking of standardisation, take, for example, the process of matching Tokens with
-            Websites that use them: TokenNegotiation, requires a common conversation channel for
-            the website to check what tokens the user has, and for the user to choose the token to
-            use, prove the token's ownership or other information if needed. Furthermore, the way
-            token invoke each other requires a common expression which benefits from
-          standardisation.</p>
-        <p>On the infrastructure side, a TokenLayer implementation like TokenScript accesses
-                blockchain data on behalf of the token code (in TokenScript files) and the website
-                run the necessary cryptographic proofs plus mathematical gymnastics, provides a
-                private and secure environment to run Token Cards, and provide security features to
-                safe guard user's assets.</p>
-        </section>
-    </conbody>
+                websites see</p>
+        </conbody>
+    </concept>
+    <concept id="tokenlayer_for_token_issuer">
+        <title>Token Layer for the token Issuers</title>
+        <conbody>
+            <p>For a Token Issuer, a TokenLayer can be considered as a pre-packaged distribution
+                channel to make your tokens available to all websites that also uses a TokenLayer.
+                This is vital to token issuer's business model which is directly affected by the
+                token's reach. A TokenLayer solution supports various transaction security features
+                and a packaged user experience. For example, if you issue Car Token to car owners,
+                they will be able to use it on websites to rent their cars out, or access car status
+                and services with that token. </p>
+        </conbody>
+    </concept>
 </concept>

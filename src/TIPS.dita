@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="TIPS">
+    <title>T.I.P.S.</title>
+    <shortdesc>T.I.P.S. is the minimum requirements for Token Layer as defined in the TokenScript
+        Design Paper</shortdesc>
+    <conbody>
+        <p>The TIPS are:</p>
+        <dl>
+            <dlentry>
+                <dt><b>T</b>rust</dt>
+                <dd>User can trust a token to be used on a 3rd party website.</dd>
+            </dlentry>
+            <dlentry>
+                <dt><b>I</b>nteroperability</dt>
+                <dd>A token can be used on a 3rd party websites and with other tokens too.</dd>
+            </dlentry>
+            <dlentry>
+                <dt><b>P</b>rivacy</dt>
+                <dd>A website that uses a token can only learn what they were supposed to.</dd>
+            </dlentry>
+            <dlentry>
+                <dt><b>S</b>ecurity</dt>
+                <dd>User should be able to transact securely, knowing what they will spend and get
+                    from the transaction.</dd>
+            </dlentry>
+        </dl>
+        <p>On top of TIPS, there are 2 lesser requirements that didn't make it into the acronym:</p>
+        <dl>
+            <dlentry>
+                <dt>Availability</dt>
+                <dd>Tokens should work as long as the underlying blockchain smart contracts are
+                    working, not depending on the availability of specific websites.</dd>
+            </dlentry>
+            <dlentry>
+
+                <dt>Cost effectiveness</dt>
+                <dd>Allow the use of attestation over transactions.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>
