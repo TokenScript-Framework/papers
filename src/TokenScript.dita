@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="topic_nlj_qhg_nmb">
-    <title>Introduction to TokenScript</title>
-    <body>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="topic_nlj_qhg_nmb">
+    <title>TokenScript</title>
+    <conbody>
 	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
             Tokenisation framework.</p>
             
@@ -16,8 +16,7 @@
 	    <p dir="ltr">TokenScript consists of:</p>
         <ul id="ul_qws_mms_pmb">
             <li>TokenScript Engine, which works in the user's wallet, on the web or in a browser
-                plugin. The TokenScript Engine provides the runtime infrustructure to understand and
-                execute TokenScript Files.</li>
+                plugin. The TokenScript Engine provides the runtime <xref href="TokenLayer.dita">Token Layer</xref> for tokens to be used on 3rd party websites.</li>
             <li><xref href="TokenScript-Component.dita"/> are issued and signed by the corresponding
                 Token Issuer. They provide additional token information, structure the token UX in
                 the wallets, and append rules, data moduls, transaction security measurements and
@@ -57,7 +56,6 @@
                 which enables wallets and apps and websites to work with any non-standardized token
                 as easy as with ERC token.</p>
         <p dir="ltr">This guide will educate you about the<xref href="BasicConcepts.dita"> basic
-                concepts of TokenScript</xref> and the <xref href="Deploy.dita"
-                                                             >deployment</xref> of a TokenScript.</p></section>
-    </body>
-</topic>
+                concepts of TokenScript</xref> and the <xref href="Deploy.dita">deployment</xref> of a TokenScript.</p></section>
+    </conbody>
+</concept>
