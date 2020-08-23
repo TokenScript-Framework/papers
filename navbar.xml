@@ -15,10 +15,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-	      <li class="nav-item"><a class="nav-link" href="http://tokenscript.org">Main Site</a></li>
 	      <li class="nav-item"><a class="nav-link" href="/TokenScript.html">Documents</a></li>
 	      <li class="nav-item"><a class="nav-link" href="/guides/Intro.html">Guides</a></li>
 	      <li class="nav-item"><a class="nav-link" href="/specs/Intro.html">Specs</a></li>
+	      <li class="nav-item external"><a class="nav-link" href="">TokenScript community forum</a></li>
+	      <li class="nav-item external"><a class="nav-link" href="/TokenScript.html">AlphaWallet (uses TokenScript)</a></li>
+	      <li class="nav-item external"><a class="nav-link" href="/guides/Intro.html">Github TokenScript</a></li>
+	      <li class="nav-item external"><a class="nav-link" href="/specs/Intro.html">Github TokenScript Examples</a></li>
       </ul>
     </div>
   </div>
