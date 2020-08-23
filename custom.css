@@ -1,4 +1,14 @@
 @import url(https://www.dita-ot.org/css/main.css);
+
+
+body {
+	font-family: Lato;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-familY: "Roboto Slab";
+}
+
 /* Style navigation as sidebar */
 nav[role=toc] {
   float: left;
