@@ -25,10 +25,9 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry><codeph>&lt;token&gt;</codeph></entry>
+                        <entry><xref href="token.dita"/></entry>
                         <entry>Starts and ends the token specific tokenscript. Can be used as the
-                            root element of TokenScript. <xref href="token.dita">More
-                                information</xref>.</entry>
+                            root element of TokenScript. </entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;tokens&gt;</codeph></entry>
