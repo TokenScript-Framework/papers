@@ -17,10 +17,10 @@ $ dita --install net.infotexture.dita-bootstrap
 3. Make the documents
 
 ````
-$ dita --input=Documents.ditamap --format=html5-bootstrap --args.hdr=$PWD/navbar.xml --args.css=custom.css --args.cssroot=$PWD
+$ make Documents Guides Specs
 ````
 
-Which will create the document output from Map.ditamap in the `out/` directory.
+Which will create the document output from the 3 ditamap files in the `out/` directory.
 
 4. (if you have the credential) Upload the documents to the current hosting website
 

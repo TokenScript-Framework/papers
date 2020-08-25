@@ -1,3 +1,6 @@
 out
 *.backup.dita
 *.backup.ditamap
+# Ghost files that keeps coming back
+Reference.dita
+Map.ditamap
