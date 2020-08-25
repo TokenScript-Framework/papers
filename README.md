@@ -27,7 +27,7 @@ $ DITA_EXEC=/home/christoph/dita-ot-3.5.2/bin/dita make Documents Guides Specs
 
 Which will create the document output from the 3 ditamap files in the `out/` directory.
 
-4. (if you have the credential) Upload the documents to the current hosting website
+4. If you have the credential, you can upload the website to a web hosting account.
 
 ````
 $ lftp -c 'open cobalt.primarywebservers.com; mirror -R out/ ./'
