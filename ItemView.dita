@@ -11,7 +11,7 @@
 
 <concept id="id208HH0TC0CG"><title>Item View vs Token View</title>
 <shortdesc>Item view describes how a token can be listed.</shortdesc>
-<conbody><p><p><simpletable relcolwidth="50* 50*" frame="all">
+<conbody><p><simpletable relcolwidth="50* 50*" frame="all">
 <sthead>
 <stentry>Token View</stentry>
 <stentry>Item View</stentry>
@@ -29,4 +29,4 @@ available tokens 2. Expiry of available tokens if applicable <b>AlphaWallet Mobi
 Today)</b>
 <image href="TokenView_Vs_ItemView.svg" placement="break" height="297.249" width="336.124"/>
 <b>Partner Website or APP (Concept under development)</b>
-<image href="ItemView_on_Web_page.svg" placement="break"  /></p></p></conbody></concept>
+<image href="ItemView_on_Web_page.svg" placement="break"  /></p></conbody></concept>
