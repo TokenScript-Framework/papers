@@ -2,8 +2,16 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_n4y_1gj_qmb">
     <title>TokenScript XML Markup elements</title>
-    <shortdesc>Reference of all elements that can be used in a TokenScript</shortdesc>
+    <shortdesc>Reference of all elements that can be used in a TokenScript. </shortdesc>
     <refbody>
+        <example>
+            <p>
+                <note>Most elements start with "ts:", like &lt;ts:token> or &lt;ts:card>. However,
+                    elements like &lt;ethereum:call> or &lt;asxn:module> and some other like
+                    &lt;sequence> don't. If an element doesn't begin with "ts:", it will be
+                    noted.</note>
+            </p>
+        </example>
         <table id="table_dl4_w5m_qmb">
             <title>Root elements</title>
             <tgroup cols="2">
@@ -18,159 +26,203 @@
                 <tbody>
                     <row>
                         <entry><codeph>&lt;token&gt;</codeph></entry>
-                        <entry/>
+                        <entry>Starts and ends the token specific tokenscript. Can be used as the
+                            root element of TokenScript. <xref href="token.dita">More
+                                information</xref>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;tokens&gt;</codeph></entry>
-                        <entry/>
+                        <entry>A <codeph>tokens</codeph> element contains definitions for a list of
+                            Tokens. They must all come from the same token issuer as they are signed
+                            by the same trust key. <xref href="tokens.dita">Learn
+                            more</xref>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;card&gt;</codeph></entry>
-                        <entry/>
+                        <entry>Declares card, can be token, action or activity cards. For more
+                            information see <xref href="../Card.dita">Cards</xref>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;cards&gt;</codeph></entry>
-                        <entry/>
+                        <entry>A container of multiple Cards. Can be used as the root element of
+                                <xref href="card.dita"/>.</entry>
                     </row>
-                </tbody>
-            </tgroup>
-            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
                     <row>
                         <entry><codeph>&lt;attribute&gt;</codeph></entry>
-                        <entry/>
+                        <entry>Defines properties of a token. Read more about <xref
+                                href="../Attributes.dita"/>.</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;origins&gt;</codeph></entry>
-                        <entry/>
+                        <entry>Can be a root element to define the contract a token uses, but can
+                            also be inside attributes to get the source of an attribute, like
+                            through an ethereum call.</entry>
                     </row>
                     <row>
-                        <entry/>
-                        <entry/>
+                        <entry><codeph>&lt;contract></codeph></entry>
+                        <entry>Defines information about the smart contracts to interact
+                            with.</entry>
                     </row>
                     <row>
-                        <entry/>
-                        <entry/>
+                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
+                        <entry>Creates / Defines data objects for TokenScript. More information
+                            about <xref href="../DataObjects.dita">Data Modules</xref>.</entry>
                     </row>
                 </tbody>
-            </tgroup>            <tgroup cols="2">
+            </tgroup>
+            </table>
+        <table><title>Other Elements</title>
+            <tgroup cols="3">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
                 <thead>
                     <row>
                         <entry>Elements</entry>
                         <entry>Use</entry>
+                        <entry>In Root</entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry><codeph>&lt;selection&gt;</codeph></entry>
+                        <entry><codeph>&lt;address></codeph></entry>
+                        <entry>Declares the address of the token's smart contract. Is usually based
+                            inside the contract-tags.</entry>
+                        <entry>Contract</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;bytes32&gt;</codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;data&gt;</codeph></entry>
+                        <entry>Declares data, for example required to create a transaction to
+                            approve someone for a smart contract.</entry>
+                        <entry>Card</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;element></codeph></entry>
+                        <entry>creates an element for a data module. Usually inside &lt;sequence>
+                            tags. </entry>
+                        <entry>Data Module</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
+                        <entry>Calls a smart contract, for example fetching the balance.</entry>
+                        <entry>Attributes</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
+                        <entry>Defines the Token's contract</entry>
+                        <entry>Contract</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
+                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
+                            transaction.</entry>
+                        <entry>Card</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:value&gt;</codeph></entry>
+                        <entry/>
                         <entry/>
                     </row>
                     <row>
                         <entry><codeph>&lt;grouping&gt;</codeph></entry>
                         <entry/>
-                    </row>
-                    <row>
-                        <entry/>
                         <entry/>
                     </row>
                     <row>
-                        <entry/>
-                        <entry/>
+                        <entry><codeph>&lt;item-view&gt;</codeph></entry>
+                        <entry>Defines how the wallet must view the token. See <xref
+                                href="../ItemView.dita"/>.</entry>
+                        <entry>Card (Token Card)</entry>
                     </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
                     <row>
                         <entry><codeph>&lt;label&gt;</codeph></entry>
+                        <entry>Labels allow to localize the TokenScript by adding language specific
+                            files or names.</entry>
+                        <entry>Attributes / Cards</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;mapping></codeph></entry>
+                        <entry/>
                         <entry/>
                     </row>
                     <row>
-                        <entry><codeph>&lt;string&gt;</codeph></entry>
+                        <entry><codeph>&lt;option></codeph></entry>
+                        <entry/>
                         <entry/>
                     </row>
                     <row>
                         <entry><codeph>&lt;plural&gt;</codeph></entry>
-                        <entry/>
+                        <entry>Adds the correct designation when there is more than one
+                            token.</entry>
+                        <entry>Attributes / Cards</entry>
                     </row>
                     <row>
-                        <entry/>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements in <codeph>ethereum</codeph> namespace </entry>
-                        <entry>Use on the Ethereum blockchain</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
-                        <entry/>
+                        <entry><codeph>&lt;selection&gt;</codeph></entry>
+                        <entry>Selection is a way to categorise token instances. It allows you to
+                            select multiple token at once or define an action for them. </entry>
+                        <entry>Attributes / Cards</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
-                        <entry/>
+                        <entry><codeph>&lt;sequence></codeph></entry>
+                        <entry>Orders the sequence of elements in a data module. No "ts:" in the tag
+                            required.</entry>
+                        <entry>Data Module</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
-                        <entry/>
+                        <entry><codeph>&lt;string&gt;</codeph></entry>
+                        <entry>Is a simple string.</entry>
+                        <entry>Attributes / Cards</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>            <tgroup cols="2">
-                <colspec colname="c1" colnum="1" colwidth="1*"/>
-                <colspec colname="c2" colnum="2" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry>Elements</entry>
-                        <entry>Use</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;type&gt;</codeph></entry>
-                        <entry/>
-                    </row>
-                    <row>
+                        <entry><codeph>&lt;syntax></codeph></entry>
                         <entry/>
                         <entry/>
                     </row>
                     <row>
+                        <entry><codeph>&lt;token-id></codeph></entry>
                         <entry/>
                         <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;type></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;uint256></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;user-entry></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;value></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;view></codeph></entry>
+                        <entry>Marks the part which will be visible in the user interface. Is
+                            usually inside an Action Card and refers to a CSS and JavaScript file to
+                            create the view in HTML.</entry>
+                        <entry>Cards</entry>
                     </row>
                 </tbody>
             </tgroup>
         </table>
-      
+
     </refbody>
 </reference>
