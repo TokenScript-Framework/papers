@@ -4,6 +4,25 @@
 	<title><codeph>token</codeph> element</title>
     <shortdesc><codeph>token</codeph> element defines a Token</shortdesc>
     <conbody>
-	    <p>A <codeph>token</codeph> element defines a Token. It can be used as a root element of a TokenScript File.</p>
+	    <p>A <codeph>token</codeph> element defines a Token. It can be used as a root element of a
+            TokenScript File: It starts the TokenScript and ends it.</p>
+        <p>The token element needs to declare which version of TokenScript and XML and which
+            blockchain is used.</p>
+        <section id="section_wxp_tk4_5mb">
+            <title>Code Examples</title>
+            <p>
+                <codeblock>&lt;ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xmlns:xhtml="http://www.w3.org/1999/xhtml"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          custodian="false"
+>
+    ...
+    ...
+&lt;/ts:token></codeblock>
+            </p>
+        </section>
     </conbody>
 </concept>
