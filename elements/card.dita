@@ -9,7 +9,8 @@
                 href="../TokenCard.dita">Token Cards</xref>, <xref href="../ActionCard.dita">Action
                 Cards</xref> and <xref href="../ActivityCard.dita">Activity Cards</xref>.</p>
         <p>A <codeph>card</codeph> element is always put inside a <codeph>cards</codeph> element.
-            When declaring a card element you need to declare its <codeph>type</codeph>.</p>
+            When declaring a card element you need to declare its <codeph>type</codeph> and a name.
+            When a card renders the user display, it usually uses an JavaScript file for it.</p>
         <section id="section_mq3_bj4_5mb">
             <title>Code examples</title>
             <p><b>Token
