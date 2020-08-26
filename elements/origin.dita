@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_sz1_hl4_5mb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Origin</title>
+    <shortdesc> The <codeph>origins</codeph> element can be a root element to define the contract a
+        token uses, but can also be inside attributes to get the source of an attribute, like
+        through an ethereum call.</shortdesc>
     <conbody>
-        <p></p>
+        <p>The <codeph>origins</codeph> element is usually used at two occasions: First, at the
+            beginnung of a TokenScript to define the underlying smart contract, like DAI. Second, to
+            get the value of an Attribute.</p>
+        <p/>
+        <section id="section_ol5_kl4_5mb">
+            <title>Code examples</title>
+            <p><b>Defining the underlying Smart
+                Contract</b><codeblock>&lt;ts:origins>
+     &lt;ts:ethereum contract="DAI"/>
+&lt;/ts:origins></codeblock></p>
+            <p><b>Get an attribute value from a user
+                entry</b><codeblock>&lt;ts:attribute name="amount">
+    &lt;ts:type>
+        &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.36&lt;/ts:syntax>
+    &lt;/ts:type>
+        &lt;ts:label>
+            &lt;ts:string xml:lang="en">Amount in DAI&lt;/ts:string>
+                &lt;ts:string xml:lang="zh">代幣金額&lt;/ts:string>
+          &lt;/ts:label>
+        &lt;ts:origins>
+                  &lt;ts:user-entry as="e18"/>
+        &lt;/ts:origins>
+&lt;/ts:attribute></codeblock></p>
+            <p><b>Get an attribute value from an Ethereum
+                call</b><codeblock>&lt;ts:attribute name="emailRecord">
+    &lt;ts:type>
+        &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.15&lt;/ts:syntax>
+    &lt;/ts:type>
+        &lt;ts:origins>
+              &lt;ethereum:call as="utf8" contract="PublicResolver" function="text">
+               &lt;ts:data>
+                          &lt;ts:bytes32 local-ref="nodeHash"/>
+                          &lt;ts:string>email&lt;/ts:string>
+                    &lt;/ts:data>
+              &lt;/ethereum:call>
+        &lt;/ts:origins>
+&lt;/ts:attribute>
+
+</codeblock></p>
+            <p/>
+        </section>
     </conbody>
 </concept>
