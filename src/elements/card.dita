@@ -4,6 +4,51 @@
 	<title><codeph>card</codeph> element</title>
     <shortdesc><codeph>card</codeph> element defines a Token Card</shortdesc>
     <conbody>
-	    <p>A <codeph>card</codeph> element defines a Token Card. It can be used as a root element of a TokenScript File.</p>
+	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita">Card element</xref>. It
+            can be used as a root element of a TokenScript File. A card element can contain <xref
+                href="../TokenCard.dita">Token Cards</xref>, <xref href="../ActionCard.dita">Action
+                Cards</xref> and <xref href="../ActivityCard.dita">Activity Cards</xref>.</p>
+        <p>A <codeph>card</codeph> element is always put inside a <codeph>cards</codeph> element.
+            When declaring a card element you need to declare its <codeph>type</codeph>.</p>
+        <section id="section_mq3_bj4_5mb">
+            <title>Code examples</title>
+            <p><b>Token
+                Card</b><codeblock>&lt;ts:card type="token" name="main">
+   &lt;ts:item-view xml:lang="en">
+       &lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style>
+       &lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script>
+   &lt;/ts:item-view>
+      &lt;ts:view xml:lang="en">
+          &lt;xhtml:style type="text/css">&amp;view-style;&lt;/xhtml:style>
+          &lt;xhtml:script type="text/javascript">&amp;view.en;&lt;/xhtml:script>
+      &lt;/ts:view>
+&lt;/ts:card></codeblock></p>
+            <p><b>Action Card</b></p>
+            <p>
+                <codeblock>&lt;ts:card type="action" name="best-rates">
+    &lt;ts:label>
+        &lt;ts:string xml:lang="en">Best Rates&lt;/ts:string>
+    &lt;/ts:label>
+    &lt;ts:view xml:lang="en">
+         &lt;xhtml:style type="text/css">&amp;style;&lt;/xhtml:style>
+         &lt;xhtml:script type="text/javascript">&amp;bestRates.en;&lt;/xhtml:script>
+     &lt;/ts:view>
+&lt;/ts:card></codeblock>
+            </p>
+            <p><b>Activity
+                Card</b><codeblock>&lt;ts:card type="activity" name="ownerApproved">
+            &lt;ts:origins>
+                &lt;ethereum:event type="Approval" filter="owner=${ownerAddress}"/>
+            &lt;/ts:origins>
+            &lt;ts:item-view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;item-view-ownerApproved.en;&lt;/script>
+            &lt;/ts:item-view>
+            &lt;ts:view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;gaveApproval.en;&lt;/script>
+            &lt;/ts:view>
+&lt;/ts:card></codeblock></p>
+        </section>
     </conbody>
 </concept>
