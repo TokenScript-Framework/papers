@@ -25,48 +25,43 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry><codeph>&lt;token&gt;</codeph></entry>
+                        <entry><xref href="token.dita"/></entry>
                         <entry>Starts and ends the token specific tokenscript. Can be used as the
-                            root element of TokenScript. <xref href="token.dita">More
-                                information</xref>.</entry>
+                            root element of TokenScript. </entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;tokens&gt;</codeph></entry>
+                        <entry><xref href="tokens.dita">tokens</xref></entry>
                         <entry>A <codeph>tokens</codeph> element contains definitions for a list of
                             Tokens. They must all come from the same token issuer as they are signed
-                            by the same trust key. <xref href="tokens.dita">Learn
-                            more</xref>.</entry>
+                            by the same trust key.</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;card&gt;</codeph></entry>
-                        <entry>Declares card, can be token, action or activity cards. For more
-                            information see <xref href="../Card.dita">Cards</xref>.</entry>
+                        <entry><xref href="card.dita">card</xref></entry>
+                        <entry>Declares a Card, can be token, action or activity cards. </entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;cards&gt;</codeph></entry>
-                        <entry>A container of multiple Cards. Can be used as the root element of
-                                <xref href="card.dita"/>.</entry>
+                        <entry><xref href="cards.dita">cards</xref></entry>
+                        <entry>A container of multiple Cards. </entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;attribute&gt;</codeph></entry>
-                        <entry>Defines properties of a token. Read more about <xref
-                                href="../Attributes.dita"/>.</entry>
+                        <entry><xref href="Attribute.dita">attribute</xref></entry>
+                        <entry>Defines properties of a token which can be used by other
+                            elements.</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;origins&gt;</codeph></entry>
+                        <entry><xref href="origin.dita">origins</xref></entry>
                         <entry>Can be a root element to define the contract a token uses, but can
                             also be inside attributes to get the source of an attribute, like
                             through an ethereum call.</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;contract></codeph></entry>
+                        <entry><xref href="contract.dita">contract</xref></entry>
                         <entry>Defines information about the smart contracts to interact
                             with.</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;asnx:module&gt;</codeph></entry>
-                        <entry>Creates / Defines data objects for TokenScript. More information
-                            about <xref href="../DataObjects.dita">Data Modules</xref>.</entry>
+                        <entry><xref href="../DataObjects.dita">asnx:module</xref></entry>
+                        <entry>Creates / Defines data objects for TokenScript. </entry>
                     </row>
                 </tbody>
             </tgroup>
@@ -85,10 +80,11 @@
                 </thead>
                 <tbody>
                     <row>
-                        <entry><codeph>&lt;address></codeph></entry>
+                        <entry><xref href="address.dita">address</xref></entry>
                         <entry>Declares the address of the token's smart contract. Is usually based
-                            inside the contract-tags.</entry>
-                        <entry>Contract</entry>
+                            inside the contract-tags, but can also be inside the
+                                <codeph>etherem</codeph> element.</entry>
+                        <entry>Contract, Card</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;bytes32&gt;</codeph></entry>
