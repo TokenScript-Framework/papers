@@ -20,7 +20,8 @@
         </ul>
         <p>The website booking.com finds and allows the users to use such tokens through
             TokenNegitation.</p>
-      <p>TokenScript provides the following negotiation methods:<ol id="ol_egq_bvt_pmb">
+    <section id="negotiation_methods"><title>Negotiation Methods</title>
+      <p>TokenScript provides the following negotiation methods:</p><ol id="ol_egq_bvt_pmb">
                 <li>Attribute based negotiation, which requires the negotiable <xref
                         href="Attributes.dita">attributes</xref> to be declared in
                     TokenScripts.</li>
@@ -29,6 +30,6 @@
                     that the token is intended to be usable on that website;</li>
                 <li>Expectation based negotiation, by which a token declares being able to do
                     certain things (e.g. let the website receives up to 1ETH in payment).</li>
-            </ol></p><p>More on this later. Token Negotiation is a work in progress.</p>
+	    </ol><p>In reality a websession might use multiple negotiation methods.</p></section>
     </conbody>
 </concept>
