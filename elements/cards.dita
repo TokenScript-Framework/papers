@@ -5,5 +5,21 @@
     <shortdesc><codeph>cards</codeph> element is a container of multiple Token Cards</shortdesc>
     <conbody>
 	    <p>A <codeph>cards</codeph> element contains definitions for Token Cards. It can be used as a root element of a TokenScript File.</p>
+        <section id="section_h3m_1k4_5mb">
+            <title>Code Example</title>
+            <p>
+                <codeblock>&lt;ts:cards>
+     &lt;ts:card type="action" name="convert-to-xdAI">
+          ...
+      &lt;/ts:card>
+      &lt;ts:card type="token" name="main">
+          ...
+      &lt;/ts:card>
+      &lt;ts:card type="activity" name="OwnerApproved">
+          ...
+      &lt;/ts:card>
+&lt;/ts:cards></codeblock>
+            </p>
+        </section>
     </conbody>
 </concept>
