@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_s54_fn4_5mb">
+    <title>Address</title>
+    <shortdesc>The <codeph>address</codeph> element declares an Address, usually that of a smart
+        contract on Ethereum.</shortdesc>
+    <conbody>
+        <p>The <codeph>address</codeph> tag should define the network if this has not been done
+            elsewhere. 1 is Ethereum mainnet, 3 is Ropsten testnet. Put the address inside the
+            address tags.</p>
+        <p/>
+        <section id="section_pvf_kn4_5mb">
+            <title>Code Examples</title>
+            <p><b>Declare the Address of the token's smart
+                contract</b><codeblock>&lt;ts:contract name="DAI" interface="erc20">
+        &lt;ts:address network="1">0x6b175474e89094c44da98b954eedeac495271d0f&lt;/ts:address>
+&lt;/ts:contract></codeblock></p>
+            <p><b>Declare a fixed address to trigger a smart
+                contract</b><codeblock>&lt;ts:transaction>
+    &lt;ethereum:transaction function="transfer" contract="DAI">
+            &lt;ts:data>
+                  &lt;ts:address>0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016&lt;/ts:address>
+                   &lt;ts:uint256 ref="amount"/>
+             &lt;/ts:data>
+    &lt;/ethereum:transaction>
+&lt;/ts:transaction></codeblock></p>
+            <p/>
+        </section>
+    </conbody>
+</concept>
