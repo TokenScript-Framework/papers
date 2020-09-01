@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="troubleshooting_signing">
+    <title>Troubleshooting Signing</title>
+    <troublebody>
+        <condition>
+            <title>Condition</title>
+            <p>Error on the singing of TokenScript</p>
+        </condition>
+        <troubleSolution>
+            <cause>
+                <title>Cause</title>
+                <p>The signing key doesn't match the certificate.</p>
+            </cause>
+            <remedy>
+                <title>Remedy</title>
+                <responsibleParty>Token Issuer</responsibleParty>
+                <steps>
+                    <step>
+                        <cmd>Find out what type of key do you have, by checking the first line of
+                            your key file.</cmd>
+                        <stepxmp>Suppose your key file is <filepath>my.key</filepath>, you can use
+                                <userinput>head -n1 my.key</userinput> to observe the first line. Like
+                            this:
+                            <codeblock>$ head -n1 aw.app.key
+-----BEGIN EC PRIVATE KEY-----</codeblock></stepxmp>
+                        <stepresult>Your key is either an RSA key or EC key. RSA key starts with
+                            this line<codeblock>-----BEGIN PRIVATE KEY-----</codeblock>while EC key
+                            starts with this
+                            line:<codeblock>-----BEGIN EC PRIVATE KEY-----</codeblock> it is a EC
+                            key.</stepresult>
+                    </step>
+                    <step>
+                        <cmd>Use <cmdname>openssl</cmdname> to generate a public key </cmd>
+                        <choices>
+                            <choice>If your key is an EC key, use <userinput>openssl ec -pubout -in
+                                    my.key</userinput>, where <filepath>my.key</filepath> is your key
+                                file.</choice>
+                            <choice>If your key is a RSA key, use <userinput>openssl rsa -pubout -in
+                                    my.key</userinput>, where <filepath>my.key</filepath> is your key
+                                file.</choice>
+                        </choices>
+                        <stepxmp><p>The following is an example with an EC key, filename
+                                    <filepath>my.key</filepath>.
+                                <codeblock>$ openssl ec -pubout -in my.key
+read EC key
+writing EC key
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwXfiK2ao/T8EDv02rr1a0xZYKkox
+v3FGDltKFLsZNIyTUo5RAhFh8RXy8/hqSlozGfd3pOx/70LeGzbWd/ExQg==
+-----END PUBLIC KEY-----</codeblock>
+                            </p></stepxmp>
+                        <stepresult>Your public key is generated and shown on the screen.
+                        </stepresult>
+                    </step>
+                    <step>
+                        <cmd>Use <cmdname>openssl</cmdname> to show the public key in the
+                            certificate's subject. </cmd>
+                        <stepxmp>Use <userinput>openssl x509 -pubkey -in my.crt</userinput>, where
+                                <filepath>my.crt</filepath> is your certificate.</stepxmp>
+                        <stepresult>The public key in the certificate file is shown on the
+                            screen:<codeblock>$ openssl x509 -pubkey -in crt
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwXfiK2ao/T8EDv02rr1a0xZYKkox
+v3FGDltKFLsZNIyTUo5RAhFh8RXy8/hqSlozGfd3pOx/70LeGzbWd/ExQg==
+-----END PUBLIC KEY-----</codeblock>
+                        </stepresult>
+                    </step>
+                    <step>
+                        <cmd>Check if the public key generated from the private key is the same as
+                            the public key in the certificate's subject. If they are not the same,
+                            your key doesn't match your certificate. Try to obtain the right key /
+                            certificate.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>
