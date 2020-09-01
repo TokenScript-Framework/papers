@@ -30,5 +30,5 @@ Which will create the document output from the 3 ditamap files in the `out/` dir
 4. If you have the credential, you can upload the website to a web hosting account.
 
 ````
-$ lftp -c 'open cobalt.primarywebservers.com; mirror -R out/ ./'
+$ lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ ./'
 ````
