@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_mkp_2bn_wmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Data</title>
+    <shortdesc>The <codeph>data</codeph> element embedds data, usually used to interact with the
+        Ethereum blockchain</shortdesc>
     <conbody>
-        <p></p>
+        <p>The <codeph>data</codeph> element is like a carrier: It contains different elements of
+            data. Usually it is used inside an <codeph>ethereum</codeph> element to declare the data
+            used for smart contract calls or transaction creation.</p>
+        <section id="section_pgb_nbn_wmb">
+            <title>Code Examples</title>
+            <p>Define the needed data for an Ethereum call to fill an attribute</p>
+            <p>
+                <codeblock>&lt;ts:attribute name="locality">
+      &lt;ts:type>
+            &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.15&lt;/ts:syntax>
+      &lt;/ts:type>
+      &lt;ts:origins>
+        &lt;ethereum:call function="getLocality" contract="EntryToken" as="utf8">
+            &lt;ts:data>
+              &lt;ts:uint256 ref="tokenId"/>
+            &lt;/ts:data>
+        &lt;/ethereum:call>
+      &lt;/ts:origins>
+&lt;/ts:attribute></codeblock>
+            </p>
+            <p>Define amount used in an Ethereum transaction</p>
+            <codeblock>&lt;ts:transaction>
+      &lt;ethereum:transaction function="redeem" contract="aDAI" as="uint">
+           &lt;ts:data>
+               &lt;ts:uint256 ref="redeemAmount"/>
+           &lt;/ts:data>
+      &lt;/ethereum:transaction>
+&lt;/ts:transaction></codeblock>
+            <p>Define amount and receiver for a
+                transactions<codeblock>&lt;ts:transaction>
+    &lt;ethereum:transaction function="transfer" contract="DAI">
+       &lt;ts:data>
+          &lt;ts:address>
+              0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016
+          &lt;/ts:address>
+         &lt;ts:uint256 ref="amount"/>
+        &lt;/ts:data>
+      &lt;/ethereum:transaction>
+&lt;/ts:transaction></codeblock></p>
+            <p/>
+            <p/>
+            <p/>
+        </section>
     </conbody>
 </concept>
