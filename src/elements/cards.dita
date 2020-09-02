@@ -5,21 +5,26 @@
     <shortdesc><codeph>cards</codeph> element is a container of multiple Token Cards</shortdesc>
     <conbody>
 	    <p>A <codeph>cards</codeph> element contains definitions for Token Cards. It can be used as a root element of a TokenScript File.</p>
-        <section id="section_h3m_1k4_5mb">
-            <title>Code Example</title>
-            <p>
+        <p>It can only contain <xref href="card.dita"/>.</p>
+        <fig id="section_h3m_1k4_5mb">
+            <title>Basic structure of cards and views</title>
+          
+            <desc>This shows the structure where 3 cards are defined, each of different types, each
+                with its own view and item-view</desc>
                 <codeblock>&lt;ts:cards>
      &lt;ts:card type="action" name="convert-to-xdAI">
-          ...
+          &lt;view>…&lt;/view>
+          &lt;item-view>…&lt;/item-view>
       &lt;/ts:card>
       &lt;ts:card type="token" name="main">
-          ...
+          &lt;view>…&lt;/view>
+          &lt;item-view>…&lt;/item-view>
       &lt;/ts:card>
       &lt;ts:card type="activity" name="OwnerApproved">
-          ...
+          &lt;view>…&lt;/view>
+          &lt;item-view>…&lt;/item-view>
       &lt;/ts:card>
 &lt;/ts:cards></codeblock>
-            </p>
-        </section>
+        </fig>
     </conbody>
 </concept>
