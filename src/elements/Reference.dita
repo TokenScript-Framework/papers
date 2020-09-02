@@ -87,26 +87,27 @@
                         <entry>Contract, Card</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;bytes32&gt;</codeph></entry>
-                        <entry/>
-                        <entry/>
+                        <entry><codeph><xref href="bytes32.dita">bytes32</xref></codeph></entry>
+                        <entry>Define data when interacting with the Ethereum blockchain</entry>
+                        <entry>Ethereum</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;data&gt;</codeph></entry>
-                        <entry>Declares data, for example required to create a transaction to
-                            approve someone for a smart contract.</entry>
-                        <entry>Card</entry>
+                        <entry><codeph><xref href="data.dita">data</xref></codeph></entry>
+                        <entry>Declares data, usually used for Ethereum calls, e. G. to declare a
+                            receiving address.</entry>
+                        <entry>Card, Attribute, Ethereum</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;element></codeph></entry>
+                        <entry><codeph><xref href="element.dita">element</xref></codeph></entry>
                         <entry>creates an element for a data module. Usually inside &lt;sequence>
                             tags. </entry>
-                        <entry>Data Module</entry>
+                        <entry>Data Module, Sequence</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:call&gt;</codeph></entry>
+                        <entry><codeph><xref href="ethereum-call.dita"
+                            >ethereum:call</xref></codeph></entry>
                         <entry>Calls a smart contract, for example fetching the balance.</entry>
-                        <entry>Attributes</entry>
+                        <entry>Attributes, Origin</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
