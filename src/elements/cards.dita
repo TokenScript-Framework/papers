@@ -6,7 +6,7 @@
     <conbody>
 	    <p>A <codeph>cards</codeph> element contains definitions for Token Cards. It can be used as a root element of a TokenScript File.</p>
         <p>It can only contain <xref href="card.dita"/>.</p>
-        <fig id="section_h3m_1k4_5mb">
+        <fig id="figure_h3m_1k4_5mb">
             <title>Basic structure of cards and views</title>
           
             <desc>This shows the structure where 3 cards are defined, each of different types, each
