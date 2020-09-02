@@ -136,8 +136,7 @@
                     </row>
                     <row>
                         <entry><codeph>&lt;item-view&gt;</codeph></entry>
-                        <entry>Defines how the wallet must view the token. See <xref
-                                href="../ItemView.dita"/>.</entry>
+                        <entry>Defines how the wallet must view the token.</entry>
                         <entry>Card (Token Card)</entry>
                     </row>
                     <row>
