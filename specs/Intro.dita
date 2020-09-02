@@ -5,7 +5,9 @@
     <body>
         <p>There are 3 types of TokenScript specifications. Throughout a standardisation process
             they may eventually become separate standards, but presently they are all housed under
-            TokenScript in 3 streams of development.<dl>
+            TokenScript in 3 streams of development.<note>This is a work in progres to move
+                documents from old TokenScript repository. Will take a few weeks to
+                accomplish.</note><dl>
                 <dlentry>
                     <dt>JavaScript API</dt>
                     <dd>These include: how to use TokenScript engine features, like creating and
