@@ -12,8 +12,10 @@
       for what these types mean.</note>
         <p>It can be used as a root element of a TokenScript File, for such TokenScript file whose
             sole purpose is to define a card (such use is phasing out - instead, <xref
-                href="cards.dita"/> should be used instead).  Otherwise, a <codeph>card</codeph>
-            element is always put inside a <xref href="cards.dita"/>.</p>
+                href="cards.dita"/> should be used instead). Otherwise, a <codeph>card</codeph>
+            element is always put inside a <xref href="cards.dita"/>.<fig
+                conref="cards.dita#concept_bfd_tgl_mmb/figure_h3m_1k4_5mb" id="fig_enw_zfj_wmb"
+            /></p>
         <section id="section_mq3_bj4_5mb">
             <title>Code examples</title>
             <p><b>Token
