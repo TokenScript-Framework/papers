@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_icq_hdn_wmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Element</title>
+    <shortdesc>In a data module <codeph>elements</codeph> are put in a ordered sequence.</shortdesc>
     <conbody>
-        <p></p>
+        <p>With <codeph>&lt;asnx:module></codeph> you can define a data module. Inside the
+                <codeph>asxn</codeph> tags you put data elements in a certain order.</p>
+        <section id="section_xnj_t2n_wmb">
+            <title>Code Example</title>
+            <p>Defining the elements of a data module for an ENS event. All elements are defined as
+                an ethereum type (string, bytes32, address, uint).</p>
+            <p>
+                <codeblock>&lt;asnx:module name="ENS-Events">
+    &lt;namedType name="NameRegistered">
+      &lt;type>
+        &lt;sequence>
+          &lt;element name="name" ethereum:type="string"/>
+          &lt;element name="label" ethereum:type="bytes32" ethereum:indexed="true"/>
+          &lt;element name="owner" ethereum:type="address" ethereum:indexed="true"/>
+          &lt;element name="cost" ethereum:type="uint"/>
+          &lt;element name="expires" ethereum:type="uint"/>
+        &lt;/sequence>
+      &lt;/type>
+    &lt;/namedType>
+&lt;/asnx:module></codeblock>
+            </p>
+        </section>
     </conbody>
 </concept>
