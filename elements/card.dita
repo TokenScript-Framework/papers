@@ -2,15 +2,18 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_bfd_tgl_mmb">
 	<title><codeph>card</codeph> element</title>
-    <shortdesc><codeph>card</codeph> element defines a Token Card</shortdesc>
+    <shortdesc><codeph>card</codeph> element defines a Card</shortdesc>
     <conbody>
-	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita">Card element</xref>. It
-            can be used as a root element of a TokenScript File. A card element can contain <xref
-                href="../TokenCard.dita">Token Cards</xref>, <xref href="../ActionCard.dita">Action
-                Cards</xref> and <xref href="../ActivityCard.dita">Activity Cards</xref>.</p>
-        <p>A <codeph>card</codeph> element is always put inside a <codeph>cards</codeph> element.
-            When declaring a card element you need to declare its <codeph>type</codeph> and a name.
-            When a card renders the user display, it usually uses an JavaScript file for it.</p>
+	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita"/>.</p>
+        <p>There are two mandatory attributes for card, <codeph>@type</codeph> and
+                <codeph>@name</codeph>. </p>
+        <p><codeph>@type</codeph> has 3 possible values: <codeph>token</codeph>,
+                <codeph>action</codeph>, <codeph>activity</codeph>.  </p><note>See <xref href="../Card.dita"/>
+      for what these types mean.</note>
+        <p>It can be used as a root element of a TokenScript File, for such TokenScript file whose
+            sole purpose is to define a card (such use is phasing out - instead, <xref
+                href="cards.dita"/> should be used instead).  Otherwise, a <codeph>card</codeph>
+            element is always put inside a <xref href="cards.dita"/>.</p>
         <section id="section_mq3_bj4_5mb">
             <title>Code examples</title>
             <p><b>Token
