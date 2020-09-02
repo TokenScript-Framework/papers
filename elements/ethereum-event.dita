@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_gwd_mhn_wmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Ethereum:Event</title>
+    <shortdesc>The <codeph>ethereum:event</codeph> element allows to render an attribute by checking
+        for a blockchain event. </shortdesc>
     <conbody>
         <p></p>
+        <p/>
+        <section id="section_mt1_phn_wmb">
+            <title>Code Example</title>
+            <p>Render ensName if a ENS name is registered.</p>
+            <p>
+                <codeblock>&lt;ts:attribute name="ensName">
+    &lt;ts:type>&lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.15&lt;/ts:syntax>&lt;/ts:type>
+    &lt;ts:origins>
+        &lt;ethereum:event type="NameRegistered" contract="ETHRegistrarController" filter="label=${tokenId}" select="name"/>
+    &lt;/ts:origins>
+&lt;/ts:attribute>
+  
+</codeblock>
+            </p>
+        </section>
     </conbody>
 </concept>
