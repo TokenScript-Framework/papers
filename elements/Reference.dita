@@ -115,9 +115,11 @@
                         <entry>Contract</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:event&gt;</codeph></entry>
-                        <entry/>
-                        <entry/>
+                        <entry><codeph><xref href="ethereum-event.dita"
+                                >ethereum:event</xref></codeph></entry>
+                        <entry>Enables the wallet to render an attribute with a blockchain
+                            event</entry>
+                        <entry>Attribute, Origin</entry>
                     </row>
                     <row>
                         <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
