@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_k1l_21n_wmb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Bytes32</title>
+    <shortdesc>The <codeph>bytes32</codeph> Element is used to define data used in interactions with
+        Ethereum blockchain.</shortdesc>
     <conbody>
-        <p></p>
+        <p>Other than most elements the <codeph>bytes32</codeph> element doesn't need a starting and
+            a closing element to embedd information, but can stand alone, like
+                <codeph>&lt;ts:bytes32 local-ref="nodeHash" /></codeph>.  </p>
+        <section id="section_kft_g1n_wmb">
+            <title>Code Examples</title>
+            <p>Setting an Attribute with an Ethereum call:</p>
+            <codeblock>&lt;ts:attribute name="emailRecord">
+     &lt;ts:type>
+      &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.15&lt;/ts:syntax>
+     &lt;/ts:type>
+     &lt;ts:origins>
+          &lt;ethereum:call as="utf8" contract="PublicResolver" function="text">
+               &lt;ts:data>
+                     &lt;ts:bytes32 local-ref="nodeHash"/>
+                     &lt;ts:string>email&lt;/ts:string>
+                &lt;/ts:data>
+          &lt;/ethereum:call>
+     &lt;/ts:origins>
+&lt;/ts:attribute></codeblock>
+            <p>Creating an Ethereum transaction:</p>
+            <codeblock>&lt;ts:transaction>
+        &lt;ethereum:transaction function="setText" contract="PublicResolver" as="bool">
+          &lt;ts:data>
+            &lt;ts:bytes32 local-ref="nodeHash"/>
+            &lt;ts:string>email&lt;/ts:string>
+            &lt;ts:string ref="newRecordValue"/>
+          &lt;/ts:data>
+        &lt;/ethereum:transaction>
+&lt;/ts:transaction></codeblock>
+            <p/>
+            <p/>
+        </section>
     </conbody>
 </concept>
