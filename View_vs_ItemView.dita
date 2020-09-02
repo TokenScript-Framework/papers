@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "technicalContent/dtd/concept.dtd">
+
+<concept id="id208HH0TC0CG">
+    <title>View vs ItemView</title>
+    <shortdesc>A card can have a View and an ItemView.</shortdesc>
+    <conbody>
+        <dl>
+            <dlentry>
+                <dt>View</dt>
+                <dd>View is a card fully opened.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>ItemView</dt>
+                <dd>ItemView is a card rendered as a list item.</dd>
+            </dlentry>
+        </dl>
+        <p>This table listed the typical content of View and ItemView for each type of cards.</p>
+        <simpletable>
+            <sthead>
+                <stentry>When used in</stentry>
+                <stentry>Typical content of a View</stentry>
+                <stentry>Typical Content of an ItemView</stentry>
+            </sthead>
+            <strow>
+                <stentry>Token Card</stentry>
+                <stentry>Typically a detailed view of token attributes. </stentry>
+
+                <stentry>The most important information about the token. Take a DeFi token for
+                    example, an ItemView might only have balance and status (e.g. health factor in
+                    the case of AAVE token).</stentry>
+            </strow>
+            <strow>
+                <stentry>Activity Card</stentry>
+                <stentry>Detailed explanation of the activity.</stentry>
+                <stentry>An at-a-glance view of the activity.</stentry>
+            </strow>
+            <strow>
+                <stentry>Action Card</stentry>
+                <stentry>Typically, a form where users can type information.</stentry>
+                <stentry>A preview of such a form. ItemView of an ActionCard is not often used and
+                    usually not defined.</stentry>
+            </strow>
+        </simpletable>
+        <section><title>View and ItemView of an Token Card</title>
+            <p>Often, for a TokenCard card, an ItemView is used first, and when the user clicks it,
+                he gets to see the full view. It is almost always the case in user's wallet. </p>
+            <fig>
+                <title>ItemView and View used in wallet</title>
+                <desc>In AlphaWallet, a user clicks at FIFA ticket token collection and a list of
+                    tokens are present through ItemViews. If they clicks the ItemView of a Token,
+                    they sees the View of that token. </desc>
+                <image href="View_vs_ItemView.svg"/>
+            </fig>
+            <p>However, on a web page, its web developer can design where and whether ItemView or
+                View should be used. In the below example, ItemViews of 2 Tokens (TokenCard) is used
+                for user to choose which token to use for the payment. When the user chooses a
+                Token, what opens is the "Pay" <xref href="ActionCard.dita"/>, not the <xref
+                    href="TokenCard.dita"/>. The View of a TokenCard is unused at all. <fig>
+                    <title>ItemView used on a website during checkout</title>
+                    <desc>Web developer can decide whether or not ItemView or View is used on their
+                        website, and what happens if the user clicks them.</desc>
+                    <image href="ItemView_on_Web_page.svg"/>
+                </fig></p></section>
+    </conbody>
+</concept>
