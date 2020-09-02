@@ -3,29 +3,49 @@
 <concept id="concept_dhv_3dl_mmb">
     <title>Cards</title>
     <shortdesc>Cards are a fundamental part of Tokenscript. They define how the token behaves in the
-        wallet and are the only part of Tokenscript which is visible for the user.</shortdesc>
-    <conbody>
-        <p>In Tokenscript, Cards trigger actions. Whenever something happens, a <i>Card</i> is
-            involved. Cards determine how the token behaves in the wallet: How it appears, how the
-            wallet processes it and what users can do with it. Cards are like little programs which
-            extend the functionality and style of a wallet, tailored for a specific token. </p>
+        wallet and in web pages. They are the only part of Tokenscript which is visible for the
+        user.</shortdesc>
+    <conbody><note type="restriction">Cards current only work in the wallet, not in web pages. Work is in
+            progress to make them available to the web pages.</note>
+        <p>In Tokenscript, Cards are the "User Interface" of tokens. There are 3 types of cards.<dl>
+                <dlentry>
+                    <dt>Token Card</dt>
+                    <dd>Token Cards determine how the token behaves in the wallet and in web pages:
+                        How it appears, how the wallet processes it and what users can do with it.
+                        Cards are like little programs which extend the functionality and style of a
+                        wallet, tailored for a specific token. </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Action Card</dt>
+                    <dd> Action Cards are triggered by user or website to perform actions. It may
+                        result in a transaction to be sent to the underlying blockchain, a
+                        cryptographic message being signed, or a proof being made.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Activity Card</dt>
+                    <dd>Activity Cards displays activities that have happened or will soon
+                        happen.</dd>
+                </dlentry>
+            </dl></p>
+
+        <p>Token Card and Activity Card often have actions available to them that a user can click
+            and result in the corrisponding Action Card being shown.</p>
         <p>While other parts of Tokenscript are written mostly in XML, cards are built in JavaScript
-            (WebAssembly support will be supported too), but declared in XML.</p>
-        <p>An important aspect of cards is that they are not in a website or app. They are in the
-            TokenScript files and executed solely in the wallet or a TokenScript enabled dapp
-            browser. Like a card in a game, a dApp can play it, but is not able to transform it. In
-            the web 3.0 cards can become an important enabler of privacy and security: They offload
-            operations and information from websites to wallets. They protect the user and reduce
-            the risks of database heists.</p>
+            and HTML (WebAssembly support will be supported too). Theses JavaScript and HTML are
+            either embeded or referred to from XML.</p>
+        <p>An important aspect of cards is that with a TokenScript enabled user-agent, they are not
+            rendered in a website or app (although they may be physically placed there). They are
+            defined in the TokenScript files and executed in a protected environment in the wallet
+            or a TokenScript enabled dapp browser. Like a card in a game, a dApp can play it, but is
+            not able to transform it. In the web 3.0 cards can become an important enabler of
+            privacy and security: They offload operations and information from websites to wallets.
+            They protect the user and reduce the risks of database heists.</p>
         <p>Cards allow dApps to use token to interact with wallets in a much more specific and
             manifold way than a smart contract can do. They are used to display specific icons for a
             token, to query an API to get accompanying information, to create transactions, to
             structure the record of past transactions in a meaningful way and much more. </p>
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
-        <p>There are 4 kind of cards: <xref href="TokenCard.dita">Token Cards</xref>, <xref
-                href="ActionCard.dita">Action Cards</xref>, <xref href="ActivityCard.dita">Activity
-                Cards</xref>, and <xref href="Attestation.dita">Attestation Cards</xref>.</p>
         <p><b>Code</b></p>
         <p>In the Tokenscript XML file cards are declared by
                 <codeph>&lt;ts:cards></codeph>...<codeph>&lt;/ts:cards></codeph></p>
