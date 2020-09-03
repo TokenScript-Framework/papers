@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
+<topic id="index">
+  <title>TokenScript Design Paper</title>
+  <body>
+    <p>The design paper are produced early 2019 and we are planning to integrate its content into
+      the document repository. </p>
+    <p>There are two versions: <xref
+        href="https://github.com/AlphaWallet/TokenScript/releases/download/0.4/short_paper.pdf"
+        format="pdf" scope="external">Short Paper</xref> (5 pages) and <xref
+        href="https://github.com/AlphaWallet/TokenScript/releases/download/0.4/design_paper.pdf"
+        format="pdf" scope="external">Full paper</xref> (37 pages) available on github.</p>
+  </body>
+</topic>

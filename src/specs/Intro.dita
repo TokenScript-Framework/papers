@@ -7,9 +7,14 @@
             they may eventually become separate standards, but presently they are all housed under
             TokenScript in 3 streams of development.<note>This is a work in progres to move
                 documents from old TokenScript repository. Will take a few weeks to
-                accomplish.</note><dl>
+                accomplish.</note></p><dl>
                 <dlentry>
-                    <dt>JavaScript API</dt>
+                    <dt>Web API</dt>
+                    <dd>For a website to use tokens. For example, how to render a token on your
+                        website.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>JavaScript API for Token Issuers</dt>
                     <dd>These include: how to use TokenScript engine features, like creating and
                         reading a DataObject, passing Payload for signing, and how to select a token
                         or launch a Token Card from a website.</dd>
@@ -23,6 +28,7 @@
                     <dd>About the attestations and data objects accessible to TokenScript
                         Engines.</dd>
                 </dlentry>
-            </dl></p>
+            </dl><p>Further more, there are design concepts that these specs should refer to, availble in the <xref
+                href="../paper/index.dita">design paper</xref>.</p>
     </body>
 </topic>
