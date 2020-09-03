@@ -123,7 +123,8 @@
                         <entry>Attribute, Origin</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:transaction&gt;</codeph></entry>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:transaction</xref></codeph></entry>
                         <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
                             transaction.</entry>
                         <entry>Card</entry>
