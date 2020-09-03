@@ -2,7 +2,8 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_l1d_2cx_qmb">
     <title>Introduction to TokenScript</title>
-    <shortdesc>TokenScript is a tokenisation framework</shortdesc>
+    <shortdesc>TokenScript is a tokenisation framework which allows token issuers to enrich a token
+        with features and wallets to easily understand the token's logic.</shortdesc>
     <body>
         <p>If you are a token issuer, <xref href="TokenScript.dita"/> let you package the essential
             HTML/JavaScript needed to access their token contract and let it run in user's wallet as
