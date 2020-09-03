@@ -110,7 +110,8 @@
                         <entry>Attributes, Origin</entry>
                     </row>
                     <row>
-                        <entry><codeph>&lt;ethereum:contract&gt;</codeph></entry>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:contract</xref></codeph></entry>
                         <entry>Defines the Token's contract</entry>
                         <entry>Contract</entry>
                     </row>
