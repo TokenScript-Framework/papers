@@ -4,6 +4,7 @@
     <title>Content TokenScript docs</title>
     <topicref href="Tokenization.dita"/>
     <topicref href="index.dita">
+        <topicref href="TokenScript.dita"/>
         <topicref href="defiwithandwithoutts.dita"/>
         <topicref href="LivingExamples.dita"/>
         <topicref href="WhatTokenscriptCanDo.dita"/>
