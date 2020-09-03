@@ -12,7 +12,10 @@
                 has to send an attested transaction that attests to his residency country. The Smart
                 Contract would revert the transaction if the residency country isn't allowed.</li>
             <li>Similarly, one can send an attested transaction that proves the sender is above the
-                legal age without giving away the actual age. </li>
+                legal age without giving away the actual age.</li>
+            <li>If you have a Devcon ticket as an attestation, you can participate a smart contract
+                vote as a valid Devcon ticket holder, without first converting such a ticket to a
+                Non-Fungible Token.</li>
             <li>If you purchase prescription medicine from a Smart Contract, you can send an
                 attested transaction that you have a prescription for it, if the prescription was
                 issued to you as an attestation.</li>
