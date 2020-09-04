@@ -12,19 +12,19 @@ How? The user holds his tokenized information in his browser or mobile wallet, s
 
 The user “answers” with his tokens and the website displays content and available action accordingly. Login becomes optional. The website might need all token information, some or none at all. The website will ignore tokens that are not useful to their system (or that they are forbidden to use). It’s up to the developer and his designed user experience.
 
-![david token negotiation example](/intros/img/token-negotiation-david-example.svg)
+![david token negotiation example](img/token-negotiation-david-example.svg)
 
 The marketplace displays his listings and adds functionality (free shipping) for the user.
 
 On a tokenized Web, the user holds his own tokens and websites display what he owns or provide action. The user is the "banker" of his own assets.
 
-![claire token negotiation example](/intros/img/token-negotiation-claire-example.svg)
+![claire token negotiation example](img/token-negotiation-claire-example.svg)
 
 The marketplace may use available tokens (such as a Profile token) to enrichen the experience. It ignores unrelated tokens.
 
 Different websites and smart contracts will ask for different data they need to work. Any system that is able to read & interpret token data may ask. For example, point-of-sale machines, highway toll booths, gate scanners, mobile apps, IoT light bulbs, and anything else.
 
-![token negotiation permutations](/intros/img/token-negotiation-variations.svg)
+![token negotiation permutations](img/token-negotiation-variations.svg)
 
 ## What tokens to use (and how)?
 
@@ -36,8 +36,8 @@ When the tokens are used, the website displays content or makes actions availabl
 
 The website or smart contract owner may require specific information to enable his services. For example, if the user wants his listing token to appear in our Marketplace, it can determine that the token must include the “Price” and “Conditions” attribute, but that “Location” is optional.
 
-![token negotiation first example](/intros/img/token-negotiation-1.svg)
+![token negotiation first example](img/token-negotiation-1.svg)
 
 If the user wants his Payment token to be available, the developer might determine that the token must include a “Whitelist Attestation” from a third-party provider. The website will enable payment actions accordingly.
 
-![token negotiation second example](/intros/img/token-negotiation-2.svg)
+![token negotiation second example](img/token-negotiation-2.svg)
