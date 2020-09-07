@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_bfd_tgl_mmb">
-	<title><codeph>card</codeph> element</title>
+	<title><codeph>&lt;card></codeph> element</title>
     <shortdesc><codeph>card</codeph> element defines a Card</shortdesc>
     <conbody>
 	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita"/>.</p>
