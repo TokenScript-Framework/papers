@@ -1,0 +1,3 @@
+<val>
+   <prop action="exclude" att="audience" value="implementor"/>
+</val>
