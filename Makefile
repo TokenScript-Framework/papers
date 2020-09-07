@@ -8,4 +8,5 @@ ifeq (,$(findstring net.infotexture.dita-bootstrap,$(DITA_PLUGINS)))
 endif
 
 % : %.ditamap
-	$(DITA_EXEC) --input=$^ --format=html5-bootstrap $(DITA_OPTIONS)
+	$(DITA_EXEC) --input=$^ --format=html5-bootstrap $(DITA_OPTIONS) --args.filter=$(CURDIR)/no-implementor.ditaval
+	$(DITA_EXEC) --input=$^ --format=html5-bootstrap $(DITA_OPTIONS) --output.dir=$(CURDIR)/implementor
