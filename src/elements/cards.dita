@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_bfd_tgl_mmb">
-	<title><codeph>cards</codeph> element</title>
+	<title><codeph>&lt;cards></codeph> element</title>
     <shortdesc><codeph>cards</codeph> element is a container of multiple Token Cards</shortdesc>
     <conbody>
 	    <p>A <codeph>cards</codeph> element contains definitions for Token Cards. It can be used as a root element of a TokenScript File.</p>
