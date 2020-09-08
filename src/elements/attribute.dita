@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="attribute_element">
+    <title><codeph>&lt;attribute></codeph> element</title>
+    <shortdesc><codeph>&lt;attribute></codeph> element defines an attribute for a token or a
+        card</shortdesc>
+    <refbody>
+        <example><title>An attribute from a smart contract function call</title>
+            <codeblock id="minimal_attribute" outputclass="language-xml">    &lt;ts:attribute name="balance">
+        &lt;ts:origins>
+            &lt;ethereum:call function="balanceOf" as="uint">
+                &lt;ts:data>&lt;ts:address ref="ownerAddress"/>&lt;/ts:data>
+            &lt;/ethereum:call>
+        &lt;/ts:origins>
+    &lt;/ts:attribute></codeblock>
+        </example>
+    </refbody>
+</reference>
