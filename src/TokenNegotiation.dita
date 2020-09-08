@@ -30,6 +30,15 @@
                     that the token is intended to be usable on that website;</li>
                 <li>Expectation based negotiation, by which a token declares being able to do
                     certain things (e.g. let the website receives up to 1ETH in payment).</li>
-	    </ol><p>In reality a websession might use multiple negotiation methods.</p></section>
+	    </ol><p>These can be comined and mixed.</p></section>
+        <section id="section_dcx_4jc_ymb">
+            <title>Negotation process</title>
+            <p>Negotation can be passive or active.</p>
+            <p>In a passive negotiation, the website declares what tokens can be used on the website
+                through HTML <codeph>&lt;meta></codeph> element. In a browser, the user is
+                preseneted with a <xref href="TokenBar.dita"/>.</p>
+            <p>In an active negotiation, the website runs a JavaScript routine to do the
+                negotiation. </p>
+        </section>
     </conbody>
 </concept>
