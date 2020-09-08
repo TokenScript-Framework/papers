@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
-<reference id="concept_bfd_tgl_mmb">
+<reference id="card_element">
 	<title><codeph>&lt;card></codeph> element</title>
-    <shortdesc><codeph>card</codeph> element defines a Card</shortdesc>
+    <shortdesc><codeph>card</codeph> element defines a <xref href="../Card.dita">Card</xref></shortdesc>
     <refbody>
-	    <section>
-	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita"/>.</p>
+	    <refsyn>
         <p>There are two mandatory attributes for card, <codeph>@type</codeph> and
                 <codeph>@name</codeph>. </p>
         <p><codeph>@type</codeph> has 3 possible values: <codeph>token</codeph>,
-                <codeph>action</codeph>, <codeph>activity</codeph>.  </p><note>See <xref href="../Card.dita"/>
-      for what these types mean.</note>
-        <p>It can be used as a root element of a TokenScript File, for such TokenScript file whose
-            sole purpose is to define a card (such use is phasing out - instead, <xref
-                href="cards.dita"/> should be used instead). Otherwise, a <codeph>card</codeph>
-            element is always put inside a <xref href="cards.dita"/>.<fig
-                conref="cards.dita#concept_bfd_tgl_mmb/figure_h3m_1k4_5mb" id="fig_enw_zfj_wmb"
-		    /></p></section>
-        <section id="section_mq3_bj4_5mb">
-            <title>Code examples</title>
-            <p><b>Token
-                Card</b><codeblock>&lt;ts:card type="token" name="main">
+                    <codeph>action</codeph>, <codeph>activity</codeph>, for <xref
+                    href="../TokenCard.dita"/>, <xref href="../ActionCard.dita"/>, <xref
+                    href="../ActivityCard.dita"/> respectively.</p>
+        <p>A <codeph>card</codeph> element is always put inside a <xref href="cards.dita"/>.</p></refsyn>
+        <example conref="cards.dita#cards_element/example_cards" id="fig_enw_zfj_wmb"/>
+        <example id="section_mq3_bj4_5mb">
+            <title>Token
+                Card</title>
+            <codeblock>&lt;ts:card type="token" name="main">
    &lt;ts:item-view xml:lang="en">
        &lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style>
        &lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script>
@@ -29,9 +25,10 @@
           &lt;xhtml:style type="text/css">&amp;view-style;&lt;/xhtml:style>
           &lt;xhtml:script type="text/javascript">&amp;view.en;&lt;/xhtml:script>
       &lt;/ts:view>
-&lt;/ts:card></codeblock></p>
-            <p><b>Action Card</b></p>
-            <p>
+&lt;/ts:card></codeblock>
+</example><example>
+    <title>Action Card</title>
+      
                 <codeblock>&lt;ts:card type="action" name="best-rates">
     &lt;ts:label>
         &lt;ts:string xml:lang="en">Best Rates&lt;/ts:string>
@@ -40,10 +37,10 @@
          &lt;xhtml:style type="text/css">&amp;style;&lt;/xhtml:style>
          &lt;xhtml:script type="text/javascript">&amp;bestRates.en;&lt;/xhtml:script>
      &lt;/ts:view>
-&lt;/ts:card></codeblock>
-            </p>
-            <p><b>Activity
-                Card</b><codeblock>&lt;ts:card type="activity" name="ownerApproved">
+&lt;/ts:card></codeblock></example>
+            <example>
+            <title>Activity Card</title>
+                <codeblock>&lt;ts:card type="activity" name="ownerApproved">
             &lt;ts:origins>
                 &lt;ethereum:event type="Approval" filter="owner=${ownerAddress}"/>
             &lt;/ts:origins>
@@ -55,7 +52,7 @@
                 &lt;style type="text/css">&amp;style;&lt;/style>
                 &lt;script  type="text/javascript">&amp;gaveApproval.en;&lt;/script>
             &lt;/ts:view>
-&lt;/ts:card></codeblock></p>
-        </section>
+&lt;/ts:card></codeblock>
+        </example>
     </refbody>
 </reference>
