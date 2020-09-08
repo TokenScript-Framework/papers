@@ -18,7 +18,7 @@
         <p>Attributes are declared in TokenScript. The following is a minimalist declaration, where
             an attribute "balance" is defined. The value originates from an Ethereum function call
                 <codeph>balanceOf</codeph>.</p>
-      <codeblock conref="elements/Attribute.dita#concept_bfd_tgl_mmb/minimal_attribute"/>
+      <codeblock conref="elements/attribute.dita#attribute_element/minimal_attribute"/>
         <p>Another example of an Attribute declaration declares the locality of a soccer match in
             the <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/EntryToken"
