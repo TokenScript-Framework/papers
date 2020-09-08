@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_dhv_3dl_mmb">
-    <title>Cards</title>
+    <title>Card</title>
     <shortdesc>Cards are a fundamental part of Tokenscript. They define how the token behaves in the
         wallet and in web pages. They are the only part of Tokenscript which is visible for the
         user.</shortdesc>
