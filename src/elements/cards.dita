@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_bfd_tgl_mmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="cards_element">
 	<title><codeph>&lt;cards></codeph> element</title>
-    <shortdesc><codeph>cards</codeph> element is a container of multiple Token Cards</shortdesc>
-    <conbody>
-	    <p>A <codeph>cards</codeph> element contains definitions for Token Cards. It can be used as a root element of a TokenScript File.</p>
-        <p>It can only contain <xref href="card.dita"/>.</p>
-        <fig id="figure_h3m_1k4_5mb">
+    <shortdesc><codeph>cards</codeph> element is a container of multiple <xref href="../Card.dita"
+        />. It can be used as a root element of a TokenScript File.</shortdesc>
+    <refbody>
+        <refsyn>
+            <synph>It can only contain <var>&lt;card> elements</var>.</synph>
+        </refsyn>
+        <example id="example_cards">
             <title>Basic structure of cards and views</title>
           
-            <desc>This shows the structure where 3 cards are defined, each of different types, each
-                with its own view and item-view</desc>
+            <p>This shows the structure where 3 cards are defined, each of different types, each
+                with its own view and item-view</p>
                 <codeblock>&lt;ts:cards>
      &lt;ts:card type="action" name="convert-to-xdAI">
           &lt;view>…&lt;/view>
@@ -25,6 +27,6 @@
           &lt;item-view>…&lt;/item-view>
       &lt;/ts:card>
 &lt;/ts:cards></codeblock>
-        </fig>
-    </conbody>
-</concept>
+        </example>
+    </refbody>
+</reference>
