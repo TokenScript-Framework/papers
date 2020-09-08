@@ -29,4 +29,21 @@
         <topicref href="Deploy.dita"/>
     </topicref>
     <mapref href="features/features.ditamap"/>
+    <reltable>
+	      <relheader>
+		      <relcolspec type="concept"/>
+		      <relcolspec type="task"/>
+		      <relcolspec type="reference"/>
+  </relheader>
+  <relrow>
+	  <relcell>
+		  <topicref href="Card.dita"/>
+            <topicref href="TokenCard.dita"/>
+            <topicref href="ActionCard.dita"/>
+            <topicref href="ActivityCard.dita"/>
+	  </relcell>
+   <relcell></relcell>
+   <relcell><topicref href="elements/card.dita"/></relcell>
+  </relrow>
+ </reltable>
 </map>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_bfd_tgl_mmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_bfd_tgl_mmb">
 	<title><codeph>&lt;card></codeph> element</title>
     <shortdesc><codeph>card</codeph> element defines a Card</shortdesc>
-    <conbody>
+    <refbody>
+	    <section>
 	    <p>A <codeph>card</codeph> element defines a <xref href="../Card.dita"/>.</p>
         <p>There are two mandatory attributes for card, <codeph>@type</codeph> and
                 <codeph>@name</codeph>. </p>
@@ -15,7 +16,7 @@
                 href="cards.dita"/> should be used instead). Otherwise, a <codeph>card</codeph>
             element is always put inside a <xref href="cards.dita"/>.<fig
                 conref="cards.dita#concept_bfd_tgl_mmb/figure_h3m_1k4_5mb" id="fig_enw_zfj_wmb"
-            /></p>
+		    /></p></section>
         <section id="section_mq3_bj4_5mb">
             <title>Code examples</title>
             <p><b>Token
@@ -56,5 +57,5 @@
             &lt;/ts:view>
 &lt;/ts:card></codeblock></p>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>
