@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="card_element">
-	<title><codeph>&lt;card></codeph> element</title>
-    <shortdesc><codeph>card</codeph> element defines a <xref href="../Card.dita">Card</xref></shortdesc>
+    <title><codeph>&lt;card></codeph> element</title>
+    <shortdesc><codeph>card</codeph> element defines a <xref href="../Card.dita"
+        >Card</xref></shortdesc>
     <refbody>
-	    <refsyn>
-        <p>There are two mandatory attributes for card, <codeph>@type</codeph> and
-                <codeph>@name</codeph>. </p>
-        <p><codeph>@type</codeph> has 3 possible values: <codeph>token</codeph>,
+        <refsyn>
+            <p>There are two mandatory attributes for card, <codeph>@type</codeph> and
+                    <codeph>@name</codeph>. </p>
+            <p><codeph>@type</codeph> has 3 possible values: <codeph>token</codeph>,
                     <codeph>action</codeph>, <codeph>activity</codeph>, for <xref
                     href="../TokenCard.dita"/>, <xref href="../ActionCard.dita"/>, <xref
                     href="../ActivityCard.dita"/> respectively.</p>
-        <p>A <codeph>card</codeph> element is always put inside a <xref href="cards.dita"/>.</p></refsyn>
+            <p>A <codeph>card</codeph> element is always put inside a <xref href="cards.dita"
+            />.</p></refsyn>
         <example conref="cards.dita#cards_element/example_cards" id="fig_enw_zfj_wmb"/>
         <example id="section_mq3_bj4_5mb">
-            <title>Token
-                Card</title>
+            <title>Token Card</title>
             <codeblock>&lt;ts:card type="token" name="main">
    &lt;ts:item-view xml:lang="en">
        &lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style>
@@ -26,10 +27,10 @@
           &lt;xhtml:script type="text/javascript">&amp;view.en;&lt;/xhtml:script>
       &lt;/ts:view>
 &lt;/ts:card></codeblock>
-</example><example>
-    <title>Action Card</title>
-      
-                <codeblock>&lt;ts:card type="action" name="best-rates">
+        </example>
+        <example>
+            <title>Action Card</title>
+            <codeblock>&lt;ts:card type="action" name="best-rates">
     &lt;ts:label>
         &lt;ts:string xml:lang="en">Best Rates&lt;/ts:string>
     &lt;/ts:label>
@@ -38,9 +39,9 @@
          &lt;xhtml:script type="text/javascript">&amp;bestRates.en;&lt;/xhtml:script>
      &lt;/ts:view>
 &lt;/ts:card></codeblock></example>
-            <example>
+        <example>
             <title>Activity Card</title>
-                <codeblock>&lt;ts:card type="activity" name="ownerApproved">
+            <codeblock>&lt;ts:card type="activity" name="ownerApproved">
             &lt;ts:origins>
                 &lt;ethereum:event type="Approval" filter="owner=${ownerAddress}"/>
             &lt;/ts:origins>
