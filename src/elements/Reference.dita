@@ -44,7 +44,7 @@
                         <entry>A container of multiple Cards. </entry>
                     </row>
                     <row>
-                        <entry><xref href="Attribute.dita">attribute</xref></entry>
+                        <entry><xref href="attribute.dita">attribute</xref></entry>
                         <entry>Defines properties of a token which can be used by other
                             elements.</entry>
                     </row>
