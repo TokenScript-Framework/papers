@@ -32,13 +32,19 @@
                     certain things (e.g. let the website receives up to 1ETH in payment).</li>
 	    </ol><p>These can be comined and mixed.</p></section>
         <section id="section_dcx_4jc_ymb">
-            <title>Negotation process</title>
+            <title>Negotation Process</title>
             <p>Negotation can be passive or active.</p>
             <p>In a passive negotiation, the website declares what tokens can be used on the website
                 through HTML <codeph>&lt;meta></codeph> element. In a browser, the user is
-                preseneted with a <xref href="TokenBar.dita"/>.</p>
+                preseneted with a <xref href="TokenBar.dita"/>. The user can click the tokens in the
+                token bar any time to make that token "active" in the current session. It's possible
+                for the user to not to choose anything in the entire session and the user is not
+                forced to make a choice.</p>
             <p>In an active negotiation, the website runs a JavaScript routine to do the
-                negotiation. </p>
+                negotiation. The user is presented with the choice of tokens and the user must make
+                a choice or explicitly choose nothing. Such JavaScript routine can be hooked to a
+                button, for example, "Sign-up for a newsletter" button might trigger the user to
+                choose one of the tokens that can produce an email address proof.</p>
         </section>
     </conbody>
 </concept>
