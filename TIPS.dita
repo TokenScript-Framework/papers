@@ -6,25 +6,80 @@
         Design Paper</shortdesc>
     <conbody>
         <p>The TIPS are:</p>
-        <dl>
-            <dlentry>
-                <dt><b>T</b>rust</dt>
-                <dd>User can trust a token to be used on a 3rd party website.</dd>
-            </dlentry>
-            <dlentry>
-                <dt><b>I</b>nteroperability</dt>
-                <dd>A token can be used on a 3rd party websites and with other tokens too.</dd>
-            </dlentry>
-            <dlentry>
-                <dt><b>P</b>rivacy</dt>
-                <dd>A website that uses a token can only learn what they were supposed to.</dd>
-            </dlentry>
-            <dlentry>
-                <dt><b>S</b>ecurity</dt>
-                <dd>User should be able to transact securely, knowing what they will spend and get
-                    from the transaction.</dd>
-            </dlentry>
-        </dl>
+        <table frame="all" rowsep="1" colsep="1" id="table_tips">
+            <title>T.I.P.S.</title>
+            <tgroup cols="3">
+                <colspec colname="c1"/>
+                <colspec colname="c2"/>
+                <colspec/>
+                <thead>
+                    <row>
+                        <entry namest="c1" nameend="c2">Problem</entry>
+                        <entry>Solution</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Trust</entry>
+                        <entry>Blockchain data can be easily subverted at the UI layer on
+                            websites.</entry>
+                        <entry>
+                            <ul id="ul_yhz_ygk_ymb">
+                                <li>TokenScript organise UI into <xref href="Card.dita"
+                                    >cards</xref>, runing in a secure environment separated
+                                    from the underlying website.</li>
+                                <li>A data layer provides true blockchain data to the
+                                    Cards.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Interoperatibility</entry>
+                        <entry>Difficult to guarantee token behaviour across websites. Websites
+                            has to know a token to use it.</entry>
+                        <entry>
+                            <ul id="ul_tcb_bhk_ymb">
+                                <li>Token logics are packaged into TokenScripts. Users can
+                                    upgrade from their side.</li>
+                                <li>Token Negotiation allows onboarding of new tokens and
+                                    attestations.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Privacy</entry>
+                        <entry>Website knows everything about the user from just their Ethereum
+                            address.</entry>
+                        <entry>
+                            <ul id="ul_cqn_fhk_ymb">
+                                <li>Cards run from secure, private environment and only outputs
+                                    proofs to the websites, paving the way for privacy enabled
+                                    tokens.</li>
+                                <li>Attestation allows user holding tokens not linked to his
+                                    address on the blockchain.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Security</entry>
+                        <entry>User has to trust the website is securely generating transactions
+                            for his token. Such trust is hard to gain unless the website is from
+                            the token issuer.</entry>
+                        <entry>
+                            <ul id="ul_cmj_5hk_ymb">
+                                <li>TokenScript allows transaction to be generated in a secure
+                                    environment following predefined template, by the code
+                                    trusted from the smart contract author, no matter which
+                                    website uses the token.</li>
+                                <li>In the future, TokenScript will support DvP Security further
+                                    securing transaction even if it is passed on from an
+                                    untrusted contract.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
         <p>On top of TIPS, there are 2 lesser requirements that didn't make it into the acronym:</p>
         <dl>
             <dlentry>
