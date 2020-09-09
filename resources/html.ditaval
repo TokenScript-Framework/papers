@@ -2,4 +2,5 @@
 <val>
   <prop action="include" att="deliveryTarget" val="html" />
   <prop action="exclude" att="deliveryTarget" val="pdf" />
+  <prop action="exclude" att="audience" value="implementor"/>
 </val>
