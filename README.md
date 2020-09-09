@@ -17,12 +17,12 @@ $ dita --install net.infotexture.dita-bootstrap
 3. Make the documents. If dita is in `$PATH` you can do this:
 
 ````
-$ make Documents Guides Specs
+$ make webroot
 ````
 
 Otherwise, say, dita is installed in `/home/christoph/dita-ot-3.5.2/bin/dita` do this
 ````
-$ DITA_EXEC=/home/christoph/dita-ot-3.5.2/bin/dita make Documents Guides Specs 
+$ DITA_EXEC=/home/christoph/dita-ot-3.5.2/bin/dita make webroot
 ````
 
 Which will create the document output from the 3 ditamap files in the `out/` directory.
