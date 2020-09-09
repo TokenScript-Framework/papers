@@ -2,8 +2,11 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_l1d_2cx_qmb">
     <title>Introduction to TokenScript</title>
-    <shortdesc>TokenScript is an interoperability layer to make tokens work on various websites and wallets.</shortdesc>
+    
     <body>
+        <p>TokenScript is a tokenisation framework to make tokens work on various websites and
+            wallets. It does so by including token issuers's signed UI and transaction generation
+            code, and run it securely in user's browser/wallet.</p>
         <p>For a token issuer, <xref href="TokenScript.dita"/> lets you package the essential
             HTML/JavaScript needed to access their token contract and let it run in user's wallet as
             mini dapp, or with other websites that uses your token.</p>
