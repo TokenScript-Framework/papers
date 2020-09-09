@@ -4,13 +4,13 @@
     <context>
       <input href="webroot.ditamap" />
       <profile>
-        <ditaval href="resources/html.ditaval" />
+        <ditaval href="config/no-implementor.ditaval" />
       </profile>
     </context>
     <output href="." />
     <publication transtype="html5-bootstrap">
-      <param name="args.css" value="custom.css" />
       <param name="args.hdr" href="navbar.xml" />
+      <param name="args.css" value="custom.css" />
       <param name="args.hdf" href="fonts.xml" />
     </publication>
   </deliverable>
