@@ -26,32 +26,33 @@
             </ol>
         </section>
         <table id="table_dl4_w5m_qmb">
-            <title>Root elements</title>
-            <tgroup cols="2">
+            <title>XML elements that can be used in TokenScript</title>
+            <tgroup cols="3">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
                 <thead>
                     <row>
-                        <entry>Root Elements</entry>
+                        <entry>TokenScript Root Elements</entry>
                         <entry>Use</entry>
+                        <entry/>
                     </row>
                 </thead>
                 <tbody>
                     <row>
                         <entry><xref href="token.dita"/></entry>
-                        <entry>Starts and ends the token specific tokenscript. Can be used as the
-                            root element of TokenScript. </entry>
+                        <entry namest="c2" nameend="c3">Starts and ends the token specific
+                            tokenscript. Can be used as the root element of TokenScript. </entry>
                     </row>
                     <row>
                         <entry><xref href="tokens.dita">tokens</xref></entry>
-                        <entry>A <codeph>tokens</codeph> element contains definitions for a list of
-                            Tokens. They must all come from the same token issuer as they are signed
-                            by the same trust key.</entry>
+                        <entry namest="c2" nameend="c3">A <codeph>tokens</codeph> element
+                            contains definitions for a list of Tokens. They must all come from the
+                            same token issuer as they are signed by the same trust key.</entry>
                     </row>
-
                     <row>
                         <entry><xref href="cards.dita"/></entry>
-                        <entry>A container of multiple Cards. </entry>
+                        <entry namest="c2" nameend="c3">A container of multiple Cards. </entry>
                     </row>
                 </tbody>
             </tgroup>
@@ -61,7 +62,7 @@
                 <colspec colname="c3" colnum="3" colwidth="1*"/>
                 <thead>
                     <row>
-                        <entry>Elements</entry>
+                        <entry>TokenScript Elements</entry>
                         <entry>Use</entry>
                         <entry>Use in</entry>
                     </row>
