@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  <deliverable name="HTML5" id="html">
+    <context>
+      <input href="webroot.ditamap" />
+      <profile>
+        <ditaval href="config/no-implementor.ditaval" />
+      </profile>
+    </context>
+    <output href="." />
+    <publication transtype="html5-bootstrap">
+      <param name="args.hdr" href="navbar.xml" />
+      <param name="args.css" value="custom.css" />
+      <param name="args.hdf" href="fonts.xml" />
+    </publication>
+  </deliverable>
+</project>
