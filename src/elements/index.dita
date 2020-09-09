@@ -26,7 +26,7 @@
             </ol>
         </section>
         <table id="table_dl4_w5m_qmb">
-            <title>XML elements that can be used in TokenScript</title>
+            <title>XML elements that can be used in a TokenScript file</title>
             <tgroup cols="3">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
@@ -122,40 +122,10 @@
                             tags. </entry>
                         <entry>Data Module, Sequence</entry>
                     </row>
-                    <row>
-                        <entry><codeph><xref href="ethereum-call.dita"
-                            >ethereum:call</xref></codeph></entry>
-                        <entry>Calls a smart contract, for example fetching the balance.</entry>
-                        <entry>Attributes, Origin</entry>
-                    </row>
-                    <row>
-                        <entry><codeph><xref href="ethereum-transaction.dita"
-                                    >ethereum:contract</xref></codeph></entry>
-                        <entry>Defines the Token's contract</entry>
-                        <entry>Contract</entry>
-                    </row>
-                    <row>
-                        <entry><codeph><xref href="ethereum-event.dita"
-                                >ethereum:event</xref></codeph></entry>
-                        <entry>Enables the wallet to render an attribute with a blockchain
-                            event</entry>
-                        <entry>Attribute, Origin</entry>
-                    </row>
-                    <row>
-                        <entry><codeph><xref href="ethereum-transaction.dita"
-                                    >ethereum:transaction</xref></codeph></entry>
-                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
-                            transaction.</entry>
-                        <entry>Card</entry>
-                    </row>
-                    <row>
-                        <entry><codeph>&lt;ethereum:value&gt;</codeph></entry>
-                        <entry/>
-                        <entry/>
-                    </row>
+                    
                     <row>
                         <entry><codeph>&lt;grouping&gt;</codeph></entry>
-                        <entry/>
+                        <entry>How various instances of the same type of token are grouped.</entry>
                         <entry/>
                     </row>
                     <row>
@@ -238,6 +208,51 @@
                             usually inside an Action Card and refers to a CSS and JavaScript file to
                             create the view in HTML.</entry>
                         <entry>Cards</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Ethereum-specific Elements</entry>
+                        <entry>Use</entry>
+                        <entry/>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph><xref href="ethereum-call.dita"
+                            >ethereum:call</xref></codeph></entry>
+                        <entry>Calls a smart contract, for example fetching the balance.</entry>
+                        <entry>Attributes, Origin</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:contract</xref></codeph></entry>
+                        <entry>Defines the Token's contract</entry>
+                        <entry>Contract</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-event.dita"
+                                >ethereum:event</xref></codeph></entry>
+                        <entry>Enables the wallet to render an attribute with a blockchain
+                            event</entry>
+                        <entry>Attribute, Origin</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:transaction</xref></codeph></entry>
+                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
+                            transaction.</entry>
+                        <entry>Card</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:value&gt;</codeph></entry>
+                        <entry/>
+                        <entry/>
                     </row>
                 </tbody>
             </tgroup>

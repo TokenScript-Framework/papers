@@ -18,6 +18,6 @@
                 file using <xref href="elements/tokens.dita"/>, for TokenScript release management
                 reason.</p></note>
         <p>A list of TokenScript elements can be found - as a work in progress - in <xref
-                href="elements/Reference.dita"/></p>
+                href="elements/index.dita"/></p>
     </conbody>
 </concept>

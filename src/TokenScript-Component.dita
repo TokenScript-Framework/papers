@@ -26,7 +26,7 @@
         <p dir="ltr">The XML markup describes properties of the token: The functions it provides,
             the smart contract it relies upon, the behavior of the token, information of the token
             and much more. </p>
-        <p dir="ltr">There is a <xref href="elements/Reference.dita">list of XML declarations</xref>
+        <p dir="ltr">There is a <xref href="elements/index.dita">list of XML declarations</xref>
             developed by TokenScript. For most cases you only need a few of them.</p>
         <p dir="ltr">TokenScript uses XML according the the c14n canonicalization. This allows to
             create standardized digital signatures for XML and to enforce standardized static types

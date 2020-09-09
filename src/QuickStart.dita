@@ -50,7 +50,7 @@
             The Makefile is needed to finish the TokenScript creation.</p>
         </section><section><title>The XML file</title>
         <p>Here we will only present some parts of the XML file. To learn more about the syntax, you
-            find an <xref href="elements/Reference.dita">overview </xref>here.</p>
+            find an <xref href="elements/index.dita">overview </xref>here.</p>
         <p><b>The header</b></p>
         <p>The file header will look like this:</p>
         <p><image href="ts-xml-header.png" id="image_d3l_pry_4mb"/></p>
