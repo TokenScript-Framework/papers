@@ -4,7 +4,7 @@
   <deliverable name="HTML5" id="html">
     <context idref="html"/>
     <output href="."/>
-    <publication transtype="html5">
+    <publication transtype="html5-bootstrap">
       <param name="args.copycss" value="yes"/>
       <param name="args.css" value="custom.css"/>
       <param name="args.csspath" value="css"/>
