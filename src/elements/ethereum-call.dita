@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_iby_bfn_wmb">
-    <title>Ethereum:Call</title>
+    <title><codeph>&lt;ethereum:call></codeph> element</title>
     <shortdesc>The <codeph>Ethereum:Call</codeph> element gets information from an Ethereum smart
         contract.</shortdesc>
     <conbody>
