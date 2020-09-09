@@ -4,14 +4,27 @@
     <title>TokenScript XML Markup elements</title>
     <shortdesc>Reference of all elements that can be used in a TokenScript. </shortdesc>
     <refbody>
-        <example>
-            <p>
-                <note>Most elements start with "ts:", like &lt;ts:token> or &lt;ts:card>. However,
-                    elements like &lt;ethereum:call> or &lt;asxn:module> and some other like
-                    &lt;sequence> don't. If an element doesn't begin with "ts:", it will be
-                    noted.</note>
-            </p>
-        </example>
+        <section>
+            <title>Using namespace</title>
+            <p>TokenScript elements are under <xref href="namespace.dita">TokenScript
+                    namespace</xref>. That means TokenScript XML file's root element must use xmlns
+                to declare the namespace. You can observe how this is done in any one of the
+                examples.</p>
+            <p>TokenScript file <i>must</i> use a prefix to represent the namesapce.<fn>Actually,
+                    only if it contains an ASNX module, thanks to one of the quirkness defined in
+                    ASNX RFC4912. Since it's not sure when you will be using such a module, the rule
+                    of thumb is always use a prefix.</fn> In most examples we use "ts:", like
+                &lt;ts:token> or &lt;ts:card>. </p>
+            <p>However, ther are two exceptions:</p>
+            <ol id="ol_avt_1d3_ymb">
+                <li>Elements specific to a blockchhain are defiend in each blockchain's own
+                    namespace. For example: <xref href="ethereum-call.dita"/>. See <xref
+                        href="namespace.dita#namespace/section_esk_kd3_ymb"/>.</li>
+                <li>We use ASNX for data modeling, and such model is defined in &lt;asxn:module> .
+                    Any element inside &lt;asnx:module> is without perfix, such as
+                        <codeph>sequence</codeph>.</li>
+            </ol>
+        </section>
         <table id="table_dl4_w5m_qmb">
             <title>Root elements</title>
             <tgroup cols="2">
@@ -19,7 +32,7 @@
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
                 <thead>
                     <row>
-                        <entry>Elements</entry>
+                        <entry>Root Elements</entry>
                         <entry>Use</entry>
                     </row>
                 </thead>
@@ -35,38 +48,13 @@
                             Tokens. They must all come from the same token issuer as they are signed
                             by the same trust key.</entry>
                     </row>
+
                     <row>
-                        <entry><xref href="card.dita">card</xref></entry>
-                        <entry>Declares a Card, can be token, action or activity cards. </entry>
-                    </row>
-                    <row>
-                        <entry><xref href="cards.dita">cards</xref></entry>
+                        <entry><xref href="cards.dita"/></entry>
                         <entry>A container of multiple Cards. </entry>
-                    </row>
-                    <row>
-                        <entry><xref href="attribute.dita">attribute</xref></entry>
-                        <entry>Defines properties of a token which can be used by other
-                            elements.</entry>
-                    </row>
-                    <row>
-                        <entry><xref href="origin.dita">origins</xref></entry>
-                        <entry>Can be a root element to define the contract a token uses, but can
-                            also be inside attributes to get the source of an attribute, like
-                            through an ethereum call.</entry>
-                    </row>
-                    <row>
-                        <entry><xref href="contract.dita">contract</xref></entry>
-                        <entry>Defines information about the smart contracts to interact
-                            with.</entry>
-                    </row>
-                    <row>
-                        <entry><xref href="../DataObjects.dita">asnx:module</xref></entry>
-                        <entry>Creates / Defines data objects for TokenScript. </entry>
                     </row>
                 </tbody>
             </tgroup>
-            </table>
-        <table><title>Other Elements</title>
             <tgroup cols="3">
                 <colspec colname="c1" colnum="1" colwidth="1*"/>
                 <colspec colname="c2" colnum="2" colwidth="1*"/>
@@ -75,10 +63,40 @@
                     <row>
                         <entry>Elements</entry>
                         <entry>Use</entry>
-                        <entry>In Root</entry>
+                        <entry>Use in</entry>
                     </row>
                 </thead>
                 <tbody>
+                    <row>
+                        <entry><xref href="card.dita">card</xref></entry>
+                        <entry>Declares a Card, can be token, action or activity cards. </entry>
+                        <entry>Can only be in <xref href="cards.dita"/></entry>
+                    </row>                   <row>
+                        <entry><xref href="attribute.dita">attribute</xref></entry>
+                        <entry>Defines properties of a token which can be used by other
+                            elements.</entry>
+                        <entry>Can be in <xref href="token.dita"/> or <xref href="card.dita"
+                            /></entry>
+                    </row>
+                    <row>
+                        <entry><xref href="origin.dita">origins</xref></entry>
+                        <entry>Can be a root element to define the contract a token uses, but can
+                            also be inside attributes to get the source of an attribute, like
+                            through an ethereum call.</entry>
+                        <entry>In  <xref href="token.dita"/>, <xref href="card.dita"/>, or <xref
+                                href="attribute.dita"/></entry>
+                    </row>
+                    <row>
+                        <entry><xref href="contract.dita">contract</xref></entry>
+                        <entry>Defines information about the smart contracts to interact
+                            with.</entry>
+                        <entry>In <xref href="token.dita"/>.</entry>
+                    </row>
+                    <row>
+                        <entry><xref href="../DataObjects.dita">asnx:module</xref></entry>
+                        <entry>Creates / Defines data objects for TokenScript. </entry>
+                        <entry/>
+                    </row>
                     <row>
                         <entry><xref href="address.dita">address</xref></entry>
                         <entry>Declares the address of the token's smart contract. Is usually based
