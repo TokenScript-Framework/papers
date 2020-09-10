@@ -3,7 +3,7 @@
 <map id="map_b25_w1m_rmb">
     <title>TokenScript Guides</title>
 
-    <topicref href="specs/Intro.dita"/>
-
-    <topicref href="specs/EncodingAttestationInURI.dita"/>
+    <topicref href="specs/Intro.dita">
+        <topicref href="specs/EncodingAttestationInURI.dita"/>
+    </topicref>
 </map>
