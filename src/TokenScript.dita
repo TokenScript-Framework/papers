@@ -35,6 +35,78 @@
             a TokenScript. </p>
         <section>
             <title>TokenScript benefits </title>
+            <table id="table_uys_s4t_ymb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="newCol3" colnum="2" colwidth="1*"/>
+                    <colspec colname="newCol4" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry><b>Wallets</b></entry>
+                            <entry><b>without TokenScript</b></entry>
+                            <entry><b>with TokenScript</b></entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Understand token specific smart contract</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>can create token specific transactions</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>know the token specific history with all details</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>know offchain operations of a token</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>unlock token specific mini dapps</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>implements token specific rules</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>can import magic links</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>can trigger attestation processes and attestated
+                                transactions</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>add securely information to a token</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>render token appearance depending on the context</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                        <row>
+                            <entry>combine several token for customized operations</entry>
+                            <entry>no</entry>
+                            <entry>yes</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
             <p><b>For Token Issuers</b></p>
             <p dir="ltr">TokenScript enables token issuers to <b>leave the restrictions of smart
                     contracts behind</b>. It allows to add a lot of information, even image files or
