@@ -5,9 +5,9 @@
     <topicref href="Tokenization.dita"/>
     <topicref href="index.dita">
         <topicref href="TokenScript.dita"/>
+        <topicref href="WhatTokenscriptCanDo.dita"/>
         <topicref href="defiwithandwithoutts.dita"/>
         <topicref href="LivingExamples.dita"/>
-        <topicref href="WhatTokenscriptCanDo.dita"/>
     </topicref>
     <topicref href="QuickStart.dita"/>
     <topicref href="BasicConcepts.dita">
