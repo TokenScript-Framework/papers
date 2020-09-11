@@ -1,19 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
-<reference id="reference_n2d_m1x_ymb">
-    <title>TokenScript Tools </title>
-    <shortdesc>ts-sign - TokenScript signing tool</shortdesc>
-    <refbody>
-        <refsyn id="refsyn_dcx_jkx_ymb">
-          <cmdname>ts-sign</cmdname> <codeph>--keyfile</codeph> <codeph>[FILE]</codeph>
-      </refsyn>
-      <section><title>Description</title>
-        <p>Sign the TokenScript FILEs. <dl>
-                    <dlentry>
-                      <dt><parmname>--keyfile</parmname></dt>
-                      <dd>The file where the key is stored</dd>
-                    </dlentry>
-                </dl></p>
-        </section>
-    </refbody>
+<reference id="cli_reference_ts-sign">
+  <title>Parameters for the 
+  <cmdname>ts-sign</cmdname> commmand</title>
+  <shortdesc>ts-sign - TokenScript signing tool</shortdesc>
+  <refbody>
+    <refsyn id="refsyn_dcx_jkx_ymb">
+      <syntaxdiagram>
+        <fragment>
+          <groupseq>
+            <kwd>ts-sign</kwd>
+            <kwd>--key</kwd>
+            <oper>=</oper>
+            <var>key</var>
+            <kwd>--keyform</kwd>
+            <oper>=</oper>
+            <var>name</var>
+            <groupcomp importance="optional">
+              <var>options</var>
+            </groupcomp>
+            <var>[FILE]</var>
+          </groupseq>
+        </fragment>
+      </syntaxdiagram>
+    </refsyn>
+    <section>
+      <title>Description</title>
+      <p>Sign the TokenScript FILEs. </p>
+      <parml>
+        <plentry>
+          <pt>
+            <parmname>--key</parmname>=<varname>key</varname></pt>
+          <pt>
+            <parmname>-k</parmname>
+            <varname>key</varname>
+          </pt>
+	  <pd>Specifies the key to use to sign the TokenScript.</pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--keyform</parmname>=<varname>name</varname></pt>
+                <pd>
+                  <p>The form in which the signing key comes: DEM, PEM, ETHEREUM (Ethereum's JSON
+              keystore). The value is case insensitivie. If a signing modue is configured (for
+              PKCS11 or other wallet / HSM), additional values are possible depending on the engine.
+              to automatically determine from the key's file extension name. If the file name ends </p>
+                </pd>
+        </plentry>
+      </parml>
+    </section>
+  </refbody>
 </reference>
