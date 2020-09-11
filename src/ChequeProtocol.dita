@@ -33,7 +33,7 @@
             <li>Using the Cheque, and the email address attestation, Bob redeems the 1 Eth
                 promised.</li>
             </ol>
-        <p>In such a case, implementors should not be left to roll out their own crypto, but rather
+        <p>In such a case, implementers should not be left to roll out their own crypto, but rather
             take an existing library to protect Bob's email address from being learned by any
             observer. Cheque protocol included the necessary crypto - in this case Pedersen
             Commitment and Zero Knowledge Proof - so that blockchain Token developers can implement

@@ -57,7 +57,7 @@
                 smart contracts. It would even be possible for the authors of smart contracts to
                 write TokenScripts coverings their contract on behalf of token issuers.</p>
         </section>
-        <section audience="implementor"><title>Signing referred resources</title>
+        <section audience="implementer"><title>Signing referred resources</title>
             <p dir="ltr">Any data reference - icons, images and language packs - used by the
                 TokenScript must be referred to in the <codeph>&lt;SignedInfo></codeph> section of
                 the XML signature using the <codeph>&lt;Reference></codeph> element. If they don’t,
