@@ -6,18 +6,14 @@ ifeq (,$(findstring net.infotexture.dita-bootstrap,$(DITA_PLUGINS)))
 $(shell $(DITA_EXEC) --install net.infotexture.dita-bootstrap)
 endif
 
-site:
-	test -d out && rm -rf out
-	$(DITA_EXEC) --project config/website.yaml
-
-implementor-site:
-	test -d out && rm -rf out
-	$(DITA_EXEC) --project config/implementor-site.yaml
+%: config/%.yaml
+	-test -d out/$@ && rm -rf out/$@
+	$(DITA_EXEC) --project $^ -o out/$@
 
 upload-docs-site: implementor-site
-	lftp -c 'open www.cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ docs.tokenscript.org/'
+	lftp -c 'open www.cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/$^/ docs.tokenscript.org/'
 
-upload-main-site: site
-	lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ ./'
+upload-main-site: website
+	lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/$^/ ./'
 
 upload: upload-docs-site upload-main-site
