@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_n2d_m1x_ymb">
+    <title>TokenScript Tools </title>
+    <shortdesc>ts-sign - TokenScript signing tool</shortdesc>
+    <refbody>
+        <refsyn id="refsyn_dcx_jkx_ymb">
+          <cmdname>ts-sign</cmdname> <codeph>--keyfile</codeph> <codeph>[FILE]</codeph>
+      </refsyn>
+      <section><title>Description</title>
+        <p>Sign the TokenScript FILEs. <dl>
+                    <dlentry>
+                      <dt><parmname>--keyfile</parmname></dt>
+                      <dd>The file where the key is stored</dd>
+                    </dlentry>
+                </dl></p>
+        </section>
+    </refbody>
+</reference>
