@@ -10,7 +10,7 @@ endif
 	-test -d out/$@ && rm -rf out/$@
 	$(DITA_EXEC) --project $^ -o out/$@
 
-upload-docs-site: implementor-site
+upload-docs-site: implementer-site
 	lftp -c 'open www.cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/$^/ docs.tokenscript.org/'
 
 upload-main-site: website
