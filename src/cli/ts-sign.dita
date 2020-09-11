@@ -36,16 +36,26 @@
             <parmname>-k</parmname>
             <varname>key</varname>
           </pt>
-	  <pd>Specifies the key to use to sign the TokenScript.</pd>
+	  <pd><p>Specifies the key to use to sign the TokenScript. This can be a file name, or a key ID if a
+              hardware signing module is used.</p>
+        <note audience="implementor">Presently, the capacity to connect to a PKCS11 signing module
+        is not required. Implementor be aware that such capacity is to be added eventually.</note>
+        <p>This parameter can be specified multiple times for multiple keys, since a TokenScript can be
+              signed with a <term>Reputation Key</term> and many <term>Trust Keys</term>. See the
+              definition of these keys in TokenScript documents.</p></pd>
         </plentry>
         <plentry>
           <pt>
-            <parmname>--keyform</parmname>=<varname>name</varname></pt>
+            <parmname>--keyform</parmname>=<varname>formname</varname></pt>
                 <pd>
-                  <p>The form in which the signing key comes: DEM, PEM, ETHEREUM (Ethereum's JSON
-              keystore). The value is case insensitivie. If a signing modue is configured (for
-              PKCS11 or other wallet / HSM), additional values are possible depending on the engine.
-              to automatically determine from the key's file extension name. If the file name ends </p>
+                  <p>The form in which the signing key comes: DER, PEM, Ethereum (Ethereum's JSON
+              keystore). The value is case insensitive. When a signing module is configured (for
+              PKCS11 or other wallet / HSM), additional values are possible depending on the
+              engine.</p>
+            <p>If unspecified, and <parmname>key</parmname> refers to a file, then the form is
+              determined from the file's extension name.</p><note audience="implementor">the file
+                extension names recognised are .der, .pem, .json (meaning Ethereum's JSON keystore
+                format).</note>
                 </pd>
         </plentry>
       </parml>
