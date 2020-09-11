@@ -38,7 +38,7 @@
           </pt>
 	  <pd><p>Specifies the key to use to sign the TokenScript. This can be a file name, or a key ID if a
               hardware signing module is used.</p>
-        <note audience="implementor">Presently, the capacity to connect to a PKCS11 signing module
+        <note audience="implementer">Presently, the capacity to connect to a PKCS11 signing module
         is not required. Implementor be aware that such capacity is to be added eventually.</note>
         <p>This parameter can be specified multiple times for multiple keys, since a TokenScript can be
               signed with a <term>Reputation Key</term> and many <term>Trust Keys</term>. See the
@@ -53,7 +53,7 @@
               PKCS11 or other wallet / HSM), additional values are possible depending on the
               engine.</p>
             <p>If unspecified, and <parmname>key</parmname> refers to a file, then the form is
-              determined from the file's extension name.</p><note audience="implementor">the file
+              determined from the file's extension name.</p><note audience="implementer">the file
                 extension names recognised are .der, .pem, .json (meaning Ethereum's JSON keystore
                 format).</note>
                 </pd>

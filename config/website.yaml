@@ -3,7 +3,7 @@ deliverables:
   context:
     input: "../webroot.ditamap"
     profiles:
-      ditavals: "no-implementor.ditaval"
+      ditavals: "no-implementer.ditaval"
   publication:
     transtype: "html5-bootstrap"
     params:
