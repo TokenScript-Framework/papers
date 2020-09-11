@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_ujr_qyw_ymb">
-    <title>TokenScript commandline tool</title>
+    <title>TokenScript Tools</title>
     <shortdesc>tokenscript - checks, signs, deploy TokenScripts</shortdesc>
     <refbody>
         <refsyn id="refsyn_h3c_vyw_ymb">
