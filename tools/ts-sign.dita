@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="cli_reference_ts-sign">
-  <title>Parameters for the 
-  <cmdname>ts-sign</cmdname> commmand</title>
+  <title>Parameters for the <cmdname>ts-sign</cmdname> command</title>
   <shortdesc>ts-sign - TokenScript signing tool</shortdesc>
   <refbody>
     <refsyn id="refsyn_dcx_jkx_ymb">
@@ -13,20 +12,22 @@
             <kwd>--key</kwd>
             <oper>=</oper>
             <var>key</var>
-            <kwd>--keyform</kwd>
-            <oper>=</oper>
-            <var>name</var>
             <groupcomp importance="optional">
-              <var>options</var>
+              <kwd>--keyform</kwd>
+              <oper>=</oper>
+              <var>name</var>
             </groupcomp>
-            <var>[FILE]</var>
+            <groupcomp importance="optional">
+              <var>[FILE]...</var>
+            </groupcomp>
           </groupseq>
         </fragment>
       </syntaxdiagram>
     </refsyn>
     <section>
       <title>Description</title>
-      <p>Sign the TokenScript FILEs. </p>
+      <p>Sign the TokenScript <parmname>FILE</parmname> - if unspecified, the standard input is
+        read.</p>
       <parml>
         <plentry>
           <pt>
