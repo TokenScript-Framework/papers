@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_y3c_tv2_pmb">
-    <title>Distinct Attributes</title>
-    <shortdesc>Distinct attributes defines whether or not there is a token, or how many are
-        there.</shortdesc>
+    <title>Distinct Attribute</title>
+    <shortdesc>If an attribute is distinct, it is used to identify a token.</shortdesc>
     <conbody>
       <p>A distinct attribute is a <xref href="../Attributes.dita">Token Attribute</xref> that has
                 <codeph>distinct</codeph> set to
@@ -43,16 +42,16 @@
           <title>You have 1 contract that defines 2 tokens</title>
             <p>For example, you can have 2 TokenScript files. </p>
             <p>The first
-                has:<codeblock>&lt;token name="tokenA">
+        has:<codeblock>&lt;token name="tokenA">
   …
-  &lt;attribute name="tokenID" distinct="true">
+  &lt;attribute name="tokenID" <b>distinct="true"</b>>
     &lt;origins>
       &lt;ethereum:call function="getTokenABalance" contract="MyContract" as="uint"/>
     &lt;/origins>
   &lt;/attribute></codeblock></p>            <p>The second
-                has:<codeblock>&lt;token name="tokenB">
+        has:<codeblock>&lt;token name="tokenB">
   …
-  &lt;attribute name="tokenID" distinct="true">
+  &lt;attribute name="tokenID" <b>distinct="true"</b>>
     &lt;origin>
       &lt;ethereum:call function="getTokenBalance" contract="MyContract" as="uint"/>
     &lt;/origin>
@@ -66,9 +65,9 @@
         <example>
             <title>A Smart Token identified by a customised attribute</title>
             <p>For example, you have one token defined like
-                this:<codeblock>&lt;token name="car">
+        this:<codeblock>&lt;token name="car">
   …
-  &lt;attribute name="VIN" distinct="true">
+  &lt;attribute name="VIN" <b>distinct="true"</b>>
     &lt;origins>
       &lt;ethereum:call function="getCars" contract="CarContract"/>
     &lt;/origins>
