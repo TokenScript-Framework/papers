@@ -10,42 +10,62 @@
             true:<codeblock>&lt;attribute name="balance" distinct="true">
 …
 &lt;/attribute></codeblock></p>
-        <p>It instructs the TokenScript engine to create the number of tokens equal to the number of
-            unique values of this attributes.</p>
-      <p>This is useful if:</p><ul id="ul_ezz_gbf_pmb">
-                <li>You have one contract but it is the origination of multiple tokens to the user,
-                    each token can have a TokenScript that defines a different distinct
-                    attribute.</li>
-                <li>You have multiple non-fungible tokens from the same contract.</li>
-            </ul>
+        <p>The number of unique values of this attribute is the number of token instances. The
+            TokenScript engine records each value and uses that to identify each token.</p>
+        <p>If there is no distinct attribute defined, TokenScript takes <codeph>ownerAddress=${ownerAddress}</codeph> as its RDN.</p>
+        <example>
+            <title>Getting Multiple instances of the token defined</title>
+            <p>The following code defines a distinct attribute called <varname>tokenId</varname>. If
+                the smart contract returns 2 values for it: <ul id="ul_xdd_kcw_zmb">
+                    <li><codeph>0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
+                    <li><codeph>0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
+                </ul> then the TokenScript engine identifies 2 tokens, each identified with:
+                <ul>
+                <li><codeph>tokenID=0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
+                <li><codeph>tokenID=0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
+                </ul>
+            </p>
+            <codeblock>&lt;ts:attribute name="tokenId" <b>distinct="true"></b>
+  &lt;ts:type>
+    &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.40&lt;/ts:syntax>
+  &lt;/ts:type>
+  &lt;ts:origins>
+    &lt;ethereum:call function="balanceOf" contract="EntryToken">
+      &lt;ts:data>
+        &lt;ts:uint256 ref="ownerAddress">&lt;/ts:uint256>
+      &lt;/ts:data>
+    &lt;/ethereum:call>
+  &lt;/ts:origins>
+&lt;/ts:attribute></codeblock>
+        </example>
 
-        <section id="section_yzy_jbf_pmb">
-          <title>Scenario 1: You have 1 contract that defines more than 1 token</title>
+        <example>
+          <title>You have 1 contract that defines 2 tokens</title>
             <p>For example, you can have 2 TokenScript files. </p>
             <p>The first
                 has:<codeblock>&lt;token name="tokenA">
   …
-  &lt;attribute name="balance" distinct="true">
+  &lt;attribute name="tokenID" distinct="true">
     &lt;origins>
       &lt;ethereum:call function="getTokenABalance" contract="MyContract" as="uint"/>
     &lt;/origins>
   &lt;/attribute></codeblock></p>            <p>The second
                 has:<codeblock>&lt;token name="tokenB">
   …
-  &lt;attribute name="balance" distinct="true">
+  &lt;attribute name="tokenID" distinct="true">
     &lt;origin>
-      &lt;ethereum:call function="getTokenBBalance" contract="MyContract" as="uint"/>
+      &lt;ethereum:call function="getTokenBalance" contract="MyContract" as="uint"/>
     &lt;/origin>
   &lt;/attribute></codeblock></p>
-            <p>Suppose both returns a value. Although two TokenScript files refer to the same
-                contract "MyContract", and even if they point to the same contract address, a
-                TokenScript engine should interpret that there are two tokens. However, if both
-                TokenScripts has the same distinct attribute from the same value, it's an error and
-                the engine might err, or choose to use one of them only.</p>
-        </section>
-        <section id="section_hpz_scf_pmb">
-            <title>Scenario 2: You defined an non-fungible token</title>
-            <p>For example, you have 1 TokenScript file like
+            <p>Although two tokens refer to the same contract "MyContract", and even if they point
+                to the same contract address, a TokenScript engine is able to interpret that there
+                are two tokens.</p>
+            <p>However, if both TokenScripts has the same distinct attribute from the same origin,
+                it's an error.</p>
+        </example>
+        <example>
+            <title>A Smart Token identified by a customised attribute</title>
+            <p>For example, you have one token defined like
                 this:<codeblock>&lt;token name="car">
   …
   &lt;attribute name="VIN" distinct="true">
@@ -57,7 +77,7 @@
                 interpret that there are that many number of Car Tokens, each with a different
                 distinct VIN (Vehicle Identification Number), all of these Car Tokens are instances
                 defined by this single TokenScript file.</p>
-        </section>
+        </example>
 
     </conbody>
 </concept>
