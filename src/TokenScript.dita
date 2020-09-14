@@ -4,26 +4,28 @@
     <title>TokenScript Overview</title>
     <conbody>
 	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
-            Tokenisation framework. It wraps HTML and JavaScript code to express Token
-            functionalities and makes them deployable in the wallet and on websites. With
+            Tokenisation framework. It wraps HTML, JavaScript and XML to express Token
+            functionalities and make them deployable in the wallet and on websites. With
             TokenScript, any token can unlock its customized mini Dapp. </p>
         <p>TokenScript creates a <xref href="TokenLayer.dita"/>: A <xref href="DataDriven.dita"/>,
-            and <xref href="ContextBased.dita"/> layer between the blockchain and the user. For this
-            TokenScript uses token as the basic unit.</p>
+            and <xref href="ContextBased.dita"/> layer between the blockchain and the user. On this
+            layer, token are the basic unit to structure the interaction between users and
+            blockchains.</p>
 	    <p dir="ltr">TokenScript consists of two parts:</p>
         <ul id="ul_omt_14t_ymb">
             <li dir="ltr">TokenScript Engine, which works in the user's wallet, on the web or in a
-                browser plugin. The TokenScript Engine provides the runtime <xref
-                    href="TokenLayer.dita">Token Layer</xref> for tokens to be used on 3rd party
-                websites.</li>
-            <li dir="ltr"><xref href="TokenScript-Component.dita"/> are issued and signed by the
-                corresponding Token Issuer. They provide additional token information, structure the
-                token UX in the wallets, and append rules, data moduls, transaction security
-                measurements and much more. </li>
+                browser plugin. The TokenScript Engine provides the runtime environment for tokens
+                to be used on 3rd party websites.</li>
+            <li dir="ltr">The<xref href="TokenScript-Component.dita"/> wraps XML, HTML and
+                JavaScript and is issued and signed by the corresponding Token Issuer. It can be
+                imported by any service or device which implemented TokenScript Engine. The file
+                provides additional token information, structures the token UX in the wallets, and
+                appends rules, data moduls, transaction security measurements and much more. </li>
         </ul>
         <p dir="ltr">TokenScript files are <xref href="Signing.dita">signed by the creator of the
                 token smart contract or a trusted source</xref> with a public key. Wallets and dApps
-            can import and verify the files.</p>
+            can import and verify the files and make sure users only get authorized TokenScripts
+            from trusted sources.</p>
         <p dir="ltr">TokenScript is blockchain agnostic. The main focus of our development is based
             on Ethereum token. But it can be adopted to other blockchains and even combine token and
             interactions of different blockchains. TokenScript is not a standard for token, but
@@ -49,7 +51,7 @@
                     </thead>
                     <tbody>
                         <row>
-                            <entry>Understand token specific smart contract</entry>
+                            <entry>Understand token specific smart contracts</entry>
                             <entry>no</entry>
                             <entry>yes</entry>
                         </row>
@@ -64,7 +66,7 @@
                             <entry>yes</entry>
                         </row>
                         <row>
-                            <entry>know offchain operations of a token</entry>
+                            <entry>executes offchain operations of a token</entry>
                             <entry>no</entry>
                             <entry>yes</entry>
                         </row>
@@ -90,7 +92,7 @@
                             <entry>yes</entry>
                         </row>
                         <row>
-                            <entry>add securely information to a token</entry>
+                            <entry>display validated information about a token</entry>
                             <entry>no</entry>
                             <entry>yes</entry>
                         </row>
@@ -108,10 +110,10 @@
                 </tgroup>
             </table>
             <p><b>For Token Issuers</b></p>
-            <p dir="ltr">TokenScript enables token issuers to <b>leave the restrictions of smart
-                    contracts behind</b>. It allows to add a lot of information, even image files or
-                API lookups to a token, and design a set of business rules and interaction logics
-                for it, including <xref href="Attestation.dita">attestations</xref> and structured
+            <p dir="ltr">TokenScript enables token issuers to leave the restrictions of smart
+                contracts behind. It allows to add a lot of information, even image files or API
+                lookups to a token, and design a set of business rules and interaction logics for
+                it, including <xref href="Attestation.dita">attestations</xref> and structured
                 interactions with other tokens. </p>
             <p dir="ltr">Moreover, with TokenScript token issuers can easily and securely update the
                 token rules.</p>
