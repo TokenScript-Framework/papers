@@ -3,6 +3,6 @@
 <map>
     <title>Features and Implementations</title>
     <topicref href="FeatureImplementation.dita">
-        <topicref href="DistinctAttributes.dita"/>
+        <topicref href="DistinctAttribute.dita"/>
     </topicref>
 </map>
