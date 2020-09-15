@@ -8,10 +8,10 @@ deliverables:
     transtype: "html5-bootstrap"
     params:
     - name: "args.hdr"
-      href: "../navbar.xml"
+      href: "navbar.xml"
     - name: "args.hdf"
-      href: "../fonts.xml"
+      href: "fonts.xml"
     - name: "args.css"
       value: "custom.css"
     - name: "args.cssroot"
-      path: "../"
+      path: "./"
