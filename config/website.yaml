@@ -10,7 +10,7 @@ deliverables:
     - name: "args.hdr"
       href: "navbar.xml"
     - name: "args.hdf"
-      href: "fonts.xml"
+      href: "hdf.xml"
     - name: "args.css"
       value: "custom.css"
     - name: "args.cssroot"
