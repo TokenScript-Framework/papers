@@ -7,19 +7,22 @@
         your TokenScript.</shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-1d4e618f-7fff-5cbf-a973-b4ead0df755d">The TokenScript
-            files can be signed by two keys, and ideally, by both of them.<dl>
+            files can be signed by two kinds of keys, one relates to the <i>identity</i> of the
+            issuer and the other links to the <i>smart contracts</i> it interacts with.<dl>
                 <dlentry>
                     <dt>Reputation Key</dt>
-                    <dd>Identifies who signed the tokenscript by a <term>common name</term> such as the issuer's
-                        web domain name.</dd>
+                    <dd>Associate the signer with an identity such as a domain name. e.g.
+                        "aave.com". </dd>
                 </dlentry>
                 <dlentry>
                     <dt><xref href="TokenScript-TrustKey.dita">Trust Key</xref></dt>
-                    <dd>Trust key <b>associates a smart contract with a signer</b>, so the user
-                        agent knows it's safe to use the signed TokenScript to create transactions
-                        for the smart contract.</dd>
+                    <dd>Used for transaction security. If a smart contract's trust key signs a
+                        TokenScript, the transaction generated from that TokenScript is displayed
+                        with a trust badge. This is similar to how a website might be displayed with
+                        a trust badge if it properly uses https.</dd>
                 </dlentry>
             </dl></p>
+        <p>Both keys can be the same.</p>
         <p dir="ltr"><keyword>Reputation key</keyword> let's user accept the TokenScript based on the reputation of the
             website or organisation. In the simpliest case, a website SSL certificate with the
             corrisponding key will do. A <xref href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate" format="html" scope="external">EV certificate</xref> would be better.</p>
