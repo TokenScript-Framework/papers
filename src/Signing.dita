@@ -8,17 +8,12 @@
             files are signed for two distinct reasons.</p>
         <p dir="ltr">First, to associate the TokenScript to the <i>identity</i> of the issuer.</p>
         <p dir="ltr">Second, to link to the <i>smart contracts</i> it interacts with.</p>
-        <p dir="ltr">This can be done with one signing keys or two seperate singing keys, depending
-            on the management style or whether or not the issuer is in the same organsation as the
-            smart contract author.</p>
-        <p>In the simplest scenario, where only one signing key is involved, there are two things to
-            be done for the two purposes.</p>
         <p dir="ltr">
             <dl>
                 <dlentry>
                     <dt>Associate the signature with an identity</dt>
-                    <dd>Associate the signer with an identity, such as a domain name - e.g.
-                        "aave.com" - by attaching a certificate to the Signature. Domain cerifiicate
+                    <dd>Associate the signature with an identity, such as a domain name - e.g.
+                        "aave.com" - by attaching a certificate to the signature. Domain cerifiicate
                         is the most convenient type to obtain, but any identity that can be
                         ceritified through a trusted X.509 certificate authority should do.</dd>
                 </dlentry>
@@ -31,19 +26,19 @@
                 </dlentry>
             </dl>
         </p>
-        <p>The former is done during signing of the TokenScript; the second is done separately,
-            outside of TokenScript singning.</p>
-        <p>TokenScript can't be deployment if it is unsigned. But you can debug an unsigned
-            TokenScript (they will be dispalyed as untrusted by TokenScript engines).</p>
+        <p>The former is done <i>during</i> signing of the TokenScript; the second is done
+                <i>separately</i>, outside of TokenScript signing.</p>
+        <p>TokenScript can't be deployed for production use if it is unsigned. But you can debug an
+            unsigned TokenScript (they will be displayed as untrusted by TokenScript engines).</p>
         
         <section audience="implementer">
-            <title>Sometimes, parts of TokenScript has to be signed twice</title>
+            <title>Sometimes, parts of TokenScript have to be signed twice</title>
             <p>We recommend a TokenScript signature always be associated with an identity through an
                 certificate.</p>
             <p>However, the Smart Contract might be from a different team than the TokenScript
                 author, where wholesale trust to the identity is not possible.</p>
             <p>For example, AAVE team might create a token action for DAI token that is called
-                "Enable Deposite to AAVE". This effecitvely authorises Uniswap's smart contract to
+                "Enable Deposit to AAVE". This effecitvely authorises Uniswap's smart contract to
                 act on-behalf of AAVE token holder. Since such an action transacts to the DAI token
                 contract, that token contract need to express trust to that action's code.</p>
             <p>AAVE team reaches out to the DAI team, and ask DAI token contract to express trust by
@@ -55,7 +50,7 @@
                 identity "makerdao.com". And AAVE team has to send their TokenScript - at least the
                 relevant action part - to the DAI team to be signed by that key.</p>
             <p>This would result in a TokenScript that is signed 2 times. </p>
-            <p>A TokenScript Engien would identify the two signatures as such: one that expresses
+            <p>A TokenScript Engine would identify the two signatures as such: one that expresses
                 authorship, the other was trusted by the smart contract through associated
                 identity.</p>
             <p>In such a scenario, the identity of the authorship is always displayed to the user,
@@ -74,11 +69,11 @@
                     <dlentry>
                         <dt>Reputation Key</dt>
                         <dd>let's user accept the TokenScript based on the reputation of the website
-                            or organisation. In the simpliest case, a website SSL certificate with
-                            the corrisponding key will do. A <xref
-                                href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate"
-                                format="html" scope="external">EV certificate</xref> would be
-                            better.</dd>
+                        or organisation. In the simpliest case, a website SSL certificate with the
+                        corresponding key will do. A <xref
+                            href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate"
+                            format="html" scope="external">EV certificate</xref> would be
+                        better.</dd>
                         </dlentry>
                     <dlentry>
                         <dt>Trust Key</dt>
@@ -89,7 +84,7 @@
                 </dl>
         </section>
         <section><title>Does the signer need to be the smart contract author?</title>
-        <p dir="ltr">It's not required, even though it often is the case.</p>
+        <p dir="ltr">It's not required, even though it's often the case.</p>
             <p>TokenScript can be maintained by a member of your team who isn't the smart contract
                 developer or administrator. In this case, the smart contract needs to express trust
                 to the key or the identifier of the key.</p>
