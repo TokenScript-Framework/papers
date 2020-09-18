@@ -2,63 +2,102 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_mq2_zlg_nmb">
     <title>Signing a TokenScript</title>
-    <shortdesc>TokenScript files are signed by the token issuer or a trusted third party, so that a
-        wallet can verify the TokenScript. Learn about the underlying trust models and how to sign
-        your TokenScript.</shortdesc>
+    <shortdesc>TokenScript files are signed by the token issuer, usually.</shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-1d4e618f-7fff-5cbf-a973-b4ead0df755d">The TokenScript
-            files can be signed by two kinds of keys, one relates to the <i>identity</i> of the
-            issuer and the other links to the <i>smart contracts</i> it interacts with.<dl>
+            files are signed for two distinct reasons.</p>
+        <p dir="ltr">First, to associate the TokenScript to the <i>identity</i> of the issuer.</p>
+        <p dir="ltr">Second, to link to the <i>smart contracts</i> it interacts with.</p>
+        <p dir="ltr">This can be done with one signing keys or two seperate singing keys, depending
+            on the management style or whether or not the issuer is in the same organsation as the
+            smart contract author.</p>
+        <p>In the simplest scenario, where only one signing key is involved, there are two things to
+            be done for the two purposes.</p>
+        <p dir="ltr">
+            <dl>
                 <dlentry>
-                    <dt>Reputation Key</dt>
-                    <dd>Associate the signer with an identity such as a domain name. e.g.
-                        "aave.com". </dd>
+                    <dt>Associate the signature with an identity</dt>
+                    <dd>Associate the signer with an identity, such as a domain name - e.g.
+                        "aave.com" - by attaching a certificate to the Signature. Domain cerifiicate
+                        is the most convenient type to obtain, but any identity that can be
+                        ceritified through a trusted X.509 certificate authority should do.</dd>
                 </dlentry>
                 <dlentry>
-                    <dt><xref href="TokenScript-TrustKey.dita">Trust Key</xref></dt>
-                    <dd>Used for transaction security. If a smart contract's trust key signs a
-                        TokenScript, the transaction generated from that TokenScript is displayed
-                        with a trust badge. This is similar to how a website might be displayed with
-                        a trust badge if it properly uses https.</dd>
+                    <dt><xref href="Express-Of-Trust.dita">Link TokenScript with smart contracts</xref></dt>
+                    <dd>Used for transaction security. If a smart contract trusts TokenScript, the
+                        transaction generated from that TokenScript is displayed with a trust badge.
+                        This is similar to how a website might be displayed with a trust badge if it
+                        properly uses https.</dd>
                 </dlentry>
-            </dl></p>
-        <p>Both keys can be the same.</p>
-        <p dir="ltr"><keyword>Reputation key</keyword> let's user accept the TokenScript based on the reputation of the
-            website or organisation. In the simpliest case, a website SSL certificate with the
-            corrisponding key will do. A <xref href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate" format="html" scope="external">EV certificate</xref> would be better.</p>
-        <p><keyword>Trust Key</keyword> is either returned as part of the metadata of a Smart
-            Contract, or, if the Smart Contract doesn't support returning such meta-data, through an
-            express-of-trust transaction from the Smart Contract's deployment key.</p>
+            </dl>
+        </p>
+        <p>The former is done during signing of the TokenScript; the second is done separately,
+            outside of TokenScript singning.</p>
+        <p>TokenScript can't be deployment if it is unsigned. But you can debug an unsigned
+            TokenScript (they will be dispalyed as untrusted by TokenScript engines).</p>
         
-        <section>
-            <title>Should I use one of the two types of keys, or both?</title>
-            <p>We recommend you always sign with a <keyword>Reputation key</keyword>. When a user
-                uses a TokenScript, his wallet displays the domain name or organisation name of the
-                certificate. It's up to the user if he trusts the TokenScript.</p>
-            <p>On top of that, you should sign with a <keyword>Trust key</keyword> for <i>each</i>
-                Smart Contract that this TokenScript will send transaction to. It is easier to do so
-                if all of the smart contracts has the same <keyword>Trust key</keyword>, so you only
-                need to sign with that key. But in the event that this is not possible (e.g. the
-                TokenScript accesses smart contracts produced by different teams), multiple trust
-                keys might be supplied for the signing.</p>
-            <p>If you leave out signing with a <keyword>Trust key</keyword> then the user-agent will
-                not display a "trusted icon" when the user produces a transaction.</p>
-            <p>TokenScript can't be deployment if it is unsigned. But you can debug an unsigned
-                TokenScript by manually installing it to your mobile phone.</p>
+        <section audience="implementer">
+            <title>Sometimes, parts of TokenScript has to be signed twice</title>
+            <p>We recommend a TokenScript signature always be associated with an identity through an
+                certificate.</p>
+            <p>However, the Smart Contract might be from a different team than the TokenScript
+                author, where wholesale trust to the identity is not possible.</p>
+            <p>For example, AAVE team might create a token action for DAI token that is called
+                "Enable Deposite to AAVE". This effecitvely authorises Uniswap's smart contract to
+                act on-behalf of AAVE token holder. Since such an action transacts to the DAI token
+                contract, that token contract need to express trust to that action's code.</p>
+            <p>AAVE team reaches out to the DAI team, and ask DAI token contract to express trust by
+                identity, in this case, "aave.com". DAI token contract team reasonablly rejected the
+                proposal, since they don't know what TokenScript AAVE team will sign - in the worst
+                case, it could be a "Try me" action which simply steals user's AAVE tokens from the
+                contract.</p>
+            <p>In this case, DAI contract will only express trust towards a key associated with the
+                identity "makerdao.com". And AAVE team has to send their TokenScript - at least the
+                relevant action part - to the DAI team to be signed by that key.</p>
+            <p>This would result in a TokenScript that is signed 2 times. </p>
+            <p>A TokenScript Engien would identify the two signatures as such: one that expresses
+                authorship, the other was trusted by the smart contract through associated
+                identity.</p>
+            <p>In such a scenario, the identity of the authorship is always displayed to the user,
+                while if the user is to perform the action, the express of trust is evaluated and
+                the result is displayed together with the identity involved (in this case,
+                "makerdao.com").</p>
+        </section>
+        <section audience="implementer">
+            <title>It's possible to express trust to a key, instead of an identifer</title>
+            <p>Can a smart contract expresses trust to a signing key instead of an identifier such
+                as domain name?</p>
+            <p>Such a need is discussed in the TokenScript weekly committee meeting however we don't
+                know how practically they are needed, so this section is only available for
+                implementers as reference material. In that case, each key has a name.</p>
+            <dl>
+                    <dlentry>
+                        <dt>Reputation Key</dt>
+                        <dd>let's user accept the TokenScript based on the reputation of the website
+                            or organisation. In the simpliest case, a website SSL certificate with
+                            the corrisponding key will do. A <xref
+                                href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate"
+                                format="html" scope="external">EV certificate</xref> would be
+                            better.</dd>
+                        </dlentry>
+                    <dlentry>
+                        <dt>Trust Key</dt>
+                        <dd>is either returned as part of the metadata of a Smart
+            Contract, or, if the Smart Contract doesn't support returning such meta-data, through an
+            express-of-trust transaction from the Smart Contract's deployment key</dd>
+                    </dlentry>
+                </dl>
         </section>
         <section><title>Does the signer need to be the smart contract author?</title>
-        <p dir="ltr">Express of Trust requires to sign the files with a key associated with
-            TokenScript. This can be done by the Token issuer himself with a key associated with the
-            smart contract which created the token. </p>
+        <p dir="ltr">It's not required, even though it often is the case.</p>
+            <p>TokenScript can be maintained by a member of your team who isn't the smart contract
+                developer or administrator. In this case, the smart contract needs to express trust
+                to the key or the identifier of the key.</p>
         <p dir="ltr">But it can also be done by another party, which gained trust from the token
-                issuer. This can be done by a transaction to the public key of the TokenScript
-                author or by a modification of the token smart contract to return the TokenScript
-                author’s key.</p>
-        <p dir="ltr">It is important to be able to delegate the trust from the token issuer to other
-                parties. For example, someone created a dollar token, but doesn’t want to create all
-                the TokenScrips necessary. So another party can write them to cover all kinds of
-                smart contracts. It would even be possible for the authors of smart contracts to
-                write TokenScripts coverings their contract on behalf of token issuers.</p>
+                issuer. In this case, it's better if the TokenScript, or the relative portion, be
+                signed twice. Once by the author of the TokenScript - aw.app, AlphaWallet, made some
+                TokenScript on behalf of the Token Issuer - and once by the Token Issuer
+                themselves.</p>
         </section>
         <section audience="implementer"><title>Signing referred resources</title>
             <p dir="ltr">Any data reference - icons, images and language packs - used by the
@@ -69,4 +108,5 @@
                 the references fails to download or the digest doesn't match, the entire XML
                 signature is considered invalid.</p></section>
     </conbody>
+
 </concept>
