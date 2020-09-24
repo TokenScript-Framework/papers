@@ -45,6 +45,60 @@
             <relcell/>
             <relcell>
                 <topicref href="elements/card.dita"/>
+                <topicref href="elements/cards.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="Attributes.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/attribute.dita"/>
+                <topicref href="elements/origin.dita"/>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="TokenScript-Component.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/contract.dita"/>
+                <topicref href="elements/address.dita"/>
+                <topicref href="elements/token.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="DataObjects.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/element.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="elements/ethereum-transaction.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/address.dita"/>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="elements/ethereum-call.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
             </relcell>
         </relrow>
     </reltable>
