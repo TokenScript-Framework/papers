@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_ujp_djr_cnb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Blockchain integrates the web</title>
     <conbody>
-        <p></p>
+        <p>
+            <section id="section_ubb_fjr_cnb">
+                <title>The problem of the internet as we know it</title>
+                <p>Tim Berners-Lee and the innovators of the world wide web modelled the web
+                    primarily on a) the public library model and b) the computer-human interaction
+                    model.</p>
+                <p>a. In the library model, information is freely available, indexed and
+                    cross-referenced by a URI. Its incarnation, the URL, is where the data is, and
+                    there is no restriction on where you can go.</p>
+                <p>b. In the computer-human interaction model, two players are having a conversation
+                    - the human asks and the machine answers. A computer has limited knowledge, but
+                    it can help the user to reach the right computer.</p>
+                <p>Therefore, the web was built as a giant library where each book is a computer
+                    with whom one can have a conversation.</p>
+                <p>This design has caused a lot of modern inconveniences. A user would one day
+                    receive an email on her monthly statement, yet she couldn't recognise a few
+                    entries on them. It says "Amazon". Was it about ordering a pair of shoes? She
+                    has to copy the order number and look it up in Amazon. The same user might pause
+                    as she books two tickets for an opera, switch to her frequent flyer app, copy
+                    that number over and paste it into the order to collect the points. She might
+                    struggle a bit installing that frequent flyer app at the outset. When she buys
+                    on another webshop, she needs to download another app or create another
+                    account.</p>
+                <p>Why are we doing so much copy and pasting when machines are exceptionally good at
+                    doing this? Owning to the design, the web is like a giant library, and we are
+                    like readers keeping notes of the index numbers under our sleeves. We hope that
+                    in the future the Web resembles no longer of a library, but more like a personal
+                    assistant.</p>
+            </section>
+            <section id="section_gcb_fjr_cnb">
+                <title>The client side can't integrate a web that is not designed to
+                    integrate</title>
+                <p>Surprisingly, even the technology that was created to fill the role of a personal
+                    assistant, the Smart Phone, still failed for the same reasons: the efforts from
+                    client side alone can't integrate a Web that is not designed to integrate. It
+                    made the problem even worse, as copy-pasting becomes bigger trouble when using a
+                    Smart Phone.</p>
+                <p>The truth is: Not only the client but the infrastructure has to support
+                    integration. A smartphone is modelled after a dial-up Internet connection, with
+                    each app representing a website. The users still need to figure out which
+                    computer (app) to talk to before entering the conversation, and still copies
+                    information around as he swaps apps around. It's therefore not possible, for
+                    example, to ask your smartphone to sum up all the money one may access by his
+                    online banking apps.</p>
+                <p>It's easy to see the cause of the inconvenience: the web is poorly integrated.
+                    The bad examples go on and on:</p>
+                <ul id="ul_xcb_fjr_cnb">
+                    <li>
+                        <p>When a user checks out on the web, she isn't sure if she has enough
+                            balance on her card, since the bank is not integrated with the shopping
+                            system.</p>
+                    </li>
+                    <li>
+                        <p>When a patient orders a service, she can't see how much the insurance can
+                            cover until the bill settles, nor can she know whether she has reached
+                            the annual cap since the clinic is not integrated with the health
+                            insurance company.</p>
+                    </li>
+                </ul>
+                <p>Such integrations can be addressed by having a backend connection between the two
+                    service providers, but it is not often done, because it requires the parties to
+                    collaborate and negotiate a value distribution. The collaboration depends on the
+                    security (takedown system A through system B), availability (one went offline
+                    while the other serving customers), scalability (<i>n²-n</i> integrations needed
+                    for <i>n</i> parties). Furthermore, such integration restraining the free market
+                    in two ways. First, the competition will be on integration, not goods and
+                    services. An insurance company which integrated their systems to more clinics
+                    competes against a new insurance company on the ground of integration, not
+                    coverage and premium. Second, it doesn't allow integration between contending
+                    parties, and it requires permission from both side of the integration to
+                    work.</p>
+                <p>The challenge to integrating the web requires a few building blocks that weren't
+                    in the Web's blueprint: authentication, ownership, transfer of value and
+                    trading.</p>
+            </section>
+            <section id="section_ndb_fjr_cnb">
+                <title>"Account authentication" is not a substitute for web integration.</title>
+                <p>The web doesn't have a built-in authentication mechanism[^tls]. To route around
+                    this gab, many users use add-ons like "Sign in with Facebook". Those merely try
+                    to provide authentication through a trusted 3rd party, which does not only cause
+                    privacy and availability concerns but also only serves for account
+                    authentication and can't be used for integration.</p>
+                <p>[^tls]: There have been excellent efforts on client/server certificates in
+                    Transport Layer Security (TLS). However, these authentication methods are not
+                    for processes, but only for sites. They represent a delegation model: Imagine a
+                    buyer not checking if a title deed is real, but only checks if the seller's name
+                    matches the one on the deed. That would be the delegation model used in TLS. In
+                    this model, TLS can't guarantee that anything on the website is genuine -- only
+                    that the website itself is. Facebook uses TLS, but people put much fake news on
+                    it. The unit of trust here is undoubtedly not granular enough for the web to
+                    deliver an integrated experience.</p>
+                <p>On top of it, the model of account based authentication is the cause of further
+                    problems. Most simple business cases - for example, "the owner of a car checks
+                    its service history" - don't require an account. Truthfully, accounts are
+                    stopgaps to problems created by the specific structure of the Internet as we
+                    know it.</p>
+                <p>If you enforce parties involved having an account to authenticate, bad things
+                    happen:</p>
+                <ul id="ul_tdb_fjr_cnb">
+                    <li>
+                        <p>When the car is sold, the new car owner would now need to create a new
+                            account at the service website and secure it with the proof of ownership
+                            to the car. This is onerous and unreliable.</p>
+                    </li>
+                    <li>
+                        <p>When a 3rd party like a Vehicle Modification workshop or an insurer needs
+                            to access the repair history, there is no easy way to authorise them
+                            without giving away the account. This is inflexible.</p>
+                    </li>
+                </ul>
+                <p>Such integration needs, poorly addressed by adding accounts, are easily found in
+                    healthcare, retail and almost every web-based business. Today, we are still
+                    adding more and more accounts to address the growing integration needs. It's a
+                    case of hammering every problem down as if it is a nail. Most people do not feel
+                    well with this model but don't see an alternative to integrating the web. An
+                    internet without accounts is beyond most people's imagination.</p>
+                <p>We demonstrate that integration through token is a superior solution to integrate
+                    the internet. A vital element of this process is ownership.</p>
+            </section>
+            <section id="section_d2b_fjr_cnb">
+                <title>The lack of an ownership mechanism</title>
+                <p>The web doesn't have a built-in mechanism for ownership, transfer of value and
+                    trading.</p>
+                <p>To demonstrate, we take the car story a bit further: When you want to sell your
+                    car, you need to post the car information on a website. To do so, you must
+                    create an account on the way. When someone wants to buy your car, you and the
+                    buyer have to go through a chain of processes: Insurance, unused service quota,
+                    vehicle registrations, documentation handover, payment and so on. All these
+                    actions have to be done separately, using easily-tampered paper proofs and forms
+                    and accounts. The process starts at the web and ends somewhere else instead of
+                    being automatically done after the buyer clicked "buy".</p>
+                <p>Is it possible to make it happen, that the entire chain of bureaucratic
+                    procedures happens securely in the backend, while you just push the "buy"
+                    button? With the web of accounts, you'd need to knot together a lot of accounts
+                    and trusted third parties, which hide the process from the user, while they
+                    fulfill the same paper trail as before.*</p>
+                <p>In contrast, when you base the same process on a blockchain and on tokens, it
+                    would be automatic, fraud-proof[^attestations] and atomic[^atomic]. You could
+                    finish a car sell with one click in a secure way without the need for accounts
+                    and paper trails.</p>
+                <p>[^attestations]: the method to provide cryptographically signed attestations as a
+                    condition for a transaction is discussed later in the "Attestation" chapter.</p>
+                <p>[^atomic]: In blockchain terms, an atomic transaction either happens or not. If
+                    well defined, it's not impossible for a buyer to have successfully paid for a
+                    car yet not getting the ownership token, or only have transferred the car's
+                    ownership but not the compulsory insurance on it.</p>
+                <p>These missing features of the web are the well-known functions of the blockchain.
+                    A blockchain is an immutable, decentralized record of ownership, sometimes
+                    called a "triple-entry bookkeeping" system. The virtual wedding of this perfect
+                    fit couple requires a virtual exchange of tokens, or what this paper called
+                    "tokenisation".</p>
+                <p>To do so, Token must seamlessly go across systems, carry their trading rules and
+                    user interfaces and business context.</p>
+            </section>
+        </p>
     </conbody>
 </concept>
