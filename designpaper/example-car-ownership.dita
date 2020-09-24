@@ -22,7 +22,7 @@
             product. Those token can interact with a non-token kind of payment, but tokenising the
             payments would make the whole process much more fluent.</p>
         <p>The following screenshot of a car token represents the final stage of tokenisation.</p>
-        <p>–- screenshot –-</p>
+        <p><image href="car-token.jpeg" id="image_enm_tkr_cnb"/></p>
         <p>At first glance, it is just a handy portal to do everything about the car, including
             market functions and utility. However, it's not possible with the traditional web model.
             In the web 2.0 model, you are restricted to handling every element on its own:</p>
