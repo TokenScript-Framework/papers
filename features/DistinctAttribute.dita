@@ -2,16 +2,19 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_y3c_tv2_pmb">
     <title>Distinct Attribute</title>
-    <shortdesc>If an attribute is distinct, it is used to identify a token.</shortdesc>
+    <shortdesc>Distinct Attributes are used to identify a token.</shortdesc>
     <conbody>
-      <p>A distinct attribute is a <xref href="../Attributes.dita">Token Attribute</xref> that has
-                <codeph>distinct</codeph> set to
-            true:<codeblock>&lt;attribute name="balance" distinct="true">
+      <p>A distinct attribute is defined by setting <codeph>distinct</codeph> to
+      true:<codeblock>&lt;attribute name="balance" distinct="true">
 …
 &lt;/attribute></codeblock></p>
-        <p>The number of unique values of this attribute is the number of token instances. The
-            TokenScript engine records each value and uses that to identify each token.</p>
-        <p>If there is no distinct attribute defined, TokenScript takes <codeph>ownerAddress=${ownerAddress}</codeph> as its RDN.</p>
+        <p>If there is only one distinct attribute in a token, then the number of unique values of
+      this attribute determins how many token instances are there.</p>
+    <note>Each Token is identified by a attribute-value pair where the attribute has to be a distinct
+      attribute. See more in <xref href="../TokenIdentifier.dita"/></note>
+        <p>If there is no distinct attribute defined in a Token, TokenScript Engine takes a default
+      value <codeph>ownerAddress=${ownerAddress}</codeph> as its <xref
+        href="../TokenIdentifier.dita"/>.</p>
         <example>
             <title>Getting Multiple instances of the token defined</title>
             <p>The following code defines a distinct attribute called <varname>tokenId</varname>. If
@@ -38,30 +41,6 @@
 &lt;/ts:attribute></codeblock>
         </example>
 
-        <example>
-          <title>You have 1 contract that defines 2 tokens</title>
-            <p>For example, you can have 2 TokenScript files. </p>
-            <p>The first
-        has:<codeblock>&lt;token name="tokenA">
-  …
-  &lt;attribute name="tokenID" <b>distinct="true"</b>>
-    &lt;origins>
-      &lt;ethereum:call function="getTokenABalance" contract="MyContract" as="uint"/>
-    &lt;/origins>
-  &lt;/attribute></codeblock></p>            <p>The second
-        has:<codeblock>&lt;token name="tokenB">
-  …
-  &lt;attribute name="tokenID" <b>distinct="true"</b>>
-    &lt;origin>
-      &lt;ethereum:call function="getTokenBalance" contract="MyContract" as="uint"/>
-    &lt;/origin>
-  &lt;/attribute></codeblock></p>
-            <p>Although two tokens refer to the same contract "MyContract", and even if they point
-                to the same contract address, a TokenScript engine is able to interpret that there
-                are two tokens.</p>
-            <p>However, if both TokenScripts has the same distinct attribute from the same origin,
-                it's an error.</p>
-        </example>
         <example>
             <title>A Smart Token identified by a customised attribute</title>
             <p>For example, you have one token defined like
