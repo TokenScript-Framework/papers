@@ -82,10 +82,10 @@
         </relrow>
         <relrow>
             <relcell>
-                <topicref href="elements/ethereum-transaction.dita"/>
             </relcell>
             <relcell/>
             <relcell>
+                <topicref href="elements/ethereum-transaction.dita"/>
                 <topicref href="elements/address.dita"/>
                 <topicref href="elements/bytes32.dita"/>
                 <topicref href="elements/data.dita"/>
@@ -93,10 +93,10 @@
         </relrow>
         <relrow>
             <relcell>
-                <topicref href="elements/ethereum-call.dita"/>
             </relcell>
             <relcell/>
             <relcell>
+                <topicref href="elements/ethereum-call.dita"/>
                 <topicref href="elements/bytes32.dita"/>
                 <topicref href="elements/data.dita"/>
             </relcell>

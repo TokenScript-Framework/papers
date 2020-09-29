@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_yqx_4kv_wmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_yqx_4kv_wmb">
     <title>Ethereum:Transaction</title>
     <shortdesc>The <codeph>ethereum:transaction</codeph> element is used to create an Ethereum
         transaction.</shortdesc>
-    <conbody>
-        <p>The <codeph>ethereum:transaction</codeph> element usually is nested inside the
+    <refbody>
+        <refsyn>The <codeph>ethereum:transaction</codeph> element usually is nested inside the
                 <codeph>transaction</codeph> tag which is a part of an Action Card. It requires to
             specify a contract, which is defined above in the <codeph>contract</codeph> element, as
             well as a function, which is part of the smart contract. Usually it requires some data,
             which can be defined with the <codeph>ethereum:value</codeph> element in simple cases or
-            with the <codeph>data</codeph> tag for more complicated transactions.</p>
+            with the <codeph>data</codeph> tag for more complicated transactions.</refsyn>
         <section id="section_w1n_hlv_wmb">
             <title>Code Examples</title>
             <p>An Action card which creates an Ethereum transaction to wrap an amount of Ether given
@@ -62,5 +62,5 @@
             </p>
             <p/>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>
