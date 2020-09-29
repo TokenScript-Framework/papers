@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="TokenIdentifier">
+    <title>Token Identifier</title>
+    <shortdesc>Tokens are identified with attribute-value pairs</shortdesc>
+    <conbody>
+        <p>In TokenScript, for each token, an instance of that token is identified by a key-value
+            pair or a sequence of key-value pairs.<note audience="implementer"> This is similar to how a database
+                identifies a record by primary keys, and how x.509 certificates and x.500 directory
+                entries (tokens before the blockchain era) are identified by RDN (Relative
+                Distinguished Name).</note></p>
+        <p>For Ethereum's ERC20 Tokens, a token is identified by its owner address since each
+            address can only have one such token. For example:
+            <codeblock>ownerAddress=0xedd6d7ba0ff9f4bc501a12529cb736ca76a4fe7e</codeblock>where
+                <codeph>0xedd6…</codeph> is the Etheruem address of this token's owner. </p>
+        <p>For Ethereum's ERC721 Token, a token is identified by the attribute tokenId. For example,
+            the following is the identifier of a
+            token:<codeblock>tokenId=0x06012c8cf97bead5deae237070f9587f8e7a266d</codeblock> It's the
+            identifier of a CryptoKitty called Tzar Hulashorts (not that matters).</p>
+        <p>The attribute(s) that defines a token is called distinct attribute(s).</p>
+        <p>You do not need to confine to a specific ERC, such as the tokenID defined in ERC721. You
+            can define a new token with suitable distinct attribute(s) that suits the nature of your
+            token.</p>
+        <p>For example, for a car token, the distinct attribute might be vin, short for Vehicle
+            Identification Number. So a car may be identified
+            by:<codeblock>vin=KL3TA48E9EB541191</codeblock></p>
+    </conbody>
+</concept>
