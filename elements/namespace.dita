@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="namespace">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="namespace">
     <title>TokenScript Namespace and versioning</title>
     <shortdesc/>
-    <conbody>
+    <refbody>
         <section><title>Current TokenScript namespace</title>
         <p>TokenScript's namespace is, at the moment, the literal string:
                 <codeblock>http://tokenscript.org/2020/06/tokenscript</codeblock></p>
@@ -41,5 +41,5 @@
                 as:<codeblock>&lt;ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript"
           …</codeblock></p>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>

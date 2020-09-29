@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_k1l_21n_wmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_k1l_21n_wmb">
     <title>Bytes32</title>
     <shortdesc>The <codeph>bytes32</codeph> Element is used to define data used in interactions with
         Ethereum blockchain.</shortdesc>
-    <conbody>
-        <p>Other than most elements the <codeph>bytes32</codeph> element doesn't need a starting and
+    <refbody>
+        <refsyn>Other than most elements the <codeph>bytes32</codeph> element doesn't need a starting and
             a closing element to embedd information, but can stand alone, like
-                <codeph>&lt;ts:bytes32 local-ref="nodeHash" /></codeph>.  </p>
+                <codeph>&lt;ts:bytes32 local-ref="nodeHash" /></codeph>.  </refsyn>
         <section id="section_kft_g1n_wmb">
             <title>Code Examples</title>
             <p>Setting an Attribute with an Ethereum call:</p>
@@ -37,5 +37,5 @@
             <p/>
             <p/>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_sz1_hl4_5mb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_sz1_hl4_5mb">
     <title>Origin</title>
     <shortdesc> The <codeph>origins</codeph> element can be a root element to define the contract a
         token uses, but can also be inside attributes to get the source of an attribute, like
         through an ethereum call.</shortdesc>
-    <conbody>
-        <p>The <codeph>origins</codeph> element is usually used at two occasions: First, at the
+    <refbody>
+        <refsyn>The <codeph>origins</codeph> element is usually used at two occasions: First, at the
             beginnung of a TokenScript to define the underlying smart contract, like DAI. Second, to
-            get the value of an Attribute.</p>
-        <p/>
+            get the value of an Attribute.</refsyn>
         <section id="section_ol5_kl4_5mb">
             <title>Code examples</title>
             <p><b>Defining the underlying Smart
@@ -47,5 +46,5 @@
 </codeblock></p>
             <p/>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>

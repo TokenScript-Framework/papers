@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_mkp_2bn_wmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_mkp_2bn_wmb">
     <title>Data</title>
     <shortdesc>The <codeph>data</codeph> element embedds data, usually used to interact with the
         Ethereum blockchain</shortdesc>
-    <conbody>
-        <p>The <codeph>data</codeph> element is like a carrier: It contains different elements of
+    <refbody>
+        <refsyn>The <codeph>data</codeph> element is like a carrier: It contains different elements of
             data. Usually it is used inside an <codeph>ethereum</codeph> element to declare the data
-            used for smart contract calls or transaction creation.</p>
+            used for smart contract calls or transaction creation.</refsyn>
         <section id="section_pgb_nbn_wmb">
             <title>Code Examples</title>
             <p>Define the needed data for an Ethereum call to fill an attribute</p>
@@ -48,5 +48,5 @@
             <p/>
             <p/>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>

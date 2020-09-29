@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_s54_fn4_5mb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_s54_fn4_5mb">
     <title>Address</title>
     <shortdesc>The <codeph>address</codeph> element declares an Address, usually that of a smart
         contract on Ethereum.</shortdesc>
-    <conbody>
-        <p>The <codeph>address</codeph> tag should define the network if this has not been done
+    <refbody>
+        <refsyn>The <codeph>address</codeph> tag should define the network if this has not been done
             elsewhere. 1 is Ethereum mainnet, 3 is Ropsten testnet. Put the address inside the
-            address tags.</p>
-        <p/>
+            address tags.</refsyn>
         <section id="section_pvf_kn4_5mb">
             <title>Code Examples</title>
             <p><b>Declare the Address of the token's smart
@@ -26,5 +25,5 @@
 &lt;/ts:transaction></codeblock></p>
             <p/>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>
