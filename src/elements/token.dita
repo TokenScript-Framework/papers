@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_bfd_tgl_mmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_bfd_tgl_mmb">
 	<title><codeph>&lt;token></codeph> element</title>
     <shortdesc><codeph>token</codeph> element defines a Token</shortdesc>
-    <conbody>
-	    <p>A <codeph>token</codeph> element defines a Token. It can be used as a root element of a
+    <refbody>
+	    <refsyn><p>A <codeph>token</codeph> element defines a Token. It can be used as a root element of a
             TokenScript File: It starts the TokenScript and ends it.</p>
         <p>The token element needs to declare which version of TokenScript and XML and which
-            blockchain is used.</p>
+		blockchain is used.</p></refsyn>
         <section id="section_wxp_tk4_5mb">
             <title>Code Examples</title>
             <p>
@@ -24,5 +24,5 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 &lt;/ts:token></codeblock>
             </p>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>

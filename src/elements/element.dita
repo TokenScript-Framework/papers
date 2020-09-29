@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_icq_hdn_wmb">
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_icq_hdn_wmb">
     <title>Element</title>
     <shortdesc>In a data module <codeph>elements</codeph> are put in a ordered sequence.</shortdesc>
-    <conbody>
-        <p>With <codeph>&lt;asnx:module></codeph> you can define a data module. Inside the
-                <codeph>asxn</codeph> tags you put data elements in a certain order.</p>
+    <refbody>
+        <refsyn>With <codeph>&lt;asnx:module></codeph> you can define a data module. Inside the
+                <codeph>asxn</codeph> tags you put data elements in a certain order.</refsyn>
         <section id="section_xnj_t2n_wmb">
             <title>Code Example</title>
             <p>Defining the elements of a data module for an ENS event. All elements are defined as
@@ -26,5 +26,5 @@
 &lt;/asnx:module></codeblock>
             </p>
         </section>
-    </conbody>
-</concept>
+    </refbody>
+</reference>
