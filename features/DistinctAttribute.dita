@@ -5,7 +5,7 @@
     <shortdesc>Distinct Attributes are used to identify a token.</shortdesc>
     <conbody>
       <p>A distinct attribute is defined by setting <codeph>distinct</codeph> to
-      true:<codeblock>&lt;attribute name="balance" distinct="true">
+      true.<codeblock>&lt;attribute name="vin" distinct="true">
 …
 &lt;/attribute></codeblock></p>
         <p>If there is only one distinct attribute in a token, then the number of unique values of
@@ -15,18 +15,38 @@
         <p>If there is no distinct attribute defined in a Token, TokenScript Engine takes a default
       value <codeph>ownerAddress=${ownerAddress}</codeph> as its <xref
         href="../TokenIdentifier.dita"/>.</p>
+      
+      <example>
+        <title>
+                A Car Ownership Token
+        </title>
+        <p>
+                In this example, which is part of a TokenScript that defines a
+                Car Ownership Toke. Vehicle Identification Number ("vin") is an
+                attribute that identifies a
+			car:
+		<codeblock>  &lt;ts:attribute name="vin" <b>distinct="true"</b>>
+    &lt;ts:label>
+      &lt;ts:string xml:lang="en">Vehicle Identification Number&lt;/ts:string>
+    &lt;/ts:label>
+    &lt;ts:origins>
+      &lt;ethereum:call function="getCars" contract="CarOwnership"/>
+    &lt;/ts:origins>
+  &lt;/ts:attribute></codeblock>Since
+        VIN is a distinct token, each distinct values of this attribute is used to create a distinct
+        token. So, let's say that the function <codeph>getCars()</codeph> in this example returns an
+        array of two values:<codeblock>"KL3TA48E9EB541191", "KL3TA48E9EB541192"</codeblock></p>
+      <p>Then, the TokenScript engine should interpret that there are 2Car Tokens, identified the
+        following two <xref href="../TokenIdentifier.dita">Token
+        Identifiers</xref>:<codeblock>vin=KL3TA48E9EB541191
+vin=KL3TA48E9EB541192</codeblock></p>
+      <p>Both are instances of the Car Token. If the TokenScript engine is running in a user's
+        wallet, it would render two distinct cars.</p>
+      </example>
         <example>
-            <title>Getting Multiple instances of the token defined</title>
-            <p>The following code defines a distinct attribute called <varname>tokenId</varname>. If
-                the smart contract returns 2 values for it: <ul id="ul_xdd_kcw_zmb">
-                    <li><codeph>0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
-                    <li><codeph>0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
-                </ul> then the TokenScript engine identifies 2 tokens, each identified with:
-                <ul>
-                <li><codeph>tokenID=0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
-                <li><codeph>tokenID=0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
-                </ul>
-            </p>
+            <title>CryptoKitty</title>
+	    <p>The following code defines a distinct attribute called <varname>tokenId</varname>.
+
             <codeblock>&lt;ts:attribute name="tokenId" <b>distinct="true"></b>
   &lt;ts:type>
     &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.40&lt;/ts:syntax>
@@ -38,24 +58,20 @@
       &lt;/ts:data>
     &lt;/ethereum:call>
   &lt;/ts:origins>
-&lt;/ts:attribute></codeblock>
+&lt;/ts:attribute></codeblock>            
+		    </p><p>If
+                the smart contract returns 2 values for it: <ul id="ul_xdd_kcw_zmb">
+                    <li><codeph>0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
+                    <li><codeph>0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
+                </ul> then the TokenScript engine identifies 2 tokens, each identified with:
+                <ul>
+                <li><codeph>tokenId=0x59a7a9fd49fabd07c0f8566ae4be96fcf20be5e1</codeph></li>
+                <li><codeph>tokenId=0xd915c8AD3241F459a45AdcBBF8af42caA561A154</codeph></li>
+                </ul>
+            </p>
+          <p>In fact, this attribute can be found in all ERC721 tokens, as ERC721 requires an
+        attribute tokenID to identify a token. However, such a design may not suit other tokens who
+        doesn't benefit from being shoe-horned into ERC721.</p>
         </example>
-
-        <example>
-            <title>A Smart Token identified by a customised attribute</title>
-            <p>For example, you have one token defined like
-        this:<codeblock>&lt;token name="car">
-  …
-  &lt;attribute name="VIN" <b>distinct="true"</b>>
-    &lt;origins>
-      &lt;ethereum:call function="getCars" contract="CarContract"/>
-    &lt;/origins>
-  &lt;/attribute></codeblock></p>
-            <p>Then, depends on how many values are returned, the TokenScript engine should
-                interpret that there are that many number of Car Tokens, each with a different
-                distinct VIN (Vehicle Identification Number), all of these Car Tokens are instances
-                defined by this single TokenScript file.</p>
-        </example>
-
     </conbody>
 </concept>
