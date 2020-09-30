@@ -29,7 +29,8 @@
         <p>The former is done <i>during</i> signing of the TokenScript; the second is done
                 <i>separately</i>, outside of TokenScript signing.</p>
         <p>TokenScript can't be deployed for production use if it is unsigned. But you can debug an
-            unsigned TokenScript (they will be displayed as untrusted by TokenScript engines).</p>
+            unsigned TokenScript (they will be displayed as untrusted by <xref href="Engine.dita"
+            />).</p>
         
         <section audience="implementer">
             <title>Sometimes, parts of TokenScript have to be signed twice</title>
@@ -50,8 +51,8 @@
                 identity "makerdao.com". And AAVE team has to send their TokenScript - at least the
                 relevant action part - to the DAI team to be signed by that key.</p>
             <p>This would result in a TokenScript that is signed 2 times. </p>
-            <p>A TokenScript Engine would identify the two signatures as such: one that expresses
-                authorship, the other was trusted by the smart contract through associated
+            <p>A <xref href="Engine.dita"/> would identify the two signatures as such: one that
+                expresses authorship, the other was trusted by the smart contract through associated
                 identity.</p>
             <p>In such a scenario, the identity of the authorship is always displayed to the user,
                 while if the user is to perform the action, the express of trust is evaluated and
