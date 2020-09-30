@@ -17,13 +17,13 @@
                 Explorer Credit). </li>
             <li>Corona Token which attestates a fresh negative test result or antibodies</li>
         </ul>
-        <p>The website booking.com finds and allows the users to use such tokens through
-            TokenNegitation.</p>
+        <p>If the browser supports TokenScript, it will handle the negotiation and provide the
+            website with user's tokens to be used on this website. Otherwise, the website can ship
+            bootstrap library to do the negotiation.</p>
         <section id="negotiation_methods"><title>Negotiation Methods</title>
             <p>TokenScript provides the following negotiation methods:</p><ol id="ol_egq_bvt_pmb">
-                <li>Attribute based negotiation, which requires the negotiable <xref
-                        href="Attributes.dita">attributes</xref> to be declared in
-                    TokenScripts.</li>
+                <li><xref href="Filter.dita"/> based negotiation, which uses a filter to find a
+                    token.</li>
                 <li><xref href="Attestation.dita">Attestation</xref> based negotiation, by which a
                     website provides an attestation signed by a token issuer's trust key, showing
                     that the token is intended to be usable on that website;</li>

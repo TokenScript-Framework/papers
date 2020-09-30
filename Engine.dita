@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="engine">
+    <title>TokenScript Engine</title>
+    <shortdesc> A TokenScript engine runs TokenScript</shortdesc>
+    <conbody>
+        <p>TokenScript engine is a piece of software that provides Token Layer - a set of api and UI
+            to the applictions and wallets that uses tokens.</p>
+        <p>TokenScript engine achieves this by interpreating TokenScript, verifying signature and
+            provides the functionalities defined in the TokenScript.</p>
+        <p>There are three TokenScript Engines:</p>
+        <ul id="ul_i4c_rk3_2nb">
+            <li>The one embededin AlphaWallet Android</li>
+            <li>The one embeded in AlphaWallet iOS</li>
+            <li><xref href="Bootstrap.dita"/>, a JavaScript embedable Engine to be embeded in the
+                web pages that uses TokenScript</li>
+        </ul>
+        <p>Another JavaScript one intended to be used as a MetaMask plug-in will be developed some
+            time in the future, sharing much of the code with Bootstrap Library.</p>
+    </conbody>
+</concept>
