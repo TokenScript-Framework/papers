@@ -8,8 +8,8 @@
         <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">A TokenScript file
             consists of Token Cards, presently in JavaScript and HTML, overlayed with XML
             mark-up.</p>
-        <p dir="ltr">The XML mark-up tells a TokenScript Engine to work out how to identify, index
-            and search a token, provide data for its actions and connect it to the web. The
+        <p dir="ltr">The XML mark-up tells a <xref href="Engine.dita"/> to work out how to identify,
+            index and search a token, provide data for its actions and connect it to the web. The
             JavaScript is used in TokenCards to render token UX and carry out token actions.</p>
         <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
             it must contain a reference to it and can interact with it.</p>
@@ -161,13 +161,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
         </p>
       </section><section><title>Merging and signing the files</title>
         <p>To deploy TokenScript, the files needs to be merged in a canonicalized XML file. For
-            testing purposes you can load the canonicalized XML file in the AlphaWallet folder on
-            your smart phone. For production you must sign the file and make it available to your
-            users, either by a website or by the <xref
-                href="https://github.com/AlphaWallet/TokenScript-Repo" format="html"
-                scope="external">TokenScript repo</xref>.</p>
-        <p/>
-        <p/>
-      <p/></section>
+                testing purposes you can load the canonicalized XML file in the AlphaWallet folder
+                on your smart phone. For production you must sign the file and make it available to
+                your users, either by a website or by the <xref
+                    href="https://github.com/AlphaWallet/TokenScript-Repo" format="html"
+                    scope="external">TokenScript repo</xref>.</p></section>
     </conbody>
 </concept>

@@ -15,8 +15,9 @@
             in TokenScript's design <xref href="Attributes.dita"/> define a token's relevent data.
             This enables the wallet to do substitute the service of a Dapp.</p>
         <p/>
-        <p>In TokenScript, a TokenEngine is at work on the web or in user's wallet. It maintains a
-            set of token attributes and utilises the declarations in TokenScript file:</p>
+        <p>In TokenScript, a <xref href="Engine.dita"/> is at work on the web or in user's wallet.
+            It maintains a set of token attributes and utilises the declarations in TokenScript
+            file:</p>
         <ol id="ol_pyb_mls_pmb">
             <li>How to fetch relevant data for tokens. For example, how to extract data from a smart
                 contract function calls, to listen to an oracle or to examine an attestation.</li>
