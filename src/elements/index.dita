@@ -80,7 +80,7 @@
                             /></entry>
                     </row>
                     <row>
-                        <entry><xref href="origin.dita">origins</xref></entry>
+                        <entry><xref href="origins.dita">origins</xref></entry>
                         <entry>Can be a root element to define the contract a token uses, but can
                             also be inside attributes to get the source of an attribute, like
                             through an ethereum call.</entry>

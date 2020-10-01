@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="concept_sz1_hl4_5mb">
-    <title>Origin</title>
+    <title><codeph>&lt;origins></codeph> element</title>
     <shortdesc> The <codeph>origins</codeph> element can be a root element to define the contract a
         token uses, but can also be inside attributes to get the source of an attribute, like
         through an ethereum call.</shortdesc>
