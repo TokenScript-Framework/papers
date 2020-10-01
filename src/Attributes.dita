@@ -5,22 +5,32 @@
     <shortdesc>Define attributes so that token data becomes available to Cards and Websites. </shortdesc>
     <conbody>
         <p dir="ltr" id="docs-internal-guid-6f535edd-7fff-c20b-1017-137517f57393">In TokenScript you
-            can declare “attributes”. These are properties of the token. They can be pulled from the
-            blockchain or declared on your own will. Due to attributes TokenScript enables a <xref
-                href="DataDriven.dita">data-driven and event-driven approach</xref> to token
-            management in a wallet.</p>
-        <p dir="ltr">TokenScript does not define or assume any specific token attributes, however
-            any token must have at least one attribute.</p>
-        <p>The most commonly used attribute is "balance" as defined in ERC20. Let's take another
-            more complex example: For a token representing a ticket for a soccer match, its
-            attributes should contain the information when and where the match happens, which teams
-            play, which seat is reserved and so on. </p>
+            can define Attributes for token or for card.</p>
+        <p>Examples of a token's attribute:<ul id="ul_ivm_ng4_2nb">
+                
+            <li>In Ethereum, all ERC20 Tokens have an <varname>balance</varname> attribute.</li><li>For a Car Ownership Token, one attribute might be its <varname>model</varname>.</li>
+            </ul></p>
+        <p dir="ltr">The values of these tokens may have various origins defined in the <xref
+                href="elements/origins.dita"/>. For an Ethereum token, a typical origin would be a
+            call to an Ethereum contract or an Ethereum event.</p>
+        <p dir="ltr">Having attributes and the origins of their values defined allows a <xref
+                href="Engine.dita"/> to provide this data; furthermore, monitor changes to this data
+            and push updates to the code that uses such data, such as the code in a <xref
+                href="Card.dita"/>. More on this can be found in the <xref href="DataDriven.dita"
+                >data-driven and event-driven approach</xref> that TokenScript takes.</p>
+        <p dir="ltr">A <xref href="Engine.dita"/> does not define specific token attributes, however
+            some <xref href="OperationalAttributes.dita"/> are always assumed. When used on Ethereum
+            token, the most important operational attribute is <varname>ownerAddress</varname> which
+            is always the Ethereum Address of the owner.</p>
+        <p>The most commonly used attribute is "balance" as defined in ERC20.</p>
         <p>Attributes are declared in TokenScript. The following is a minimalist declaration, where
             an attribute "balance" is defined. The value originates from an Ethereum function call
                 <codeph>balanceOf</codeph>.</p>
       <codeblock conref="elements/attribute.dita#attribute_element/minimal_attribute"/>
-        <p>Another example of an Attribute declaration declares the locality of a soccer match in
-            the <xref
+        <p> Let's take another more complex example: For a token representing a ticket for a soccer
+            match, its attributes should contain the information when and where the match happens,
+            which teams play, which seat is reserved and so on. Another example of an Attribute
+            declaration declares the locality of a soccer match in the <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/EntryToken"
                 format="html" scope="external">TokenScript for an entry token</xref>:</p>
         <p>
@@ -56,14 +66,13 @@
             <li>Describe criteria of actions</li>
             <li>Set the role of a token</li>
         </ul>
-        <p dir="ltr">An token's attribute is a data object.</p>
         <p dir="ltr">Attributes are just declarations. They are never directly shown to a wallet.
             They are just here to let the wallet know and to allow TokenScript to build further
             operations and representations on it. To make them visible you need cards.</p>
         <p dir="ltr">Attribute is a categorical declaration. There are other declarations inside the
             &lt;attribute> tags, for example &lt;origins> or &lt;token>. </p>
-        <p dir="ltr">If you want TokenScript to querry an API for information, like weather or
-            exchange prices, this will not be part of the attribute tag, but part of an action
-            card.</p>
+        <p dir="ltr">If you want TokenScript to querry a non-blockchain API for information, like
+            weather or exchange prices from a data provider, currently this can't be part of the
+            attribute tag, but part of an action card. </p>
     </conbody>
 </concept>

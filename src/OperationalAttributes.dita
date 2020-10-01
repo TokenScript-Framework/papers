@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="OperationalAttributes">
+    <title>Operational Attributes</title>
+    <shortdesc>Operational Attributes are implicit attributes created by TokenScript
+        Engine</shortdesc>
+    <conbody>
+        <p>Operational Attributes are implicit attributes created by <xref href="Engine.dita"/>.
+            They are created for Tokens as well as <xref href="DataObjects.dita"/>.</p>
+        <p>For Ethereum tokens, the most important Operational Attribute is
+                <varname>ownerAddress</varname>, whose value is the Ethereum address of the token's
+            owner.</p>
+        <p>Other operational attributes being proposed (probably will be included in future
+            TokenScript specifictions) includes:<ul id="ul_ylj_22p_2nb">
+                <li>createTimestamp</li>
+                <li>createBlockHeight</li>
+                <li>receiveTimeStamp</li>
+            </ul></p>
+    </conbody>
+</concept>
