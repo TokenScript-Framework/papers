@@ -55,7 +55,7 @@
             <relcell/>
             <relcell>
                 <topicref href="elements/attribute.dita"/>
-                <topicref href="elements/origin.dita"/>
+                <topicref href="elements/origins.dita"/>
                 <topicref href="elements/bytes32.dita"/>
                 <topicref href="elements/data.dita"/>
             </relcell>
