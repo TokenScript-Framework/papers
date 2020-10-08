@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="signing">
+    <title>Signing a tokenscript</title>
+    <shortdesc>Sign a tokenscript so it can be deployed on web or mobile.</shortdesc>
+    <taskbody>
+        <prereq id="prereq_t2d_trn_gnb">
+            <p>You will need the TokenScript in a file that is already tested working. We will
+                assume it's <filepath>DAI.xml</filepath> in this tutorial.</p>
+            <p>Since signing associates your tokenscript with an identity, you need to provide a
+                Certificate of an identity and sign with its key. The simplest way to get started is
+                to use the SSL certificate for your website, although any X.509 certificate will do.
+                It's up to the users and websites if they trust it. </p>
+            <p>Let's say that you are signing a TokenScript for DAI, you can use the web certificate
+                of makerdao.com. You need at least 2 files: <ol id="ol_k1k_d5n_gnb">
+                    <li>The key file. We will assume that it's named
+                        <filepath>key.pem</filepath>;</li>
+                    <li>The website certificate file. We will assume that it's named
+                            <filepath>makerdao.crt</filepath>; We will assume the certificate chain
+                        is also in this file.</li>
+                </ol></p>
+            <p>Since we are using a Java-based signing software in this tutorial, you will also need
+                to install the <xref
+                    href="https://www.oracle.com/java/technologies/javase-downloads.html"
+                    format="html" scope="external">Java Runtime Environment</xref>.</p>
+        </prereq>
+        <context>
+            <p>As a token issuer, once you have created a tokenscript and tested it working, you need to sign it so it is associated with an identity such as a website. It is required for deployment either on user's mobile phone or for use with websites.</p>
+        </context>
+        
+        <steps>
+            <step>
+                <cmd>Download a signing tool. In this tutorial we use xmlsectool which can be
+                    downloaded from <xref
+                        href="https://wiki.shibboleth.net/confluence/display/XSTJ2/xmlsectool+V2+Home"
+                        format="html" scope="external">shibboleth.net</xref> (or go directly to
+                        <xref href="http://shibboleth.net/downloads/tools/xmlsectool/2.0.0/"
+                        format="html" scope="external">zip file download section</xref>).</cmd>
+            </step>
+            <step>
+                <cmd>Extract the zip file to a directory. For example
+                        <filepath>xmlsectool-2.0.0</filepath>. We will later call a commandline
+                    utility in this directory.</cmd>
+            </step>
+            <step>
+                <cmd>Open a commandline console and make sure the current directory has the
+                    TokenScript file to be signed, in this case <filepath>DAI.xml</filepath>.</cmd>
+            </step>
+            <step>
+                <cmd>Run the downloaded <term>xmlsectool</term> following the example</cmd>
+                <stepxmp>Run the <filepath>xmlsectool.sh</filepath> command provided in the
+                    xmlsectool-2.0.0 directory, replacing the filenames with the ones you are
+                    actually
+                    using:<codeblock>$ xmlsectool-2.0.0/xmlsectool.sh --sign --inFile DAI.xml --certificate makerdao.crt --key key.pem --outFile DAI.tsml</codeblock></stepxmp>
+                <stepresult>If successful, the output should look like
+                    this:<codeblock>INFO  XMLSecTool - Reading XML document from file 'DAI.xml'
+INFO  XMLSecTool - XML document parsed and is well-formed.
+INFO  XMLSecTool - XML document successfully signed
+INFO  XMLSecTool - XML document written to file DAI.tsml</codeblock></stepresult>
+                <steptroubleshooting>
+                    <p>If you get this error message:
+                        <codeblock>ERROR: JAVA_HOME environment variable is not set.</codeblock>Then
+                        do a Internet search for "How to set JAVA_HOME" with your operation system.
+                        Such as "how to set JAVA_HOME Ubuntu".</p>
+                </steptroubleshooting>
+            </step>
+            <step>
+                <cmd>Verify the resulting file is correctly signed:</cmd>
+                <stepxmp>Following
+                    command<codeblock>$ xmlsectool-2.0.0/xmlsectool.sh --verifySignature --certificate makerdao.crt</codeblock>
+                </stepxmp>
+                <stepresult>If successful, the output should look like
+                    this:<codeblock>INFO  XMLSecTool - Reading XML document from file 'DAI.tsml'
+INFO  XMLSecTool - XML document parsed and is well-formed.
+INFO  XMLSecTool - XML document signature verified.</codeblock></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>
