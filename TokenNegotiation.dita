@@ -15,7 +15,8 @@
                 hotels.</li>
             <li>Any Payment Token that can be used to pay for the booking (e.g. American Express
                 Explorer Credit). </li>
-            <li>Corona Token which attestates a fresh negative test result or antibodies</li>
+            <li>COVID-19 attestation, which attestates a recent negative test result or
+                antibodies</li>
         </ul>
         <p>If the browser supports TokenScript, it will handle the negotiation and provide the
             website with user's tokens to be used on this website. Otherwise, the website can ship
@@ -28,17 +29,31 @@
                     website provides an attestation signed by a token issuer's trust key, showing
                     that the token is intended to be usable on that website;</li>
                 <li>Expectation based negotiation, by which a token declares being able to do
-                    certain things (e.g. let the website receives up to 1ETH in payment).</li>
+                    certain things (e.g. let the website receives 1ETH in payment).</li>
             </ol><p>These can be comined and mixed.</p></section>
+        <section>
+            <title>Negotiation Scope</title>
+            <p>The tokens that comes out of a negotiation on a web page is affected by 2
+                factors.</p>
+            <ol id="ol_pnj_nr4_mnb">
+                <li>The TokenScript provided by the web page. This can be done by adding the
+                    TokenScripts of possible outcomes in the HTML header section.</li>
+                <li>The TokenScript provided by the user agent (wallet). This is affected by how
+                    many Tokenscripts are cached on user's wallet.</li>
+                <li>The "token.scope" meta tag (unimplemented).</li>
+            </ol>
+        </section>
+        
         <section id="section_dcx_4jc_ymb">
             <title>Negotation Process</title>
             <p>Negotation can be passive or active.</p>
-            <p>In a passive negotiation, the website declares what tokens can be used on the website
-                through HTML <codeph>&lt;meta></codeph> element. In a browser, the user is
-                preseneted with a <xref href="TokenBar.dita"/>. The user can click the tokens in the
-                token bar any time to make that token "active" in the current session. It's possible
-                for the user to not to choose anything in the entire session and the user is not
-                forced to make a choice.</p>
+            <p>In a passive negotiation, the website declares the negotiation method and scope in
+                HTML <codeph>&lt;meta></codeph> element, as seen in <xref
+                    href="TokenNegotiationExamples.dita"/>. In a browser, the user is preseneted
+                with a <xref href="TokenBar.dita"/>. The user can click the tokens in the token bar
+                any time to make that token "active" in the current session. It's possible for the
+                user to not to choose anything in the entire session and the user is not forced to
+                make a choice.</p>
             <p>In an active negotiation, the website runs a JavaScript routine to do the
                 negotiation. The user is presented with the choice of tokens and the user must make
                 a choice or explicitly choose nothing. Such JavaScript routine can be hooked to a
