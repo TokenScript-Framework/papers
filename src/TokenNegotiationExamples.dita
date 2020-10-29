@@ -51,7 +51,7 @@
                 &lt;meta charset="UTF-8"/>
                 &lt;link rel="tokenscript" href="TokenA.xml"/>
                 &lt;link rel="tokenscript" href="TokenB.xml"/>
-                &lt;meta name="token.filter" content="expiry"/>
+                &lt;meta name="token.filter" content="expiry=*"/>
                 &lt;script type="module" src="tokenscript-bootstrap.js" >&lt;/script>
                 …</codeblock>
             <simpletable frame="all" relcolwidth="1* 1*">
