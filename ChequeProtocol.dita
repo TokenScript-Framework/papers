@@ -4,42 +4,34 @@
     <title>Cheque protocol</title>
     <shortdesc>Cheque protocol solves a common multi-sig use-cases</shortdesc>
     <conbody>
-        <p>There are many scenarios multi-sig can be used to achieve efficiency and privacy.</p>
-        <p>Cheque protocol is an in-development multi-sig protocol with privacy protection and
-            extensibility. TokenScript will support it natively smart contract's support will be
-            enabled through a new ERC.</p>
-        <note><p>We take an MVP-first, paper-later appraoch. The paper will be based on the protocol for <xref
+        <p>A cheque is an off-chain message issued to an <term>identifier</term> about some digital
+            rights.</p>
+        <p>For example, a cryptographic version of the following messae would be a cheque:<q>person
+                identified by bob@example.com can redeem 1 amount of XToken, signed by Alice</q>
+        </p>
+        <p>In TokenScript, a cheque is modeled with a TokenScript and deliverred with a customised
+            X.509 message. Such a cheque can be used with a smart contract to redeem the said
+            digital right.</p>
+        <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
+            so that even an adversary who knows the identifier could not link a blockchain
+            transaction to the identifier. <xref href="Cheque/privacy_protection.md" format="mdita">Cheque protocol
+                achieves this</xref> through Pedersen Commitment and Zero Knowledge Proof.</p>
+        <p>There are lots of real life use-cases of Cheque Protocol</p>
+        <ul id="ul_wkh_5mp_vnb">
+		<li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
+            <li>Sending crypto asset without knowing the recipent's public key / Ethereum
+                address.</li>
+        </ul>
+        <note><p>We take an product-first, paper-later appraoch. A paper will be published based on the protocol
+                for <xref
                     href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
-                    format="html" scope="external">send ether by identifier attestation
+                    format="html" scope="external">send token by identifier attestation
                 MVP</xref>.</p></note>
-        <section><title>Multi-sig is efficient</title>
-        <p>Take the following scenario:</p><ol id="ol_jz2_hhw_smb">
-                <li>A CEO authories an employee to withdraw up to 500USD per day from an
-                account.</li>
-                <li>An employee withdraws 100USD.</li>
-            </ol><p>Observe that only the 2nd transaction causes money to change hand, yet the first is a blockchain
-            transaction, consuming gas nontheless. The process can be turned into a multi-sig
-            process where the CEO sends the authorisation off chain to the employee, who use it, and
-            some information (100USD), sign again to with draw the money.</p>
-        <p>Such multi-sig protocols can be built individially, but a protocol makes it easier to
-            support this kind of feature through wallets, dapp websites and the eco-system. This is
-            what Cheque protocol is for.</p></section>
+        <section><title>Cheque is a multi-sig protocol</title>
+       </section>
         <section><title>Cheque protocol adds privacy protection</title>
         <p>Furthermore, proper cryptographic hiding is needed to protect privacy involving protocols
-            that ues attestations.</p>
-        <p>Observe this process:</p><ol><li>Alice sends a signed cheque to Bob. Not knowing his choice of Ethereum address, Alice hides his
-                email address in a Pedersen Commitment.</li>
-            <li>Bob obtains an 3rd party attestation that he owns the email address. </li>
-            <li>Using the Cheque, and the email address attestation, Bob redeems the 1 Eth
-                promised.</li>
-            </ol>
-        <p>In such a case, implementers should not be left to roll out their own crypto, but rather
-            take an existing library to protect Bob's email address from being learned by any
-            observer. Cheque protocol included the necessary crypto - in this case Pedersen
-            Commitment and Zero Knowledge Proof - so that blockchain Token developers can implement
-            their version of such protocol in their business scenario.</p>
-            <p>This use-case is our <xref href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md" format="html" scope="external">MVP implementation of Cheque protocol</xref>. The
-                cheque protocol paper will be published based on this MVP result.</p></section>
+            that ues attestations.</p></section>
         <section><title>Cheque protocol can improve security</title>
             <p>Smart use of Cheque protocol can improve security through minimising counter-party
                 risk and attack surface.</p>
