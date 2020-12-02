@@ -6,7 +6,7 @@
         TokenScript enables wallets to create and manage attestations.</shortdesc>
     <conbody>
       <note>Unlike a blockchain token, which exists only as a concept and has no physical files, an
-            attestation can be encoded as a DER file or encoded in a <xref href="MagicLinks.dita"/>. </note>
+            attestation can be encoded as a DER file or encoded in a <xref href="MagicLink.dita"/>. </note>
         <section><title>What is an attestation?</title>
         <p>Attestation are a claim on something: On a national identity, on the legal drinking /
             voting age, an university degree, the ownership of an email address, an insurance and so
@@ -75,7 +75,7 @@
         <p dir="ltr">Attestations are non-transferable, but transferability can be achieved by
             attesting to another attestation.</p>
         <p dir="ltr">Attestations can be fully expressed by an URI for easy and cross-compatible
-            usage. This allows to create <xref href="MagicLinks.dita">Magic Links</xref> which
+            usage. This allows to create <xref href="MagicLink.dita">Magic Links</xref> which
             contain an attestation.</p>
         <p dir="ltr">The attestation format takes close inspiration from the X.509 certificate
             specification, RFC-5280, but makes several fields optional, adds a few new ones and

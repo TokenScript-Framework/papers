@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_ilx_nmg_nmb">
-    <title>Magic Links</title>
+    <title>Magic Link</title>
     <shortdesc>Magic Links does something magic, with cryptography!</shortdesc>
     <conbody>
         <p>Magic Links are action-triggering links that contain cryptographic information.
