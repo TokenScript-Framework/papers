@@ -21,7 +21,7 @@
         <topicref href="DataObjects.dita"/>
         <topicref href="Attestation.dita"/>
         <topicref href="TokenScript-Syntax.dita"/>
-        <topicref href="MagicLinks.dita"/>
+        <topicref href="MagicLink.dita"/>
 
     </topicref>
     <topicref href="Deploy.dita">
