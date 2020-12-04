@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_bq1_gdy_4mb">
-    <title>Quick Start</title>
+    <title>Quick Start (usuable now)</title>
     <shortdesc>In this tutorial we guide you through the process of setting up a simple TokenScript
         and deploy it to AlphaWallet.</shortdesc>
     <conbody>
+	    <note> This quick start is being redone to focus on the use of TokenScripts, not the creation of it.</note>
         <p>TokenScript has a lot of functionalities, but we start with an easy example: Add
             information to your token. We will guide you through the process of adding
             token-specific information to a wallet. This can be useful by itself, but it is mostly
