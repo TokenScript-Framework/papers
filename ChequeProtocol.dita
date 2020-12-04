@@ -4,42 +4,34 @@
     <title>Cheque protocol</title>
     <shortdesc>Cheque protocol solves a common multi-sig use-cases</shortdesc>
     <conbody>
-        <p>A cheque is an off-chain message issued to an <term>identifier</term> about some digital
-            rights.</p>
-        <p>For example, a cryptographic version of the following messae would be a cheque:<q>person
-                identified by bob@example.com can redeem 1 amount of XToken, signed by Alice</q>
+        <p>An attestation is a signed message about a certain fact. A cheque is a special case of
+            such a message issued to an <term>identifier</term> about some actions to be performed
+            by smart contract (like cashing out some crypto asset).</p>
+        <p>For example, a cryptographic equivalent of the following messae would be a
+                cheque:<q>person identified by bob@example.com can redeem 1 amount of XToken, signed
+                by Alice</q>
         </p>
-        <p>In TokenScript, a cheque is modeled with a TokenScript and deliverred with a customised
-            X.509 message. Such a cheque can be used with a smart contract to redeem the said
-            digital right.</p>
+        <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
+            deliverred off chain, in some encodings (typically, <xref href="MagicLink.dita"/>),
+            which the recipient uses to execute the actoin associated with the cheque.</p>
         <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
             so that even an adversary who knows the identifier could not link a blockchain
-            transaction to the identifier. <xref href="Cheque/privacy_protection.md" format="mdita">Cheque protocol
-                achieves this</xref> through Pedersen Commitment and Zero Knowledge Proof.</p>
+            transaction to the identifier. <xref href="Cheque/privacy_protection.md" format="mdita"
+                >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
+            Proof.</p>
+        <p>The cryptographic details are in <xref href="Cheque/send_token_by_identifier.md" format="mdita"
+                >protocol description.</xref></p>
         <p>There are lots of real life use-cases of Cheque Protocol</p>
         <ul id="ul_wkh_5mp_vnb">
-		<li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
-            <li>Sending crypto asset without knowing the recipent's public key / Ethereum
-                address.</li>
+            <li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
+            <li><xref href="Cheque/send_token_by_identifier.md" format="mdita">Send token by Email
+                    (or any identifier)</xref></li>
+            <li><xref href="Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
+                    Risk</xref></li>
         </ul>
-        <note><p>We take an product-first, paper-later appraoch. A paper will be published based on the protocol
-                for <xref
+        <note><p>The actual protocol is here <xref
                     href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
                     format="html" scope="external">send token by identifier attestation
                 MVP</xref>.</p></note>
-        <section><title>Cheque is a multi-sig protocol</title>
-       </section>
-        <section><title>Cheque protocol adds privacy protection</title>
-        <p>Furthermore, proper cryptographic hiding is needed to protect privacy involving protocols
-            that ues attestations.</p></section>
-        <section><title>Cheque protocol can improve security</title>
-            <p>Smart use of Cheque protocol can improve security through minimising counter-party
-                risk and attack surface.</p>
-            <p>For example, an exchange can get an order from a user to sell their cryptocurrency at
-                certain price. Later when the order can be filled, the exchange can counter-sign the
-                order and execute it. This can happen even when the user is offline.</p>
-            <p>Therefore the user does not need to deposite their cryptocurrency into the exchange's
-                account prior to the trade, minimising counter party risk. The exchange account will
-                be holding cryptocurrency only for a short time, minimising attack surface.</p></section>
     </conbody>
 </concept>
