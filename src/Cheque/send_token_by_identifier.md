@@ -16,7 +16,7 @@ Such a *cheque* would identify Bob by an identifier and is only actionable if Bo
 
 The identifier - email address or mobile number† - can't be learned from an observer with access to the Ethereum blockchain. However, it will be possible for Alice to see that Bob receives cheques from other parties in the future.
 
-We wish to ensure that only Bob (the attested owner of the identifier *and* the person holding a copy of the cheque) can cash the cheque. Neither a malicious attester (or someone controlling Bob's identifier) nor a man-in-the-middle who might extract the cheque, will be able to cash the cheque alone.
+We wish to ensure that only Bob (the attested owner of the identifier *and* the person holding a copy of the cheque) can cash the cheque. Neither a malicious attestor (or someone controlling Bob's identifier) nor a man-in-the-middle who might extract the cheque, will be able to cash the cheque alone.
 
 Furthermore, we want to allow Bob to be able to reuse his attestation once it is made. So that after redeeming a cheque from Alice, he can also receive a cheque from Carol and redeem it using his attestation without the need for Alice or Carol to communicate.
 
@@ -68,6 +68,21 @@ The smart contract computes:
 5. That the cheque is still valid.
 
 If all predicates are satisfied, emits the pay to Bob.
+
+# Generalisation of the protocol
+
+The cheque in this case can be a generic attestation.
+This protocol has two attestations:
+
+1. cheque, which is a kind of attestation to trigger an action.
+2. identifier attestation, issued by an identifier attestor, which enables the beneficiary of the cheque to perform an action (redeem).
+
+The first attestation here does not have to be a cheque. Instead, it can be a normal attestation. Such generalisation was used in, for example, ticketing, where the first attestation attests to the rights of entering the venue corresponding to the ticket.
+
+In such case where both are attestations, the "subject" of the 1st attestation, for example, `numero=1280`, indicating the ticket ID 1280, can be used as an identifier attestation for another 3rd party attestation, which attests something to the ticket (although the hiding might not be necessary in such a use case). Here two examples are provided:
+
+- A speaker of the conference can invite a ticket holder to a closed-door meeting. Such an invitation is an attestation on the ticket ID. Such an invitation is, again, used as a ticket.
+- CO₂ coin is an issuer of carbon credits for someone who paid to offset their carbon footprint. They can issue an attestation on the ticket ID, attesting to the fact that the ticket's carbon footprint has offset. Such attestation enables access to privileged online service or discounts.
 
 # Implementation Issues
 
