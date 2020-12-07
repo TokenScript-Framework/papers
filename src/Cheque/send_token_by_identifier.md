@@ -37,15 +37,15 @@ This only needs to be done once for Bob. It can be done either before or after r
 
 2. Bob creates then computes a hiding of his identifier; *s=H(i)<sup>p</sup>*.
 
-3. He then constructs a zero-knowledge proof that he knows the exponent *p*: He picks random *r* and computes *t=H(i)<sup>r</sup>*, *c=H(s, H(i), t)* and *d=r+c·p*. Let the proof be denoted by *q=(s, H(i), t, d)*.
+3. He then constructs a zero-knowledge proof that he knows the exponent *p*: He picks random *r* and computes *t=H(i)<sup>r</sup>*, *c=H(s, H(i), t)* and *d=r+c·p*. The proof is a function of *(s, H(i), t, d)*.
 
-4. Bob signs a CSR (signing request) with his identifier *i* using his Ethereum key. He also signs the proof *q*. 
+4. Bob signs a CSR (signing request) with his identifier *i* using his Ethereum key. He also signs the proof. 
 
 5. An attestor verifies that Bob owns the identifier, that the signatures are valid and that the proof is valid by computing *c=H(s, H(i), t)* and verifying that *H(i)<sup>d</sup>=t·s<sup>c</sup>*. If these checks are ok then issue an attestation that binds his Ethereum address with *s* as the subject.
 
 ## Cheque
 
-1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a one-time-key *p'*, computes *s'=H(i)<sup>p'</sup>*.
+1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a one-time-key *q*, computes *s'=H(i)<sup>q</sup>*.
 
 2. Alice writes a cheque for anyone to redeem that amount of the token from her smart contract (valid for a certain amount time period). The cheque requires an *x* such that *s'=s<sup>x</sup>* for a valid attestation on subject *s*.
 
@@ -53,7 +53,7 @@ This only needs to be done once for Bob. It can be done either before or after r
 
 ## Redeem the Cheque with the Attestation
 
-Bob computes a value *x=p<sup>-1</sup>p'* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* s.t. *s'=s<sup>x</sup>*. That is, Bob proceeds as follows:
+Bob computes a value *x=p<sup>-1</sup>q* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* s.t. *s'=s<sup>x</sup>*. That is, Bob proceeds as follows:
 1. Pick random *r* and compute *t=s<sup>r</sup>*
 2. Next compute *c=H(s, s', t)*
 3. Finally compute *d=r+c·x*
