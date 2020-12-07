@@ -89,6 +89,8 @@ In such case where both are attestations, the "subject" of the 1st attestation, 
 ## Implementations based on elliptic curves
 
 We note that despite having described the protocol using general multiplication group notation, the implementations will be based on elliptic curves. Therefore, *s* will be a point on an elliptic curve computed as *G·p* where *G* is a generator computed deterministically from *H(i)*. Furthermore, this also means that the computation in step 3 for Bob and the smart contract will happen over the integers, modulo the curve order. 
+We note that it is crucial that the generator *G* is derived from a hash-to-curve paradigm on the identifier *i*, and **not** as *G'^H(i)* from a base-generator *G'*. Otherwise it will become trivial to break the binding to *i* which *s* is supposed to aford along with the hiding of *i*.
+
 [This post](https://crypto.stackexchange.com/questions/34863/ec-schnorr-signature-multiple-standard) mentions some standards for EC-based Fiat-Shamir Schnorr proofs and thus where to look for further details.
 
 ## In the case of using a JavaScript deployed as a service
