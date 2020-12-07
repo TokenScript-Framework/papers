@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vsr_qtx_vnb">
+    <title>Guide: Build websites around attestations</title>
+    <body>
+        <p>We will use Devcon ticket as an example and build a few websites around it.</p>
+        <section id="section_zrr_stx_vnb">
+            <title>Build the issuer website</title>
+            <p>This website is the issuer website of the ticket attestation. A Devcon ticket are
+                sent to the users in the form of a <xref href="../MagicLink.dita"/>: a link that
+                contains some cryptographic attestations. In this case, the cryptographic
+                attestation is the ticket.</p>
+            <p>This issuer website serves to display the ticket's view, called <xref
+                    href="../TokenCard.dita"/>, so anyone who owns a ticket attestation can see
+                what's in the ticket - such as ticket's number (represented by №). It also stores
+                the ticket attestation in its cookie so that when other 3rd party websites wants
+                integrate they can talk to this website.</p>
+            <p>Create an HTML page like this:
+                <codeblock><coderef href="isssuer-site.html" format="html"/></codeblock></p>
+            <p>Serve it on a web server then you should see something like this:</p>
+            <p><image href="issuer-site.svg"/></p>
+            <note audience="implementer"> Aliaksei suggested to utilise frameworks such as RxJS here
+                and it's apparent that a framework is needed since the demonstration code wouldn't
+                be able to handle renegotiation or added new tokens. I'll leave that to mid-level
+                architecting and for now the psuedo code is only to demonstrate design concept.
+            </note>
+        </section>
+    </body>
+</topic>
