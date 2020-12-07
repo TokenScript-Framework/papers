@@ -1,7 +1,7 @@
 deliverables:
 - name: "HTML5"
   context:
-    input: "../webroot.ditamap"
+    input: "../src/webroot.ditamap"
   publication:
     transtype: "html5-bootstrap"
     params:

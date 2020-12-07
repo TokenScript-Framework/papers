@@ -7,6 +7,7 @@ $(shell $(DITA_EXEC) --install net.infotexture.dita-bootstrap)
 endif
 
 %: config/%.yaml
+	-test -d out || mkdir out
 	-test -d out/$@ && rm -rf out/$@
 	$(DITA_EXEC) --project $^ -o out/$@
 
