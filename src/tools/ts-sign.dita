@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="cli_reference_ts-sign">
+  <title>Parameters for the <cmdname>ts-sign</cmdname> command</title>
+  <shortdesc>ts-sign - TokenScript signing tool</shortdesc>
+  <refbody>
+    <refsyn id="refsyn_dcx_jkx_ymb">
+      <syntaxdiagram>
+        <fragment>
+          <groupseq>
+            <kwd>ts-sign</kwd>
+            <kwd>--key</kwd>
+            <oper>=</oper>
+            <var>key</var>
+            <groupcomp importance="optional">
+              <kwd>--keyform</kwd>
+              <oper>=</oper>
+              <var>formname</var>
+            </groupcomp>
+            <groupcomp importance="optional">
+              <kwd>--keyname</kwd>
+              <oper>=</oper>
+              <var>name</var>
+            </groupcomp>
+            <groupcomp importance="optional">
+              <kwd>--cert</kwd>
+              <oper>=</oper>
+              <var>infile</var>
+            </groupcomp>
+            <groupcomp importance="optional">
+              <kwd>--certchain</kwd>
+              <oper>=</oper>
+              <var>infile</var>
+            </groupcomp>
+            <groupcomp importance="optional">
+              <kwd>--out</kwd>
+              <oper>=</oper>
+              <var>filename</var>
+            </groupcomp>
+            <groupcomp>
+              <var>&lt;FILE>...</var>
+            </groupcomp>
+          </groupseq>
+        </fragment>
+      </syntaxdiagram>
+    </refsyn>
+    <section>
+      <title>Description</title>
+      <p>Sign the TokenScript <parmname>FILE</parmname>s with the keys specified.</p>
+      <parml>
+        <plentry>
+          <pt>
+            <parmname>--key</parmname>=<varname>key</varname></pt>
+          <pd><p>Specifies the key to use to sign the TokenScript. This can be a file name, or a key
+              ID if a hardware signing module is used.</p>
+            <note audience="implementer">Presently, the capacity to connect to a PKCS11 signing
+              module is not required. Implementor be aware that such capacity is to be added
+              eventually in the coming years.</note>
+            <p>If the key is a <term>Reputation Key,</term> the parameter
+                <parmname>--cert</parmname> must be supplied.</p>
+            <p>This parameter can be specified <i>multiple times</i> for <i>multiple keys</i>, since
+              a TokenScript can be signed with a <term>Reputation Key</term> and many <term>Trust
+                Keys</term>. See the definition of these keys in TokenScript documents.</p></pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--keyform</parmname>=<varname>formname</varname></pt>
+          <pd>
+            <p>The form in which the signing key comes: DER, PEM, Ethereum (Ethereum's JSON
+              keystore). The value is case insensitive. When a signing module is configured (for
+              PKCS11 or other wallet / HSM), additional forms are possible depending on the
+              configuration.</p>
+            <p>If unspecified, and <parmname>key</parmname> refers to a file, then the form is
+              determined from the file's extension name. The recognisable extensions are
+                <filepath>.pem</filepath>, <filepath>.der</filepath> and <filepath>.json</filepath>
+              (meaning Ethereum's JSON keystore format). If none of them, it is assumed that the
+              file is in PEM format.</p>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--keyname</parmname>=<varname>name</varname></pt>
+          <pd>Specify the name of the key to be recorded in the XMLDSig signature. If unspecified,
+            the value defaults to: <ol id="ul_eyw_nyy_ymb">
+              <li>If it is a <term>Reputation Key</term>, the CommonName in the certificate is used
+                (reqiring <parmname>--cert</parmname>).</li>
+              <li>If it is a <term>Trust Key</term>, a comma-separated list of addresses of the
+                smart contracts that expressed trust to that key.</li>
+            </ol>In that order. </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--cert</parmname>=<varname>infile</varname></pt>
+          <pd>For a <term>Reputation Key</term>, the certificate file that relates the signing key
+            to a web domain name or an organisation. It must be used together with the
+              <parmname>--cert_chain</parmname>. Unlike <parmname>--key</parmname> which can be of a
+            few formats, the only acceptable file format for this is PEM. If unspecified, the key
+            specified prior is treated as a <term>Trust Key</term>, which doesn't have any
+            certificate.</pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--cert_chain</parmname>=<varname>infile</varname></pt>
+          <pd>
+            <p>A file containing trusted certificates to use when attempting to build the
+              certificate chain related to the certificate specified via the
+                <parmname>-cert</parmname> option. If unspecified, assume it is bundled into the
+              file specified in <parmname>--cert</parmname>.</p>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--out</parmname>=<varname>filename</varname></pt>
+          <pt>
+            <parmname>-o</parmname>
+            <varname>filename</varname>
+          </pt>
+          <pd>The filename of the signed TokenScript file. If not specified, use the name of the
+            original TokenScript file replacing the extension name with <filepath>.tsml</filepath>.
+            If you do specify this parameter, you need to specify it as many times as you supplied
+            input <parmname>FILEs</parmname>.</pd>
+        </plentry>
+      </parml>
+    </section>
+    <example>
+      <title>Signing a TokenScript with only a <term>Reputation Key</term></title>
+      <p>This command signs the TokenScript file <filepath>mytoken.xml</filepath> with a website TLS
+        certificate. </p>
+      <codeblock>$ ts-sign --key=private_key.pem --cert my.domain.crt --cert_chain ca-bundle.crt mytoken.xml</codeblock>
+      <p>The TLS certificate <filepath>my.domain.crt</filepath> and the certificate chain
+          <filepath>ca-bundle.crt</filepath> are both from the TLS certificate issuer. The private
+        key <filepath>private_key.pem</filepath> is copied from the web server that uses the
+        certificate.</p>
+      <p>The following command does the same except that the certificate chain is already in the
+          <parmname>--cert</parmname> file. Some TLS certificate issuers only provides one
+        certificate file. In which case it has every certificat
+        needed.<codeblock>$ ts-sign --key=private_key.pem --cert my.domain.crt mytoken.xml</codeblock></p>
+    </example>
+    <example>
+      <title>Signing a TokenScript file with only a <term>Trust Key</term></title>
+      <p>This command signs a TokenScript file with only one <term>Trust
+        Key</term>:<codeblock>$ ts-sign --key=trust_key.json mytoken.xml</codeblock></p>
+      <p>Since no <term>Reputation Key</term> is supplied, unless the file is not already signed
+        with a <term>Reputation Key</term> prior, per TokenScript requirement, it is required that
+        the Trust Key is trusted by <b>every</b> smart contract to receive a transaction generated
+        by the TokenScript. You get an warning if that requirement is not satisfied.</p>
+    </example>
+    <section id="section_g22_zry_ymb">
+      <title>Avoide C14N</title>
+      <p>If possible, and should the related W3C recommendation allows, it is <i>highly
+          desirable</i> that the conanicalized XML - used for signing - <i>not</i> saved.</p>
+      <p>Since we only use <term>enveloped</term> XMLDSIG, that means the XML file to be written is
+        of the orginal format with signature appended, <i>not</i> conanicalized. It must be placed
+          <i>at the end</i> (not at the beginning as some tools such as Oxygen XML editor prefer to
+        do).</p>
+      <p>The reason for it is that a TokenScript author can't be sure that all bugs are discovered
+        before signing, and therefore, publishing the TokenScript. Should a bug be captured at the
+        run time, and there are many ways such a bug could happen with completely schema-validated
+        TokenScript, the debuger is able to report the correct line number.<note>It's possible that
+          the users of TokenScript (web developers) choose to deploy a part of the published XML
+          file, therefore messing up the line-numbers. But by doing so they know the TokenScript
+          line number will no longer be relevant.</note></p>
+    </section>
+    <section audience="implementer">
+      <title>Successive Signing</title>
+      <p>It's possible to sign multiple times successively (instead of together).</p>
+      <p>Implementer be aware that a TokenScript file might be signed multiple times, once with a
+          <term>Reputation Key</term> and with one or mulitiple <term>Trust Keys</term>.
+        Furthermore, each key may belong to a different person.</p><p>It is an unusual, but
+        reasonable scenario. For example, a TokenScript might generate transactions to a smart
+        contract created by another project team, and wanted their "approval" by sending the
+        TokeScript files to be signed to them, who has the <term>Turst Key</term> corrisponding to
+        that smart contract. Such collaberation is natually hindered by </p>
+    </section>
+  </refbody>
+</reference>

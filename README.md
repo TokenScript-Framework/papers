@@ -14,18 +14,18 @@ To build the documents:
 $ dita --install net.infotexture.dita-bootstrap
 ````
 
-3. Make the documents. If dita is in `$PATH` you can do this:
+3. Make a website for documents. If dita is in `$PATH` you can do this:
 
 ````
-$ make Documents Guides Specs
+$ dita --project config/website.yaml
 ````
 
 Otherwise, say, dita is installed in `/home/christoph/dita-ot-3.5.2/bin/dita` do this
 ````
-$ DITA_EXEC=/home/christoph/dita-ot-3.5.2/bin/dita make Documents Guides Specs 
+$ /home/christoph/dita-ot-3.5.2/bin/dita --project config/website.yaml
 ````
 
-Which will create the document output from the 3 ditamap files in the `out/` directory.
+Which will create a website in the `out/` directory.
 
 4. If you have the credential, you can upload the website to a web hosting account.
 

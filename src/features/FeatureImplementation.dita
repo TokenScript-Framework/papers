@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_mlb_5yc_pmb">
+    <title>Features implemented</title>
+    <shortdesc>This is a matrix that reports the current progress in implementing various
+        TokenScript directives</shortdesc>
+    <refbody>
+        <table id="table_bjj_5zc_pmb">
+            <title/>
+            <tgroup cols="4">
+                <colspec colname="Feature" colnum="1" colwidth="1*"/>
+                <colspec colname="iOS" colnum="2" colwidth="1*"/>
+                <colspec colname="Android" colnum="3" colwidth="1*"/>
+                <colspec colname="Web" colnum="4" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Feature</entry>
+                        <entry>iOS - (AlphaWallet - 3.05)</entry>
+                        <entry>Android (AlphaWalelt 3.1.1)</entry>
+                        <entry>TokenScript Debugger (in-development)</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><xref href="DistinctAttribute.dita"/></entry>
+                        <entry>n.a.</entry>
+                        <entry>n.a.</entry>
+                        <entry>n.a.</entry>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

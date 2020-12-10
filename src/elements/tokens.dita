@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_bfd_tgl_mmb">
+	<title><codeph>&lt;tokens></codeph> element</title>
+	<shortdesc><codeph>tokens</codeph> element is a container of multiple Tokens</shortdesc>
+    <refbody>
+	    <refsyn>A <codeph>tokens</codeph> element contains definitions for a list of Tokens. They must all come from the same token issuer as they are signed by the same trust key.</refsyn>
+    </refbody>
+</reference>

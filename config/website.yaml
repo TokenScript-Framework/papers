@@ -1,0 +1,17 @@
+deliverables:
+- name: "HTML5"
+  context:
+    input: "../src/webroot.ditamap"
+    profiles:
+      ditavals: "no-implementer.ditaval"
+  publication:
+    transtype: "html5-bootstrap"
+    params:
+    - name: "args.hdr"
+      href: "navbar.xml"
+    - name: "args.hdf"
+      href: "hdf.xml"
+    - name: "args.css"
+      value: "custom.css"
+    - name: "args.cssroot"
+      path: "./"

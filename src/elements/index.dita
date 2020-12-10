@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_n4y_1gj_qmb">
+    <title>TokenScript XML Markup elements</title>
+    <shortdesc>Reference of all elements that can be used in a TokenScript. </shortdesc>
+    <refbody>
+        <section>
+            <title>Using namespace</title>
+            <p>TokenScript elements are under <xref href="namespace.dita">TokenScript
+                    namespace</xref>. That means TokenScript XML file's root element must use xmlns
+                to declare the namespace. You can observe how this is done in any one of the
+                examples.</p>
+            <p>TokenScript file <i>must</i> use a prefix to represent the namesapce.<fn>Actually,
+                    only if it contains an ASNX module, thanks to one of the quirkness defined in
+                    ASNX RFC4912. Since it's not sure when you will be using such a module, the rule
+                    of thumb is always use a prefix.</fn> In most examples we use "ts:", like
+                &lt;ts:token> or &lt;ts:card>. </p>
+            <p>However, ther are two exceptions:</p>
+            <ol id="ol_avt_1d3_ymb">
+                <li>Elements specific to a blockchhain are defiend in each blockchain's own
+                    namespace. For example: <xref href="ethereum-call.dita"/>. See <xref
+                        href="namespace.dita#namespace/section_esk_kd3_ymb"/>.</li>
+                <li>We use ASNX for data modeling, and such model is defined in &lt;asxn:module> .
+                    Any element inside &lt;asnx:module> is without perfix, such as
+                        <codeph>sequence</codeph>.</li>
+            </ol>
+        </section>
+        <table id="table_dl4_w5m_qmb">
+            <title>XML elements that can be used in a TokenScript file</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>TokenScript Root Elements</entry>
+                        <entry>Use</entry>
+                        <entry/>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><xref href="token.dita"/></entry>
+                        <entry namest="c2" nameend="c3">Starts and ends the token specific
+                            tokenscript. Can be used as the root element of TokenScript. </entry>
+                    </row>
+                    <row>
+                        <entry><xref href="tokens.dita">tokens</xref></entry>
+                        <entry namest="c2" nameend="c3">A <codeph>tokens</codeph> element
+                            contains definitions for a list of Tokens. They must all come from the
+                            same token issuer as they are signed by the same trust key.</entry>
+                    </row>
+                    <row>
+                        <entry><xref href="cards.dita"/></entry>
+                        <entry namest="c2" nameend="c3">A container of multiple Cards. </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>TokenScript Elements</entry>
+                        <entry>Use</entry>
+                        <entry>Use in</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><xref href="card.dita">card</xref></entry>
+                        <entry>Declares a Card, can be token, action or activity cards. </entry>
+                        <entry>Can only be in <xref href="cards.dita"/></entry>
+                    </row>                   <row>
+                        <entry><xref href="attribute.dita">attribute</xref></entry>
+                        <entry>Defines properties of a token which can be used by other
+                            elements.</entry>
+                        <entry>Can be in <xref href="token.dita"/> or <xref href="card.dita"
+                            /></entry>
+                    </row>
+                    <row>
+                        <entry><xref href="origins.dita">origins</xref></entry>
+                        <entry>Can be a root element to define the contract a token uses, but can
+                            also be inside attributes to get the source of an attribute, like
+                            through an ethereum call.</entry>
+                        <entry>In  <xref href="token.dita"/>, <xref href="card.dita"/>, or <xref
+                                href="attribute.dita"/></entry>
+                    </row>
+                    <row>
+                        <entry><xref href="contract.dita">contract</xref></entry>
+                        <entry>Defines information about the smart contracts to interact
+                            with.</entry>
+                        <entry>In <xref href="token.dita"/>.</entry>
+                    </row>
+                    <row>
+                        <entry><xref href="../DataObjects.dita">asnx:module</xref></entry>
+                        <entry>Creates / Defines data objects for TokenScript. </entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><xref href="address.dita">address</xref></entry>
+                        <entry>Declares the address of the token's smart contract. Is usually based
+                            inside the contract-tags, but can also be inside the
+                                <codeph>etherem</codeph> element.</entry>
+                        <entry>Contract, Card</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="bytes32.dita">bytes32</xref></codeph></entry>
+                        <entry>Define data when interacting with the Ethereum blockchain</entry>
+                        <entry>Ethereum</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="data.dita">data</xref></codeph></entry>
+                        <entry>Declares data, usually used for Ethereum calls, e. G. to declare a
+                            receiving address.</entry>
+                        <entry>Card, Attribute, Ethereum</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="element.dita">element</xref></codeph></entry>
+                        <entry>creates an element for a data module. Usually inside &lt;sequence>
+                            tags. </entry>
+                        <entry>Data Module, Sequence</entry>
+                    </row>
+                    
+                    <row>
+                        <entry><codeph>&lt;grouping&gt;</codeph></entry>
+                        <entry>How various instances of the same type of token are grouped.</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;item-view&gt;</codeph></entry>
+                        <entry>Defines how the wallet must view the token.</entry>
+                        <entry>Card (Token Card)</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;label&gt;</codeph></entry>
+                        <entry>Labels allow to localize the TokenScript by adding language specific
+                            files or names.</entry>
+                        <entry>Attributes / Cards</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;mapping></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;option></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;plural&gt;</codeph></entry>
+                        <entry>Adds the correct designation when there is more than one
+                            token.</entry>
+                        <entry>Attributes / Cards</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;selection&gt;</codeph></entry>
+                        <entry>Selection is a way to categorise token instances. It allows you to
+                            select multiple token at once or define an action for them. </entry>
+                        <entry>Attributes / Cards</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;sequence></codeph></entry>
+                        <entry>Orders the sequence of elements in a data module. No "ts:" in the tag
+                            required.</entry>
+                        <entry>Data Module</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;string&gt;</codeph></entry>
+                        <entry>Is a simple string.</entry>
+                        <entry>Attributes / Cards</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;syntax></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;token-id></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;type></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;uint256></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;user-entry></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;value></codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;view></codeph></entry>
+                        <entry>Marks the part which will be visible in the user interface. Is
+                            usually inside an Action Card and refers to a CSS and JavaScript file to
+                            create the view in HTML.</entry>
+                        <entry>Cards</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Ethereum-specific Elements</entry>
+                        <entry>Use</entry>
+                        <entry/>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><codeph><xref href="ethereum-call.dita"
+                            >ethereum:call</xref></codeph></entry>
+                        <entry>Calls a smart contract, for example fetching the balance.</entry>
+                        <entry>Attributes, Origin</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:contract</xref></codeph></entry>
+                        <entry>Defines the Token's contract</entry>
+                        <entry>Contract</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-event.dita"
+                                >ethereum:event</xref></codeph></entry>
+                        <entry>Enables the wallet to render an attribute with a blockchain
+                            event</entry>
+                        <entry>Attribute, Origin</entry>
+                    </row>
+                    <row>
+                        <entry><codeph><xref href="ethereum-transaction.dita"
+                                    >ethereum:transaction</xref></codeph></entry>
+                        <entry>Usually inside the &lt;transaction> tag. Creates an Ethereum
+                            transaction.</entry>
+                        <entry>Card</entry>
+                    </row>
+                    <row>
+                        <entry><codeph>&lt;ethereum:value&gt;</codeph></entry>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+
+    </refbody>
+</reference>

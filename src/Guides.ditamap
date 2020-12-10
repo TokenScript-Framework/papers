@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_b22_w1m_rmb">
+    <title>TokenScript Guides</title>  <topicref href="guides/Intro.dita">
+        <topicref href="guides/Miniguide-add-token-to-aw.dita"/>
+        <topicref href="guides/Miniguide-deploy-token-on-ropsten.dita"/>
+        <topicref href="intros/token-negotiation.md" format="mdita"/>
+    </topicref>
+</map>

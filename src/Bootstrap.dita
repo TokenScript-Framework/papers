@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="bootstrap">
+    <title>Bootstrap Library</title>
+    <shortdesc>TokenScript's bootstrap library is a <xref href="Engine.dita"/> that can be embeded in a web page</shortdesc>
+    <conbody>
+        <p>Ideally, when the user uses a browser that supports TokenScript, the website can use
+            TokenScrpit features such as <xref href="Card.dita"/> and <xref
+                href="TokenNegotiation.dita"/>. This allows a website to use tokens without having
+            to write code to do low level access to the blockchain, like calling smart contracts or
+            getting update of new blocks.</p>
+        <p>If the user's browser is connected to the blockchain, but doesn't support TokenScript
+            natively, Bootstrap Library, a JavaScript library, can be included in the
+            web page to provide TokenScript functionalities.</p>
+        <p>If it detects a user-agent already support TokenScript,
+                the token functionalities will be carried
+                out with the browser support.
+        </p>
+	<section><title>Coverage and limitation of Bootstrap Library</title>
+        <p>Bootstrap Library provides support most TokenScript functions, like <xref
+                href="Card.dita"/>, <xref href="Attestation.dita"/> and <xref
+                href="TokenNegotiation.dita"/>. However, it can't replace the TokenScript support in
+            the user-agents, because it is deployed on the website as JavaScript library, it can't
+            fully support the tokenscript features <xref href="TIPS.dita"/>. For example, if an
+                <xref href="ActionCard.dita"/> produces a zero-knowledge proof, the knowledge would
+            be leaked to the website as the website can access the runtime memory, therefore doing
+			away the Privacy feature (P in <xref href="TIPS.dita"/>.)</p></section>
+    </conbody>
+</concept>

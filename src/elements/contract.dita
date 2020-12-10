@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_qjx_km4_5mb">
+    <title>Contract</title>
+    <shortdesc>The contract elements declares address, network and name of the token's smart
+        contract.</shortdesc>
+    <refbody>
+        <refsyn>The element usually appears early in the file, close to the <codeph>token</codeph> tag.
+            It needs to specify <codeph>name</codeph> and <codeph>interface</codeph> of the contract
+            and add an <codeph>address</codeph> element.</refsyn>
+        <section id="section_jnl_pm4_5mb">
+            <title>Code Example</title>
+            <p>
+                <codeblock>&lt;ts:contract name="DAI" interface="erc20">
+        &lt;ts:address Network="1">0x6b175474e89094c44da98b954eedeac495271d0f&lt;/ts:address>
+&lt;/ts:contract></codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

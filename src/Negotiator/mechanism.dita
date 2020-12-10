@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="mechanism">
+    <title>Mechanism</title>
+    <body>
+        <p>This document is for implementors only and is a work in progress.</p>
+        <p><image href="flow-chart.svg" id="image_lm2_vlr_xnb"/></p>
+    </body>
+</topic>

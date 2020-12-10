@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_yph_nkg_nmb">
+    <title>TokenScript File</title>
+  <shortdesc>TokenScript file
+            is an overlay of XML Mark-up and JavaScript.</shortdesc>
+    <conbody>
+        <p dir="ltr" id="docs-internal-guid-97ed4cbc-7fff-a39d-5b96-20bec9a103c1">A TokenScript file
+            consists of Token Cards, presently in JavaScript and HTML, overlayed with XML
+            mark-up.</p>
+        <p dir="ltr">The XML mark-up tells a <xref href="Engine.dita"/> to work out how to identify,
+            index and search a token, provide data for its actions and connect it to the web. The
+            JavaScript is used in TokenCards to render token UX and carry out token actions.</p>
+        <p dir="ltr">The TokenScript is not part of the smart contract which created the token. But
+            it must contain a reference to it and can interact with it.</p>
+        <p dir="ltr">The TokenScript files are written and <xref href="Signing.dita">signed by the
+                issuer of a token or a trusted party</xref>. They can be updated with another
+            signature. Users can download the TokenScript files on any website or the TokenScript
+            repository and validate the signature. This makes it impossible to fake a TokenScript. </p>
+        <p dir="ltr">Wallets which understand TokenScript can import it and render the user
+            experience according to the TokenScript instructions.</p>
+        <section><title>The XML markup</title>
+        <p dir="ltr" id="docs-internal-guid-f87167c3-7fff-e895-9671-be989e591192">The XML markup is
+            usually expressed in a file and uses standard XML syntax. It is mostly a declarative
+            language, with declarations sometimes being nested.</p>
+        <p dir="ltr">The XML markup describes properties of the token: The functions it provides,
+            the smart contract it relies upon, the behavior of the token, information of the token
+            and much more. </p>
+        <p dir="ltr">There is a <xref href="elements/index.dita">list of XML declarations</xref>
+            developed by TokenScript. For most cases you only need a few of them.</p>
+        <p dir="ltr">TokenScript uses XML according the the c14n canonicalization. This allows to
+            create standardized digital signatures for XML and to enforce standardized static types
+            like ASN.1 data modules.</p>
+        <p>The best way to understand how the XML files are structured, study <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples" format="html"
+                scope="external">our TokenScript example</xref> repo.</p>
+        <p>Here is a fragmented example for a TokenScript XML
+            file:<codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE token  [
+        &lt;!ENTITY style SYSTEM "shared.css">
+        &lt;!ENTITY about.en SYSTEM "about.en.js">
+        ]>
+
+&lt;ts:token
+    xmlns:ts="http://tokenscript.org/2020/06/tokenscript"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:asnx="urn:ietf:params:xml:ns:asnx"
+    xmlns:ethereum="urn:ethereum:constantinople" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd" custodian="false">
+    &lt;asnx:module name="Coin-event-Sent">
+        &lt;namedType name="Sent">
+            &lt;sequence>
+                &lt;element name="from" ethereum:type="address" ethereum:indexed="false">&lt;/element>
+                &lt;element name="to" ethereum:type="address" ethereum:indexed="false">&lt;/element>
+                &lt;element name="amount" ethereum:type="uint256" ethereum:indexed="false">&lt;/element>
+            &lt;/sequence>
+        &lt;/namedType>
+    &lt;/asnx:module>
+    &lt;ts:label>
+        &lt;ts:string xml:lang="en">Coin&lt;/ts:string>
+    &lt;/ts:label>
+    &lt;ts:contract interface="erc20" name="Coin">
+        &lt;ts:address network="3">0xe35FE4A1B17d50A8022078d98162DB25bC860834&lt;/ts:address>
+    &lt;/ts:contract>
+    &lt;ts:origins>
+        &lt;ts:ethereum contract="Coin"/>
+    &lt;/ts:origins>
+    &lt;ts:cards>
+        &lt;ts:card type="action">
+            &lt;ts:label>
+                &lt;ts:string xml:lang="en">Approve&lt;/ts:string>
+            &lt;/ts:label>
+            &lt;ts:attribute name="approvalAddress">
+                &lt;ts:type>
+                    &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.36&lt;/ts:syntax>
+                &lt;/ts:type>
+                &lt;ts:label>
+                    &lt;ts:string xml:lang="en">Approval Address&lt;/ts:string>
+                &lt;/ts:label>
+                &lt;ts:origins>
+                    &lt;ts:user-entry as="address"/>
+                &lt;/ts:origins>
+            &lt;/ts:attribute>
+            &lt;ts:transaction>
+                &lt;ethereum:transaction function="approve" contract="Coin" as="uint">
+                    &lt;ts:data>
+                        &lt;ts:address ref="approvalAddress"/>                            &lt;ts:uint256>115792089237316195423570985008687907853269984665640564039457584007913129639935&lt;/ts:uint256>
+                    &lt;/ts:data>
+                &lt;/ethereum:transaction>
+            &lt;/ts:transaction>
+            &lt;ts:view
+                xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script type="text/javascript">&amp;approve.en;&lt;/script>
+            &lt;/ts:view>
+        &lt;/ts:card>
+    &lt;/ts:cards>
+    &lt;ts:attribute name="name">
+        &lt;ts:type>
+            &lt;ts:syntax>1.3.6.1.4.1.1466.115.121.1.26&lt;/ts:syntax>
+        &lt;/ts:type>
+        &lt;ts:label>
+            &lt;ts:string xml:lang="en">name&lt;/ts:string>
+        &lt;/ts:label>
+        &lt;ts:origins>
+            &lt;ethereum:call function="name" contract="Coin" as="utf8">&lt;/ethereum:call>
+        &lt;/ts:origins>
+    &lt;/ts:attribute>
+&lt;/ts:token>
+</codeblock></p>
+      </section><section><title>JavaScript / WebAssembly</title>
+        <p dir="ltr" id="docs-internal-guid-164e561b-7fff-349a-545c-506c6cb992db">The JavaScript
+            part integrates TokenScript in the wallet or dApps. It renders the display of the token
+            and can execute custom offchain functionalities. Broadly, it is the dynamic part of the
+            TokenScript, while XML is the static one.</p>
+        <p dir="ltr">Everything what happens in the wallet and everything a user can see is
+            described with JavaScript: The rendering of the environment, the display of text and
+            images and so on. In terms of TokenScript, JavaScript is used when a card is
+            triggered.</p>
+        <p dir="ltr">The creators of TokenScript use JavaScript. But any WeAssembly compatible
+            language like Ruby or C can be used. The wallet importing TokenScript needs to
+            understand these languages.</p>
+        <p>Again, the best way to learn about how to build the JavaScript files is to inspect them in
+            the <xref
+                href="https://github.com/AlphaWallet/TokenScript-Examples/blob/master/examples/erc20/WETH/WETH.xml"
+                format="html" scope="external">TokenScript example repo</xref>. Here we present a
+            very simple JavaScript to show an "about" site.</p>
+        <p>
+            <codeblock>//&lt;![CDATA[
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.setConfirm();
+    }
+
+    setConfirm() {
+        window.onConfirm = function() {
+            window.close();
+        }
+    }
+
+    render() {
+        let message = "Sample about page for your token, fill me up!";
+        return`
+        &lt;div class="ui container">
+          &lt;div class="ui segment">
+            &lt;img src="https://www.bitcoin-buch.org/bitcoin-geschichte-front-1.jpg" />
+            &lt;span>&lt;bold>&lt;h1>This is the Token of Christoph!&lt;/h1>&lt;/bold>&lt;br />&lt;br />It is a one of the century chance to invest!&lt;/span>
+          &lt;/div>
+        &lt;/div>
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};
+//]]&gt;</codeblock>
+        </p>
+      </section><section><title>Merging and signing the files</title>
+        <p>To deploy TokenScript, the files needs to be merged in a canonicalized XML file. For
+                testing purposes you can load the canonicalized XML file in the AlphaWallet folder
+                on your smart phone. For production you must sign the file and make it available to
+                your users, either by a website or by the <xref
+                    href="https://github.com/AlphaWallet/TokenScript-Repo" format="html"
+                    scope="external">TokenScript repo</xref>.</p></section>
+    </conbody>
+</concept>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="namespace">
+    <title>TokenScript Namespace and versioning</title>
+    <shortdesc/>
+    <refbody>
+        <section><title>Current TokenScript namespace</title>
+        <p>TokenScript's namespace is, at the moment, the literal string:
+                <codeblock>http://tokenscript.org/2020/06/tokenscript</codeblock></p>
+        <p>Since the technology is still in its early days, we haven't formalised a versioning
+                method but it's <i>likely</i> the next version will be using the following literal
+                string: <codeblock>http://tokenscript.org/2021/01/tokenscript</codeblock></p>
+        </section>
+        <section>
+            <title>Versioning</title>
+            <p>TokenScript is not a standardised technology. It is proposed to be standardised and
+                we hope it will be standardised by one of the standardisation bodies like OASIS.
+                Before it is standardised, there is no version number and we simply refer to the
+                namespace for versioning. For example, instead of saying "currently TokenScript is
+                in version 0.5", we say "the current TokenScript uses the 2020-Jun schema".</p>
+            <p>Since TokenScript is not yet a standardised technology, the current implementations
+                are not required and may or may not support TokenScript defined in an older schema.
+                That is, TokenScript developers need to closely follow the development to make sure
+                their TokenScript is compatible with the latest software.</p>
+            <p>For this reason we recommend TokenScript authors to submit their TokenScript in <xref
+                    href="https://github.com/AlphaWallet/TokenScript-Repo" format="html"
+                    scope="external">a centralised repository on github</xref>. It streamlines
+                delivery to mobile phones, also, allowing us to find out which TokenScript needs to
+                be updated and inform the corrisponding party. The use of this centralised
+                repository will be marginalised when TokenScript is standardised in terms of
+                distribution metehod.</p>
+        </section>
+        <section id="section_esk_kd3_ymb">
+            <title>Namespace of blockchain-specific elements</title>
+            <p>Elements that defines an operatio in a specific blockchain are under the namespace of
+                that specific blockchain. For example, <term>Ethereum</term> operations are under this namespace
+                (this might change as we go through a  standardisation process in the coming
+                years)<codeblock>urn:ethereum:constantinople</codeblock></p>
+            <p>For simplicity, that namespace is always associated with <codeph>ethereum</codeph>
+                prefix by the XML root element, such
+                as:<codeblock>&lt;ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript"
+          …</codeblock></p>
+        </section>
+    </refbody>
+</reference>

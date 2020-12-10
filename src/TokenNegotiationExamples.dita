@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="TokenNegotiationExamples">
+    <title>TokenNegotiationExamples</title>
+    <body>
+        <section>
+            <title>Using an empty token.filter</title>
+            
+            <p>Take this web page for example, which provided 2 TokenScripts (TokenA.xml and
+                TokenB.xml) and an empty token fitler (all inclusive):</p>
+            <codeblock>&lt;!DOCTYPE html>
+                &lt;html lang="en">
+                &lt;head>
+                &lt;meta charset="UTF-8"/>
+                &lt;link rel="tokenscript" href="TokenA.xml"/>
+                &lt;link rel="tokenscript" href="TokenB.xml"/>
+                &lt;meta name="token.filter" content=""/>
+                &lt;script type="module" src="tokenscript-bootstrap.js" >&lt;/script>
+                …</codeblock>
+            <simpletable frame="all" relcolwidth="1* 1*" id="simpletable_ol4_xs4_mnb">
+                <sthead>
+                    <stentry>Situation</stentry>
+                    <stentry>Result of the negotiation</stentry>
+                </sthead>
+                <strow>
+                    <stentry>If the user agent doesn't support TokenScript, and bootstrap library is
+                        used</stentry>
+                    <stentry>Can only contain instances of TokenA and TokenB</stentry>
+                </strow>
+                <strow>
+                    <stentry>If the user agent supports TokenScript but the user doesn't have any
+                        tokens.</stentry>
+                    <stentry>Can only contain instances of TokenA and TokenB</stentry>
+                </strow>
+                <strow>
+                    <stentry>If the user agent supports TokenScripts and already have TokenScripts
+                        cached for user's tokens TokenC and TokenD</stentry>
+                    <stentry>Can contain instances of TokenA, TokenB, TokenC, and TokenD.</stentry>
+                </strow>
+            </simpletable>
+        </section>
+        
+        <section>
+            <title>Using an non-empty token.filter</title>
+            
+            <p>Take this web page for example, which provided 2 TokenScripts (TokenA.xml and
+                TokenB.xml) and an empty token fitler (all inclusive):</p>
+            <codeblock>&lt;!DOCTYPE html>
+                &lt;html lang="en">
+                &lt;head>
+                &lt;meta charset="UTF-8"/>
+                &lt;link rel="tokenscript" href="TokenA.xml"/>
+                &lt;link rel="tokenscript" href="TokenB.xml"/>
+                &lt;meta name="token.filter" content="expiry=*"/>
+                &lt;script type="module" src="tokenscript-bootstrap.js" >&lt;/script>
+                …</codeblock>
+            <simpletable frame="all" relcolwidth="1* 1*">
+                <sthead>
+                    <stentry>Situation</stentry>
+                    <stentry>Result of the negotiation</stentry>
+                </sthead>
+                <strow>
+                    <stentry>If the user agent doesn't support TokenScript, and bootstrap library is
+                        used</stentry>
+                    <stentry>Can only contain instances of TokenA and TokenB</stentry>
+                </strow>
+                <strow>
+                    <stentry>If the user agent supports TokenScript but the user doesn't have any
+                        tokens.</stentry>
+                    <stentry>Can only contain instances of TokenA and TokenB</stentry>
+                </strow>
+                <strow>
+                    <stentry>If the user agent supports TokenScripts and already have TokenScripts
+                        cached for user's tokens TokenC and TokenD, where: <codeph>TokenC.expiry =
+                            2021-01-01</codeph>, and TokenB does not have expiry
+                        attribute.</stentry>
+                    <stentry>Can contain instances of TokenA, TokenB, and TokenC</stentry>
+                </strow>
+            </simpletable>
+        </section>
+    </body>
+</topic>

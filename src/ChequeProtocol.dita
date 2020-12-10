@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_tfy_zpg_nmb">
+    <title>Cheque protocol</title>
+    <shortdesc>Cheque protocol solves a common multi-sig use-cases</shortdesc>
+    <conbody>
+        <p>An attestation is a signed message about a certain fact. A cheque is a special case of
+            such a message issued to an <term>identifier</term> about some actions to be performed
+            by smart contract (like cashing out some crypto asset).</p>
+        <p>For example, a cryptographic equivalent of the following messae would be a
+                cheque:<q>person identified by bob@example.com can redeem 1 amount of XToken, signed
+                by Alice</q>
+        </p>
+        <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
+            deliverred off chain, in some encodings (typically, <xref href="MagicLink.dita"/>),
+            which the recipient uses to execute the actoin associated with the cheque.</p>
+        <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
+            so that even an adversary who knows the identifier could not link a blockchain
+            transaction to the identifier. <xref href="Cheque/privacy_protection.md" format="mdita"
+                >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
+            Proof.</p>
+        <p>The cryptographic details are in <xref href="Cheque/send_token_by_identifier.md" format="mdita"
+                >protocol description.</xref></p>
+        <p>There are lots of real life use-cases of Cheque Protocol</p>
+        <ul id="ul_wkh_5mp_vnb">
+            <li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
+            <li><xref href="Cheque/send_token_by_identifier.md" format="mdita">Send token by Email
+                    (or any identifier)</xref></li>
+            <li><xref href="Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
+                    Risk</xref></li>
+        </ul>
+        <note><p>The actual protocol is here <xref
+                    href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
+                    format="html" scope="external">send token by identifier attestation
+                MVP</xref>.</p></note>
+    </conbody>
+</concept>

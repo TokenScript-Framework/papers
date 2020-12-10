@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_rpz_3jl_mmb">
+    <title>ActivityCard</title>
+    <shortdesc>Activity Cards show relevant blockchain events, as well as relevant off-chain
+        activities. They serve as a library of what is possible and a timeline of what
+        happened.</shortdesc>
+    <conbody>
+        <p>
+            <note>In the current version of AlphaWallet Activity Cards are not supported. But
+                AlphaWallet will soon release a version which supports Activity Cards. In this
+                version the "transaction" tab will be renamed to "activity" tab.</note>
+        </p>
+      <section><title>Why Activity Card</title>
+        <p>Activity Cards are meant to show the history of a token. This might seem trivial, since
+            any wallets connects to a blockchain, which already serves a shared history of
+            transactions.</p>
+        <p>But if you ever used dApps with a standard wallet, you know how important Activity Cards
+            are. Usually the wallet shows only transactions, in best cases, it also shows the token
+            involved. This might be enough for plain value transfers. </p>
+        <p>But if you have token interacting with smart contracts - like, lending a token,
+                exchanging tokens, (or in the future, renting a car)  - the information of a plain
+                transaction gets close to zero. Your wallet simply doesn't understand what happened.
+                To make it understand what has happened, the wallet developers need to understand
+                each smart contract and implement its logic in the wallet. This might work for a few
+                popular token - but it can never scale to a large and diversified token
+                universe.</p>
+        <p>Activity Cards solve this problem. The card is assigned to a token and creates, stores
+            and loads <xref href="DataObjects.dita">Data Objects</xref>. This makes wallets suddenly smart: They remember not only
+            the transaction, but also the purpose of the transaction - that a user rented a car,
+            lended or exchanged a token and so on. And all the wallet has to do is to download the
+            TokenScript.</p>
+        <p>Furthermore, Activity Cards remember offchain activities: That you created a Magic Link
+            to allow someone else to withdraw tokens from your wallet, than your wallet displayed a
+            QR code at a gate, that you called an API with an Action Card and so on.</p>
+        <p>To sum it up: Activity Cards allow token issuers to create customized history records for
+            their token.</p>
+        </section><section>
+        <title>How Activity Card works with Ethereum</title>
+        <p>
+            <note>that this code might change with the release of AlphaWallet implementing Activity
+                Cards.</note>
+        </p>
+            <p>An ActivityCard is based on an event. Events themselves are not described in the
+                activity card, but rather instead sourced as a data module. Data module is covered
+                in a separate article.</p>
+        <p>Assuming that an event </p>
+        <p>
+            <codeblock>&lt;ts:cards>
+        &lt;ts:card type="activity" name="ownerApproved">
+            &lt;ts:origins>
+                &lt;ethereum:event type="Approval" filter="owner=${ownerAddress}"/>
+            &lt;/ts:origins>
+            &lt;ts:item-view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;item-view-ownerApproved.en;&lt;/script>
+            &lt;/ts:item-view>
+            &lt;ts:view xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+                &lt;style type="text/css">&amp;style;&lt;/style>
+                &lt;script  type="text/javascript">&amp;gaveApproval.en;&lt;/script>
+            &lt;/ts:view>
+        &lt;/ts:card>
+&lt;/ts:cards></codeblock>
+        </p>
+        <p>When it is implemented in AlphaWallet, this Activity Card will be visible in the Activity
+            tab. By clicking on it, users can view more information about what happened. Like in an
+            Action Card this information is produced by a JavaScript file like
+            item-view-ownerApproved.en.js:</p>
+        <codeblock>class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+        this.setConfirm();
+    }
+
+    setConfirm() {
+        window.onConfirm = function() {
+            window.close();
+        }
+    }
+
+    render() {
+        return`
+        &lt;div class="ui container">
+          &lt;div class="ui segment">
+            &lt;img src="data:image/png;base64,i...g==">
+            &lt;span>&lt;bold>&lt;h3>Gave approval to move ${this.props.amount} ${this.props.symbol} to ${this.props.to}&lt;/h3>&lt;/bold>&lt;/span>
+          &lt;/div>
+        &lt;/div>
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};</codeblock>
+        <p>As in Action Cards, the JavaScript file renders what the user will see: It displays the
+            message that he gave approval for address x to move y token. It would also be possible
+            to add a link to the transaction on any blockchain explorer and more.</p>
+        </section>
+    </conbody>
+</concept>

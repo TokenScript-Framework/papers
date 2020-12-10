@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Content TokenScript docs</title>
+    <topicref href="Tokenization.dita"/>
+    <topicref href="index.dita">
+        <topicref href="TokenScript.dita"/>
+        <topicref href="WhatTokenscriptCanDo.dita"/>
+        <topicref href="defiwithandwithoutts.dita"/>
+        <topicref href="LivingExamples.dita"/>
+    </topicref>
+    <topicref href="QuickStart.dita"/>
+    <topicref href="BasicConcepts.dita">
+        <topicref href="TokenScript-Component.dita"/>
+        <topicref href="Attributes.dita"/>
+        <topicref href="Card.dita">
+            <topicref href="TokenCard.dita"/>
+            <topicref href="ActionCard.dita"/>
+            <topicref href="ActivityCard.dita"/>
+        </topicref>
+        <topicref href="DataObjects.dita"/>
+        <topicref href="Attestation.dita"/>
+        <topicref href="TokenScript-Syntax.dita"/>
+        <topicref href="MagicLink.dita"/>
+
+    </topicref>
+    <topicref href="Deploy.dita">
+        <topicref href="Signing.dita"/>
+        <topicref href="Deploy.dita"/>
+    </topicref>
+    <mapref href="features/features.ditamap"/>
+    <reltable>
+        <relheader>
+            <relcolspec type="concept"/>
+            <relcolspec type="task"/>
+            <relcolspec type="reference"/>
+        </relheader>
+        <relrow>
+            <relcell>
+                <topicref href="Card.dita"/>
+                <topicref href="TokenCard.dita"/>
+                <topicref href="ActionCard.dita"/>
+                <topicref href="ActivityCard.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/card.dita"/>
+                <topicref href="elements/cards.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="Attributes.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/attribute.dita"/>
+                <topicref href="elements/origins.dita"/>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="TokenScript-Component.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/contract.dita"/>
+                <topicref href="elements/address.dita"/>
+                <topicref href="elements/token.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="DataObjects.dita"/>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/element.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/ethereum-transaction.dita"/>
+                <topicref href="elements/address.dita"/>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+            </relcell>
+            <relcell/>
+            <relcell>
+                <topicref href="elements/ethereum-call.dita"/>
+                <topicref href="elements/bytes32.dita"/>
+                <topicref href="elements/data.dita"/>
+            </relcell>
+        </relrow>
+    </reltable>
+</map>

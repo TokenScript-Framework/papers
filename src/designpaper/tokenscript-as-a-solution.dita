@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hnh_hlr_cnb">
+    <title>TokenScript as a Solution</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <p>We propose TokenScript as a solution to overcome the shortcomings of the legacy token
+            model.</p>
+        <p>TokenScript is a program interface for tokenisation. It is an XML dialect, which
+            describes the functions of the token and the method to interact and render it on the
+            user interface. It serves two purposes: It helps the user to access the token's full
+            functionality - and it allows the creation of more advanced and complex
+            user-token-interactions.</p>
+        <p>The XML dialect can be easily read by any device and software without the need to pull it
+            into the core of the wallet structuring the interaction with the blockchain. It's also
+            possible to use TokenScript to perform token actions on another protocol, without the
+            need to migrate the token smart contract.</p>
+        <p>Basically, TokenScript puts a lot of information offchain, while the core of the token
+            design remains on the chain. As TokenScript (and every update) is signed by the token
+            issuer, it is as verifiable as the smart contract itself, while being a set of shared
+            data between the token issuer and it's users. In the context of current blockchain
+            terminology it could be described as a <i>Layer 2</i> technology for the interaction
+            with token.</p>
+        <p>You can imagine it by thinking on a computer program for your music files: Like the token
+            on a blockchain, the music files remain the same, but the software for playing them can
+            change. It can be automatically updated to eliminate a bug, or it can change to allow
+            new features, like recording, cutting or fine-tuning the audio frequencies or putting it
+            in a library of your favorite songs. TokenScript is the hinge which connects the
+            software with the token and makes sure that the interaction of both is not arbitrary,
+            but structured by the issuer of the token.</p>
+        <p>To explain TokenScript in more details, we will sketch out design requirements by
+            applying the concept on examples.</p>
+    </conbody>
+</concept>
