@@ -89,8 +89,7 @@
                 changes some formats.</p>
             <p dir="ltr">There is still much work to be done. For example, we need a format that can
                 do partial attestation by using Merkle Tree, or even zero-knowledge proof of
-                attestation. A work in progress guide on the using of attestation can be found <xref
-                    href="guide-attestation/use-attestations.dita">here</xref>.</p>
+                attestation.</p>
         </section>
     </conbody>
 </concept>
