@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="issuer_site">
+    <title>Build a 3rd party website (devcon, strawman)</title>
+    <body>
+    <p>Let's say that Devcon gathered a huge crowds, filled up the narrow streets of Bogota, and a
+      helpful community website was built to show all the evening events happening outside of the
+      offical agenda. This website allows you to use the token on the website just so that you know
+      which event you can participate.</p>
+      <p>The 3rd party website would look like this:</p>
+      <p><image href="3rd-party-site.svg"/></p>
+    <p>To do so, create an HTML page similar to the one we used on the issuer's
+      site:<codeblock><coderef href="3rd-party-site.html" format="html"/></codeblock></p>
+      <p>Observe that there is only one noticable difference, that is, the image of the logo:<codeblock><coderef href="issuer-site.html#line=8" format="html"/></codeblock></p>
+      <p>So how does this 3rd party website know that the user have a ticket, and obtain the ticket
+      details such as Ticket Number? This information is not stored on the 3rd party website, rather
+      instead, it is either in the user's agent (if supported) or in the cookie of the ticket
+      website.</p>
+    <p>This is achieved by the token negotiator, finding that the token is an attestation that is
+      normally stored in the issuer's site's cooke, opening a connection to that website to obtain
+      the token data. It's worth noting that such a connection does not require the issuer's site to
+      have any server API, as it is done entirely in the client side.</p>
+    </body>
+</topic>

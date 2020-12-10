@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="issuer_site">
+    <title>Build the issuer website (devcon, strawman)</title>
+    <body>
+    <p>The first website we are going to build is the ticket issuer website. </p>
+    <p>This issuer website serves to display the ticket's view, called <xref
+      href="../TokenCard.dita"/>, so anyone who owns a ticket attestation can see
+      what's in the ticket - such as ticket's number (represented by №). It also stores
+      the ticket attestation in its cookie so that when other 3rd party websites wants
+      integrate they can talk to this website.</p>
+    <p>First, create an HTML page like this:
+      <codeblock><coderef href="issuer-site.html" format="html"/></codeblock></p>
+    <p>Serve it on a web server then you should see something like this (if the user
+      posseses a ticket attestation, in the user-agent (wallet) or browser cookie.</p>
+    <p>
+      <image href="issuer-site.svg"/></p>
+    <note><p>How does the user get the ticket in the first place? A Devcon ticket are sent to
+      the users in the form of a <xref href="../MagicLink.dita"/>: a link that contains
+      some cryptographic attestation. In this case, the cryptographic attestation is the
+      ticket.</p></note>
+    <p>Observe that the content of the tokenCard - the part that has the № symbol - is not
+      in this web page. This is becaues the TokenCard is packaged inside the quoted TokenScript
+      file:<codeblock><coderef href="issuer-site.html#line=3" format="html"/></codeblock></p>
+    <p>This is used to make sure the Token Card remains the same when used on a 3rd party website,
+            which we will cover soon. In fact, should this token be rendered in user's wallet such
+            as AlphaWallet, it would also use the same Token Card view, despite that it is not used
+            insde any web pages. In order to present a truthful rendering of the token, the
+            component is cryptographically signed and its runtime environment protected (requires
+            wallet support).</p>
+        <p>Should this website or the 3rd party website wish to render the token information in
+      their own way, they can do so by reading the token's attributes, which is covered in later
+      chapers of this guide. The mechanism to do so is discussed in <xref
+        href="https://github.com/AlphaWallet/blockchain-attestation/discussions/44" format="html"
+        scope="external">#44</xref>.</p>
+    </body>
+</topic>

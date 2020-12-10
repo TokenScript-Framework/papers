@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="tokenscript" href="DevconTicket.xml"/>
+    <base href="https://ticket.devcon.org"/>
+    <script type="module" src="token-negotiator.js" ></script>
+</head>
+<body>
+    <img src="devcon-bogota-logo-0a36c1b0762290bcbc7c338f58161597.svg" alt="Devcon Bogota" style="float:left;">
+    <ul id="tokenCards"></ul>
+    <script type="text/javascript">
+        Negotiator.getDevconTicketSet().then(
+            tickets => {
+                tickets.forEach(
+                    ticketToken => {
+                        const container = document.createElement("li");
+                        ticketToken.renderToken(container);
+                        document.getElementById("tokenCards").appendChild(container);
+                    }
+                );
+            },
+            error => { console.log(error);}
+        )
+    </script>
+</body>
+</html>
