@@ -2,25 +2,28 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_l1d_2cx_qmb">
     <title>Introduction to TokenScript</title>
-    <shortdesc>TokenScript is a framework which improves functionality, security and usability of
-        blockchain token in multiple ways.</shortdesc>
+    
     <body>
-        <p>TokenScript is a JavaScript / XML framework for blockchain token which creates a layer
-            between a blockchain and user devices. </p>
-        <p>TokenScript allows token issuers and other trusted authorities to enrich a given token
-            with a wide set of information, rules and functionalities. With TokenScript wallets and
-            webservices can easily, securely and privately implement a token with all its functions,
-            both onchain and offchain, without the need to understand the underlying smart contract. </p>
-        <p>If you are a token issuer, TokenScript allows you to package and deliver the
-            HTML/JavaScript code which is needed to access the token contract. Wallets can run the
-            token as a mini dapp, and websites can integrate its full functionality. You can add any
-            app, information and rules to your token, without the need to care about the
-            restrictions of a smart contract. You can even render the token functionality due to the
-            circumstances and create interoperabilities with other tokens.</p>
-        <p>TokenScript addresses the <xref href="TIPS.dita">trust, interoperatibility, privacy and
-                security</xref> issues that arises when you need to make your users access your
-            token in their wallets or from a 3rd party website. It creates an environment in which
-            token can be used more securely and more privately, and in which token and other
-            services can easily and securely interoperate without trust problems. </p>
+        <p>TokenScript is a tokenisation framework to make tokens work on various websites and
+            wallets. It does so by including token issuers's signed UI and transaction generation
+            code, and run it securely in user's browser/wallet.</p>
+        <p>For a token issuer, <xref href="TokenScript.dita"/> lets you package the essential
+            HTML/JavaScript needed to access their token contract and let it run in user's wallet as
+            mini dapp, or with other websites that uses your token.</p>
+        <p>For a website owner, TokenScript lets you use tokens on your website easily.</p>
+        <section>
+            <title>What problems does TokenScript solve?</title>
+            <p>The answer is <xref href="TIPS.dita"/>:</p><table conref="TIPS.dita#TIPS/table_tips"
+                    id="table_pbz_k3k_ymb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            
+        </section>
     </body>
 </topic>
