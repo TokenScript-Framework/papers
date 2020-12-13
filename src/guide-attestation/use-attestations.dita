@@ -11,9 +11,10 @@
         <p>We will use Devcon ticket as an example and build a few websites around it: </p>
         <ol id="ol_dwl_cgd_ynb">
             <li><xref href="issuer-site.dita">Issuer's website</xref></li>
-            <li><xref href="3rd-party-site.dita">3rd party website</xref></li>
-            <li>Dapp website</li>
-            <li>authenticated 3rd party website</li>
+            <li><xref href="3rd-party-site.dita">3rd party website</xref> which recognise the
+                attestation</li>
+            <li>3rd party website which authenticate the attestation's holder</li>
+            <li>Dapp website which allows the attestation to do some transactions</li>
         </ol>
     </body>
 </topic>
