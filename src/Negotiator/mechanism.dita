@@ -4,6 +4,100 @@
     <title>Mechanism</title>
     <body>
         <p>This document is for implementors only and is a work in progress.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_pbs_1vy_ynb">
+                <title>Sites that uses negotiator</title>
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3*"/>
+                    <colspec colname="c3" colnum="3" colwidth="3*"/>
+                    <thead>
+                        <row>
+                            <entry>Issuer Site Pages</entry>
+                            <entry>Browser lacks TS support</entry>
+                            <entry>Browser supports TS</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Page: <term>front-page</term></entry>
+                            <entry>List of tokens by Card</entry>
+                            <entry>List of tokens by Card with the additional link that the user can
+                                open to see the tokens in the wallet.</entry>
+                        </row>
+                        <row>
+                            <entry>Page: <term>iframe-outlet</term></entry>
+                            <entry>List of tokens by ItemView</entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3*"/>
+                    <colspec colname="c3" colnum="3" colwidth="3*"/>
+                    <thead>
+                        <row>
+                            <entry>3rd Party Site</entry>
+                            <entry>Browser lacks TS support</entry>
+                            <entry>Browser supports TS</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Before authentication</entry>
+                            <entry>The site either passes a DOM element as the container for the
+                                    <codeph>&lt;iframe></codeph> or, if not supplied, a FAB is
+                                created which, upon clicking, renders the
+                                    <codeph>&lt;iframe></codeph> in it. The
+                                    <codeph>&lt;iframe></codeph> contains the issuer's site's
+                                    <term>iframe-outlet</term> page, which shows a <b>list</b> of
+                                tokens (by itemView). </entry>
+                            <entry>The browser shows a list of token's item-view either in the token
+                                bar (similar to the Bookmark Sidebar), or super-impose it on the
+                                webpage if a container is supplied. The issuer site's
+                                    <term>iframe-outlet</term> is not used (normally).</entry>
+                        </row>
+                        <row>
+                            <entry>When authenticating</entry>
+                            <entry>When the visitor clicks a button that triggers an authentication,
+                                the list </entry>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
         <p><image href="flow-chart.svg" id="image_lm2_vlr_xnb"/></p>
     </body>
 </topic>
