@@ -4,8 +4,7 @@
     <title>Token Negotiation</title>
     <shortdesc>Token Negotiation is how a website discovers tokens it can use</shortdesc>
     <conbody>
-        <p>Token Negotiation is the process by which Tokens and Websites negotiate to find the
-            match.</p>
+        <p>Token Negotiation is the process of maching Tokens with Websites.</p>
         <p>For example, a travel booking website like booking.com might negotiate for the following
             tokens:</p>
         <ul id="ul_yqp_k5t_pmb">
@@ -20,7 +19,10 @@
         </ul>
         <p>If the browser supports TokenScript, it will handle the negotiation and provide the
             website with user's tokens to be used on this website. Otherwise, the website can ship
-            bootstrap library to do the negotiation.</p>
+            bootstrap library to do the negotiation.<note>Token Negotiation is in design stage,
+                currently there is no product supporting it, but the soonest support should come
+                from <xref href="Negotiator/mechanism.dita">Negotiator</xref> (also work in
+                progress)</note></p>
         <section id="negotiation_methods"><title>Negotiation Methods</title>
             <p>TokenScript provides the following negotiation methods:</p><ol id="ol_egq_bvt_pmb">
                 <li><xref href="Filter.dita"/> based negotiation, which uses a filter to find a
