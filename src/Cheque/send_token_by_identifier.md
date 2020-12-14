@@ -45,26 +45,26 @@ This only needs to be done once for Bob. It can be done either before or after r
 
 ## Cheque
 
-1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a one-time-key *q*, computes *s'=H(i)<sup>q</sup>*.
+1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a one-time-key *q*, computes *u=H(i)<sup>q</sup>*.
 
-2. Alice writes a cheque for anyone to redeem that amount of the token from her smart contract (valid for a certain amount time period). The cheque requires an *x* such that *s'=s<sup>x</sup>* for a valid attestation on subject *s*.
+2. Alice writes a cheque for anyone to redeem that amount of the token from her smart contract (valid for a certain amount time period). The cheque requires an *x* such that *u=s<sup>x</sup>* for a valid attestation on subject *s*.
 
-3. Alice sends *p'* and the cheque to Bob.
+3. Alice sends *q* and the cheque to Bob.
 
 ## Redeem the Cheque with the Attestation
 
-Bob computes a value *x=p<sup>-1</sup>q* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* s.t. *s'=s<sup>x</sup>*. That is, Bob proceeds as follows:
+Bob computes a value *x=p<sup>-1</sup>q* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* s.t. *u=s<sup>x</sup>*. That is, Bob proceeds as follows:
 1. Pick random *r* and compute *t=s<sup>r</sup>*
-2. Next compute *c=H(s, s', t)*
+2. Next compute *c=H(s, u, t)*
 3. Finally compute *d=r+c·x*
-4. Bob then signs *(s, s', t, d)* and the attestation (whose subject is *s*) and sends all these values and the signature to the smart contract.
+4. Bob then signs *(s, u, t, d)* and the attestation (whose subject is *s*) and sends all these values and the signature to the smart contract.
 
 The smart contract computes:
 
 1. That the amount in the attestation is less than Alice's balance.
 2. The attestation is a valid attestation that binds *s* to Bob (transaction sender) 's Ethereum address.
 3. That the signatures is correct.
-4. *c=H(s, s', t)* and verifies that *s<sup>d</sup>=t·s'<sup>c</sup>*
+4. *c=H(s, u, t)* and verifies that *s<sup>d</sup>=t·u<sup>c</sup>*
 5. That the cheque is still valid.
 
 If all predicates are satisfied, emits the pay to Bob.
