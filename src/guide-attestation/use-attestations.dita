@@ -11,10 +11,102 @@
         <p>We will use Devcon ticket as an example and build a few websites around it: </p>
         <ol id="ol_dwl_cgd_ynb">
             <li><xref href="issuer-site.dita">Issuer's website</xref></li>
-            <li><xref href="3rd-party-site.dita">3rd party website</xref> which recognise the
-                attestation</li>
-            <li>3rd party website which authenticate the attestation's holder</li>
-            <li>Dapp website which allows the attestation to do some transactions</li>
+            <li><xref href="3rd-party-site.dita">3rd party website</xref> which carries the capacity
+                to access the token (attestation-based)</li>
+            <li>3rd party website which  needs to authenticate the attestation's holder</li>
+            <li>3rd website which allows the attestation to do some transactions</li>
         </ol>
+        <p>A Behaviour table is made for the benefit of implementers of TokenScript libraries - these will be examplified soon.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_pbs_1vy_ynb">
+            <title>Sites behaviour table</title>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="3*"/>
+                <colspec colname="c3" colnum="3" colwidth="3*"/>
+                <thead>
+                    <row>
+                        <entry>Issuer Site</entry>
+                        <entry>Browser lacks TS support</entry>
+                        <entry>Browser supports TS</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Page: <term>front-page</term></entry>
+                        <entry>List of tokens by Card</entry>
+                        <entry>List of tokens by Card with the additional link that the user can
+                            open to see the tokens in the wallet.</entry>
+                    </row>
+                    <row>
+                        <entry>Page: <term>iframe-outlet</term></entry>
+                        <entry>List of tokens by ItemView</entry>
+                        <entry>(Shouldn't be needed)</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="3*"/>
+                <colspec colname="c3" colnum="3" colwidth="3*"/>
+                <thead>
+                    <row>
+                        <entry>Capacity-carrying 3rd Party Site</entry>
+                        <entry>Browser lacks TS support</entry>
+                        <entry>Browser supports TS</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Before authentication</entry>
+                        <entry/>
+                        <entry>The browser shows a list of token's item-view either in the token
+                            bar (similar to the Bookmark Sidebar), or super-impose it on the
+                            webpage if a container is supplied. The issuer site's
+                            <term>iframe-outlet</term> is not used (normally).</entry>
+                    </row>
+                    <row>
+                        <entry>When authenticating</entry>
+                        <entry>When the visitor clicks a button that triggers an authentication,
+                            the list </entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry/>
+                        <entry/>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>What if the 3rd partysite is not carrying the capability? The site either passes a DOM
+            element as the container for the <codeph>&lt;iframe></codeph> or, if not supplied, a FAB
+            is created which, upon clicking, renders the <codeph>&lt;iframe></codeph> in it. The
+            <codeph>&lt;iframe></codeph> contains the issuer's site's <term>iframe-outlet</term>
+            page, which shows a <b>list</b> of tokens (by itemView). </p>
     </body>
 </topic>
