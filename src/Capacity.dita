@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wmg_lmf_znb">
+    <title>Capacity</title>
+    <shortdesc>Capacity is a signed message enabling the use of token</shortdesc>
+    <conbody>
+        <p>Usually, when a website wants to access user's tokens, the website needs user's
+            permission. The site produces a filter which is applied to the user's election of
+            tokens. The browser then present the filtered list to the user, so the user can decide
+            which token to be used on the website.</p>
+        <p>In order to streamline the user experience, a token issuer can issue a capacity to a
+            website. The site that carries the capacity gets to learn the instances of the said
+            token owned by the current user, without the user given explicit permission.</p>
+        <p>Example of this is that FIFA ticket can given a capacity to booking.com, so that
+            booking.com can display special travel packages only valid to the FIFA ticket holders.
+            This capacity allos booking.com to learn user's FIFA tickets without the user making
+            explicit choice.</p>
+        <p>In traditional web2 websites, such integration is done by logging in to booking.com and
+            "linking" the user's FIFA ticket account with his/hers booking.com account.</p>
+        <p>Capacity is a concept being designed, and there is no data module for it yet.</p>
+    </conbody>
+</concept>
