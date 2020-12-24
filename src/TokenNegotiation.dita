@@ -25,12 +25,12 @@
             <p>TokenScript provides the following negotiation methods:</p><ol id="ol_egq_bvt_pmb">
                 <li><xref href="Filter.dita"/> based negotiation, which uses a filter to find a
                     token.</li>
-                <li><xref href="Attestation.dita">Attestation</xref> based negotiation, by which a
+                <li><xref href="Capacity.dita"/> based negotiation, by which a
                     website provides an attestation signed by a token issuer's trust key, showing
                     that the token is intended to be usable on that website;</li>
                 <li>Expectation based negotiation, by which a token declares being able to do
                     certain things (e.g. let the website receives 1ETH in payment).</li>
-            </ol><p>These can be comined and mixed.</p></section>
+            </ol><p>These can be combined and mixed.</p></section>
         <section>
             <title>Negotiation Scope</title>
             <p>The tokens that comes out of a negotiation on a web page is affected by 2
