@@ -1,10 +1,8 @@
-# TokenScript guides
+# TokenScript documents
 
-This repo was created in response to the [TokenScript documentation plan](https://community.tokenscript.org/t/what-kind-of-documents-do-we-need-for-tokenscript/366).
+This repo has the source code of [tokenscript.org website](http://tokenscript.org) as well as the [TokenScript github Page](https://tokenscript.github.io/TokenScript/)
 
-Currently Christoph mans this project with input from various team members.
-
-To build the documents:
+## Build the documents:
 
 1. Download and install [Dita Open Kit](https://www.dita-ot.org)
 
@@ -32,3 +30,22 @@ Which will create a website in the `out/` directory.
 ````
 $ lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ ./'
 ````
+
+## Build with Make
+
+A Makefile is provided to make frequent build tasks easy.
+
+### Build website
+
+    $ make website
+
+### Build website and upload in one go
+
+    $ make upload
+
+### Build TokenScript's docs directory
+
+Suppose TokenScript repo has a local clone `../TokenScript/`, this will recreate its docs folder. Note that docs folder has more content than the website as it also include implementer-only information.
+
+    $ make OUTPUT_DIR=../TokenScript/ docs
+
