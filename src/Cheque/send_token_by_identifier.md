@@ -14,9 +14,9 @@ Such a *cheque* would identify Bob by an identifier and is only actionable if Bo
 
 ## Identifier Attestation ##
 
-The identifier - email address or mobile number† - can't be learned from an observer with access to the Ethereum blockchain. However, it will be possible for Alice to see that Bob cashing cheques from other parties in the future, if he cashed the cheque he received from Alice.
+The identifier - email address or mobile number† - can't be learned from an observer with access to the Ethereum blockchain. However, it will be possible for Alice to see that Bob redeeming cheques from other parties in the future, if he redeemed the cheque he received from Alice.
 
-We wish to ensure that only Bob (the attested owner of the identifier *and* the person holding a copy of the cheque) can cash the cheque. Neither a malicious attestor (or someone controlling Bob's identifier) nor a man-in-the-middle who might extract the cheque, will be able to cash the cheque alone.
+We wish to ensure that only Bob (the attested owner of the identifier *and* the person holding a copy of the cheque) can redeem the cheque. Neither a malicious attestor (or someone controlling Bob's identifier) nor a man-in-the-middle who might extract the cheque, will be able to redeem the cheque alone.
 
 Furthermore, we want to allow Bob to be able to reuse his attestation once it is made. So that after redeeming a cheque from Alice, he can also receive a cheque from Carol and redeem it using his attestation without the need for Alice or Carol to communicate.
 
@@ -102,6 +102,6 @@ Furthermore it is also crucial that the curve has co-factor 1, or if not, that t
 
 Furthermore, we note that there does not seem to be standard Javascript libraries to compute such an elliptic curve Fiat-Shamir Schnorr proof. Thus this could be allowed to be supported by a third party (specifically step 1-3 for Bob). However, if such a library is malicious, it will learn *x* and thus be able send this value back to its author, who will in turn be able to impersonate Bob. This *must* not happen. Thus instead of constructing a proof of knowledge of *x* Bob uses such a library to construct a proof of knowledge of *x+w* for a random *w*. Based on this Bob will instead send *(V, s, t, d, w)* in step 3 and the server will instead verify *V<sup>d</sup>=t·s<sup>c·w</sup>*.
 (A similar trick must be done for the proof used to redeem the cheque using the smart contract.)
-Still, even this approach does allow for a front-running displacement attack in case the Javascript library sends the query to its owners who also do mining, and so the miner will learn *x* and thus be able to impersonate Bob once he tried to cash the cheque.
+Still, even this approach does allow for a front-running displacement attack in case the Javascript library sends the query to its owners who also do mining, and so the miner will learn *x* and thus be able to impersonate Bob once he tried to redeem the cheque.
 
 However, it might still be possible to easily implement this in Javascript, as SubtleCrypto.deriveKey supports the construction of an ECDH key which can be used to construct the value *r* and *t* in step 1 for Bob over an elliptic curve. Since hashing is also readily supported, step 2 can also easily be implemented. Furthermore, Javascript also supports big integer arithmetic through BigInt, which is needed to compute step 3. Thus the only real issue that might not be trivial is to extract the BigInt representation of *r* along with the curve order.
