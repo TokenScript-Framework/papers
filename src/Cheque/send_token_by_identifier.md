@@ -4,7 +4,7 @@
 
 A user, Alice, wishes to send a token to Bob who might not have a crypto (Ethereum) address. Alice, however, knows an identifier of Bob that can be attested. e.g. Bob's email address or Bob's mobile phone number.
 
-This approach is made by Alice sending a virtual and anonymous attestation, attesting to Bob's right to redeem that token from Alice through a smart contract.
+This document describes an approach by Alice sending a virtual and anonymous attestation, attesting to Bob's right to redeem that token from Alice through a smart contract.
 
 ## Cheque ##
 
@@ -14,13 +14,13 @@ Such a *cheque* would identify Bob by an identifier and is only actionable if Bo
 
 ## Identifier Attestation ##
 
-The identifier - email address or mobile number† - can't be learned from an observer with access to the Ethereum blockchain. However, it will be possible for Alice to see that Bob redeeming cheques from other parties in the future, if he redeemed the cheque he received from Alice.
+The identifier - email address or mobile number† - cannot be learned from an observer with access to the Ethereum blockchain. However, it will be possible for Alice to see that Bob is redeeming cheques from other parties in the future if he redeemed the cheque he received from Alice.
 
 We wish to ensure that only Bob (the attested owner of the identifier *and* the person holding a copy of the cheque) can redeem the cheque. Neither a malicious attestor (or someone controlling Bob's identifier) nor a man-in-the-middle who might extract the cheque, will be able to redeem the cheque alone.
 
-Furthermore, we want to allow Bob to be able to reuse his attestation once it is made. So that after redeeming a cheque from Alice, he can also receive a cheque from Carol and redeem it using his attestation without the need for Alice or Carol to communicate.
+Furthermore, we want to allow Bob to be able to reuse his attestation once issued to him. So that after redeeming a cheque from Alice, he can also receive a cheque from Carol and redeem it using his attestation without the need for Alice or Carol to communicate.
 
-The protocol is secure under any composition of senders (Alices) and receivers (Bobs) based on a one-more discrete logarithm-like assumption. 
+The protocol is secure under any composition of senders (Alices) and receivers (Bobs) based on a one-more discrete logarithm-like assumption.
 
 # Protocol
 
@@ -41,7 +41,7 @@ This only needs to be done once for Bob. It can be done either before or after r
 
 4. Bob signs a CSR (signing request) which includes the proof and his identifier *i* using his Ethereum key.
 
-5. An attestor verifies that Bob owns the identifier, that the signature is valid and that the proof is valid by computing *c=H(V, s, t)* and verifying that *V<sup>d</sup>=t·s<sup>c</sup>*. 
+5. An attestor verifies that Bob owns the identifier, that the signature is valid and that the proof is valid by computing *c=H(V, s, t)* and verifying that *V<sup>d</sup>=t·s<sup>c</sup>*.
 
 6. If all the checks pass then the issuer constructs a Pedersen commitment; *v=G<sup>H(i)</sup>·s* where *G* is a generator for a large prime-order subgroup.
 
@@ -92,16 +92,17 @@ In such case where both are attestations, the "subject" of the 1st attestation, 
 
 ## Implementations based on elliptic curves
 
-We note that despite having described the protocol using general multiplication group notation, the implementations will be based on elliptic curves. Therefore, *G, V, u, v* will be points on an elliptic curve where *u* and *v* are computed using generator points *G* and *V*. Furthermore, this also means that the computation in step 4 for Bob and step 4 for the smart contract will happen over the integers, modulo the curve order. 
-We note that it is crucial that the generators *G* and *V* are constructed such that they work over the same (large) subgroup. I.e. that *V∈ &lt;G&gt;* and that **no-one** knows the discrete log of *V* to base *G* (and vice versa). Otherwise breaks become trivial.
-Furthermore it is also crucial that the curve has co-factor 1, or if not, that the point *G* generates a subgroup of large prime order.
+We note that despite having described the protocol using general multiplication group notation, the implementations will be based on elliptic curves. Therefore, *G, V, u, v* will be points on an elliptic curve where *u* and *v* are computed using generator points *G* and *V*. This also means that the computation in step 4 for Bob and step 4 for the smart contract will happen over the integers, modulo the curve order.
+
+We note that the generators *G* and *V* must be constructed such that they work over the same (large) subgroup. I.e. that *V∈ &lt;G&gt;* and that **no-one** knows the discrete log of *V* to base *G* (and vice versa). Otherwise breaks become trivial.
+Furthermore, it is also crucial that the curve has co-factor 1, or if not, the point *G* generates a subgroup of large prime order.
 
 [This post](https://crypto.stackexchange.com/questions/34863/ec-schnorr-signature-multiple-standard) mentions some standards for EC-based Fiat-Shamir Schnorr proofs and thus where to look for further details.
 
 ## In the case of using a JavaScript deployed as a service
 
-Furthermore, we note that there does not seem to be standard Javascript libraries to compute such an elliptic curve Fiat-Shamir Schnorr proof. Thus this could be allowed to be supported by a third party (specifically step 1-3 for Bob). However, if such a library is malicious, it will learn *x* and thus be able send this value back to its author, who will in turn be able to impersonate Bob. This *must* not happen. Thus instead of constructing a proof of knowledge of *x* Bob uses such a library to construct a proof of knowledge of *x+w* for a random *w*. Based on this Bob will instead send *(V, s, t, d, w)* in step 3 and the server will instead verify *V<sup>d</sup>=t·s<sup>c·w</sup>*.
+Furthermore, we note that there does not seem to be standard Javascript libraries to compute such an elliptic curve Fiat-Shamir Schnorr proof. Thus this could be allowed to be supported by a third party (specifically step 1-3 for Bob). However, if such a library is malicious, it will learn *x* and thus be able to send this value back to its author, who will, in turn, be able to impersonate Bob. This *must* not happen. Thus instead of constructing a proof of knowledge of *x* Bob uses such a library to construct a proof of knowledge of *x+w* for a random *w*. Based on this Bob will instead send *(V, s, t, d, w)* in step 3 and the server will instead verify *V<sup>d</sup>=t·s<sup>c·w</sup>*.
 (A similar trick must be done for the proof used to redeem the cheque using the smart contract.)
-Still, even this approach does allow for a front-running displacement attack in case the Javascript library sends the query to its owners who also do mining, and so the miner will learn *x* and thus be able to impersonate Bob once he tried to redeem the cheque.
+Still, even this approach allows for a front-running displacement attack if the Javascript library sends the query to its owners who also do mining, so the miner will learn *x* and thus be able to impersonate Bob once he tried to redeem the cheque.
 
 However, it might still be possible to easily implement this in Javascript, as SubtleCrypto.deriveKey supports the construction of an ECDH key which can be used to construct the value *r* and *t* in step 1 for Bob over an elliptic curve. Since hashing is also readily supported, step 2 can also easily be implemented. Furthermore, Javascript also supports big integer arithmetic through BigInt, which is needed to compute step 3. Thus the only real issue that might not be trivial is to extract the BigInt representation of *r* along with the curve order.
