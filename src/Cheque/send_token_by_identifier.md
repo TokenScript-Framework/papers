@@ -35,40 +35,40 @@ This only needs to be done once for Bob. It can be done either before or after r
 
 1. Bob generates a /non-signing/ privacy key *p*.
 
-2. Bob computes a hiding to his privacy key; *s=V<sup>p</sup>*, where *V* is a generator for a large prime-order subgroup.
+2. Bob computes a hiding to his privacy key; *S=V<sup>p</sup>*, where *V* is a generator for a large prime-order subgroup.
 
-3. He then constructs a zero-knowledge proof that he knows the exponent *p*: He picks a random *r* and computes *R=V<sup>r</sup>*, *c=H(V, s, R)* and *d=r+c·p*. The proof is a function of *(V, s, R, d)*.
+3. He then constructs a zero-knowledge proof that he knows the exponent *p*: He picks a random *r* and computes *R=V<sup>r</sup>*, *c=H(V, S, R)* and *d=r+c·p*. The proof is a function of *(V, S, R, d)*.
 
 4. Bob signs a CSR (signing request) which includes the proof and his identifier *i* using his Ethereum key.
 
-5. An attestor verifies that Bob owns the identifier, that the signature is valid and that the proof is valid by computing *c=H(V, s, R)* and verifying that *V<sup>d</sup>=R·s<sup>c</sup>*.
+5. An attestor verifies that Bob owns the identifier, that the signature is valid and that the proof is valid by computing *c=H(V, S, R)* and verifying that *V<sup>d</sup>=R·S<sup>c</sup>*.
 
-6. If all the checks pass then the issuer constructs a Pedersen commitment; *v=G<sup>H(i)</sup>·s* where *G* is a generator for a large prime-order subgroup.
+6. If all the checks pass then the issuer constructs a Pedersen commitment; *W=G<sup>H(i)</sup>·S* where *G* is a generator for a large prime-order subgroup.
 
-7. Finally the attestor issues an attestation that binds Bob's Ethereum address to the commitment *v* as its subject.
+7. Finally the attestor issues an attestation that binds Bob's Ethereum address to the commitment *W* as its subject.
 
 ## Cheque
 
-1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a /non-signing/ one-time-key *t*, and computes a Pedersen commitment *u=G<sup>H(i)</sup>·V<sup>t</sup>*.
+1. Alice wishes to send Bob a certain amount of a token and knows Bob's identifier *i*. She creates a /non-signing/ one-time-key *t*, and computes a Pedersen commitment *U=G<sup>H(i)</sup>·V<sup>t</sup>*.
 
-2. Alice writes a cheque for anyone to redeem that amount of the token from her smart contract (valid for a certain amount time period). The cheque requires a valid attestation to a commitment *v* and a zero-knowledge proof of knowledge of *x* such that *v/u=V<sup>x</sup>*.
+2. Alice writes a cheque for anyone to redeem that amount of the token from her smart contract (valid for a certain amount time period). The cheque requires a valid attestation to a commitment *W* and a zero-knowledge proof of knowledge of *x* such that *W/U=V<sup>x</sup>*.
 
 3. Alice sends *t* and the cheque to Bob.
 
 ## Redeem the Cheque with the Attestation
 
-Bob computes a value *x=p-t* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* such that *v/u=V<sup>x</sup>*. That is, Bob proceeds as follows:
+Bob computes a value *x=p-t* and, in a redeeming transaction, constructs a Fiat-Shamir based Schnorr proof-of-knowledge that it knows *x* such that *W/U=V<sup>x</sup>*. That is, Bob proceeds as follows:
 1. Pick random *r* and compute *R=V<sup>r</sup>*
-2. Next compute *c=H(G, V, v, u, R)*
+2. Next compute *c=H(G, V, W, U, R)*
 3. Finally compute *d=r+c·x*
-4. Bob then signs *(G, V, v, u, R, d)* and the attestation (whose subject is *v*) and sends all these values and the signature to the smart contract.
+4. Bob then signs *(G, V, W, U, R, d)* and the attestation (whose subject is *W*) and sends all these values and the signature to the smart contract.
 
 The smart contract computes:
 
 1. That the amount in the attestation is less than Alice's balance.
-2. The attestation is a valid attestation that binds *v* to Bob (transaction sender)'s Ethereum address.
+2. The attestation is a valid attestation that binds *W* to Bob (transaction sender)'s Ethereum address.
 3. That the signatures is correct.
-4. *c=H(G, V, v, u, R)* and verifies that *V<sup>d</sup>=R·(v/u)<sup>c</sup>*
+4. *c=H(G, V, W, U, R)* and verifies that *V<sup>d</sup>=R·(W/U)<sup>c</sup>*
 5. That the cheque is still valid.
 
 If all predicates are satisfied, emits the pay to Bob.
@@ -98,7 +98,7 @@ Issuing new attestations on the subject of the token attestation instead of its 
 
 ## Implementations based on elliptic curves
 
-We note that despite having described the protocol using general multiplication group notation, the implementations will be based on elliptic curves. Therefore, *G, V, u, v* will be points on an elliptic curve where *u* and *v* are computed using generator points *G* and *V*. This also means that the computation in step 4 for Bob and step 4 for the smart contract will happen over the integers, modulo the curve order.
+We note that despite having described the protocol using general multiplication group notation, the implementations will be based on elliptic curves. Therefore, *G, V, W, U, R* will be points on an elliptic curve where *W, U* and *R* are computed using generator points *G* and *V*. This also means that the computation in step 4 for Bob and step 4 for the smart contract will happen over the integers, modulo the curve order.
 
 We note that the generators *G* and *V* must be constructed such that they work over the same (large) subgroup. I.e. that *V∈ &lt;G&gt;* and that **no-one** knows the discrete log of *V* to base *G* (and vice versa). Otherwise breaks become trivial.
 
@@ -108,7 +108,7 @@ Furthermore, it is also crucial that the curve has co-factor 1, or if not, the p
 
 ## In the case of using a JavaScript deployed as a service
 
-Furthermore, we note that there does not seem to be standard Javascript libraries to compute such an elliptic curve Fiat-Shamir Schnorr proof. Thus this could be allowed to be supported by a third party (specifically step 1-3 for Bob). However, if such a library is malicious, it will learn *x* and thus be able to send this value back to its author, who will, in turn, be able to impersonate Bob. This *must* not happen. Thus instead of constructing a proof of knowledge of *x* Bob uses such a library to construct a proof of knowledge of *x+w* for a random *w*. Based on this Bob will instead send *(V, s, t, d, w)* in step 3 and the server will instead verify *V<sup>d</sup>=t·s<sup>c·w</sup>*.
+Furthermore, we note that there does not seem to be standard Javascript libraries to compute such an elliptic curve Fiat-Shamir Schnorr proof. Thus this could be allowed to be supported by a third party (specifically step 1-3 for Bob). However, if such a library is malicious, it will learn *x* and thus be able to send this value back to its author, who will, in turn, be able to impersonate Bob. This *must* not happen. Thus instead of constructing a proof of knowledge of *x* Bob uses such a library to construct a proof of knowledge of *x+w* for a random *w*. Based on this Bob will instead send *(V, S, R, d, w)* in step 3 and the server will instead verify *V<sup>d</sup>=R·S<sup>c·w</sup>*.
 (A similar trick must be done for the proof used to redeem the cheque using the smart contract.)
 Still, even this approach allows for a front-running displacement attack if the Javascript library sends the query to its owners who also do mining, so the miner will learn *x* and thus be able to impersonate Bob once he tried to redeem the cheque.
 
