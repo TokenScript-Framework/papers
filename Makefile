@@ -33,5 +33,5 @@ help:
 	@echo which uploads the result to a website. This only make sense for tokenscript webmaster who have an ftp login.
 
 upload: website
-	lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/$^/ ./'
+	lftp -c 'set ftp:ssl-protect-data true; open s01cd.syd6.hostingplatform.net.au; mirror -x .git --exclude-glob-from=.gitignore -R out/$^/ ./'
 
