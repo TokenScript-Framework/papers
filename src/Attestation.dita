@@ -7,7 +7,7 @@
     <conbody>
         <note>Unlike a blockchain token, whose existance only depends on smart contract's state, and
             has no physical files, an attestation can be encoded as a DER file or encoded in a <xref
-                href="MagicLink.dita"/>. </note>
+                href="concept/MagicLink.md" format="mdita"/>. </note>
         <section>
             <title>What is an attestation?</title>
             <p>Attestation are attested claims on something: On a national identity, on the legal
@@ -82,7 +82,7 @@
             <p dir="ltr">Attestations are non-transferable, but transferability can be achieved by
                 attesting to another attestation.</p>
             <p dir="ltr">Attestations can be fully expressed by an URI for easy and cross-compatible
-                usage. This allows to create <xref href="MagicLink.dita">Magic Links</xref> which
+                usage. This allows to create <xref href="concept/MagicLink.md" format="mdita">MagicLinks</xref> which
                 contain an attestation.</p>
             <p dir="ltr">The attestation format takes close inspiration from the X.509 certificate
                 specification, RFC-5280, but makes several fields optional, adds a few new ones and
