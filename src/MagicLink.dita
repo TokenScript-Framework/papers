@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_ilx_nmg_nmb">
-    <title>Magic Link</title>
-    <shortdesc>Magic Links does something magic, with cryptography!</shortdesc>
+    <title>MagicLink</title>
+    <shortdesc>MagicLinks does something magic, with cryptography!</shortdesc>
     <conbody>
-        <p>Magic Links are action-triggering links that contain cryptographic information.
+        <p>MagicLinks are action-triggering links that contain cryptographic information.
 		Technically, it's an <xref href="specs/EncodingAttestationInURI.dita"/>.</p>
         <p>These encoded attestation links embed information about transactions, token, TokenScript
-            and much more. When a wallet imports a Magic Link, it gets a lot of information and
+            and much more. When a wallet imports a MagicLink, it gets a lot of information and
             instructions. </p>
         <p>It can, among others, do the following:</p>
       <section><title>Pass an attestation to a user</title>
@@ -27,28 +27,28 @@
         <p dir="ltr">To allow such withdrawl-transactions, the funds or token need to be placed in a
                 specific smart contract, or the Smart Contract be written in a way to spawn such a
                 token when called to redeem.</p>
-            <p>Magic Links can also allow the withdrawl of Bob's token to Alice's wallet when Alice
-                imports the Link in her wallet without requiring an attestation. Such Magic Links
+            <p>MagicLinks can also allow the withdrawl of Bob's token to Alice's wallet when Alice
+                imports the Link in her wallet without requiring an attestation. Such MagicLinks
                 are a perfect instrument for faucets, as the faucet provider doesn't need to
                 actively sent out coins, but the users can pull them from the smart contract.</p></section>
       <section>
-        <title>Magic Links and TokenScript</title>
-        <p dir="ltr" id="docs-internal-guid-7091f6fc-7fff-3bc9-f10b-ffcba202ea8f">Magic Links can be
+        <title>MagicLinks and TokenScript</title>
+        <p dir="ltr" id="docs-internal-guid-7091f6fc-7fff-3bc9-f10b-ffcba202ea8f">MagicLinks can be
             an important tool to integrate TokenScript in your apps. </p>
-        <p dir="ltr">First, if you send a token a with a Magic Link, you tell the receiving wallet
-            how to find the TokenScript. It is like if a Magic Link adds an instruction leaflet to
+        <p dir="ltr">First, if you send a token a with a MagicLink, you tell the receiving wallet
+            how to find the TokenScript. It is like if a MagicLink adds an instruction leaflet to
             the delivery of a token or coin.</p>
-        <p>Second, you can trigger Action Cards with a Magic Link. This allows a website or an app
+        <p>Second, you can trigger Action Cards with a MagicLink. This allows a website or an app
             to talk to the wallet and launch token specific operations. This could be an attestation
             - the link starts a token specific attestation procedure, directing to email, id or
             another token. It could also be a complex transaction pattern or some kind of signed
             message and so on. Everything what can be done with an Action Card can be launched with
-            a Magic Link. </p>
+            a MagicLink. </p>
     </section><section>
-            <title>Examples for Magic Links</title>
-            <p>A demo token for an EDCON ticket running on xDai implements an hardcoded Magic Link.
+            <title>Examples for MagicLinks</title>
+            <p>A demo token for an EDCON ticket running on xDai implements an hardcoded MagicLink.
                 When you have the token in AlphaWallet and go to the option "transfer", you can
-                either transfer it to an address, or you can create and share a Magic Link.</p>
+                either transfer it to an address, or you can create and share a MagicLink.</p>
             <p/></section>
     </conbody>
 </concept>
