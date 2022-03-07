@@ -12,7 +12,7 @@
                 by Alice</q>
         </p>
         <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
-            deliverred off chain, in some encodings (typically, <xref href="MagicLink.dita"/>),
+            deliverred off chain, in some encodings (typically, <xref href="concept/MagicLink.md" format="mdita"/>),
             which the recipient uses to execute the actoin associated with the cheque.</p>
         <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
             so that even an adversary who knows the identifier could not link a blockchain
