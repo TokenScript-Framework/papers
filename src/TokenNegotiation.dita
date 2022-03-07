@@ -23,7 +23,7 @@
             bootstrap library to do the negotiation.</p>
         <section id="negotiation_methods"><title>Negotiation Methods</title>
             <p>TokenScript provides the following negotiation methods:</p><ol id="ol_egq_bvt_pmb">
-                <li><xref href="Filter.dita"/> based negotiation, which uses a filter to find a
+                <li><xref href="concept/TokenFilter.md" format="mdita"/> based negotiation, which uses a filter to find a
                     token.</li>
                 <li><xref href="Capability.dita"/> based negotiation, by which a
                     website provides an attestation signed by a token issuer's trust key, showing
