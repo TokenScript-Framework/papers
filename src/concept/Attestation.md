@@ -1,7 +1,6 @@
 # Attestation
 
-An attestation is a cryptographically attested message, by an attestor stating someone have something. It's a few lines long and often is delivered through a MagicLink
-MagicLink.
+An attestation is a cryptographically attested message, by an attestor stating someone have something. It's a few lines long and often is delivered through a [MagicLink](MagicLink.md).
 
 There are two types of attestations: token issued as attestations (token attestation for short), and identifier attestations.
 
