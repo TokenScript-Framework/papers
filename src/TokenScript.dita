@@ -113,7 +113,7 @@
             <p dir="ltr">TokenScript enables token issuers to leave the restrictions of smart
                 contracts behind. It allows to add a lot of information, even image files or API
                 lookups to a token, and design a set of business rules and interaction logics for
-                it, including <xref href="Attestation.dita">attestations</xref> and structured
+                it, including <xref href="concept/Attestation.md" format="mdita">attestations</xref> and structured
                 interactions with other tokens. </p>
             <p dir="ltr">Moreover, with TokenScript token issuers can easily and securely update the
                 token rules.</p>
