@@ -19,7 +19,7 @@
                 and what are these interfaces. They only need to care about the functionalities
                 provided by the token.</p>
             <p>It's also possible to define a token without referring to any smart contract (0
-                contracts). Such TokenScript is only possible with <xref href="../Attestation.dita"
+		    contracts). Such TokenScript is only possible with <xref href="../concept/Attestation.md" format="mdita"
                 />.</p>
       </section>
     </body>
