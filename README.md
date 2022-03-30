@@ -49,3 +49,26 @@ Suppose TokenScript repo has a local clone `../TokenScript/`, this will recreate
 
     $ make OUTPUT_DIR=../TokenScript/ docs
 
+## Troubleshooting
+
+### `"html5-bootstrap" is not a recognized transformation type`
+
+````
+$ make website
+Error: [DOTJ020W][WARN] At least one plug-in in '[fox.jason.extend.css]' is required by plug-in 'net.infotexture.dita-bootstrap'. Plug-in 'net.infotexture.dita-bootstrap' cannot be loaded. Check and see whether all prerequisite plug-ins are installed in toolkit.
+Found dita version DITA-OT version 3.7.1. Minimum required is 3.6.
+test -d out || mkdir out
+test -d out/website && rm -rf out/website
+dita --project config/website.yaml -o out/website
+Error: [DOTA001F][FATAL] "html5-bootstrap" is not a recognized transformation type. Supported transformation types are dita, eclipsehelp, html5, htmlhelp, markdown, markdown_gitbook, markdown_github, pdf, pdf2, xhtml.
+make: *** [Makefile:18: website] Error 1
+```
+
+Cause:
+
+Solution:
+````
+$ dita uninstall net.infotexture.dita-bootstrap
+$ dita install fox.jason.extend.css
+$ dita install net.infotexture.dita-bootstrap
+````
