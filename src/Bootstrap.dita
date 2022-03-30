@@ -18,7 +18,7 @@
         </p>
 	<section><title>Coverage and limitation of Bootstrap Library</title>
         <p>Bootstrap Library provides support most TokenScript functions, like <xref
-                href="Card.dita"/>, <xref href="Attestation.dita"/> and <xref
+		href="Card.dita"/>, <xref href="concept/Attestation.md" format="mdita"/> and <xref
                 href="TokenNegotiation.dita"/>. However, it can't replace the TokenScript support in
             the user-agents, because it is deployed on the website as JavaScript library, it can't
             fully support the tokenscript features <xref href="TIPS.dita"/>. For example, if an
