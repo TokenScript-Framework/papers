@@ -4,6 +4,8 @@ An attestation is a cryptographically attested message, by an attestor stating s
 
 It's a few lines long and often is delivered through a [MagicLink](MagicLink.md).
 
+Note that an attestation is produced by a trusted attestor. It is not a trustless technology. See [Attestation vs Proof](../faq/attestation_vs_authorisation_vs_proof.md).
+
 There are two types of attestations: token issued as attestations (token attestation for short), and identifier attestations.
 
 ## Token Attestation
@@ -29,3 +31,6 @@ Use-cases of Identifier Attestations are:
 
 - To be used as a dependency for other tokens. For example, when DevCon 2022 ticket is issued, they are issued on user's identifier (email address). To use the DevCon ticket, a user has to acquire an email address attestation.
 - To be used to attest a transaction as from an identified user. For example, in AutographNFT, a person who add an autograph on an NFT must provide a twitter ID attestation, therefore attesting the autograph is from the owner of that ID.
+
+More use-cases can be found in [Attestation Usecases](../usecases/Attestation.md)
+
