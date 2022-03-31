@@ -10,11 +10,11 @@ There are two types of attestations: token issued as attestations (token attesta
 
 ## Token Attestation
 
-Token attestations are tokens issued by sending the recipient an attestation. As long as the recipient has the attestation, he is able to interact with smart contracts as if he has a token in a token contract.
+Token attestations are tokens issued by sending the recipient an attestation. The recipient, by using the attestation, is able to interact with smart contracts as if he has a token in a token contract.
 
 An example of such token is the DevCon 2022 ticket.
 
-The advantage is that a token is never minted, and can be used as if it is minted. However, it is not transferable in that form, instead, when transferring, a token contract has to burn the attestation and allocate it to the new recipient, and the new recipient will hold the token as a normal smart contract token (not attestation token).
+The advantage over minting tokens in a smart contract: a token is never minted, and can be used as if it is minted. However, it is not transferable in that form, instead, when transferring, a token contract has to burn the attestation and allocate it to the new recipient, and the new recipient will hold the token as a normal smart contract token (not attestation token).
 
 Tokens that can be issued as attestation are non-fungible.
 
