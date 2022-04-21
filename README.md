@@ -9,7 +9,7 @@ This repo has the source code of [tokenscript.org website](http://tokenscript.or
 2. Install plugin net.infotexture.dita-bootstrap
 
 ````
-$ dita --install net.infotexture.dita-bootstrap
+$ dita install net.infotexture.dita-bootstrap
 ````
 
 3. Make a website for documents. If dita is in `$PATH` you can do this:
@@ -41,6 +41,8 @@ A Makefile is provided to make frequent build tasks easy.
 
 ### Build website and upload in one go
 
+The following will work only if you have the correct upload credential in your `.netrc` file. Don't use it if you are not the webmaster.
+
     $ make upload
 
 ### Build TokenScript's docs directory
@@ -62,11 +64,14 @@ test -d out/website && rm -rf out/website
 dita --project config/website.yaml -o out/website
 Error: [DOTA001F][FATAL] "html5-bootstrap" is not a recognized transformation type. Supported transformation types are dita, eclipsehelp, html5, htmlhelp, markdown, markdown_gitbook, markdown_github, pdf, pdf2, xhtml.
 make: *** [Makefile:18: website] Error 1
-```
+````
 
 Cause:
 
+    `net.infotexture.dita-bootstrap` is not installed properly.
+
 Solution:
+
 ````
 $ dita uninstall net.infotexture.dita-bootstrap
 $ dita install fox.jason.extend.css
