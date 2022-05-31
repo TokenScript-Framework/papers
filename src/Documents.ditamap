@@ -24,6 +24,10 @@
         <topicref href="concept/MagicLink.md" format="mdita"/>
 
     </topicref>
+    <topichead navtitle="FAQ">
+        <topicref href="faq/attestation_vs_verifiable_credentials.md" format="markdown"/>
+        <topicref href="faq/attestation_vs_verifiable_credentials.md" format="markdown"/>
+    </topichead>
     <topicref href="Deploy.dita">
         <topicref href="Signing.dita"/>
         <topicref href="Deploy.dita"/>
