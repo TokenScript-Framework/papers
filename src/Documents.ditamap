@@ -19,7 +19,7 @@
             <topicref href="ActivityCard.dita"/>
         </topicref>
         <topicref href="DataObjects.dita"/>
-        <topicref href="Attestation.dita"/>
+	<topicref href="concept/Attestation.md" format="mdita"/>
         <topicref href="TokenScript-Syntax.dita"/>
         <topicref href="concept/MagicLink.md" format="mdita"/>
 

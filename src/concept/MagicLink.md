@@ -10,7 +10,7 @@ Typical usecases of a MagicLink:
 
 ## Pass an attestation to a user
 
-A MagicLink contains an encoded [attestation](../Attestation.dita). The recipient of such a link can save this attestation in her wallet, or, if the wallet doesn't have specific storage for attestation, a fallback website is provided to store it in the browser local storage for this website.
+A MagicLink contains an encoded [attestation](Attestation.md). The recipient of such a link can save this attestation in her wallet, or, if the wallet doesn't have specific storage for attestation, a fallback website is provided to store it in the browser local storage for this website.
 
 ## Redeem a token
 
