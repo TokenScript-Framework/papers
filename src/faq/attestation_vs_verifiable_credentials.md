@@ -1,9 +1,21 @@
 # Attestation vs Verifiable Credentials
 
-Both does not require the issuer to participate when using. They differ in scope and implementation.
+Attestations and Verifiable Credentials are based on the same cryptographic protocols, with overlapping scope. They differ in the design paradigm and applicable use cases. As a consequence, their data formats differ, too.
 
-In terms of scope, Tokens such as event ticket, friendship token (to prove someone knows someone else), video game badges, club membership, product ownership attestation etc do not typically fall into the scope of Verifiable Credentials but they are valid attestations.
+Verifiable credentials are centralised around individuals (entities), that is, someone, Alice or Bob, has the credential, such as a verified Facebook user, or qualified for financial services advisory; therefore, they can do something on a certain website. The whole concept doesn't have much to do with tokens, and the web is the main use case.
 
-In terms of implementation, attestation targets at smart contracts, hence has minimalist binary format, cryptographic hiding (to hide identifying information such as email address) and on-chain revocation. They can be used on the web since it satisfies the use-case requirements of Verifiable Credentials. On the other hand, Verifiable Credentials as a W3C standard uses bulkier format and assumed confidentiality on the verifier (that is, a verifier of an email credential will not tell the email address to the public), which isn't a valid assumption for smart contracts, which relies on zk-proof to assert the correctness of the email instead of knowing it itself.
+Attestation is centralised around tokens. For example, a user has an attestation to a Devcon conference. This attestation is used as a token in all practical senses, including on smart contracts and the web.
 
-In simpler terms, one can say that attestation is what Verifiable Credentials group would have created if they had Smart Contracts and Tokens in mind at the beginning. 
+|                       | Attestation                                                  | Verifiable Credentials                                       |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Core Assumption       | There is a token. No entity assumed.                         | There is an entity - typical, a person. No token assumed.    |
+| Additional Assumption | Confidentiality is none-existent. Attestation can be exposed on the blockchain without leaking identity. | The verifiable credential pass between a secure connection (TLS) |
+| Cryptography          | Issuing Ceremony. Cryptographic challenge. zk-hiding. Attested Transactions. | Issuing Ceremony. Cryptographic challenge.                   |
+| Data Format           | Binary, as each bytes cost gas.                              | JSON                                                         |
+
+## A overlap use-case, to demonstrate the difference.
+
+There are overlapping areas such as a user is able to get a verifiable credential as a Gmail user, and he can be attested as a gmail user with an attestation. In this example overlapping areas:
+
+- Verifiable credential focuses on the web use-cases, where confidentiality is implied. Therefore they do not hide the user's email address as attestations do with zk-proof.
+- Verifiable credentials aim to convince the 3rd party that the current user is a Gmail user, and that is the end goal. Attestation's typical use-case is such as the token is redeemable by the such Gmail user, or that the attested Gmail users can operate this token with any ethereum address of their choice.
