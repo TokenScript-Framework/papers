@@ -271,6 +271,9 @@ main article a {
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
+main article a u {
+  text-decoration: none;
+}
 main article a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
