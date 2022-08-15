@@ -339,6 +339,10 @@ main {
 			text-underline-offset: 4px;
 			text-decoration-thickness: 1px;
 
+			u {
+				text-decoration: none;
+			}
+
 			&:hover {
 				text-decoration: underline;
 				text-decoration-style: dotted;
