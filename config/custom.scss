@@ -95,6 +95,7 @@ html {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -158,7 +159,7 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 	color: var( --link );
-	transition: color 0.2s, opacity 0.2s;
+	transition: color 0.2s, opacity 0.2s, text-decoration-color 0.2s;
 
 	&:hover {
 		text-decoration: none;
@@ -277,7 +278,6 @@ nav {
 		min-width: 18.375rem;
 		margin-left: 0;
 		padding-left: 0;
-		margin-bottom: grid-baseline(6);
 
 		> ul {
 			display: flex;
@@ -332,6 +332,20 @@ main {
 		border-bottom: 1px solid var( --text-mid );
 		padding-bottom: grid-baseline(3);
 
+		a {
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			text-decoration-color: rgba(255, 255, 255, 0.25);
+			text-underline-offset: 4px;
+			text-decoration-thickness: 1px;
+
+			&:hover {
+				text-decoration: underline;
+				text-decoration-style: dotted;
+				text-decoration-thickness: 1px;
+			}
+		}
+
 		h1.title {
 			@include type-f4;
 			margin-top: 0;
@@ -348,6 +362,7 @@ main {
 		.alert,
 		.alert.note {
 			@include type-default;
+			padding: grid-baseline(2) grid-gutter(0.5);
 			margin: grid-baseline(3) 0;
 			background-color: rgba( 0, 26, 255, 0.55 );
 			color: var( --text-light );
@@ -382,6 +397,16 @@ main {
 
 			.ulchildlink {
 				margin: 0;
+			}
+
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -459,6 +484,7 @@ main {
 		pre {
 			&.codeblock {
 				@include type-f7;
+				margin: grid-baseline(3.5) 0;
 				font-family: monospace;
 				text-shadow: none;
 				padding: grid-baseline(3) grid-gutter(0.5);
@@ -494,6 +520,10 @@ main {
 		.linklist  {
 			@include type-default;
 			color: var( --text );
+		}
+
+		li.linklist {
+			margin: 0;
 		}
 	}
 }
@@ -588,7 +618,35 @@ main {
 		&.bs-sidebar-nav {
 			position: relative;
 			top: 0;
+			min-width: auto;
 			height: auto;
+			margin-bottom: grid-baseline(4);
+
+			ul {
+				li:last-child {
+					ul {
+						li:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		+ main {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				right: -25vw; top: 0; left: -25vw;
+				width: 150vw;
+				border-top: 1px solid var( --text-mid );
+			}
+
+			article {
+				padding-top: grid-baseline(4.75);
+			}
 		}
 	}
 
