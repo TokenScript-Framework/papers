@@ -336,7 +336,7 @@ main {
 			text-decoration: underline;
 			text-decoration-style: dotted;
 			text-decoration-color: rgba(255, 255, 255, 0.25);
-			text-underline-offset: 4px;
+			text-underline-offset: 0.25em;
 			text-decoration-thickness: 1px;
 
 			u {
@@ -645,7 +645,7 @@ main {
 				position: absolute;
 				right: -25vw; top: 0; left: -25vw;
 				width: 150vw;
-				border-top: 1px solid var( --text-mid );
+				border-top: 1px solid rgba( 71, 71, 71, 0.5 );
 			}
 
 			article {
