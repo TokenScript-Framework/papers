@@ -624,7 +624,7 @@ main {
 			top: 0;
 			min-width: auto;
 			height: auto;
-			margin-bottom: grid-baseline(4);
+			margin-bottom: grid-baseline(5);
 
 			ul {
 				li:last-child {
@@ -645,11 +645,11 @@ main {
 				position: absolute;
 				right: -25vw; top: 0; left: -25vw;
 				width: 150vw;
-				border-top: 1px solid rgba( 71, 71, 71, 0.5 );
+				border-top: 1px solid rgba( 71, 71, 71, 0.35 );
 			}
 
 			article {
-				padding-top: grid-baseline(4.75);
+				padding-top: grid-baseline(5.75);
 			}
 		}
 	}
