@@ -383,6 +383,10 @@ main {
 			}
 		}
 
+		span {
+			color: var( --text );
+		}
+
 		dl {
 			@include type-default;
 

@@ -315,6 +315,9 @@ main article .alert a:hover,
 main article .alert.note a:hover {
   color: var(--link-hover);
 }
+main article span {
+  color: var(--text);
+}
 main article dl {
   font-size: clamp(1rem, 0.5vw + 0.7rem, 1.5rem) !important;
   line-height: clamp(1.3rem, 0.7vw + 0.9rem, 2rem) !important;
