@@ -503,7 +503,7 @@ main article li.linklist {
     top: 0;
     min-width: auto;
     height: auto;
-    margin-bottom: calc(var(--baseline) * 4);
+    margin-bottom: calc(var(--baseline) * 5);
   }
   nav.bs-sidebar-nav ul li:last-child ul li:last-child {
     margin-bottom: 0;
@@ -518,10 +518,10 @@ main article li.linklist {
     top: 0;
     left: -25vw;
     width: 150vw;
-    border-top: 1px solid rgba(71, 71, 71, 0.5);
+    border-top: 1px solid rgba(71, 71, 71, 0.35);
   }
   nav + main article {
-    padding-top: calc(var(--baseline) * 4.75);
+    padding-top: calc(var(--baseline) * 5.75);
   }
   #content.bs-container {
     grid-template-areas: none;
