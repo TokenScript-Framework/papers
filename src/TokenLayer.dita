@@ -7,7 +7,7 @@
     <shortdesc>The Token Layer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
         <p>The Token Layer is what we call the general infrustructure and standardisation needed to
-            achieve <xref href="TIPS.dita"/>, the core requirements of tokenisation.</p>
+            achieve <xref href="concept/TIPS.md" format="mdita"/>, the core requirements of tokenisation.</p>
         <section><title>The Token Layer is for Web3</title>
             <p>A TokenLayer sits between a Blockchain and a Web3 websites. It provides token with
                 functionalities which have the level of trust of a blockchain but the user

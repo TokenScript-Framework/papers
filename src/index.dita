@@ -17,7 +17,7 @@
             app, information and rules to your token, without the need to care about the
             restrictions of a smart contract. You can even render the token functionality due to the
             circumstances and create interoperabilities with other tokens.</p>
-        <p>TokenScript addresses the <xref href="TIPS.dita">trust, interoperatibility, privacy and
+        <p>TokenScript addresses the <xref href="concept/TIPS.md" format="mdita">trust, interoperatibility, privacy and
                 security</xref> issues that arises when you need to make your users access your
             token in their wallets or from a 3rd party website. It creates an environment in which
             token can be used more securely and more privately, and in which token and other
