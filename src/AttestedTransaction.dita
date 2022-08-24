@@ -24,7 +24,7 @@
                 creating an attested transaction using it.</li>
    
         </ul>
-      <p>Since data on the blockchain is publically available, attested transactions often need to
+      <p>Since data on the blockchain is publicly available, attested transactions often need to
             use certain cryptographic proofs for privacy protection.</p>
         <p>For a person who proves his residency country, he should not reveal his national ID card
             number to the blockchain, or risk all his transactions are associated by an observer of

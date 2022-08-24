@@ -4,31 +4,31 @@
     <title>Data/Event Driven</title>
     <shortdesc>TokenScript takes a data-driven, event-driven design approach</shortdesc>
     <conbody>
-        <p>If a Dapp needs data from the blockchain, it can call a smart contract to ask for these
-            data. The call is then routed to a blockchain node, and the Dapp would wait a few
+        <p>If a dapp needs data from the blockchain, it can call a smart contract to ask for these
+            data. The call is then routed to a blockchain node, and the dapp would wait a few
             seconds for the call to return.</p>
-        <p>This works well in the scenario that a user accesses a website that runs the Dapp.
+        <p>This works well in the scenario that a user accesses a website that runs the dapp.
             But:</p>
         <p>
             <ol id="ol_qsz_234_2nb">
-                <li>The Dapp has to repeatedly enquire the blockchain to get the updates of the
+                <li>The dapp has to repeatedly enquire the blockchain to get the updates of the
                     data;</li>
-                <li>If the Dapp is not running in a user's device, the user won't get the
+                <li>If the dapp is not running in a user's device, the user won't get the
                     update.</li>
             </ol>
         </p>
-        <p>For example, if an AAVE token is nearing its liquidation position, a Dapp running as a
+        <p>For example, if an AAVE token is nearing its liquidation position, a dapp running as a
             website can check the current collateralisation position and provide a warning. But, if
-            the Dapp is not running, for example, the user is jugging, the user would not have
+            the dapp is not running, for example, the user is jugging, the user would not have
             learned of the dangerous situation. His main user agent - the wallet - remains dumb.</p>
-        <p>Even the existence of such a "host Dapp", run by the token's issuer, might be called into
+        <p>Even the existence of such a "host dapp", run by the token's issuer, might be called into
             question. With the example of a Car Ownership Token, an accident might have written off
             a car. Yet, a loan application (a "connected-system") may still try to sell the user a
             line of credit by collateralising the car. The connected applications can't be running
-            the host Dapp themselves.</p>
-        <p>Instead of needing a host Dapp to repeatedly enquiring the blockchain for data updates,
-            in TokenScript's design <xref href="Attributes.dita"/> define a token's relevent data.
-            This allows a <xref href="Engine.dita"/> to subsitute the service of such a "host Dapp"
+            the host dapp themselves.</p>
+        <p>Instead of needing a host dapp to repeatedly enquiring the blockchain for data updates,
+            in TokenScript's design <xref href="Attributes.dita"/> define a token's relevant data.
+            This allows a <xref href="Engine.dita"/> to substitute the service of such a "host dapp"
             in the user's wallet or a system.</p>
         <p>In TokenScript, a <xref href="Engine.dita"/> is at work on the web or in user's wallet.
             It maintains a set of token attributes and utilises the declarations in TokenScript
