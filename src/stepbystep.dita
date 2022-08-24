@@ -11,7 +11,7 @@
         <p>(1) Use ABI to TokenScript: <xref
                 href="https://alphawallet.github.io/ABI-to-TokenScript/" format="html"
                 scope="external">https://alphawallet.github.io/ABI-to-TokenScript/</xref></p>
-        <p>(2) Create the files by yourself: XML as the skeletton, JavaScript-files for Action
+        <p>(2) Create the files by yourself: XML as the skeleton, JavaScript-files for Action
             Cards, CSS for style, Makefile as instruction how to make. Helpful: Ethereum Studio.</p>
         <p><b>A very simple example</b></p>
         <p>(1) We assume a very simple ERC token, and we assume you only want the wallet to receive

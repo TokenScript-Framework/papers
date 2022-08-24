@@ -41,7 +41,7 @@
             done so, the wallet suddenly understands the smart contract. It provides information
             about the token, so that the user can learn what it is. It also provides an overview
             about how much yield you get when lending it, and displays a button to lend and, when
-            already lended, how to terminate it.</p>
+            already lent, how to terminate it.</p>
         <p>AlphaWallet has a rudimentary TokenScript for Compound. This allows to withdraw cWBTC
             token directly from the wallet, which is able to display the interest rate:</p>
         <p><image href="aw-compound-withdraw.jpg" id="image_cpy_n1x_qmb"/></p>
@@ -50,7 +50,7 @@
             local currency. Also, the wallet can know how much DeFi token you farmed, and provide a
             button to pay out the token.</p>
         <p>In your wallet's history you see every single DeFi operation. The history knows well what
-            you did - it knows which smart contract you used, which token you lended and for which
+            you did - it knows which smart contract you used, which token you lent and for which
             yield rate.</p>
         <p>TokenScript enables your wallet to do everything you formerly needed a website for. It
             also allows other websites to easily integrate your token into their service without the
