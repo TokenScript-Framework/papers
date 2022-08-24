@@ -3,7 +3,7 @@
 <topic id="why_not_hash">
   <title>Why don't we embed the TokenScript's hash in Smart Contract's</title>
   <shortdesc>Currently, a TokenScript is "trusted" by a smart contract through the TokenScript's
-    signing key. Why don't we chuck tokenscript on an IPFS and keep hash of this code is embedded
+    signing key. Why don't we chuck TokenScript on an IPFS and keep hash of this code is embedded
     into contract?</shortdesc>
   <body>
     <p>In fact earlier TokenScripts were designed like that. However, as we experimented with

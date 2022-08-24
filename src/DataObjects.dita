@@ -18,7 +18,7 @@
         <p dir="ltr" id="docs-internal-guid-9cfcb9e7-7fff-ed55-0a83-60c4178928ef">TokenScript
             created its own format for DataObjects, relying on well established technology. The data
             is structured in a way that it can be put on the blockchain with low gas costs, but also
-            used off-chain. It is designed to be interoperable, extensible and longevitable. </p>
+            used offchain. It is designed to be interoperable, extensible and longevitable. </p>
         <p dir="ltr">Other than JSON data objects, the data is separated from the scheme. It
             consists of pure data. The scheme for the data is transferred offchain. The data is
             encoded in a string of bytes, separated by structural bytes according to standard DER
@@ -37,11 +37,11 @@
             transactions or a key to interact with a third party API.</p>
         <p dir="ltr">Data objects can be used onchain. They can be part of a smart contract and be
             downloaded from a blockchain, for example, to get the data needed to start an
-            attestation process. However, in most cases the data doesn’t need to be onchain. </p>
+            attestation process. However, in most cases the data doesn't need to be onchain. </p>
         <p dir="ltr">For example, when an event organiser issues thousands of ticket, the tickets
             don’t need to be onchain. It is enough when the tickets are data objects ascribed to an
             Ethereum address and signed by the issuer. They can be just a data object. However, when
-            the tickets are sold and transfered, the data objects can be used to create an Ethereum
+            the tickets are sold and transferred, the data objects can be used to create an Ethereum
           transaction which proof that the ticket is valid.</p></section>
     </conbody>
 </concept>

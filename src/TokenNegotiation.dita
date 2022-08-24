@@ -15,7 +15,7 @@
                 hotels.</li>
             <li>Any Payment Token that can be used to pay for the booking (e.g. American Express
                 Explorer Credit). </li>
-            <li>COVID-19 attestation, which attestates a recent negative test result or
+            <li>COVID-19 attestation, which attests a recent negative test result or
                 antibodies</li>
         </ul>
         <p>If the browser supports TokenScript, it will handle the negotiation and provide the
@@ -39,17 +39,17 @@
                 <li>The TokenScript provided by the web page. This can be done by adding the
                     TokenScripts of possible outcomes in the HTML header section.</li>
                 <li>The TokenScript provided by the user agent (wallet). This is affected by how
-                    many Tokenscripts are cached on user's wallet.</li>
+                    many TokenScripts are cached on user's wallet.</li>
                 <li>The "token.scope" meta tag (unimplemented).</li>
             </ol>
         </section>
         
         <section id="section_dcx_4jc_ymb">
-            <title>Negotation Process</title>
-            <p>Negotation can be passive or active.</p>
+            <title>Negotiation Process</title>
+            <p>Negotiation can be passive or active.</p>
             <p>In a passive negotiation, the website declares the negotiation method and scope in
                 HTML <codeph>&lt;meta></codeph> element, as seen in <xref
-                    href="TokenNegotiationExamples.dita"/>. In a browser, the user is preseneted
+                    href="TokenNegotiationExamples.dita"/>. In a browser, the user is presented
                 with a <xref href="TokenBar.dita"/>. The user can click the tokens in the token bar
                 any time to make that token "active" in the current session. It's possible for the
                 user to not to choose anything in the entire session and the user is not forced to

@@ -8,7 +8,7 @@
             what TokenScript can add to a token:</p>
         <p dir="ltr"><b>Information</b>: When a token implements TokenScript, a wallet or webapp can
             instantly learn about its name and abbreviation, get a description in several languages
-            and an image file as a logo. The wallet can even querry an API, e. G. to get weather or
+            and an image file as a logo. The wallet can even query an API, e. G. to get weather or
             exchange data. This information can adapt to the context.</p>
         <p dir="ltr"><b>History</b>: The wallet can remember the detailed history of operations a
             token was involved, both onchain and offchain. Natively a wallet only knows
@@ -30,10 +30,13 @@
         <p dir="ltr"><b>Restrict operations</b>: TokenScript can restrict the scope of operations.
             For examples, if you have a token for a world cup game, you can sell it - but only as
             long as the game has not ended. TokenScript can define any kind of rule for token
-            transfers and usecases.</p>
+            transfers and use-cases.</p>
         <p dir="ltr"><b>Proofs</b>: TokenScript allows to add private or public proofs to Token
-            operations. For example, an operation could only be valid if someone proofs to own 1000
-            Ether. With Zero-Knowledge-Proofs this can be done without revealing an address.</p>
+            operations. For example, assume you have an attestation to your e-mail address, but
+            with the e-mail hidden using cryptography. It is then possible to use a
+            zero-knowledge proof to prove that you know the e-mail, or that the e-mail is the
+            same as another hidden reference e-mail, without ever letting anyone know what your
+            e-mail is! </p>
         <p>That are just some of the most important feature TokenScript can unlock. It enables
             everything you can think of if you have a framework to enrich a token with information
             and instructions a wallet can automatically get when the user receives a token. </p>

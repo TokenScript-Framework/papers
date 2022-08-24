@@ -25,7 +25,7 @@
         <title>Use Trust Key for package management</title>
         <p>When a TokenScript is cached in a user's wallet (as apposed to being distributed and used
                 in a web page), the Trust Key that signs it is used as the package ID for the
-                life-cycle management purpose. That is, if a user installs a new Tokenscript file or
+                life-cycle management purpose. That is, if a user installs a new TokenScript file or
                 file-bundled, all previously cached TokenScript signed by the same key are replaced
                 by it, discarded.</p>
         </section>
@@ -35,12 +35,12 @@
                 secp256k1 curve to make implementation simple, therefore, it is also a valid
                 Ethereum key. This key does not need to be used on the blockchain at all, and better
                 not, since the life cycle of a TokenScript key is different then the life cycle of
-                an Ethereum key. One might discard a TokenScript key and unawaringly lost the
+                an Ethereum key. One might discard a TokenScript key and unwittingly lost the
                 Ethers, or spent all the Ether and discard the key only to find later that it has
                 other uses.</p>
             <p>However, with the use of the trust key for signing TokenScript file, you might
                 intentionally keep some ether on the Ethereum address controlled by this key.
-                Sometimes, in a team environment, the key might be kept in a USB stick with mutiple
+                Sometimes, in a team environment, the key might be kept in a USB stick with multiple
                 people having access to it. Should the key be leaked, an adversary would then
                 proceed on robbing the money on its Ethereum address, therefore making the
                 management aware that the key is leaked.</p></section>

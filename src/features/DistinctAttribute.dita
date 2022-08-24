@@ -9,7 +9,7 @@
 …
 &lt;/attribute></codeblock></p>
         <p>If there is only one distinct attribute in a token, then the number of unique values of
-      this attribute determins how many token instances are there.</p>
+      this attribute determines how many token instances are there.</p>
     <note>Each Token is identified by a attribute-value pair where the attribute has to be a distinct
       attribute. See more in <xref href="../TokenIdentifier.dita"/></note>
         <p>If there is no distinct attribute defined in a Token, TokenScript Engine takes a default
