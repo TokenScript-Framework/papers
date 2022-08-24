@@ -7,7 +7,7 @@
         <prereq id="prereq_t2d_trn_gnb">
             <p>You will need the TokenScript in a file that is already tested working. We will
                 assume it's <filepath>DAI.xml</filepath> in this tutorial.</p>
-            <p>Since signing associates your tokenscript with an identity, you need to provide a
+            <p>Since signing associates your TokenScript with an identity, you need to provide a
                 Certificate of an identity and sign with its key. The simplest way to get started is
                 to use the SSL certificate for your website, although any X.509 certificate will do.
                 It's up to the users and websites if they trust it. </p>
@@ -25,7 +25,8 @@
                     format="html" scope="external">Java Runtime Environment</xref>.</p>
         </prereq>
         <context>
-            <p>As a token issuer, once you have created a tokenscript and tested it working, you need to sign it so it is associated with an identity such as a website. It is required for deployment either on user's mobile phone or for use with websites.</p>
+            <p>As a token issuer, once you have created a TokenScript and tested it working, you
+            need to sign it so it is associated with an identity such as a website. It is required for deployment either on user's mobile phone or for use with websites.</p>
         </context>
         
         <steps>
