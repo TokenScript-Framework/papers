@@ -71,7 +71,7 @@
             operations and representations on it. To make them visible you need cards.</p>
         <p dir="ltr">Attribute is a categorical declaration. There are other declarations inside the
             &lt;attribute> tags, for example &lt;origins> or &lt;token>. </p>
-        <p dir="ltr">If you want TokenScript to querry a non-blockchain API for information, like
+        <p dir="ltr">If you want TokenScript to query a non-blockchain API for information, like
             weather or exchange prices from a data provider, currently this can't be part of the
             attribute tag, but part of an action card. </p>
     </conbody>

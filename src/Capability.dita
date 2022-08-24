@@ -13,7 +13,7 @@
             token owned by the current user, without the user given explicit permission.</p>
         <p>Example of this is that FIFA ticket can given a capacity to booking.com, so that
             booking.com can display special travel packages only valid to the FIFA ticket holders.
-            This capacity allos booking.com to learn user's FIFA tickets without the user making
+            This capacity allows booking.com to learn user's FIFA tickets without the user making
             explicit choice.</p>
         <p>In traditional web2 websites, such integration is done by logging in to booking.com and
             "linking" the user's FIFA ticket account with his/hers booking.com account.</p>

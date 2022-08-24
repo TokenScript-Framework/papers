@@ -5,7 +5,7 @@
     <body>
         <p>There are 3 types of TokenScript specifications. Throughout a standardisation process
             they may eventually become separate standards, but presently they are all housed under
-            TokenScript in 3 streams of development.<note>This is a work in progres to move
+            TokenScript in 3 streams of development.<note>This is a work in progress to move
                 documents from old TokenScript repository. Will take a few weeks to
                 accomplish.</note></p><dl>
                 <dlentry>
@@ -28,7 +28,7 @@
                     <dd>About the attestations and data objects accessible to TokenScript
                         Engines.</dd>
                 </dlentry>
-            </dl><p>Further more, there are design concepts that these specs should refer to, availble in the <xref
+            </dl><p>Further more, there are design concepts that these specs should refer to, available in the <xref
                 href="../paper/index.dita">design paper</xref>.</p>
     </body>
 </topic>

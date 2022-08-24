@@ -12,7 +12,7 @@
         <p>For Ethereum's ERC20 Tokens, a token is identified by its owner address since each
             address can only have one such token. For example:
             <codeblock>ownerAddress=0xedd6d7ba0ff9f4bc501a12529cb736ca76a4fe7e</codeblock>where
-                <codeph>0xedd6…</codeph> is the Etheruem address of this token's owner. </p>
+                <codeph>0xedd6…</codeph> is the Ethereum address of this token's owner. </p>
         <p>For Ethereum's ERC721 Token, a token is identified by the attribute tokenId. For example,
             the following is the identifier of a
             token:<codeblock>tokenId=0x06012c8cf97bead5deae237070f9587f8e7a266d</codeblock> It's the
