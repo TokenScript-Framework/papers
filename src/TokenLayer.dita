@@ -6,7 +6,7 @@
         Layer<?oxy_comment_end?></title>
     <shortdesc>The Token Layer connects the applications (websites) and blockchain</shortdesc>
     <conbody>
-        <p>The Token Layer is what we call the general infrustructure and standardisation needed to
+        <p>The Token Layer is what we call the general infrastructure and standardisation needed to
             achieve <xref href="concept/TIPS.md" format="mdita"/>, the core requirements of tokenisation.</p>
         <section><title>The Token Layer is for Web3</title>
             <p>A TokenLayer sits between a Blockchain and a Web3 websites. It provides token with
@@ -38,7 +38,7 @@
             <p>For a website, a TokenLayer is like a rail that you can "slot-in" blockchain Tokens,
                 similar to how a Payment Rail allows an e-commerce site to on-board users of various
                 credit card and payment methods. However, Tokens can provide more important roles
-                than just payment: They represent any stake in any contractualized relationship. </p>
+                than just payment: They represent any stake in any contractual relationship. </p>
             <p>For example: One token can represent a car, another token an insurance, and when
                 taken together, the car can be lend on a website. The borrower gets a third token,
                 which allows him to start the engine for a certain timeframe. Token can become the

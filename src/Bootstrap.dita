@@ -2,10 +2,11 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="bootstrap">
     <title>Bootstrap Library</title>
-    <shortdesc>TokenScript's bootstrap library is a <xref href="Engine.dita"/> that can be embeded in a web page</shortdesc>
+    <shortdesc>TokenScript's bootstrap library is a <xref href="Engine.dita"/> that can be
+    embedded in a web page</shortdesc>
     <conbody>
         <p>Ideally, when the user uses a browser that supports TokenScript, the website can use
-            TokenScrpit features such as <xref href="Card.dita"/> and <xref
+            TokenScript features such as <xref href="Card.dita"/> and <xref
                 href="TokenNegotiation.dita"/>. This allows a website to use tokens without having
             to write code to do low level access to the blockchain, like calling smart contracts or
             getting update of new blocks.</p>

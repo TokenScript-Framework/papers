@@ -7,7 +7,7 @@
             <title>Using an empty token.filter</title>
             
             <p>Take this web page for example, which provided 2 TokenScripts (TokenA.xml and
-                TokenB.xml) and an empty token fitler (all inclusive):</p>
+                TokenB.xml) and an empty token filter (all inclusive):</p>
             <codeblock>&lt;!DOCTYPE html>
                 &lt;html lang="en">
                 &lt;head>
@@ -44,7 +44,7 @@
             <title>Using an non-empty token.filter</title>
             
             <p>Take this web page for example, which provided 2 TokenScripts (TokenA.xml and
-                TokenB.xml) and an empty token fitler (all inclusive):</p>
+                TokenB.xml) and an empty token filter (all inclusive):</p>
             <codeblock>&lt;!DOCTYPE html>
                 &lt;html lang="en">
                 &lt;head>

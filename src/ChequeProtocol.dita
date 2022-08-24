@@ -7,18 +7,19 @@
         <p>An attestation is a signed message about a certain fact. A cheque is a special case of
             such a message issued to an <term>identifier</term> about some actions to be performed
             by smart contract (like cashing out some crypto asset).</p>
-        <p>For example, a cryptographic equivalent of the following messae would be a
+        <p>For example, a cryptographic equivalent of the following message would be a
                 cheque:<q>person identified by bob@example.com can redeem 1 amount of XToken, signed
                 by Alice</q>
         </p>
         <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
-            deliverred off chain, in some encodings (typically, <xref href="concept/MagicLink.md" format="mdita"/>),
-            which the recipient uses to execute the actoin associated with the cheque.</p>
+            delivered offchain, in some encodings (typically, <xref href="concept/MagicLink.md" format="mdita"/>),
+            which the recipient uses to execute the action associated with the cheque.</p>
         <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
-            so that even an adversary who knows the identifier could not link a blockchain
-            transaction to the identifier. <xref href="Cheque/privacy_protection.md" format="mdita"
+            in such a way that even an adversary, who knows the identifier, cannot link a
+            blockchain transaction to the identifier. <xref href="Cheque/privacy_protection.md"
+            format="mdita"
                 >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
-            Proof.</p>
+            Proofs.</p>
         <p>The cryptographic details are in <xref href="Cheque/send_token_by_identifier.md" format="mdita"
                 >protocol description.</xref></p>
         <p>There are lots of real life use-cases of Cheque Protocol</p>

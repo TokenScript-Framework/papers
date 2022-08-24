@@ -6,7 +6,7 @@
 	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
             Tokenisation framework. It wraps HTML, JavaScript and XML to express Token
             functionalities and make them deployable in the wallet and on websites. With
-            TokenScript, any token can unlock its customized mini Dapp. </p>
+            TokenScript, any token can unlock its customized mini dapp. </p>
         <p>TokenScript creates a <xref href="TokenLayer.dita"/>: A <xref href="DataDriven.dita"/>,
             and <xref href="ContextBased.dita"/> layer between the blockchain and the user. On this
             layer, token are the basic unit to structure the interaction between users and
@@ -20,7 +20,7 @@
                 JavaScript and is issued and signed by the corresponding Token Issuer. It can be
                 imported by any service or device which implemented TokenScript Engine. The file
                 provides additional token information, structures the token UX in the wallets, and
-                appends rules, data moduls, transaction security measurements and much more. </li>
+                appends rules, data modules, transaction security measurements and much more. </li>
         </ul>
         <p dir="ltr">TokenScript files are <xref href="Signing.dita">signed by the creator of the
                 token smart contract or a trusted source</xref> with a public key. Wallets and dApps
@@ -121,7 +121,7 @@
         </section><section>
             <p dir="ltr">For<b> wallets, </b>TokenScript levels up their capability as the user
                 agent for blockchain interactions. Currently most dApps require a third party
-                website to interprete the state of the blockchain and to craft smart contract
+                website to interpret the state of the blockchain and to craft smart contract
                 transactions. When a wallet imports TokenScript, it learns to fully understand the
                 smart contract and craft the required transactions.</p>
             <p>Furthermore, TokenScript allows Token issuers to design the token GUI in the wallet,
