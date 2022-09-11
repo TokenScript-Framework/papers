@@ -9,6 +9,8 @@ deliverables:
     params:
     - name: "args.hdr"
       href: "navbar.xml"
+    - name: "args.ftr"
+      href: "footer.xml"
     - name: "args.hdf"
       href: "hdf.xml"
     - name: "args.css"
