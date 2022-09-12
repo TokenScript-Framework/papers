@@ -128,7 +128,7 @@
             the console while being in the folder with the TokenScript files, with "token" as the
             name of your token. If your system has all dependencies, you will get a file named
             "token.canonicalized.xml.TEST". Rename the file into token.canonicalized.xml.</p>
-        <p>If the make commaned doesn't work, you might lack some software. You can use xmllint,
+        <p>If the make command doesn't work, you might lack some software. You can use xmllint,
             which is available for both Ubuntu and Windows. <xref
                 href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/tutorial#xmllint"
                 format="html" scope="external">Here you find the commands how to install

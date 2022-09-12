@@ -7,10 +7,10 @@
         <p>A Token Bar is a UI element that shows users' tokens that can be used on a website.</p>
         <note type="restriction">TokenBar is an in-development feature. There is no released
             AlphaWallet or TokenScript engine that supports it yet.</note>
-        <p>In a Browser with TokenScript support, a token bar is accessed in a samiliar fashion as
+        <p>In a Browser with TokenScript support, a token bar is accessed in a similar fashion as
             the Bookmarks, which is a list of tokens in their ItemView. Clicking the token would
             "activate it", meaning making the website aware that the user has that token.</p>
         <p>With TokenScript <xref href="Bootstrap.dita"/> the Token Bar is rendered on the
-            upper-right cornor of the screen similar to "Login with Google".</p>
+            upper-right corner of the screen similar to "Login with Google".</p>
     </conbody>
 </concept>

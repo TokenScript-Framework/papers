@@ -5,14 +5,14 @@
     <shortdesc> A TokenScript engine runs TokenScript</shortdesc>
     <conbody>
         <p>TokenScript engine is a piece of software that provides Token Layer - a set of api and UI
-            to the applictions and wallets that uses tokens.</p>
-        <p>TokenScript engine achieves this by interpreating TokenScript, verifying signature and
+            to the applications and wallets that uses tokens.</p>
+        <p>TokenScript engine achieves this by interpreting TokenScript, verifying signature and
             provides the functionalities defined in the TokenScript.</p>
         <p>There are three TokenScript Engines:</p>
         <ul id="ul_i4c_rk3_2nb">
-            <li>The one embededin AlphaWallet Android</li>
-            <li>The one embeded in AlphaWallet iOS</li>
-            <li><xref href="Bootstrap.dita"/>, a JavaScript embedable Engine to be embeded in the
+            <li>The one embedded in AlphaWallet Android</li>
+            <li>The one embedded in AlphaWallet iOS</li>
+            <li><xref href="Bootstrap.dita"/>, a JavaScript embeddable Engine to be embedded in the
                 web pages that uses TokenScript</li>
         </ul>
         <p>Another JavaScript one intended to be used as a MetaMask plug-in will be developed some
