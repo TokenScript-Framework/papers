@@ -5,7 +5,7 @@
     <shortdesc>This miniguide explains how to deploy your custom token on Ropsten testnet using
         Ethereum Studio and Remix.</shortdesc>
     <conbody>
-        <p>Building on Ethereum can be infrightening. But there are great tools available which make
+        <p>Building on Ethereum can be frightening. But there are great tools available which make
             it really easy and secure. </p>
         <section><title>Use a Browser-Wallet and get some Ropsten coins</title>
         <p>To deploy a token on Ropsten testnet you need a browser wallet like MetaMask. In MetaMask
@@ -28,7 +28,7 @@
         <p><image href="miniguide-rt-3.png" id="image_cpx_5kz_4mb"/></p>
         <p>The name of the file must be [your-token-name].sol. Then paste what you copied from
             Ethereum Studio in this file and press the "Compile" button on the left.</p>
-        <p>Now you have to select the diamond like system in the menue bar on the left. In the drop
+        <p>Now you have to select the diamond like system in the menu bar on the left. In the drop
             down menue "Environment" change "JavaScript VM" into "Injected Web3". This means that
             your MetaMask wallet will execute the transaction, using the testnet Ether in it for
             gas. Be sure that a line below under "account" you have selected your account in
@@ -38,7 +38,7 @@
             which will ask you to confirm it. After you did so, the contract is created.</p>
         </section><section><title>Mint Coins and transfer to Alphawallet</title>
         <p>To mint coins of the token, you need to click on "token at …" on the right side in Remix. </p>
-        <p>Here you will find a menue to manage the token contract.</p>
+        <p>Here you will find a menu to manage the token contract.</p>
         <p>Minting coins is easy: Select the form beside the orange field "mint", paste in your
             account address and add the number of tokens after a comma. The number of tokens is in
             UINT256, which is a bit messy. Then press "mint" and sign with MetaMask. </p>

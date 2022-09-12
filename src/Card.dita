@@ -2,12 +2,12 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_dhv_3dl_mmb">
     <title>Card</title>
-    <shortdesc>Cards are a fundamental part of Tokenscript. They define how the token behaves in the
-        wallet and in web pages. They are the only part of Tokenscript which is visible for the
+    <shortdesc>Cards are a fundamental part of TokenScript. They define how the token behaves in the
+        wallet and in web pages. They are the only part of TokenScript which is visible for the
         user.</shortdesc>
     <conbody><note type="restriction">Cards current only work in the wallet, not in web pages. Work is in
             progress to make them available to the web pages.</note>
-        <p>In Tokenscript, Cards are the "User Interface" of tokens. There are 3 types of cards.<dl>
+        <p>In TokenScript, Cards are the "User Interface" of tokens. There are 3 types of cards.<dl>
                 <dlentry>
                     <dt>Token Card</dt>
                     <dd>Token Cards determine how the token behaves in the wallet and in web pages:
@@ -29,10 +29,10 @@
             </dl></p>
 
         <p>Token Card and Activity Card often have actions available to them that a user can click
-            and result in the corrisponding Action Card being shown.</p>
-        <p>While other parts of Tokenscript are written mostly in XML, cards are built in JavaScript
+            and result in the corresponding Action Card being shown.</p>
+        <p>While other parts of TokenScript are written mostly in XML, cards are built in JavaScript
             and HTML (WebAssembly support will be supported too). Theses JavaScript and HTML are
-            either embeded or referred to from XML.</p>
+            either embedded or referred to from XML.</p>
         <p>An important aspect of cards is that with a TokenScript enabled user-agent, they are not
             rendered in a website or app (although they may be physically placed there). They are
             defined in the TokenScript files and executed in a protected environment in the wallet
@@ -47,7 +47,7 @@
         <p>A planned feature of TokenScript is to allow the creation and use of decks, which means a
             set of cards that can be combined.</p>
         <p><b>Code</b></p>
-        <p>In the Tokenscript XML file cards are declared by
+        <p>In the TokenScript XML file cards are declared by
                 <codeph>&lt;ts:cards></codeph>...<codeph>&lt;/ts:cards></codeph></p>
     </conbody>
 </concept>

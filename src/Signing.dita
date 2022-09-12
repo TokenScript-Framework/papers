@@ -39,11 +39,11 @@
             <p>However, the Smart Contract might be from a different team than the TokenScript
                 author, where wholesale trust to the identity is not possible.</p>
             <p>For example, AAVE team might create a token action for DAI token that is called
-                "Enable Deposit to AAVE". This effecitvely authorises Uniswap's smart contract to
+                "Enable Deposit to AAVE". This effectively authorises Uniswap's smart contract to
                 act on-behalf of AAVE token holder. Since such an action transacts to the DAI token
                 contract, that token contract need to express trust to that action's code.</p>
             <p>AAVE team reaches out to the DAI team, and ask DAI token contract to express trust by
-                identity, in this case, "aave.com". DAI token contract team reasonablly rejected the
+                identity, in this case, "aave.com". DAI token contract team reasonably rejected the
                 proposal, since they don't know what TokenScript AAVE team will sign - in the worst
                 case, it could be a "Try me" action which simply steals user's AAVE tokens from the
                 contract.</p>
@@ -60,7 +60,7 @@
                 "makerdao.com").</p>
         </section>
         <section audience="implementer">
-            <title>It's possible to express trust to a key, instead of an identifer</title>
+            <title>It's possible to express trust to a key, instead of an identifier</title>
             <p>Can a smart contract expresses trust to a signing key instead of an identifier such
                 as domain name?</p>
             <p>Such a need is discussed in the TokenScript weekly committee meeting however we don't
@@ -70,7 +70,7 @@
                     <dlentry>
                         <dt>Reputation Key</dt>
                         <dd>let's user accept the TokenScript based on the reputation of the website
-                        or organisation. In the simpliest case, a website SSL certificate with the
+                        or organisation. In the simplest case, a website SSL certificate with the
                         corresponding key will do. A <xref
                             href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate"
                             format="html" scope="external">EV certificate</xref> would be
