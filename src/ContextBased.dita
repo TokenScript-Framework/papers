@@ -4,7 +4,7 @@
     <title>Context-based</title>
     <shortdesc>Token's availability, status and use are affected by context</shortdesc>
     <conbody>
-<p>TokenLayer allows Token Actions to be defined and performed based on the context. Depending on
+        <p>TokenLayer allows Token Actions to be defined and performed based on the context. Depending on
             the situation an available Action changes or a new Action becomes available.</p>
             <p>For an example, take American Express Travel Credit Token. Instead of launching a web
             application called American Express Travel, where the user is able to choose a hotel and

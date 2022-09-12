@@ -160,8 +160,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) => {
 //]]&gt;</codeblock>
         </p>
       </section><section><title>Merging and signing the files</title>
-        <p>To deploy TokenScript, the files needs to be merged in a canonicalized XML file. For
-                testing purposes you can load the canonicalized XML file in the AlphaWallet folder
+        <p>To deploy TokenScript, the files needs to be merged in a canonical XML file. For
+                testing purposes you can load the canonical XML file in the AlphaWallet folder
                 on your smart phone. For production you must sign the file and make it available to
                 your users, either by a website or by the <xref
                     href="https://github.com/AlphaWallet/TokenScript-Repo" format="html"

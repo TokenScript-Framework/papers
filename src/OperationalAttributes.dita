@@ -11,7 +11,7 @@
                 <varname>ownerAddress</varname>, whose value is the Ethereum address of the token's
             owner.</p>
         <p>Other operational attributes being proposed (probably will be included in future
-            TokenScript specifictions) includes:<ul id="ul_ylj_22p_2nb">
+            TokenScript specifications) includes:<ul id="ul_ylj_22p_2nb">
                 <li>createTimestamp</li>
                 <li>createBlockHeight</li>
                 <li>receiveTimeStamp</li>
