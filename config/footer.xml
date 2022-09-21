@@ -1,0 +1,91 @@
+<div class="footer container">
+  <div class="footer_main grid -g-cols-4">
+    <div class="footer_main-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 24">
+        <path fill="currentColor" d="M35 0h-3.688v23.76H35V0Z" />
+        <path fill="currentColor" d="M27.8 12.32v1.998l-12.196 6.127v-3.1l8.332-3.995-8.332-3.983V6.254L27.8 12.32ZM0 14.268v-1.997l12.209-6.127v3.113l-8.345 3.982 8.345 3.995v3.1L0 14.268Z" />
+      </svg>
+    </div>
+    <div class="footer_main-address grid -g-cols-2">
+      <div>
+        <address>
+          <strong>Australia</strong><br/>
+          Level 4, 383 George St <br/>
+          Sydney NSW 2000 Australia
+        </address>
+      </div>
+      <div>
+        <address>
+          <strong>Singapore</strong><br/>
+          16 Raffles Quay,<br/> #33-03, Singapore 048581
+        </address>
+      </div>
+    </div>
+    <div class="footer_main-email_container">
+      <div class="footer_main-email">
+        <a href="mailto:sayhi@smarttokenlabs.com">sayhi@smarttokenlabs.com</a>
+      </div>
+      <div class="footer_main-socials -hide-s">
+        <a
+          aria-label="Twitter"
+          href="https://twitter.com/TokenScript"
+          external="true"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+            <path d="M21.97 5.464a7.991 7.991 0 0 1-1.846 1.778v.55a12.19 12.19 0 0 1-3.621 8.69A12.178 12.178 0 0 1 7.773 20 12.217 12.217 0 0 1 2.33 18.74a.25.25 0 0 1-.15-.23v-.11a.26.26 0 0 1 .26-.26 8.844 8.844 0 0 0 5.112-1.837 4.363 4.363 0 0 1-3.884-2.558.26.26 0 0 1 .26-.36c.51.052 1.025.004 1.518-.14A4.355 4.355 0 0 1 2 9.44a.26.26 0 0 1 .36-.26c.497.22 1.033.335 1.577.34A4.277 4.277 0 0 1 2.23 4.585a.54.54 0 0 1 .91-.18 12.339 12.339 0 0 0 8.396 3.876 4 4 0 0 1-.12-1 4.352 4.352 0 0 1 7.499-2.937 8.674 8.674 0 0 0 2.387-.828.17.17 0 0 1 .18 0 .17.17 0 0 1 0 .18 4.365 4.365 0 0 1-1.758 1.998 8.563 8.563 0 0 0 1.997-.48.16.16 0 0 1 .18 0 .17.17 0 0 1 .07.25Z" />
+          </svg>
+        </a>
+        <a
+          aria-label="Linkedin"
+          href="https://www.linkedin.com/company/alchemynft"
+          external="true"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+            <path fillRule="evenodd" clipRule="evenodd" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 15a.5.5 0 0 0 .5-.5v-7A.5.5 0 0 0 8 10H6.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5H8Zm-.75-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm10.25 9a.5.5 0 0 0 .5-.5v-4.6a3.1 3.1 0 0 0-2.72-3.14 3 3 0 0 0-2.78 1.34v-.6a.5.5 0 0 0-.5-.5h-1.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5H12a.5.5 0 0 0 .5-.5v-3.75a1.5 1.5 0 0 1 3 0v3.75a.5.5 0 0 0 .5.5h1.5Z" />
+          </svg>
+        </a>
+        <a
+          aria-label="Github"
+          href="https://github.com/tokenscript"
+          external="true"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+            <path fillRule="evenodd" d="M12.013 2.037A10.003 10.003 0 0 0 8.85 21.532c.498.092.682-.22.682-.485v-1.7c-2.782.613-3.371-1.34-3.371-1.34A2.677 2.677 0 0 0 5.05 16.54c-.903-.614.073-.614.073-.614a2.105 2.105 0 0 1 1.53 1.032 2.135 2.135 0 0 0 2.91.835c.038-.505.256-.98.614-1.339-2.223-.252-4.556-1.111-4.556-4.943a3.868 3.868 0 0 1 1.025-2.683 3.641 3.641 0 0 1 .098-2.646s.842-.27 2.751 1.025c1.64-.45 3.37-.45 5.01 0 1.91-1.296 2.745-1.025 2.745-1.025.368.837.405 1.782.105 2.646.673.73 1.04 1.69 1.025 2.683 0 3.844-2.34 4.685-4.568 4.913a2.365 2.365 0 0 1 .681 1.842v2.744c0 .326.178.577.688.485A10.009 10.009 0 0 0 12.013 2v.037Z" clipRule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer_main-socials -show-s">
+      <a
+        aria-label="Twitter"
+        href="https://twitter.com/TokenScript"
+        external="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+          <path d="M21.97 5.464a7.991 7.991 0 0 1-1.846 1.778v.55a12.19 12.19 0 0 1-3.621 8.69A12.178 12.178 0 0 1 7.773 20 12.217 12.217 0 0 1 2.33 18.74a.25.25 0 0 1-.15-.23v-.11a.26.26 0 0 1 .26-.26 8.844 8.844 0 0 0 5.112-1.837 4.363 4.363 0 0 1-3.884-2.558.26.26 0 0 1 .26-.36c.51.052 1.025.004 1.518-.14A4.355 4.355 0 0 1 2 9.44a.26.26 0 0 1 .36-.26c.497.22 1.033.335 1.577.34A4.277 4.277 0 0 1 2.23 4.585a.54.54 0 0 1 .91-.18 12.339 12.339 0 0 0 8.396 3.876 4 4 0 0 1-.12-1 4.352 4.352 0 0 1 7.499-2.937 8.674 8.674 0 0 0 2.387-.828.17.17 0 0 1 .18 0 .17.17 0 0 1 0 .18 4.365 4.365 0 0 1-1.758 1.998 8.563 8.563 0 0 0 1.997-.48.16.16 0 0 1 .18 0 .17.17 0 0 1 .07.25Z" />
+        </svg>
+      </a>
+      <a
+        aria-label="Linkedin"
+        href="https://www.linkedin.com/company/alchemynft"
+        external="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+          <path fillRule="evenodd" clipRule="evenodd" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm3 15a.5.5 0 0 0 .5-.5v-7A.5.5 0 0 0 8 10H6.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5H8Zm-.75-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm10.25 9a.5.5 0 0 0 .5-.5v-4.6a3.1 3.1 0 0 0-2.72-3.14 3 3 0 0 0-2.78 1.34v-.6a.5.5 0 0 0-.5-.5h-1.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5H12a.5.5 0 0 0 .5-.5v-3.75a1.5 1.5 0 0 1 3 0v3.75a.5.5 0 0 0 .5.5h1.5Z" />
+        </svg>
+      </a>
+      <a
+        aria-label="Github"
+        href="https://github.com/tokenscript"
+        external="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMidYMid meet">
+          <path fillRule="evenodd" d="M12.013 2.037A10.003 10.003 0 0 0 8.85 21.532c.498.092.682-.22.682-.485v-1.7c-2.782.613-3.371-1.34-3.371-1.34A2.677 2.677 0 0 0 5.05 16.54c-.903-.614.073-.614.073-.614a2.105 2.105 0 0 1 1.53 1.032 2.135 2.135 0 0 0 2.91.835c.038-.505.256-.98.614-1.339-2.223-.252-4.556-1.111-4.556-4.943a3.868 3.868 0 0 1 1.025-2.683 3.641 3.641 0 0 1 .098-2.646s.842-.27 2.751 1.025c1.64-.45 3.37-.45 5.01 0 1.91-1.296 2.745-1.025 2.745-1.025.368.837.405 1.782.105 2.646.673.73 1.04 1.69 1.025 2.683 0 3.844-2.34 4.685-4.568 4.913a2.365 2.365 0 0 1 .681 1.842v2.744c0 .326.178.577.688.485A10.009 10.009 0 0 0 12.013 2v.037Z" clipRule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer_copywrite grid -g-cols-1">
+    <p>© 2022 All Rights Reserved | Smart Token Labs</p>
+  </div>
+</div>
