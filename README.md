@@ -6,10 +6,11 @@ This repo has the source code of [tokenscript.org website](http://tokenscript.or
 
 1. Download and install [Dita Open Kit](https://www.dita-ot.org)
 
-2. Install plugin net.infotexture.dita-bootstrap
+2. Install plugins net.infotexture.dita-bootstrap and fox.jason.favicon
 
 ````
 $ dita install net.infotexture.dita-bootstrap
+$ dita install fox.jason.favicon
 ````
 
 3. Make a website for documents. If dita is in `$PATH` you can do this:
