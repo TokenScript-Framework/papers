@@ -1,0 +1,50 @@
+name: "Update https://www.tokenscript.org/docs/"
+
+on:
+  push:
+    branches:
+      - main
+      - ci-testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: replace / with /docs in navbar.xml
+        run: |
+          sed -ri 's@href="/([^"]+)"@href="/docs/\1"@g' config/navbar.xml
+      - name: Build ts-site docs
+        uses: dita-ot/dita-ot-action@master
+        with:
+          plugins: |
+            net.infotexture.dita-bootstrap
+            fox.jason.favicon
+          project: config/website.yaml
+      - uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: out/
+
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: out/
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
+      - name: deploy
+        env:
+          S3_BUCKET: tokenscript-org-website
+          CLOUDFRONT_ID: EHA6852DAV0ZG
+        run: |
+          aws s3 sync out/ "s3://${S3_BUCKET}/docs/" --cache-control 'max-age=600,s-maxage=31536000' --quiet \
+          && aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_ID}" --paths '/docs/*'
