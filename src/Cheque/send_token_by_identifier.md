@@ -1,10 +1,33 @@
-# Sending tokens by identifier ##
+# Web2 identifiers as token owners, off-chain tokens and other attestation use-cases ##
 
-## Original Problem ##
+## Summary ##
+
+The require for the user to have a crypto wallet has long been a user experience challenge that prevented large scale adoption of tokens, and is a barrier for business and brands to issue tokens to their existing customer base. While it is not possible to forgo crypto wallet and gas cost for a token holder to send transactions, the ownership of tokens can be designed to use web 2 identifiers such as Email addresses and twitter handles. This allows users who do not own cryptocurrency to own tokens, easing the adoption.
+
+The technology to enable this is attestation - an terminology to denote signed messages by reputable attester that can be used on the blockchain directly or through the cryptographic proof generated from it. The technology is successfully deployed in DEVCON 6, an Ethereum developer conference, for ticket holders to mint NFT tokens long after they owned it.
+
+This paper goes through the mechanism how this works, which involves hiding the user's identity through zero-knowledge proof. Furthermore, the paper generalise the approach and introduce a few new use-cases for attestations and establish a general pattern how attestations can be used on the blockchain.
+
+## Problem definition ##
+
+We need a mechanism to mint (issue) tokens, such as NFT, to a user whose Ethereum address is unkown. In practice, such a user probably do not have an Ethereum address. The only way to issue the token is to issue it to the user's web2 ID, such as email address or twitter handle, as web2 ID is the only identifier available. This is a common situation when brands/businesses need to issue membership tokens to all existing members so that the members have a presence in web3 and access web3 functionalities. 
+
+Traditionally, this is done by asking every user to create a wallet, generate an Ethereum address and link it to their web2 ID by logging in and creating a signed message from the newly created Ethereum address before a deadline. Then, the brand / business creates a bloom filter to "airdrop" membership tokens to all the users who finished the above process.
+
+As of 2023, the success rate for this traditional process is very small due to the UX burden on the user. Furthermore, the tokens are periodically, batch processed. If not, individual user must claim their token as they go, the gas cost and blockchain space abuse can be significant.
+
+Therefore we seek a way to give tokens to the user that satisfies the following critia:
+
+1. No wallet required: it must be possible to give tokens to the users without the users owning a wallet. In the meantime, the users who already own a wallet should still be able to access the token without significant overhead.
+2. Attester-agnostic: although it will not be possible to achieve the above without the involvement of an attester, the issuer or sender of the token must not force the user to choose any specific attester. This is important because the attester will necessarily know the user's web2 ID in order to attest it, and can link the web2 ID to the user's Ethereum addreess, therefore the users should be free to choose which attester can be trusted with this confidentiality. Furthermore, we require that the user does not need to do anything - including choosing an attester - at the time a token is sent or minted to their name.
+3. Privacy preserving: it must be possible to give tokens to the users by their web2 ID, without revealing that ID to the blockchain. We further requires that the user who do transactions with the said token - after they owned an Ethereum address - do not reveal their web2 ID in the process.
+4.  
+
+## Starting case: sending a Ethereum token to a user who does not have an Ethereum address ##
 
 A user, Alice, wishes to send a token to Bob who might not have a crypto (Ethereum) address. Alice, however, knows an identifier of Bob that can be attested. e.g. Bob's email address or Bob's mobile phone number.
 
-This document describes an approach by Alice sending a virtual and anonymous attestation, attesting to Bob's right to redeem that token from Alice through a smart contract.
+This section describes an approach by Alice sending a virtual and anonymous attestation, attesting to Bob's right to redeem that token from Alice through a smart contract.
 
 ## Cheque ##
 
@@ -90,7 +113,7 @@ The "subject" of the token attestation, for example, `numero=1280`, indicating t
 
 - A speaker of the conference can invite a ticket holder to a closed-door meeting. Such an invitation is an attestation on the ticket ID. Such an invitation is, again, used as a ticket.
 
-- CO₂ coin is an issuer of carbon credits for someone who paid to offset their carbon footprint. They can issue an attestation on the ticket ID, attesting to the fact that the ticket's carbon footprint has offset. Such attestation enables access to privileged online service or discounts.
+- CO2 coin is an issuer of carbon credits for someone who paid to offset their carbon footprint. They can issue an attestation on the ticket ID, attesting to the fact that the ticket's carbon footprint has offset. Such attestation enables access to privileged online service or discounts.
 
 Issuing new attestations on the subject of the token attestation instead of its fingerprint (hash) has the advantage that if a specific attestation is revoked thanks to the leak of its token key, a new one - with different fingerprint - can be issued without affecting the use of such attestations.
 
