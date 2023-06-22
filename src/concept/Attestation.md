@@ -32,5 +32,5 @@ Use-cases of Identifier Attestations are:
 - To be used as a dependency for other tokens. For example, when DevCon 2022 ticket is issued, they are issued on user's identifier (email address). To use the DevCon ticket, a user has to acquire an email address attestation.
 - To be used to attest a transaction as from an identified user. For example, in AutographNFT, a person who add an autograph on an NFT must provide a twitter ID attestation, therefore attesting the autograph is from the owner of that ID.
 
-More use-cases can be found in [Attestation Usecases](../usecases/Attestation.md)
+More use-cases can be found in [Attestation Usecases](../usecase/Attestation.md)
 
