@@ -5,12 +5,12 @@ ifeq ($(OUTPUT_DIR),)
 	OUTPUT_DIR=out
 endif
 DITA_PLUGINS := $(shell $(DITA_EXEC) plugins)
-ifeq (,$(findstring net.infotexture.dita-bootstrap,$(DITA_PLUGINS)))
-$(shell $(DITA_EXEC) --install net.infotexture.dita-bootstrap)
-endif
 DITA_VER:=$(shell $(DITA_EXEC) -version 2>/dev/null)
 
 %: config/%.yaml
+ifeq (,$(findstring net.infotexture.dita-bootstrap,$(DITA_PLUGINS)))
+	$(shell $(DITA_EXEC) --install net.infotexture.dita-bootstrap)
+endif
 ifdef DITA_VER
 	@echo "Found dita version $(DITA_VER). Minimum required is 3.6."
 else
