@@ -1,0 +1,25 @@
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Smart Layer Documentation">
+  <topicref href="concept/Introduction.md" format="markdown"/>
+  <topicref href="concept/DetailedExplanation.md" format="markdown"/>
+  <topicref href="concept/NeedForSmartLayer.md" format="markdown"/>
+  <topicref href="concept/RoleInFutureInternet.md" format="markdown"/>
+  <topicref href="technology/HowSmartLayerWorks.md" format="markdown"/>
+  <topicref href="technology/BlockchainTechnology.md" format="markdown"/>
+  <topicref href="technology/TokenLogicAndExecution.md" format="markdown"/>
+  <topicref href="technology/TokenManagement.md" format="markdown"/>
+  <topicref href="usecase/UseCaseOverview.md" format="markdown">
+    <topicref href="usecase/case-study/CaseStudy1.md" format="markdown"/>
+    <topicref href="usecase/case-study/CaseStudy2.md" format="markdown"/>
+  </topicref>
+  <topicref href="integration/IntegrationGuide.md" format="markdown"/>
+  <topicref href="integration/FacilitatingIntegration.md" format="markdown"/>
+  <topicref href="integration/NewAPICalls.md" format="markdown"/>
+  <topicref href="privacyandsecurity/EnsuringPrivacyAndSecurity.md" format="markdown"/>
+  <topicref href="privacyandsecurity/UserDataPrivacyGuide.md" format="markdown"/>
+  <topicref href="developers/TechnicalDocumentation.md" format="markdown"/>
+  <topicref href="developers/APIReferences.md" format="markdown"/>
+  <topicref href="guide/Guide1.md" format="markdown"/>
+  <topicref href="guide/Tutorial1.md" format="markdown"/>
+  <topicref href="faq/FAQs.md" format="markdown"/>
+</map>
