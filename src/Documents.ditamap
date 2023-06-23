@@ -2,7 +2,7 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Content TokenScript docs</title>
-    <topicref href="Tokenization.dita"/>
+    <topicref href="concept/Tokenization.md" format="mdita"/>
     <topicref href="index.dita">
         <topicref href="TokenScript.dita"/>
         <topicref href="WhatTokenscriptCanDo.dita"/>
