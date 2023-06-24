@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="topic_nlj_qhg_nmb">
-    <title>TokenScript Overview</title>
+    <title>TokenScript Framework</title>
     <conbody>
 	    <p dir="ltr" id="docs-internal-guid-e0588b59-7fff-f9c6-08d4-576a2c544c53">TokenScript is a
             Tokenisation framework. It wraps HTML, JavaScript and XML to express Token
-            functionalities and make them deployable in the wallet and on websites. With
-            TokenScript, any token can unlock its customized mini dapp. </p>
-        <p>TokenScript creates a <xref href="TokenLayer.dita"/>: A <xref href="DataDriven.dita"/>,
-            and <xref href="ContextBased.dita"/> layer between the blockchain and the user. On this
+            functionalities and make them deployable in the wallet and on websites.</p>
+        <p>TokenScript creates a <xref href="../TokenLayer.dita"/>: A <xref href="../DataDriven.dita"/>,
+            and <xref href="../ContextBased.dita"/> layer between the blockchain and the user. On this
             layer, token are the basic unit to structure the interaction between users and
             blockchains.</p>
 	    <p dir="ltr">TokenScript consists of two parts:</p>
@@ -16,24 +15,24 @@
             <li dir="ltr">TokenScript Engine, which works in the user's wallet, on the web or in a
                 browser plugin. The TokenScript Engine provides the runtime environment for tokens
                 to be used on 3rd party websites.</li>
-            <li dir="ltr">The<xref href="TokenScript-Component.dita"/> wraps XML, HTML and
+            <li dir="ltr">The<xref href="../TokenScript-Component.dita"/> wraps XML, HTML and
                 JavaScript and is issued and signed by the corresponding Token Issuer. It can be
                 imported by any service or device which implemented TokenScript Engine. The file
                 provides additional token information, structures the token UX in the wallets, and
                 appends rules, data modules, transaction security measurements and much more. </li>
         </ul>
-        <p dir="ltr">TokenScript files are <xref href="Signing.dita">signed by the creator of the
+        <p dir="ltr">TokenScript files are <xref href="../Signing.dita">signed by the creator of the
                 token smart contract or a trusted source</xref> with a public key. Wallets and dApps
             can import and verify the files and make sure users only get authorized TokenScripts
             from trusted sources.</p>
         <p dir="ltr">TokenScript is blockchain agnostic. The main focus of our development is based
             on Ethereum token. But it can be adopted to other blockchains and even combine token and
             interactions of different blockchains. TokenScript is not a standard for token, but
-                <xref href="ts-vs-token-standards.dita">a standard for a Token Layer</xref>, which
+                <xref href="../ts-vs-token-standards.dita">a standard for a Token Layer</xref>, which
             enables wallets and apps and websites to work with any non-standardized token as easy as
             with ERC token.</p>
-        <p dir="ltr">This guide will educate you about the<xref href="BasicConcepts.dita"> basic
-                concepts of TokenScript</xref> and the <xref href="Deploy.dita">deployment</xref> of
+        <p dir="ltr">This guide will educate you about the<xref href="../BasicConcepts.dita"> basic
+                concepts of TokenScript</xref> and the <xref href="../Deploy.dita">deployment</xref> of
             a TokenScript. </p>
         <section>
             <title>TokenScript benefits </title>
@@ -113,7 +112,7 @@
             <p dir="ltr">TokenScript enables token issuers to leave the restrictions of smart
                 contracts behind. It allows to add a lot of information, even image files or API
                 lookups to a token, and design a set of business rules and interaction logics for
-                it, including <xref href="concept/Attestation.md" format="mdita">attestations</xref> and structured
+                it, including <xref href="../concept/Attestation.md" format="mdita">attestations</xref> and structured
                 interactions with other tokens. </p>
             <p dir="ltr">Moreover, with TokenScript token issuers can easily and securely update the
                 token rules.</p>
