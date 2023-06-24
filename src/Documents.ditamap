@@ -3,8 +3,9 @@
 <map>
     <title>Content TokenScript docs</title>
     <topicref href="concept/Tokenization.md" format="mdita"/>
+	<topicref href="concept/TokenScript.md" format="mdita"/>
     <topicref href="index.dita">
-        <topicref href="TokenScript.dita"/>
+	<topicref href="concept/TokenScriptFramework.dita"/>
         <topicref href="WhatTokenscriptCanDo.dita"/>
         <topicref href="defiwithandwithoutts.dita"/>
         <topicref href="LivingExamples.dita"/>
