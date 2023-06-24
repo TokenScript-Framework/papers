@@ -1,25 +1,27 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map title="Smart Layer Documentation">
-  <topicref href="concept/Introduction.md" format="markdown"/>
-  <topicref href="concept/DetailedExplanation.md" format="markdown"/>
-  <topicref href="concept/NeedForSmartLayer.md" format="markdown"/>
-  <topicref href="concept/RoleInFutureInternet.md" format="markdown"/>
-  <topicref href="technology/HowSmartLayerWorks.md" format="markdown"/>
-  <topicref href="technology/BlockchainTechnology.md" format="markdown"/>
-  <topicref href="technology/TokenLogicAndExecution.md" format="markdown"/>
-  <topicref href="technology/TokenManagement.md" format="markdown"/>
-  <topicref href="usecase/UseCaseOverview.md" format="markdown">
-    <topicref href="usecase/case-study/CaseStudy1.md" format="markdown"/>
-    <topicref href="usecase/case-study/CaseStudy2.md" format="markdown"/>
+  <topicref href="SmartLayerOpening.md" format="markdown">
+	  <topicref href="concept/SmartToken.md" navtitle="What is Smart Token?" format="mdita"/>
+	  <topicref href="concept/NeedForSmartLayer.md" format="mdita"/>
+	  <topicref href="concept/SmartLayer.md" navtitle="What is Smart Layer?" format="mdita"/>
   </topicref>
-  <topicref href="integration/IntegrationGuide.md" format="markdown"/>
-  <topicref href="integration/FacilitatingIntegration.md" format="markdown"/>
-  <topicref href="integration/NewAPICalls.md" format="markdown"/>
-  <topicref href="privacyandsecurity/EnsuringPrivacyAndSecurity.md" format="markdown"/>
-  <topicref href="privacyandsecurity/UserDataPrivacyGuide.md" format="markdown"/>
-  <topicref href="developers/TechnicalDocumentation.md" format="markdown"/>
-  <topicref href="developers/APIReferences.md" format="markdown"/>
-  <topicref href="guide/Guide1.md" format="markdown"/>
-  <topicref href="guide/Tutorial1.md" format="markdown"/>
-  <topicref href="faq/FAQs.md" format="markdown"/>
+  <topicref href="concept/RoleInFutureInternet.md" format="mdita"/>
+  <topicref href="technology/HowSmartLayerWorks.md" format="mdita"/>
+  <topicref href="technology/BlockchainTechnology.md" format="mdita"/>
+  <topicref href="technology/TokenLogicAndExecution.md" format="mdita"/>
+  <topicref href="technology/TokenManagement.md" format="mdita"/>
+  <topicref href="usecase/UseCaseOverview.md" format="mdita">
+    <topicref href="usecase/case-study/CaseStudy1.md" format="mdita"/>
+    <topicref href="usecase/case-study/CaseStudy2.md" format="mdita"/>
+  </topicref>
+  <topicref href="integration/IntegrationGuide.md" format="mdita"/>
+  <topicref href="integration/FacilitatingIntegration.md" format="mdita"/>
+  <topicref href="integration/NewAPICalls.md" format="mdita"/>
+  <topicref href="privacyandsecurity/EnsuringPrivacyAndSecurity.md" format="mdita"/>
+  <topicref href="privacyandsecurity/UserDataPrivacyGuide.md" format="mdita"/>
+  <topicref href="developers/TechnicalDocumentation.md" format="mdita"/>
+  <topicref href="developers/APIReferences.md" format="mdita"/>
+  <topicref href="guide/Guide1.md" format="mdita"/>
+  <topicref href="guide/Tutorial1.md" format="mdita"/>
+  <topicref href="faq/FAQs.md" format="mdita"/>
 </map>
