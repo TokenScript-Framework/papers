@@ -23,3 +23,9 @@ deliverables:
       path: "./"
     - name: "args.faviconroot"
       path: "../src"
+
+- name: "PDF"
+  context:
+    input: "../src/webroot.ditamap"
+  publication:
+    transtype: "pdf"
