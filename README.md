@@ -1,6 +1,10 @@
 # TokenScript documents
 
-This repo has the source code of [tokenscript.org website](http://tokenscript.org) as well as the [TokenScript github Page](https://tokenscript.github.io/TokenScript/)
+This repo has the source code of:
+
+- [tokenscript.org website](http://tokenscript.org)
+- [TokenScript github Page](https://tokenscript.github.io/TokenScript/)
+- [document.smartlayer.network website](https://document.smartlayer.network/)
 
 ## Build the documents:
 
@@ -11,17 +15,18 @@ This repo has the source code of [tokenscript.org website](http://tokenscript.or
 ````
 $ dita install net.infotexture.dita-bootstrap
 $ dita install fox.jason.favicon
+$ dita install fox.jason.extend.css
 ````
 
 3. Make a website for documents. If dita is in `$PATH` you can do this:
 
 ````
-$ dita --project config/website.yaml
+$ dita --project config/tokenscript-docsite.yaml
 ````
 
 Otherwise, say, dita is installed in `/home/christoph/dita-ot-3.5.2/bin/dita` do this
 ````
-$ /home/christoph/dita-ot-3.5.2/bin/dita --project config/website.yaml
+$ /home/christoph/dita-ot-3.5.2/bin/dita --project config/tokenscript-docsite.yaml
 ````
 
 Which will create a website in the `out/` directory.
