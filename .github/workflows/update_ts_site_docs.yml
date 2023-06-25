@@ -1,10 +1,11 @@
-name: "Update https://www.tokenscript.org/docs/"
+name: 'Update https://www.tokenscript.org/docs/'
 
 on:
   push:
     branches:
       - main
       - ci-testing
+  workflow_dispatch:
 
 jobs:
   build:
