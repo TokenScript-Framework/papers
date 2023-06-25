@@ -1,13 +1,16 @@
 # Service Level Agreement (SLA)
 
-Service Level Agreements (SLAs) are binding contracts established between the service nodes and the Smart Layer network.
+Service Level Agreements (SLAs) are binding contracts that define the relationship between the service nodes and the Smart Layer network.
 
-These agreements are initiated when a [service node](ServiceNode.md) decides to join the network, using a master SLA contract as a factory to create an instance of it.
+When a [service node](ServiceNode.md) decides to join the network, it creates its own SLA instance using a master SLA contract as a template. This agreement is a legally binding pledge from the service node to uphold specific standards of availability, performance, bandwidth, and latency. These commitments become service level objectives (SLOs) that the node is obligated to meet.
 
-Upon joining, the service node pledges to uphold certain standards of availability, performance, bandwidth, and latency. These commitments then transform into service level objectives (SLOs) that the node is expected to meet. The network incentivizes nodes to fulfill these objectives by implementing a reward system that varies based on the node's performance. Nodes that consistently meet or exceed their SLOs receive higher rewards, fostering a culture of excellence and reliability within the network.
+The network incentivizes nodes to fulfill these objectives with a performance-based reward system. Nodes that consistently meet or exceed their SLOs receive higher rewards, fostering a culture of excellence and reliability.
 
-However, the network also implements measures to ensure accountability. Nodes that fail to meet their SLOs face a gradual reduction in their rewards, serving as a deterrent for subpar performance. In extreme cases, nodes that consistently underperform may face a "stake slashing" punishment, where a portion of their staked tokens is forfeited. This mechanism ensures that all nodes strive to maintain high standards of service, contributing to the overall efficiency and reliability of the network. Given this, a service node is expected to negotiate with an anchoring nodes first to avoid mistakes in pledging to a SLO. The anchoring node gives a brief test on their serviceability.
+Accountability is enforced within the network. Nodes that fail to meet their SLOs face a reduction in their rewards. Persistent underperformance can lead to a "stake slashing" punishment, where a portion of the node's staked tokens is forfeited. This mechanism drives all nodes to maintain high service standards, enhancing the network's efficiency and reliability.
 
-The [Anchoring Nodes](AnchoringNode.md) play a crucial role in this system. They monitor the performance of service nodes, ensuring that they adhere to their SLAs. They also manage the reward and penalty system, ensuring that nodes are appropriately compensated or penalized based on their performance.
+Before pledging to a SLO, a service node should negotiate with an [Anchoring Node](AnchoringNode.md). This negotiation helps avoid potential mistakes, and the anchoring node conducts a brief serviceability test on the service node.
 
-In summary, SLAs are a fundamental part of the Smart Layer network, ensuring high standards of service, promoting accountability, and facilitating optimal resource allocation.
+[Anchoring Nodes](AnchoringNode.md) play a pivotal role in this system. They monitor the performance of service nodes, ensuring adherence to their SLAs. They also manage the reward and penalty system, adjusting compensation based on node performance.
+
+In summary, SLAs are a fundamental part of the Smart Layer network. They enforce high service standards, promote accountability, and optimize resource allocation.
+
