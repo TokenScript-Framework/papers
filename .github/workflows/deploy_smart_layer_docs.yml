@@ -3,7 +3,7 @@ name: "Deploy to https://document.smartlayer.network"
 on:
   push:
     branches:
-      - smart-layer-init
+      - main
   workflow_dispatch:
 
 jobs:
