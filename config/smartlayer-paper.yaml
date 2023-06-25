@@ -3,7 +3,7 @@ deliverables:
   context:
     input: "../src/smartlayer-paper.ditamap"
   publication:
-    transtype: "pdf"
+    transtype: "pdf2"
     params:
     - name: "args.xsl"
       href: "pdf-styles.xsl"
