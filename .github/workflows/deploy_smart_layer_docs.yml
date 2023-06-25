@@ -1,0 +1,48 @@
+name: "Deploy to https://document.smartlayer.network"
+
+on:
+  push:
+    branches:
+      - smart-layer-init
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build smart-layer docs
+        uses: dita-ot/dita-ot-action@master
+        with:
+          plugins: |
+            fox.jason.extend.css
+            net.infotexture.dita-bootstrap
+            fox.jason.favicon
+          project: config/smartlayer-docsite.yaml
+      - uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: out/
+
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: out/
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
+      - name: deploy
+        env:
+          S3_BUCKET: smart-layer-docs
+          CLOUDFRONT_ID: EAVRHSDUCS279
+        run: |
+          aws s3 sync out/ "s3://${S3_BUCKET}/" --cache-control 'max-age=600,s-maxage=31536000' --quiet --delete \
+          && aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_ID}" --paths '/*'
