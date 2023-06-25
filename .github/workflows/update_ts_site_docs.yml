@@ -22,7 +22,7 @@ jobs:
             fox.jason.extend.css
             net.infotexture.dita-bootstrap
             fox.jason.favicon
-          project: config/website.yaml
+          project: config/tokenscript-docsite.yaml
       - uses: actions/upload-artifact@v3
         with:
           name: docs
