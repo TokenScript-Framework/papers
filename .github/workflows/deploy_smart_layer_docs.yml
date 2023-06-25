@@ -44,5 +44,5 @@ jobs:
           S3_BUCKET: smart-layer-docs
           CLOUDFRONT_ID: EAVRHSDUCS279
         run: |
-          aws s3 sync out/ "s3://${S3_BUCKET}/" --cache-control 'max-age=600,s-maxage=31536000' --quiet \
+          aws s3 sync out/ "s3://${S3_BUCKET}/" --cache-control 'max-age=600,s-maxage=31536000' --quiet --delete \
           && aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_ID}" --paths '/*'
