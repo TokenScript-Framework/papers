@@ -2,7 +2,7 @@
 
 Anchoring nodes play a pivotal role in the Smart Layer network, acting as the guardians of stability, security, and service level objectives. Operated by known organizations elected by a Decentralized Autonomous Organization (DAO), these nodes are semi-trusted entities that provide a range of essential services.
 
-One of the primary responsibilities of anchoring nodes is to maintain the Distributed Hash Table (DHT). This dynamic database records which service node is handling which token instance, ensuring efficient operation of the network. Anchoring nodes update and synchronize the DHT across the network, and also provide lookup services for this table.
+One of the primary responsibilities of anchoring nodes is to maintain the [Distributed Hash Table (DHT)](DistributedHashTable.md). This dynamic database records which service node is handling which token instance, ensuring efficient operation of the network. Anchoring nodes update and synchronize the DHT across the network, and also provide lookup services for this table.
 
 Anchoring nodes also monitor the performance of service nodes, ensuring they adhere to their Service Level Agreements (SLAs). They manage the reward and penalty system, ensuring that nodes are appropriately compensated or penalized based on their performance. This accountability mechanism helps maintain high standards of service within the network.
 
