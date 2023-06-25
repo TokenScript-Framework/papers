@@ -1,7 +1,7 @@
 deliverables:
 - name: "HTML5"
   context:
-    input: "../src/smartlayer.ditamap"
+    input: "../src/smartlayer-docsite.ditamap"
     profiles:
       ditavals: "no-implementer.ditaval"
   publication:
@@ -23,8 +23,3 @@ deliverables:
       path: "./"
     - name: "args.faviconroot"
       path: "../src"
-- name: "PDF"
-  context:
-    input: "../src/smartlayer.ditamap"
-  publication:
-    transtype: "pdf"
