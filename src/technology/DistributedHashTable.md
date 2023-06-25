@@ -1,8 +1,6 @@
 # Distributed Hash Table in Smart Layer
 
-The Distributed Hash Table (DHT) in Smart Layer is a dynamic database that keeps track of which service node is handling which token instance. This crucial piece of infrastructure is maintained by the anchoring nodes and synchronized across the network, ensuring that all nodes have access to up-to-date information.
-
-Anchoring nodes also provide lookup services for this table, enabling nodes and users to quickly determine which service node is responsible for a specific token instance. This functionality is essential for the efficient operation of the network, allowing for quick resolution of queries and efficient routing of requests.
+The Distributed Hash Table (DHT) in Smart Layer is a dynamic database that keeps track of which service node is handling which token instance. This crucial piece of infrastructure is maintained by the [anchoring nodes](AnchoringNode.md) and synchronized across the network, ensuring that all nodes have access to up-to-date information.
 
 The distribution of tokens across the network follows a set of rules designed to ensure the robustness and reliability of the service. Firstly, tokens are distributed as randomly as possible. This randomness helps to mitigate the impact of any single service node failing or providing poor service, enhancing the overall resilience of the network.
 

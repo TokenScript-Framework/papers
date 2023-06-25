@@ -6,9 +6,9 @@ Smart Layer network functions through three primary components:
 
 1. **Blockchain**: This layer provides smart contracts that enforces token transaction rules and maintains snapshots of token operations' commitments for later validation.
 
-2. **Anchoring Nodes**: These nodes, run by known organizations elected by a DAO, maintain the network's stability, security, and service level objectives. They write the commitments of token operations in a series of snapshots to the blockchain.
+2. **[Anchoring Nodes](AnchoringNode.md)**: These nodes, run by known organizations elected by a DAO, maintain the network's stability, security, and service level objectives. They write the commitments of token operations in a series of snapshots to the blockchain.
 
-3. **Service Nodes**: This larger network of nodes distributes service work via a distributed hashtable and provides TokenAPIs, enabling integrations.
+3. **[Service Nodes](ServiceNode.md)**: This larger network of nodes distributes service work via a distributed hashtable and provides TokenAPIs, enabling integrations.
 
 Service nodes are incentivised by SmartLayerTokens, paid by either the user or the website requiring token integration / token functions. Payments are attached to API calls as incremental promises, which service nodes can pay out when a session closes. A smart contract handles the pay out, reliably burning a percentage of the SmartLayerTokens. A small stake ensures the correct function of this system, monitored by the anchoring nodes.
 
