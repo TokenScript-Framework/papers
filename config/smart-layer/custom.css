@@ -266,7 +266,7 @@ header .navbar .navbar-nav .nav-item:hover {
   background-color: transparent;
 }
 header .navbar .navbar-nav .nav-item:hover a {
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 header .navbar .navbar-toggler {
   color: var(--text-light);
@@ -710,6 +710,7 @@ footer a:hover {
   footer .footer_main {
     margin-top: calc(var(--baseline) * 6);
     margin-bottom: calc(var(--baseline) * 3);
+    display: block;
   }
   footer .footer_main-logo {
     order: -1;
