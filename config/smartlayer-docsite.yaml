@@ -20,6 +20,6 @@ deliverables:
         - name: "args.favicon"
           value: "favicon.ico"
         - name: "args.faviconpath"
-          path: "./"
+          path: "./smart-layer"
         - name: "args.faviconroot"
           path: "../src"
