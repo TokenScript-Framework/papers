@@ -200,6 +200,10 @@ header .navbar {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 0;
   margin-bottom: calc(var(--baseline) * 5.5);
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
 }
 header .navbar .bs-container {
   display: flex;
@@ -230,6 +234,12 @@ header .navbar .navbar-buttons {
   padding: 0.5rem 2rem;
   height: 3.5rem;
   background: linear-gradient(234.79deg, #001aff 37.73%, #4f95ff 118.69%);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border-width: 0;
 }
 
 .navbar-buttons .pass {
@@ -241,6 +251,9 @@ header .navbar .navbar-buttons {
   font-weight: 500;
   color: #fff;
   height: 3.5rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
 }
 
 header .navbar .navbar-nav .nav-item a {
@@ -269,7 +282,7 @@ header .navbar .navbar-toggler svg {
 }
 header .c-logo {
   display: block;
-  width: 12.75rem;
+  /* width: 12.75rem; */
   color: var(--link);
 }
 header .c-logo svg {
