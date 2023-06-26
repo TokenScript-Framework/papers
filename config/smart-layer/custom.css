@@ -626,6 +626,10 @@ footer a:hover {
     max-width: min(54rem, 72vw);
   }
 }
+header .navbar .navbar-collapse {
+  flex-grow: unset !important;
+}
+
 /** Breakpoint:	Small ----------------------- */
 @media (max-width: 991px) {
   :root {
