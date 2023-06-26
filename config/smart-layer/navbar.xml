@@ -20,14 +20,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-	      <li class="nav-item"><a class="nav-link" href="https://smartlayer.network">Home</a></li>
-	      <li class="nav-item"><a class="nav-link" href="https://smartlayer.network/technology">Technology</a></li>
-	      <li class="nav-item"><a class="nav-link" href="https://smartlayer.network/tokenomics">Tokenomics</a></li>
+	      <li class="nav-item"><a class="nav-link" href="https://smart-layer.vercel.app">Home</a></li>
+	      <li class="nav-item"><a class="nav-link" href="https://smart-layer.vercel.app/technology">Technology</a></li>
+	      <li class="nav-item"><a class="nav-link" href="https://smart-layer.vercel.app/tokenomics">Tokenomics</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://smart-layer.vercel.app/tokenomics">Docs</a></li>
 	      <!-- <li class="nav-item external"><a class="nav-link" href="https://community.tokenscript.org/">TokenScript community forum</a></li>
 	      <li class="nav-item external"><a class="nav-link" href="/TokenScript.html">AlphaWallet (uses TokenScript)</a></li>
 	      <li class="nav-item external"><a class="nav-link" href="/guides/Intro.html">Github TokenScript</a></li>
 	      <li class="nav-item external"><a class="nav-link" href="/specs/Intro.html">Github TokenScript Examples</a></li> -->
       </ul>
+      <div class="navbar-buttons">
+      <a href="https://smart-layer.vercel.app/pass" alt="pass" class="pass">Your Pass</a>
+      <button class="register-btn">Register Early</button>
+      </div>
     </div>
   </div>
 </nav>
