@@ -213,7 +213,36 @@ header .navbar .bs-container {
 header .navbar .navbar-nav {
   margin-left: auto;
   align-items: center;
+  gap: 2rem;
 }
+
+header .navbar .navbar-buttons {
+  display: flex;
+}
+
+.navbar-buttons .register-btn {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.5rem 2rem;
+  height: 3.5rem;
+  background: linear-gradient(234.79deg, #001aff 37.73%, #4f95ff 118.69%);
+}
+
+.navbar-buttons .pass {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+  height: 3.5rem;
+}
+
 header .navbar .navbar-nav .nav-item a {
   color: var(--link);
   font-weight: 500;
@@ -492,6 +521,9 @@ footer .footer_main {
   align-items: center;
   margin-top: calc(var(--baseline) * 8);
   margin-bottom: calc(var(--baseline) * 8);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 footer .footer_main a {
   color: var(--link);
@@ -501,7 +533,7 @@ footer .footer_main a:hover {
 }
 footer .footer_main-logo {
   display: block;
-  width: 3.828125rem;
+  width: 40rem;
   margin-top: calc(var(--baseline) * 3);
   margin-bottom: calc(var(--baseline) * 3);
 }
@@ -538,7 +570,8 @@ footer .footer_main-email a {
 }
 footer .footer_main-socials {
   display: flex;
-  gap: calc(0.25 * var(--gutter-width) / 16 * 1vw);
+  /* gap: calc(0.25 * var(--gutter-width) / 16 * 1vw); */
+  gap: 1rem;
   margin-top: calc(var(--baseline) * 3);
 }
 footer .footer_main-socials svg {
@@ -553,11 +586,16 @@ footer .footer_copywrite p {
   font-size: clamp(0.8rem, 0.3vw + 0.6rem, 1rem) !important;
   line-height: clamp(1.1rem, 0.4vw + 0.9rem, 1.4rem) !important;
   margin: clamp(0.9rem, 0.3vw + 0.7rem, 1.1rem) 0;
-  opacity: 0.6;
+  /* opacity: 0.6; */
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
-footer .footer_copywrite a:hover {
-  color: "BDFF02";
+footer a {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+footer a:hover {
+  color: #bdff02;
 }
 
 /**
