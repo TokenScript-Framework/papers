@@ -209,6 +209,7 @@ header .navbar .bs-container {
   display: flex;
   width: var(--grid-width);
   align-items: center;
+  justify-content: space-between;
   max-width: 100%;
   flex: 1 1 auto;
   margin-top: calc(var(--baseline) * 2.5);
