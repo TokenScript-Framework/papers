@@ -1,10 +1,6 @@
 # TokenScript documents
 
-This repo has the source code of:
-
-- [tokenscript.org website](http://tokenscript.org)
-- [TokenScript github Page](https://tokenscript.github.io/TokenScript/)
-- [document.smartlayer.network website](https://document.smartlayer.network/)
+This repo has the source code TokenScript website's documents and SmartLayer website's documents.
 
 ## Build the documents:
 
@@ -24,9 +20,9 @@ $ dita install fox.jason.extend.css
 $ dita --project config/tokenscript-docsite.yaml
 ````
 
-Otherwise, say, dita is installed in `/home/christoph/dita-ot-3.5.2/bin/dita` do this
+Otherwise, say, dita is installed in `/home/christoph/dita-ot-4.1/bin/dita` do this
 ````
-$ /home/christoph/dita-ot-3.5.2/bin/dita --project config/tokenscript-docsite.yaml
+$ /home/christoph/dita-ot-4.1/bin/dita --project config/tokenscript-docsite.yaml
 ````
 
 Which will create a website in the `out/` directory.
@@ -36,26 +32,6 @@ Which will create a website in the `out/` directory.
 ````
 $ lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ ./'
 ````
-
-## Build with Make
-
-A Makefile is provided to make frequent build tasks easy.
-
-### Build website
-
-    $ make website
-
-### Build website and upload in one go
-
-The following will work only if you have the correct upload credential in your `.netrc` file. Don't use it if you are not the webmaster.
-
-    $ make upload
-
-### Build TokenScript's docs directory
-
-Suppose TokenScript repo has a local clone `../TokenScript/`, this will recreate its docs folder. Note that docs folder has more content than the website as it also include implementer-only information.
-
-    $ make OUTPUT_DIR=../TokenScript/ docs
 
 ## Troubleshooting
 
