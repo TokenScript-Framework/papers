@@ -10,6 +10,7 @@
   </frontmatter>
   <chapter href="SmartLayerOpening.md" format="mdita">
     <topicref href="concept/SmartToken.md" navtitle="What is Smart Token?" format="mdita"/>
+    <topicref href="concept/Tokenization.md" navtitle="What is Tokenisation?" format="mdita"/>
     <topicref href="concept/NeedForSmartLayer.md" format="mdita"/>
     <topicref href="concept/SmartLayer.md" navtitle="What is Smart Layer?" format="mdita"/>
     <topicref href="concept/NextWeb.md" format="mdita" navtitle="Smart Layer's role in the next generation web"/>
