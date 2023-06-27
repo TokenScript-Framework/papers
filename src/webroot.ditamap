@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map id="Web">
-    <topicref href="Documents.ditamap" format="ditamap"/>
+    <topicref href="TokenScript.ditamap" format="ditamap"/>
     <topicref href="Specs.ditamap"  format="ditamap"/>
     <topicref href="Guides.ditamap"  format="ditamap"/>
 </map>
