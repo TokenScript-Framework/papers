@@ -1,9 +1,0 @@
-deliverables:
-- name: "PDF"
-  context:
-    input: "../src/smartlayer-paper.ditamap"
-  publication:
-    transtype: "pdf"
-    params:
-    - name: "args.xsl"
-      href: "pdf-styles.xsl"

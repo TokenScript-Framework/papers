@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="SmartLayer Overview">
+	<topicref href="intro/SmartLayer.md" format="markdown">
+    </topicref>
+    <topicref href="usecase/case-study/AirplaneTicket.md" format="markdown">
+    </topicref>
+</map>
