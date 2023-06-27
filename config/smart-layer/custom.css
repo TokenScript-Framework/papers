@@ -158,10 +158,9 @@ li {
 .footer.container {
   margin-left: auto;
   margin-right: auto;
-  /* width: var(--grid-width) !important; */
-  /* max-width: var(--grid-max-width);
-  padding: 0 calc(var(--grid-gutter-width) / 2); */
-  max-width: 100%;
+  width: var(--grid-width) !important;
+  max-width: var(--grid-max-width);
+  padding: 0 calc(var(--grid-gutter-width) / 2);
   box-sizing: border-box;
   gap: inherit !important;
   grid-column-gap: var(--grid-gutter-width) !important;
