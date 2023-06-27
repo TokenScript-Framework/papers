@@ -3,4 +3,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700" rel="stylesheet" />
 <script type="text/javascript" src="https://alphawallet.com/wp-content/themes/alphawallet/discourse/widget.js"/>
+<script type="text/javascript">
+  function onNavBarToggle(e) {
+    var navbar = document.querySelector("nav.navbar");
+
+    navbar.classList.toggle("open");
+  }
+</script>
 </div>
