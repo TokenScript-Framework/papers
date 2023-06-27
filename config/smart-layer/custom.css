@@ -282,7 +282,7 @@ header .navbar .navbar-toggler svg {
 }
 header .c-logo {
   display: block;
-  /* width: 12.75rem; */
+  width: 12.75rem;
   color: var(--link);
 }
 header .c-logo svg {
@@ -631,6 +631,46 @@ footer a:hover {
 }
 header .navbar .navbar-collapse {
   flex-grow: unset !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  gap: 8%;
+}
+
+/** additional break point to align with smart-layer site */
+@media (max-width: 1280px) {
+  header .c-logo {
+    width: 9.25rem;
+  }
+
+  header .navbar .navbar-collapse {
+    gap: 2%;
+  }
+
+  header .navbar .navbar-nav {
+    gap: 1rem;
+  }
+}
+
+/** additional break point to align with smart-layer site */
+@media (max-width: 1024px) {
+  :root {
+    --grid-max-width: 90%;
+  }
+
+  .bs-container .navbar-toggler {
+    display: unset;
+  }
+
+  .bs-container .collapse:not(.show) {
+    display: none !important;
+  }
+
+  header .navbar .bs-container {
+    max-width: var(--grid-max-width);
+    flex-flow: row wrap;
+    margin: calc(var(--baseline) * 3.25) auto;
+  }
 }
 
 /** Breakpoint:	Small ----------------------- */
@@ -659,19 +699,13 @@ header .navbar .navbar-collapse {
     top: 0;
   }
   header {
-    /* margin-top: calc(var(--baseline) * 2.5); */
-    height: 136px;
+    margin-top: calc(var(--baseline) * 2.5);
   }
   header .c-logo {
-    /* width: 9.25rem; */
+    width: 9.25rem;
   }
   header .navbar {
-    /* margin-bottom: calc(var(--baseline) * 2.5); */
-  }
-  header .navbar .bs-container {
-    max-width: var(--grid-max-width);
-    flex-flow: row wrap;
-    margin: calc(var(--baseline) * 3.25) auto;
+    margin-bottom: calc(var(--baseline) * 2.5);
   }
   header .navbar .nav-bar {
     margin-bottom: 0;
