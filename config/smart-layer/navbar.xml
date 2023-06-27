@@ -32,7 +32,7 @@
     </div>
     <div class="navbar-buttons">
       <a href="https://smart-layer.vercel.app/pass" alt="pass" class="pass">Your Pass</a>
-      <button class="register-btn">Register Early</button>
+      <a href="https://smart-layer.vercel.app/?register=true" target="_blank" class="register-btn">Register Early</a>
       </div>
   </div>
 </nav>
