@@ -663,7 +663,7 @@ footer a:hover {
 }
 
 .navbar.open .navbar-nav {
-  line-height: 3rem;
+  line-height: 2.5rem;
   margin-left: 0;
   align-items: start;
   flex-direction: column;
@@ -688,7 +688,7 @@ footer a:hover {
 .navbar.open .navbar-buttons {
   flex-direction: column;
   width: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 }
 
 .navbar.open .navbar-buttons .pass {
