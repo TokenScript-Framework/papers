@@ -12,7 +12,7 @@ deliverables:
         - name: "args.ftr"
           href: "./smart-layer/footer.xml"
         - name: "args.hdf"
-          href: "hdf.xml"
+          href: "./smart-layer/hdf.xml"
         - name: "args.css"
           value: "./smart-layer/custom.css"
         - name: "args.cssroot"
