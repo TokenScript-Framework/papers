@@ -614,6 +614,97 @@ footer a:hover {
   color: #bdff02;
 }
 
+.navbar .navbar-collapse {
+  flex-grow: unset !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  gap: 8%;
+}
+
+.navbar .c-logo .black {
+  display: none;
+}
+
+.navbar .navbar-toggler .close {
+  display: none;
+}
+
+.navbar.open {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100%;
+  background: white;
+  margin-bottom: 0;
+}
+
+.navbar.open .bs-container {
+  height: 100%;
+  flex-flow: row wrap;
+}
+
+
+.navbar.open .navbar-toggler,
+.navbar.open .navbar-toggler .close {
+  display: block;
+}
+
+.navbar.open .navbar-toggler .hamburger {
+  display: none;
+}
+
+.navbar.open .c-logo .black {
+  display: block;
+}
+
+.navbar.open .c-logo .white {
+  display: none;
+}
+
+.navbar.open .navbar-nav {
+  line-height: 3rem;
+  margin-left: 0;
+  align-items: start;
+  flex-direction: column;
+}
+
+.navbar.open .navbar-collapse .nav-link {
+  color: black;
+  font-size: 48px;
+}
+
+.navbar.open .navbar-collapse .external .nav-link {
+  color: rgb(50 104 255);
+}
+
+.navbar.open .collapse {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.navbar.open .navbar-buttons {
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 6rem;
+}
+
+.navbar.open .navbar-buttons .pass {
+  color: black;
+  border: 1px solid black;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  margin-right: 0;
+}
+
+.navbar.open .navbar-buttons .register-btn {
+  display: inline-flex;
+  justify-content: center;
+}
+
 /**
  * 	Media Queries
  *	--------------------------------------------------
@@ -628,13 +719,6 @@ footer a:hover {
   main article {
     max-width: min(54rem, 72vw);
   }
-}
-header .navbar .navbar-collapse {
-  flex-grow: unset !important;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  gap: 8%;
 }
 
 /** additional break point to align with smart-layer site */
@@ -662,7 +746,7 @@ header .navbar .navbar-collapse {
     display: unset;
   }
 
-  .bs-container .collapse:not(.show) {
+  .navbar:not(.open) .bs-container .collapse {
     display: none !important;
   }
 
@@ -711,7 +795,7 @@ header .navbar .navbar-collapse {
     margin-bottom: 0;
   }
   header .navbar .navbar-collapse {
-    margin-top: calc(var(--baseline) * 2.5);
+    margin: calc(var(--baseline) * 2.5) 0;
   }
   header .navbar .navbar-collapse .navbar-nav {
     align-items: flex-start;
