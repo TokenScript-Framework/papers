@@ -6,7 +6,7 @@ Smart Layer is an integration layer that facilitates the next generation of web 
 
 It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token. The services are provided by nodes that join freely, similar to a blockchain. 
 
-Architecturally, Smart Layer enables [Smart Tokens](https://chat.openai.com/concept/SmartToken.md) by providing token APIs on the nodes, which serve as the building blocks to break the silos of today's web sphere.
+Architecturally, Smart Layer is the server-side deployment target of  [Smart Tokens](../concept/SmartToken.md) and the integration points of web services. It does so by providing token APIs on the nodes, which is crucial to break the silos of today's web sphere.
 
 ## What problem is Smart Layer trying to solve?
 
