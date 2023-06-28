@@ -19,7 +19,7 @@ The Smart Layer aims to unlock this level of integration, enhancing the utility 
 
 ## How does Smart Token differ from traditional blockchain tokens?
 
-Traditional blockchain tokens are digital assets with self-custodianship. [Smart Tokens](https://www.tokenscript.org/docs/concept/SmartToken.html), however, include token functions and enable web use-cases.
+Traditional blockchain tokens are digital assets with self-custodianship. [Smart Tokens](../concept/SmartToken.md), however, include token functions and enable web use-cases.
 
 For instance, a Smart Car token, unlike a traditional NFT, when used on a car rental website, can generate an authorisation to allow the rental websites to generate short term car keys for new customers. It can also be used on an insurance website to get instant roadside assistance by allowing the car to report its latest location through the token.
 
