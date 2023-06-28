@@ -1,6 +1,6 @@
-# Case Study: Airplane Ticket Integration
+## Case Study: Airplane Ticket Integration
 
-Let's take an airplane ticket as an example to illustrate the potential of Smart Layer's integration capabilities. Traditionally, such integration is impractical because it often requires connections to airline websites or an airline aggregator, which either increased the attack surface (consider banking app), or invaded the user privacy as the airline needs to provide user data to websites such as YouTube. But with a token approach and Smart Layer, the user holds a token that represents their airplane ticket and uses it to join the computation matrix provided by Smart Layer nodes.
+Airplane ticket is a good example to illustrate the potential of Smart Layer's integration capabilities. Traditionally, such integration is impractical because it often requires connections to airline websites or an airline aggregator, which either increased the attack surface (consider banking app), or invaded the user privacy as the airline needs to provide user data to websites such as YouTube. But with a token approach and Smart Layer, the user holds a token that represents their airplane ticket and uses it to join the computation matrix provided by Smart Layer nodes.
 
 - **Integration Point**: Visa Application System
   - **Use Case**: The airplane ticket token can be used to submit a visa-on-arrival application, reducing paperwork and streamlining the process.

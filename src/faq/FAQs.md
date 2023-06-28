@@ -2,19 +2,18 @@
 
 ## What is Smart Layer and how does it function?
 
-Smart Layer is an integration layer that facilitates the next generation of web use-cases.
 
-It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token. The services are provided by nodes that join freely, similar to a blockchain. 
+Smart Layer is an integration layer that facilitates the next generation of web use-cases. It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token. The services are provided by nodes that join freely, similar to a blockchain.
 
-Architecturally, Smart Layer is the server-side deployment target of  [Smart Tokens](../concept/SmartToken.md) and the integration points of web services. It does so by providing token APIs on the nodes, which is crucial to break the silos of today's web sphere.
+To websites that need to use tokens, Smart Layer network nodes appear as a single API gateway with access points for all kinds of smart tokens. This is crucial for breaking the silos of today's web sphere and enabling the server-side deployment of  [Smart Tokens](../concept/SmartToken.md).
 
 ## What problem is Smart Layer trying to solve?
 
-The Smart Layer addresses the limitations of centralization in the growth of Web 2.0, or as Weiwu puts it, "The Limit Of 3 problem."
+The current web thrives on integration, yet its growth has been hindered by the lack of secure, privacy-preserving, and decentralised mechanisms to facilitate such integration.
 
-At present, the majority of websites depend on three primary types of integrations: login, social media posting, and checkout, typically facilitated by Google ID, Twitter, and Apple Pay, respectively. Despite integrations being the bedrock of the web, websites are generally unable to incorporate more than these three. This is referred to as the "Limit of 3," signifying the typical maximum number of integrations a website can have.
+This has resulted in a situation where, despite integrations being the bedrock of the web, most websites are limited to three primary types of integrations: login, social media posting, and checkout, typically facilitated by Google ID, Twitter, and Apple Pay, respectively. This is what Weiwu refers to as "The Limit Of 3 problem," signifying the typical maximum number of integrations a website can have.
 
-To visualise a ">3" next-generation web, consider an airplane ticket. Currently, this ticket, as a token, only holds value within its issuing platform, like an airline or online travel agent. But imagine if this ticket could be integrated across various systems. It could update your travel status on social media, guide you to your gate via Google Maps, or automatically communicate flight changes to your hotel or car booking systems. These straightforward use-cases are long overdue, yet remain unimplemented due to the siloed nature of the web, with centralized points offering only piecemeal solutions.
+To visualise the next-generation web without such a limitation, consider an airplane ticket. Currently, this ticket, as a token, only holds value within its issuing platform, like an airline or online travel agent. But imagine if this ticket could be integrated across various systems. It could update your travel status on social media, guide you to your gate via Google Maps, or automatically communicate flight changes to your hotel or car booking systems. These straightforward use-cases are long overdue, yet remain unimplemented due to the siloed nature of the web, with centralized points offering only piecemeal solutions.
 
 The Smart Layer aims to unlock this level of integration, enhancing the utility and potential of tokens on the internet.
 
