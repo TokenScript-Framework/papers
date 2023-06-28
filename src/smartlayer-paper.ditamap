@@ -35,8 +35,8 @@
   <appendix href="developers/APIReferences.md" format="mdita"/>
   <appendix href="guide/Guide1.md" format="mdita"/>
   <appendix href="guide/Tutorial1.md" format="mdita"/>
-  <appendix href="faq/FAQs.md" format="mdita"/>
   -->
+  <appendix href="faq/FAQs.md" format="markdown"/>
   <backmatter>
     <booklists>
       <indexlist/>
