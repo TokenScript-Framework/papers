@@ -1,6 +1,6 @@
 # How Smart Layer Works
 
-The Smart Layer is a token-incentivised network of service nodes. It is fueled by Smart Layer Token, driving its operations and incentivizing nodes to contribute their resources and enforcing service level agreements. 
+The Smart Layer is a token-incentivised [network of service nodes](../concept/DistributedServiceNetwork.md). It is fueled by Smart Layer Token, driving its operations and incentivizing nodes to contribute their resources and enforcing service level agreements. 
 
 Smart Layer network functions through three primary components:
 
