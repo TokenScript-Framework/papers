@@ -67,6 +67,8 @@ Therefore, the Smart Layer's design goals include handle complex integration fea
 
 In essence, the Smart Layer is designed to scale both in terms of the number of tokens it can support and the range of functionalities it can provide. It does this by decentralizing the integration process and enhancing token functionality, thereby addressing the scalability issues inherent in the current token ecosystem.
 
+## Why can’t this be solved by other intermediate layers like FileCoin, IPFS or whispernet?
+## What are the security measures used to ensure data is not compromised, stability, and functionality of the ecosystem? 
 ## How does Smart Layer address the challenges of integration, privacy, and trust in the digital landscape?
 ## How does Smart Layer enable a tokenized web with unlimited integration potential?
 ## How does Smart Layer interact with the current web landscape and what problems is it aiming to solve?
@@ -75,6 +77,6 @@ In essence, the Smart Layer is designed to scale both in terms of the number of 
 ## How does Smart Layer act as a bridge between Web 2.0 and Web 3.0 environments?
 ## How does Smart Layer facilitate integration and ensure privacy and security?
 ## What are the new API calls introduced by Smart Layer?
-## How does Smart Layer manage user data privacy?
+## How does Smart Layer manage user data privacy? (What happens to user data? What data is connected? Is user data exposed? Can user ‘untokenize’ their data? How is user data kept secure? Do you share user data with others? Is this data sharing and integration compliant with regulations?)
 ## Where can I find the technical documentation and API references for Smart Layer?
 ## Are there any tutorials or guides available to help me understand and integrate Smart Layer?
