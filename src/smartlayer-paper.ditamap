@@ -13,7 +13,10 @@
     <topicref href="concept/Tokenization.md" navtitle="What is Tokenisation?" format="mdita"/>
     <topicref href="concept/NeedForSmartLayer.md" format="mdita"/>
     <topicref href="concept/SmartLayer.md" navtitle="What is Smart Layer?" format="mdita"/>
-    <topicref href="concept/NextWeb.md" format="mdita" navtitle="Smart Layer's role in the next generation web"/>
+    <topicref href="concept/NextWeb.md" format="mdita"
+      navtitle="Smart Layer's role in the next generation web"/>
+    <topicref href="concept/DistributedServiceNetwork.md" format="mdita"
+      navtitle="Smart Layer is a distributed service network"/>
   </chapter>
   <chapter href="technology/HowSmartLayerWorks.md" format="mdita">
     <topicref href="technology/TokenOperationCommitment.md" format="mdita"/>
