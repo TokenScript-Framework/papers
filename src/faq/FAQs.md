@@ -8,9 +8,19 @@ It operates as a distributed service network, governed by a Decentralized Autono
 
 Architecturally, Smart Layer enables [Smart Tokens](https://chat.openai.com/concept/SmartToken.md) by providing token APIs on the nodes, which serve as the building blocks to break the silos of today's web sphere.
 
-## What are Smart Tokens and how do they differ from traditional blockchain tokens?
+## What problem is Smart Layer trying to solve?
 
-Traditional blockchain tokens are digital assets without custodianship. [Smart Tokens](https://www.tokenscript.org/docs/concept/SmartToken.html), however, include token functions and enable web use-cases.
+The Smart Layer addresses the limitations of centralization in the growth of Web 2.0, or as Weiwu puts it, "The Limit Of 3 problem."
+
+At present, the majority of websites depend on three primary types of integrations: login, social media posting, and checkout, typically facilitated by Google ID, Twitter, and Apple Pay, respectively. Despite integrations being the bedrock of the web, websites are generally unable to incorporate more than these three. This is referred to as the "Limit of 3," signifying the typical maximum number of integrations a website can have.
+
+To visualise a ">3" next-generation web, consider an airplane ticket. Currently, this ticket, as a token, only holds value within its issuing platform, like an airline or online travel agent. But imagine if this ticket could be integrated across various systems. It could update your travel status on social media, guide you to your gate via Google Maps, or automatically communicate flight changes to your hotel or car booking systems. These straightforward use-cases are long overdue, yet remain unimplemented due to the siloed nature of the web, with centralized points offering only piecemeal solutions.
+
+The Smart Layer aims to unlock this level of integration, enhancing the utility and potential of tokens on the internet.
+
+## How does Smart Token differ from traditional blockchain tokens?
+
+Traditional blockchain tokens are digital assets with self-custodianship. [Smart Tokens](https://www.tokenscript.org/docs/concept/SmartToken.html), however, include token functions and enable web use-cases.
 
 For instance, a Smart Car token, unlike a traditional NFT, when used on a car rental website, can generate an authorisation to allow the rental websites to generate short term car keys for new customers. It can also be used on an insurance website to get instant roadside assistance by allowing the car to report its latest location through the token.
 
@@ -57,16 +67,6 @@ The Smart Layer simplifies this by acting as an integration bus, offloading the 
 Therefore, the Smart Layer's design goals include handle complex integration features such as cross-checking multiple tokens and managing authorisations to compose tokens for functions. This is a design challenge that we set out to overcome, and it is crucial for the Smart Layer to truly enable limitless integration in a secure and reliable manner.
 
 In essence, the Smart Layer is designed to scale both in terms of the number of tokens it can support and the range of functionalities it can provide. It does this by decentralizing the integration process and enhancing token functionality, thereby addressing the scalability issues inherent in the current token ecosystem.
-
-## What problem is Smart Layer trying to solve?
-
-The Smart Layer addresses the limitations of centralization in the growth of Web 2.0, or as Weiwu puts it, "The Limit Of 3 problem."
-
-At present, the majority of websites depend on three primary types of integrations: login, social media posting, and checkout, typically facilitated by Google ID, Twitter, and Apple Pay, respectively. Despite integrations being the bedrock of the web, websites are generally unable to incorporate more than these three. This is referred to as the "Limit of 3," signifying the typical maximum number of integrations a website can have.
-
-To visualise a ">3" next-generation web, consider an airplane ticket. Currently, this ticket, as a token, only holds value within its issuing platform, like an airline or online travel agent. But imagine if this ticket could be integrated across various systems. It could update your travel status on social media, guide you to your gate via Google Maps, or automatically communicate flight changes to your hotel or car booking systems. These straightforward use-cases are long overdue, yet remain unimplemented due to the siloed nature of the web, with centralized points offering only piecemeal solutions.
-
-The Smart Layer aims to unlock this level of integration, enhancing the utility and potential of tokens on the internet.
 
 ## How does Smart Layer address the challenges of integration, privacy, and trust in the digital landscape?
 ## How does Smart Layer enable a tokenized web with unlimited integration potential?
