@@ -142,6 +142,45 @@ li {
   color: var(--text);
 }
 
+.small-logo svg {
+  width: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.banner {
+  background: linear-gradient(
+    234.79deg,
+    rgb(0, 26, 255) 37.73%,
+    rgb(79, 149, 255) 118.69%
+  );
+  /* width: var(--grid-width) !important;
+  max-width: var(--grid-max-width); */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.banner .content {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  width: var(--grid-width) !important;
+  max-width: var(--grid-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: white;
+  font-size: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .visually-hidden-focusable {
   width: 1px;
   height: 1px;
@@ -154,8 +193,7 @@ li {
   white-space: nowrap;
 }
 
-.bs-container,
-.footer.container {
+.bs-container {
   margin-left: auto;
   margin-right: auto;
   width: var(--grid-width) !important;
@@ -164,6 +202,29 @@ li {
   box-sizing: border-box;
   gap: inherit !important;
   grid-column-gap: var(--grid-gutter-width) !important;
+}
+
+.footer.container {
+  padding: 0;
+  max-width: 100%;
+}
+
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--grid-width) !important;
+  max-width: var(--grid-max-width);
+  padding: 0 calc(var(--grid-gutter-width) / 2);
+  box-sizing: border-box;
+  gap: inherit !important;
+  grid-column-gap: var(--grid-gutter-width) !important;
+}
+.small-logo {
+  display: none;
+}
+
+.large-logo {
+  display: block;
 }
 
 .bs-header + #content {
@@ -528,9 +589,7 @@ footer {
   padding: calc(var(--baseline) * 10) 0;
   background-color: var(--bg);
   border-top: none;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 footer .footer_main {
   --text: var(--text-light);
@@ -643,7 +702,6 @@ footer a:hover {
   height: 100%;
   flex-flow: row wrap;
 }
-
 
 .navbar.open .navbar-toggler,
 .navbar.open .navbar-toggler .close {
@@ -837,9 +895,28 @@ footer a:hover {
     margin-bottom: calc(var(--baseline) * 3);
     display: block;
   }
+
   footer .footer_main-logo {
-    order: -1;
+    /* order: -1; */
+    display: none;
   }
+
+  .small-logo {
+    display: block;
+    margin-bottom: 1.75rem;
+  }
+
+  .large-logo {
+    display: none;
+  }
+
+  .banner .content {
+    display: block;
+    font-size: 24px;
+    width: var(--grid-width) !important;
+    max-width: var(--grid-max-width);
+  }
+
   footer .footer_main-logo svg {
     height: auto;
   }
