@@ -22,7 +22,7 @@ Moreover, an attestation can influence transactions. For example, a VIP member c
 
 As attestations involve identity, privacy is a primary concern. To combat linkability (the subject of an attestation being identified by the public use of such
 
-an attestation), the attestation used in transactions must differ from the one in a user's wallet. This issue has been addressed in another publication [cite].
+an attestation), the attestation used in transactions must differ from the one in a user's wallet. This issue has been addressed in another publication.
 
 In most cases, attestations only leave traces when a transaction requires it. However, there are instances when attestations leave traces on the blockchain when they are created or revoked.
 

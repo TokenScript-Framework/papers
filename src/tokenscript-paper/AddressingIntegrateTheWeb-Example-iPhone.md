@@ -1,4 +1,4 @@
-## Acquiring an iPhone
+# Acquiring an iPhone
 
 Let's consider a scenario where a user procures an iPhone from Harvey Norman, an online retailer, using blockchain technology. The transaction input would be a form of currency, and the output could potentially be five smart tokens:
 
@@ -16,29 +16,25 @@ Without smart tokens as the integration anchor, these different services might b
 
 This model also simplifies interactions with tax authorities. For instance, if the buyer wants to claim an input tax deduction, they only need to provide their address to the tax authority. If the input tax deduction covers several purchases, they could provide their xpub key, and the tax authority can verify all claimed purchases in seconds without further proof.
 
-### The Shipping Smart Token
+## The Shipping Smart Token
 
 In the absence of a smart token, a user might receive a tracking number, which carries no authentication information and cannot be used to pick up the product unless a pickup code is provided, perhaps via SMS - a process that is poorly integrated.
 
 With a shipping smart token, the token status can be remotely updated by the shipping company, even sending notifications to users about an upcoming delivery (if the token is held in a mobile wallet). With some cryptography, it's easy to authorize someone else to pick up a product.
 
-### Warranty Smart Token
+## Warranty Smart Token
 
 Without this smart token, a user might need the serial number and an online registration process to activate the warranty. They might even need to create an account for that, whose password they will probably soon forget.
 
 With a warranty smart token, the terms and expiration are easy to find, as they are token properties. The user can log in to the warranty service website with the token, bypassing the need for an account. The token can be programmed to receive messages like product callbacks or emergency security updates.
 
-### Receipt Smart Token
+## Receipt Smart Token
 
 Without a reliable way to authenticate the purchase, an online purchased product usually cannot be returned to the store but might be returned via online means such as a postback. A smart token carries sufficient authentication methods for the process to be done in store.
 
 Despite such a token not being transferable or authorized, it is still useful for 3rd party integrations. The Tax office will be satisfied that the receipt can't be faked without collaboration from the seller, and allows a swift and easy tax-refund process. If the phone is purchased for work, the employee can easily reclaim the expense from an employer with the trust implied.
 
-### The Login Smart Token
-
-This smart token can be used to log in to an account for Apple's App Store or iTunes shop. It could also be used to synchronize several Apple devices.
-
-### The Ownership Smart Token
+## The Ownership Smart Token
 
 This smart token could be needed to use any other token. If the iPhone is sold, the ownership smart token is transferred too, and the old owner will not be able to log in to the account of the new owner. There can also be a mechanism to delete the account history when the ownership smart token is transferred.
 
