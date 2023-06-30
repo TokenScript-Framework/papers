@@ -4,7 +4,7 @@
     <mainbooktitle>TokenScript design paper</mainbooktitle>
   </booktitle>
   <frontmatter>
-    <topicref href="paper/Intro-TokensAndTokenization.md" format="markdown">
+    <topicref href="tokenscript-paper/Intro-TokensAndTokenization.md" format="markdown">
       <topicmeta>
         <navtitle>Author's Note</navtitle>
       </topicmeta>
@@ -13,38 +13,38 @@
       <toc/>
     </booklists>
   </frontmatter>
-  <chapter href="paper/FunctionsOfBlockchain.md" format="markdown">
-    <topicref href="paper/FunctionsOfBlockchain-FrictionlessMarket.md" format="markdown"/>
-    <topicref href="paper/TokenizationExamples.md" format="markdown"/>
-    <topicref href="paper/PaymentAndDeliveryTokens.md" format="markdown"/>
-    <topicref href="paper/TokenProperties.md" format="markdown"/>
-    <topicref href="paper/FunctionsOfBlockchain-SmartToken.md" format="markdown"/>
+  <chapter href="tokenscript-paper/FunctionsOfBlockchain.md" format="markdown">
+    <topicref href="tokenscript-paper/FunctionsOfBlockchain-FrictionlessMarket.md" format="markdown"/>
+    <topicref href="tokenscript-paper/TokenizationExamples.md" format="markdown"/>
+    <topicref href="tokenscript-paper/PaymentAndDeliveryTokens.md" format="markdown"/>
+    <topicref href="tokenscript-paper/TokenProperties.md" format="markdown"/>
+    <topicref href="tokenscript-paper/FunctionsOfBlockchain-SmartToken.md" format="markdown"/>
   </chapter>
-  <chapter href="paper/CurrentInternetObstacles.md" format="markdown">
-    <topicref href="paper/CurrentInternetObstacle-Client.md" format="markdown"/>
-    <topicref href="paper/CurrentInternetObstacle-Account.md" format="markdown"/>
+  <chapter href="tokenscript-paper/CurrentInternetObstacles.md" format="markdown">
+    <topicref href="tokenscript-paper/CurrentInternetObstacle-Client.md" format="markdown"/>
+    <topicref href="tokenscript-paper/CurrentInternetObstacle-Account.md" format="markdown"/>
     <topicref href="usecase/case-study/CarOwnershipToken.md" format="markdown"/>
   </chapter>
-  <chapter href="paper/TokenScriptRational.md" format="markdown">
-    <topicref href="paper/TokenScriptRational-Complexities.md" format="markdown"/>
-    <topicref href="paper/TokenScriptRational-TraditionalTokens.md" format="markdown"/>
+  <chapter href="tokenscript-paper/TokenScriptRational.md" format="markdown">
+    <topicref href="tokenscript-paper/TokenScriptRational-Complexities.md" format="markdown"/>
+    <topicref href="tokenscript-paper/TokenScriptRational-TraditionalTokens.md" format="markdown"/>
   </chapter>
-  <chapter href="paper/AddressingFrictionlessMarket.md" format="markdown">
-    <topicref href="paper/AddressingFrictionlessMarket-DeliverySide.md" format="markdown"/>
-    <topicref href="paper/AddressingFrictionlessMarket-PaymentSide.md" format="markdown"/>
-    <topicref href="paper/AddressingFrictionlessMarket-SmartTokenAdvantages.md" format="markdown"/>
+  <chapter href="tokenscript-paper/AddressingFrictionlessMarket.md" format="markdown">
+    <topicref href="tokenscript-paper/AddressingFrictionlessMarket-DeliverySide.md" format="markdown"/>
+    <topicref href="tokenscript-paper/AddressingFrictionlessMarket-PaymentSide.md" format="markdown"/>
+    <topicref href="tokenscript-paper/AddressingFrictionlessMarket-SmartTokenAdvantages.md" format="markdown"/>
   </chapter>
-  <chapter href="paper/AddressingIntegrateTheWeb.md" format="markdown">
-    <topicref href="paper/AddressingIntegrateTheWeb-Example-iPhone.md" format="markdown"/>
-    <topicref href="paper/AddressingIntegrateTheWeb-Example-AirBnB.md" format="markdown"/>
+  <chapter href="tokenscript-paper/AddressingIntegrateTheWeb.md" format="markdown">
+    <topicref href="tokenscript-paper/AddressingIntegrateTheWeb-Example-iPhone.md" format="markdown"/>
+    <topicref href="tokenscript-paper/AddressingIntegrateTheWeb-Example-AirBnB.md" format="markdown"/>
   </chapter>
-  <chapter href="paper/TokenScriptDesign.md" format="markdown">
-    <topicref href="paper/TokenScriptDesign-BusinessProcess.md" format="markdown"/>
-    <topicref href="paper/TokenScriptDesign-Types.md" format="markdown"/>
-    <topicref href="paper/TokenScriptDesign-Components.md" format="markdown"/>
+  <chapter href="tokenscript-paper/TokenScriptDesign.md" format="markdown">
+    <topicref href="tokenscript-paper/TokenScriptDesign-BusinessProcess.md" format="markdown"/>
+    <topicref href="tokenscript-paper/TokenScriptDesign-Types.md" format="markdown"/>
+    <topicref href="tokenscript-paper/TokenScriptDesign-Components.md" format="markdown"/>
   </chapter>
 <backmatter>
-  <topicref href="paper/Ending.md" format="markdown"/>
+  <topicref href="tokenscript-paper/Ending.md" format="markdown"/>
     <booklists>
       <indexlist/>
     </booklists>

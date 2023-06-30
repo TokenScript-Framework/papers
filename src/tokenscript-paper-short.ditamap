@@ -1,0 +1,4 @@
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<map>
+    <topicref href="tokenscript-paper/short_paper.md" format="markdown"/>
+</map>
