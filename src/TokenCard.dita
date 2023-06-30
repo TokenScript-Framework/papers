@@ -1,85 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_nff_y3l_mmb">
-    <title>Token Card</title>
-    <shortdesc>TokenCards determine how a wallet represents a token visually.</shortdesc>
-    <conbody>
-        <p>Token Cards instruct a wallet, a dapp browser or a website how to represent a token. This
-            can include visible instructions, like icons, colors, a text description or buttons.
-            These visible properties are set with the <codeph>&lt;view></codeph> declaration. With
-            it token issuers can design how the token appears in the wallet or on websites. You can
-            think of it similar to a library of CSS code. </p>
-        <p>There are also invisible aspects of the token cards. They can define important security
-            parameters like a serial number and other technical properties which are useful for
-            wallets to know.</p>
-        <p>A token card can have different properties in different circumstances. A soccer ticket
-            token can change its appearance after the game started, and a car leasing token can show
-            different properties depending on your position in the car leasing chain. </p>
-        <p>Token Cards are declared in the XML-file, but expressed in JavaScript, for example by
-            creating a token class and rendering html code in it. </p>
-        <p><b>Code</b></p>
-        <p>Here is an example of how a Token Card is declared in the XML file of
-            TokenScript:<codeblock>&lt;ts:cards> 
-    &lt;ts:card type="token" name="main"> 
-        &lt;ts:item-view xml:lang="en"> 
-            &lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style> 
-            &lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script>
-        &lt;/ts:item-view> 
-    &lt;/ts:card>
-&lt;/ts:cards></codeblock></p>
-        <p>This code fragment instructs the wallet to use a JavaScript file (item-view.en.js) and a
-            CSS file (item-view-file.css) to display the token. You can lookup these files in the
-                <xref
-                href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS"
-                format="html" scope="external">ENS example for TokenScript</xref>.</p>
-        <p>This is how the item-view.en.js looks like:</p>
-        <p>
-            <codeblock>class Token {
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "technicalContent/dtd/concept.dtd" [
+]>
 
-    constructor(tokenInstance) {
-        this.props = tokenInstance;
-        this.props.baseNode = ".eth";
-        this.props.fullName = this.props.ensName + this.props.baseNode;
-        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
-            this.props.fullName = this.props.name;
-        }
-    }
-
-    displayWarningNotOnLatestRegistry() {
-        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
-            document.getElementById("ensNameText").innerText = "INVALID ENS NAME";
-            document.getElementById("ensNameText").style.color = "#ff0000";
-        }
-    }
-
-    render() {
-        return`
-        &lt;div class="item-view-container">
-            &lt;div class="ENS-logo">
-               &lt;img src="data:image/png;base64,i...C">
-            &lt;/div>
-            &lt;div class="ensInfoBox">
-                &lt;div class="ens-title">
-                  &lt;h2 id="ensNameText">${this.props.fullName}&lt;/h2>
-                &lt;/div>
-                &lt;div class="token-interface-details">
-                  &lt;h4 id="ensInfo">Ethereum Name Service | ERC721&lt;/h4>
-                &lt;/div>
-            &lt;/div>
-            &lt;div class="arrow">
-                &lt;img hidden src="data:image/png;base64,i...C">
-            &lt;/div>
-        &lt;/div>`;
-    }
-}
-
-web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) => {
-    const currentTokenInstance = updatedTokens.currentInstance;
-    let token = new Token(currentTokenInstance);
-    document.getElementById(tokenCardId).innerHTML = token.render();
-    token.displayWarningNotOnLatestRegistry();
-};</codeblock>
-        </p>
-        <p/>
-    </conbody>
-</concept>
+<concept id="concept_nff_y3l_mmb"><title>Token Card</title>
+<shortdesc>TokenCards determine how a wallet represents a token
+visually.</shortdesc>
+<conbody><p>Token Cards instruct a wallet, a dapp browser or a website
+how to represent a token. This can include visible instructions,
+like icons, colors, a text description or buttons. These visible
+properties are set with the <codeph>&lt;view></codeph> declaration <xref outputclass="fm:" href="View_vs_ItemView.dita" />.
+With it token issuers can design how the token appears in the wallet
+or on websites. You can think of it similar to a library of CSS
+code.</p>
+<p>There are also invisible aspects of the token cards. They can
+define important security parameters like a serial number and other
+technical properties which are useful for wallets to know.</p>
+<p>A token card can have different properties in different circumstances.
+A soccer ticket token can change its appearance after the game started,
+and a car leasing token can show different properties depending on
+your position in the car leasing chain.</p>
+<p>Token Cards are declared in the XML-file, but expressed in JavaScript,
+for example by creating a token class and rendering html code in
+it.</p>
+<section><title>Code</title>
+<p>Here is an example of how a Token Card is declared in the XML file of
+TokenScript:<codeblock>&lt;ts:cards>
+&lt;ts:card type="token" name="main">
+&lt;ts:item-view xml:lang="en">
+&lt;xhtml:style type="text/css">&amp;item-view-style;&lt;/xhtml:style>
+&lt;xhtml:script type="text/javascript">&amp;item-view.en;&lt;/xhtml:script>
+&lt;/ts:item-view>
+&lt;/ts:card></codeblock></p>
+<p>This code fragment instructs the wallet to use a JavaScript file
+(item-view.en.js) and a CSS file (item-view-file.css) to display
+the token. You can lookup these files in the <xref  href="https://github.com/AlphaWallet/TokenScript-Examples/tree/master/examples/ENS" format="html" scope="external">ENS example for TokenScript</xref>.</p></section></conbody></concept>
