@@ -1,6 +1,6 @@
 # Smart Token
 
-Smart Token is a programmable blockchain-based entity that encapsulates business logic, enabling complex interactions with various systems and other tokens in a self-contained, interoperable format.
+Smart Token is a programmable blockchain-based entity enabled by [TokenScript](TokenScript.md). It encapsulates business logic, enabling complex interactions with various systems and other tokens in a self-contained, interoperable format.
 
 Traditional blockchain tokens enabled ownership without a custodian and enforced transaction rules. But they were not designed to replace internet centers like Facebook, Google, and Apple, or to enable the next generation web. This is where Smart Tokens come in.
 
