@@ -1,6 +1,7 @@
 # TokenScript
 
 TokenScript is a technology that enables Smart Tokens, serving as the building block of the next generation web. It defines the token interface and contains the code logic that drives token adoption, integration, and secure transactions.
+Read the full [design paper](https://github.com/TokenScript/TokenScript/blob/main/doc/design_paper.md) 
 
 ## A use-case facing interface for Smart Contracts
 
