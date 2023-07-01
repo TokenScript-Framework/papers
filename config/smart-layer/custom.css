@@ -148,8 +148,8 @@ li {
 
 @media (min-width: 1024px) {
   .banner {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
+    padding-top: 9rem !important;
+    padding-bottom: 9rem !important;
   }
 }
 
@@ -176,7 +176,7 @@ li {
   padding-right: 1rem;
   padding-left: 1rem;
   color: white;
-  font-size: 36px;
+  font-size: 32.24px;
   display: flex;
   justify-content: space-between;
 }

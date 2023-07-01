@@ -65,7 +65,7 @@
         </div>
         <div class="footer_main-email_container">
           <div class="footer_main-email">
-            <a href="mailto:hello@smartlayer.network"
+            <a href="mailto:hello@smartlayer.network" target="_blank"
               >hello@smartlayer.network</a
             >
           </div>
@@ -73,7 +73,7 @@
             <a
               aria-label="Twitter"
               href="https://twitter.com/TokenScript"
-              external="true"
+              external="true" target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@
             <a
               aria-label="Linkedin"
               href="https://www.linkedin.com/company/smart-token-labs/"
-              external="true"
+              external="true" target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@
             <a
               aria-label="Github"
               href="https://github.com/TokenScript"
-              external="true"
+              external="true" target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@
             <a
               aria-label="Discord"
               href="https://discord.com/invite/tx9a5WHYy9"
-              external="true"
+              external="true" target="_blank"
             >
               <svg
                 width="24"
@@ -156,7 +156,7 @@
           <a
             aria-label="Twitter"
             href="https://twitter.com/TokenScript"
-            external="true"
+            external="true" target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@
           <a
             aria-label="Linkedin"
             href="https://www.linkedin.com/company/smart-token-labs/"
-            external="true"
+            external="true" target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@
           </a>
           <a
             aria-label="Github"
-            href="https://github.com/TokenScript"
+            href="https://github.com/TokenScript" target="_blank"
             external="true"
           >
             <svg
@@ -216,7 +216,7 @@
           </a>
           <a
             aria-label="Discord"
-            href="https://discord.com/invite/tx9a5WHYy9"
+            href="https://discord.com/invite/tx9a5WHYy9" target="_blank"
             external="true"
           >
             <svg
@@ -242,10 +242,10 @@
             >Smart Token Labs</a
           >
           |
-          <a href="https://smart-layer.vercel.app/terms"
+          <a href="https://smart-layer.vercel.app/terms" target="_blank"
             >Terms &amp; Conditions</a
           >
-          | <a href="https://smart-layer.vercel.app/privacy">Privacy Policy</a>
+          | <a href="https://smart-layer.vercel.app/privacy" target="_blank">Privacy Policy</a>
         </p>
       </div>
     </div>
