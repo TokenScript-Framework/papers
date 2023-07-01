@@ -2,10 +2,9 @@
 
 ## What is Smart Layer and how does it function?
 
-
 Smart Layer is an integration layer that facilitates the next generation of web use-cases. It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token. The services are provided by nodes that join freely, similar to a blockchain.
 
-To websites that need to use tokens, Smart Layer network nodes appear as a single API gateway with access points for all kinds of smart tokens. This is crucial for breaking the silos of today's web sphere and enabling the server-side deployment of  [Smart Tokens](../concept/SmartToken.md).
+To websites that need to use tokens, Smart Layer network nodes appear as a single API gateway with access points for all kinds of smart tokens. This is crucial for breaking the silos of today's web sphere and enabling the server-side deployment of [Smart Tokens](../concept/SmartToken.md).
 
 ## What problem is Smart Layer trying to solve?
 
@@ -57,7 +56,7 @@ Smart Layer's designed goal is to scale in the following 3 dimensions.
 
 First, scaling the number of tokens it can support. By deploying a new tokenscript, the service nodes allocated to service such tokens will gain additional API access points. This allow token functions to scale without depending on the network upgrades. In comparison, if Google Wallet wants to include car key functions they will introduce new APIs through update of their wallet systems.
 
-Second, scaling the network service output. The nodes are incentivised to provide token API access including storage of token data and executing token functions in a mannar similar to lambda. So the size of tokens depends on how much incentivise the use-cases needing thses tokens can provide. It's not garanteed that any token use-cases will survive, but because the users of the integrations (being websites or end user) pays the cost, it has a better fit than having token issuer being integraiton point themslves.
+Second, scaling the network service output. The nodes are incentivised to provide token API access including storage of token data and executing token functions in a manner similar to lambda. So the size of tokens depends on how much incentivise the use-cases needing thses tokens can provide. It's not garanteed that any token use-cases will survive, but because the users of the integrations (being websites or end user) pays the cost, it has a better fit than having token issuer being integration point themslves.
 
 Finally, the Smart Layer tackles the scalability challenge from an integration standpoint. In the existing landscape, the complexity of integrations grows non-linearly, often quadratically, as every new integration impacts existing ones, reducing the overall system's reliability and security. For instance, one integration with 99% availability could lower the system's overall availability, even if other integrations have 99.999% availability.
 
@@ -68,13 +67,23 @@ Therefore, the Smart Layer's design goals include handle complex integration fea
 In essence, the Smart Layer is designed to scale both in terms of the number of tokens it can support and the range of functionalities it can provide. It does this by decentralizing the integration process and enhancing token functionality, thereby addressing the scalability issues inherent in the current token ecosystem.
 
 ## How does Smart Layer address the challenges of integration, privacy, and trust in the digital landscape?
+
 ## How does Smart Layer enable a tokenized web with unlimited integration potential?
+
 ## How does Smart Layer interact with the current web landscape and what problems is it aiming to solve?
+
 ## How can developers and business leaders utilize Smart Layer effectively?
+
 ## What is the role of Smart Layer in the future of the internet?
+
 ## How does Smart Layer act as a bridge between Web 2.0 and Web 3.0 environments?
+
 ## How does Smart Layer facilitate integration and ensure privacy and security?
+
 ## What are the new API calls introduced by Smart Layer?
+
 ## How does Smart Layer manage user data privacy?
+
 ## Where can I find the technical documentation and API references for Smart Layer?
+
 ## Are there any tutorials or guides available to help me understand and integrate Smart Layer?
