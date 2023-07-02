@@ -1,0 +1,9 @@
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Smart Layer FAQ">
+  <title>FAQ</title>
+  <topicref href="vs/SmartLayer-FileCoin.dita" navtitle="What is File 1" audience="internal">
+    <topicmeta>
+      <audience type="internal" job="troubleshooting" experiencelevel="expert"/>
+    </topicmeta>
+  </topicref>
+</map>

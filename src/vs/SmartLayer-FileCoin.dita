@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_q4h_d4f_zxb">
+    <title>Test Content</title>
+    <shortdesc>Lovely test</shortdesc>
+    <conbody>
+        <section audience="external">
+            <title>This is a section that your customers need to see</title>
+            <p>In this section, there is information that your customers, users, prospects -- basically anyone who wants to use your product -- needs to see. </p>
+            <p>No, seriously, they need this. If we've done this right, the document will end here and there will be no further content below this.</p>
+        </section>
+        
+        <section audience="internal">
+            <title>This is a section that your internal personnel need to see</title>
+            <p>In this section, there's a bunch of information that's only important for people in your organization. Users don't need to see this stuff. In fact, this stuff is likely to confuse them.</p>
+            <p>When we publish this whole piece of content, let's make sure the users can't see this section. </p>
+        </section>        
+    </conbody>
+</concept>
