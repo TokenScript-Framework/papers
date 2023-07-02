@@ -16,15 +16,21 @@ To visualise the next-generation web without such a limitation, consider an airp
 
 The Smart Layer aims to unlock this level of integration, enhancing the utility and potential of tokens on the internet.
 
+## Why can't integration needs be addressed by other intermediate layers like FileCoin, IPFS, or Whispernet?
+
+While FileCoin, IPFS, and Whispernet offer valuable services, they don't cater to the specific integration needs that Smart Layer addresses. These needs span from translating token-related text, such as flight routes, to orchestrating complex data pipelines - for instance, updating an airline smart token with real-time delay information, triggering hotel rebooking, or linking a smart car with the roadside assistance company chosen by the current insurance token.
+
+However, it's important to note that without the successful implementation of these foundational technologies, Smart Layer wouldn't have a solid base. It's the maturity of these technologies today that makes the existence and functionality of smart layer possible.
+
 ## How does Smart Token differ from traditional blockchain tokens?
 
-Traditional blockchain tokens are digital assets with self-custodianship. [Smart Tokens](../concept/SmartToken.md), however, include token functions and enable web use-cases.
+While traditional blockchain tokens, including digital assets like Bored Ape, enable certain use-cases, they primarily serve as self-custodian assets within their specific ecosystems. In contrast, [Smart Tokens](../concept/SmartToken.md) are engineered to facilitate use-case driven interactions across diverse platforms. This design allows for an integrated web experience while preserving the ownership attributes inherent to traditional tokens.
 
-For instance, a Smart Car token, unlike a traditional NFT, when used on a car rental website, can generate an authorisation to allow the rental websites to generate short term car keys for new customers. It can also be used on an insurance website to get instant roadside assistance by allowing the car to report its latest location through the token.
+Consider a Smart Car token. Unlike a traditional Non-Fungible Token (NFT), this smart token can interact with various platforms. On a car rental website, it can generate an authorization, allowing the site to create short-term car keys for new customers. On an insurance website, it can facilitate instant roadside assistance by enabling the car to report its latest location through the token.
 
-Similarly, a Health Token, a smart token, can hold a user's health data and log access to it.
+Similarly, a Health Token, another example of a smart token, can hold a user's health data and log access to it, enabling secure and controlled sharing of sensitive information across healthcare platforms.
 
-It's worth noting that blockchain tokens cannot be extended to smart tokens by merely adding transactions in the blockchain, as smart contracts are not web logic. This is similar to how one can't keep adding functions to SQL database to make it become a web service. An infrastructure designed for smart tokens, such as Smart Layer, is required.
+It's important to understand that the functionality of smart tokens cannot be achieved by merely adding transactions or functions to existing blockchain tokens or smart contracts. This is because smart contracts, while powerful, are not designed to handle complex web logic. Just as one can't transform an SQL database into a web service by simply adding functions, one can't extend traditional blockchain tokens into smart tokens without a dedicated infrastructure like Smart Layer.
 
 ## Why are Smart Tokens considered "smart"?
 
