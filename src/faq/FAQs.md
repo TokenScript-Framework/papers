@@ -8,13 +8,12 @@ To websites that need to use tokens, Smart Layer network nodes appear as a singl
 
 ## What problem is Smart Layer trying to solve?
 
-The current web thrives on integration, yet its growth has been hindered by the lack of secure, privacy-preserving, and decentralised mechanisms to facilitate such integration.
+The problem is the "[Limit Of 3](../concept/LimitOf3.mdita)" Problem.
 
-This has resulted in a situation where, despite integrations being the bedrock of the web, most websites are limited to three primary types of integrations: login, social media posting, and checkout, typically facilitated by Google ID, Twitter, and Apple Pay, respectively. This is what Weiwu refers to as "The Limit Of 3 problem," signifying the typical maximum number of integrations a website can have.
-
-To visualise the next-generation web without such a limitation, consider an airplane ticket. Currently, this ticket, as a token, only holds value within its issuing platform, like an airline or online travel agent. But imagine if this ticket could be integrated across various systems. It could update your travel status on social media, guide you to your gate via Google Maps, or automatically communicate flight changes to your hotel or car booking systems. These straightforward use-cases are long overdue, yet remain unimplemented due to the siloed nature of the web, with centralized points offering only piecemeal solutions.
-
-The Smart Layer aims to unlock this level of integration, enhancing the utility and potential of tokens on the internet.
+<p conref="../concept/LimitOf3.mdita#limit-of-3/sentence1"></p>
+<p conref="../concept/LimitOf3.mdita#limit-of-3/sentence2"></p>
+<p conref="../concept/LimitOf3.mdita#limit-of-3/sentence3"></p>
+<p conref="../concept/LimitOf3.mdita#limit-of-3/sentence4"></p>
 
 ## Why can't integration needs be addressed by other intermediate layers like FileCoin, IPFS, or Whispernet?
 
@@ -47,6 +46,14 @@ Whenever the user interacts with a website that integrates tokens, such as purch
 For users who want to trade these smart tokens, they need to create a crypto wallet and link the tokens they own through their Web 2.0 identity to a wallet address. This linkage can be done on-demand, ensuring that the number of transactions is not more than if the user had acquired the token using a crypto wallet from the outset.
 
 In the final stage, users with a smart wallet have a runtime environment for smart token logic, similar to how the Smart Layer executes network-side token logic. They can perform more complex tasks, such as participating in multi-party computations to determine the recommended shopping list by using a health token in the wallet, while accessing Online shopping This represents the highest level of integration.
+
+## Does the Smart Layer aim to counter the issues of the current centralized web model by giving users more control over their personal data and their interactions with both centralized and decentralized technologies?
+
+Absolutely, the Smart Layer addresses issues on two fronts. 
+
+Firstly, it empowers users by giving them more control over their personal data and their interactions with both centralized and decentralized technologies. This is achieved by leveraging the power of smart tokens, which enable a more user-centric and privacy-preserving web experience. Users can dictate the level of their interaction with various technologies and services, thereby reducing unnecessary data collection and enhancing user autonomy.
+
+Secondly, the Smart Layer also addresses the limitations of the current centralized model from a market perspective. The centralization model not only compromises user privacy and control but also stifles market innovation. It leads to a situation where a few tech giants dominate, limiting the diversity and competition that are essential for a healthy market. This is reflected in the "Limit of 3" problem, where most websites are limited to [three primary types of integrations](../concept/LimitOf3.mdita). By providing a decentralized framework for integration, the Smart Layer can break this deadlock, fostering a more vibrant and innovative web ecosystem.
 
 ## Is Smart Layer proprietary? Who is the owner? Who builds it? Is there a DAO?
 
