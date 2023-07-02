@@ -68,7 +68,7 @@ Finally, the Smart Layer tackles the scalability challenge from an integration s
 
 The Smart Layer simplifies this by acting as an integration bus, offloading the scalability issue of integrations. It provides a unified interface that allows web services to easily integrate any token functionality, eliminating the need for direct token integration. This design enables the Smart Layer to scale up to accommodate an increasing number of tokens.
 
-Therefore, the Smart Layer's design goals include handle complex integration features such as cross-checking multiple tokens and managing authorisations to compose tokens for functions. This is a design challenge that we set out to overcome, and it is crucial for the Smart Layer to truly enable limitless integration in a secure and reliable manner.
+Therefore, the Smart Layer's design goals include handling integration features such as cross-checking multiple tokens and managing authorisations to compose tokens for functions. This is a design challenge that we set out to overcome, and it is crucial for the Smart Layer to truly enable limitless integration in a secure and reliable manner.
 
 In essence, the Smart Layer is designed to scale both in terms of the number of tokens it can support and the range of functionalities it can provide. It does this by decentralizing the integration process and enhancing token functionality, thereby addressing the scalability issues inherent in the current token ecosystem.
 
