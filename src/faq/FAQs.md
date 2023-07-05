@@ -37,6 +37,18 @@ Smart Tokens are considered "smart" because they can snap onto various web use-c
 
 In the 21st century, the term "Smart" represents "multi-capability," rather than "intelligence" - a trait we now attribute to AI. Consider smartphones: they aren't AI-phones that understand or anticipate users' needs. Instead, they are multi-functional devices performing a wide range of tasks beyond just making calls. Their capabilities continue to expand with the addition of use-case specific apps, often transcending the original intentions of the smartphone producer. Similarly, a Smart Token isn't an AI-powered entity generating profits; it merely enables various use-cases, often exceeding the purview of the smart token issuer.
 
+## What is the relationship between Smart Token, Smart Layer, and TokenScript?
+
+Smart Layer, and TokenScript are three interconnected components that together enable a new level of integration and functionality on the next-generation web.
+
+**Smart Tokens** are the building blocks of this ecosystem. They are not just digital assets but also include functions that enable web use-cases. These tokens can represent anything from an airplane ticket to a health record, and they carry the ability to interact with different platforms and services.
+
+**TokenScript** is the technology that enables these interactions. It is a container for the code that powers token-based integrations. This code defines how a Smart Token behaves and interacts with other systems. TokenScript allows Smart Tokens to be more than just static assets; they become dynamic entities capable of complex interactions.
+
+**Smart Layer** is the infrastructure that supports these interactions. It is a service network designed to facilitate the deployment and operation of Smart Tokens and their TokenScripts. From the perspective of websites, Smart Layer acts as a RESTful API provider, enabling them to interact with various Smart Tokens.
+
+In summary, Smart Tokens are the entities that carry out actions, TokenScript is the language that defines these actions, and Smart Layer is the environment where these actions take place. Together, they form a cohesive system that enables a more dynamic, integrated, and functional web.
+
 ## How will Smart Layer work for users in the transition between Web2, Web2.5, Web3? What does the transition of User Experience look like for the end user from what they are familiar with today?
 
 There are three stages in the user experience with the Smart Layer. Initially, a user needs to verify their Web 2.0 identity through a website or a Progressive Web App (PWA). This onboarding process doesn't require the user to have a crypto wallet, but it does generate user-specific keys.
