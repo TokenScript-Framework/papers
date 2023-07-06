@@ -12,4 +12,4 @@ Traditional blockchain tokens can be traded without centralization; Smart Tokens
 
 In conclusion, Smart Tokens are more than just blockchain-based entities. They are the linking points, the units of integration, and the tradeable rights that could shape the future of the web. As we continue to explore and understand their capabilities, we are likely to see a shift towards a more integrated, decentralized, and user-centric digital world.
 
-![](SmartTokenCapabilitiesInteractions.svg)
+![](SmartTokenCapabilitiesInteractions.png)
