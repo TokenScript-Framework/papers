@@ -11,7 +11,7 @@ There can also be attestations for a real life fact. For example, a smart contra
 An identifier attestation can also be connected to an Ethereum entity like the holder of a key pair. This allows tokens use-cases such as
 
 - To be used as holders for other tokens. For example, when DevCon 2022 ticket is issued, they are issued on user's identifier (email address). To use the DevCon ticket, a user has to acquire an email address attestation.
-- To be used in a Cheque - sending tokens by email address, and later the user who has an email address identifier attestation can redeem it. The underlying smart contract will check the validity of such attestations. [Cheque protocol](../ChequeProtocol.dita) makes heavy use of attestations in such a way.
+- To be used in a Cheque - sending tokens by email address, and later the user who has an email address identifier attestation can redeem it. The underlying smart contract will check the validity of such attestations. [Cheque protocol](../concept/Cheque.dita) makes heavy use of attestations in such a way.
 
 - To provide dependency for other attestations. Since [Attestation can be chained](../AttestationChained.dita).
 

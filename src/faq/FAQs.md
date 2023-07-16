@@ -53,7 +53,7 @@ In summary, Smart Tokens are the entities that carry out actions, TokenScript is
 
 There are three stages in the user experience with the Smart Layer. Initially, a user needs to verify their Web 2.0 identity through a website or a Progressive Web App (PWA). This onboarding process doesn't require the user to have a crypto wallet, but it does generate user-specific keys.
 
-Whenever the user interacts with a website that integrates tokens, such as purchasing a tokenized airline ticket or using such a ticket when booking a hotel, the user is directed to the PWA or the website (on mobile phones and desktops, respectively) for authentication. Once authenticated, the website accesses the user's token through the connected Smart Layer and utilizes the token functions.
+Whenever the user interacts with a website that integrates tokens, such as purchasing a tokenized airline ticket or using such a ticket when booking a hotel, the user is directed to the PWA or the website (on mobile phones and desktops, respectively) for authentication through [Identifier Attestation](../concept/IdentifierAttestation.md). Once authenticated, the website accesses the user's token through the connected Smart Layer and utilizes the token functions.
 
 For users who want to trade these smart tokens, they need to create a crypto wallet and link the tokens they own through their Web 2.0 identity to a wallet address. This linkage can be done on-demand, ensuring that the number of transactions is not more than if the user had acquired the token using a crypto wallet from the outset.
 

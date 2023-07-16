@@ -20,19 +20,13 @@
             format="mdita"
                 >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
             Proofs.</p>
-        <p>The cryptographic details are in <xref href="Cheque/send_token_by_identifier.md" format="mdita"
-                >protocol description.</xref></p>
         <p>There are lots of real life use-cases of Cheque Protocol</p>
         <ul id="ul_wkh_5mp_vnb">
             <li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
-            <li><xref href="Cheque/send_token_by_identifier.md" format="mdita">Send token by Email
-                    (or any identifier)</xref></li>
+            <li><xref href="concept/IdentifierAttestation.md" format="mdita">Identifier Attestation</xref></li>
+
             <li><xref href="Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
                     Risk</xref></li>
         </ul>
-        <note><p>The actual protocol is here <xref
-                    href="https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md"
-                    format="html" scope="external">send token by identifier attestation
-                MVP</xref>.</p></note>
     </conbody>
 </concept>

@@ -1,18 +1,20 @@
-# Web2 identifiers as token owners, off-chain tokens and other attestation use-cases ##
+# Identifier attestations: web2 identifiers as token owners, off-chain tokens and other attestation use-cases ##
 
 ## Summary ##
 
-The require for the user to have a crypto wallet has long been a user experience challenge that prevented large scale adoption of tokens, and is a barrier for business and brands to issue tokens to their existing customer base. While it is not possible to forgo crypto wallet and gas cost for a token holder to send transactions, the ownership of tokens can be designed to use web 2 identifiers such as Email addresses and twitter handles. This allows users who do not own cryptocurrency to own tokens, easing the adoption.
+The requirement for users to own a crypto wallet has been a longstanding user experience challenge, hindering the widespread adoption of tokens. This requirement also poses a barrier for businesses and brands aiming to issue tokens to their existing customer base. Specifically, there are two reasons why wallets are dependencies: the need for a crypto balance to pay gas costs for token transactions, and the process of token ownership.
 
-The technology to enable this is attestation - an terminology to denote signed messages by reputable attester that can be used on the blockchain directly or through the cryptographic proof generated from it. The technology is successfully deployed in DEVCON 6, an Ethereum developer conference, for ticket holders to mint NFT tokens long after they owned it.
+While it's currently impossible to eliminate the need for a crypto balance for paying gas costs, we can address the second dependency. Token ownership can be redesigned to use web 2 identifiers such as email addresses and Twitter handles. This approach allows users who do not own cryptocurrency to own tokens, thereby facilitating adoption.
 
-This paper goes through the mechanism how this works, which involves hiding the user's identity through zero-knowledge proof. Furthermore, the paper generalise the approach and introduce a few new use-cases for attestations and establish a general pattern how attestations can be used on the blockchain.
+The key technology enabling this is identifier attestation. This refers to signed messages by reputable attestors that confirm the ownership of a web2 ID, such as an email address. A token can be issued to a commitment formed from such a web2 ID, with key information missing. This information must be provided by the token owner through a cryptographic proof. This process allows the token to be issued without the user having created a wallet or any cryptographic key. The user can later acquire such an identifier attestation and complete the proof that they own the key as well as the web2 ID. This technology was successfully deployed at DEVCON 6, an Ethereum developer conference, allowing ticket holders to mint NFT tokens long after their purchase.
+
+This paper explores the mechanism behind this process, which involves concealing the user's identity through zero-knowledge proof. It also generalizes this approach, introducing new use-cases for attestations and establishing a standard pattern for their use on the blockchain.
 
 ## Problem definition ##
 
-We need a mechanism to mint (issue) tokens, such as NFT, to a user whose Ethereum address is unkown. In practice, such a user probably do not have an Ethereum address. The only way to issue the token is to issue it to the user's web2 ID, such as email address or twitter handle, as web2 ID is the only identifier available. This is a common situation when brands/businesses need to issue membership tokens to all existing members so that the members have a presence in web3 and access web3 functionalities. 
+We need a mechanism to mint (issue) tokens, such as NFTs, to a user whose Ethereum address is unknown. In practice, such a user probably does not have an Ethereum address. The only way to issue the token is to link it to the user's web2 ID, such as an email address or Twitter handle, as this is the only identifier available. This is a common situation in various scenarios, such as educational programs, non-profit initiatives, online communities, government programs, and research studies, where tokens need to be issued to individuals so that they can participate in web3 activities and access web3 functionalities.
 
-Traditionally, this is done by asking every user to create a wallet, generate an Ethereum address and link it to their web2 ID by logging in and creating a signed message from the newly created Ethereum address before a deadline. Then, the brand / business creates a bloom filter to "airdrop" membership tokens to all the users who finished the above process.
+Traditionally, this is done by first making sure every user is signed up on the issuer's website, then, asking every user to create a wallet, generate an Ethereum address and link it to their web2 ID by logging in to that website and creating a signed message from the newly created Ethereum address before a deadline. Then, the brand / business creates a bloom filter to "airdrop" membership tokens to all the users who finished the above process.
 
 As of 2023, the success rate for this traditional process is very small due to the UX burden on the user. Furthermore, the tokens are periodically, batch processed. If not, individual user must claim their token as they go, the gas cost and blockchain space abuse can be significant.
 
@@ -21,7 +23,8 @@ Therefore we seek a way to give tokens to the user that satisfies the following 
 1. No wallet required: it must be possible to give tokens to the users without the users owning a wallet. In the meantime, the users who already own a wallet should still be able to access the token without significant overhead.
 2. Attester-agnostic: although it will not be possible to achieve the above without the involvement of an attester, the issuer or sender of the token must not force the user to choose any specific attester. This is important because the attester will necessarily know the user's web2 ID in order to attest it, and can link the web2 ID to the user's Ethereum addreess, therefore the users should be free to choose which attester can be trusted with this confidentiality. Furthermore, we require that the user does not need to do anything - including choosing an attester - at the time a token is sent or minted to their name.
 3. Privacy preserving: it must be possible to give tokens to the users by their web2 ID, without revealing that ID to the blockchain. We further requires that the user who do transactions with the said token - after they owned an Ethereum address - do not reveal their web2 ID in the process.
-4.  
+
+Furthermore, such tokens doesn't need to be issued as NFT to start with, especially if they are not traded. Examples of such use-cases are voter attestations, which act like NFT - since it is not fungible - yet only need to materialise when voting happens. These will be called off-chain tokens and will be covered later.
 
 ## Starting case: sending a Ethereum token to a user who does not have an Ethereum address ##
 
