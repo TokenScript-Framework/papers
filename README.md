@@ -9,10 +9,12 @@ This repo has the source code TokenScript website's documents and SmartLayer web
 2. Install plugins net.infotexture.dita-bootstrap and fox.jason.favicon
 
 ````
-$ dita install net.infotexture.dita-bootstrap
-$ dita install fox.jason.favicon
 $ dita install fox.jason.extend.css
+$ dita install fox.jason.favicon
+$ dita install net.infotexture.dita-bootstrap
 ````
+
+Note that the order of the installation is strict and if you failed to follow this exact order when intalling the plugins, you will need to uninstall all of them and start again. This is the case with dita-ot 4.1 and might be resolved one day.
 
 3. Make a website for documents. If dita is in `$PATH` you can do this:
 
@@ -56,6 +58,9 @@ Solution:
 
 ````
 $ dita uninstall net.infotexture.dita-bootstrap
+$ dita uninstall fox.jason.favicon
+$ dita uninstall fox.jason.extended.css
 $ dita install fox.jason.extend.css
+$ dita install fox.jason.favicon
 $ dita install net.infotexture.dita-bootstrap
 ````
