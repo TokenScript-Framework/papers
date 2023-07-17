@@ -15,13 +15,13 @@
             <p>We assume that you are familiar with Token, Ethereum and Smart Contracts. We also
                 assume that you have launched your own Token - be it on mainnet or on a testnet like
                 Ropsten. If you want to learn how to launch a testnet token, you can use <xref
-                    href="guides/Miniguide-deploy-token-on-ropsten.dita">our guide</xref>. If you
+                    href="guide/Miniguide-deploy-token-on-ropsten.dita">our guide</xref>. If you
                 have not, but want to try TokenScript, you can use the "Coin" token on Ropsten
                 address 0xe35FE4A1B17d50A8022078d98162DB25bC860834.</p>
             <p>TokenScript will be imported into AlphaWallet, a mobile wallet which supports several
                 Ethereum networks. To use TokenScript, you will have to add your own token or
                 "Coin". If you need help adding the token, read this <xref
-                    href="guides/Miniguide-add-token-to-aw.dita">mini guide</xref>.</p>
+                    href="guide/Miniguide-add-token-to-aw.dita">mini guide</xref>.</p>
         </section><section><title>Create the TokenScript files</title>
             <p>You have your own Token or imported "Coin" in AlphaWallet. Now you want AlphaWallet
                 to show information about this token. </p>
