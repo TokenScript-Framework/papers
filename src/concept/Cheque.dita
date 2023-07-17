@@ -12,20 +12,20 @@
                 by Alice</q>
         </p>
         <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
-            delivered offchain, in some encodings (typically, <xref href="concept/MagicLink.md" format="mdita"/>),
+            delivered offchain, in some encodings (typically, <xref href="MagicLink.md" format="mdita"/>),
             which the recipient uses to execute the action associated with the cheque.</p>
         <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
             in such a way that even an adversary, who knows the identifier, cannot link a
-            blockchain transaction to the identifier. <xref href="Cheque/privacy_protection.md"
+            blockchain transaction to the identifier. <xref href="../Cheque/privacy_protection.md"
             format="mdita"
                 >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
             Proofs.</p>
         <p>There are lots of real life use-cases of Cheque Protocol</p>
         <ul id="ul_wkh_5mp_vnb">
-            <li><xref href="Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
-            <li><xref href="concept/IdentifierAttestation.md" format="mdita">Identifier Attestation</xref></li>
+            <li><xref href="../Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
+            <li><xref href="IdentifierAttestation.md" format="mdita">Identifier Attestation</xref></li>
 
-            <li><xref href="Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
+            <li><xref href="../Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
                     Risk</xref></li>
         </ul>
     </conbody>
