@@ -1,0 +1,17 @@
+sequenceDiagram
+  participant User
+  participant air.cab
+  participant attestation.id
+  participant Gateway_Node
+  participant Service_Node_B
+  participant Service_Node_A
+  User->>air.cab: Purchase Ticket
+  air.cab->>User: Send Magic Link
+  User->>attestation.id: Click Magic Link
+  attestation.id->>User: Prompt User to Sign Reservation
+  User->>attestation.id: Sign Reservation
+  attestation.id->>Gateway_Node: Pass User-signed Token
+  Gateway_Node->>Service_Node_A: Assign Service Node and Forward User-signed Token
+  Service_Node_A->>Service_Node_B: Fetch Tokenscript
+  Service_Node_B->>Service_Node_A: Return Tokenscript
+  Service_Node_A->>air.cab: Notify about Token's Activation in the Network
