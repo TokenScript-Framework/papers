@@ -1,25 +1,25 @@
 # FAQs
 
-## What is Smart Layer and how does it function?
+## What is Smart Layer and what does it look like?
 
-Smart Layer is an integration layer that facilitates the next generation of web use-cases. It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token. The services are provided by nodes that join freely, similar to a blockchain.
+Smart Layer is an integration layer that facilitates the next generation of web use-cases. It operates as a distributed service network, governed by a Decentralized Autonomous Organization (DAO), and incentivized by a token-based economy model. The services are provided by nodes that join freely, similar to a blockchain.
 
 To websites that need to use tokens, Smart Layer network nodes appear as a single API gateway with access points for all kinds of smart tokens. This is crucial for breaking the silos of today's web sphere and enabling the server-side deployment of [Smart Tokens](../concept/SmartToken.md).
 
 ## What problem is Smart Layer trying to solve?
 
-The problem is the "[Limit Of 3](../concept/LimitOf3.mdita)" Problem.
+The Smart Layer aims to address the "[Limit Of 3](../concept/LimitOf3.mdita)" problem.
 
 <p conref="../concept/LimitOf3.mdita#limit-of-3/sentence1"></p>
 <p conref="../concept/LimitOf3.mdita#limit-of-3/sentence2"></p>
 <p conref="../concept/LimitOf3.mdita#limit-of-3/sentence3"></p>
 <p conref="../concept/LimitOf3.mdita#limit-of-3/sentence4"></p>
 
-## Why can't integration needs be addressed by other intermediate layers like FileCoin, IPFS, or Whispernet?
+## What are Smart Tokens
 
-While FileCoin, IPFS, and Whispernet offer valuable services, they don't cater to the specific integration needs that Smart Layer addresses. These needs span from translating token-related text, such as flight routes, to orchestrating complex data pipelines - for instance, updating an airline smart token with real-time delay information, triggering hotel rebooking, or linking a smart car with the roadside assistance company chosen by the current insurance token.
+Smart Tokens, the building blocks of the Smart Layer, are designed to facilitate use-case driven interactions across multiple platforms. They are not just digital assets with self-custodianship, but they include token functions and enable web use-cases.
 
-However, it's important to note that without the successful implementation of these foundational technologies, Smart Layer wouldn't have a solid base. It's the maturity of these technologies today that makes the existence and functionality of smart layer possible.
+For instance, a Smart Car token, unlike a traditional NFT, when used on a car rental website, can generate an authorisation to allow the rental websites to generate short term car keys for new customers. It can also be used on an insurance website to get instant roadside assistance by allowing the car to report its latest location through the token. This level of integration and utility is what sets Smart Tokens, and by extension the Smart Layer, apart.
 
 ## How does Smart Token differ from traditional blockchain tokens?
 
@@ -30,6 +30,12 @@ Consider a Smart Car token. Unlike a traditional Non-Fungible Token (NFT), this 
 Similarly, a Health Token, another example of a smart token, can hold a user's health data and log access to it, enabling secure and controlled sharing of sensitive information across healthcare platforms.
 
 It's important to understand that the functionality of smart tokens cannot be achieved by merely adding transactions or functions to existing blockchain tokens or smart contracts. This is because smart contracts, while powerful, are not designed to handle complex web logic. Just as one can't transform an SQL database into a web service by simply adding functions, one can't extend traditional blockchain tokens into smart tokens without a dedicated infrastructure like Smart Layer.
+
+## Why can't integration needs be addressed by other intermediate layers like FileCoin, IPFS, or Whispernet?
+
+While FileCoin, IPFS, and Whispernet offer valuable services, they don't cater to the specific integration needs that Smart Layer addresses. These needs span from translating token-related text, such as flight routes, to orchestrating complex data pipelines - for instance, updating an airline smart token with real-time delay information, triggering hotel rebooking, or linking a smart car with the roadside assistance company chosen by the current insurance token.
+
+However, it's important to note that without the successful implementation of these foundational technologies, Smart Layer wouldn't have a solid base. It's the maturity of these technologies today that makes the existence and functionality of smart layer possible.
 
 ## Why are Smart Tokens considered "smart"?
 
