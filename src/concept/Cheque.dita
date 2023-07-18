@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_tfy_zpg_nmb">
     <title>Cheque protocol</title>
-    <shortdesc>Cheque protocol solves a common multi-sig use-cases</shortdesc>
+    <shortdesc>Cheque protocol solves common multi-sig use-cases and reduces counter-party risk.</shortdesc>
     <conbody>
         <p>An attestation is a signed message about a certain fact. A cheque is a special case of
             such a message issued to an <term>identifier</term> about some actions to be performed
@@ -12,21 +12,45 @@
                 by Alice</q>
         </p>
         <p>In TokenScript, a cheque is modeled with a TokenScript just like normal attestations, and
-            delivered offchain, in some encodings (typically, <xref href="MagicLink.md" format="mdita"/>),
+            delivered offchain, in some encodings (typically, magic link),
             which the recipient uses to execute the action associated with the cheque.</p>
-        <p>To use cheque on the blockchain it's necessary to cryptographically hide the identifier
+        <p>To use a cheque on the blockchain it's necessary to cryptographically hide the identifier
             in such a way that even an adversary, who knows the identifier, cannot link a
-            blockchain transaction to the identifier. <xref href="../Cheque/privacy_protection.md"
-            format="mdita"
-                >Cheque protocol achieves this</xref> through Pedersen Commitment and Zero Knowledge
-            Proofs.</p>
-        <p>There are lots of real life use-cases of Cheque Protocol</p>
-        <ul id="ul_wkh_5mp_vnb">
-            <li><xref href="../Cheque/multi-sig.md" format="mdita">Multi-Sig</xref></li>
-            <li><xref href="IdentifierAttestation.md" format="mdita">Identifier Attestation</xref></li>
+            blockchain transaction to the identifier. Cheque protocol achieves this through Pedersen Commitment and Zero Knowledge
+            Proofs, as explained in the Privacy Protection section below.</p>
 
-            <li><xref href="../Cheque/reduce_counter_party_risk.md" format="mdita">Reduce Counter-Party
-                    Risk</xref></li>
-        </ul>
+        <section id="sec_multi-sig">
+            <title>Multi-Sig Use-Case</title>
+            <p>The cheque protocol can be used to formulate multi-sig use-cases. Consider a scenario
+            where a CEO authorises an employee to withdraw up to 500USD per day from an account, and
+            the employee withdraws 100USD. Only the second transaction causes money to change hands,
+            yet the first is a blockchain transaction, consuming gas.</p>
+            <p>Here, the CEO's authorisation is a cheque, and the employee is the beneficiary identified
+            by an ID. The withdrawal transaction is a redeeming transaction using the cheque. This
+            process benefits from using multi-sig, adds privacy protection to the identifier, allows
+            management through identifier, and is easier to extend through TokenScript with reduced
+            attack surface.</p>
+        </section>
+
+        <section id="sec_reduce_risk">
+            <title>Reducing Counter-Party Risk</title>
+            <p>Cheque protocol can also be used to minimize counter-party risk and attack surface.
+            For instance, a user can issue an order to an exchange to sell their cryptocurrency at a
+            certain price. When the order can be filled, the exchange can counter-sign the order and
+            execute it. This means the user doesn't need to deposit their cryptocurrency into the
+            exchange's account prior to the trade, which reduces counter-party risk. The exchange
+            account will only be holding cryptocurrency for a short time, thus reducing the attack
+            surface.</p>
+        </section>
+
+        <section id="sec_privacy">
+            <title>Privacy Protection</title>
+            <p>Cheque protocol also offers privacy protection through Pedersen Commitment and
+            Zero-Knowledge Proof. For instance, Alice can send a signed cheque to Bob, hiding his
+            email address in a Pedersen Commitment. Bob can then obtain a 3rd party attestation
+            proving his ownership of the email address and use the cheque and the email address
+            attestation to redeem the promised amount. The protocol includes the necessary crypto
+            to protect identifiers like Bob's email address from being learned by observers.</p>
+        </section>
     </conbody>
 </concept>
