@@ -30,8 +30,8 @@ Let's quickly recall that Smart Layer and Smart Tokens. Smart Tokens are program
 
 Now that we have a basic understanding of the Smart Layer and key knowledge points, let's look at the process of creating a smart token airline ticket.
 
-```mermaid
-sequenceDiagram
+<p>
+            <foreign outputclass="embed-mermaid-diagram">sequenceDiagram
   participant User
   participant air.cab
   participant attestation.id
@@ -44,8 +44,9 @@ sequenceDiagram
   User->>attestation.id: Sign Reservation
   attestation.id->>Gateway_Node: Pass User-signed Token
   Gateway_Node->>Service_Node: Assign Service Node and Forward User-signed Token
-  Service_Node->>air.cab: Notify about Token's Activation in the Network
-```
+  Service_Node->>air.cab: Notify about Token's Activation in the Network</foreign>
+</p>
+
 
 1. *User Purchases a Ticket*: The user initiates the process by purchasing an airline ticket from air.cab.
 
@@ -71,10 +72,10 @@ The process involves several steps, from the user purchasing a ticket to the Sma
 
 Let's take a closer look at how air.cab interacts with the smart layer and the potential benefits of this process.
 
-### Interaction with the Smart Layer
+** Interaction with the Smart Layer **
 
 In this process, Air.Cab provides a magic link which leads to the creation of a token object in the smart layer, and it gets notified when it is created. Shortly after that, when Air.Cab issues the ticket, it updates the smart layer network with the ticket information, such as PNR (the 6-digit identifier of a ticket). This changes the smart token from reservation to a ticket. In a reservation state, it can provide some functionalities, such as used to apply for a VISA or used in the process of hotel booking. But once it is a ticket, it enables more use-cases that depends on actual tickets, such as lounge access or duty free shop dropping.
 
-### Can't airline issue tickets without smart layer?
+** Can't airline issue tickets without smart layer? **
 
 The Smart Layer is not a dependency for issuing passenger a ticket; it is used to create a smart token out of that ticket. A smart token allows functionalities that can be expected if the airlines are an integration centre like Google, but can't happen due to the limited possible integration centres that can exist in a web ecosystem. Such features include upgrading the ticket through 3rd party or bidding market, using the ticket to enable more use-cases such as VISA application or insurance, integrating user's mobile app and web app etc. It might be smart enough to update your hotel booking if the plane is late. These will depend on smart layer function as the execution environment of the now smart-token airline ticket, but also that the parties who wants to integrate with such a ticket being connected to smart layer as well.
