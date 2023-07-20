@@ -16,18 +16,19 @@ $ dita install net.infotexture.dita-bootstrap
 
 Please note that the order of installation is crucial on some systems. If you fail to follow this exact order when installing the plugins, you may need to uninstall all of them and start again.
 
-3. Generate a website for the documents. If `dita` is in your `$PATH`, you can do this:
+3. Install a dita diagram plugin. This has to be installed manually, by copying the folder `com.oxygenxml.diagrams.svg` to your dita installation location's `plugins` directory, then install it with
+
+```
+$ dita --install
+```
+
+It should prompt that plugin `com.oxygenxml.diagrams.svg` is successfully installed.
+
+3. Generate a website for one of the document projects. For example, `config/smartlayer-docsite.yaml`:
 
 ````
 $ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
 ````
-
-If `dita` is installed in a different location, for example `/home/christoph/dita-ot-4.1/bin/dita`, use this command:
-
-````
-$ /home/christoph/dita-ot-4.1/bin/dita --project config/tokenscript-docsite.yaml
-````
-
 This will create a website in the `out/` directory.
 
 ## Document Structure
