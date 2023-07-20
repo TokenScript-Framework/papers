@@ -31,22 +31,22 @@ Let's quickly recall that Smart Layer and Smart Tokens. Smart Tokens are program
 Now that we have a basic understanding of the Smart Layer and key knowledge points, let's look at the process of creating a smart token airline ticket.
 
 <p>
-            <foreign outputclass="embed-mermaid-diagram">sequenceDiagram
-  participant User
-  participant air.cab
-  participant attestation.id
-  participant Gateway_Node
-  participant Service_Node
-  User->>air.cab: Purchase Ticket
-  air.cab->>User: Send Magic Link
-  User->>attestation.id: Click Magic Link
-  attestation.id->>User: Prompt User to Sign Reservation
-  User->>attestation.id: Sign Reservation
-  attestation.id->>Gateway_Node: Pass User-signed Token
-  Gateway_Node->>Service_Node: Assign Service Node and Forward User-signed Token
-  Service_Node->>air.cab: Notify about Token's Activation in the Network</foreign>
+    <foreign outputclass="embed-plant-uml">@startuml
+	actor User
+	participant air.cab
+	participant attestation.id
+	participant Gateway_Node
+	participant Service_Node
+	User -> air.cab: Purchase Ticket
+	air.cab -> User: Send Magic Link
+	User -> attestation.id: Click Magic Link
+	attestation.id -> User: Prompt User to Sign Reservation
+	User -> attestation.id: Sign Reservation
+	attestation.id -> Gateway_Node: Submit Token
+	Gateway_Node -> Service_Node: Assign Node
+	Service_Node -> air.cab: Notify Token's Activation
+    @enduml</foreign>
 </p>
-
 
 1. *User Purchases a Ticket*: The user initiates the process by purchasing an airline ticket from air.cab.
 
