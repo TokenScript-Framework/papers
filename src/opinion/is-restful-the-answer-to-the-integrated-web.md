@@ -6,7 +6,15 @@ The short answer is no. RESTful or even GraphQL are only part of the solution fo
 
 Twenty year ago, our lab in the Uni was commissioned to develop a web system for the Chinese army. The project was primarily managed by research students adept in data management. They crafted the front-end JScript to directly generate SQL statements. These statements were then sanity-checked by the website's unlicensed IIS running ASP code before being dispatched to an unlicensed Microsoft SQL server (a pirated Microsoft stack was, and perhaps still is, popular among the Chinese army).
 
-In one of the meetings, I proposed a web service layer. This layer would take data inquiries from the website, which would not contain any SQL table references, and focus solely on the data needed to render the UI. The web service layer would then generate the underlying SQL statement. 
+In one of the meetings, I proposed a web service layer. This layer would take data inquiries from the website, which would not contain any SQL table references, and focus solely on the data needed to render the UI. The web service layer would then generate the underlying SQL statement. Like this:
+
+<p><foreign outputclass="embed-plant-uml">@startuml
+        participant F as "Frontend JScript"
+        participant W as "Web Service Layer"
+        participant A as "SQL Server"
+        F ->> W: Data enquiry (No SQL tables)
+        W ->> A: Generates SQL statement
+@enduml</foreign></p>
 
 This suggestion was met with resistance. After all, SQL was invented as a data query language, and the website front end was doing precisely that - querying data. A pass-through ASP page is simple to develop, and front end code directly facing SQL database matches the KISS principle (Keep It Simple and Stupid). However, my proposal aimed at the Separation of Concerns. I argued that a database is architected to do different things than a web service. It's generally good practice to separate an application into different layers, each with its own responsibilities. This approach has numerous benefits. Front-end code won't be affected by database refactoring and is only concerned with user interactions. The server backend can optimise data handling, carry out business logic before sending data to the SQL database, and safeguard against security threats such as DDoS or SQL injection.
 
