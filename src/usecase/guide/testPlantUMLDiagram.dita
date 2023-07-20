@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="testPlantUML">
+    <title>Test PlantUML diagram</title>
+    <body>
+        <p>
+            <foreign outputclass="embed-plant-uml">@startuml
+                Alice -> Bob: Authentication Request
+                Bob --> Alice: Authentication Response
+                
+                Alice -> Bob: Another authentication Request
+                Alice &lt;-- Bob: Another authentication Response
+                    @enduml</foreign>
+            <foreign outputclass="embed-plant-uml">@startuml
+actor User
+participant air.cab
+participant attestation.id
+participant Gateway_Node
+participant Service_Node
+
+User -> air.cab: Purchase Ticket
+air.cab -> User: Send Magic Link
+User -> attestation.id: Click Magic Link
+attestation.id -> User: Prompt User to Sign Reservation
+User -> attestation.id: Sign Reservation
+attestation.id -> Gateway_Node: Pass User-signed Token
+Gateway_Node -> Service_Node: Assign Service Node and Forward User-signed Token
+Service_Node -> air.cab: Notify about Token's Activation in the Network
+@enduml</foreign>
+        </p>
+    </body>
+</topic>
