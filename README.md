@@ -4,7 +4,7 @@ This repository contains the source code for the TokenScript and SmartLayer webs
 
 ## Building the Documents:
 
-1. Download and install [Dita Open Toolkit](https://www.dita-ot.org).
+1. Download and install [Dita Open Toolkit](https://www.dita-ot.org). We only test it on dita-4.1 presently.
 
 2. Install the plugins `net.infotexture.dita-bootstrap` and `fox.jason.favicon` in the following order:
 
