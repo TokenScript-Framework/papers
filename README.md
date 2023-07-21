@@ -1,4 +1,4 @@
-# TokenScript Documentation
+# TokenScript and Smart Layer Documentation
 
 This repository contains the source code for the TokenScript and SmartLayer websites' documentation.
 
@@ -20,12 +20,6 @@ Please note that the order of installation is crucial on some systems. If you fa
 
 ````
 $ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
-````
-
-If `dita` is installed in a different location, for example `/home/christoph/dita-ot-4.1/bin/dita`, use this command:
-
-````
-$ /home/christoph/dita-ot-4.1/bin/dita --project config/tokenscript-docsite.yaml
 ````
 
 This will create a website in the `out/` directory.
