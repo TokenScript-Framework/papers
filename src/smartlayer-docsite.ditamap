@@ -30,5 +30,6 @@
   <topicref href="guide/Guide1.md" format="mdita"/>
   <topicref href="guide/Tutorial1.md" format="mdita"/>
   -->
+  <topicref href="papers/DesignPapers.md" format="mdita"/>
   <topicref href="faq/FAQs.md" format="markdown"/>
 </map>
