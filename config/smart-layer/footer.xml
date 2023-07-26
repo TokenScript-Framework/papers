@@ -33,18 +33,35 @@
       <div class="footer_main grid -g-cols-4">
         <div class="footer_main-logo">
           <svg
-            width="116"
-            height="57"
-            viewBox="0 0 116 57"
+            class="hidden lg:block"
+            width="87"
+            height="87"
+            viewBox="0 0 87 87"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="hidden lg:block"
           >
-            <path d="M116 0H60.767V56.0117H116V0Z" fill="white"></path>
-            <path
-              d="M0 0V11.246C11.7075 11.246 22.9355 15.9624 31.214 24.3576C39.4925 32.7528 44.1434 44.1391 44.1434 56.0117H55.233V0H0Z"
-              fill="white"
-            ></path>
+            <g clipPath="url(#clip0_6281_9982)">
+              <path
+                d="M75 54.9154L43.3343 36.4437L11.6686 54.9154L43.3343 73.3871L75 54.9154Z"
+                fill="white"
+              />
+              <path
+                d="M14.8385 42.3137L43.3343 25.6911L71.8302 42.3137L43.3343 58.9363L14.8385 42.3137Z"
+                fill="black"
+                stroke="white"
+                strokeWidth="3.19442"
+                strokeLinecap="round"
+              />
+              <path
+                d="M75 28.0134L43.3342 9.54175L11.6685 28.0134L43.3342 46.4851L75 28.0134Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_6281_9982">
+                <rect width="87" height="87" fill="white" />
+              </clipPath>
+            </defs>
           </svg>
         </div>
         <div class="footer_main-address grid -g-cols-2">
@@ -72,7 +89,7 @@
           <div class="footer_main-socials -hide-s">
             <a
               aria-label="Twitter"
-              href="https://twitter.com/TokenScript"
+              href="https://twitter.com/smartlayer"
               external="true" target="_blank"
             >
               <svg
@@ -155,7 +172,7 @@
         <div class="footer_main-socials -show-s">
           <a
             aria-label="Twitter"
-            href="https://twitter.com/TokenScript"
+            href="https://twitter.com/smartlayer"
             external="true" target="_blank"
           >
             <svg
