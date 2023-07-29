@@ -39,7 +39,7 @@ However, it's important to note that without the successful implementation of th
 
 ## Why are Smart Tokens considered "smart"?
 
-Smart Tokens are considered "smart" because they can snap onto various web use-cases like Lego blocks. For example, an airplane ticket token can be "snapped" to Google Maps to get notifications about which gate to go to, or "snapped" into Google Calendar to get notified about delays, or dragged to a visa-on-arrival website to auto-apply for a visa.
+Smart Tokens are considered "smart" because they can snap onto various web use-cases like Lego blocks. For example, a flight ticket token can be "snapped" to Google Maps to get notifications about which gate to go to, or "snapped" into Google Calendar to get notified about delays, or dragged to a visa-on-arrival website to auto-apply for a visa.
 
 In the 21st century, the term "Smart" represents "multi-capability," rather than "intelligence" - a trait we now attribute to AI. Consider smartphones: they aren't AI-phones that understand or anticipate users' needs. Instead, they are multi-functional devices performing a wide range of tasks beyond just making calls. Their capabilities continue to expand with the addition of use-case specific apps, often transcending the original intentions of the smartphone producer. Similarly, a Smart Token isn't an AI-powered entity generating profits; it merely enables various use-cases, often exceeding the purview of the smart token issuer.
 
@@ -47,7 +47,7 @@ In the 21st century, the term "Smart" represents "multi-capability," rather than
 
 Smart Layer, and TokenScript are three interconnected components that together enable a new level of integration and functionality on the next-generation web.
 
-**Smart Tokens** are the building blocks of this ecosystem. They are not just digital assets but also include functions that enable web use-cases. These tokens can represent anything from an airplane ticket to a health record, and they carry the ability to interact with different platforms and services.
+**Smart Tokens** are the building blocks of this ecosystem. They are not just digital assets but also include functions that enable web use-cases. These tokens can represent anything from a flight ticket to a health record, and they carry the ability to interact with different platforms and services.
 
 **TokenScript** is the technology that enables these interactions. It is a container for the code that powers token-based integrations. This code defines how a Smart Token behaves and interacts with other systems. TokenScript allows Smart Tokens to be more than just static assets; they become dynamic entities capable of complex interactions.
 

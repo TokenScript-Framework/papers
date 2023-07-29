@@ -1,21 +1,21 @@
 ## Case Study: Airplane Ticket Integration
 
-Airplane ticket is a good example to illustrate the potential of Smart Layer's integration capabilities. Traditionally, such integration is impractical because it often requires connections to airline websites or an airline aggregator, which either increased the attack surface (consider banking app), or invaded the user privacy as the airline needs to provide user data to websites such as YouTube. But with a token approach and Smart Layer, the user holds a token that represents their airplane ticket and uses it to join the computation matrix provided by Smart Layer nodes.
+Airplane ticket is a good example to illustrate the potential of Smart Layer's integration capabilities. Traditionally, such integration is impractical because it often requires connections to airline websites or an airline aggregator, which either increased the attack surface (consider banking app), or invaded the user privacy as the airline needs to provide user data to websites such as YouTube. But with a token approach and Smart Layer, the user holds a token that represents their flight ticket and uses it to join the computation matrix provided by Smart Layer nodes.
 
 - **Integration Point**: Visa Application System
-  - **Use Case**: The airplane ticket token can be used to submit a visa-on-arrival application, reducing paperwork and streamlining the process.
+  - **Use Case**: The flight ticket token can be used to submit a visa-on-arrival application, reducing paperwork and streamlining the process.
 
 - **Integration Point**: Social Media Platforms
   - **Use Case**: Friends and family can be automatically updated of the user's arrival time, enhancing social connection.
 
 - **Integration Point**: Car Booking Services
-  - **Use Case**: The user can access car booking services directly through their airplane ticket token, improving travel convenience.
+  - **Use Case**: The user can access car booking services directly through their flight ticket token, improving travel convenience.
 
 - **Integration Point**: Hotel Reservation Systems
   - **Use Case**: If the flight is delayed, the user's hotel reservation can be automatically adjusted, providing peace of mind and flexibility.
 
 - **Integration Point**: Banking Apps
-  - **Use Case**: The banking app recognizes the user's travel plan based on the airplane ticket token, providing relevant services such as currency conversion options and security adjustments.
+  - **Use Case**: The banking app recognizes the user's travel plan based on the flight ticket token, providing relevant services such as currency conversion options and security adjustments.
 
 - **Integration Point**: Music/Video Streaming Services
   - **Use Case**: Spotify and YouTube can adjust their content offerings based on the user's travel status and destination, enhancing the user experience.

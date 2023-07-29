@@ -8,7 +8,7 @@ Tokenization allows businesses to expand their market reach beyond their immedia
 
 ## Trust, Security, and User Empowerment
 
-Tokenization enhances trust and security in digital transactions. Tokens on a blockchain are immutable and transparent, building trust among users. Moreover, tokenization empowers users by giving them more control over their digital rights and assets. For example, a user with an airplane ticket token could use it to board the plane or to book a discount hotel that auto-amends if delayed. The Smart Layer ensures privacy and security, managing the accounting, issuance, revocation, or expiration of tokens.
+Tokenization enhances trust and security in digital transactions. Tokens on a blockchain are immutable and transparent, building trust among users. Moreover, tokenization empowers users by giving them more control over their digital rights and assets. For example, a user with a flight ticket token could use it to board the plane or to book a discount hotel that auto-amends if delayed. The Smart Layer ensures privacy and security, managing the accounting, issuance, revocation, or expiration of tokens.
 
 ## Innovation and Efficiency
 
