@@ -1,6 +1,6 @@
 # TokenScript and Smart Layer Documentation
 
-This repository contains the source code for the TokenScript and SmartLayer websites' documentation.
+This repository contains the source code for the TokenScript and SmartLayer websites' documentation. This repository uses dita. See [why not GitBook](WHY-NOT-GITBOOK.md).
 
 ## Building the Documents:
 
