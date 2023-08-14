@@ -1,6 +1,6 @@
-# air.cab use-case guide
+# air.cab Token Creation, Code Example
 
-This guide uses an imaginative airline, air.cab, to demonstrate how smart tokens are created and used.
+Following the token cration diagram, here we can dive deeper to look at how it works on code level.
 
 ## Step 1: Issuance of the token through a magic link
 
