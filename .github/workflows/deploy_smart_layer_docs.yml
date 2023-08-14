@@ -19,6 +19,10 @@ jobs:
             net.infotexture.dita-bootstrap
             fox.jason.favicon
           project: config/smartlayer-docsite.yaml
+      - name: Build smart-layer papers
+        uses: dita-ot/dita-ot-action@master
+        with:
+          project: config/tokenscript-papers.xml
       - uses: actions/upload-artifact@v3
         with:
           name: docs

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map title="SmartLayer Overview">
-    <topicref href="faq/FAQs.md#what-is-smart-layer-and-what-does-it-look-like" format="markdown"/>
-    <topicref href="usecase/case-study/AirplaneTicket.md" format="markdown"/>
-    <topicref href="usecase/guide/air.cab.md" format="markdown"/>
+	<topicref href="faq/FAQs.md#what-is-smart-layer-and-what-does-it-look-like" format="markdown"/>
+    <topicref href="usecase/case-study/FlightTicket.md" format="markdown">
+    </topicref>
 </map>

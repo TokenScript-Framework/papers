@@ -1,10 +1,10 @@
-# TokenScript Documentation
+# TokenScript and Smart Layer Documentation
 
-This repository contains the source code for the TokenScript and SmartLayer websites' documentation.
+This repository contains the source code for the TokenScript and SmartLayer websites' documentation. This repository uses dita. See [why not GitBook](WHY-NOT-GITBOOK.md).
 
 ## Building the Documents:
 
-1. Download and install [Dita Open Toolkit](https://www.dita-ot.org).
+1. Download and install [Dita Open Toolkit](https://www.dita-ot.org). We only test it on dita-4.1 presently.
 
 2. Install the plugins `net.infotexture.dita-bootstrap` and `fox.jason.favicon` in the following order:
 
@@ -24,11 +24,12 @@ $ dita --install
 
 It should prompt that plugin `com.oxygenxml.diagrams.svg` is successfully installed.
 
-3. Generate a website for one of the document projects. For example, `config/smartlayer-docsite.yaml`:
+4. Generate a website for one of the document projects. For example, `config/smartlayer-docsite.yaml`:
 
 ````
 $ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
 ````
+
 This will create a website in the `out/` directory.
 
 ## Document Structure
