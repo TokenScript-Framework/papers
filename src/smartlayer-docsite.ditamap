@@ -16,8 +16,8 @@
   <topicref href="technology/AnchoringNode.md" format="mdita"/>
   <topicref href="technology/ServiceNode.md" format="mdita"/>
   <topicref href="usecase/UseCaseOverview.md" format="mdita">
-    <topicref href="usecase/case-study/CaseStudy1.md" format="mdita"/>
-    <topicref href="usecase/case-study/CaseStudy2.md" format="mdita"/>
+    <topicref href="usecase/case-study/SmartCarToken.md" format="mdita"/>
+    <topicref href="usecase/case-study/HealthToken.md" format="mdita"/>
     <topicref href="usecase/guide/air.cab.md" format="mdita"/>
   </topicref>
   <!--
