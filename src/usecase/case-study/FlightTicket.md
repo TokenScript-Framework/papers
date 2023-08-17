@@ -39,3 +39,5 @@ Flight tickets serve as an excellent example to demonstrate the potential of Sma
 3. **Data Accuracy**: The accuracy of data, especially in real-time scenarios like flight delays, is essential to ensure seamless user experiences.
 
 In the given visa application scenario, the visa application platform isn't perpetually linked to airlines. Instead, airlines provide the necessary proof of the user's ticket and any required updates via Smart Layer. The user's consent is implicit in their use of the flight ticket, and no subsequent booking or movement data is shared with the visa application once the use case concludes. This ephemeral, token-based integration epitomizes the capabilities of Smart Layer.
+
+Note that a guide (in draft stage) for developers on the internal work of activating such a token is in the [air.cab guide](../guide/air.cab.md).

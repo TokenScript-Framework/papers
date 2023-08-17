@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>air.cab example Smart Token Guide</title>
-    <topicref href="air.cab/Intro.md" format="markdown"/>
-    <topicref href="air.cab/SmartTokenCreationConcept.md" format="markdown"/>
-    <topicref href="air.cab/SmartTokenCreationCode.md" format="markdown"/>
-</map>
