@@ -18,6 +18,7 @@ jobs:
             fox.jason.extend.css
             net.infotexture.dita-bootstrap
             fox.jason.favicon
+            https://github.com/oxygenxml/dita-ot-diagrams-plugin/archive/refs/heads/master.zip
           project: config/smartlayer-docsite.yaml
       - name: Build smart-layer papers
         uses: dita-ot/dita-ot-action@master
@@ -38,7 +39,7 @@ jobs:
           name: docs
           path: out/
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -46,7 +47,7 @@ jobs:
       - name: deploy
         env:
           S3_BUCKET: smart-layer-docs
-          CLOUDFRONT_ID: EAVRHSDUCS279
+          CLOUDFRONT_ID: EMSQZ9P16DCKC
         run: |
           aws s3 sync out/ "s3://${S3_BUCKET}/" --cache-control 'max-age=600,s-maxage=31536000' --quiet --delete \
           && aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_ID}" --paths '/*'
