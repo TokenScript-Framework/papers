@@ -68,11 +68,11 @@ Failures, whether they're a standard part of the smart token's tokenscript or in
 
 To better understand the intricacies of the Smart Layer network, let's delve into a real-world example: the flight ticket smart token.
 
-*** Read-Only Access **
+#### Read-Only Access ####
 
 Imagine the user booked a car rental at the rental website, using the smart token on this website. This creates an authorization for the car rental  to access the flight ticket smart token interfaces. When the car rental service wants to verify if your flight is on time, any node that has this smart token instance can provide a read-only API to share the flight's current status, and the selection of the node is largely the matter of load balancing. This process is facilitated by any of the nodes where the smart token is instantiated, selected at random.
 
-** Single Execution by Elected Node **
+#### Single Execution by Elected Node ####
 
 Now, consider a significant flight delay. This delay might trigger the smart token to rebook your hotel reservation. Since this action interacts with the external world and can have financial implications, it's crucial that only one node executes it. Once the rebooking is successful, the hotel system might generate a new booking attestation, confirming the change.
 
@@ -84,7 +84,7 @@ While the flight ticket smart token serves as a tangible example, it's essential
 
 In the Smart Layer architecture, the dynamic status of smart tokens is predominantly updated through attestations. These attestations, essentially cryptographic proofs, vouch for the validity of a particular state or action. Given the decentralized nature of the system and the real-time requirements for token status updates, there arises a need for an efficient mechanism to disseminate these attestations across the network.
 
-### # The Need for a Hybrid Mechanism
+#### The Need for a Hybrid Mechanism
 
 Traditional gossip protocols, inspired by the way information (or gossip) spreads in social networks, have been a staple in distributed systems. They ensure that data is disseminated quickly and efficiently across a network. However, the unique requirements of Smart Layer, especially the need for ordered delivery of attestations and the ability to request missing attestations, demand a more sophisticated approach.
 
@@ -100,24 +100,59 @@ This hybrid approach addresses the challenges of both rapid dissemination and da
 
 Given the dynamic nature of smart tokens, it's imperative to have a secure environment for executing token code. Sandboxing techniques are employed within Smart Layer nodes, allowing token scripts to run in isolated environments. This ensures that the broader network remains unaffected by potentially malicious or faulty token scripts.
 
-## Smart Layer Tokenomics
+## Smart Layer Token Types
 
-### Resource Accounting and Commitments
+The tokenomics of Smart Layer is intricately designed to ensure the sustainability, efficiency, and robustness of the network. Central to this design is the dual-token system, which serves distinct yet interconnected purposes:
 
-To ensure transparency and accountability within the network, Smart Layer employs cryptographic proofs, akin to Proof of Replication and Proof of Spacetime. These proofs ensure that nodes are reliably storing and managing token data. Additionally, anchoring nodes generate commitments to the blockchain, reflecting token status changes and resource consumption. This mechanism ensures that operations within Smart Layer are transparent, verifiable, and tamper-proof.
+### Service Token
 
-In essence, Smart Layer's architecture is a harmonious blend of proven protocols and innovative solutions, all tailored to meet the unique demands of the next-generation web. By leveraging these foundational technologies, Smart Layer promises a future where the web is more integrated, dynamic, and user-centric.
+The Service Token is the primary medium of exchange within the Smart Layer network. It facilitates all micro-transactions associated with token operations, from querying token data to more resource-intensive modifications. Integrations typically bear the costs associated with token activation, which are transacted using the Service Token. This token ensures that the network remains agile, with real-time settlements and efficient resource allocation.
 
-- **Overview**: A brief introduction to the architectural design of Smart Layer.
-- **Nodes and Network Topology**: Explanation of the different types of nodes (e.g., service nodes, anchoring nodes) and how they interact.
-- **Decentralized Autonomous Organization (DAO)**: The role of the DAO in governing the Smart Layer network.
+### Stake Token
 
+The Stake Token represents a stake in the Smart Layer network. Holders of this token have a vested interest in the network's growth and governance. Depending on the network's design, Stake Token holders might influence governance decisions, propose changes, or even earn rewards based on network activity. This token ensures that the network remains decentralized, with stakeholders actively participating in its evolution.
+
+The tokenomics of Smart Layer is designed to ensure the sustainability, efficiency, and robustness of the network. It strikes a balance between incentivizing token issuers, integrations, and the nodes that power the network. Here's a deep dive into the tokenomics structure:
+
+## Service Toke's Tokenomics
+
+### Token Issuer Rent
+
+Every token issuer pays a nominal fee termed as "rent." This rent ensures that the TokenScript associated with the token remains available on the network. Additionally, it guarantees that any smart contracts linked to the token are actively monitored. While the rent is minimal, it serves a crucial purpose: it ensures that the network remains primed for any token activations, ensuring the readiness and responsiveness of the Smart Layer.
+
+However, this rent doesn't necessarily translate to a financial burden for token issuers. On the contrary, they can potentially profit from the broader ecosystem, particularly from the "business" operations, which will be elaborated upon subsequently.
+
+### Token Activation and Operation Costs
+
+While the token issuer pays the rent, the costs associated with token activation are typically borne by the integrations. An integration, in this context, refers to any stakeholder or entity that leverages the smart token for a specific use-case.
+
+For instance, consider a health token. An e-commerce platform might utilize this token to optimize a user's shopping cart. In such a scenario, the e-commerce platform would cover the costs associated with accessing the token's interface. Conversely, a visa office might adopt a different approach. If an applicant provides data, such as a flight ticket in smart token format, the visa office might require the applicant to attach a small payment to cover the token operation costs.
+
+It's worth noting that the cost of querying token data is relatively low, facilitated through a state channel. However, modifying token data, given its reliance on gossiping and node synchronization, is more resource-intensive and, consequently, costlier.
+
+### State Channels and Settlement
+
+State channels play a pivotal role in the Smart Layer tokenomics. Whenever an integration interacts with a smart token, a state channel is opened. This channel keeps track of all the micro-transactions associated with the token operations. Integrations have the flexibility to close these channels and settle the accumulated costs at regular intervals, such as monthly.
+
+Anchoring nodes, which play a central role in the network's operation, maintain these state channels. They ensure that payments are routed correctly to the nodes that provide the services. At the end of a settlement period, the anchoring node consolidates all the transactions within the state channel and processes the payment to the respective service-providing nodes.
+
+### Incentive Structure and Profit Mechanism
+
+The tokenomics is structured in a way that token issuers, while paying a nominal rent, can still profit from the broader ecosystem. This profit can be derived from various "business" operations facilitated by the smart tokens. For instance, a token issuer might collaborate with multiple integrations, each offering a unique service or benefit associated with the token. Every interaction with the token, whether it's a query or an update, translates to a micro-transaction. Over time, the cumulative value of these micro-transactions can result in substantial revenue for the token issuer.
+
+Furthermore, integrations, by leveraging smart tokens, can offer enhanced services to their users. This not only improves user experience but also opens up new revenue streams for the integrations. For instance, an e-commerce platform can offer personalized shopping recommendations based on a user's health token, leading to increased sales and customer satisfaction.
+
+In conclusion, the tokenomics of Smart Layer is meticulously designed to ensure a win-win scenario for all stakeholders. It promotes network sustainability, incentivizes participation, and fosters a vibrant ecosystem where token issuers, integrations, and nodes collaboratively drive the next generation of the web.
 
 ## Conclusion
 
-A summarization of the whitepaper's key points, reiterating the potential of Smart Layer to redefine the web's architecture and its promise for a more integrated, dynamic web ecosystem.
+The digital realm is undergoing a transformative shift, with the decentralized web poised to redefine our online experiences. Amidst this evolution, Smart Layer emerges as a beacon of innovation, aiming to bridge the chasm between isolated services and tokenized assets. This whitepaper has illuminated the intricate architecture and potential of Smart Layer, a decentralized protocol that transcends the limitations of the current web.
 
-## References
+At its core, Smart Layer is not just a technological marvel but a vision for a more integrated, dynamic web ecosystem. It addresses the 'Limit of 3' problem, breaking the shackles of limited integrations and offering a solution to the fragmented user experiences that plague the modern web. By introducing Smart Tokens, it paves the way for tokenized digital rights and services that can be effortlessly integrated across diverse web scenarios.
 
-A list of all the sources, articles, papers, and other materials referenced throughout the whitepaper.
+The protocol's architecture, rooted in proven distributed systems technologies, is tailored for token operations, ensuring serviceability, privacy, and security. The introduction of anchoring nodes, the emphasis on deterministic execution, and the innovative hybrid mechanism for attestation dissemination are testaments to Smart Layer's commitment to robustness and efficiency.
+
+Furthermore, the tokenomics of Smart Layer is a masterclass in balancing incentives and sustainability. By ensuring that all stakeholders, from token issuers to integrations and nodes, have a stake in the network's success, it fosters a collaborative ecosystem. This ecosystem not only promises enhanced user experiences but also opens doors to new revenue streams and business models.
+
+In essence, Smart Layer is more than just a protocol; it's a vision for the future of the web. A future where services are seamlessly integrated, where user experiences are enriched, and where the true potential of a decentralized, tokenized web is realized. As we stand on the cusp of this new era, Smart Layer beckons us to embrace the next generation of the web, promising a journey filled with innovation, integration, and limitless possibilities.
 
