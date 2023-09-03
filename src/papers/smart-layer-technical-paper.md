@@ -12,6 +12,8 @@ The evolution of the web has been marked by periods of rapid innovation, leading
 
 In this context, Smart Layer emerges—a decentralized protocol that aspires to redefine the web's architecture. Envisioned as an integration bus, Smart Layer facilitates seamless interactions between diverse services, akin to how websites today leverage platforms like Google for a myriad of functionalities. Beyond acting as a mere bridge, Smart Layer introduces the concept of Smart Tokens. These are tokenized digital rights and products/services that can be seamlessly integrated across various web use-cases, transcending the limitations of centralized systems and leveraging the strengths of blockchain. This protocol is designed to function as a distributed network, serving as the backbone for the next generation of the web.
 
+Integral to the functioning of Smart Tokens within the Smart Layer is TokenScript, an OASIS standard work in progress. While Smart Layer provides the infrastructure and environment, TokenScript outlines how these smart tokens should be packaged, distributed, referenced, composed and executed. It's a complementary framework that ensures smart tokens operate optimally within the defined parameters of privacy, secure storage, and cost accounting.
+
 ## Problem Statement
 
 The modern web, for all its advancements, grapples with a fundamental challenge: the 'Limit of 3' problem. Despite the web's inherent nature of integration, most websites today are confined to three primary types of integrations: login, social media posting, and checkout. This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
@@ -34,38 +36,82 @@ It's essential to differentiate these requirements from those of TokenScript. Wh
 
 ## Smart Layer Architecture
 
+Smart Layer's architecture is rooted in mature protocols and algorithms that have been proven effective in distributed systems, including blockchain itself, distributed hash table, load balancing and service level objective monitoring and the use of Merkle tree in data integrity verification. These foundational technologies provide the basis for building Smart Layer as a robust, decentralized network tailored for token operations. The innovation primarily stems from the creation of an integration service platform and a conducive environment for smart tokens, encouraging existing web infrastructure to transition towards a token-centric architecture.
+
+The primary serviceability requirement determined that the network can't be built like a blockchain, where consensus serve to determine truth; instead, services must be monitored and load balanced in real time. This leads to the need of anchoring nodes.
+
+### Anchoring Nodes and Distributed Smart Token Instances
+
+Smart Layer's emphasis on serviceability sets it apart from traditional blockchains that lean heavily on consensus mechanisms. This focus demands real-time monitoring and load balancing, which is where anchoring nodes come into play. These nodes serve as the network's guardians, ensuring consistent service availability and stepping in for pivotal operations. The Distributed Hash Table (DHT), shared among these anchoring nodes, is instrumental in determining which node is responsible for a specific smart token instance. This decentralized approach not only mitigates potential attacks that might arise from matching node IDs with token IDs but also guarantees prompt responses to integration queries.
+
+###  Token Status Propagation and Execution
+
+Smart tokens, as envisioned in the Smart Layer network, have a dynamic status that can be influenced by various factors. These factors can range from attestations to smart contract updates and node messages. While some of these updates are deterministic, others can be non-deterministic, leading to potential complexities in the network's operation.
+
+#### Deterministic vs. Non-Deterministic Status
+
+A deterministic status update is one that, given the same input, will always produce the same outcome. For instance, with a flight ticket as a smart token, a flight delay leading to an automatic lounge access reward for a passenger is deterministic. However, not all updates are so straightforward. Consider the scenario of the same smart token rebooking a hotel through a web API. The outcome might be a successful booking attestation, a timeout, or even a server-side error. Such non-deterministic outcomes present challenges, especially when integrating with existing web2 systems. While there are pure blockchain based solutions that completely do away the status branching, such as rebooking through hotel smart contracts backed by a hotel's precommitment, the integration of web2 systems with smart contract-enabled platforms will remain a challenge for the foreseeable decade.
+
+### Execution Models
+
+#### Load balanced execution vs Single Executor through Election:
+
+Most token interface are accessed in a read-only manner, as integrated websites read token status and gets update from the token. However, for actions that actively with the external world, it's essential to have deterministic execution. This means that only one node should execute a particular action to avoid discrepancies. Examples will be provided in the next section.
+
+The election of this single executor node is determined before any read/write operation. Among the nodes where a smart token is instantiated, one is elected as the execution node. This election isn't done by the node itself but through the network of anchoring nodes, ensuring a quick and unbiased selection.
+
+#### Handling Failures:
+
+Failures, whether they're a standard part of the smart token's tokenscript or indicative of potential malicious activity, need to be addressed promptly to ensure service level objectives are met. If a node fails in its execution duties, the anchoring nodes step in. They can either arbitrate disputes or reallocate the smart token to a different, more reliable node. Only anchoring nodes can provide attested failures, however, they are not expected to take over the execution, hence its role is often the provision of attestation to the failure to acquire needed attestations to move to the next state. This is exemplified in the next section.
+
+###  Real-World Application: The Flight Ticket Smart Token
+
+To better understand the intricacies of the Smart Layer network, let's delve into a real-world example: the flight ticket smart token.
+
+*** Read-Only Access **
+
+Imagine the user booked a car rental at the rental website, using the smart token on this website. This creates an authorization for the car rental  to access the flight ticket smart token interfaces. When the car rental service wants to verify if your flight is on time, any node that has this smart token instance can provide a read-only API to share the flight's current status, and the selection of the node is largely the matter of load balancing. This process is facilitated by any of the nodes where the smart token is instantiated, selected at random.
+
+** Single Execution by Elected Node **
+
+Now, consider a significant flight delay. This delay might trigger the smart token to rebook your hotel reservation. Since this action interacts with the external world and can have financial implications, it's crucial that only one node executes it. Once the rebooking is successful, the hotel system might generate a new booking attestation, confirming the change.
+
+However, what if there's a failure? What if the node trying to rebook the hotel faces multiple timeouts when accessing the hotel's API? After a set number of failures, from the network point of view, an event occurred that the token failed to move to the next state. The traffic to the hotel system API would be rerouted through the anchoring node that elected the original executor. This anchoring node can then verify server timeouts or other errors, and provide a failure attestation to move the smart token to the next state. Frequent routing of this nature triggers service level agreement to scruitinise the node that was responsible for execusion.
+
+While the flight ticket smart token serves as a tangible example, it's essential to understand that the Smart Layer network is not limited to this application. The principles discussed here apply to a myriad of potential smart tokens, each with its unique challenges and solutions.
+
+### Attestation Gossiping and Queuing in Smart Layer
+
+In the Smart Layer architecture, the dynamic status of smart tokens is predominantly updated through attestations. These attestations, essentially cryptographic proofs, vouch for the validity of a particular state or action. Given the decentralized nature of the system and the real-time requirements for token status updates, there arises a need for an efficient mechanism to disseminate these attestations across the network.
+
+### # The Need for a Hybrid Mechanism
+
+Traditional gossip protocols, inspired by the way information (or gossip) spreads in social networks, have been a staple in distributed systems. They ensure that data is disseminated quickly and efficiently across a network. However, the unique requirements of Smart Layer, especially the need for ordered delivery of attestations and the ability to request missing attestations, demand a more sophisticated approach.
+
+The unique requirement include a selective gossiping where an attestaion covers a type of smart tokens or a subset of smart tokens in that type, the timely update needed for integration to function, order and integrity, plus compatibility with a subscription model. This calls out for a hybrid mechanism, which marries the strengths of gossip protocols with the features of systems like Apache Kafka. While gossip protocols ensure rapid dissemination, systems akin to Apache Kafka ensure that these attestations are delivered in order and allow nodes to request specific attestations they might have missed.
+
+#### How It Might Work
+
+Imagine a scenario where an airline releases a series of attestations updating flight arrival times. Nodes in the Smart Layer network that have smart token instances depending on that flight would subscribe to these attestations. As these attestations are gossiped through the network, the Kafka-like system ensures they're received in the correct order. If a node misses an attestation, it can request that specific piece of information, ensuring data integrity and consistency across the network.
+
+This hybrid approach addresses the challenges of both rapid dissemination and data consistency. The decentralized nature of Smart Layer presents unique challenges, and we're committed to innovating and iterating on these solutions to ensure a robust and efficient system. As we progress, we'll continue to refine and adapt our approach to best serve the needs of the Smart Layer ecosystem.
+
+### Secure Execution Environment
+
+Given the dynamic nature of smart tokens, it's imperative to have a secure environment for executing token code. Sandboxing techniques are employed within Smart Layer nodes, allowing token scripts to run in isolated environments. This ensures that the broader network remains unaffected by potentially malicious or faulty token scripts.
+
+## Smart Layer Tokenomics
+
+### Resource Accounting and Commitments
+
+To ensure transparency and accountability within the network, Smart Layer employs cryptographic proofs, akin to Proof of Replication and Proof of Spacetime. These proofs ensure that nodes are reliably storing and managing token data. Additionally, anchoring nodes generate commitments to the blockchain, reflecting token status changes and resource consumption. This mechanism ensures that operations within Smart Layer are transparent, verifiable, and tamper-proof.
+
+In essence, Smart Layer's architecture is a harmonious blend of proven protocols and innovative solutions, all tailored to meet the unique demands of the next-generation web. By leveraging these foundational technologies, Smart Layer promises a future where the web is more integrated, dynamic, and user-centric.
+
 - **Overview**: A brief introduction to the architectural design of Smart Layer.
 - **Nodes and Network Topology**: Explanation of the different types of nodes (e.g., service nodes, anchoring nodes) and how they interact.
 - **Decentralized Autonomous Organization (DAO)**: The role of the DAO in governing the Smart Layer network.
 
-## Smart Tokens: The Building Blocks
-
-- **Definition and Characteristics**: What are Smart Tokens and how do they differ from traditional tokens?
-- **Token Lifecycle**: From issuance to redemption, the stages a Smart Token goes through.
-- **Use Cases**: Examples of how Smart Tokens can be used in real-world scenarios.
-
-## Integration Mechanisms
-
-- **API Gateway**: How Smart Layer presents itself to websites as a unified API gateway.
-- **Dynamic Integration**: The process by which integrations are created, used, and discarded.
-- **Security and Privacy**: Measures in place to ensure data security and user privacy during integrations.
-
-## Smart Layer Tokenomics
-
-- **Role of the Token**: The purpose and utility of the Smart Layer token within the ecosystem.
-- **Distribution and Incentives**: How tokens are distributed and the incentives for various stakeholders.
-- **Governance**: How token holders can influence decisions within the Smart Layer network.
-
-## Comparison with Existing Solutions
-
-- **Current Integration Solutions**: A look at existing integration solutions like RESTful APIs and their limitations.
-- **Advantages of Smart Layer**: How Smart Layer overcomes the challenges faced by current solutions.
-
-## Future Roadmap and Potential
-
-- **Short-Term Goals**: Immediate next steps for the development and deployment of Smart Layer.
-- **Long-Term Vision**: Where Smart Layer sees itself in the future of the web.
-- **Potential Challenges**: Possible hurdles and how Smart Layer plans to address them.
 
 ## Conclusion
 
