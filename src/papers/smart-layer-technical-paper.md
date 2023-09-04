@@ -44,6 +44,8 @@ The primary serviceability requirement determined that the network can't be buil
 
 Smart Layer's emphasis on serviceability sets it apart from traditional blockchains that lean heavily on consensus mechanisms. This focus demands real-time monitoring and load balancing, which is where anchoring nodes come into play. These nodes serve as the network's guardians, ensuring consistent service availability and stepping in for pivotal operations. The Distributed Hash Table (DHT), shared among these anchoring nodes, is instrumental in determining which node is responsible for a specific smart token instance. This decentralized approach not only mitigates potential attacks that might arise from matching node IDs with token IDs but also guarantees prompt responses to integration queries.
 
+![Mapping Token ID to its service node](/home/weiwu/IdeaProjects/documents/src/papers/smart-layer-technical-paper-dht.svg)
+
 ###  Token Status Propagation and Execution
 
 Smart tokens, as envisioned in the Smart Layer network, have a dynamic status that can be influenced by various factors. These factors can range from attestations to smart contract updates and node messages. While some of these updates are deterministic, others can be non-deterministic, leading to potential complexities in the network's operation.
@@ -63,6 +65,8 @@ The election of this single executor node is determined before any read/write op
 #### Handling Failures:
 
 Failures, whether they're a standard part of the smart token's tokenscript or indicative of potential malicious activity, need to be addressed promptly to ensure service level objectives are met. If a node fails in its execution duties, the anchoring nodes step in. They can either arbitrate disputes or reallocate the smart token to a different, more reliable node. Only anchoring nodes can provide attested failures, however, they are not expected to take over the execution, hence its role is often the provision of attestation to the failure to acquire needed attestations to move to the next state. This is exemplified in the next section.
+
+![After a failure, a service node requests an anchoring node to route its traffice in order to get a failure attestation](/home/weiwu/IdeaProjects/documents/src/papers/smart-layer-technical-paper-error-routing.svg)
 
 ###  Real-World Application: The Flight Ticket Smart Token
 
