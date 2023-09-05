@@ -1,89 +1,102 @@
-# TokenScript and Smart Layer Documentation
+# TokenScript and Smart Layer Documentations
 
-This repository contains the source code for the TokenScript and SmartLayer websites' documentation. This repository uses dita. See [why not GitBook](WHY-NOT-GITBOOK.md).
+This repository hosts the documentation source for both TokenScript and SmartLayer websites. We've adopted `dita` for our documentation. Curious about our choice? Check out [why not GitBook](WHY-NOT-GITBOOK.md).
 
-## Building the Documents:
+## Compiling the Documentation:
 
-1. Download and install [Dita Open Toolkit](https://www.dita-ot.org). We only test it on dita-4.1 presently.
+1. **Setup Dita Toolkit**: 
+   - Download and set up the [Dita Open Toolkit](https://www.dita-ot.org). Ensure you're using `dita-4.1` as it's the only version we've tested with.
 
-2. Install the plugins `net.infotexture.dita-bootstrap` and `fox.jason.favicon` in the following order:
+2. **Plugin Installation**: 
+   - It's essential to install the plugins in the correct sequence:
+     ````
+     $ dita install fox.jason.extend.css
+     $ dita install fox.jason.favicon
+     $ dita install net.infotexture.dita-bootstrap
+     ````
+     A deviation from this order might necessitate a reinstall.
 
-````
-$ dita install fox.jason.extend.css
-$ dita install fox.jason.favicon
-$ dita install net.infotexture.dita-bootstrap
-````
+3. **Dita Diagram Plugin**:
+   - Manually copy the `com.oxygenxml.diagrams.svg` folder from the [dia-ot-diagrams-plugin](https://github.com/oxygenxml/dita-ot-diagrams-plugin) to the `plugins` directory in your dita installation. Then, run:
+     ```
+     $ dita --install
+     ```
+     A successful installation will acknowledge the plugin `com.oxygenxml.diagrams.svg`.
 
-Please note that the order of installation is crucial on some systems. If you fail to follow this exact order when installing the plugins, you may need to uninstall all of them and start again.
+4. **Generate Stuff**:
+   - To create a website for a document project, use:
+     ````
+     $ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
+     ````
+     This command populates the `out/` directory with the website.
 
-3. Install a dita diagram plugin. This has to be installed manually, by copying the folder `com.oxygenxml.diagrams.svg` to your dita installation location's `plugins` directory, then install it with
+   - To create a website for TokenScript project, use:
+     ````
+     $ dita --project config/tokenscript-docsite.yaml -o out/tokenscript-docs
+     ````
+   - For compiling the TokenScript Design paper, use:
+     ````
+     $ dita --project config/tokenscript-papers.xml
+     ````
+     The results - **tokenscript-design-paper.pdf** and **tokenscript-short-paper.pdf** - can be found in `out/tokenscript-paper/`
 
-```
-$ dita --install
-```
+   - For compiling the SmartLayer Overview paper and its detailed counterpart:
+     ````
+     $ dita --project config/smartlayer-paper.xml
+     ````
+     The results - **smartlayer-overview.pdf** and **smartlayer-paper.pdf** can be found in `out/smartlayer-paper/`
 
-It should prompt that plugin `com.oxygenxml.diagrams.svg` is successfully installed.
+   - For the Smart Token Technical paper, which wasn't using dita, it can be created using
+     ````
+     $ pandoc -o smart-layer-technical-paper.pdf src/papers/smart-layer-technical-paper.md
+     ````
+     This results a single PDF file: **smart-layer-technical-paper.pdf**.
 
-4. Generate a website for one of the document projects. For example, `config/smartlayer-docsite.yaml`:
+## Directory Overview:
 
-````
-$ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
-````
+Here's a snapshot of our directory structure and their respective roles:
 
-This will create a website in the `out/` directory.
+| Directory            | Description |
+|----------------------|-------------|
+| cli/                 | Command-line utility documents. Future plans include moving this to `product/cli`. |
+| concept/             | Houses conceptual documents. |
+| developers/          | Developer-centric documents. These will be relocated to `usecase` and `guide`. |
+| elements/            | TokenScript elements. |
+| faq/                 | Frequently Asked Questions. |
+| features/            | Details on features across different versions of Smart Layers or TokenScript. |
+| guide/               | Code-based guides for developers. |
+| integration/         | Initially contained integration guides. These will be distributed among other directories. |
+| privacyandsecurity/  | Will be distributed into other directories. |
+| research/            | A collection of research papers and studies. |
+| specs/               | Technical specifications, primarily for implementors. This will be renamed to `spec/`. |
+| technology/          | Introductory materials for a broader audience, sans immediate code solutions. |
+| tokenscript-paper/   | Contains chapters of the paper written in markdown. |
+| usecase/             | Use-case materials, including technical guides and case studies. |
 
-## Document Structure
+## For Contributors:
 
-The table below provides an overview of the directories and their contents:
-
-| Directory            | Status | Content |
-|----------------------|--------|---------|
-| cli/                 | To be moved to product/cli | Command-line utility documents. We plan to have a product folder to introduce a few products and CLI is one of them. |
-| concept/             | Stays | Concepts |
-| developers/          | To be removed with the introduction of @audience | Developer-oriented documents, to be moved to usecase, guide |
-| elements/            | Remains | TokenScript elements |
-| faq/                 | Remains | FAQ items - many clusters in FAQs.md |
-| features/            | Remains | Which version of Smart Layers or TokenScript has which feature. |
-| guide/               | Remains | Developer-oriented code-based guides |
-| integration/         | To be dispersed into other directories | Originally covering an integration guide and a few documents |
-| privacyandsecurity/  | To be dispersed into other directories |      |
-| research/            | Papers and studies | This is the only container type directory. Other directories represent a category of information, this is just a container of all research to be shared. |
-| specs/               | To be renamed spec/ | Tech specifications that are usually only interesting to the implementors |
-| technology/          | Remains | It's similar to a codeless version of the guide/, it contains introduction materials written for a wider audience and does not use code immediately to solve every problem. |
-| tokenscript-paper/   | Remains | Originally the paper was written in chapters in md, it was later integrated with dita so each chapter remains a file in md. There is no intention to change it too much. |
-| usecase/             | Remains | Use-case based materials, there are case-studies and guides. Use-case guides are more technical. |
-
-## Notes for Contributors
-
-We recommend creating a `.git/hooks/pre-commit` with the following content to prevent errors in the commit:
+To avoid commit errors, consider creating a `.git/hooks/pre-commit` with:
 
 ```
 #!/bin/sh
 dita --project config/tokenscript-docsite.yaml --project config/smartlayer-docsite.yaml
 ```
-Please note that this is not added to the git repo because your `dita` executable might be in a different location or you may be using Windows and lack `/bin/sh`.
 
-## Notes for Sysop
+This isn't added to the git repo due to potential variations in `dita` executable locations and system differences.
 
-If you have the necessary credentials, you can upload the website to a web hosting account, like this:
+## Sysops:
+
+If you possess the requisite credentials, you can upload the website to a hosting account:
 
 ````
 $ lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from=.gitignore -R out/ ./'
 ````
 
-## Troubleshooting
+## Issues and Fixes:
 
-### `"html5-bootstrap" is not a recognized transformation type`
+**Error**: `"html5-bootstrap" is not a recognized transformation type`
 
-If you encounter the following error:
-
-````
-$ dita --project config/smartlayer-docsite.yaml -o out/document.smartlayer.network
-Error: [DOTA001F][FATAL] "html5-bootstrap" is not a recognized transformation type. Supported transformation types are dita, eclipsehelp, html5, htmlhelp, markdown, markdown_gitbook, markdown_github, pdf, pdf2, xhtml.
-make: *** [Makefile:18: website] Error 1
-````
-
-This is caused by `net.infotexture.dita-bootstrap` not being installed properly. You can resolve it by uninstalling and reinstalling the plugins in the correct order:
+**Solution**: This arises from an improper installation of `net.infotexture.dita-bootstrap`. Resolve by reinstalling the plugins in the specified order:
 
 ````
 $ dita uninstall net.infotexture.dita-bootstrap
