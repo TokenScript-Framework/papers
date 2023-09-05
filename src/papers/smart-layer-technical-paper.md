@@ -139,13 +139,13 @@ State channels play a pivotal role in the Smart Layer tokenomics. Whenever an in
 
 Anchoring nodes, which play a central role in the network's operation, maintain these state channels. They ensure that payments are routed correctly to the nodes that provide the services. At the end of a settlement period, the anchoring node consolidates all the transactions within the state channel and processes the payment to the respective service-providing nodes.
 
-## Incentive Structure and Profit Mechanism
+## Dynamic Tokenomics: Tailoring Incentives in a Decentralized Ecosystem
 
-The tokenomics is structured in a way that token issuers, while paying a nominal rent, can still profit from the broader ecosystem. This profit can be derived from various "business" operations facilitated by the smart tokens. For instance, a token issuer might collaborate with multiple integrations, each offering a unique service or benefit associated with the token. Every interaction with the token, whether it is a query or an update, translates to a micro-transaction. Over time, the cumulative value of these micro-transactions can result in substantial revenue for the token issuer.
+The tokenomics is structured in a way that allows token issuers, while paying a nominal rent, to write their token contract in a way that profits from the broader ecosystem. 
 
-Furthermore, integrations, by leveraging smart tokens, can offer enhanced services to their users. This not only improves user experience but also opens up new revenue streams for the integrations. For instance, an e-commerce platform can offer personalized shopping recommendations based on a user's health token, leading to increased sales and customer satisfaction.
+Token contracts can dictate revenue derived from various "business" operations facilitated by the smart tokens. For instance, a token issuer might collaborate with multiple integrations, each offering a unique service or benefit associated with the token. Every interaction with the token, whether it is a query or an update, translates to a micro-transaction. This is because unlike industrial smart tokens, some community smart tokens may need the cumulative value of these micro-transactions.
 
-In conclusion, the tokenomics of Smart Layer is meticulously designed to ensure a win-win scenario for all stakeholders. It promotes network sustainability, incentivizes participation, and fosters a vibrant ecosystem where token issuers, integrations, and nodes collaboratively drive the next generation of the web.
+Furthermore, integrations, by leveraging smart tokens, can offer enhanced services to their users. This improves user experience and may opens up new revenue streams for the integrations. For instance, an e-commerce platform can offer personalized shopping recommendations based on a user's health token, leading to increased sales and customer satisfaction.
 
 # Conclusion
 
