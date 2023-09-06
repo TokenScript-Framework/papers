@@ -43,7 +43,8 @@ The primary serviceability requirement determined that the network cannot be bui
 
 Smart Layer's emphasis on serviceability sets it apart from traditional blockchains that lean heavily on consensus mechanisms. This focus demands real-time monitoring and load balancing, which is where anchoring nodes come into play. These nodes serve as the network's guardians, ensuring consistent service availability and stepping in for pivotal operations. The Distributed Hash Table (DHT), shared among these anchoring nodes, is instrumental in determining which node is responsible for a specific smart token instance. This decentralized approach not only mitigates potential attacks that might arise from matching node IDs with token IDs but also guarantees prompt responses to integration queries.
 
-![Mapping Token ID to its service node](/home/weiwu/IdeaProjects/documents/src/papers/smart-layer-technical-paper-dht.svg)
+![Mapping Token ID to its service node](https://github.com/TokenScript/documents/blob/main/src/papers/smart-layer-technical-paper-dht.svg)
+
 
 ## Token Status Propagation and Execution
 
