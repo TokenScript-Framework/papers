@@ -66,7 +66,7 @@ The election of this single executor node is determined before any read/write op
 
 Failures, whether they are a standard part of the smart token's tokenscript or indicative of potential malicious activity, need to be addressed promptly to ensure service level objectives are met. If a node fails in its execution duties, the anchoring nodes step in. They can either arbitrate disputes or reallocate the smart token to a different, more reliable node. Only anchoring nodes can provide attested failures; however, they are not expected to take over the execution, hence their role is often the provision of attestation to the failure to acquire needed attestations to move to the next state. This is exemplified in the next section.
 
-![After a failure, a service node requests an anchoring node to route its traffic in order to get a failure attestation](/home/weiwu/IdeaProjects/documents/src/papers/smart-layer-technical-paper-error-routing.svg)
+![After a failure, a service node requests an anchoring node to route its traffic in order to get a failure attestation](https://github.com/TokenScript/documents/blob/main/src/papers/smart-layer-technical-paper-error-routing.svg)
 
 ## Real-World Application: The Flight Ticket Smart Token
 
