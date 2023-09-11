@@ -17,9 +17,15 @@ Integral to the functioning of Smart Tokens within the Smart Layer is TokenScrip
 
 The modern web, for all its advancements, grapples with a fundamental challenge: the 'Limit of 3' problem. Despite the web's inherent nature of integration, most websites today are confined to three primary types of integrations: login, social media posting, and checkout. This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
 
+![Present web rely on central integration points. They are the trust anchor of the web](smart-layer-technical-paper-problem-of-3.svg)
+
 Moreover, the web's fragmented nature has led to fragmented user experiences. Consider the example of an airplane ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the web's compartmentalized structure, where centralized entities offer piecemeal solutions.
 
-This state of affairs underscores the need for a paradigm shift, a move towards a more dynamic and interconnected web ecosystem. The following sections will delve into how Smart Layer addresses these challenges, laying the foundation for the next-generation web.
+This state of affairs underscores the need for a paradigm shift, a move towards a more dynamic and interconnected web ecosystem. 
+
+![In the next web, users choose smart tokens to use on websites, with unlimited potentials](smart-layer-technical-paper-smartlayer-tokenisation.svg)
+
+The following sections will delve into how Smart Layer addresses these challenges, laying the foundation for the next-generation web.
 
 ## Protocol Requirements
 
