@@ -93,6 +93,8 @@ While TEEs, including SGX, have encountered vulnerabilities, they remain unparal
 
 TEEs, such as SGX, have limitations on computational power utilization. In practice, node operators might offset this by running parallel tasks like mining. Future TEE iterations aim to optimize resource allocation, and advancements like parallel execution and Enhanced Memory Management promise near-full system resource utilization for Service TokenScript execution.
 
+![TEE negatively affect the performance of nodes, however, the force of economy may lead nodes to allocate resources to other services](smart-layer-technical-paper-sgx-efficiency.svg)
+
 ### Periodic Execution Monitoring
 
 Anchoring nodes are mandated to periodically oversee the execution of Service SmartTokens. This continuous monitoring regulates the staking mechanism, allowing for stake slashing upon detecting execution discrepancies. Service nodes are periodically prompted to provide execution samples for validation. This mechanism is akin to immune cells inspecting protein synthesis within biological cells, ensuring operational integrity.
