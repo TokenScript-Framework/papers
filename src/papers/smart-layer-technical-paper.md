@@ -17,17 +17,31 @@ Integral to the functioning of Smart Tokens within the Smart Layer is TokenScrip
 
 The modern web, for all its advancements, grapples with a fundamental challenge: the 'Limit of 3' problem. Despite the web's inherent nature of integration, most websites today are confined to three primary types of integrations: login, social media posting, and checkout. This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
 
-![Present web rely on central integration points. They are the trust anchor of the web](smart-layer-technical-paper-problem-of-3.svg)
-
 Moreover, the web's fragmented nature has led to fragmented user experiences. Consider the example of an airplane ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the web's compartmentalized structure, where centralized entities offer piecemeal solutions.
 
 This state of affairs underscores the need for a paradigm shift, a move towards a more dynamic and interconnected web ecosystem. 
 
+![Present web rely on central integration points. They are the trust anchor of the web](smart-layer-technical-paper-problem-of-3.svg)
+
+# Proposed Solution: The Smart Layer Approach
+
+The key to overcoming the pitfalls of centralization and reigniting stalled web innovation lies not in constructing new isolated systems that doesn't use integrated services provided by central entities. Instead, the focus should be on establishing a decentralized integration bus.
+
+Before the advent of blockchain technology, creating such an integration system was infeasible. Any entity operating it would inevitably become a new central trust anchor. However, the emergence of public blockchains, like Ethereum, has changed the game. They introduced smart contracts that can be executed securely, offering a trust foundation that doesn't rely on the goodwill of centralized parties.
+
+Yet, the secure execution of smart contracts alone isn't sufficient to drive the integration needed for the next-generation web. While smart contracts can define and enforce rules, they don't actively perform tasks. They won't notify a user's mobile phone about a delayed flight or interface with a healthcare system to update a recent diagnosis. These are functionalities expected from a highly integrated web that offers a seamless user experience. To bridge this gap, we need an active "worker" built atop smart contracts. This is where the Smart Layer network comes into play.
+
+## Smart Tokens: The Heart of Integration
+
+Central to the Smart Layer's architecture are Smart Tokens, tokenized representations of digital rights and services. These tokens are not mere placeholders; they are based off blockchain smart contracts and enable fluid integration across diverse web scenarios, challenging the constraints of traditional centralized systems.
+
 ![In the next web, users choose smart tokens to use on websites, with unlimited potentials](smart-layer-technical-paper-smartlayer-tokenisation.svg)
 
-The following sections will delve into how Smart Layer addresses these challenges, laying the foundation for the next-generation web.
+While directly replacing established systems like Google Login or Apple Pay with their smart token counterparts might seem impractical given the ubiquity of these services, the true value of Smart Tokens lies in their potential for innovation. The diagram showcases the myriad of smart tokens that can be crafted using the synergy of TokenScript and the Smart Layer network. Instead of a blanket data reveal, users can selectively deploy these tokens, maintaining control over their digital interactions. Notably, unlike dApps, these tokens are not designed to replace but to coexist and enhance the web2 ecosystem. Traditional services like Google Login or Apple Pay remain accessible, but innovations like the smart flight ticket carve out new avenues for web evolution.
 
-## Protocol Requirements
+With Smart Layer, users navigate with an arsenal of smart tokens, each tailored for specific applications, thereby unlocking a realm of untapped potential. The end goal is a web that's dynamic, interconnected, and pivots around user agency.
+
+# Protocol Requirements
 
 The design and functionality of Smart Layer are driven by specific protocol requirements, tailored to enable the unique capabilities of smart tokens. These requirements are not merely a reflection of standard practices for distributed networks but are intricately linked to the challenges and goals of the Smart Layer ecosystem. The key areas of focus include:
 
@@ -193,7 +207,7 @@ Token contracts can dictate revenue derived from various "business" operations f
 
 Furthermore, integrations, by leveraging smart tokens, can offer enhanced services to their users. This improves user experience and may opens up new revenue streams for the integrations. For instance, an e-commerce platform can offer personalized shopping recommendations based on a user's health token, leading to increased sales and customer satisfaction.
 
-# Final words: Conceptual Foundations and Further Design Considerations
+# Conceptual Foundations and Further Design Considerations
 
 ## Designing for today's unthinkable, tomorrow's norm
 
