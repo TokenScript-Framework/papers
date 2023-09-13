@@ -2,38 +2,40 @@
 title: "Smart Layer: A Decentralised Integration Protocol for the Next-Generation Web"
 date: "1st September, 2023"
 abstract: |
-  In the evolving landscape of the decentralised web, the need for a robust integration layer that bridges the gap between siloed services and tokenised assets has become paramount. Smart Layer emerges as a decentralised network designed to facilitate the next generation of web use-cases, addressing the inherent limitations of the current web. This whitepaper delves into the architecture, design, and potential of Smart Layer and its token, aiming to revolutionise how we perceive and interact with the web.
+  In the evolving decentralised Web, a robust integration layer bridging siloed services and tokenised assets is paramount. Smart Layer is a decentralised network designed to facilitate the next generation of web use-cases, addressing the inherent limitations of the current Web. This whitepaper delves into the architecture, design, and potential of Smart Layer and its token.
 ---
 
 # Introduction
 
-The evolution of the web has been marked by periods of rapid innovation, leading to an era of unprecedented connectivity and information exchange. Observations of tech giants like Google have underscored the potential benefits of integrated services. However, despite these advancements, the broader web landscape has remained fragmented. Centralised entities have emerged as dominant forces, creating isolated ecosystems that limit true integration. While blockchain technology introduced a new paradigm emphasising decentralisation and trustless transactions, its primary focus has been on asset tokenisation.
+The Web has grown more and more integrated since the advent of Web 2.0. Integration such as "login with Google" and "checkout with Apple" are hallmarks of the Web2 user experience. The success of tech giants like Google has underscored the demand for integrated services. However, despite these advancements, the broader web landscape has remained fragmented. Centralised entities have emerged as dominant forces, creating isolated ecosystems that limit true integration. While blockchain technology introduced a new paradigm emphasising decentralisation and trustless transactions, its primary focus has been on asset tokenisation.
 
-In this context, Smart Layer emerges as a decentralised protocol that aspires to redefine the web's architecture. Envisioned as an integration bus, Smart Layer facilitates seamless interactions between diverse services, akin to how websites today leverage platforms like Google for a myriad of functionalities. Beyond acting as a mere bridge, Smart Layer introduces the concept of Smart Tokens. These are tokenised digital rights and products/services that can be seamlessly integrated across various web use-cases, transcending the limitations of centralised systems and leveraging the strengths of blockchain. This protocol is designed to function as a distributed network, serving as the backbone for the next generation of the web.
+Smart Layer is a decentralised protocol aiming to reshape the Web's architecture. It acts as an integration hub, enabling smooth interactions between various services, much like how websites currently use platforms like Google. Beyond acting as a mere bridge, Smart Layer introduces the concept of Smart Tokens. These are tokenised digital rights and products/services that can be seamlessly integrated across various web use-cases, transcending the limitations of centralised systems and leveraging the strengths of blockchain. This protocol is designed to function as a distributed network, serving as the backbone for the next generation of the Web.
 
-Integral to the functioning of Smart Tokens within the Smart Layer is TokenScript, an OASIS standard work in progress. While Smart Layer provides the infrastructure and environment, TokenScript outlines how these smart tokens should be packaged, distributed, referenced, composed, and executed and ensures smart tokens operate optimally within the defined parameters of trust, interoperability, privacy and security. A part of TokenScript called Service TokenScript is executed in the Smart Layer network. 
+TokenScript, an evolving OASIS standard, is crucial for Smart Tokens in the Smart Layer. While Smart Layer offers the foundation, TokenScript defines the packaging, distribution, and operation of these tokens and the messaging format between these tokens and their integrations, ensuring they work within the defined parameters of trust, interoperability, privacy and security.
 
 # Problem Statement
 
-For all its advancements, the modern web grapples with a fundamental challenge: the 'Limit of 3' problem. Despite the web's inherent nature of integration, most websites today are confined to three primary types of integrations: login, social media posting, and checkout. This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
+Despite its progress, the modern Web faces the 'Limit of 3' challenge. Most websites are restricted to three main integrations: login, social media posting, and checkout.
 
-Moreover, the web's fragmented nature has led to fragmented user experiences. Consider the example of a flight ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the web's compartmentalised structure, where centralised entities offer piecemeal solutions.
+This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
 
-This state of affairs underscores the need for a paradigm shift, a move towards a more dynamic and interconnected web ecosystem. 
+Moreover, the Web's fragmented nature has led to fragmented user experiences. Consider the example of a flight ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the Web's compartmentalised structure, where centralised entities offer piecemeal solutions.
 
-![Present web relies on central integration points. They are the trust anchor of the Web](smart-layer-technical-paper-problem-of-3.svg)
+This highlights the need for a paradigm shift towards a more dynamic and interconnected web ecosystem.
+
+![Present Web relies on central integration points. They are the trust anchor of the Web](smart-layer-technical-paper-problem-of-3.svg)
 
 # Proposed Solution: The Smart Layer Approach
 
-The key to overcoming the pitfalls of centralisation and reigniting stalled web innovation lies not in constructing new isolated systems that don't use integrated services provided by central entities. Instead, the focus should be on establishing a decentralised integration bus.
+To reignite web innovation and overcome centralisation issues, we need to look beyond merely creating isolated systems that sidestep today's primary web integrations. Instead, we propose building an integrated web where tokens are the main integration points. By transforming these tokens into web services, we pave the way for the next-generation Web.
 
 Before the advent of blockchain technology, creating such an integration system was infeasible. Any entity operating it would inevitably become a new central trust anchor. However, the emergence of public blockchains, like Ethereum, has changed the game. They introduced smart contracts that can be executed securely, offering a trust foundation that doesn't rely on the goodwill of centralised parties.
 
-Yet, the secure execution of smart contracts alone isn't sufficient to drive the integration needed for the next-generation web. While smart contracts can define and enforce rules, they don't actively perform tasks. They won't notify a user's mobile phone about a delayed flight or interface with a healthcare system to update a recent diagnosis. These are functionalities expected from a highly integrated web that offers a seamless user experience. To bridge this gap, we need an active "worker" built atop smart contracts. This is where the Smart Layer network comes into play.
+However, merely executing smart contracts securely isn't enough for the integration demands of the next-generation Web. While smart contracts can define and enforce rules, they don't actively perform tasks. They won't notify a user's mobile phone about a delayed flight or interface with a healthcare system to update a recent diagnosis, even if the said flight tickets and user's health profiles are tokenised. These are functionalities are expected from a highly integrated web that offers a seamless user experience. To bridge this gap, we need a network providing services built atop smart contracts, playing the role of integration providers similar to how Google provided Login and Apple provided Payment integration. Smart Layer network serves this purpose.
 
 ## Smart Tokens: The Heart of Integration
 
-Central to the Smart Layer's architecture are Smart Tokens, tokenised representations of digital rights and services. These tokens are not mere placeholders; they are based on blockchain smart contracts and enable fluid integration across diverse web scenarios, challenging the constraints of traditional centralised systems.
+Smart Tokens are tokenised representations of digital rights and services at the heart of Smart Layer's design. These tokens are based on blockchain smart contracts and enable limitless integration across diverse web scenarios, challenging the constraints of traditional centralised systems.
 
 ![In the next web, users choose smart tokens to use on websites, with unlimited potentials](smart-layer-technical-paper-smartlayer-tokenisation.svg)
 
@@ -43,7 +45,7 @@ With Smart Layer, users navigate with an arsenal of smart tokens, each tailored 
 
 # Protocol Requirements
 
-The design and functionality of Smart Layer are driven by specific protocol requirements tailored to enable the unique capabilities of smart tokens. These requirements are not merely a reflection of standard practices for distributed networks but are intricately linked to the challenges and goals of the Smart Layer ecosystem. The key areas of focus include:
+Smart Layer's design and functionality hinge on protocol requirements crafted for the distinct capabilities of smart tokens. These requirements are not merely a reflection of standard practices for distributed networks but are intricately linked to the challenges and goals of the Smart Layer ecosystem. The key areas of focus include:
 
 - **Authenticity**: The integrations should be able to verify the authenticity of the result of the Service TokenScript code executed on the smart layer network, and the network shouldn't rely on the integrations verifying this alone for operational integrity.
 - **Serviceability**: This encompasses continuous uptime, redundancy, and load balancing. While mature industrial technology can meet these requirements, their application within Smart Layer is influenced by other interconnected requirements.
@@ -221,10 +223,9 @@ The rise of AI user-agents further underscores the need for a robust protocol. A
 
 ## The Decentralised Nature of Future Integrations
 
-Feedback often suggests that the success of such a protocol hinges on adoption by Internet giants. However, the nature of integration is connecting everyone involved in a process. The next-generation web will likely be shaped by numerous localised innovations, each tailored to specific industries and users. As protocol designers, our focus should be on creating a flexible and adaptable foundation.
+It's a common assumption that the success of such a protocol hinges on its adoption by Internet giants. However, the nature of integration is connecting everyone involved in a process. The next-generation Web will likely be shaped by numerous localised innovations, each tailored to specific industries and users. As protocol designers, our focus should be on creating a flexible and adaptable foundation.
 
 A core principle guiding the design of Smart Layer is the emphasis on creating a robust mechanism for provisioning smart tokens. Rather than getting bogged down in the specifics of individual tokens, our approach, reminiscent of the early Internet's layered design, is to ensure that more complex features can be built atop this foundational Layer.
 
 In conclusion, while the technology we're discussing isn't a direct solution for a specific niche, it's imperative for us, as protocol designers, to think beyond the immediate. Our goal is to lay the groundwork for a future where the use-cases we've discussed, and many we have yet to imagine, can become a reality.
-
 
