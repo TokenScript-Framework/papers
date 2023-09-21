@@ -13,6 +13,10 @@ Smart Layer is a decentralised protocol aiming to reshape the Web's architecture
 
 TokenScript, an evolving OASIS standard, is crucial for Smart Tokens in the Smart Layer. While Smart Layer offers the foundation, TokenScript defines the packaging, distribution, and operation of these tokens and the messaging format between these tokens and their integrations, ensuring they work within the defined parameters of trust, interoperability, privacy and security.
 
+## Scope of this document
+
+This paper serves as an introduction to the novel concept, models and mechanism of Smart Layer, discuss its its potential applications in the next-generation Web. It is not intended as a guide for implementors of Smart Layer Nodes, which is addressed in a future separate specification akin to Ethereum's Yellow Paper.
+
 # Problem Statement
 
 Despite its progress, the modern Web faces the 'Limit of 3' challenge. Most websites are restricted to three main integrations: login, social media posting, and checkout.
