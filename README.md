@@ -75,12 +75,15 @@ Here's a snapshot of our directory structure and their respective roles:
 
 ## For Contributors:
 
-To avoid commit errors, consider creating a `.git/hooks/pre-commit` with:
+Assuming using Linux or OS X, to avoid commit errors, consider creating a `.git/hooks/pre-commit` with:
 
 ```
 #!/bin/sh
-dita --project config/tokenscript-docsite.yaml --project config/smartlayer-docsite.yaml
+dita --project config/tokenscript-docsite.yaml
+dita --project config/smartlayer-docsite.yaml
 ```
+
+Then make it executable.
 
 This isn't added to the git repo due to potential variations in `dita` executable locations and system differences.
 
