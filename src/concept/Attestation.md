@@ -1,36 +1,26 @@
-# Attestation
+# Attestation Appliations
 
-An attestation is a cryptographically attested message, by an attestor stating someone have something. 
+An attestation is a cryptographic message or proof that asserts certain facts about a specific object. 
 
-It's a few lines long and often is delivered through a [MagicLink](MagicLink.md).
+While traditionally produced by a trusted attestor and often signed, some attestations may use zero-knowledge proofs to establish trust without revealing specific details.
 
-Note that an attestation is produced by a trusted attestor. It is not a trustless technology. See [Attestation vs Proof](../faq/attestation_vs_authorisation_vs_proof.md).
+When it is presented to the user, it is encoded in a [Magic Link](MagicLink.md).
 
-There are two types of attestations: token issued as attestations (token attestation for short), and identifier attestations.
+In TokenScript, various types of attestations exist, and the list is expandable. These attestations are not inherently trustless; they usually come from a trusted source or mechanism. See [Attestation vs Proof](../faq/attestation_vs_authorisation_vs_proof.md). It has many [Applications](AttestationApplications.md)
 
-## Token Attestation
+## Attribute Attestation
 
-Token attestations are tokens issued by sending the recipient an attestation. The recipient, by using the attestation, is able to interact with smart contracts as if he has a token in a token contract.
+This type of attestation asserts specific attributes about a token. For instance, an airline might issue an attribute attestation to update the arrival time for all passengers on a delayed flight. Smart Tokens representing airline tickets for that flight can then use this attestation when interacting with other systems or smart contracts.
 
-An example of such token is the DevCon 2022 ticket.
+## Authorisation Attestation
 
-The advantage over minting tokens in a smart contract: a token is never minted, and can be used as if it is minted. However, it is not transferable in that form, instead, when transferring, a token contract has to burn the attestation and allocate it to the new recipient, and the new recipient will hold the token as a normal smart contract token (not attestation token).
+Authorization attestations are similar to attribute attestations but are designed to grant permissions or access rights. These attestations often come with time limits, intended recipients, and anti-replay attack mechanisms. For example, in the event of a flight delay, an airline could issue an authorization attestation allowing affected passengers to access the lounge.
 
-Tokens that can be issued as attestation are non-fungible.
+## Attestation Token
+
+An Attestation Token is a specific type of attestation that attests to a user's ownership of a token. Token issuers typically issue these attestations to users identified by their public keys or Ethereum addresses. These attestations enable users to interact with smart contracts as if they possess tokens in a token contract, allowing for off-chain token issuance.
 
 ## Identifier Attestation
 
-Identifier attestations are issued by attestors who verifies an Ethereum key holder also owns an identifier. A typical identifier is a web2 identifier such as
-
-- Email address
-- Twitter handle
-- Facebook ID
-- Github handle
-
-Use-cases of Identifier Attestations are:
-
-- To be used as a dependency for other tokens. For example, when DevCon 2022 ticket is issued, they are issued on user's identifier (email address). To use the DevCon ticket, a user has to acquire an email address attestation.
-- To be used to attest a transaction as from an identified user. For example, in AutographNFT, a person who add an autograph on an NFT must provide a twitter ID attestation, therefore attesting the autograph is from the owner of that ID.
-
-More use-cases can be found in [Attestation Usecases](../usecase/Attestation.md)
+Identifier attestations are issued by trusted attestors who verify that an Ethereum key holder also owns a specific web2 identifier, such as an email address or Twitter handle. These attestations can serve as dependencies for other tokens or to authenticate transactions from identified users. For example, when DevCon 2022 ticket is issued, they are issued on user's identifier (email address). To use the DevCon ticket, a user has to acquire an email identifier attestation.
 
