@@ -5,7 +5,7 @@
     <context name="Smart Layer Paper">
       <input href="../src/smartlayer-paper.ditamap"/>
     </context>
-    <output href="../out/smartlayer-paper"/>
+    <output href="../out"/>
     <publication transtype="pdf2">
       <param name="include.rellinks" value="#default external"/>
       <param name="outputFile.base" value="smartlayer-paper"/>
@@ -18,7 +18,7 @@
     <context name="Smart Layer Paper">
       <input href="../src/smartlayer-overview.ditamap"/>
     </context>
-    <output href="../out/smartlayer-paper"/>
+    <output href="../out"/>
     <publication transtype="pdf2">
       <param name="hide.frontpage.toc.index.glossary" value="yes"/>
       <param name="args.chapter.layout" value="BASIC"/>

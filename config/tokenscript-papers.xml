@@ -5,7 +5,7 @@
     <context name="TokenScript Design Paper">
       <input href="../src/tokenscript-paper.ditamap"/>
     </context>
-    <output href="../out/tokenscript-paper"/>
+    <output href="../out"/>
     <publication transtype="pdf2">
       <param name="include.rellinks" value="#default external"/>
       <param name="outputFile.base" value="tokenscript-design-paper"/>
@@ -18,7 +18,7 @@
     <context name="TokenScript Short Paper">
       <input href="../src/tokenscript-paper-short.ditamap"/>
     </context>
-    <output href="../out/tokenscript-paper"/>
+    <output href="../out"/>
     <publication transtype="pdf2">
       <param name="hide.frontpage.toc.index.glossary" value="yes"/>
       <param name="outputFile.base" value="tokenscript-short-paper"/>
