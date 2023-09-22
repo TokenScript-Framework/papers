@@ -1,0 +1,6 @@
+...rest of the code...
+
+- Our Distributed Service Network (DSN) is a groundbreaking approach to managing services across multiple data centers.
++ Our Distributed Service Network (DSN) is an approach to managing services across multiple data centres.
+
+...rest of the code...
