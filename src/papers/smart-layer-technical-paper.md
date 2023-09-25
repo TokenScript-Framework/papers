@@ -222,6 +222,34 @@ Token contracts can dictate revenue derived from various "business" operations f
 
 Furthermore, integrations, by leveraging smart tokens, can offer enhanced services to their users. This improves user experience and may open up new revenue streams for the integrations. For instance, an e-commerce platform can offer personalised shopping recommendations based on a user's health token, leading to increased sales and customer satisfaction.
 
+# Relationship with Other Projects
+
+## IPFS
+
+Smart Layer's architecture is inherently designed to be modular and interoperable, a philosophy that aligns with the InterPlanetary File System (IPFS). While IPFS serves as a decentralized storage layer, it focuses primarily on content availability without service-level guarantees such as I/O and response time.
+
+This positions IPFS more as a retrieval service than a web service, lacking a Virtual Machine (VM) for code execution.
+
+Smart Layer offers the option to use IPFS for storage, particularly when the higher costs associated with Smart Layer's features like load balancing and Service Level Agreements (SLAs) become a concern. This strategic alignment allows Smart Layer to maintain its lightweight nature while ensuring data integrity and availability, key attributes that are indispensable for any decentralized application (dApp).
+
+## Chainlink
+
+Smart Layer's collaboration with Chainlink significantly enhances its capabilities, particularly in the area of decentralized oracles. Chainlink is renowned for its decentralized oracle services, which provide secure and reliable data feeds to smart contracts. However, Chainlink's primary focus is on linking external data to blockchain environments, rather than enabling smart tokens as integration points. It does not concern itself with providing token interfaces for specific use-cases like smart flight tickets.
+
+On the other hand, Smart Layer adopts a token-oriented approach, where smart contracts act as trust anchors. This architecture allows for a separation between rule enforcement and execution logic, offering greater flexibility in application development. By integrating Chainlink's robust oracle services, Smart Layer can access real-world data, thereby enabling more complex smart contracts that can interact with external APIs, IoT devices, and other data sources. This synergistic relationship broadens the scope of applications that can be built on Smart Layer, ranging from decentralized finance (DeFi) to supply chain management and beyond, while also providing the necessary infrastructure for specialized token interfaces.
+
+This distinction in scope allows each platform to excel in its area of expertise, while their integration offers a more comprehensive and versatile solution for decentralized applications.
+
+## TokenScript
+
+TokenScript is a direct dependency of the Smart Layer technology stack. The same team that has been instrumental in the development of TokenScript has also been responsible for Smart Layer. This team's work on TokenScript has been recognized by the OASIS Standardization body as part of its collaboration with the Ethereum Foundation. While Smart Layer aims to provide a robust integration infrastructure for the next generation web, TokenScript focuses on standardizing token interfaces, behavior code, and attestation mechanisms. These elements are essential dependencies for the Smart Layer network.
+
+The integration of TokenScript into Smart Layer is a fundamental requirement for the latter's operation. TokenScript's XML-based token markup language enables a modular approach to dependency-based token interoperabilities. For example, it allows the insurance industry to establish standardized interfaces for smart insurance tokens. Utilizing TokenScript's editors and deployment tools, developers can define token behavior without writing XML directly, using familiar languages like JavaScript to control a token's runtime, whether in a wallet or within the Smart Layer network.
+
+## Conclusion
+
+In conclusion, Smart Layer integrates IPFS as an optional storage solution, benefiting from its mature implementations of distributed hash tables, but does not rely on it for runtime operations. Chainlink serves as a source of attestations and is an optional component, the utilization of which is contingent upon specific smart token authorizations. Unlike IPFS and Chainlink, TokenScript is not an infrastructure but a standard for defining smart tokens. It serves as a direct dependency, essential for the functionality and interoperability within the Smart Layer ecosystem.
+
 # Conceptual Foundations and Further Design Considerations
 
 ## Designing for today's unthinkable, tomorrow's norm
