@@ -19,15 +19,24 @@ This paper serves as an introduction to the novel concept, models and mechanism 
 
 # Problem Statement
 
-Despite its progress, the modern Web faces the 'Limit of 3' challenge. Most websites are restricted to three main integrations: login, social media posting, and checkout.
+Dr. Gavin Wood has attributed the centralization of the web to a combination of factors, including network effects, economies of scale, big data ownership, and intellectual property laws. This centralization has led to a situation where most websites today are integrated with at least one of Google Login, Facebook, or Apple Pay, and many use all of them.
 
-This limitation stems from a combination of privacy concerns, integration costs, and the absence of a secure, privacy-preserving mechanism to facilitate expansive integration.
+While this centralization has enhanced usability tremendously, it has also stalled the development of new integrations. This is especially evident in areas where the big companies have no major influence, such as airline flight tickets. Central points in such areas, such as Amadeus in flight booking, can reach only the back offices of various websites. As a result, a flight ticket booked on one website can be used to book a car rental on that website only, and not on any other website. Similarly, one user's reputation works only in that website.
 
-Moreover, the Web's fragmented nature has led to fragmented user experiences. Consider the example of a flight ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the Web's compartmentalised structure, where centralised entities offer piecemeal solutions.
+This lack of user-level integration can be attributed to two main factors.
 
-This highlights the need for a paradigm shift towards a more dynamic and interconnected web ecosystem.
+First, despite the reasons mentioned above, the internet centers have become trust anchors. Anyone else providing integrations, such as a calendar other than Google Calendar, is questioned if they will continue to exist or not betray to user's trust. This trust problem was not resolvable without huge centralised internet companies prior to the advent of blockchain, which can be seen as a trust machine  that can facilitate trustless interactions between parties.
+
+Second, the number of system complexity grows quadratically complicated as the number of integrations grow.
+
+Due to these two reasons, the modern Web faces the "Limit of 3" challenge. Most websites are restricted to three main integrations: login, social media posting, and checkout. 
 
 ![Present Web relies on central integration points. They are the trust anchor of the Web](smart-layer-technical-paper-problem-of-3.svg)
+
+The Web's fragmented nature has further led to fragmented user experiences. Consider the example of a flight ticket. In the current web paradigm, this ticket, while representing a token of value within its issuing platform, remains isolated. The potential for this ticket to integrate with other systems - updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems - remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the Web's compartmentalized structure, where centralized entities offer piecemeal solutions.
+
+This highlights the need for a paradigm shift towards a more dynamic and interconnected web ecosystem. A shift to break the limit of 3, allowing websites to connect to a bigger ecosystem outside the control of the current Internet centers, allowing integrated, not fragmented user experience. Naturally, such a new paradigm must include freely grown integration network, low integration costs, and with a design for secure, privacy-preserving mechanism to facilitate expansive integration.
+
 
 # Proposed Solution: The Smart Layer Approach
 
