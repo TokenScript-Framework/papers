@@ -245,23 +245,22 @@ The integration of TokenScript into Smart Layer is a fundamental requirement for
 
 In conclusion, Smart Layer integrates IPFS as an optional storage solution, benefiting from its mature implementations of distributed hash tables, but does not rely on it for runtime operations. Chainlink serves as a source of attestations and is an optional component, the utilization of which is contingent upon specific smart token authorizations. Unlike IPFS and Chainlink, TokenScript is not an infrastructure but a standard for defining smart tokens. It serves as a direct dependency, essential for the functionality and interoperability within the Smart Layer ecosystem.
 
-# Conceptual Foundations and Further Design Considerations
+# Design Considerations and Summary
 
 ## Designing for today's unthinkable, tomorrow's norm
 
-From a protocol design perspective, it's essential to anticipate the evolution of technology and its potential use-cases. Historically, technological advancements have often rendered the previously unthinkable as standard practice. As protocol designers, it's our responsibility to ensure that the foundational layers we create can accommodate these shifts.
+As we delve into the intricacies of protocol design, it's crucial to remember that today's innovations often become tomorrow's standards. The Smart Token and its supporting Smart Layer are designed with this forward-thinking approach. For example, consider the potential for future retailers to interface with vehicle smart tokens for predictive maintenance or flight smart tokens for timely deliveries.
 
-Take the case of Amazon. In its early days, the concept of an online marketplace without physical salespeople was a radical departure from established retail norms. Today, after transforming the retail landscape, the model it pioneered is elementary. As we design the Smart Token and its supporting Smart Layer, we must ensure that it's flexible and robust enough to support similarly transformative use cases in the future. For instance, the protocol should allow future retailers to interface with a vehicle's smart token to anticipate maintenance needs or to facilitate timely deliveries using flight smart tokens.
-
-Similarly, how might the protocol handle scenarios where smart locks grant access based on tokenised rights? Or when smart cars, equipped with insurance tokens, autonomously initiate roadside assistance? These are not mere hypotheticals but real-world applications that builders aim to achieve based on Smart Layer.
-
-The rise of AI user-agents further underscores the need for a robust protocol. As AI becomes more integrated into decision-making processes, our protocol supports interactions between AI-driven decisions and token interfaces. Compared to account-based integration, token-based integration reduces the attack surface by reducing the scope of integration, allowing ephemeral integrations and enhancing composability, a critical feature for future web integrations.
+The protocol is also designed to accommodate emerging scenarios, such as smart locks granting access based on tokenized rights or smart cars initiating autonomous roadside assistance. Furthermore, as AI becomes increasingly integrated into decision-making, the protocol is engineered to support AI-driven decisions through token interfaces. This design choice enhances security and composability, essential attributes for future web integrations.
 
 ## The Decentralised Nature of Future Integrations
 
-It's a common assumption that the success of such a protocol hinges on its adoption by Internet giants. However, the nature of integration is connecting everyone involved in a process. The next-generation Web will likely be shaped by numerous localised innovations, each tailored to specific industries and users. As protocol designers, our focus should be on creating a flexible and adaptable foundation.
+Contrary to the notion that the protocol's success depends solely on adoption by Internet giants, the true power lies in its ability to connect various stakeholders. The next-generation Web will likely be a mosaic of localized innovations tailored to specific industries and users. In this context, Smart Layer aims to serve as a flexible and adaptable foundation.
 
-A core principle guiding the design of Smart Layer is the emphasis on creating a robust mechanism for provisioning smart tokens. Rather than getting bogged down in the specifics of individual tokens, our approach, reminiscent of the early Internet's layered design, is to ensure that more complex features can be built atop this foundational Layer.
+The protocol emphasizes a layered design approach, focusing on provisioning smart tokens as a robust mechanism. This allows for the development of more complex features and applications atop this foundational layer, without getting entangled in the specifics of individual tokens.
 
-In conclusion, while the technology we're discussing isn't a direct solution for a specific niche, it's imperative for us, as protocol designers, to think beyond the immediate. Our goal is to lay the groundwork for a future where the use-cases we've discussed, and many we have yet to imagine, can become a reality.
+## Summary and Implications
 
+In this paper, we have presented Smart Layer as a protocol designed for decentralized integration in the next-generation Web. The protocol leverages smart tokens to facilitate interactions between various web services, sidestepping the need for centralized entities. Unlike tokenized assets, which are primarily designed for trading, smart tokens in this protocol are engineered for specific applications. This focus aligns with the evolving technological landscape and its emerging use-cases.
+
+As the paper concludes, it's worth noting that the protocol is not a static entity but a continually evolving framework. It aims to contribute to a more interconnected web ecosystem, and as such, invites ongoing engagement from developers and stakeholders for its further refinement and expansion.
