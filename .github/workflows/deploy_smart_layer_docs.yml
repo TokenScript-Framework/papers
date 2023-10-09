@@ -12,17 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build smart-layer docs
-        uses: dita-ot/dita-ot-action@4.1
+        uses: dita-ot/dita-ot-action@master
         with:
+          dita-ot-version: 4.1
           plugins: |
             fox.jason.extend.css
-            net.infotexture.dita-bootstrap
+            net.infotexture.dita-bootstrap@5.3.2
             fox.jason.favicon
             https://github.com/oxygenxml/dita-ot-diagrams-plugin/archive/refs/heads/master.zip
           project: config/smartlayer-docsite.yaml
       - name: Build smart-layer papers
-        uses: dita-ot/dita-ot-action@4.1
+        uses: dita-ot/dita-ot-action@master
         with:
+          dita-ot-version: 4.1
           project: config/tokenscript-papers.xml
       - uses: actions/upload-artifact@v3
         with:

@@ -16,11 +16,12 @@ jobs:
         run: |
           sed -ri 's@href="/([^"]+)"@href="/docs/\1"@g' config/navbar.xml
       - name: Build ts-site docs
-        uses: dita-ot/dita-ot-action@4.1
+        uses: dita-ot/dita-ot-action@master
         with:
+          dita-ot-version: 4.1
           plugins: |
             fox.jason.extend.css
-            net.infotexture.dita-bootstrap
+            net.infotexture.dita-bootstrap@5.3.2
             fox.jason.favicon
             https://github.com/oxygenxml/dita-ot-diagrams-plugin/archive/refs/heads/master.zip
           project: config/tokenscript-docsite.yaml
