@@ -16,7 +16,7 @@ jobs:
         run: |
           sed -ri 's@href="/([^"]+)"@href="/docs/\1"@g' config/navbar.xml
       - name: Build ts-site docs
-        uses: dita-ot/dita-ot-action@master
+        uses: dita-ot/dita-ot-action@4.1
         with:
           plugins: |
             fox.jason.extend.css

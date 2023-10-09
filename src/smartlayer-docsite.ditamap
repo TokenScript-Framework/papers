@@ -32,4 +32,5 @@
   -->
   <topicref href="papers/DesignPapers.md" format="mdita"/>
   <topicref href="faq/FAQs.md" format="markdown"/>
+  <topicref href="https://github.com/TokenScript/documents/releases/download/0.9/smart-layer-technical-paper.pdf" scope="external" navtitle ="Read Technical Paper" />
 </map>

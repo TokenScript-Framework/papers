@@ -375,6 +375,15 @@ nav.bs-sidebar-nav > ul > li {
   font-weight: 500;
   margin: calc(var(--baseline) * 0.75) 0;
 }
+nav.bs-sidebar-nav > ul > li:last-child {
+  margin-top: 24px;
+}
+nav.bs-sidebar-nav > ul > li:last-child > a {
+  display: inline-block;
+  border: white 1px solid;
+  border-radius: 8px;
+  padding: 16px 32px;
+}
 nav.bs-sidebar-nav ul {
   list-style: none;
   padding-left: 0;

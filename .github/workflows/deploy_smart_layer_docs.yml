@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build smart-layer docs
-        uses: dita-ot/dita-ot-action@master
+        uses: dita-ot/dita-ot-action@4.1
         with:
           plugins: |
             fox.jason.extend.css
@@ -21,7 +21,7 @@ jobs:
             https://github.com/oxygenxml/dita-ot-diagrams-plugin/archive/refs/heads/master.zip
           project: config/smartlayer-docsite.yaml
       - name: Build smart-layer papers
-        uses: dita-ot/dita-ot-action@master
+        uses: dita-ot/dita-ot-action@4.1
         with:
           project: config/tokenscript-papers.xml
       - uses: actions/upload-artifact@v3
