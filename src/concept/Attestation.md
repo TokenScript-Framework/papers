@@ -12,13 +12,13 @@ In TokenScript, various types of attestations exist, and the list is expandable.
 
 This type of attestation asserts specific attributes about a token. For instance, an airline might issue an attribute attestation to update the arrival time for all passengers on a delayed flight. Smart Tokens representing airline tickets for that flight can then use this attestation when interacting with other systems or smart contracts.
 
-## Authorisation Attestation
+## Authorisation
 
-Authorization attestations are similar to attribute attestations but are designed to grant permissions or access rights. These attestations often come with time limits, intended recipients, and anti-replay attack mechanisms. For example, in the event of a flight delay, an airline could issue an authorization attestation allowing affected passengers to access the lounge.
+Authorizations are attestations similar to attribute attestations but designed to grant permissions or access rights. These attestations often come with time limits, intended recipients, and anti-replay attack mechanisms. For example, in the event of a flight delay, an airline could issue an authorization attestation allowing affected passengers to access the lounge.
 
-## Attestation Token
+## Attestation-based Token
 
-An Attestation Token is a specific type of attestation that attests to a user's ownership of a token. Token issuers typically issue these attestations to users identified by their public keys or Ethereum addresses. These attestations enable users to interact with smart contracts as if they possess tokens in a token contract, allowing for off-chain token issuance.
+An Attestation-based Token is a specific type of attestation that attests to a user's ownership of a token. Token issuers typically issue these attestations to users identified by their public keys or Ethereum addresses. These attestations enable users to interact with smart contracts as if they possess tokens in a token contract, allowing for off-chain token issuance.
 
 ## Identifier Attestation
 
