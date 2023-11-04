@@ -5,34 +5,120 @@ abstract: |
   Web 2.0 marked a significant shift from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books. With Web 2.0, the Web transformed into a service platform, leading to a "reverse pyramid" structure. In this new architecture, contemporary internet behemoths form the narrow, foundational base, reminiscent of a structure precariously balanced on its tip. Such centralisation has stifled the Web's innovative potential. While the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We propose the "Smart Token" as a pivotal architectural choice for the next-generation Web, leveraging smart contracts to instantiate trust anchors. This vision entails a layered, modular next-generation web where sites employ tokens to facilitate integrations, amplify user experience, bolster privacy, and reduce dependence on today's monolithic internet titans. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles.
 ---
 
-# Introduction
+# Web Foundations: From Information Repositories to Trust Anchors
 
-## The Web's Foundational Concepts
+## The Web's Foundational Model
 
-When Tim Berners-Lee and his team developed the foundational concepts of the Web, they selected "sites" as its primary building blocks. This seemingly intuitive approach was not a given, especially when other Internet protocols, like emails and USENET, did not revolve around the concept of sites. Consider USENET: it organises and manages information by topic, making it irrelevant which site or even which planet the information originates from under that topic. Several factors contributed to the Web's dominance as an Internet application, notably the hyperlink, its nature as a development platform rather than a finished product, and its inherent competitiveness.
+When Tim Berners-Lee and his team developed the foundational concepts of the Web, they selected "sites" as its primary building blocks. This seemingly intuitive approach, however, was not a given, especially when other Internet protocols, like emails and USENET, did not revolve around the concept of sites. Consider USENET: it organises and manages information by topic, making it irrelevant which site or even which planet the information originates from under that topic.
 
-Today, even with the advent of mobile internet where sites are often supplanted by apps, the foundational model persists. Although early mobile system designers initially envisioned the mobile apps to be function-centric, akin to the word processors and movie players found on desktop computers, the reality ended up being much different. Prevailing smartphone apps evolved to mirror the concept of sites, with Airbnb and Netflix being typical examples. Like a site, a mainstream mobile app has a single origin, can be developed further, can activate other apps, and exists in competition with others. This evolution is a testament to the enduring influence of the site-based model, even in a landscape that has shifted significantly from Berners-Lee's original vision of the Web.
+The Web embraced a site-centric model: a site has a single origin, is inherently competitive, forms an ecosystem through hyperlinks, and evolves as a platform rather than remaining a static product. This model complemented the revolutionary capabilities introduced by HTML, contributing to the Web's rapid adoption and eventual dominance as an Internet application.
 
-However, it's worth noting that Berners-Lee and other early web pioneers didn't choose "sites" as the Web's primary building blocks merely because of the potential evolutionary power of websites in a competitive, capitalist market. Instead, in pursue of the best way to access and share information on the Internet, the design of the Web was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed the concept of a library—a collection of books—onto the digital realm, making the Internet a collection of sites. In a book, the primary unit of reference is a page; similarly, the Web adopted the term "web page". This metaphorical framework led to the Internet being structured around origins (sites), akin to how books have authors, rather than around topics (as in USENET) or functionality (as in FTP). While hyperlinks functioned similarly to library indexes, site owners controlled these links, creating a self-referential mega-book that encompassed the entire library.
+Today, with the advent of mobile Internet where sites are often supplanted by apps, the foundational model persists. Although early mobile system designers envisioned apps to be function-centric, akin to desktop word processors and movie players, the reality differed. Instead, users embraced mainstream apps like Google Docs and Netflix. Like a site, a mainstream mobile app possesses a single origin, thrives in competition, links to other apps, and remains open to ongoing development. This evolution is a testament to the enduring influence of the site-based model, even in a landscape that has shifted significantly from Berners-Lee's original vision of the Web.
 
-This decision to structure the Web around origins (sites) rather than topics or functionality had significant ramifications. It gave rise to the single-origin design of websites, mirroring the way books have specific authors. Even today, multi-domain sites are a rarity. This design choice profoundly influenced our trust paradigm: our interactions with a site are often guided by the trust we place in its origin. A site, therefore, isn't merely a repository of information; it also stands for its origin's credibility. This design choice, as we'll delve into in later sections, inadvertently set the stage for the centralisation of the Web.
+Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Instead, the Web's design was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. Just as a book references pages, the Web adopted "web pages." This framework led to structuring the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became akin to library indexes, but site owners controlled these links, creating a self-referential mega-book that spanned the entire library.
 
-## The Shift from Information to Action
+Structuring the Web around origins rather than topics (like USENET) or functionality (like BitTorrent) had vast implications. It led to websites' single-origin design, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This design choice profoundly shaped our trust paradigm: we often interact with a site based on the trust we place in its origin. A site isn't just an information repository; it represents its origin's credibility.
 
-This design influenced by the metaphor of an universal library leads to the understanding that the Web was initially envisioned as an information system[^comp.infosystems.www]. Today, that description no longer fits. It's more accurate to describe the Internet as an action network. Only occasionally do people speak of themselves "browsing" the Internet for information; instead, they chat with friends, shop, book hotels, work remotely, network with peers, or kill time. Similarly, few people compare Internet to a Universal Library anymore. The initial question of how a global computer network could serve as a valuable information source, transcending the limitations of a single database or physical library, no longer describes our contemporary Internet usage.
+This decision, to be explored further in subsequent sections, inadvertently paved the way for the Web's centralisation.
+
+## The Shift from Information to Applications
+
+Originally influenced by the metaphor of a universal library, the Web was conceived as an information system[^comp.infosystems.www]. Today, such a description feels outdated. A more fitting depiction of the modern Internet is a sprawling network of web applications. Rarely do individuals now describe their online activity as simply "browsing" for information. Instead, they're interacting with dynamic web apps to chat, shop, book hotels, work remotely, network, or even just kill time. Few draw parallels between the Internet and a Universal Library these days. The once-prevailing question—how a global computer network might act as a peerless information source, surpassing the constraints of isolated databases or physical libraries—no longer captures the essence of our modern Internet experience.
 
 [^comp.infosystems.www]: Its USENET topic name comp.infosystems.www accurately captured it.
 
-The transition from an information network to an action network marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are action-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language. The rise of single-page applications dispelled the notion that the Web is like a book consisting of information pages, suggesting instead a singular page: the application.
+The transition from a web of information to a web of application marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are action-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language. The rise of single-page applications dispelled the notion that the Web is like a book consisting of information pages, suggesting instead a singular page: the application.
 
-This evolution was crucial. To support the application model, trust anchors were necessary. These anchors represent foundational points of trust, essential for the application model's operation.
+This evolution was crucial to understand the trust anchors, which the authors of this paper argues played a pivotal role in the centralization of the Internet in the last two decades.
 
-It's imperative to distinguish between a website's functionality and the trust it either derives from or depends upon when providing such services. A real-world example elucidates this distinction. In 2008, one of this paper's authors, while affiliated with the German Chamber of Commerce in China, posited that a website integrating the then-popular Home Banking Computer Interface could outperform the bank's own website in terms of user experience. Users could input their credentials, select a German bank, and allow the website to interface with the bank, offering functionalities not provided by the banks, such as expenditure pie charts. When launched, user feedback highlighted a reluctance to input credentials into the website, even though it was open-source. Paradoxically, these same users had no reservations about entering their credentials into an open-source desktop software offering similar functionalities.
+## Trust Anchors
 
-This experiment underscores a pivotal insight: *technically*, the website delivering a specific service's functionalities doesn't inherently need to be the same entity that engenders trust. However, in the prevailing web paradigm, a website serves a dual role: it is both the medium through which functionality is presented and a beacon of trust for its users. Even if an entity can develop a superior banking application, it either needs to be as trusted as a bank or possess a comparable level of trust. This shed light into the true causes of centralisation.
+Web 2.0 has evolved into a web of applications, each interdependent on a myriad of web services. A mainstream website would typically implement 10-15 mainstream web services such as Google Login and Google Pay.
 
-## The conflation of functionality with trust and its role in the centralisation of the web
+Unlike traditional application's dependency on system components, these web services transcend their functional roles to become the custodians of trust, safeguarding the secure and reliable operations of web applications. In the discourse of this paper, such pivotal web services are identified as Trust Anchors.
 
-This dichotomy between functionality and trust is evident in Web 2.0's approach to user authentication. How can a website ascertain genuine user authentication while ensuring users' trust in safeguarding their credentials? This conundrum, inherent in Web 1.0, found a solution in Web 2.0 through internet giants who eliminated the need for websites to store or validate user credentials. While previous researchs attribute centralisation to factors like data ownership, network effects, and IP laws, these factors don't fully account for the rise of user authentication services. Entities like Facebook and Google did offer identity services, but so could other platforms, such as OpenID. The distinction lay in the inherent trust users placed in giants like Facebook and Google, stemming from their regular engagement with the functionalities these platforms provided. In this context, the entities providing functions, like Facebook's social media platform or Google's Gmail, simultaneously established themselves as trust anchors. These trust anchors became foundational in the vertical architecture of Web 2.0, suggesting that factors beyond network effects, data ownership, and IP laws contributed to the Web's centralisation.
+This section will dissect the anatomy of trust anchors, delineate their role in the centralization of the web, and propose a decentralized alternative through the implementation of Smart Tokens.
 
-The conflation of functionality with trust and the oversight of the trust element elucidate the trajectory of the Internet's evolution. Starting as a decentralised entity, the Web transitioned to a centralised model in the Web 2.0 era, characterised by its vertical, pyramid-like structure. Recognising and conceptually separating these intertwined elements, as this paper argues, paves the way for future solutions.
+### The Dual Role of Trust Anchors
+
+Trust anchors are web services that offer more than mere functionality; they embody the operational integrity of web applications. Users trust these services having stringent security measures and to remain operational and continue to exist.
+
+#### Case Study: Google Login
+
+Two challenges emerge when a user attempts to authenticate with a website. First, the users can’t trust that the website can safe-guard their data, such as password. Second, the website can’t trust that the user is genuine. This predicament often leads users to prefer logging in with Google, a trusted entity, and websites to favor Google's authentication service. Presently, the reliance on social logins has grown to the extent that some websites have entirely eliminated traditional password databases.
+
+In this context, Google Login serves as a trust anchor, fulfilling a dual role by providing functionality and serving as a bastion of trust. Users trust that Google will adhere to its "promise" of authenticating genuine users without compromising or inadvertently leaking login credentials. A dependency to the centre point is thus created. 
+
+While open authentication protocols like OAuth and OpenID allow any website to implement a secure and reliable authentication system similar to Google Login, they typically lack the trust factor necessary to become a trust anchor. A new entity, unlike Google, may not be trusted to maintain consistent behavior, as it could potentially be compromised, deviate from protocol, or cease operations.
+
+Smart Contracts, on the other hand, are bound by predefined behaviors that are not easily altered. Although Smart Contracts can undergo updates, a democratic process such as a Decentralized Autonomous Organization (DAO) can oversee these changes to ensure they do not stray from the original promised behavior, thus maintaining trustworthiness. This paper posits that smart contract-based smart tokens are more aptly suited to fulfill the role of trust anchors, a concept that will be elaborated upon subsequently.
+
+### Trust Anchor leads to centralisation and innovation barrier
+
+Dr. Gavin Wood has attributed the centralization of the web to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
+
+This paper posits that the concept of the trust anchor significantly amplifies these factors, coalescing them into a formidable force that cements the centralized stature of today's tech giants like Facebook, Google, and Apple. These providers of trust anchors derive their trustworthiness in reliability and operational integrity largely from their scale and profitability. The rationale is that entities like Google, Amazon, and Facebook have garnered substantial profits by being dependable providers of these trust anchors. Consequently, any deviation from their established behavior for short-term profit is deemed economically irrational.
+
+Such dynamics have exacerbated the centralization within the Web 2.0 ecosystem, culminating in an oligopolistic Web 2.0 space.
+
+The trust anchors by the Internet centres, once formed, creates an innovation headwind.
+
+### The Trust Anchor Effect: Innovation Stifled by Centralization
+
+We define the "Trust Anchor Effect" to the phenomenon where the centralization of trust within a few dominant entities creates a significant barrier to innovation. This effect describes a web ecosystem where new products and services, despite being technically feasible, remain unrealized due to the absence of trust in entities other than the established trust anchors. It encapsulates the dependency on these central points for the provision of trust, without which innovation cannot gain traction or user acceptance.
+
+The trust anchor effect is evident in scenarios where a web service's ability to innovate is contingent upon the trust anchors' willingness or readiness to support new functionalities. 
+
+#### Case Study: Google Pay and Google Wallet
+
+Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lack the level of trust that to function as a Trust Anchor.
+
+With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only credit cards but also items like shopping vouchers and digital car keys. However, these are not made into Trust Anchors.
+
+For example, a website that accepts the shopping vouchers during the checkout process can't use the voucher stored in Google Wallet directly, despite it could with credit cards in Google Wallet. User is required to copy and paste the voucher code, as Google Wallet has yet to develop the voucher as a Trust Anchor service. Similarly, although a user can store a digital car key in Google Wallet, this does not extend to allowing a car cleaning service's website to access the car for service purposes. The user still need to carry a physical car key at the cleaning appointment.
+
+This means any web innovation built on top of the recognition of the shopping voucher and use of digital car key cannot proceed unless Google developed them into Trust Anchor services, creating an innovation dependency.
+
+In essence, the trajectory of Web 2.0 innovation is not solely constrained by the technical ingenuity of developers but is significantly influenced by the strategic priorities of the incumbent Internet powerhouses. The current ecosystem operates under a paradigm where new entrants are beholden to the established trust anchors, which act as gatekeepers of progress. This dynamic has led to a web landscape that, while ostensibly advancing under the leadership of tech giants, is in fact characterized by a latent inertia. Innovators find themselves in a position analogous to infantry in an army, where their advance is not limited by their own capabilities but by the strategic decisions of the commanding officers. The result is a web environment that is less a meritocracy of ideas and more a hierarchy of trust, with innovation potential tethered to the discretion of a few dominant entities.
+
+# The Next-Generation Web: A Paradigm of Decentralized Trust and Integration
+
+The next-generation web, as envisioned in this paper, represents a paradigm shift from the centralized trust anchors of today to a decentralized and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratizing the web's trust infrastructure. In this chapter, we will explore the implications of this shift, the areas it would revolutionize, and how it culminates in a web defined by limitless integration.
+
+In the current web ecosystem, trust anchors are the domain of a few centralized entities, which has led to a web that is both siloed and constrained by the strategic priorities of these entities. By allowing anyone to develop and maintain trust anchors, the gatekeepers could be removed to enable a web that is more resilient, diverse, and conducive to innovation.
+
+The method of decentralisation of Trust Anchors, Smart Token, will be elaborated shortly, for now let's first look at the implications.
+
+With the removal of centralized control over trust anchors, web services would no longer be limited to integrating a narrow set of core functionalities. Instead, they could leverage a wide array of trust anchors tailored to their specific needs. This would lead to a seamless and cohesive user experience, as services could integrate more deeply with one another.
+
+## Implications of decentralised trust anchors
+
+### Enabling Smaller Trust Anchors
+
+**Implication:** Decentralized trust anchors would allow smaller entities to establish their own credibility mechanisms. This could lead to a proliferation of niche platforms that can cater to specific community needs or specialized markets without the need for endorsement from large internet giants.
+
+**Example:** In the car insurance industry, small insurers could use decentralized trust anchors to validate car ownership, driver identity, and maintenance records without relying on cumbersome paper processes. This could streamline operations and allow them to offer competitive rates and services.
+
+### Overcoming Barriers to Competition
+
+**Implication:** By removing the monopoly over trust anchors, entities that previously hoarded valuable reputation data would no longer serve as gatekeepers. This would enable a more fluid market where reputational capital can be a portable asset, fostering a more dynamic and competitive landscape.
+
+**Example:** E-commerce platforms could benefit from a decentralized system where a seller's reputation and customer reviews are not confined to a single platform. This would allow sellers to utilize their established reputation to gain financing or expand their business across various marketplaces.
+
+### Facilitating Previously Impossible Innovations
+
+**Implication:** With a decentralized trust anchor system, new services that rely on the integration of multiple trust anchors could emerge. These services would be able to offer highly personalized and flexible experiences that adapt to changing user needs and contexts.
+
+**Example:** A personalized travel guide service could leverage trust anchors to seamlessly manage and adjust travel plans, including bookings, accommodations, and activities, based on the user's real-time preferences and circumstances. This level of integration and flexibility is unattainable in the current centralized trust anchor environment.
+
+## Defining next-generation web
+
+In consideration of the implications previously discussed, this paper proposes a conceptual framework for the next-generation web. This envisioned web is distinguished by the proliferation of ubiquitous trust anchors, which enable limitless and profound integrations across services and platforms. Such a web facilitates a user experience that surpasses the capabilities of the Web 2.0 era and drives innovation forward to enable types of sites and services that couldn't exist prior.
+
+Notably, this vision diverges from the popular concept of Web 3.0, which is characterised as an 'Internet of Value.' Instead, our focus is on the transformative potential of integrations made possible by accessible and universal trust anchors.
+
+# Token as the Trust Anchor
+
+The previous chapter provided a vision of a web with ubiquitous trust anchors, this chapter further posits that the trust anchor should be tokens. We will cover why tokens are suitable as trust anchors, the technical and evolutionary implications and present the new design requirement for the type of tokens suitable for turst anchors: smart tokens.
+
+---
