@@ -27,9 +27,9 @@ Originally influenced by the metaphor of a universal library, the Web was concei
 
 [^comp.infosystems.www]: Its USENET topic name comp.infosystems.www accurately captured it.
 
-The transition from a web of information to a web of application marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are action-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language. The rise of single-page applications dispelled the notion that the Web is like a book consisting of information pages, suggesting instead a singular page: the application.
+The transition from a web of information to a web of application marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are application-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language. The rise of single-page applications dispelled the notion that the Web is like a book consisting of information pages, suggesting instead a singular page: the application.
 
-This evolution was crucial to understand the trust anchors, which the authors of this paper argues played a pivotal role in the centralization of the Internet in the last two decades.
+This evolution was crucial to understand the trust anchors, which this paper argues played a pivotal role in the centralization of the Internet in the last two decades.
 
 ## Trust Anchors
 
@@ -37,13 +37,15 @@ Web 2.0 has evolved into a web of applications, each interdependent on a myriad 
 
 Unlike traditional application's dependency on system components, these web services transcend their functional roles to become the custodians of trust, safeguarding the secure and reliable operations of web applications. In the discourse of this paper, such pivotal web services are identified as Trust Anchors.
 
-This section will dissect the anatomy of trust anchors, delineate their role in the centralization of the web, and propose a decentralized alternative through the implementation of Smart Tokens.
+This section will dissect the anatomy of trust anchors, delineate their role in the centralization of the web, and propose a decentralized alternative through the implementation of Smart Tokens. We will start with a definition:
 
-### The Dual Role of Trust Anchors
+#### Trust Anchors
 
-Trust anchors are web services that offer more than mere functionality; they embody the operational integrity of web applications. Users trust these services having stringent security measures and to remain operational and continue to exist.
+Trust Anchors are essential web services that web applications depends on, yet can't provide themselves even if they posses the code and computation resources, as it is a point of trust the web applications' business logic depends on. Trust Anchors are culmination of functionality and trust. Trust anchors are web services that offer more than mere functionality; they embody the operational integrity of web applications. Users trust these services having stringent security measures and to remain operational and continue to exist.
 
-#### Case Study: Google Login
+The dual-role nature of trust anchor can be explained in a case study
+
+### Case Study: Google Login
 
 Two challenges emerge when a user attempts to authenticate with a website. First, the users can’t trust that the website can safe-guard their data, such as password. Second, the website can’t trust that the user is genuine. This predicament often leads users to prefer logging in with Google, a trusted entity, and websites to favor Google's authentication service. Presently, the reliance on social logins has grown to the extent that some websites have entirely eliminated traditional password databases.
 
@@ -53,7 +55,7 @@ While open authentication protocols like OAuth and OpenID allow any website to i
 
 Smart Contracts, on the other hand, are bound by predefined behaviors that are not easily altered. Although Smart Contracts can undergo updates, a democratic process such as a Decentralized Autonomous Organization (DAO) can oversee these changes to ensure they do not stray from the original promised behavior, thus maintaining trustworthiness. This paper posits that smart contract-based smart tokens are more aptly suited to fulfill the role of trust anchors, a concept that will be elaborated upon subsequently.
 
-### Trust Anchor leads to centralisation and innovation barrier
+### The Limit in the provision of trust Anchor leads to centralisation and innovation barrier
 
 Dr. Gavin Wood has attributed the centralization of the web to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
 
@@ -63,13 +65,13 @@ Such dynamics have exacerbated the centralization within the Web 2.0 ecosystem, 
 
 The trust anchors by the Internet centres, once formed, creates an innovation headwind.
 
-### The Trust Anchor Effect: Innovation Stifled by Centralization
+#### The Trust Anchor Effect: Innovation Stifled by Centralization
 
 We define the "Trust Anchor Effect" to the phenomenon where the centralization of trust within a few dominant entities creates a significant barrier to innovation. This effect describes a web ecosystem where new products and services, despite being technically feasible, remain unrealized due to the absence of trust in entities other than the established trust anchors. It encapsulates the dependency on these central points for the provision of trust, without which innovation cannot gain traction or user acceptance.
 
 The trust anchor effect is evident in scenarios where a web service's ability to innovate is contingent upon the trust anchors' willingness or readiness to support new functionalities. 
 
-#### Case Study: Google Pay and Google Wallet
+### Case Study: Google Pay and Google Wallet
 
 Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lack the level of trust that to function as a Trust Anchor.
 
@@ -119,6 +121,38 @@ Notably, this vision diverges from the popular concept of Web 3.0, which is char
 
 # Token as the Trust Anchor
 
-The previous chapter provided a vision of a web with ubiquitous trust anchors, this chapter further posits that the trust anchor should be tokens. We will cover why tokens are suitable as trust anchors, the technical and evolutionary implications and present the new design requirement for the type of tokens suitable for turst anchors: smart tokens.
+The preceding chapter outlined a vision for a web populated by ubiquitous trust anchors. This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
+
+Reflecting on the case of Google Pay/Google Wallet as a trust anchor, one might envision a decentralized trust anchor as a similar entity, such as a hypothetical "DecentWallet." However, this paper argues that the trust anchors should be tokens.
+
+This argument rests on two main premises: one concerning trust, and the other concerning layered design.
+
+## Trust Anchors: Tokens, not Platforms
+
+Firstly, regarding trust, we argue that tokens, not software or platforms, are the actual focal points of trust dependency.
+
+Consider previous examples, such as a car key token. If implemented as a trust anchor, it could enable many innovative use-cases. Naturally, questions arise: Should a car wash website accept any car key token authorization and allow the car owner to park the car and walk away? Since many Google APIs are open, one could sign up, create a token called "MyCar," generate a key, and use that on the reservation webpage. The car wash website would accept a non-existent car. Some form of validation must take place.
+
+Two potential solutions arise: the website could maintain a trusted car key token list, or Google could become the gatekeeper, not allowing production car key token releases unless the developer can prove that they are coding the car key token for a genuine car manufacturer. The latter is more practical, so Google becomes not only the car key web service provider but also a curator of valid car key token lists.
+
+However, Google cannot ensure that the car key token functions as the web applications depending on them expect. Each car key token is programmed by their respective car manufacturer, and Google is not in a position to audit their code. Ultimately, the trust lies with the token itself, and Google acts as a transferer of trust rather than the origin of trust. The car wash website essentially trusts that if Google recognizes the car token as being genuinely programmed by a car vendor, such as Tesla, then Tesla would not program their car key token to create invalid authorizations just to spoof the website.
+
+With public key cryptography, it is not a problem to attest that a car key token is programmed by Tesla. Therefore, Google's role is reduced to a curator, and trust remains with the issuer of the car key token, such as Tesla. What makes Google a better curator of valid car keys? They don't produce any cars, nor do they own the knowledge of how each car interacts with their keys.
+
+Recognizing this, a decentralized trust anchor is not the service that makes the token interact with applications - the trust anchor is the token.
+
+## Trust Anchors and Layered Design
+
+The second premise concerns the layered design.
+
+The success of the Internet demonstrates the power of a layered approach. The designers of Internet protocol did not concern themselves with what applications and presentations were enabled by the protocol. Instead, they designed it to focus on IP address-based data transfer. This approach allowed for competition among FTP, USENET, and the Web. A layered approach offers an evolutionary advantage. Even if early protocols are not successful, winning protocols like the Web could be designed without reinventing the layers below them.
+
+Continuing with the car token analogy, Google Wallet supports the locking and unlocking of car tokens. If it were willing to enable innovations, it might provide authorization features useful to the car wash company. However, car vendors are the source of innovation in this space. Car vendors could provide functionality to their car keys, such as a car wash mode, or generate geo-fenced keys (car keys that don't allow the car to be driven onto the roads), which the websites could use. But letting Google Wallet decide the features of the tokens would return us to the situation where the whole Web 2.0 market waits for trust anchors to provide certain services in order to innovate.
+
+Therefore, a layered design would be a great evolutionary advantage. Let tokens provide services instead of a platform, and let industrial bodies, DAOs, or applications themselves decide the curated list and standardize the offerings of token functions.
+
+To recap, the two reasons tokens, not platforms, are the trust anchors are because they are the origin of trust, and tokens need to be decoupled from the token-serving platforms such as Google Wallet in order to compete and drive forward innovation.
+
+Given that tokens are the new trust anchors, the effort to decentralize trust anchors should not just decentralize a token-providing platform, but should enrich tokens to carry out the functions of trust anchors. This brings us to the core concept of this paper: smart tokens.
 
 ---
