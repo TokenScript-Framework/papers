@@ -23,15 +23,15 @@ This decision, to be explored further in subsequent sections, inadvertently pave
 
 ## The Shift from Information to Applications
 
-Originally influenced by the metaphor of a universal library, the Web was conceived as an information system[^comp.infosystems.www]. Today, such a description feels outdated. A more fitting depiction of the modern Internet is a sprawling network of web applications. Rarely do individuals now describe their online activity as simply "browsing" for information. Instead, they're interacting with dynamic web apps to chat, shop, book hotels, work remotely, network, or even just kill time. Few draw parallels between the Internet and a Universal Library these days. The once-prevailing question—how a global computer network might act as a peerless information source, surpassing the constraints of isolated databases or physical libraries—no longer captures the essence of our modern Internet experience.
+Originally influenced by the metaphor of a universal library, the Web was conceived as an information system[^comp.infosystems.www]. Today, such a description feels outdated. A more fitting depiction of the modern Internet is a sprawling network of web applications. Rarely do individuals now describe their online activity as simply "browsing" for information. Instead, they're interacting with dynamic web apps to chat, shop, book hotels, work remotely, network, or even just kill time. Few draw parallels between the Internet and a Universal Library these days.
 
 [^comp.infosystems.www]: Its USENET topic name comp.infosystems.www accurately captured it.
 
-The transition from a web of information to a web of application marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are application-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language. The rise of single-page applications dispelled the notion that the Web is like a book consisting of information pages, suggesting instead a singular page: the application.
+The transition from a web of information to a web of application marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are application-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language.
 
-This evolution was crucial to understand the trust anchors, which this paper argues played a pivotal role in the centralization of the Internet in the last two decades.
+As the Web transitioned from an information repository to an application platform, the concept of trust anchors emerged. These trust anchors - essential services web ecosystem depends on, are usually provided by a few dominant entities, became the focal points of trust for web applications. This dynamic has inadvertently led to the centralization of the web, stifling innovation and competition.
 
-## Trust Anchors
+## Centralization: An Unintended Consequence of the Shift to Applications
 
 Web 2.0 has evolved into a web of applications, each interdependent on a myriad of web services. A mainstream website would typically implement 10-15 mainstream web services such as Google Login and Google Pay.
 
@@ -82,6 +82,18 @@ For example, a website that accepts the shopping vouchers during the checkout pr
 This means any web innovation built on top of the recognition of the shopping voucher and use of digital car key cannot proceed unless Google developed them into Trust Anchor services, creating an innovation dependency.
 
 In essence, the trajectory of Web 2.0 innovation is not solely constrained by the technical ingenuity of developers but is significantly influenced by the strategic priorities of the incumbent Internet powerhouses. The current ecosystem operates under a paradigm where new entrants are beholden to the established trust anchors, which act as gatekeepers of progress. This dynamic has led to a web landscape that, while ostensibly advancing under the leadership of tech giants, is in fact characterized by a latent inertia. Innovators find themselves in a position analogous to infantry in an army, where their advance is not limited by their own capabilities but by the strategic decisions of the commanding officers. The result is a web environment that is less a meritocracy of ideas and more a hierarchy of trust, with innovation potential tethered to the discretion of a few dominant entities.
+
+## Reimagining Web 3.0: Beyond the Internet of Value
+
+The prevailing vision for Web 3.0 is characterised as an 'Internet of Value.' This perspective sees the next-generation web as a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era. The centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
+
+However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. Rather than viewing the centralisation of value as the *cause* of the web's current challenges, we argue that it is, in fact, a *consequence* of the web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the desire for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
+
+Moreover, the idea of Web 3.0 as an 'Internet of Value' may reflect more of a wishful thinking than the actual evolutionary process of the web. Not everyone who moved to Web 2.0 was pursuing value, and not everyone who moves from Web 2.0 to Web 3.0 will be pursuing value either. The value investing community, while growing, still represents a small section of web users, and it is likely to remain so in the future.
+
+Instead of defining Web 3.0 as an 'Internet of Value,' we propose to view the next stage of the web's evolution as a continuation of its existing trajectory, with a focus on the decentralization of Trust Anchors. This perspective sees Web 3.0 as a platform that enables more profound integrations and fosters widespread innovation by allowing anyone to develop and maintain Trust Anchors. In this context, the Trust Anchors of the future web will not be platforms or services, but tokens - Smart Tokens, to be precise. The following sections will delve into this concept in more detail.
+
+To distinguish between Web 3.0 as an 'Internet of Value' and the next-generation web this paper envisions, we will refer to our vision as the 'Next-Generation Web.' In this Next-Generation Web, the focus is not on the distribution of value but on the decentralization of Trust Anchors. This perspective sees the Next-Generation Web as a platform that enables more profound integrations and fosters widespread innovation by allowing anyone to develop and maintain Trust Anchors. In this context, the Trust Anchors of the future web will not be platforms or services, but tokens - Smart Tokens, to be precise. The following sections will delve into this concept in more detail.
 
 # The Token-Centric Web: A Paradigm of Decentralized Trust and Integration
 
@@ -153,6 +165,6 @@ Therefore, a layered design would be a great evolutionary advantage. Let tokens 
 
 To recap, the two reasons tokens, not platforms, are the trust anchors are because they are the origin of trust, and tokens need to be decoupled from the token-serving platforms such as Google Wallet in order to compete and drive forward innovation.
 
-Given that tokens are the new trust anchors, the effort to decentralize trust anchors should not just decentralize a token-providing platform, but should enrich tokens to carry out the functions of trust anchors. This brings us to the core concept of this paper: smart tokens.
+Given that tokens are the new trust anchors, the effort to decentralize trust anchors should not just decentralize a token-providing platform, but should enrich tokens to carry out the functions of trust anchors. This brings us to the core concept of this paper: Smart Tokens.
 
 ---
