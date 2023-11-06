@@ -93,23 +93,23 @@ The method of decentralisation of Trust Anchors, Smart Token, will be elaborated
 
 With the removal of centralized control over trust anchors, web services would no longer be limited to integrating a narrow set of core functionalities. Instead, they could leverage a wide array of trust anchors tailored to their specific needs. This would lead to a seamless and cohesive user experience, as services could integrate more deeply with one another.
 
-## Implications of decentralised trust anchors
+## Missed Opportunities of Decentralised Trust Anchors
 
 ### Enabling Smaller Trust Anchors
 
-**Implication:** Decentralized trust anchors would allow smaller entities to establish their own credibility mechanisms. This could lead to a proliferation of niche platforms that can cater to specific community needs or specialized markets without the need for endorsement from large internet giants.
+**Missed Opportunity:** Decentralized trust anchors would allow smaller entities to establish their own credibility mechanisms. This could lead to a proliferation of niche platforms that can cater to specific community needs or specialized markets without the need for endorsement from large internet giants.
 
 **Example:** In the car insurance industry, small insurers could use decentralized trust anchors to validate car ownership, driver identity, and maintenance records without relying on cumbersome paper processes. This could streamline operations and allow them to offer competitive rates and services.
 
 ### Overcoming Barriers to Competition
 
-**Implication:** By removing the monopoly over trust anchors, entities that previously hoarded valuable reputation data would no longer serve as gatekeepers. This would enable a more fluid market where reputational capital can be a portable asset, fostering a more dynamic and competitive landscape.
+**Missed Opportunity:** By removing the monopoly over trust anchors, entities that previously hoarded valuable reputation data would no longer serve as gatekeepers. This would enable a more fluid market where reputational capital can be a portable asset, fostering a more dynamic and competitive landscape.
 
 **Example:** E-commerce platforms could benefit from a decentralized system where a seller's reputation and customer reviews are not confined to a single platform. This would allow sellers to utilize their established reputation to gain financing or expand their business across various marketplaces.
 
 ### Facilitating Previously Impossible Innovations
 
-**Implication:** With a decentralized trust anchor system, new services that rely on the integration of multiple trust anchors could emerge. These services would be able to offer highly personalized and flexible experiences that adapt to changing user needs and contexts.
+**Missed Opportunity:** With a decentralized trust anchor system, new services that rely on the integration of multiple trust anchors could emerge. These services would be able to offer highly personalized and flexible experiences that adapt to changing user needs and contexts.
 
 **Example:** A personalized travel guide service could leverage trust anchors to seamlessly manage and adjust travel plans, including bookings, accommodations, and activities, based on the user's real-time preferences and circumstances. This level of integration and flexibility is unattainable in the current centralized trust anchor environment.
 
