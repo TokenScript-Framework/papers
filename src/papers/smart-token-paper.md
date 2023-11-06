@@ -1,8 +1,8 @@
 ---
-title: "Smart Token: The Building Block for the Next-Generation Web"
+title: "Smart Token: The Building Block for the Next-Generation Token-Centric Web"
 date: "1st October, 2023"
 abstract: |
-  Web 2.0 marked a significant shift from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books. With Web 2.0, the Web transformed into a service platform, leading to a "reverse pyramid" structure. In this new architecture, contemporary internet behemoths form the narrow, foundational base, reminiscent of a structure precariously balanced on its tip. Such centralisation has stifled the Web's innovative potential. While the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We propose the "Smart Token" as a pivotal architectural choice for the next-generation Web, leveraging smart contracts to instantiate trust anchors. This vision entails a layered, modular token centric web where sites employ tokens to facilitate integrations, amplify user experience, bolster privacy, and reduce dependence on today's monolithic internet titans. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles.
+  The evolution of the Web has been marked by significant shifts, from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books, to Web 2.0, where the Web transformed into an application platform. This transformation led to a "reverse pyramid" structure, with contemporary internet behemoths forming the narrow, foundational base. Such centralisation has stifled the Web's innovative potential. As the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We introduce the concept of a Token-Centric Web, a vision for the next-generation Internet that decentralizes trust and enables an ecosystem of integrations. In this context, we propose "Smart Tokens," leveraging smart contracts, as an architectural choice to instantiate trust anchors in this Token-Centric Web to amplify user experience, bolster privacy, reduce dependence on monolithic Internet titans, and foster a new wave of web innovation. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles.
 ---
 
 # Web Foundations: From Information Repositories to Trust Anchors
@@ -83,7 +83,7 @@ This means any web innovation built on top of the recognition of the shopping vo
 
 In essence, the trajectory of Web 2.0 innovation is not solely constrained by the technical ingenuity of developers but is significantly influenced by the strategic priorities of the incumbent Internet powerhouses. The current ecosystem operates under a paradigm where new entrants are beholden to the established trust anchors, which act as gatekeepers of progress. This dynamic has led to a web landscape that, while ostensibly advancing under the leadership of tech giants, is in fact characterized by a latent inertia. Innovators find themselves in a position analogous to infantry in an army, where their advance is not limited by their own capabilities but by the strategic decisions of the commanding officers. The result is a web environment that is less a meritocracy of ideas and more a hierarchy of trust, with innovation potential tethered to the discretion of a few dominant entities.
 
-# The Next-Generation Web: A Paradigm of Decentralized Trust and Integration
+# The Token-Centric Web: A Paradigm of Decentralized Trust and Integration
 
 The next-generation web, as envisioned in this paper, represents a paradigm shift from the centralized trust anchors of today to a decentralized and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratizing the web's trust infrastructure. In this chapter, we will explore the implications of this shift, the areas it would revolutionize, and how it culminates in a web defined by limitless integration.
 
@@ -113,7 +113,7 @@ With the removal of centralized control over trust anchors, web services would n
 
 **Example:** A personalized travel guide service could leverage trust anchors to seamlessly manage and adjust travel plans, including bookings, accommodations, and activities, based on the user's real-time preferences and circumstances. This level of integration and flexibility is unattainable in the current centralized trust anchor environment.
 
-## Defining next-generation web
+## Envisioning the next-generation web
 
 In consideration of the implications previously discussed, this paper proposes a conceptual framework for the next-generation web. This envisioned web is distinguished by the proliferation of ubiquitous trust anchors, which enable limitless and profound integrations across services and platforms. Such a web facilitates a user experience that surpasses the capabilities of the Web 2.0 era and drives innovation forward to enable types of sites and services that couldn't exist prior.
 
