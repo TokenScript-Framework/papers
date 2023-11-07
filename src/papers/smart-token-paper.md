@@ -141,15 +141,17 @@ In consideration of the implications previously discussed, this paper proposes a
 
 Notably, this vision diverges from the popular concept of Web 3.0, which is characterised as an 'Internet of Value.' Instead, our focus is on the transformative potential of integrations made possible by accessible and universal trust anchors.
 
-# Token as the Trust Anchor
+# Smart Token as the Trust Anchor
 
 The preceding chapter outlined a vision for a web populated by ubiquitous trust anchors. This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
+
+## Token as the Trust Anchor
 
 Reflecting on the case of Google Pay/Google Wallet as a trust anchor, one might envision a decentralised trust anchor as a similar entity, such as a hypothetical "DecentWallet." However, this paper argues that the trust anchors should be tokens.
 
 This argument rests on two main premises: one concerning trust and the other concerning layered design.
 
-## Trust Anchors: Tokens, not Platforms
+### Premise 1: Trust is on the Tokens, not on the Platforms
 
 Firstly, regarding trust, we argue that tokens, not software or platforms, are the actual focal points of trust dependency.
 
@@ -163,14 +165,42 @@ With public key cryptography, it is not a problem to attest that a car key token
 
 Recognising this, a decentralised trust anchor is not the service that makes the token interact with applications - the trust anchor is the token.
 
-## Trust Anchors and Layered Design
+### Premise 2: Using Token for trust anchor Allows for Layered Design
 
-The second premise for tokens being trust anchors concerns the layered design of the Internet. The success of the Internet demonstrates the power of a layered approach. Instead of designing protocols around specific applications, Internet Protocol designers focused on enabling IP address-based data transfer. This approach allowed for competition among various Internet applications, such as FTP, USENET, and the Web, and provided an evolutionary advantage. Even if early protocols failed, more successful ones like the Web could be designed without reinventing the lower layers.
+The second premise for tokens serving as trust anchors is rooted in the layered design of the Internet. This approach has been instrumental to the Internet's success, as it allows for competition among various applications like FTP, USENET, and the Web. The layered design facilitates the evolution of the Internet, ensuring that even if early protocols fail, more successful ones can be developed without overhauling the foundational layers.
 
-This layered design approach can be applied to our car-key token analogy. Google Wallet, for example, supports the locking and unlocking of cars using car-key tokens. To enable innovations, Google Wallet could potentially provide authorization features useful to a car wash company. However, the real source of innovation in this space is the car vendors. They could add functionalities to their car-keys, such as a car wash mode or geo-fenced keys that restrict the car from being driven onto roads.
+Applying this layered design approach to our car-key token example, we find that platforms like Google Wallet could potentially provide additional authorization features useful to a car wash company. However, the real innovation lies in the hands of car vendors, who could enhance their car-key tokens with functionalities like a car wash mode or geo-fenced keys that restrict the car from being driven onto roads.
 
-If Google Wallet were to dictate the features of the tokens, we would revert to a scenario where the entire Web 2.0 market waits for trust anchors to provide specific services before they can innovate. A layered design, where tokens provide services independently of platforms like Google Wallet, would offer a significant evolutionary advantage. This approach would allow industrial bodies, DAOs, or applications themselves to decide on the curated list and standardize the offerings of token functions.
+If platforms like Google Wallet dictate the features of the tokens, we risk returning to a scenario where the entire Web 2.0 market is waiting for trust anchors to provide specific services before they can innovate. A layered design, where tokens provide services independently of platforms, offers a significant evolutionary advantage.
 
-In conclusion, tokens, not platforms, should serve as trust anchors for two reasons. First, they are the origin of trust. Second, tokens need to be decoupled from token-serving platforms to foster competition and drive innovation. Therefore, efforts to decentralize trust anchors should not just focus on decentralizing token-providing platforms, but also on enriching tokens to carry out the functions of trust anchors. This brings us to the core concept of this paper: Smart Tokens.
+However, using tokens as trust anchors could lead to services not being sufficiently unified. Two potential solutions can address this issue:
+
+Firstly, industry bodies, Decentralized Autonomous Organizations (DAOs), or the applications themselves can facilitate the development of specifications and standards that guide how tokens should be programmed and interact with various applications. It's worth noting that public-blockchain based standardization process such as ERC is insufficient for standardising trust anchor tokens, the cause for that is to be elaborated in the next section.
+
+Secondly, software libraries could serve as software that abstracts the tokens, similar to how Google Wallet presents a unified interface for different payment cards. Since the tokens themselves already serve as trust anchors, these libraries can focus on facilitating seamless interactions between applications and tokens without needing to externally validate the trustworthiness of the tokens, therefore can be internal components of token-using websites.
+
+In conclusion, tokens, not platforms, should serve as trust anchors. They are the origin of trust and need to be decoupled from token-serving platforms to foster competition and drive innovation, echoing the layered approach that has benefited the Internet. Therefore, efforts to decentralize trust anchors should enrich tokens so they can carry out the functions of trust anchors, rather than merely focusing on decentralizing token-providing platforms. This perspective leads us to the core concept of this paper: Smart Tokens.
+
+## Transitioning from Smart Contract Tokens to Smart Tokens
+
+Building on the previous discussion, Smart Contract Tokens, defined in public blockchains such as Ethereum, possess certain characteristics that make them a suitable foundation for trust anchors.
+
+Firstly, the existence and availability of Smart Contract Tokens do not solely depend on third-party services. For instance, a token holder, such as a smart car-key owner, can prove that they own a token to a website, without needing the smart car vendor's web service to be online. This is a significant advantage over traditional trust anchors. For instance, when Google experienced outages in three times in 2020, and twice recently in 2022, it left passengers stranded at airports as airlines required Google login to display their tickets. In contrast, blockchain systems such as Ethereum and Bitcoin have been continuously available, with the unavailability of Smart Contract Tokens historically tied only to specific smart contracts themselves.
+
+Secondly, Smart Contract Tokens has guaranteed behaviour based on their trusted protocols. Although smart contracts can be updated, mechanisms such as Decentralized Autonomous Organizations (DAOs) have been built into modern smart contracts to ensure that any update follows the trust protocol established. The trusted protocol varies from use-case to use-case. For instance, many collectable Non-Fungible Tokens (NFTs) like the Loot token, do not have an issuing function, thereby guaranteeing that the issuer will not inflate the market with more NFTs. But in general the trust is built on the protocol coded in Turing-Complete EVM bytecode.
+
+However, while Smart Contract Tokens form a solid base, they fall short in the role of trust anchors.
+
+#### Firstly, Smart Contract Tokens are not inherently designed to function as web services. 
+
+Although the execution of smart contract function calls, facilitated via Remote Procedure Call (RPC) interfaces, bears a resemblance to the execution of web service function calls through RESTful APIs, they lack a comprehensive service matrix. This includes aspects such as uptime, Service Level Objectives (SLOs), optimisation, load balancing, and confidentiality (ensuring that the RPC server does not leak information about executed calls). Furthermore, the lack of modularity in smart contract tokens is a significant limitation. While web services can be updated to reflect the evolving needs of websites, smart contract calls under the RPC interface cannot be updated without altering the smart contract, which governs its core logic. Thus, using Smart Contract Tokens as trust anchors imply an unsustainable bind between token logic and service logic, which would be analogous to the unsuitable use of SQL as the data language in web front-ends, binding database structure with web interface.
+
+#### Secondly, Smart Contract Tokens lack a suitable runtime environment.
+
+At first glance, it might appear that all Smart Contract Tokens have a runtime environment. For instance, in Ethereum, this would be the Ethereum Virtual Machine (EVM). However, the EVM was specifically designed with the maintenance of states in mind, which is fundamental for value transfer, but not necessarily for functioning as a web service. For instance, it does not maintain the status of a web session, only the states in the blockchain; its operating environment does not demand integrity - if a node returns a false negative in a view function call, there are no repercussions for the node. Moreover, it lacks facilities such as HTTP GET/POST requests and data storage, which are essential for a web environment. Finally, an EVM instance describes smart contract status, not a token instance - there is no EVM to describe a token without also maintaining the entire contract state. This highlights the shortcomings of the EVM when serving as the token runtime environment, which will be explored further in a subsequent section.
+
+Recognising these limitations, it becomes evident that Smart Contract Tokens need to be further developed to serve as effective trust anchors. This enhanced version, "Smart Tokens," was first termed by Virgil Griffith. Griffith coined this term during a casual conversation in a bar in Surry Hills, Sydney, in 2018, as the team behind this paper deliberated on the potential building blocks of Web3. At that point, Web3 was still in its budding state and had not yet been defined as an 'Internet of Value.' The phrase "Smart Token" caught on, and the team adopted the moniker "Smart Token Labs." However, the exact reasoning behind Griffith's nomenclature remains a mystery, as he was unfortunately incarcerated before he could elaborate on it. Hence, we are left to speculate why a Smart Contract Token, enhanced to act as a building block for Web3, was christened as a "Smart Token."
+
+The ensuing sections will delve deeper into the concept of Smart Tokens, exploring their design requirements and potential applications, and how they could serve as the building blocks for the next-generation Web.
 
 ---
