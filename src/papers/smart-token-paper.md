@@ -71,7 +71,7 @@ The case studies above help us to better understand the characteristics of Trust
 
 Dr. Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
 
-This paper posits that the concept of the trust anchor significantly amplifies these factors, coalescing them into a formidable force that cements the centralised stature of today's tech giants like Facebook, Google, and Apple. These providers of trust anchors derive their trustworthiness in reliability and operational integrity largely from their scale and profitability. The rationale is that entities like Google, Amazon, and Facebook have garnered substantial profits by being dependable providers of these trust anchors. Consequently, any deviation from their established behaviour for short-term profit is deemed economically irrational.
+This paper posits that the role of trust anchors significantly amplifies these factors, coalescing them into a formidable force that reinforces the centralised dominance of today's tech giants. These entities, including Facebook, Google, and Apple, derive their trustworthiness and operational integrity largely from their scale and profitability. The rationale is that such entities have amassed substantial profits by being reliable providers of trust anchors. As a result, any deviation from their established behaviour for short-term gain is considered economically irrational.
 
 Such dynamics have exacerbated the centralisation within the Web 2.0 ecosystem, culminating in an oligopolistic Web 2.0 space.
 
