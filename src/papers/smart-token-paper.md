@@ -5,7 +5,7 @@ abstract: |
   The evolution of the Web has been marked by significant shifts, from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books, to Web 2.0, where the Web transformed into an application platform. This transformation led to a "reverse pyramid" structure, with contemporary internet behemoths forming the narrow, foundational base. Such centralisation has stifled the Web's innovative potential. As the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We introduce the concept of a Token-Centric Web, a vision for the next-generation Internet that decentralises trust and enables an ecosystem of integrations. In this context, we propose "Smart Tokens," leveraging smart contracts, as an architectural choice to instantiate trust anchors in this Token-Centric Web to amplify user experience, bolster privacy, reduce dependence on monolithic Internet titans, and foster a new wave of web innovation. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles.
 ---
 
-# Web Foundations: From Information Repositories to Trust Anchors
+# Web Foundations and Trust Anchors
 
 ## The Web's Foundational Model
 
@@ -99,7 +99,7 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 
 The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era. The centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
 
-However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the desire for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
+However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
 Furthermore, the characterization of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web. Not everyone who transitioned from prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
@@ -107,7 +107,7 @@ Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an al
 
 The Trust Anchors of the future Web will not be platforms or services, but tokens - specifically, Smart Tokens. The ensuing sections will delve into this concept in more detail.
 
-# The Token-Centric Web: A Paradigm of Decentralised Trust and Integration
+# The Token-Centric Web: Decentralised Trust and Integration
 
 The next-generation Web, as envisioned in this paper, represents a paradigm shift from the centralised trust anchors of today to a decentralised and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratising the Web's trust infrastructure. In this chapter, we will explore the implications of this shift, the areas it would revolutionise, and how it culminates in a web defined by limitless integration.
 
@@ -141,7 +141,7 @@ In consideration of the implications previously discussed, this paper proposes a
 
 Notably, this vision diverges from the popular concept of Web 3.0, which is characterised as an 'Internet of Value.' Instead, our focus is on the transformative potential of integrations made possible by accessible and universal trust anchors.
 
-# Smart Token as the Trust Anchor
+# Smart Tokens: The New Trust Anchors
 
 The preceding chapter outlined a vision for a web populated by ubiquitous trust anchors. This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
 
@@ -202,5 +202,91 @@ At first glance, it might appear that all Smart Contract Tokens have a runtime e
 Recognising these limitations, it becomes evident that Smart Contract Tokens need to be further developed to serve as effective trust anchors. This enhanced version, "Smart Tokens," was first termed by Virgil Griffith. Griffith coined this term during a casual conversation in a bar in Surry Hills, Sydney, in 2018, as the team behind this paper deliberated on the potential building blocks of Web3. At that point, Web3 was still in its budding state and had not yet been defined as an 'Internet of Value.' The phrase "Smart Token" caught on, and the team adopted the moniker "Smart Token Labs." However, the exact reasoning behind Griffith's nomenclature remains a mystery, as he was unfortunately incarcerated before he could elaborate on it. Hence, we are left to speculate why the envisioned building block for Web3 was christened as a "Smart Token."
 
 The ensuing sections will delve deeper into the concept of Smart Tokens, exploring their design requirements and potential applications, and how they could serve as the building blocks for the next-generation Web.
+
+## Smart Token Architecture
+
+Part of the architecture of a Smart Token can be inferred from traditional trust anchors, such as Google Wallet. However, due to the decision to base the Smart Token on public blockchain systems, several significant changes are necessary. Most importantly, Token Runtime Environment replaces the role of Google as the operating environment.
+
+#### Token Runtime Environment
+
+In the Smart Token architecture, the role of smart contract is to ensure the trusted behaviour of the token, such as transfer, creation and destruction of the tokens. A significant part of the trust anchor logic has to be written separately from the smart contract and run in a Token Runtime Environment. This allows Token to fill the role of Trust Anchor.
+
+We enumerate the features needed for such a runtime environment.
+
+### Requirements of Token Runtime Environment
+
+#### Token's Service Interface
+
+To support use-cases of web applications, tokens need to provide interfaces for web services. In the example of a car-key token, the website might solicit the colour of the car for identification purpose. Similarly, a smart flight ticket token might provide a call back interface to a hotel website, to inform the website if there is any delay in the passenger's arrival. It's worth noting that these service interfaces do not equal to their smart contract interfaces, as their smart contract is focused on ensuring token rules being followed, and not necessary provision of the services.
+
+#### Management of Token's State
+
+This includes the token's temporary state not associated with the strong, smart contract-based rules.  There are common types of states, such as the signed parts of a multi-signature transactions, as well as token-specific states, for instance, in a car-key token, this might include emphemeral car-key authorisations previously generated.
+
+#### Separation of runtime environment
+
+It is vital that the token's runtime code does not share the same memory as the web application it supports. Trust anchors command a high level of trust that other web applications depend on. Without a separate runtime environment for the token and the website using it - such as packing token code with Webpack[^webpack] - users are forced to only use web applications they fully trust, which presents the same trust barrier discussed earlier.
+
+[^webpack]: A common misconception is that packaging technology, such as webpack, can substitute for the runtime environment. However, webpack is a static bundling tool and does not manage runtime processes. Consider a scenario where a website executes trust anchor code, packaged in webpack, within the same environment as the webpage itself. In this case, a car-key token is used on a website. Before any authorisation is made, in order to render a user interface for car selection, the website would already have access to the car's existence, basic information, and the user's relevant key needed for signing. This is because these details are rendered in the webpage's own memory. Such a design, lacking separation between the runtime environment of the token and the website using it, compels the user to only use web applications they fully trust. This reintroduces the same trust barrier previously discussed, thereby highlighting the pivotal role of a distinct runtime environment for token operations.
+
+#### Ability to Verify Code Executed in the Runtime Environment
+
+To allow users to view the token as a trust anchor, it must originate from the same source as the token issuer itself, or a source of equivalent trust. The signature on the code running in the secure environment must be traceable to the same source as the smart contract from which the token is derived.
+
+#### Event-Driven Design
+
+The primary case for an event-driven design is to synchronise the status of the token with the blockchain status. Moreover, the token's status and function may be affected by other related tokens, necessitating a cascade of event processing. Furthermore, there are use-cases where the issuer needs an event-based communication channel with the users, such as prompting for token expiry. This necessitates a declarative interface on what event is interesting to the token, as the token code needs to be woken up from a hibernating status[^hibernating] to respond to an event.
+
+[^hibernating]: Unlike browser JavaScript, the event-driven design of a token cannot assume that the token's code is actively running when an event occurs, especially as the user may not have a browser window open at that time. This necessitates the need for a declarative interface that specifies which events are relevant to the token. Without such an interface, the token code would need to be continually awakened from a dormant state to respond to numerous events, many of which may be irrelevant, leading to unnecessary computational effort and inefficient operation. This declarative interface, therefore, serves as a filter, allowing the token code to remain in a hibernation-like state until a relevant event requires its attention.
+
+#### Composability
+
+In the absence of a platform, tokens need to rely on standards and composable interfaces to work with each other. This is straightforward in the case of composable tokens from the same team. However, this cannot be guaranteed[^car-plate-dependency]. Again, declarative components are needed here as when the use-case arises, a system needs to instantiate the relevant tokens without first running them in memory.
+
+[^car-plate-dependency]: In instances where two tokens are closely related, such as the car-key token and the car-ownership token, their creation process is likely to be closely linked due to shared developers or teams. However, this close collaboration cannot be universally guaranteed. For instance, if a user wishes to loan their car to a website for an extended period of time, beyond a simple cleaning service, the car's registration plate - another smart token - becomes a dependency. This token would likely originate from a government entity, demonstrating that token dependencies can extend beyond immediate development teams and encompass larger regulatory bodies. 
+
+#### Security
+
+Given that a token can enable multiple web applications, it often becomes a more attractive target for attacks than the website itself. The design of the token runtime must take this into account. Furthermore, to safeguard websites from generating incorrect or malicious transactions, transactions should be generated inside the Token's Runtime Environment, in response to the need of the web application it supports. For example, a car cleaning service website shouldn't have the code to generate a car-key authorisation; it should only have the code to call for such an authorisation to be generated.
+
+#### Token's User Interface
+
+The token's user interface is a crucial element of the token runtime code. It is essential for the token to create its own user interface to elevate the trust to the website to meet the web application's demand. The token's visual presentation should be created in a secured Token Runtime Environment. This is akin to how Metamask, a browser plugin, provides the interface between the user and a blockchain-enabled Dapp for connecting the wallet and authorising transactions. However, in the case of smart tokens, the UI needs to be specific to the token to enable its use-cases[^token-ui-examples].
+
+[^token-ui-examples]: Say for example, if Tesla Car-Key is a smart token, users need to see Tesla taking over the process and pass authorisation to the website, similar to how Google Wallet or MetaMask taking over the process and passing the result to the website. 
+
+The user interface (UI) of a token is a crucial aspect of the token runtime code. It must be tailored to the token to enable its specific use-cases. For instance, the UI for a user to authorise a car-key token for a car cleaning service would be entirely different from another user, who holds a smart-flight ticket (also a smart token), booking a connected hotel stay. Even with the same token, different use-actions necessitate different user interfaces. Providing the location through a car-key token is a simpler user interface than authorising a website to send staff to drive it. The user interface of a token is determined by the actions it can perform, which web applications depend on.
+
+One argument against the use of token-specific interfaces suggests that websites tend to customise everything within their operational environment. However, the consistent visual presentation of Google Pay and Google Login across different websites of various colours and fonts demonstrates that the trust factor - users recognising a symbol of trust to carry out actions - outweighs the visual experience alone.
+
+A related argument proposes that the token interface could be supplied by a website library, rather than being generated by the token's secure runtime environment. This reflects a misunderstanding of the dual role of trust anchors, in that they provide both function and trust. The token user interface on a website provides no more trust than the website itself, as it is entirely under the website's control. Therefore, the token-specific user interface must be generated within the token's secure runtime environment to ensure trust is maintained.
+
+In conclusion, the design choices for a smart token's runtime environment for serving as a trust anchor can be generalised in a few terms. It is a separate runtime environment from the application it supports, is event-driven, and has declarative components. This design ensures that the token can serve as a trust anchor and provide the necessary functions while maintaining a high level of security.
+
+## A Tripartite Approach
+
+The previous section delineated the prerequisites for Smart Tokens to function as trust anchors. The team behind this paper has developed two technologies to address these requirements.
+
+#### 1. TokenScript
+
+TokenScript is a scripting framework that amalgamates the token code, destined to execute in the Token Runtime Environment, with the declarative components necessary for the tokens to operate as trust anchors. These components include events, mechanisms for synchronising with blockchain token status, and definitions of actions that websites can invoke.
+
+At a high level, TokenScript is an XML container that combines declarations to trigger, render, and correctly manage the code, along with the code itself, into a single, signed, deployable format. It further employs XML signatures to permit the publication of TokenScript segments that are sufficiently small to support a single use-case and modular enough to swap in and out data segments. This could include changing the language of the token user interface based on the use-case.
+
+At a more granular level, TokenScript maintains, in a declarative manner, the relationships between tokens that can function together. This includes potential modules from industry bodies for standardising sections of token behaviour, such as a standard lock-unlock function for all car-key tokens, and commands the attestation formats it can accept and the list of websites it can safely access for its dependency data. The details are necessary to fend off various forms of attack, prevent resource abuse, and inform the system that utilises it of its states.
+
+TokenScript, a recommended smart token standard work in progress, is currently hosted under OASIS-open for standardisation. An earlier paper detailing its design can be found at https://github.com/TokenScript/documents/releases.
+
+#### 2. ERC 5169 Family of ERCs
+
+This component of the tech stack is a protocol linking smart contracts with the Smart Token's TokenScript. There are several ERCs for different usage scenarios. For example, ERC 5170 utilises a separate TokenScript signing key from the smart contract signing key, allowing for greater flexibility, role separation, and frequent updates to TokenScript without the need for frequent updates to Smart Contracts.
+
+#### 3. Smart Layer Network
+
+The Smart Layer Network is the Token Runtime Environment designed to enable Smart Tokens through the execution of TokenScripts. In simpler terms, it's a container that runs TokenScripts, akin to a Kubernetes Engine that runs instances of tokens, similar to how Google Wallet is a container running their own tokens. This network provides RESTful APIs for the Smart Token-based Trust Anchors.
+
+However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, to reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network has its own paper available at https://github.com/TokenScript/documents/releases.
+
+Due to the scope of this paper, we will not delve into the details of these technologies.
 
 ---
