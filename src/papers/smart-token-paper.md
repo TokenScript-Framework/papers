@@ -11,9 +11,9 @@ abstract: |
 
 When Tim Berners-Lee and his team developed the foundational concepts of the Web, they selected "sites" as its primary building blocks. This seemingly intuitive approach, however, was not a given, especially when other Internet protocols, like emails and USENET, did not revolve around the concept of sites. Consider USENET: it organises and manages information by topic, making it irrelevant which site or even which planet the information originates from under that topic.
 
-The Web embraced a site-centric model: a site has a single origin, is inherently competitive, forms an ecosystem through hyperlinks, and evolves as a platform rather than remaining a static product. This model complemented the revolutionary capabilities introduced by HTML, contributing to the Web's rapid adoption and eventual dominance as an Internet application.
+The Web embraced a site-centric model: a site has a single origin, is inherently competitive, forms an ecosystem through hyperlinks, and evolves as a platform rather than remaining a static product. This model complemented the revolutionary capabilities introduced by HTML, contributing to the Web's rapid adoption and eventual dominance as an Internet application. Even in the era of mobile Internet, the foundational model of 'sites' persisted[^mobile].
 
-Today, with the advent of mobile Internet where sites are often supplanted by apps, the foundational model persists. Although early mobile system designers envisioned apps to be function-centric, akin to desktop word processors and movie players, the reality differed. Instead, users embraced mainstream apps like Google Docs and Netflix. Like a site, a mainstream mobile app possesses a single origin, thrives in competition, links to other apps, and remains open to ongoing development. This evolution is a testament to the enduring influence of the site-based model, even in a landscape that has shifted significantly from Berners-Lee's original vision of the Web.
+[^mobile]: Although early mobile system designers envisioned apps to be function-centric, akin to desktop word processors and movie players, the reality differed. Instead, users embraced mainstream apps like Google Docs and Netflix. Like a site, a mainstream mobile app possesses a single origin, thrives in competition, links to other apps, and remains open to ongoing development. This evolution is a testament to the enduring influence of the site-based model, even in a landscape that has shifted significantly from Berners-Lee's original vision of the Web.
 
 Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Instead, the Web's design was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. Just as a book references pages, the Web adopted "web pages." This framework led to structuring the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became akin to library indexes, but site owners controlled these links, creating a self-referential mega-book that spanned the entire library.
 
@@ -91,9 +91,9 @@ However, this paper proposes a different interpretation of the evolution from We
 
 Moreover, the idea of Web 3.0 as an 'Internet of Value' may reflect more of a wishful thinking than the actual evolutionary process of the web. Not everyone who moved to Web 2.0 was pursuing value, and not everyone who moves from Web 2.0 to Web 3.0 will be pursuing value either. The value investing community, while growing, still represents a small section of web users, and it is likely to remain so in the future.
 
-Instead of defining Web 3.0 as an 'Internet of Value,' we propose to view the next stage of the web's evolution as a continuation of its existing trajectory, with a focus on the decentralization of Trust Anchors. This perspective sees Web 3.0 as a platform that enables more profound integrations and fosters widespread innovation by allowing anyone to develop and maintain Trust Anchors. In this context, the Trust Anchors of the future web will not be platforms or services, but tokens - Smart Tokens, to be precise. The following sections will delve into this concept in more detail.
+Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an alternative vision: the 'Next-Generation Web.' This Next-Generation Web shifts focus from the distribution of value to the decentralization of Trust Anchors, attacking the root cause of centralisation while continuing to progress in the demand-driven direction that has been driving the web 1.0 to 2.0 upgrade. This perspective views the Next-Generation Web as a platform that fosters widespread innovation and enables more profound integrations by allowing anyone to develop and maintain Trust Anchors.
 
-To distinguish between Web 3.0 as an 'Internet of Value' and the next-generation web this paper envisions, we will refer to our vision as the 'Next-Generation Web.' In this Next-Generation Web, the focus is not on the distribution of value but on the decentralization of Trust Anchors. This perspective sees the Next-Generation Web as a platform that enables more profound integrations and fosters widespread innovation by allowing anyone to develop and maintain Trust Anchors. In this context, the Trust Anchors of the future web will not be platforms or services, but tokens - Smart Tokens, to be precise. The following sections will delve into this concept in more detail.
+The Trust Anchors of the future web will not be platforms or services, but tokens - specifically, Smart Tokens. The ensuing sections will delve into this concept in more detail.
 
 # The Token-Centric Web: A Paradigm of Decentralized Trust and Integration
 
@@ -101,17 +101,9 @@ The next-generation web, as envisioned in this paper, represents a paradigm shif
 
 In the current web ecosystem, trust anchors are the domain of a few centralized entities, which has led to a web that is both siloed and constrained by the strategic priorities of these entities. By allowing anyone to develop and maintain trust anchors, the gatekeepers could be removed to enable a web that is more resilient, diverse, and conducive to innovation.
 
-The method of decentralisation of Trust Anchors, Smart Token, will be elaborated shortly, for now let's first look at the implications.
-
 With the removal of centralized control over trust anchors, web services would no longer be limited to integrating a narrow set of core functionalities. Instead, they could leverage a wide array of trust anchors tailored to their specific needs. This would lead to a seamless and cohesive user experience, as services could integrate more deeply with one another.
 
 ## Missed Opportunities of Decentralised Trust Anchors
-
-### Enabling Smaller Trust Anchors
-
-**Missed Opportunity:** Decentralized trust anchors would allow smaller entities to establish their own credibility mechanisms. This could lead to a proliferation of niche platforms that can cater to specific community needs or specialized markets without the need for endorsement from large internet giants.
-
-**Example:** In the car insurance industry, small insurers could use decentralized trust anchors to validate car ownership, driver identity, and maintenance records without relying on cumbersome paper processes. This could streamline operations and allow them to offer competitive rates and services.
 
 ### Overcoming Barriers to Competition
 
@@ -124,6 +116,12 @@ With the removal of centralized control over trust anchors, web services would n
 **Missed Opportunity:** With a decentralized trust anchor system, new services that rely on the integration of multiple trust anchors could emerge. These services would be able to offer highly personalized and flexible experiences that adapt to changing user needs and contexts.
 
 **Example:** A personalized travel guide service could leverage trust anchors to seamlessly manage and adjust travel plans, including bookings, accommodations, and activities, based on the user's real-time preferences and circumstances. This level of integration and flexibility is unattainable in the current centralized trust anchor environment.
+
+### Enabling Long-tail Trust Anchors
+
+**Missed Opportunity:** Decentralized trust anchors would allow smaller entities to establish their own credibility mechanisms. This could lead to a proliferation of niche platforms that can cater to specific community needs or specialized markets without the need for endorsement from large internet giants.
+
+**Example:** In the car insurance industry, small insurers could use decentralized trust anchors to validate car ownership, driver identity, and maintenance records without relying on cumbersome paper processes. This could streamline operations and allow them to offer competitive rates and services.
 
 ## Envisioning the next-generation web
 
