@@ -1,6 +1,26 @@
 # Introduction to Token Negotiation
 
-Token Negotiation is the mechanism in TokenScript to match tokens with websites.
+In a token oriented architecture, token negotiation is the initial process to enable a token to be used on a website.
+
+It is different from the current wallet based connection model. In place of connection, there is negotiation.
+
+Consider the prevailing connection model, the website is given a connection to the user's wallet, either directly, or through WalletConnect. Through this connection, the website learns user's address and follow up the trail in blockchain to determin what tokens he has, then update the webste based on his token ownership.
+
+This can be compared to opening the door to the user's home and let the website discover the treasure. There is no negotiation, it's just on / off button to access all user's treausres. Furthremore, the website has to have the knoweldge where to look to find the tokens for this to work, and every token typically are functioning the same way for this to work
+
+Token negotiation works in having your wallet with this capability to negotiate with the website on what tokens to use, by presenting users with a choice. this choice is similar to the choice presented to users on the use of cookies, except the choice was made with the wallet and the result was sent to the website. 
+
+It not only selects the token to be used on the website, but also provides token interface data, such as which server is used to find the additional information of the token, whether the user is able to sign an authorisation for the website to seek such information. For example a movie token can inform a webste - say youtube - that with user's authorsation it is able to fetch a movie from a studio and render it for the users. 
+
+There are a few methods for negotiation. It's possible for a website to define either the token type, such as an insurance website can define on the application page that the token of topic is that of a car ownership token. or it can define a token capability, such as any tokens that carries the capability for authorsation to send it is . this is useful for a betting website where anything can be a bet (maybe a smart car?) and loser transfer the asset to the winner. there is also action based negotiation, where the token that can be used is selected bsed on the action it can perform. a typical exmaple is if a website look for a token that can pay USDC. Any USDC generating token, such as an AAVE position, or a line of credit, is usable. There is also a negotiation where the website holds an authorisation from the token issuing entity to convince the wallet that the token was designed to be used on it, making it a quick cut.
+
+Once the negotiation is done, the token enters the website. this means a few things
+
+First, the token metadata is known to the website. This includes the communication methods, such as how to decrypt token data and which server to connect to to get additaionl token data.
+
+Then, the token as an object is passed to the website, where the website can reuqest actions. An example is that a car ownership token is passed to a website where the webstie can request the car owner to authorise itself to issue new keys that can beused to drive the car.  Such functinolaities are exposed with TokenScript and using these actions causes tokenscript to be executed online (such as in smart layer network) or off line such as in user's wallets.
+
+
 
 If you think of a marketplace service such as Gumtree or OLX on the “standard” Web, the user enters the website and finds himself in the landing page. He clicks “login” and inputs his credentials and password. The website checks this against a database and returns a profile that includes his personal data, his payment details and his sales listings. In this model, websites are directories for content as well as “banks” and gatekeepers for all user data.
 
