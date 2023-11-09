@@ -2,10 +2,10 @@
 title: "Smart Token: The Building Block for the Next-Generation Token-Centric Web"
 date: "1st October, 2023"
 abstract: |
-  The evolution of the Web has been marked by significant shifts, from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books, to Web 2.0, where the Web transformed into an application platform. This transformation led to a "reverse pyramid" structure, with contemporary internet behemoths forming the narrow, foundational base. Such centralisation has stifled the Web's innovative potential. As the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We introduce the concept of a Token-Centric Web, a vision for the next-generation Internet that decentralises trust and enables an ecosystem of integrations. In this context, we propose "Smart Tokens," leveraging smart contracts, as an architectural choice to instantiate trust anchors in this Token-Centric Web to amplify user experience, bolster privacy, reduce dependence on monolithic Internet titans, and foster a new wave of web innovation. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles.
+  The evolution of the Web has been marked by significant shifts, from Web 1.0's flat architecture, where the Web was primarily seen as an information repository akin to books, to Web 2.0, where the Web transformed into an application platform. This transformation led to a "reverse pyramid" structure, with contemporary internet behemoths forming the narrow, foundational base. Such centralisation has stifled the Web's innovative potential, hindering the democratic spirit that underpins the Internet. As the number of users and websites has surged, the past decade has witnessed a plateau in transformative platforms or groundbreaking innovations, with the digital terrain largely commandeered by a few familiar giants. This paper delves into the root causes of this innovation drought, emphasising the indispensable role of trust anchors in nurturing a vibrant web ecosystem. We introduce the concept of a Token-Centric Web, a vision for the next-generation Internet that decentralises trust and enables an ecosystem of integrations. In this context, we propose "Smart Tokens," leveraging smart contracts, as an architectural choice to instantiate trust anchors in this Token-Centric Web to amplify user experience, bolster privacy, reduce dependence on monolithic Internet titans, and foster a new wave of web innovation. The paper further probes the potential for transformative shifts across various web dimensions and delineates the technical challenges, potential pitfalls, and adoption hurdles. We argue that the democratisation of trust anchors through Smart Tokens can pave the way for a more equitable and participatory Internet, turning it into a public good that benefits all.
 ---
 
-# Web Foundations and Trust Anchors
+# Web Foundations and Trust Anchors: Towards a Democratised Model
 
 ## The Web's Foundational Model
 
@@ -97,9 +97,11 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 
 ## Reimagining Web 3.0: Beyond the Internet of Value
 
-The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era. The centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
+The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era. This centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
 
-However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
+However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web.
+
+Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
 Furthermore, the characterization of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web. Not everyone who transitioned from prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
@@ -109,7 +111,9 @@ The Trust Anchors of the future Web will not be platforms or services, but token
 
 # The Token-Centric Web: Decentralised Trust and Integration
 
-The next-generation Web, as envisioned in this paper, represents a paradigm shift from the centralised trust anchors of today to a decentralised and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratising the Web's trust infrastructure. In this chapter, we will explore the implications of this shift, the areas it would revolutionise, and how it culminates in a web defined by limitless integration.
+The next-generation Web, as envisioned in this paper, represents a paradigm shift from the centralised trust anchors of today to a decentralised and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratising the Web's trust infrastructure and turning it into a public good that benefits all.
+
+In this chapter, we will explore the implications of this shift, the areas it would revolutionise, and how it culminates in a web defined by limitless integration.
 
 In the current web ecosystem, trust anchors are the domain of a few centralised entities, which has led to a web that is both siloed and constrained by the strategic priorities of these entities. By allowing anyone to develop and maintain trust anchors, the gatekeepers could be removed to enable a web that is more resilient, diverse, and conducive to innovation.
 
@@ -137,13 +141,15 @@ With the removal of centralised control over trust anchors, web services would n
 
 ## Envisioning the next-generation Web
 
-In consideration of the implications previously discussed, this paper proposes a conceptual framework for the next-generation Web. This envisioned Web is distinguished by the proliferation of ubiquitous trust anchors, which enable limitless and profound integrations across services and platforms. Such a web facilitates a user experience that surpasses the capabilities of the Web 2.0 era and drives innovation forward to enable types of sites and services that couldn't exist prior.
+In consideration of the implications previously discussed, this paper proposes a conceptual framework for the next-generation Web. This envisioned Web is distinguished by the democratisation of ubiquitous trust anchors, which enable limitless and profound integrations across services and platforms. Such a web facilitates a user experience that surpasses the capabilities of the Web 2.0 era and drives innovation forward to enable types of sites and services that couldn't exist prior.
 
 Notably, this vision diverges from the popular concept of Web 3.0, which is characterised as an 'Internet of Value.' Instead, our focus is on the transformative potential of integrations made possible by accessible and universal trust anchors.
 
-# Smart Tokens: The New Trust Anchors
+# Smart Tokens: Democratising the New Trust Anchors
 
-The preceding chapter outlined a vision for a web populated by ubiquitous trust anchors. This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
+Building on the previous discussion, Smart Contract Tokens, defined in public blockchains such as Ethereum, exhibit certain characteristics that make them a suitable foundation for trust anchors.
+
+This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
 
 ## Token as the Trust Anchor
 
@@ -205,7 +211,7 @@ The ensuing sections will delve deeper into the concept of Smart Tokens, explori
 
 ## Smart Token Architecture
 
-Part of the architecture of a Smart Token can be inferred from traditional trust anchors, such as Google Wallet. However, due to the decision to base the Smart Token on public blockchain systems, several significant changes are necessary. Most importantly, Token Runtime Environment replaces the role of Google as the operating environment.
+Given the shift from traditional trust anchors to Smart Tokens, a new architectural component becomes necessary to enable the functionalities of these tokens. This component, called the Token Runtime Environment, replaces the role of entities like Google in the traditional trust anchor model. The Token Runtime Environment serves as the operating environment for the Smart Token, ensuring its trusted behaviour and facilitating its role as a Trust Anchor. The democratisation of this process can turn the Internet into a public good, accessible and beneficial to all.
 
 #### Token Runtime Environment
 
