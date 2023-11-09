@@ -215,7 +215,7 @@ The ensuing sections will delve deeper into the concept of Smart Tokens, explori
 
 ## Smart Token Architecture
 
-Given the shift from traditional trust anchors to Smart Tokens, a new architectural component becomes necessary to enable the functionalities of these tokens. This component, called the Token Runtime Environment, replaces the role of entities like Google in the traditional trust anchor model. The Token Runtime Environment serves as the operating environment for the Smart Token, ensuring its trusted behaviour and facilitating its role as a Trust Anchor. The democratisation of this process can turn the Internet into a public good, accessible and beneficial to all.
+Given the shift from traditional trust anchors to Smart Tokens, a new architectural component becomes necessary to enable the functionalities of these tokens. This component, called the Token Runtime Environment, replaces the role of entities like Google in the traditional trust anchor model. The Token Runtime Environment serves as the operating environment for the Smart Token, ensuring its trusted behaviour and facilitating its role as a Trust Anchor.
 
 #### Token Runtime Environment
 
