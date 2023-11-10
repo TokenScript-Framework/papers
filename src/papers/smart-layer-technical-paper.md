@@ -2,7 +2,7 @@
 title: "Smart Layer: A Decentralised Integration Protocol for the Next-Generation Web"
 date: "1st September, 2023"
 abstract: |
-  In the ever-evolving decentralised Web, a robust integration layer bridging siloed services through tokenisation is crucial. Smart Layer is a decentralised network designed to facilitate the next generation of web use-cases. As a network, it seeks to address the inherent limitations of the current Web. This whitepaper delves into the architecture, design, and potential of Smart Layer, and its token.
+  In the ever-evolving decentralised Web a robust integration layer bridging siloed services through tokenisation is crucial. Smart Layer is a decentralised network designed to facilitate the next generation of web use-cases. As a network, it seeks to address the inherent limitations of the current Web. This whitepaper delves into the architecture, design, and potential of Smart Layer, and its token.
 ---
 
 # Introduction
