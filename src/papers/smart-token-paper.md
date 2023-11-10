@@ -157,9 +157,9 @@ Reflecting on the case of Google Pay/Google Wallet as a trust anchor, one might 
 
 This argument rests on two main premises: one concerning trust and the other concerning layered design.
 
-### Premise 1: Trust is on the Tokens, not on the Platforms
+### Premise 1: Trust is anchored on the Tokens, not on the Platforms
 
-Firstly, regarding trust, we argue that tokens, not software or platforms, are the actual focal points of trust dependency.
+Firstly, regarding trust, we argue that tokens, not software or platforms, are the actual anchor points of trust dependency.
 
 Consider previous examples, such as a car key token. If implemented as a trust anchor, it could enable many innovative use-cases. Naturally, questions arise: Should a car wash website accept any car key token authorisation and allow the car owner to park the car and walk away? Since many Google APIs are open, one could sign up, create a token called "MyCar," generate a key, and use that on the reservation webpage. The car wash website would accept a non-existent car. Some form of validation must take place.
 
@@ -169,9 +169,9 @@ However, Google cannot ensure that the car key token functions as the web applic
 
 With public key cryptography, it is not a problem to attest that a car key token is programmed by Tesla. Therefore, Google's role is reduced to a curator, and trust remains with the issuer of the car key token, such as Tesla. What makes Google a better curator of valid car keys? They don't produce any cars, nor do they own the knowledge of how each car interacts with their keys.
 
-Recognising this, a decentralised trust anchor is not the service that makes the token interact with applications - the trust anchor is the token.
+Recognising this, the trust needed is not anchored on the service that makes the token interact with applications - the trust is derived from the token itself. This concept can be succinctly encapsulated as 'trust anchored on the token,' giving it a visual to imagine its place in the web ecosystem.
 
-### Premise 2: Using Token for trust anchor Allows for Layered Design
+### Premise 2: Using Token for Trust Anchor Allows for Layered Design
 
 The second premise for tokens serving as trust anchors is rooted in the layered design of the Internet. This approach has been instrumental to the Internet's success, as it allows for competition among various applications like FTP, USENET, and the Web. The layered design facilitates the evolution of the Internet, ensuring that even if early protocols fail, more successful ones can be developed without overhauling the foundational layers.
 
