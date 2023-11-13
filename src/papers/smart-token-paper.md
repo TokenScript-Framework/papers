@@ -312,6 +312,123 @@ The deployment of the Runtime Environment, whether on the Smart Layer Network or
 
 Due to the scope of this paper, we will not delve into the details of these technologies.
 
+# Potential Applications of Smart Tokens
 
+While it's a common trope for papers introducing novel perspectives, concepts, or technologies to envision a transformative future, history has often been dismissive of such grandiose predictions. However, this paper contends that such visionary thinking is a necessary part of the process. Given that the centralisation of trust anchors has been entrenched in the web ecosystem for nearly two decades, it can be challenging to imagine how the web might have evolved with trust anchors readily provisioned by Smart Tokens.
+
+Therefore, the use cases outlined in this paper should be viewed as thought experiments based on the natural progression of the web, as revealed earlier in this paper, rather than as promises of the future. To counter the high-flown narratives often found in blockchain literature, our exploration of Smart Token applications is grounded in specificity and practicality. The first application below is specifically chosen for being a simple, tangible, straightforward application of Smart Tokens. 
+
+Broadly speaking, the use cases enabled by Smart Tokens benefit from two aspects: one is the removal of market friction that previously depended on a centralised market operator, and the other is the provision of limitless integration that allows the web to work together to form user-centric applications.
+
+Firstly, we will use the Flight Ticket to demonstrate how a Smart Token, due to its nature as a trust anchor, can enable various types of innovation and deep integration. The focus is on the notion that a single new trust anchor can bootstrap multiple use cases.
+
+Secondly, we will use the Smart Car token as an example. While continuing the line of innovation allowed by it, we note it is a use case of IoT, where machine-to-machine communication is touched upon and highlight some deep and elaborate integrations enabled by such a complex smart token.
+
+Finally, we cover the Health Token, which, thanks to being non-transferable, is a Soulbound-type token. This cross-section between soulbound tokens and smart tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
+
+## Smart Flight Ticket: A Demonstration of the Broad Array of Web Applications Enabled by a Simple Trust Anchor
+
+We begin by introducing the Smart Flight Ticket, which serves as a straightforward, tangible demonstration of Smart Tokens' potential.
+
+Smart Flight Tickets are issued by the airlines, in this case the verifiable issuance of the airline provides trust to any web applications that uses it. Like the use of blockchain tokens and traditional Google Wallets, ownership of the token is challenged by an authentication process at the point of use[^signing].
+
+[^signing]: Traditionally, blockchain token's ownership is proven by signing a challenge with the owners key. The authors of this paper advocate return to the cryptography community's tradition of authenticating with a different key - such as a derivation key - than the signing key for security reasons, or using non-signing authentication protocols. This detail is however outside of the scope of this paper.
+
+Ownership of a Smart Flight Ticket allows users to interact with web applications in novel ways. These applications, developed with the awareness of such a token, can enable a wide range of sought-after features.
+
+Here are some potential applications and use cases that could be enabled by the Smart Flight Ticket:
+
+| Application                    | Use Case                                                     |
+| ------------------------------ | ------------------------------------------------------------ |
+| Social Media Platforms         | Automatic updates about a user's arrival time can be sent to friends and family, fostering social connections. |
+| Map Apps                       | The app transitions to an internal airport view, highlighting the path to the boarding gate and suggesting gate changes if necessary. |
+| Music/Video Streaming Services | Platforms like Spotify and YouTube can modify content based on the user's travel status and destination, enriching the user experience. |
+| Car Booking Services           | Users can seamlessly access car booking services via their flight ticket token, enhancing travel convenience. |
+| Hotel Reservation Systems      | In the event of flight delays, hotel reservations can be auto-adjusted, ensuring peace of mind and flexibility. |
+| Banking Apps                   | Banking apps can tailor services like currency conversion and security adjustments based on the flight ticket token. |
+| Visa Application System        | The flight ticket token can streamline visa-on-arrival applications by removing paperwork. User presents their smart flight ticket while filling the form. |
+
+This table highlights the potential of Smart Tokens to enable a wide array of integrations and use cases, demonstrating their transformative potential.
+
+It's worth noting that that without a Smart Token serving as a trust anchor, current use cases, such as hotel reservations linked to flights, are typically facilitated a) either through a unified booking system, which is a user experience head-wind, and limiting user choices; or b) by users manually copying and pasting their flight number into the hotel booking system. However, due to the absence of a trust anchor in the latter scenario, the flight information is often treated as a mere comment and hotels are not trusting it to modify the booking for the client. This shows the consequence of shallow integration due to the lack of trust anchors, and the room for user experience improvement should deep integrations are enabled by Smart Tokens.
+
+## Smart Car Token
+
+While the Smart Flight Ticket is a simple, relatable Smart Token, with flat integrations, Smart Car Token is considerablly more complex and multi-dimensional. However, it also unveils a rich spectrum of potential use cases and integrations. Experiments conducted by the authors in 2019 with Smart Car Tokens have revealed a multifaceted landscape of opportunities. Here, we'll explore these opportunities in a logical progression, beginning with the tokenization of the car as an asset, moving onto the potential for web applications traditionally connected to car ownership, and finally integrating the Internet of Things (IoT) nature of smart cars.
+
+#### First, viewing the token as an asset, Smart Tokens enable asset-based use cases.
+
+Traditionally, this process involves uploading car details to various websites and undergoing paper-based verification processes. However, Smart Car Tokens simplify the process of listing, selling, renting, and collateralizing smart cars, due to their inherent trust anchor.
+
+#### Second, web applications traditionally connected to car ownership become integrated with it.
+
+Insurance serves as an excellent example. Tokenized car ownership enables the creation of an "insurance supermarket," automatically filtering and displaying compatible insurance options in a user-friendly view. This eliminates the wait for a quote and simplifies the comparison of competing solutions. Arguments can be made that attestable driving data can further incentive competition in the insurance market as well as augment the resale value of cars.
+
+#### Third, Smart Tokens running in Smart Cars further enable new asset classes.
+
+Thanks to the operating systems in smart cars, it's possible to run token-aware applications and even Smart Token code - in the form of TokenScript, directly in the car's computer system. This allows the car to recognize, for example, that the usage rights for specific hours have been sold to buyers. Such buyers are then entitled to a subset of the car's functions, such as driving, while user configurations such as Bluetooth settings are ephemeral based on the rental hours. Settings such as Maintenance Reminders remain off-limits to renters. This can be considered a step further in spawning a new asset class, car usage-hours, based on the Smart Car Token, further adding value to it by reducing friction in the car rental market. 
+
+#### Fourth, the previous two types of integrations can be combined to create deep integrations.
+
+This means applications that not only recognize car ownership but can also directly communicate with it. One of our earlier experiments was with Smart Insurance Tokens, which allows a car to run the insurance token - also a Smart Token - in the car's Token Runtime Environment. This allows the car to swiftly pass driving information to the insurance company. When a car breaks down, the insurance company already knows if it is parked in a safe location, if it has enough battery, and the condition of all tires, in order to decide what advice to give the user. If immediate roadside assistance is needed, an authentication token can be created to allow the roadside assistance company to access the car's operation database to facilitate a rescue. This reduces the wait time from hours to minutes.
+
+#### Fifth, cars can work with other IoT and integrate with the physical world.
+
+Since cars are an application of IoT devices, it is possible to design communication systems between cars and other IoT systems such as maintenance, car wash, and parking systems. Traditional Smart Car connections to a parking system are done through system-to-system integration, which doesn't allow abstraction and results in the need for third-party integration partners. These partners get authorization from all smart cars and then communicate with the parking systems as intermediaries. Although point-to-point integration, such as Tesla using its car balance to pay for parking, is possible, a tokenized system transcends vendor boundaries and could enable more integrations without such third-party involvement. This enables more use cases, such as integrating the charging service with parking fees for packaged services, enabling authorized parking staff to move the car or bring the car to the gate when a user checks out of a hotel, and automatic purchase of services, such as entering a washing station without explicit action of purchase.
+
+## Health Token
+
+The Health Token is presented relatively late in this paper due to its unique characteristics. Firstly, it's a non-transferable token, unlike the previous examples of transferable Smart Tokens. This non-transferable nature makes the Health Token a subset of both Smart Tokens and SoulBound Tokens, as introduced by E. Glen Weyl, Puja Ohlhaver, and Vitalik Buterin in 2022. Secondly, the Health Token requires high-level computations on encrypted data, placing substantial demands on the Token Runtime Environment. This makes it one of the most challenging Smart Tokens to implement according to the authors of this paper.
+
+Despite these challenges, the potential use-cases for the Health Token justify the effort required. Health data permeates every aspect of our daily lives, influencing decisions ranging from diet and travel to shopping and leisure activities. Given its ubiquity, health data holds enormous potential for integration across a myriad of platforms and use-cases.
+
+Below, we explore some potential integrations for the Health Token:
+
+| Web Application                        | Use Case                                                     |
+| -------------------------------------- | ------------------------------------------------------------ |
+| Shopping                               | Physical supermarkets and online shopping platforms could tailor your shopping experience based on your health data. For instance, e-commerce platforms could recommend ergonomic furniture suited to your posture or existing medical conditions. |
+| Travel Planning                        | Travel agents could accommodate specific health needs when planning trips. For instance, if you're planning a high-altitude journey such as attending DevCON 6 or EthDenver, they could account for how the elevation might affect heart conditions. Allergies or mobility issues could also be factored into your travel plans, ensuring necessities like insulin or wheelchairs are available during your flights. |
+| Restaurants and Food Delivery Services | Restaurants could recommend meals in line with your health profile. People with high blood pressure could be offered low-sodium dishes, while sugar-free options could be suggested for diabetics. |
+| Hotel Reservation Systems              | Hotels with access to your health data could ensure your room is equipped with necessary amenities like heaters, air filtration systems, or wheelchair accessibility. |
+
+The Health Token introduces a significant paradigm shift in the way health data is shared and utilized. Traditionally, systems such as Health Information Exchange (HIE) have attempted to make health data shareable. However, these systems are primarily geared towards healthcare systems, facilitating the transfer of health data across different hospitals and clinics, enabling quick data sharing with ambulances, and integrating with insurance providers. This paper specifically avoids delving into these areas, as they represent typical industrial integration efforts that do not rely on the web and can be considered more in the domain of the Internet rather than Web3. The use cases we highlighted above therefore are web-focused, with the point of integration being the tokenized health data and a web application.
+
+However, the implementation of the Health Token presents two significant challenges.
+
+Firstly, there is the challenge of securely storing health data. If the Smart Token's Runtime Environment is located in a user's wallet, such as smartphones with a healthcare centre feature, the data is relatively safe. However, many use-cases demand server-side execution of Smart Tokens, which may be in a node of a decentralized network. While the Smart Layer - one such decentralized network - provides detailed considerations for designing such a runtime environment, there is no universal solution at this moment.
+
+Secondly, the co-computation of data, such as sifting through product listings to find products to fill a user's shopping cart, requires computation on encrypted data. This necessitates the use of multi-party computation (MPC) protocols.
+
+MPC protocols can enable secure computations on encrypted data, allowing multiple parties to jointly compute a function while keeping their inputs private. This could enable the secure processing of health data without exposing sensitive information. However, implementing MPC protocols can be technically challenging. Without diverting from the focus of this paper, the challenges can be generalised into a few categories:
+
+- They often require complex cryptographic techniques and careful protocol design to ensure privacy and correctness. 
+- MPC protocols are generally slower and more resource-intensive than traditional computation methods.
+- Practical deployment of MPC protocols also requires careful consideration of various factors, including the network architecture, the trust model, and the number and reliability of participating parties. One example of such challenge is transfer of encrypted share of data when a node responsible for a specific user's health token go off line.
+
+In conclusion, while the Health Token holds significant potential for transforming the way health data is shared and utilized on the web, realizing this potential requires overcoming substantial technical challenges, particularly in the areas of secure data storage and secure computation on encrypted data. It will likely be the last frontier of Smart Token adoption.
+
+## Smart Cat: An Experimental Approach
+
+The authors of this paper have conducted numerous experiments with Smart Token technologies since Virgil Griffith first coined the term. However, most applications of Smart Tokens require significant industrial effort, and their adoption has been limited due to technical dependencies, such as wallets. Additionally, many of the underlying technical frameworks, such as the Smart Layer serving as the runtime environment for trust anchors, are still in development. This prompted the authors to consider creating a Smart Token that could be widely used to tangibly demonstrate the concept.
+
+This line of thinking led to the development of Smart Cats. These are Non-Fungible Tokens (NFTs) with Smart Token principles applied, allowing users to operate, buy, and sell the tokens and interact with integrated web systems. The features typically developed for Smart Tokens were gamified for these cats. Unlike tokens issued by trusted industry sources such as airlines or car vendors, Smart Cats were directly issued by the team and did not require the purchase of any goods or services. This ensured a minimal barrier to adoption and maximized reach. The experiment aimed to gauge the acceptance of the concept.
+
+Smart Cats quickly amassed one million adopters in the two weeks following its announcement, becoming the most widely owned NFT and the largest blockchain-based game. As traditional builders primarily focused on use-cases, the authors of this paper believe that the value of their work is demonstrated through its application and impact. Consequently, they do not attribute the success of Smart Cats to their personal popularity or influence. Instead, they credit the unique characteristics of the Smart Cats themselves. These NFTs come with a packaged and distributed token code and can operate inside a Token Runtime Environment in both the user's wallet and on the web. This serves as a practical demonstration of the Smart Token concept, emphasizing its potential for widespread adoption and use.
+
+However, it's important to note that while Smart Cats served as a successful demonstration of the Smart Token concept, it is not a sophisticated system for directly empowering the web.
+
+# The New Building Blocks of the Next-Generation Web: A Token-Centric Vision
+
+To recap the beginning of this paper, the inception of the Web was marked by a significant architectural choice - the selection of 'sites' as its fundamental building blocks. This decision, primarily influenced by the prevailing metaphor of a vast digital library, shaped the Web's evolution and its *trust paradigm*. As the Web transitioned from an information repository to an application platform, *trust anchors* emerged. These trust anchors, representing essential services that the web ecosystem relies on, inadvertently led to the centralisation of the Web, stifling innovation and competition.
+
+However, as we look forward to the next-generation Web, this paper proposes a paradigm shift. Instead of sites, we envision 'Smart Tokens' as the new foundational building blocks. By decentralising trust and turning it into a public good, Smart Tokens can potentially unlock a new wave of innovation, foster a more equitable and participatory Internet, and amplify user experience.
+
+Smart Tokens are uniquely positioned to function as trust anchors due to their inherent characteristics and enabling technologies. Leveraging smart contracts, they ensure consistent rules and behaviours, providing a reliable basis for trust. Furthermore, with technologies like TokenScript and the Smart Layer, Smart Tokens can be deployed as web services, offering seamless integration with various web applications. Crucially, the development and control of Smart Tokens are not confined within the boundaries of Internet giants, bypassing a significant bottleneck for innovation. This combination of attributes positions Smart Tokens as the catalysts for a new wave of web innovation, circumventing traditional chokepoints and paving the way for a more democratic and participatory Internet. We therefore consider it the building block for the next generation web.
+
+The journey towards a token-centric Web will not be without its challenges. This paper covered several technical hurdles, potential pitfalls, and adoption barriers. However, the potential benefits of this paradigm shift - a more equitable and participatory Internet, a vibrant web ecosystem, and a new wave of innovation - make it a worthwhile endeavour.
+
+As we embark on this journey, it is crucial to remember the lessons from the Web's evolution. **The shift from a site-centric to a token-centric model should not be driven by a pursuit of value or a reaction against the centralisation of the current web ecosystem. Instead, it should be guided by a vision of the Web as a public good that benefits all.**
+
+The democratisation of trust anchors through Smart Tokens can pave the way for this vision. By turning trust into a public good, we can foster a more equitable and participatory Internet, amplifying user experience, bolstering privacy, and sparking a new wave of web innovation. This is the promise of the next-generation Web - a token-centric Internet that truly belongs to all.
 
 ---
