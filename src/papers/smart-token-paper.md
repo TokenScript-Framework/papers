@@ -69,7 +69,9 @@ The case studies above help us to better understand the characteristics of Trust
 
 ### The Limit in the provision of trust Anchor leads to centralisation and innovation barrier
 
-Dr. Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
+Dr. Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[^wood2017].
+
+[^wood2017]: Gavin Wood, 2017, *The Future of the Decentralized Web*
 
 This paper posits that the role of trust anchors significantly amplifies these factors, coalescing them into a formidable force that reinforces the centralised dominance of today's tech giants. These entities, including Facebook, Google, and Apple, derive their trustworthiness and operational integrity largely from their scale and profitability. The rationale is that such entities have amassed substantial profits by being reliable providers of trust anchors. As a result, any deviation from their established behaviour for short-term gain is considered economically irrational.
 
@@ -419,7 +421,9 @@ However, it's important to note that while Smart Cats served as a successful dem
 
 # The New Building Blocks of the Next-Generation Web: A Token-Centric Vision
 
-To recap the beginning of this paper, the inception of the Web was marked by a significant architectural choice - the selection of 'sites' as its fundamental building blocks. This decision, primarily influenced by the prevailing metaphor of a vast digital library, shaped the Web's evolution and its *trust paradigm*. As the Web transitioned from an information repository to an application platform, *trust anchors* emerged. These trust anchors, representing essential services that the web ecosystem relies on, inadvertently led to the centralisation of the Web, stifling innovation and competition.
+To recap the beginning of this paper:
+
+>  The inception of the Web was marked by a significant architectural choice - the selection of 'sites' as its fundamental building blocks. This decision, primarily influenced by the prevailing metaphor of a vast digital library, shaped the Web's evolution and its *trust paradigm*. As the Web transitioned from an information repository to an application platform, *trust anchors* emerged. These trust anchors, representing essential services that the web ecosystem relies on, inadvertently led to the centralisation of the Web, stifling innovation and competition.
 
 However, as we look forward to the next-generation Web, this paper proposes a paradigm shift. Instead of sites, we envision 'Smart Tokens' as the new foundational building blocks. By decentralising trust and turning it into a public good, Smart Tokens can potentially unlock a new wave of innovation, foster a more equitable and participatory Internet, and amplify user experience.
 
@@ -427,8 +431,8 @@ Smart Tokens are uniquely positioned to function as trust anchors due to their i
 
 The journey towards a token-centric Web will not be without its challenges. This paper covered several technical hurdles, potential pitfalls, and adoption barriers. However, the potential benefits of this paradigm shift - a more equitable and participatory Internet, a vibrant web ecosystem, and a new wave of innovation - make it a worthwhile endeavour.
 
-As we embark on this journey, it is crucial to remember the lessons from the Web's evolution. **The shift from a site-centric to a token-centric model should not be driven by a pursuit of value or a reaction against the centralisation of the current web ecosystem. Instead, it should be guided by a vision of the Web as a public good that benefits all.**
+As we embark on this journey, it is crucial to remember the lessons from the Web's evolution:
+
+> The shift from a site-centric to a token-centric model should not be driven by a pursuit of value or a reaction against the centralisation of the current web ecosystem. Instead, it should be guided by a vision of the Web as a public good that benefits all.
 
 The democratisation of trust anchors through Smart Tokens can pave the way for this vision. By turning trust into a public good, we can foster a more equitable and participatory Internet, amplifying user experience, bolstering privacy, and sparking a new wave of web innovation. This is the promise of the next-generation Web - a token-centric Internet that truly belongs to all.
-
----
