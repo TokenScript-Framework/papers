@@ -34,6 +34,12 @@ This repository hosts the documentation source for both TokenScript and SmartLay
      ````
      $ dita --project config/tokenscript-docsite.yaml -o out/tokenscript-docs
      ````
+
+   - For compiling the Smart Token paper, use:
+     ````
+     $ pandoc --toc=true --resource-path=src/papers --csl src/papers/chicago-author-date.csl --citeproc --bibliography src/papers/smart-token-paper.bib -o out/smart-token-paper.pdf src/papers/smart-token-paper.md 
+     ````
+
    - For compiling the TokenScript Design paper, use:
      ````
      $ dita --project config/tokenscript-papers.xml
