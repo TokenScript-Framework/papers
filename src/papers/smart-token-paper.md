@@ -33,11 +33,13 @@ As the Web transitioned from an information repository to an application platfor
 
 ## Trust Anchors and Web Centralisation: An Unintended Byproduct of Application Shift
 
-The advent of Web 2.0 has given birth to an intricate network of applications, each interconnected and reliant on a multitude of web services. A typical mainstream website might incorporate as many as 10 to 15 mainstream web services, such as Google Login and Google Pay. Unlike traditional applications that depend on system components, these web services have evolved beyond their functional roles, becoming custodians of trust that ensure the secure and reliable operation of web applications. In this paper, we refer to these pivotal web services as Trust Anchors.
+The advent of Web 2.0 has given birth to an intricate network of applications, each interconnected and reliant on a multitude of web services. A typical mainstream website might incorporate as many as 10 to 15 mainstream web services, such as Google Login and Google Pay. Unlike traditional applications that depend on system components, these web services have evolved beyond their functional roles, becoming custodians of trust that ensure the secure and reliable operation of web applications. In this paper, we refer to these pivotal web services as Trust Anchors, a terminology borrowed from PKI cryptography expanded to describe a role in the Web 2.0 ecosystem.
 
-In this section, we will dissect the concept of trust anchors, explore their role in the centralisation of the Web, and propose a decentralised alternative through the implementation of Smart Tokens.
+In this section, we will dissect the concept of trust anchors in Web context, explore their role in the centralisation of the Web, and propose a decentralised alternative through the implementation of Smart Tokens.
 
-#### Defining Trust Anchors
+While a cryptographic Trust Anchor, as per NIST SP 800, refers to an authoritative entity for which trust is assumed and not derived such as root CA certificates in SSL/TLS, in our application, Trust Anchors encompass essential web services that web applications depend on for trust. These services, typically provided by dominant entities, become focal points of trust for web applications, echoing the role of cryptographic Trust Anchors as "an established point of trust", but in a broader web ecosystem context. We define it:
+
+#### Trust Anchors
 
 Trust Anchors are external web services that web applications depend on for their core functions, even when they possess the code to provide similar functionalities themselves. This dependency arises from the inherent trust that the business logic of these applications places on these services. In essence, Trust Anchors are not just functional; they are trusted.
 
@@ -225,7 +227,7 @@ Recognising these limitations, it becomes evident that Smart Contract Tokens nee
 
 #### Smart Token
 
-A "Smart Token" is a blockchain-based digital asset that incorporates programmable logic, enabling it to function as a web service and an integration point for web applications. Unlike traditional tokens, which primarily symbolize a unit of value, Smart Tokens can represent a broad spectrum of assets or rights and interact with various web services. Within the Web ecosystem, Smart Token acts as a decentralised trust anchor, addressing the centralisation issues associated with conventional trust anchors. Trust in a Smart Token is derived from its embedded smart contract rules and the reputation of its issuer. It operates in a secure, separate runtime environment from the applications it supports, ensuring robust security and trustworthiness.
+A "Smart Token" is a blockchain-based digital asset that incorporates programmable logic, enabling it to function as a web service and an integration point for web applications. Unlike traditional tokens, which primarily symbolise a unit of value, Smart Tokens can represent a broad spectrum of assets or rights and interact with various web services. Within the Web ecosystem, Smart Token acts as a decentralised trust anchor, addressing the centralisation issues associated with conventional trust anchors. Trust in a Smart Token is derived from its embedded smart contract rules and the reputation of its issuer. It operates in a secure, separate runtime environment from the applications it supports, ensuring robust security and trustworthiness.
 
 By providing a wide array of services, Smart Tokens enable seamless interactions between applications and tokens, fostering deeper integrations and a more dynamic, user-centric web experience.
 
