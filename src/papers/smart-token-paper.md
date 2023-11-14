@@ -336,7 +336,7 @@ Firstly, we will use the Smart Flight Ticket to demonstrate how a Smart Token, d
 
 Secondly, we will use the Smart Car token as an example. While continuing the line of innovation allowed by it, we note it is a use case of IoT, where machine-to-machine communication is touched upon and highlight some deep and elaborate integrations enabled by such a complex smart token.
 
-Thirdly, we cover the Health Token, which, thanks to being non-transferable, is a Soulbound-type token. This cross-section between soulbound tokens and smart tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
+Thirdly, we cover the Health Token. This cross-section between SoulBound Tokens and Smart Tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
 
 Lastly, we briefly touch upon our experimental Smart Car token. This token represents a "what if" scenario, stemming from a simple exploratory approach: "what if we provided everyone with a Smart Token to engage with as they please?" The primary aim of this experiment is not to facilitate deep and meaningful integrations but rather to gauge public acceptance and understanding of such concepts.
 
@@ -392,7 +392,7 @@ Since cars are an application of IoT devices, it is possible to design communica
 
 ## Health Token
 
-The Health Token is presented relatively late in this paper due to its unique characteristics. Firstly, it's a non-transferable token, unlike the previous examples of transferable Smart Tokens. This non-transferable nature makes the Health Token a subset of both Smart Tokens and SoulBound Tokens, as introduced by E. Glen Weyl, Puja Ohlhaver, and Vitalik Buterin in 2022. Secondly, the Health Token requires high-level computations on encrypted data, placing substantial demands on the Token Runtime Environment. This makes it one of the most challenging Smart Tokens to implement, according to the authors of this paper.
+The Health Token is introduced later in this paper due to its distinctive features. While it shares the non-transferability aspect with SoulBound Tokens (SBTs), its application is focused on individual health data. SBTs, as envisioned [@weyl2022], are broader in scope, encompassing various aspects of an individual's identity, affiliations, and social commitments in a decentralized society. The Health Token therefore can be considered in the intersection of Smart Token and SoulBound Token.
 
 Despite these challenges, the potential use cases for the Health Token justify the effort required. Health data permeates every aspect of our daily lives, influencing decisions ranging from diet and travel to shopping and leisure activities. Given its ubiquity, health data holds enormous potential for integration across a myriad of platforms and use-cases.
 
