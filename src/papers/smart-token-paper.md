@@ -17,7 +17,7 @@ The Web embraced a site-centric model: a site has a single origin, is inherently
 
 Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Instead, the Web's design was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. Just as a book references pages, the Web adopted "web pages." This framework led to structuring the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became akin to library indexes, but site owners controlled these links, creating a self-referential mega-book that spanned the entire library[@tim1994].
 
-Structuring the Web around origins rather than topics (like USENET) or functionality (like BitTorrent) had vast implications. It led to websites' single-origin design, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This design choice profoundly shaped our trust paradigm: we often interact with a site based on the trust we place in its origin. A site isn't just an information repository; it represents its origin's credibility.
+Structuring the Web around origins rather than topics (like USENET) or functionality (like BitTorrent) had vast implications. It led to websites' single-origin design, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This design choice profoundly shaped our trust paradigm: We often interact with a site based on the trust we place in its origin. A site isn't just an information repository; it represents its origin's credibility.
 
 This decision, to be explored further in subsequent sections, inadvertently paved the way for the Web's centralisation.
 
@@ -45,9 +45,9 @@ The crucial distinction between a website's functionality and the trust it depen
 
 ### Case Study: OpenBanking
 
-To illustrate this point, let's reflect on a case from 2008. An author of this paper, while working with the German Chamber of Commerce in China, conceptualised a website named 'OpenBanking'. OpenBanking aimed to offer superior functionality to existing banking platforms by integrating with the popular Home Banking Computer Interface, providing users with features not available on their banking platforms, such as expenditure pie charts.
+To illustrate this point, let's reflect on a case from 2008. While working with the German Chamber of Commerce in China, an author of this paper conceptualised a website named 'OpenBanking'. OpenBanking aimed to offer superior functionality to existing banking platforms by integrating with the popular Home Banking Computer Interface, providing users with features not available on their banking platforms, such as expenditure pie charts.
 
-Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This paradox underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German bank, and without its explicit endorsement, users were reluctant to trust OpenBanking. The project closed in the weeks following. Google, however was able to do similar things in 2021 with similar prospective[@gpay2021].
+Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This paradox underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German bank, and without its explicit endorsement, users were reluctant to trust OpenBanking. The project closed in the weeks following. Google, however, was able to do similar things in 2021 with similar prospects [@gpay2021].
 
 This case study highlights the challenges in establishing new trust anchors and strengthens our argument for the importance of decentralised trust anchors.
 
@@ -85,15 +85,15 @@ The trust anchor effect is evident in scenarios where a web service's ability to
 
 ### Case Study: Google Pay and Google Wallet
 
-Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website[@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lack the level of trust that to function as a Trust Anchor.
+Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website[@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lacks the level of trust to function as a Trust Anchor.
 
 With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only credit cards but also items like shopping vouchers and digital car keys. However, these are not made into Trust Anchors.
 
-For example, a website that accepts shopping vouchers during the checkout process can't use the voucher stored in Google Wallet directly, despite it could with credit cards in Google Wallet. The user is required to copy and paste the voucher code, as Google Wallet has yet to develop the voucher as a Trust Anchor service. Similarly, although a user can store a digital car key in Google Wallet, this does not extend to allowing a car cleaning service's website to access the car for service purposes. The user still need to carry a physical car key at the cleaning appointment.
+For example, a website that accepts shopping vouchers during the checkout process can't use the voucher stored in Google Wallet directly, despite the fact that it could use the credit cards in Google Wallet. The user is required to copy and paste the voucher code, as Google Wallet has yet to develop the voucher as a Trust Anchor service. Similarly, although a user can store a digital car key in Google Wallet, this does not extend to allowing a car cleaning service's website to access the car for service purposes. The user still needs to carry a physical car key at the cleaning appointment.
 
-This means any web innovation built on top of the recognition of the shopping voucher and use of digital car key cannot proceed unless Google developed them into Trust Anchor services, creating an innovation dependency.
+This means any web innovation built on top of the recognition of the shopping voucher and use of digital car key cannot proceed unless Google develops them into Trust Anchor services, creating an innovation dependency.
 
-In essence, the trajectory of Web 2.0 innovation is not solely constrained by the technical ingenuity of developers but is significantly influenced by the strategic priorities of the incumbent Internet powerhouses. The current ecosystem operates under a paradigm where new entrants are beholden to the established trust anchors, which act as gatekeepers of progress. This dynamic has led to a web landscape that, while ostensibly advancing under the leadership of tech giants, is in fact characterised by a latent inertia. Innovators find themselves in a position analogous to infantry in an army, where their advance is not limited by their own capabilities but by the strategic decisions of the commanding officers. The result is a web environment that is less a meritocracy of ideas and more a hierarchy of trust, with innovation potential tethered to the discretion of a few dominant entities.
+In essence, the trajectory of Web 2.0 innovation is not solely constrained by the technical ingenuity of developers but is significantly influenced by the strategic priorities of the incumbent Internet powerhouses. The current ecosystem operates under a paradigm where new entrants are beholden to the established trust anchors, which act as gatekeepers of progress. This dynamic has led to a web landscape that, while ostensibly advancing under the leadership of tech giants, is, in fact, characterised by a latent inertia. Innovators find themselves in a position analogous to infantry in an army, where their advance is not limited by their own capabilities but by the strategic decisions of the commanding officers. The result is a web environment that is less a meritocracy of ideas and more a hierarchy of trust, with innovation potential tethered to the discretion of a few dominant entities.
 
 ## Reimagining Web 3.0: Beyond the Internet of Value
 
@@ -101,7 +101,7 @@ The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a
 
 However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web.
 
-Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
+Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
 Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web[@forrester2022]. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
@@ -167,7 +167,7 @@ Two potential solutions arise: the website could maintain a trusted car key toke
 
 However, Google cannot ensure that the car key token functions as the web applications depending on them expect. Each car key token is programmed by their respective car manufacturer, and Google is not in a position to audit their code. Ultimately, the trust lies with the token itself, and Google acts as a transferer of trust rather than the origin of trust. The car wash website essentially trusts that if Google recognises the car token as being genuinely programmed by a car vendor, such as Tesla, then Tesla would not program their car key token to create invalid authorisations just to spoof the website.
 
-With public key cryptography, it is not a problem to attest that a car key token is programmed by Tesla. Therefore, Google's role is reduced to a curator, and trust remains with the issuer of the car key token, such as Tesla. What makes Google a better curator of valid car keys? They don't produce any cars, nor do they own the knowledge of how each car interacts with their keys.
+With public key cryptography, it is not a problem to attest that a car key token is programmed by Tesla. Therefore, Google's role is reduced to a curator, and trust remains with the issuer of the car key token, such as Tesla. What makes Google a better curator of valid car keys? They don't produce any cars, nor do they have the knowledge of how each car interacts with their keys.
 
 Recognising this, the trust needed is not anchored on the service that makes the token interact with applications - the trust is derived from the token itself. This concept can be succinctly encapsulated as 'trust anchored on the token,' giving it a visual to imagine its place in the web ecosystem.
 
@@ -181,11 +181,11 @@ If platforms like Google Wallet dictate the features of the tokens, we risk retu
 
 However, using tokens as trust anchors could lead to services not being sufficiently unified. Two potential solutions can address this issue:
 
-Firstly, software libraries could serve as software that abstracts the tokens, similar to how Google Wallet presents a unified interface for different payment cards. Since the tokens themselves already serve as trust anchors, these libraries can focus on facilitating seamless interactions between applications and tokens without needing to externally validate the trustworthiness of the tokens, therefore can be internal components of token-using websites.
+Firstly, software libraries could serve as software that abstracts the tokens, similar to how Google Wallet presents a unified interface for different payment cards. Since the tokens themselves already serve as trust anchors, these libraries can focus on facilitating seamless interactions between applications and tokens without needing to externally validate the trustworthiness of the tokens; therefore, they can be internal components of token-using websites.
 
 Secondly, industry bodies, Decentralised Autonomous Organisations (DAOs), or the applications themselves can facilitate the development of specifications and standards that guide how tokens should be programmed and interact with various applications. This second point needs a bit further elaboration:
 
-It's worth noting that public-blockchain based standardisation process such as ERC alone is insufficient for standardising trust anchor tokens, as Web standards, such as trust anchors, have their own requirements[@tim2010] that can be summarised below.
+It's worth noting that a public-blockchain-based standardisation process such as ERC alone is insufficient for standardising trust anchor tokens, as Web standards, such as trust anchors, have their own requirements[@tim2010] that can be summarised below.
 
 | Aspect                         | ERC Standards                                                | Web Standards (As Advocated by Tim Berners-Lee)              |
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -203,7 +203,7 @@ Firstly, Smart Contract Tokens' independence from third-party services enhances 
 
 [^google-outages]:  For instance, when Google experienced outages three times in 2020 and twice in 2022, it left passengers stranded at airports as airlines required Google login to display their tickets
 
-Secondly, the deterministic behavior of Smart Contract Tokens, governed by their embedded protocols, ensures consistent and predictable operation. This predictability is crucial for trust anchors, as web applications depending on them need to be confident that the tokens will behave as expected. Decentralised mechanism such as Decentralised Autonomous Organisations (DAOs)  enhanced the ability to update smart contracts while adhering to established trust protocols. 
+Secondly, the deterministic behaviour of Smart Contract Tokens, governed by their embedded protocols, ensures consistent and predictable operation. This predictability is crucial for trust anchors, as web applications, depending on them, need to be confident that the tokens will behave as expected. Decentralised mechanisms such as Decentralised Autonomous Organisations (DAOs)  enhanced the ability to update smart contracts while adhering to established trust protocols. 
 
 However, while Smart Contract Tokens form a solid base, they fall short in the role of trust anchors.
 
@@ -213,25 +213,25 @@ Although the execution of smart contract function calls, facilitated via Remote 
 
 Furthermore,  the lack of modularity in smart contract tokens is a significant limitation. Unlike web services, which can be updated to meet the evolving needs of websites, smart contract calls under the Remote Procedure Call (RPC) interface cannot be updated without modifying the smart contract itself, which dictates its core logic. This leads to a rigid coupling between the token logic and service logic. In other words, using Smart Contract Tokens as trust anchors results in an inflexible link between the token's inherent logic and the services it provides, which is akin to the impractical use of SQL as the data language in web front-ends, thereby binding the database structure with the web interface.
 
-While Smart Contract can be adapted to mimic web service functionalities via Remote Procedure Calls (RPC), this usage falls outside their intended design scope, but it nevertheless served as an evolutionary step and was used by the team behind this paper too[^rpc-replaces-restful]. Conversely, Alchemy.com provided RESTful interface to Smart Contract calls, showing that by addressing SLOs, additional needs of the web applications are addressed. This paper is not about the format but rather the architecture.
+While Smart Contracts can be adapted to mimic web service functionalities via Remote Procedure Calls (RPC), this usage falls outside their intended design scope, but it nevertheless served as an evolutionary step and was used by the team behind this paper too[^rpc-replaces-restful]. Conversely, Alchemy.com provided a RESTful interface to Smart Contract calls, showing that by addressing SLOs, additional needs of the web applications are addressed. This paper is not about the format but rather the architecture.
 
-[^rpc-replaces-restful]: The adaptation of Remote Procedure Calls (RPC) as a substitute for the traditional RESTful API of Web 2.0, was exemplified in our 2018 experiment with FIFA ticket tokenisation, where tokenised FIFA tickets were issued to a select group of testers, including Vitalik Buterin. In this experiment, the location data for FIFA venues was retrieved from a peripheral smart contract, bypassing conventional web service routes, despite it has nothing to do with contractual logic. This methodology is still being used as an evolutionary stepping stone.
+[^rpc-replaces-restful]: The adaptation of Remote Procedure Calls (RPC) as a substitute for the traditional RESTful API of Web 2.0, was exemplified in our 2018 experiment with FIFA ticket tokenisation, where tokenised FIFA tickets were issued to a select group of testers, including Vitalik Buterin. In this experiment, the location data for FIFA venues was retrieved from a peripheral smart contract, bypassing conventional web service routes, despite it having nothing to do with contractual logic. This methodology is still being used as an evolutionary stepping stone.
 
 #### Secondly, Trust Anchors needs are not met with Blockchain's Virtual Machines
 
-At first glance, it might appear that all Smart Contract Tokens have a runtime environment. For instance, in Ethereum, this would be the Ethereum Virtual Machine (EVM). However, the EVM was specifically designed with the maintenance of states in mind, which is fundamental for value transfer, but not necessarily for functioning as a web service. For instance, it does not maintain the status of a web session, only the states in the blockchain; its operating environment does not demand integrity - if a node returns a false negative in a call to a `view function`, there are no repercussions for the node. Moreover, it lacks facilities such as HTTP GET/POST requests and data storage, which are essential for a web environment. Finally, an EVM instance describes smart contract status, not a token instance - there is no EVM to describe a token without also maintaining the entire contract state. This highlights the shortcomings of the EVM when serving as the token runtime environment, which will be explored further in a subsequent section.
+At first glance, it might appear that all Smart Contract Tokens have a runtime environment. For instance, in Ethereum, this would be the Ethereum Virtual Machine (EVM). However, the EVM was specifically designed with the maintenance of states in mind, which is fundamental for value transfer but not necessarily for functioning as a web service. For instance, it does not maintain the status of a web session, only the states in the blockchain; its operating environment does not demand integrity - if a node returns a false negative in a call to a `view function`, there are no repercussions for the node. Moreover, it lacks facilities such as HTTP GET/POST requests and data storage, which are essential for a web environment. Finally, an EVM instance describes smart contract status, not a token instance - there is no EVM to describe a token without also maintaining the entire contract state. This highlights the shortcomings of the EVM when serving as the token runtime environment, which will be explored further in a subsequent section.
 
 Recognising these limitations, it becomes evident that Smart Contract Tokens need to be further developed to serve as trust anchors. This enhanced version, "Smart Tokens," was first termed by Virgil Griffith. Griffith coined this term during a casual conversation in a bar in Surry Hills, Sydney, in 2018, as the team behind this paper deliberated on the potential building blocks of Web3. At that point, Web3 was still in its budding state and had not yet been defined as an 'Internet of Value.' The phrase "Smart Token" caught on, and the team adopted the moniker "Smart Token Labs." However, the exact reasoning behind Griffith's nomenclature remains a mystery, as he was unfortunately incarcerated before he could elaborate on it. Hence, we are left to speculate why the envisioned building block for Web3 was christened as a "Smart Token."
 
-The ensuing sections will delve deeper into the concept of Smart Tokens, exploring their design requirements and potential applications, and how they could serve as the building blocks for the next-generation Web.
+The ensuing sections will delve deeper into the concept of Smart Tokens, exploring their design requirements and potential applications and how they could serve as the building blocks for the next-generation Web.
 
 ## Smart Token Architecture
 
-Given the shift from traditional trust anchors to Smart Tokens, a new architectural component becomes necessary to enable the functionalities of these tokens. This component, called the Token Runtime Environment, replaces the role of entities like Google in the traditional trust anchor model. The Token Runtime Environment serves as the operating environment for the Smart Token, ensuring its trusted behaviour and facilitating its role as a Trust Anchor.
+Given the shift from traditional trust anchors to Smart Tokens, a new architectural component becomes necessary to enable the functionalities of these tokens. This component - called the Token Runtime Environment - replaces the role of entities like Google in the traditional trust anchor model. The Token Runtime Environment serves as the operating environment for the Smart Token, ensuring its trusted behaviour and facilitating its role as a Trust Anchor.
 
 #### Token Runtime Environment
 
-A Token Runtime Environment is a distinct operational architecture that enables the functionality and trusted behaviour of Smart Tokens. It serves as a secure and separate environment from the application it supports, providing the necessary interfaces, managing the token's state, and turning trust in the underlying token's core logic into a trusted token web-service. The Token Runtime Environment is crucial for Smart Tokens to serve as trust anchors, providing the necessary functions while maintaining a high level of security and trust.
+A Token Runtime Environment is a distinct operational architecture that enables the functionality and trusted behaviour of Smart Tokens. It serves as a secure and separate environment from the application it supports, providing the necessary interfaces, managing the token's state, and turning trust in the underlying token's core logic into a trusted token web service. The Token Runtime Environment is crucial for Smart Tokens to serve as trust anchors, providing the necessary functions while maintaining a high level of security and trust.
 
 We enumerate the features needed for such a runtime environment.
 
@@ -239,11 +239,11 @@ We enumerate the features needed for such a runtime environment.
 
 #### Token's Service Interface
 
-To support use-cases of web applications, tokens need to provide interfaces for web services. In the example of a car-key token, the website might solicit the colour of the car for identification purposes. Similarly, a smart flight ticket token might provide a call-back interface to a hotel website to inform the website if there is any delay in the passenger's arrival. It's worth noting that these service interfaces do not equal to their smart contract interfaces, as their smart contract is focused on ensuring token rules being followed and not necessary provision of the services.
+To support use-cases of web applications, tokens need to provide interfaces for web services. In the example of a car-key token, the website might solicit the colour of the car for identification purposes. Similarly, a smart flight ticket token might provide a call-back interface to a hotel website to inform the website if there is any delay in the passenger's arrival. It's worth noting that these service interfaces do not equal to their smart contract interfaces, as their smart contract is focused on ensuring token rules are being followed and not necessary provision of the services.
 
 #### Management of Token's State
 
-This includes the token's temporary state not associated with the strong, smart contract-based rules.  There are common types of states, such as the signed parts of a multi-signature transaction, as well as token-specific states, for instance, in a car-key token, this might include ephemeral car-key authorisations previously generated.
+This includes the token's temporary state not associated with the strong, smart contract-based rules.  There are common types of states, such as the signed parts of a multi-signature transaction, as well as token-specific states - for instance - in a car-key token, this might include ephemeral car-key authorisations previously generated.
 
 #### Separation of runtime environment
 
@@ -273,7 +273,7 @@ Given that a token can enable multiple web applications, it often becomes a more
 
 #### Token's User Interface
 
-The token's user interface is a crucial element of the token runtime code. It is essential for the token to create its own user interface to elevate the trust to the website to meet the web application's demand. The token's visual presentation should be created in a secured Token Runtime Environment. This is akin to how Metamask, a browser plugin, provides the interface between the user and a blockchain-enabled Dapp for connecting the wallet and authorising transactions. However, in the case of smart tokens, the UI needs to be specific to the token to enable its use-cases[^token-ui-examples].
+The token's user interface is a crucial element of the token runtime code. It is essential for the token to create its own user interface to elevate the trust in the website to meet the web application's demand. The token's visual presentation should be created in a secured Token Runtime Environment. This is akin to how Metamask, a browser plugin, provides the interface between the user and a blockchain-enabled Dapp for connecting the wallet and authorising transactions. However, in the case of smart tokens, the UI needs to be specific to the token to enable its use-cases[^token-ui-examples].
 
 [^token-ui-examples]: Say for example, if Tesla Car-Key is a smart token, users need to see Tesla taking over the process and pass authorisation to the website, similar to how Google Wallet or MetaMask takes over the process and passing the result to the website. 
 
@@ -281,17 +281,17 @@ The user interface (UI) of a token is a crucial aspect of the token runtime code
 
 One argument against the use of token-specific interfaces suggests that websites tend to customise everything within their operational environment. However, the consistent visual presentation of Google Pay and Google Login across different websites of various colours and fonts demonstrates that the trust factor - users recognising a symbol of trust to carry out actions - outweighs the visual experience alone.
 
-A related argument proposes that the token interface could be supplied by a website library, rather than being generated by the token's secure runtime environment. This reflects a misunderstanding of the dual role of trust anchors in that they provide both function and trust. The token user interface on a website provides no more trust than the website itself, as it is entirely under the website's control. Therefore, the token-specific user interface must be generated within the token's secure runtime environment to ensure trust is maintained.
+A related argument proposes that the token interface could be supplied by a web front-end library rather than being generated by the token's secure runtime environment. This reflects a misunderstanding of the dual role of trust anchors in that they provide both function and trust. The token user interface on a website provides no more trust than the website itself, as it is entirely under the website's control. Therefore, the token-specific user interface must be generated within the token's secure runtime environment to ensure trust is maintained.
 
 Therefore, the design choices for a smart token's runtime environment for serving as a trust anchor can be generalised as the following:
 
-It is a separate runtime environment from the application it supports, is event-driven, and has declarative components. This design ensures that the token can serve as a trust anchor and provide the necessary functions while maintaining a high level of security.
+It is a separate runtime environment from the application it supports, is event-driven and has declarative components. This design ensures that the token can serve as a trust anchor and provide the necessary functions while maintaining a high level of security.
 
 ### Deployment of Token Runtime Environment
 
 There are two places for Token Runtime Environment to exist.
 
-1. A Token Runtime Environment can exist on a wallet, if the majority of the token functions can be provided by smart contracts, and websites (Dapps) are interested in accessing Token functionality through wallet interfaces.
+1. A Token Runtime Environment can exist on a wallet, if the majority of the token functions can be provided by smart contracts and websites (Dapps) are interested in accessing Token functionality through wallet interfaces.
 2. A Token Runtime Environment can exist on a decentralised service network. Such a network designed for this use can optimise for service level objectives and present itself in traditional web service interface, fulfilling the role of replacing centralised giants in providing trust anchors.
 
 ## A Tripartite Approach
@@ -308,13 +308,13 @@ At a more granular level, TokenScript maintains, in a declarative manner, the re
 
 TokenScript, a recommended smart token standard work in progress, is currently hosted under OASIS-open for standardisation[^oasis]. An earlier TokenScript Design Paper [@stl2019] has revisions that is in-line with this paper's concepts[^stl-papers].  
 
-[^oasis]: The project is recently moved to OASIS's EEA project, therefore future updates should be found at https://github.com/eea-oasis/tokenscript
+[^oasis]: The project has recently moved to OASIS's EEA project. Therefore, future updates should be found at https://github.com/eea-oasis/tokenscript
 
 #### 2. Smart Layer Network
 
 The Smart Layer Network is the Token Runtime Environment designed to enable Smart Tokens through the execution of TokenScripts. In simpler terms, it's a container that runs TokenScripts, akin to a Kubernetes Engine that runs instances of tokens, similar to how Google Wallet is a container running its own tokens. This network provides RESTful APIs for the Smart Token-based Trust Anchors.
 
-However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, to reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network Technical paper [@stl2023] is available[^stl-papers].
+However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network Technical paper [@stl2023] is available[^stl-papers].
 
 [^stl-papers]:  https://github.com/SmartTokenLabs/papers/releases/
 
@@ -330,7 +330,7 @@ Broadly speaking, the use cases enabled by Smart Tokens benefit from two aspects
 
 While it's a common trope for papers introducing novel perspectives, concepts, or technologies to envision a transformative future, history has often been dismissive of such grandiose predictions. However, this paper contends that such visionary thinking is a necessary part of the process. Given that the centralisation of trust anchors has been entrenched in the web ecosystem for nearly two decades, it can be challenging to imagine how the web might have evolved with trust anchors readily provisioned by Smart Tokens.
 
-Therefore, the use cases outlined in this paper should be viewed as thought experiments based on the natural progression of the web, as revealed earlier in this paper, rather than as promises of the future. In contrast to the sweeping narratives often found in blockchain literature, which tend to proclaim the complete transformation of entire industries, our exploration of Smart Token applications is more nuanced and grounded. We focus on specific, tangible applications of Smart Tokens, demonstrating their potential impact in particular contexts rather than making broad claims about their effect on whole sectors. For instance, we discuss the potential of a flight ticket token, not a sweeping transformation of the travel or the transportation industry.
+Therefore, the use cases outlined in this paper should be viewed as thought experiments based on the natural progression of the web, as revealed earlier in this paper, rather than as promises of the future. In contrast to the sweeping narratives often found in blockchain literature, which tend to proclaim the complete transformation of entire industries, our exploration of Smart Token applications is more nuanced and grounded. We focus on specific, tangible applications of Smart Tokens, demonstrating their potential impact in particular contexts rather than making broad claims about their effect on whole sectors. For instance, we discuss the potential of a flight ticket token, not a sweeping transformation of the travel or transportation industry.
 
 Firstly, we will use the Smart Flight Ticket to demonstrate how a Smart Token, due to its nature as a trust anchor, can enable various types of innovation and deep integration. The focus is on the notion that a single new trust anchor can bootstrap multiple use cases.
 
@@ -346,7 +346,7 @@ We begin by introducing the Smart Flight Ticket, which serves as a straightforwa
 
 Smart Flight Tickets are issued by the airlines; in this case, the verifiable issuance of the airline provides trust to any web applications that use it. Like the use of blockchain tokens and traditional Google Wallets, ownership of the token is challenged by an authentication process at the point of use[^signing].
 
-[^signing]: Traditionally, blockchain token's ownership is proven by signing a challenge with the owners key. The authors of this paper advocate return to the cryptography community's tradition of authenticating with a different key - such as a derivation key - than the signing key for security reasons, or using non-signing authentication protocols. This detail is, however outside of the scope of this paper.
+[^signing]: Traditionally, a blockchain token's ownership is proven by signing a challenge with the owner's key. The authors of this paper advocate a return to the cryptography community's tradition of authenticating with a different key - such as a derivation key - than the signing key for security reasons or using non-signing authentication protocols. However, this detail is outside of the scope of this paper.
 
 Ownership of a Smart Flight Ticket allows users to interact with web applications in novel ways. These applications, developed with the awareness of such a token, can enable a wide range of sought-after features.
 
@@ -376,7 +376,7 @@ Traditionally, this process involves uploading car details to various websites a
 
 #### Second, web applications traditionally connected to car ownership become integrated with it.
 
-Insurance serves as an excellent example. Tokenised car ownership enables the creation of an "insurance supermarket," automatically filtering and displaying compatible insurance options in a user-friendly view. This eliminates the wait for a quote and simplifies the comparison of competing solutions. Arguments can be made that attestable driving data can further incentive competition in the insurance market as well as augment the resale value of cars.
+Insurance serves as an excellent example. Tokenised car ownership enables the creation of an "insurance supermarket," automatically filtering and displaying compatible insurance options in a user-friendly view. This eliminates the wait for a quote and simplifies the comparison of competing solutions. Arguments can be made that attestable driving data can further incentivise competition in the insurance market as well as augment the resale value of cars.
 
 #### Third, Smart Tokens running in Smart Cars further enable new asset classes.
 
