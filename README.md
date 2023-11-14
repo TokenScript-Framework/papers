@@ -54,7 +54,7 @@ This repository hosts the documentation source for both TokenScript and SmartLay
 
    - For the Smart Token Technical paper, which wasn't using dita, it can be created using
      ````
-     $ pandoc --resource-path=src/papers --csl src/papers/chicago-note-bibliography.csl --citeproc --bibliography src/papers/smart-layer-technical-paper.bib -o out/smart-layer-technical-paper.pdf src/papers/smart-layer-technical-paper.md
+     $ pandoc --resource-path=src/papers --csl src/papers/chicago-note-bibliography.csl --citeproc --bibliography src/papers/smart-layer-technical-paper.bib -o out/smartlayer-technical-paper.pdf src/papers/smart-layer-technical-paper.md
      ````
      This results a single PDF file: **smart-layer-technical-paper.pdf**.
 
