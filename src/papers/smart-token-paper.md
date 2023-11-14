@@ -306,13 +306,17 @@ At a high level, TokenScript is an XML container that combines declarations to t
 
 At a more granular level, TokenScript maintains, in a declarative manner, the relationships between tokens that can function together. This includes potential modules from industry bodies for standardising sections of token behaviour, such as a standard lock-unlock function for all car-key tokens, and commands the attestation formats it can accept and the list of websites it can safely access for its dependency data. The details are necessary to fend off various forms of attack, prevent resource abuse, and inform the system that utilises it of its states.
 
-TokenScript, a recommended smart token standard work in progress, is currently hosted under OASIS-open for standardisation. An earlier paper detailing its design can be found at https://github.com/TokenScript/documents/releases.
+TokenScript, a recommended smart token standard work in progress, is currently hosted under OASIS-open for standardisation[^oasis]. An earlier TokenScript Design Paper [@stl2019] has revisions that is in-line with this paper's concepts[^stl-papers].  
+
+[^oasis]: The project is recently moved to OASIS's EEA project, therefore future updates should be found at https://github.com/eea-oasis/tokenscript
 
 #### 2. Smart Layer Network
 
 The Smart Layer Network is the Token Runtime Environment designed to enable Smart Tokens through the execution of TokenScripts. In simpler terms, it's a container that runs TokenScripts, akin to a Kubernetes Engine that runs instances of tokens, similar to how Google Wallet is a container running its own tokens. This network provides RESTful APIs for the Smart Token-based Trust Anchors.
 
-However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, to reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network has its own paper available at https://github.com/TokenScript/documents/releases.
+However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, to reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network Technical paper [@stl2023] is available[^stl-papers].
+
+[^stl-papers]:  https://github.com/SmartTokenLabs/papers/releases/
 
 #### 3. ERC 5169 Family of ERCs
 
