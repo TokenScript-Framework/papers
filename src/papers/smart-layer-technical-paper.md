@@ -8,19 +8,21 @@ abstract: |
 # Introduction
 The evolution of the Web has been marked by significant shifts, each bringing new paradigms and challenges. From the *Information super-highway* model of Web 1.0 to the application-oriented Web 2.0, the Web has grown increasingly integrated. However, this evolution has also led to centralisation, with a few dominant entities forming the foundational base. This centralisation has inadvertently stifled innovation and competition, resulting in a web ecosystem that is fragmented and constrained by the strategic priorities of these entities[@stl2023].
 
-To challenge this status quo, we introduce Smart Layer, a decentralised protocol designed to reshape the Web’s architecture by transforming Smart Tokens into the main integration points. Smart Tokens, as introduced in our previous paper "Smart Token: The Building Block for the Next-Generation Token-Centric Web", are tokenised digital rights and products/services that can be seamlessly integrated across various web use-cases. They decentralise trust anchors, thereby enabling a more equitable and participatory Internet that amplifies user experience and fosters a new wave of web innovation.
+To challenge this status quo, we introduce Smart Layer, a decentralised protocol designed to reshape the Web’s architecture by utilising Smart Tokens as the main integration points. These Smart Tokens, as introduced in our previous paper [@stl2023], are the decentralised instantiation of Trust Anchors, thereby enabling a more equitable and participatory Internet that amplifies user experience and fosters a new wave of web innovation.
 
 Smart Layer is designed to function as a distributed network, serving as the backbone for the next generation Web, enabling Smart Tokens to act as trust anchors. It does so by providing a runtime environment for the execution of TokenScripts, an evolving OASIS standard that defines the packaging, distribution, and operation of these tokens.
 
 Smart Layer is a decentralised protocol that aims to reshape the Web’s architecture. It acts as an integration hub which enables smooth interactions between various services, much like how many websites use platforms such as Google. Smart Layer goes beyond acting as a “bridge,” and paved the way for the concept of Smart Tokens. Smart Tokens are tokenised digital rights and products/services that can be seamlessly integrated across various web use-cases. In that sense, Smart Tokens can surpass the limitations of centralised systems, and leverage the strengths of blockchain. This protocol is designed to function as a distributed network, serving as the backbone for the next generation Web.
 
-TokenScript—an evolving OASIS standard—is critical for Smart Tokens within the Smart Layer. While Smart Layer offers the foundation, TokenScript defines the packaging, distribution, and operation of these tokens. TokenScript also establishes the messaging format between the tokens and their integrations. This ensures that they work within the defined parameters of trust, interoperability, privacy and security.
+TokenScript, currently part of the Ethereum Enterprise Alliance (EEA) project, is a pivotal component in the development of the Smart Layer ecosystem. This scripting framework merges token code with essential declarative components, enabling these tokens to function effectively as Trust Anchors. TokenScript plays a crucial role in defining the packaging, distribution, and operational aspects of these tokens, as well as establishing the communication protocols for interactions between the tokens and their respective web integrations.
+
+Originally an initiative under the EEA, a collaboration project between the Ethereum Foundation and OASIS, TokenScript aims to standardise 3 elements of the Smart Token ecosystem: the Token Runtime Environment, the TokenScript file format and Attestations. The trajectory of TokenScript is set towards achieving a standard status in the coming years. As it stands, TokenScript's dual role is instrumental in ensuring that Smart Tokens adhere to essential principles of trust, interoperability, privacy, and security, thereby enabling them to act as decentralised Trust Anchors within the Smart Layer protocol.
 
 ## Scope of this document
 This whitepaper serves as an introduction to the novel concept, models and mechanism of Smart Layer. It discusses its potential applications in the next-generation Web. It is not intended as a guide for the implementors of Smart Layer Nodes (which is addressed in a future separate specification, akin to Ethereum’s Yellow Paper).
 
 # Problem statement
-Dr. Gavin Wood has attributed the centralization of the web to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017]. The centralization Dr. Wood identified has led to a situation where most websites today are integrated with Google or Facebook login, or Apple Pay, white the most popular websites use all those integrations listed.
+Dr. Gavin Wood has attributed the centralisation of the web to a combination of factors, including network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017]. This centralisation has resulted in a web landscape that heavily relies on a few dominant Trust Anchors, which are essential services that web applications depend on for their core functions. These Trust Anchors are often provided by major internet entities such as Google, Facebook, and Apple. For instance, most websites today integrate with services like Google's or Facebook's authentication services, or Apple's payment service, which serve as Trust Anchors.
 
 In our other paper on Smart Tokens[@stl2023], we delved into the concept of Trust Anchors and their role in the centralisation of the Web. We argued that Trust Anchors, essential services the web ecosystem relies on, have inadvertently led to the centralisation of the Web, stifling innovation and competition.
 
@@ -36,7 +38,7 @@ Having regard to these two (2) reasons, the modern Web faces a “Limit of 3” 
 
 ![Present Web relies on central integration points. They are the trust anchor of the Web](smart-layer-technical-paper-problem-of-3.svg)
 
-The Web’s fragmented nature has, in turn, led to fragmented user experiences. Reconsider the example of an airline flight ticket. In the current web paradigm, this ticket represents a token of value within its issuing platform, but it remains isolated. The potential for the ticket to integrate with other systems—updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems—remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the Web’s compartmentalized structure, where centralized entities offer piecemeal solutions.
+The Web’s fragmented nature has, in turn, led to fragmented user experiences. Reconsider the example of an airline flight ticket. In the current web paradigm, this ticket represents a token of value within its issuing platform, but it remains isolated. The potential for the ticket to integrate with other systems—updating travel statuses on social media, guiding users via mapping services, or communicating flight changes to hotel booking systems—remains largely untapped. Such straightforward integrations, though long overdue, are hindered by the Web’s compartmentalised structure, where centralised entities offer piecemeal solutions.
 
 Web fragmentation highlights the need for a paradigm shift towards a more dynamic and interconnected web ecosystem. This shift would consciously break the “Limit of 3,” thereby allowing websites to connect to a bigger ecosystem outside the control of the current Internet centres, while facilitating an integrated user experience and enable innovation. Naturally, such a new paradigm must include a freely grown integration network, low integration costs, and designs for secure, privacy-preserving mechanisms to expedite expansive integration.
 
@@ -145,7 +147,7 @@ In fallback mode, execution monitoring is performed by selectively redoing the e
 
 ## Real-World Application: The Flight Ticket Smart Token
 
-To better understand the intricacies of the Smart Layer network, let's delve into a real-world example: the flight ticket smart token.
+To better understand the intricacies of the Smart Layer network, let's delve into a real-world example: the Smart Flight Ticket, which we introduced in the previous paper on Smart Tokens [@stl2023]. The Smart Flight Ticket serves as a tangible demonstration of Smart Tokens' potential and the Smart Layer's capabilities. 
 
 ### Read-Only Access
 
@@ -183,15 +185,17 @@ Given the dynamic nature of smart tokens, it is imperative to have a secure envi
 
 The tokenomics of Smart Layer is intricately designed to ensure the sustainability, efficiency, and robustness of the network. Central to this design is the dual-token system, which serves distinct yet interconnected purposes:
 
-## Service Token
+#### The Service Token 
 
-The Service Token is the primary medium of exchange within the Smart Layer network. It facilitates all micro-transactions associated with token operations, from querying token data to more resource-intensive modifications. Integrations typically bear the costs associated with token activation, which are transacted using the Service Token. This token ensures that the network remains agile, with real-time settlements and efficient resource allocation.
+The primary medium of exchange within the Smart Layer network. It facilitates all micro-transactions associated with token operations, from querying token data to more resource-intensive modifications. Integrations typically bear the costs associated with token activation, which are transacted using the Service Token. This token ensures that the network remains agile, with real-time settlements and efficient resource allocation.
 
-## Stake Token
+#### The Stake Token
 
-The Stake Token represents a stake in the Smart Layer network. Holders of this token have a vested interest in the network's growth and governance. Depending on the network's design, Stake Token holders might influence governance decisions, propose changes, or even earn rewards based on network activity. This token ensures that the network remains decentralised, with stakeholders actively participating in its evolution.
+It represents a stake in the Smart Layer network. Holders of this token have a vested interest in the network's growth and governance. Depending on the network's design, Stake Token holders might influence governance decisions, propose changes, or even earn rewards based on network activity. This token ensures that the network remains decentralised, with stakeholders actively participating in its evolution.
 
-The tokenomics of Smart Layer is designed to ensure the sustainability, efficiency, and robustness of the network. It strikes a balance between incentivising token issuers, integrations, and the nodes that power the network. Here's a deep dive into the tokenomics structure:
+This dual-token system supports the operation of Smart Tokens within the Smart Layer network. It ensures that the costs associated with token operations are adequately covered, and it incentivises stakeholders to participate in the network's growth and governance. This creates a sustainable and robust ecosystem for the operation of Smart Tokens.
+
+Here's a deep dive into the tokenomics structure:
 
 # Service Token's Tokenomics
 
@@ -227,29 +231,29 @@ Furthermore, integrations, by leveraging smart tokens, can offer enhanced servic
 
 ## IPFS
 
-Smart Layer's architecture is inherently designed to be modular and interoperable, a philosophy that aligns with the InterPlanetary File System (IPFS). While IPFS serves as a decentralized storage layer, it focuses primarily on content availability without service-level guarantees such as I/O and response time.
+Smart Layer's architecture is inherently designed to be modular and interoperable, a philosophy that aligns with the InterPlanetary File System (IPFS). While IPFS serves as a decentralised storage layer, it focuses primarily on content availability without service-level guarantees such as I/O and response time.
 
 This positions IPFS more as a retrieval service than a web service, lacking a Virtual Machine (VM) for code execution.
 
-Smart Layer offers the option to use IPFS for storage, particularly when the higher costs associated with Smart Layer's features like load balancing and Service Level Agreements (SLAs) become a concern. This strategic alignment allows Smart Layer to maintain its lightweight nature while ensuring data integrity and availability, key attributes that are indispensable for any decentralized application (dApp).
+Smart Layer offers the option to use IPFS for storage, particularly when the higher costs associated with Smart Layer's features like load balancing and Service Level Agreements (SLAs) become a concern. This strategic alignment allows Smart Layer to maintain its lightweight nature while ensuring data integrity and availability, key attributes that are indispensable for any decentralised application (dApp).
 
 ## Chainlink
 
-Smart Layer's collaboration with Chainlink significantly enhances its capabilities, particularly in the area of decentralized oracles. Chainlink is renowned for its decentralized oracle services, which provide secure and reliable data feeds to smart contracts. However, Chainlink's primary focus is on linking external data to blockchain environments, rather than enabling smart tokens as integration points. It does not concern itself with providing token interfaces for specific use-cases like smart flight tickets.
+Smart Layer's collaboration with Chainlink significantly enhances its capabilities, particularly in the area of decentralised oracles. Chainlink is renowned for its decentralised oracle services, which provide secure and reliable data feeds to smart contracts. However, Chainlink's primary focus is on linking external data to blockchain environments, rather than enabling smart tokens as integration points. It does not concern itself with providing token interfaces for specific use-cases like smart flight tickets.
 
-On the other hand, Smart Layer adopts a token-oriented approach, where smart contracts act as trust anchors. This architecture allows for a separation between rule enforcement and execution logic, offering greater flexibility in application development. By integrating Chainlink's robust oracle services, Smart Layer can access real-world data, thereby enabling more complex smart contracts that can interact with external APIs, IoT devices, and other data sources. This synergistic relationship broadens the scope of applications that can be built on Smart Layer, ranging from decentralized finance (DeFi) to supply chain management and beyond, while also providing the necessary infrastructure for specialized token interfaces.
+On the other hand, Smart Layer adopts a token-oriented approach, where smart contracts act as trust anchors. This architecture allows for a separation between rule enforcement and execution logic, offering greater flexibility in application development. By integrating Chainlink's robust oracle services, Smart Layer can access real-world data, thereby enabling more complex smart contracts that can interact with external APIs, IoT devices, and other data sources. This synergistic relationship broadens the scope of applications that can be built on Smart Layer, ranging from decentralised finance (DeFi) to supply chain management and beyond, while also providing the necessary infrastructure for specialised token interfaces.
 
-This distinction in scope allows each platform to excel in its area of expertise, while their integration offers a more comprehensive and versatile solution for decentralized applications.
+This distinction in scope allows each platform to excel in its area of expertise, while their integration offers a more comprehensive and versatile solution for decentralised applications.
 
 ## TokenScript
 
-TokenScript is a direct dependency of the Smart Layer technology stack. The same team that has been instrumental in the development of TokenScript has also been responsible for Smart Layer. This team's work on TokenScript has been recognized by the OASIS Standardization body as part of its collaboration with the Ethereum Foundation. While Smart Layer aims to provide a robust integration infrastructure for the next generation web, TokenScript focuses on standardizing token interfaces, behavior code, and attestation mechanisms. These elements are essential dependencies for the Smart Layer network.
+TokenScript is a direct dependency of the Smart Layer technology stack. The same team that has been instrumental in the development of TokenScript has also been responsible for Smart Layer. This team's work on TokenScript has been recognised by the OASIS Standardization body as part of its collaboration with the Ethereum Foundation. While Smart Layer aims to provide a robust integration infrastructure for the next generation web, TokenScript focuses on standardizing token interfaces, behavior code, and attestation mechanisms. These elements are essential dependencies for the Smart Layer network.
 
-The integration of TokenScript into Smart Layer is a fundamental requirement for the latter's operation. TokenScript's XML-based token markup language enables a modular approach to dependency-based token interoperabilities. For example, it allows the insurance industry to establish standardized interfaces for smart insurance tokens. Utilizing TokenScript's editors and deployment tools, developers can define token behavior without writing XML directly, using familiar languages like JavaScript to control a token's runtime, whether in a wallet or within the Smart Layer network.
+The integration of TokenScript into Smart Layer is a fundamental requirement for the latter's operation. TokenScript's XML-based token markup language enables a modular approach to dependency-based token interoperabilities. For example, it allows the insurance industry to establish standardised interfaces for smart insurance tokens. Utilising TokenScript's editors and deployment tools, developers can define token behavior without writing XML directly, using familiar languages like JavaScript to control a token's runtime, whether in a wallet or within the Smart Layer network.
 
 ## Conclusion
 
-In conclusion, Smart Layer integrates IPFS as an optional storage solution, benefiting from its mature implementations of distributed hash tables, but does not rely on it for runtime operations. Chainlink serves as a source of attestations and is an optional component, the utilization of which is contingent upon specific smart token authorizations. Unlike IPFS and Chainlink, TokenScript is not an infrastructure but a standard for defining smart tokens. It serves as a direct dependency, essential for the functionality and interoperability within the Smart Layer ecosystem.
+In conclusion, Smart Layer integrates IPFS as an optional storage solution, benefiting from its mature implementations of distributed hash tables, but does not rely on it for runtime operations. Chainlink serves as a source of attestations and is an optional component, the utilisation of which is contingent upon specific smart token authorizations. Unlike IPFS and Chainlink, TokenScript is not an infrastructure but a standard for defining smart tokens. It serves as a direct dependency, essential for the functionality and interoperability within the Smart Layer ecosystem.
 
 # Design Considerations and Summary
 
@@ -257,16 +261,16 @@ In conclusion, Smart Layer integrates IPFS as an optional storage solution, bene
 
 As we delve into the intricacies of protocol design, it's crucial to remember that today's innovations often become tomorrow's standards. The Smart Token and its supporting Smart Layer are designed with this forward-thinking approach. For example, consider the potential for future retailers to interface with vehicle smart tokens for predictive maintenance or flight smart tokens for timely deliveries.
 
-The protocol is also designed to accommodate emerging scenarios, such as smart locks granting access based on tokenized rights or smart cars initiating autonomous roadside assistance. Furthermore, as AI becomes increasingly integrated into decision-making, the protocol is engineered to support AI-driven decisions through token interfaces. This design choice enhances security and composability, essential attributes for future web integrations.
+The protocol is also designed to accommodate emerging scenarios, such as smart locks granting access based on tokenised rights or smart cars initiating autonomous roadside assistance. Furthermore, as AI becomes increasingly integrated into decision-making, the protocol is engineered to support AI-driven decisions through token interfaces. This design choice enhances security and composability, essential attributes for future web integrations.
 
 ## The Decentralised Nature of Future Integrations
 
-Contrary to the notion that the protocol's success depends solely on adoption by Internet giants, the true power lies in its ability to connect various stakeholders. The next-generation Web will likely be a mosaic of localized innovations tailored to specific industries and users. In this context, Smart Layer aims to serve as a flexible and adaptable foundation.
+Contrary to the notion that the protocol's success depends solely on adoption by Internet giants, the true power of Smart Layer lies in its ability to democratise Trust Anchors and connect various stakeholders. The next-generation Web will likely be a mosaic of localised innovations tailored to specific industries and users. In this context, Smart Layer aims to serve as a flexible and adaptable foundation, enabling anyone to develop and maintain Trust Anchors in the form of Smart Tokens, thereby fostering a more vibrant and integrated web ecosystem.
 
-The protocol emphasizes a layered design approach, focusing on provisioning smart tokens as a robust mechanism. This allows for the development of more complex features and applications atop this foundational layer, without getting entangled in the specifics of individual tokens.
+The protocol emphasises a layered design approach, focusing on provisioning smart tokens as a robust mechanism. This allows for the development of more complex features and applications atop this foundational layer, without getting entangled in the specifics of individual tokens.
 
 ## Summary and Implications
 
-In this paper, we have presented Smart Layer as a protocol designed for decentralized integration in the next-generation Web. The protocol leverages smart tokens to facilitate interactions between various web services, sidestepping the need for centralized entities. Unlike tokenized assets, which are primarily designed for trading, smart tokens in this protocol are engineered for specific applications. This focus aligns with the evolving technological landscape and its emerging use-cases.
+In this paper, we have presented Smart Layer as a protocol designed for decentralised integration in the next-generation Web. The protocol leverages smart tokens to facilitate interactions between various web services, sidestepping the need for centralised entities. Unlike tokenised assets, which are primarily designed for trading, smart tokens in this protocol are engineered for specific applications. This focus aligns with the evolving technological landscape and its emerging use-cases.
 
 As the paper concludes, it's worth noting that the protocol is not a static entity but a continually evolving framework. It aims to contribute to a more interconnected web ecosystem, and as such, invites ongoing engagement from developers and stakeholders for its further refinement and expansion.
