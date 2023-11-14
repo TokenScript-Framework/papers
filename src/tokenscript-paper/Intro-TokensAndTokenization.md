@@ -7,7 +7,7 @@ Blockchain, at its core, serves as a trusted third party. However, to fully appr
 1. It facilitates a frictionless market.
 2. It integrates the web.
 
-Despite the misadventures of 2017-2018, the initial emphasis on tokens wasn't misplaced. Tokens are the enablers of these two primary functions. We term the technique of harnessing this potential as "Tokenisation".
+These functions are enabled by tokens, which serve as the fundamental building blocks of the blockchain ecosystem. But, as we've come to realize, these tokens can be more than just passive carriers of value. They can serve as trust anchors, providing a reliable basis for trust and facilitating seamless integration with various web applications. We term the technique of harnessing this potential as "Tokenisation".
 
 Tokenised rights, when traded on the market and integrated across systems, foster a seamless market and enable boundless integration. Now, imagine if these tokens were not just passive carriers of value, but could actively interact with their environment, make decisions, and adapt to changing circumstances. This is the concept of Smart Tokens, a new layer of sophistication added to the basic token model.
 
