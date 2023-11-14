@@ -15,7 +15,7 @@ The Web embraced a site-centric model: a site has a single origin, is inherently
 
 [^mobile]: Although early mobile system designers envisioned apps to be function-centric, akin to desktop word processors and movie players, the reality differed. Instead, users embraced mainstream apps like Google Docs and Netflix. Like a site, a mainstream mobile app possesses a single origin, thrives in competition, links to other apps, and remains open to ongoing development. This evolution is a testament to the enduring influence of the site-based model, even in a landscape that has shifted significantly from Berners-Lee's original vision of the Web.
 
-Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Instead, the Web's design was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. Just as a book references pages, the Web adopted "web pages." This framework led to structuring the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became akin to library indexes, but site owners controlled these links, creating a self-referential mega-book that spanned the entire library.
+Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Instead, the Web's design was heavily influenced by a prevailing metaphor of that era — the library model, which likened the Internet to a vast library. This metaphor transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. Just as a book references pages, the Web adopted "web pages." This framework led to structuring the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became akin to library indexes, but site owners controlled these links, creating a self-referential mega-book that spanned the entire library[@tim1994].
 
 Structuring the Web around origins rather than topics (like USENET) or functionality (like BitTorrent) had vast implications. It led to websites' single-origin design, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This design choice profoundly shaped our trust paradigm: we often interact with a site based on the trust we place in its origin. A site isn't just an information repository; it represents its origin's credibility.
 
@@ -47,7 +47,7 @@ The crucial distinction between a website's functionality and the trust it depen
 
 To illustrate this point, let's reflect on a case from 2008. An author of this paper, while working with the German Chamber of Commerce in China, conceptualised a website named 'OpenBanking'. OpenBanking aimed to offer superior functionality to existing banking platforms by integrating with the popular Home Banking Computer Interface, providing users with features not available on their banking platforms, such as expenditure pie charts.
 
-Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This paradox underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German bank, and without its explicit endorsement, users were reluctant to trust OpenBanking.
+Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This paradox underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German bank, and without its explicit endorsement, users were reluctant to trust OpenBanking. The project closed in the weeks following. Google, however was able to do similar things in 2021 with similar prospective[@gpay2021].
 
 This case study highlights the challenges in establishing new trust anchors and strengthens our argument for the importance of decentralised trust anchors.
 
@@ -69,9 +69,7 @@ The case studies above help us to better understand the characteristics of Trust
 
 ### The Limit in the provision of trust Anchor leads to centralisation and innovation barrier
 
-Dr Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[^wood2017].
-
-[^wood2017]: Gavin Wood, 2017, *The Future of the Decentralised Web*
+Dr Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
 
 This paper posits that the role of trust anchors significantly amplifies these factors, coalescing them into a formidable force that reinforces the centralised dominance of today's tech giants. These entities, including Facebook, Google, and Apple, derive their trustworthiness and operational integrity largely from their scale and profitability. The rationale is that such entities have amassed substantial profits by being reliable providers of trust anchors. As a result, any deviation from their established behaviour for short-term gain is considered economically irrational.
 
@@ -87,7 +85,7 @@ The trust anchor effect is evident in scenarios where a web service's ability to
 
 ### Case Study: Google Pay and Google Wallet
 
-Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lack the level of trust that to function as a Trust Anchor.
+Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website[@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lack the level of trust that to function as a Trust Anchor.
 
 With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only credit cards but also items like shopping vouchers and digital car keys. However, these are not made into Trust Anchors.
 
@@ -99,13 +97,13 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 
 ## Reimagining Web 3.0: Beyond the Internet of Value
 
-The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era. This centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
+The prevailing vision for Web 3.0 is characterised as an 'Internet of Value' - a platform where value, in its various forms, is distributed more equitably among users and creators, breaking away from the monopolistic tendencies of the Web 2.0 era[@kirsty2021]. This centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
 
 However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web.
 
 Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value, but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
-Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
+Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web[@forrester2022]. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
 Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an alternative vision: the 'Next-Generation Web.' This Next-Generation Web shifts focus from the distribution of value to the decentralisation of Trust Anchors, attacking the root cause of centralisation while continuing to progress in the demand-driven direction that has been driving the Web 1.0 to 2.0 upgrade. This perspective views the Next-Generation Web as a platform that fosters widespread innovation and enables more profound integrations by allowing anyone to develop and maintain Trust Anchors.
 
@@ -149,7 +147,7 @@ Notably, this vision diverges from the popular concept of Web 3.0, which is char
 
 # Smart Tokens: Democratising the New Trust Anchors
 
-Building on the previous discussion, Smart Contract Tokens, defined in public blockchains such as Ethereum, exhibit certain characteristics that make them a suitable foundation for trust anchors.
+Building on the previous discussion, Smart Contract Tokens, defined in public blockchains such as Ethereum[@vitalik2013], exhibit certain characteristics that make them a suitable foundation for trust anchors.
 
 This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
 
@@ -183,9 +181,17 @@ If platforms like Google Wallet dictate the features of the tokens, we risk retu
 
 However, using tokens as trust anchors could lead to services not being sufficiently unified. Two potential solutions can address this issue:
 
-Firstly, industry bodies, Decentralised Autonomous Organisations (DAOs), or the applications themselves can facilitate the development of specifications and standards that guide how tokens should be programmed and interact with various applications. It's worth noting that public-blockchain based standardisation process such as ERC is insufficient for standardising trust anchor tokens, the cause for that is to be elaborated in the next section.
+Firstly, software libraries could serve as software that abstracts the tokens, similar to how Google Wallet presents a unified interface for different payment cards. Since the tokens themselves already serve as trust anchors, these libraries can focus on facilitating seamless interactions between applications and tokens without needing to externally validate the trustworthiness of the tokens, therefore can be internal components of token-using websites.
 
-Secondly, software libraries could serve as software that abstracts the tokens, similar to how Google Wallet presents a unified interface for different payment cards. Since the tokens themselves already serve as trust anchors, these libraries can focus on facilitating seamless interactions between applications and tokens without needing to externally validate the trustworthiness of the tokens, therefore can be internal components of token-using websites.
+Secondly, industry bodies, Decentralised Autonomous Organisations (DAOs), or the applications themselves can facilitate the development of specifications and standards that guide how tokens should be programmed and interact with various applications. This second point needs a bit further elaboration:
+
+It's worth noting that public-blockchain based standardisation process such as ERC alone is insufficient for standardising trust anchor tokens, as Web standards, such as trust anchors, have their own requirements[@tim2010] that can be summarised below.
+
+| Aspect                         | ERC Standards                                                | Web Standards (As Advocated by Tim Berners-Lee)              |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Scope and Detail**           | Focus on specific functionalities within the Ethereum blockchain; concise in nature. | Comprehensive, covering a wide range of technical, interoperability, and neutrality aspects for the entire web ecosystem. |
+| **Relevance to Trust Anchors** | May not encompass the broad range of requirements needed for web-wide trust anchors. | Emphasize open, inclusive standards suitable for the web at large, aligning with the diverse requirements of web ecosystems. |
+| **Industry-Specific Needs**    | Limited in addressing the diverse regulatory, security, and operational needs across industries. | Supports adaptable and flexible standards, catering to the specific needs of different industries, ensuring broad compatibility and neutrality. |
 
 In conclusion, tokens, not platforms, should serve as trust anchors. They are the origin of trust and need to be decoupled from token-serving platforms to foster competition and drive innovation, echoing the layered approach that has benefited the Internet. Therefore, efforts to decentralise trust anchors should enrich tokens so they can carry out the functions of trust anchors, rather than merely focusing on decentralising token-providing platforms. This perspective leads us to the core concept of this paper: Smart Tokens.
 
@@ -438,3 +444,5 @@ As we embark on this journey, it is crucial to remember the lessons from the Web
 > The shift from a site-centric to a token-centric model should not be driven by a pursuit of value or a reaction against the centralisation of the current web ecosystem. Instead, it should be guided by a vision of the Web as a public good that benefits all.
 
 The democratisation of trust anchors through Smart Tokens can pave the way for this vision. By turning trust into a public good, we can foster a more equitable and participatory Internet, amplifying user experience, bolstering privacy, and sparking a new wave of web innovation. This is the promise of the next-generation Web - a token-centric Internet that truly belongs to all.
+
+---
