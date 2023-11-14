@@ -316,17 +316,19 @@ Due to the scope of this paper, we will not delve into the details of these tech
 
 # Potential Applications of Smart Tokens
 
-While it's a common trope for papers introducing novel perspectives, concepts, or technologies to envision a transformative future, history has often been dismissive of such grandiose predictions. However, this paper contends that such visionary thinking is a necessary part of the process. Given that the centralisation of trust anchors has been entrenched in the web ecosystem for nearly two decades, it can be challenging to imagine how the web might have evolved with trust anchors readily provisioned by Smart Tokens.
-
-Therefore, the use cases outlined in this paper should be viewed as thought experiments based on the natural progression of the web, as revealed earlier in this paper, rather than as promises of the future. To counter the high-flown narratives often found in blockchain literature, our exploration of Smart Token applications is grounded in specificity and practicality. The first application below is specifically chosen for being a simple, tangible, straightforward application of Smart Tokens. 
-
 Broadly speaking, the use cases enabled by Smart Tokens benefit from two aspects: one is the removal of market friction that previously depended on a centralised market operator, and the other is the provision of limitless integration that allows the web to work together to form user-centric applications.
 
-Firstly, we will use the Flight Ticket to demonstrate how a Smart Token, due to its nature as a trust anchor, can enable various types of innovation and deep integration. The focus is on the notion that a single new trust anchor can bootstrap multiple use cases.
+While it's a common trope for papers introducing novel perspectives, concepts, or technologies to envision a transformative future, history has often been dismissive of such grandiose predictions. However, this paper contends that such visionary thinking is a necessary part of the process. Given that the centralisation of trust anchors has been entrenched in the web ecosystem for nearly two decades, it can be challenging to imagine how the web might have evolved with trust anchors readily provisioned by Smart Tokens.
+
+Therefore, the use cases outlined in this paper should be viewed as thought experiments based on the natural progression of the web, as revealed earlier in this paper, rather than as promises of the future. In contrast to the sweeping narratives often found in blockchain literature, which tend to proclaim the complete transformation of entire industries, our exploration of Smart Token applications is more nuanced and grounded. We focus on specific, tangible applications of Smart Tokens, demonstrating their potential impact in particular contexts rather than making broad claims about their effect on whole sectors. For instance, we discuss the potential of a flight ticket token, not a sweeping transformation of the travel or the transportation industry.
+
+Firstly, we will use the Smart Flight Ticket to demonstrate how a Smart Token, due to its nature as a trust anchor, can enable various types of innovation and deep integration. The focus is on the notion that a single new trust anchor can bootstrap multiple use cases.
 
 Secondly, we will use the Smart Car token as an example. While continuing the line of innovation allowed by it, we note it is a use case of IoT, where machine-to-machine communication is touched upon and highlight some deep and elaborate integrations enabled by such a complex smart token.
 
-Finally, we cover the Health Token, which, thanks to being non-transferable, is a Soulbound-type token. This cross-section between soulbound tokens and smart tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
+Thirdly, we cover the Health Token, which, thanks to being non-transferable, is a Soulbound-type token. This cross-section between soulbound tokens and smart tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
+
+Lastly, we briefly touch upon our experimental Smart Car token. This token represents a "what if" scenario, stemming from a simple exploratory approach: "what if we provided everyone with a Smart Token to engage with as they please?" The primary aim of this experiment is not to facilitate deep and meaningful integrations but rather to gauge public acceptance and understanding of such concepts.
 
 ## Smart Flight Ticket: A Demonstration of the Broad Array of Web Applications Enabled by a Simple Trust Anchor
 
