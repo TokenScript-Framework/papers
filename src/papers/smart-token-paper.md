@@ -13,7 +13,7 @@ abstract: |
 
 ## The Web's Foundational Model
 
-When Tim Berners-Lee and his team developed the foundational concepts of the Web, they conceptualized *sites* as its primary building blocks. These "sites" were akin to physically exploring different sites in the digital world. This seemingly intuitive approach, however, was not a given—as prior Internet protocols did not revolve around the concept of sites. Consider USENET; USENET organises and manages information by topic, thereby making it irrelevant which site, or even which planet, the information comes from under that topic.
+When Tim Berners-Lee and his team developed the foundational concepts of the Web, they conceptualised *sites* as its primary building blocks. These "sites" were akin to physically exploring different sites in the digital world. This seemingly intuitive approach, however, was not a given—as prior Internet protocols did not revolve around the concept of sites. Consider USENET; USENET organises and manages information by topic, thereby making it irrelevant which site, or even which planet, the information comes from under that topic.
 
 The Web had embraced a site-centric model, where a site had a single origin, was inherently competitive, formed an ecosystem through hyperlinks and evolved as a platform, rather than as a static product. This model complemented the revolutionary capabilities introduced by HTML, contributing to the Web's rapid adoption and eventual dominance as an Internet application. Even in the mobile Internet era, the foundational model of 'sites' persisted[^mobile].
 
@@ -99,17 +99,18 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 
 ## Reimagining Web 3.0: Beyond the Internet of Value
 
-Web 3.0 is often envisioned as an *Internet of Value*, a platform that distributes value more equitably, breaking away from Web 2.0's monopolistic tendencies [@kirsty2021]. This centralisation of value, in this view, is seen as the root cause of many of the issues plaguing the current web ecosystem, from stifled innovation to privacy concerns.
+Web 3.0 is often envisioned as an Internet of Value, a platform that distributes value more equitably, breaking away from Web 2.0's monopolistic tendencies [@kirsty2021]. This centralisation of value, in this view, is seen as the root cause of the main issues plaguing the current web ecosystem, from stifled innovation to privacy 
+concerns.
 
-However, this paper proposes a different interpretation of the evolution from Web 2.0 to the next generation web after it. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web.
+However, traditional decentralization strategies, which aim to build new token systems outside the influence of Web 2.0 giants, often miss the mark for the next-generation web. These approaches typically focus on *preventing* any single entity or collaborative group from gaining a controlling share, a concept more fitting for new forms of currency, like Bitcoin. Elaborate methods were used to measure the distribution [@srinivasan2017]. Such distributive views suggest the Web evolution follows the evolution of cryptocurrency. While well-intentioned, this view may not be wholly appropriate for the evolution of the Web, as it overlooks the competitive, innovative and dynamic nature of the internet ecosystem.
+
+This paper proposes a different interpretation of the evolution from Web 2.0 to the next-generation Web. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web, rather than just a redistribution of value.
 
 Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
 Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web[@forrester2022]. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
 Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an alternative vision: the 'Next-Generation Web.' This Next-Generation Web shifts focus from the distribution of value to the decentralisation of Trust Anchors, attacking the root cause of centralisation while continuing to progress in the demand-driven direction that has been driving the Web 1.0 to 2.0 upgrade. This perspective views the Next-Generation Web as a platform that fosters widespread innovation and enables more profound integrations by allowing anyone to develop and maintain Trust Anchors.
-
-The Trust Anchors of the future Web will not be platforms or services but tokens - specifically, Smart Tokens. The ensuing sections will delve into this concept in more detail.
 
 # The Token-Centric Web: Decentralised Trust and Integration
 
@@ -242,8 +243,6 @@ Given the shift from traditional trust anchors to Smart Tokens, a new architectu
 #### Token Runtime Environment
 
 A Token Runtime Environment is a distinct operational architecture that enables the functionality and trusted behaviour of Smart Tokens. It is a secure and separate environment from the application it supports, providing the necessary interfaces, managing the token's state, and turning trust in the underlying token's core logic into a trusted token web service. The Token Runtime Environment is crucial for Smart Tokens to serve as trust anchors, providing the necessary functions while maintaining a high level of security and trust.
-
-We enumerate the features needed for such a runtime environment.
 
 ### Requirements of Token Runtime Environment
 
