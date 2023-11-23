@@ -102,7 +102,7 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 Web 3.0 is often envisioned as an Internet of Value, a platform that distributes value more equitably, breaking away from Web 2.0's monopolistic tendencies [@kirsty2021]. This centralisation of value, in this view, is seen as the root cause of the main issues plaguing the current web ecosystem, from stifled innovation to privacy 
 concerns.
 
-However, traditional decentralization strategies, which aim to build new token systems outside the influence of Web 2.0 giants, often miss the mark for the next-generation web. These approaches typically focus on *preventing* any single entity or collaborative group from gaining a controlling share, a concept more fitting for new forms of currency, like Bitcoin. Elaborate methods were used to measure the distribution [@srinivasan2017]. Such distributive views suggest the Web evolution follows the evolution of cryptocurrency. While well-intentioned, this view may not be wholly appropriate for the evolution of the Web, as it overlooks the competitive, innovative and dynamic nature of the internet ecosystem.
+However, traditional decentralisation strategies, which aim to build new token systems outside the influence of Web 2.0 giants, often miss the mark for the next-generation web. These approaches typically focus on *preventing* any single entity or collaborative group from gaining a controlling share, a concept more fitting for new forms of currency, like Bitcoin. Elaborate methods were used to measure the distribution [@srinivasan2017]. Such distributive views suggest the Web evolution follows the evolution of cryptocurrency. While well-intentioned, this view may not be wholly appropriate for the evolution of the Web, as it overlooks the competitive, innovative and dynamic nature of the internet ecosystem.
 
 This paper proposes a different interpretation of the evolution from Web 2.0 to the next-generation Web. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web, rather than just a redistribution of value.
 
@@ -446,7 +446,37 @@ This line of thinking led to the development of Smart Cats. These are Non-Fungib
 
 Smart Cats quickly amassed one million adopters in the two weeks following its announcement, becoming the most widely owned NFT and the largest blockchain-based game. As traditional builders primarily focused on use-cases, the authors of this paper believe that the value of their work is demonstrated through its application and impact. Consequently, they do not attribute the success of Smart Cats to their personal popularity or influence. Instead, they credit the unique characteristics of the Smart Cats themselves. These NFTs come with a packaged and distributed token code and can operate inside a Token Runtime Environment in both the user's wallet and on the web. This serves as a practical demonstration of the Smart Token concept, emphasising its potential for widespread adoption and use.
 
-However, it's important to note that while Smart Cats served as a successful demonstration of the Smart Token concept, it is not a sophisticated system for directly empowering the web.
+While Smart Cats is not a sophisticated system for directly empowering the web, it demonstrated that the Smart Token concept can be accepted by the public.
+
+# AI User Agents' Use of Smart Tokens
+
+In the realm of AI user agents, Smart Tokens mark a significant shift from the traditional paradigm of using API keys for web application access.
+
+AI agents are entities that interact with web applications on behalf of users, performing a broad spectrum of tasks. These range from booking flights, buying eBooks, and sending update emails, to more complex tasks like automatic bidding and purchasing cloud services for IT departments.
+
+Despite their potential, AI user agents are currently constrained in scope. They more closely resemble the Web 1.0 era, functioning as anonymous entities that primarily consume information, rather than interact with web applications. This passive operation essentially reverts the Internet back into a universal library. In this model, AI agents act as a new generation of search engines with deep context awareness and decision-making capabilities, yet they are still primarily information retrieval systems, not interactive digital assistants capable of acting on behalf of users. This is exemplified in AI models like GPT, which, despite surpassed search engines by far, still doesn't function as an integrated command center.
+
+Three key obstacles prevent AI user agents from evolving beyond their current capabilities. We will focus on the third obstacle, as it is most relevant to this paper:
+
+1. **Persistent State Management:** AGI must maintain a consistent state or context over extended periods and multiple interactions, crucial for managing projects, tracking tasks, statuses, dependencies, and updates.
+2. **Predictive Behaviors:** AGI should learn from past experiences and adapt its behavior accordingly, such as learning to avoid sites that block AI or checking visa statuses in specific ways based on past interactions.
+3. **Seamless Integration:** The most critical requirement is the capability for seamless integration with various data sources and web applications. Traditionally, this is achieved by users providing an API key to the AI agent. However, this approach has a trust issue:
+
+Many API-access tasks involve authorisations such as payment. Websites typically avoid payment authorisations made by AI due to the risk of chargebacks and potential misuse. To mitigate this risk, web services, as anticipated in this paper, may create iframe-like checkout confirmation pages that render directly to the user, even if requested by an AI agent. This approach essentially turns AI user agents into multi-domain websites, leading to a 'reverse trust anchor' effect, where the website's checkout page requires user action to entrut authorisation.
+
+The introduction of Smart Tokens offers a more effective solution. Designed as trust anchors, Smart Tokens are inherently structured to operate within other websites. Being blockchain-based, they enable users to authorise all relevant transactions through cryptographic signatures.
+
+Consider a travel agent AI: it can understand the user's requirements, present an itinerary comprising several flight and hotel bookings, each represented by a Smart Token creation interface. The user can review it like a report and authorise payment in one go, treating the entire itinerary as a consolidated shopping cart.
+
+In this scenario, Smart Tokens replace API keys as the interface between AI agents and tokenised goods and services. Their advantage lies in:
+1. Session-based authorisation, where the user confirms each action, as opposed to API keys which represent a long-term bond between the AI and the service.
+2. This setup allows AI to access a broader market of goods and services, not limited to a few pre-configured API keys with established trust relationships.
+3. It reduces the risk for service providers by ensuring that AI agents do not autonomously make purchase decisions, as, unlike API keys, the user's private key is kept away from AI agents.
+4. This approach also facilitates batch confirmation of transactions, significantly enhancing user experience[^account-abstraction].
+
+The synergy between Smart Tokens and AI is a promising vision for the next-generation Web.
+
+[^account-abstraction]: In the context of Ethereum, such batch operation depends on account abstraction.
 
 # The New Building Blocks of the Next-Generation Web: A Token-Centric Vision
 
