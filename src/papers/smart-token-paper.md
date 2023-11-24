@@ -21,27 +21,27 @@ The Web had embraced a site-centric model, where a site had a single origin, was
 
 Berners-Lee and other early web pioneers didn't adopt the "site" concept merely for its potential evolutionary power. Their interest was in the Web's design, which was heavily influenced by a prevailing metaphor of that era: the library model. This model likened the Internet to a vast library and transposed a library's concept—a collection of books—to the digital realm, turning the Internet into a collection of sites. And just as a book has pages, the Web has "web pages." This framework led to a structuring of the Internet around origins (sites) instead of topics (as in USENET) or functionality (as in FTP). Hyperlinks became analogous to library indexes. However, site owners controlled these links, creating a self-referential mega-book that spanned the entire "library"[@tim1994].
 
-Structuring the Web around origins, rather than topics, or functionality, had profound implications. The consequence was the single-origin design of websites, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This site-origin model imbued each website with a sense of credibility, anchored in its source. This subtle, yet pivotal decision laid the groundwork for a more centralised Web It inadvertently set the stage for the emergence of anchor points in the web's trust landscape, which is a phenomenon that we explore further in the subsequent sections of this white paper.
+Structuring the Web around origins, rather than topics, or functionality, had profound implications. The consequence was the single-origin design of websites, reminiscent of how books have specific authors. Today, multi-domain sites are rare. This site-origin model imbued each website with a sense of credibility, anchored in its source. This subtle, yet pivotal decision laid the groundwork for a more centralised Web. It inadvertently set the stage for the emergence of *anchor points* in the Web's *trust* landscape, which is a phenomenon that we explore further in the subsequent sections of this white paper.
 
 ## The Shift from Information to Applications
 
-Originally influenced by the metaphor of a universal library, the Web was conceived as an information system [@roeber1992]. Today, such a description feels dated. It is now more apt to describe it as a sprawling web of applications. Rarely do individuals now describe their online activity as simply "browsing," whether for information, or anything else. In present times, their online activities consist of interacting with dynamic web apps, to chat, shop, book hotels, work remotely, network, and/or indulge in leisurely activities. Precious few individuals intentionally draw parallels between the Internet and a Universal Library any longer.
+Originally influenced by the metaphor of a universal library, the Web was conceived as an information system [@roeber1992]. Today, such a description feels dated. It is now more apt to describe it as a sprawling web of applications. Rarely do individuals now describe their online activity as simply "browsing," whether for information, or anything else. Presently, Web users chat, shop, book hotels, work remotely, network, and/or indulge in leisurely activities. Few consider Internet a Universal Library any longer.
 
 The transition from a web of information to a web of applications marked the significant transformation of Web 2.0. This was achieved by expanding the site model into an application model through web services. Key technologies of Web 2.0 include AJAX, RESTful API, and SaaS. Notably, these are application-oriented technologies built atop the traditional site-based information model. Concurrently, HTML evolved from a document format to an application development User Interface description language.
 
-As the Web transitioned from an information repository to an application platform, the concept of trust anchors emerged. These trust anchors are essential services that the Web ecosystem depends on. They tend to be provided by a few dominant entities and become the focal points of trust for web applications.
+As the Web transitioned from an information repository to an application platform, a new kind of web service - which this paper conceptualise as "trust anchors" - emerged. These trust anchors are essential services that the Web ecosystem depends on. They tend to be provided by a few dominant entities and become the focal points of trust for web applications.
 
 ## Trust Anchors and Web Centralisation: An Inevitable Byproduct of Application Shift
 
-Web 2.0 has created a complex network of applications interconnected through multiple web services. These services, such as Google Login and Google Pay, have become more than just functional components. They are now central to ensuring the security and reliability of web applications. In this context, we refer to them as Trust Anchors. This term, originally from PKI cryptography, is used here to describe their critical role in the Web 2.0 ecosystem.
+Web 2.0 has created a complex network of applications interconnected through multiple web services. These services, such as Google Login and Google Pay, have become more than just functional components. They are now central to ensuring the security and reliability of web applications. This paper refers to them as Trust Anchors.
 
-This section of the paper examines the role of Trust Anchors in web centralisation.
+Trust Anchors play a crucial role in Web's centralisation.
 
-Traditionally, a Trust Anchor in cryptography is an authoritative entity trusted without external validation [@linn2000], with an example being root CA certificates in SSL/TLS. In the web ecosystem, however, we define the term as follows,
+Traditionally, a Trust Anchor in PKI cryptography is an authoritative entity trusted without external validation [@linn2000], with an example being root CA certificates in SSL/TLS. In the web ecosystem, however, we define the term as follows,
 
 #### Trust Anchor
 
-Trust Anchors are external web services that web applications depend on for their core functions, even when they possess the code to provide similar functionalities themselves. This dependency arises from the inherent trust that the business logic of these applications places on these services. In essence, Trust Anchors are not just functional; they are trusted.
+Trust Anchors are external web services that web applications depend on for their core functions, even if they possess the code to provide similar functionalities themselves. This dependency arises from the inherent trust that the business logic of these applications places on these services. In essence, Trust Anchors are not just functional; they are trusted.
 
 The crucial distinction between a website's functionality and the trust it depends upon is demonstrated by the following Case Studies:
 
@@ -49,13 +49,13 @@ The crucial distinction between a website's functionality and the trust it depen
 
 To illustrate this point, let's reflect on a case from 2008. While working with the German Chamber of Commerce in China, an author of this paper conceptualised a website named 'OpenBanking'. OpenBanking aimed to offer superior functionality to existing banking platforms by integrating with the popular Home Banking Computer Interface, providing users with features not available on their banking platforms, such as expenditure pie charts.
 
-Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This paradox underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German bank, and without its explicit endorsement, users were reluctant to trust OpenBanking. The project closed in the weeks following. Google, however, was able to do similar things in 2021 with similar prospects [@gpay2021].
+Despite its open-source nature and advanced features, users were hesitant to input their credentials into OpenBanking. Interestingly, these same users had no issues using similar functionalities on open-source desktop software. This observation underscores the importance of trust anchors in user adoption. In this case, the recognised trust anchor was the German account holding banks, and without its explicit endorsement, users were reluctant to trust OpenBanking. The website has the code for functionality, but couldn't operate, because it depends on trust anchors. Google, however, was able to do similar things in 2021 with similar prospects [@gpay2021].
 
-This case study highlights the challenges in establishing new trust anchors and strengthens our argument for the importance of decentralised trust anchors.
+This case study highlights the challenges in establishing new trust anchors, which builds to the argument for decentralised trust anchors.
 
 ### Case Study: Google Login
 
-When a user attempts to authenticate with a website, two challenges arise. Firstly, users often doubt the website's ability to safeguard their data. Secondly, the website may struggle to verify the authenticity of the user. This predicament often compels users to prefer logging in with Google, a trusted entity, and websites to adopt Google's authentication service. Currently, the reliance on social logins has grown to such an extent that some websites have entirely eliminated traditional password databases.
+When a user needs to authenticate with a website, two challenges arise. Firstly, users often doubt the website's ability to safeguard their data. Secondly, the website may struggle to verify the authenticity of the user. This predicament often compels users to prefer logging in with Google, a trusted entity, and websites to adopt Google's authentication service. The force so strong, that some websites have entirely eliminated traditional password databases in preference of Google Login.
 
 In this scenario, Google Login serves as a trust anchor, providing functionality and acting as a beacon of trust. Users place their faith in Google to authenticate genuine users without compromising or inadvertently leaking login credentials. This creates a dependency on a central point.
 
@@ -65,9 +65,13 @@ The case studies above help us to better understand the characteristics of Trust
 
 #### Characteristics of Trust Anchors
 
-1. A trust anchor is an essential dependency, not just a popular service. For example, Google Analytics is not a trust anchor, as a website can carry out its own analysis. Its popularity is based on traditional factors of centralisation like big data, network effect, and IP laws, not on its role as a trust anchor.
-2. A trust anchor is trusted to follow a protocol and is expected not to betray the trust.
-3. A trust anchor elevates user trust to meet the demand of the applications. For instance, users willingly provide their credit card details to Google Pay for transactions on merchant websites. However, not all service providers act as trust anchors. For example, Amadeus, which provides flight data and reservation services for airlines, operates in the airline website's back office without needing to elevate user trust.
+| Characteristics                                              | Example                                                      | Counter-Example                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **A trust anchor is an essential dependency, not just a "popular" service** | Google Login is a trust anchor, even a website capable of authenticate user still is compelled to use it. | Google Analytics is not a trust anchor, as a website can carry out its own analysis.[^factors-of-centralisation] |
+| **A trust anchor is trusted to follow a protocol and is expected not to betray the trust. ** | Google Login is a trust anchor because it has historical commitment to be one. | Reddit is not a trust anchor as it view itself a competition of applications that needs its support. |
+| **A trust anchor elevates user trust to meet the demand of the applications** | Users willingly provide their credit card details to Google Pay for transactions on merchant websites. | Users are willing to book flights from airline websites without interacting with Amadeus, a central flight database at work in the back. |
+
+[^factors-of-centralisation]: If Google Analytic is not a trust anchor, why it has a central position? Trust anchor is the main, but not the only factor of centralisation. Other factors at play were higlighted in [@wood2017].
 
 ### The Limit in the provision of trust Anchor leads to centralisation and innovation barrier
 
@@ -81,17 +85,17 @@ The trust anchors by the Internet centres, once formed, creates an innovation he
 
 #### The Trust Anchor Effect: Innovation Stifled by Centralisation
 
-We define the "Trust Anchor Effect" as the phenomenon where the centralisation of trust within a few dominant entities creates a significant barrier to innovation. This effect describes a web ecosystem where new products and services, despite being technically feasible, remain unrealised due to the absence of trust in entities other than the established trust anchors. It encapsulates the dependency on these central points for the provision of trust, without which innovation cannot gain traction or user acceptance.
+We define the "Trust Anchor Effect" as the phenomenon where the centralisation of trust within a few dominant entities creates a significant barrier to innovation. This effect describes a Web ecosystem where new products and services, despite being technically feasible, remain unrealised due to the absence of such trust in entities other than the established trust anchors. It encapsulates the dependency on these central points for the provision of trust, without which innovation cannot gain traction or user acceptance.
 
-The trust anchor effect is evident in scenarios where a web service's ability to innovate is contingent upon the trust anchors' willingness or readiness to support new functionalities. 
+The trust anchor effect is evident in scenarios where a web service's ability to innovate is contingent upon the trust anchors' willingness or readiness to support new functionalities.
 
 ### Case Study: Google Pay and Google Wallet
 
 Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website[@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lacks the level of trust to function as a Trust Anchor.
 
-With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only credit cards but also items like shopping vouchers and digital car keys. However, these are not made into Trust Anchors.
+With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only payment cards but also other wallet items such as shopping vouchers and digital car keys. However, these additional items are not made into Trust Anchors.
 
-For example, a website that accepts shopping vouchers during the checkout process can't use the voucher stored in Google Wallet directly, despite the fact that it could use the credit cards in Google Wallet. The user is required to copy and paste the voucher code, as Google Wallet has yet to develop the voucher as a Trust Anchor service. Similarly, although a user can store a digital car key in Google Wallet, this does not extend to allowing a car cleaning service's website to access the car for service purposes. The user still needs to carry a physical car key at the cleaning appointment.
+For example, a website that accepts shopping vouchers during the checkout process can't use the voucher stored in Google Wallet directly, despite the fact that it could use the payment cards in Google Wallet. The user is required to copy and paste the voucher code, as Google Wallet has yet to develop the voucher as a Trust Anchor service. Similarly, although a user can store a digital car key in Google Wallet, this does not extend to allowing a car cleaning service's website to access the car for service purposes. The user still needs to carry a physical car key at the cleaning appointment.
 
 This means any web innovation built on top of the recognition of the shopping voucher and use of digital car key cannot proceed unless Google develops them into Trust Anchor services, creating an innovation dependency.
 
@@ -102,9 +106,9 @@ In essence, the trajectory of Web 2.0 innovation is not solely constrained by th
 Web 3.0 is often envisioned as an Internet of Value, a platform that distributes value more equitably, breaking away from Web 2.0's monopolistic tendencies [@kirsty2021]. This centralisation of value, in this view, is seen as the root cause of the main issues plaguing the current web ecosystem, from stifled innovation to privacy 
 concerns.
 
-However, traditional decentralisation strategies, which aim to build new token systems outside the influence of Web 2.0 giants, often miss the mark for the next-generation web. These approaches typically focus on *preventing* any single entity or collaborative group from gaining a controlling share, a concept more fitting for new forms of currency, like Bitcoin. Elaborate methods were used to measure the distribution [@srinivasan2017]. Such distributive views suggest the Web evolution follows the evolution of cryptocurrency. While well-intentioned, this view may not be wholly appropriate for the evolution of the Web, as it overlooks the competitive, innovative and dynamic nature of the internet ecosystem.
+However, traditional decentralisation strategies, which aim to build new token systems outside the influence of Web 2.0 giants, often miss the mark for the next-generation Web. These approaches typically focus on *preventing* any single entity or collaborative group from gaining a 51% control - a concept more fitting for new forms of wealth, like Bitcoin - with distribution control mechanisms. Elaborate methods were used to measure the distribution [@srinivasan2017]. Such distributive views suggest the Web evolution follows the evolution of cryptocurrency. While well-intentioned, this view overlooks the competitive, innovative and dynamic nature of the Internet ecosystem.
 
-This paper proposes a different interpretation of the evolution from Web 2.0 to the next-generation Web. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web, rather than just a redistribution of value.
+This paper proposes a different evolution path from Web 2.0 to the next-generation Web. We argue that it is the democratisation of trust and the creation of public goods that will truly define the next-generation Web, rather than just a redistribution of value.
 
 Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
@@ -114,7 +118,7 @@ Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an al
 
 # The Token-Centric Web: Decentralised Trust and Integration
 
-The next-generation Web, as envisioned in this paper, represents a paradigm shift from the centralised trust anchors of today to a decentralised and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratising the Web's trust infrastructure and turning it into a public good that benefits all.
+The Next-Generation Web, as envisioned in this paper, represents a paradigm shift from the centralised trust anchors of today to a decentralised and integrated ecosystem. This transformation is predicated on the ability to establish trust anchors independently of internet giants, thereby democratising the Web's trust infrastructure and turning it into a public good that benefits all.
 
 In this chapter, we will explore the implications of this shift, the areas it would revolutionise, and how it culminates in a web defined by limitless integration.
 
@@ -150,7 +154,7 @@ Notably, this vision diverges from the popular concept of Web 3.0, which is char
 
 # Smart Tokens: Democratising the New Trust Anchors
 
-Building on the previous discussion, Smart Contract Tokens, defined in public blockchains such as Ethereum[@vitalik2013], exhibit certain characteristics that make them a suitable foundation for trust anchors.
+Building on the previous discussion, Smart Contract Tokens - defined in public blockchains such as Ethereum[@vitalik2013] - exhibit certain characteristics that make them a suitable foundation for trust anchors.
 
 This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
 
