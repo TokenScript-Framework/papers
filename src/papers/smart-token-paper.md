@@ -67,15 +67,15 @@ The case studies above help us to better understand the characteristics of Trust
 
 | Characteristics                                              | Example                                                      | Counter-Example                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **A trust anchor is an essential dependency, not just a "popular" service** | Google Login is a trust anchor, even a website capable of authenticate user still is compelled to use it. | Google Analytics is not a trust anchor, as a website can carry out its own analysis.[^factors-of-centralisation] |
+| **A trust anchor is an essential dependency, not just a "popular" service** | Google Login is a trust anchor, even a website capable of authenticating user still is compelled to use it. | Google Analytics is not a trust anchor, as a website can carry out its own analysis.[^factors-of-centralisation] |
 | **A trust anchor is trusted to follow a protocol and is expected not to betray the trust. ** | Google Login is a trust anchor because it has historical commitment to be one. | Reddit is not a trust anchor as it view itself a competition of applications that needs its support. |
 | **A trust anchor elevates user trust to meet the demand of the applications** | Users willingly provide their credit card details to Google Pay for transactions on merchant websites. | Users are willing to book flights from airline websites without interacting with Amadeus, a central flight database at work in the back. |
 
-[^factors-of-centralisation]: If Google Analytic is not a trust anchor, why it has a central position? Trust anchor is the main, but not the only factor of centralisation. Other factors at play were higlighted in [@wood2017].
+[^factors-of-centralisation]: If Google Analytic is not a trust anchor, why does it have a central position? Trust anchor is the main, but not the only factor of centralisation. Other factors at play were higlighted in [@wood2017].
 
 ### The Limit in the provision of trust Anchor leads to centralisation and innovation barrier
 
-Dr Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws[@wood2017].
+Dr. Gavin Wood has attributed the Web's centralisation to a combination of factors. These factors include network effects, economies of scale, big data ownership, and intellectual property laws [@wood2017].
 
 This paper posits that the role of trust anchors significantly amplifies these factors, coalescing them into a formidable force that reinforces the centralised dominance of today's tech giants. These entities, including Facebook, Google, and Apple, derive their trustworthiness and operational integrity largely from their scale and profitability. The rationale is that such entities have amassed substantial profits by being reliable providers of trust anchors. As a result, any deviation from their established behaviour for short-term gain is considered economically irrational.
 
@@ -91,7 +91,7 @@ The trust anchor effect is evident in scenarios where a web service's ability to
 
 ### Case Study: Google Pay and Google Wallet
 
-Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website[@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lacks the level of trust to function as a Trust Anchor.
+Google Pay, when integrated into web platforms, enables users to complete transactions without directly exposing their credit card details to the merchant's website [@gpay2020]. Serving as a Trust Anchor, Google Pay extends beyond mere transactional functionality; it is entrusted with ensuring reliability and operational integrity. Even if an open-source developer were to create a feature-wise superior payment system, it lacks the level of trust to function as a Trust Anchor.
 
 With the evolving demands of e-commerce, Google rebranded Google Pay to Google Wallet, expanding its capabilities to store not only payment cards but also other wallet items such as shopping vouchers and digital car keys. However, these additional items are not made into Trust Anchors.
 
@@ -112,7 +112,7 @@ This paper proposes a different evolution path from Web 2.0 to the next-generati
 
 Rather than viewing the centralisation of value as the *cause* of the Web's current evolutionary obstacles, we argue that it is, in fact, a *consequence* of the Web's evolution. The transition from Web 1.0 to Web 2.0 was not primarily driven by a pursuit of centralised value but by the demand for more dynamic, application-oriented experiences. Therefore, it is not logical to assume that the transition to Web 3.0 should be defined by a reversal of this trend.
 
-Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web[@forrester2022]. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
+Furthermore, the characterisation of Web 3.0 as an 'Internet of Value' may be more reflective of a countercultural movement against the early elitism of Web 2.0, spurred by social and economic disparities, rather than an evolutionary process of the Web [@forrester2022]. Not everyone who transitioned from the prior-generation Web to Web 2.0 was pursuing value, and not everyone who migrates from Web 2.0 to the next-generation Web will necessarily be pursuing value either. While the value investing community is growing, it still represents a small section of web users and is likely to remain so in the future.
 
 Instead of defining Web 3.0 as an 'Internet of Value,' this paper proposes an alternative vision: the 'Next-Generation Web.' This Next-Generation Web shifts focus from the distribution of value to the decentralisation of Trust Anchors, attacking the root cause of centralisation while continuing to progress in the demand-driven direction that has been driving the Web 1.0 to 2.0 upgrade. This perspective views the Next-Generation Web as a platform that fosters widespread innovation and enables more profound integrations by allowing anyone to develop and maintain Trust Anchors.
 
@@ -154,7 +154,7 @@ Notably, this vision diverges from the popular concept of Web 3.0, which is char
 
 # Smart Tokens: Democratising the New Trust Anchors
 
-Building on the previous discussion, Smart Contract Tokens - defined in public blockchains such as Ethereum[@vitalik2013] - exhibit certain characteristics that make them a suitable foundation for trust anchors.
+Building on the previous discussion, Smart Contract Tokens - defined in public blockchains such as Ethereum [@vitalik2013] - exhibit certain characteristics that make them a suitable foundation for trust anchors.
 
 This chapter posits that these trust anchors should assume the form of tokens. We will explore why tokens are suitable as trust anchors, discuss the technical and layered design implications, and introduce a new design requirement for the type of tokens suitable for trust anchors: smart tokens.
 
@@ -192,7 +192,7 @@ Firstly, software libraries could serve as software that abstracts the tokens, s
 
 Secondly, industry bodies, Decentralised Autonomous Organisations (DAOs), or the applications themselves can facilitate the development of specifications and standards that guide how tokens should be programmed and interact with various applications. This second point needs a bit further elaboration:
 
-It's worth noting that a public-blockchain-based standardisation process such as ERC alone is insufficient for standardising trust anchor tokens, as Web standards, such as trust anchors, have their own requirements[@tim2010] that can be summarised below.
+It's worth noting that a public-blockchain-based standardisation process such as ERC alone is insufficient for standardising trust anchor tokens, as Web standards, such as trust anchors, have their own requirements [@tim2010] that can be summarised below.
 
 | Aspect                         | ERC Standards                                                | Web Standards (As Advocated by Tim Berners-Lee)              |
 | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -426,21 +426,21 @@ Below, we explore some potential integrations for the Health Token:
 | Restaurants and Food Delivery Services | Restaurants could recommend meals in line with your health profile. People with high blood pressure could be offered low-sodium dishes, while sugar-free options could be suggested for diabetics. |
 | Hotel Reservation Systems              | Hotels with access to your health data could ensure your room is equipped with necessary amenities like heaters, air filtration systems, or wheelchair accessibility. |
 
-The Health Token introduces a significant paradigm shift in the way health data is shared and utilised. Traditionally, systems such as Health Information Exchange (HIE) have attempted to make health data shareable. However, these systems are primarily geared towards healthcare systems, facilitating the transfer of health data across different hospitals and clinics, enabling quick data sharing with ambulances, and integrating with insurance providers. This paper specifically avoids delving into these areas, as they represent typical industrial integration efforts that do not rely on the web and can be considered more in the domain of the Internet rather than Web3. The use cases we highlighted above, therefore, are web-focused, with the point of integration being the tokenised health data and a web application.
+The Health Token introduces a significant paradigm shift in the way health data is shared and utilised. Traditionally, systems such as Health Information Exchange (HIE) have attempted to make health data shareable. However, these systems are primarily geared towards healthcare systems, facilitating the transfer of health data across different hospitals and clinics, enabling quick data sharing with ambulances, and integrating with insurance providers. This paper specifically avoids delving into these areas, as they represent typical industrial integration efforts that do not rely on the web and can be considered an application of Digital Industrial Integration rather than Web3. The use cases we highlighted above, therefore, are web-focused, with the point of integration being the tokenised health data and a web application.
 
-However, the implementation of the Health Token presents two significant challenges.
+The implementation of the Health Token presents two significant challenges.
 
-Firstly, there is the challenge of securely storing health data. If the Smart Token's Runtime Environment is located in a user's wallet, such as smartphones with a healthcare centre feature, the data is relatively safe. However, many use-cases demand server-side execution of Smart Tokens, which may be in a node of a decentralised network. While the Smart Layer - one such decentralised network - provides detailed considerations for designing such a runtime environment, there is no universal solution at this moment.
+Firstly, securely storing health data presents a substantial challenge. When the Smart Token's Runtime Environment is located within a user's wallet, such as smartphones equipped with a healthcare centre feature, data security is relatively high. However, the complexity escalates when server-side execution of Smart Tokens is required, often on nodes within a decentralized network like the Smart Layer. This network provides detailed considerations for designing such a runtime environment, but a universally applicable solution remains elusive. A working solution will likely crucially depend on Fully Homomorphic Encryption (FHE) technologies, particularly those compatible with Ethereum Virtual Machine (EVM) systems like FHEVM. FHE allows computations on encrypted data without ever decrypting it, thus offering a groundbreaking approach to maintaining data privacy and security in decentralized networks.
 
-Secondly, the co-computation of data, such as sifting through product listings to find products to fill a user's shopping cart, requires computation on encrypted data. This necessitates the use of multi-party computation (MPC) protocols.
+Secondly, the co-computation of data, such as filtering through product listings for an optimal shopping experience, demands computation on encrypted data, a task well-suited for FHE. Traditionally, Multi-Party Computation (MPC) protocols have been used for this purpose. MPC enables secure computations on encrypted data by allowing multiple parties to jointly compute a function while keeping their inputs private. However, integrating FHEVM can offer a more streamlined and efficient approach. FHEVM, with its EVM compatibility, can potentially handle such computations with greater efficiency and less complexity compared to traditional MPC protocols.
 
-MPC protocols can enable secure computations on encrypted data, allowing multiple parties to jointly compute a function while keeping their inputs private. This could enable the secure processing of health data without exposing sensitive information. However, implementing MPC protocols can be technically challenging. Without diverting from the focus of this paper, the challenges can be generalised into a few categories:
+The challenges in implementing these advanced cryptographic protocols can be categorized as follows:
 
-- They often require complex cryptographic techniques and careful protocol design to ensure privacy and correctness. 
-- MPC protocols are generally slower and more resource-intensive than traditional computation methods.
-- Practical deployment of MPC protocols also requires careful consideration of various factors, including the network architecture, the trust model, and the number and reliability of participating parties. One example of such a challenge is the transfer of an encrypted share of data when a node responsible for a specific user's health token goes offline.
+- The need for complex cryptographic techniques and meticulous protocol design to ensure privacy and accuracy. FHEVM's compatibility with EVM could streamline this process, leveraging existing Ethereum-based smart contract infrastructure.
+- The traditional slower and more resource-intensive nature of MPC protocols could be mitigated by FHEVM's more efficient processing capabilities.
+- Practical deployment considerations, such as network architecture, trust models, and the reliability of participating parties, become more manageable with FHEVM's integration into existing Ethereum networks and smart contract ecosystems.
 
-In conclusion, while the Health Token holds significant potential for transforming the way health data is shared and utilised on the web, realising this potential requires overcoming substantial technical challenges, particularly in the areas of secure data storage and secure computation on encrypted data. It will likely be the last frontier of Smart Token adoption.
+In conclusion, while the Health Token has the potential to revolutionize the sharing and utilization of health data on the web, realizing this potential hinges on overcoming significant technical challenges in secure data storage and computation. The integration of FHE technologies, particularly FHEVM for Ethereum-compatible environments, represents a promising advancement towards this goal. It is poised to become a pivotal element in the widespread adoption and practical implementation of Health Tokens and may mark the beginning of a new era in secure, privacy-preserving Smart Tokens.
 
 ## Smart Cat: An Experimental Approach
 
