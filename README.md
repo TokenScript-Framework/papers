@@ -56,7 +56,7 @@ This repository hosts the documentation source for both TokenScript and SmartLay
      ````
      $ pandoc --resource-path=src/papers --csl src/papers/chicago-note-bibliography.csl --citeproc --bibliography src/papers/smart-layer-technical-paper.bib -o out/smartlayer-technical-paper.pdf src/papers/smart-layer-technical-paper.md
      ````
-     This results a single PDF file: **smart-layer-technical-paper.pdf**.
+     This result is a single PDF file: **smart-layer-technical-paper.pdf**.
 
 ## Directory Overview:
 
@@ -103,6 +103,24 @@ $ lftp -c 'open cobalt.primarywebservers.com; mirror -x .git --exclude-glob-from
 ````
 
 ## Issues and Fixes:
+
+**Error** from running pandoc: `option '--toc' doesn't allow an argument`
+
+**Solution**: Likely because your pandoc version is too low, consider pandoc 3.2.
+
+---
+
+**Error** from running pandoc: `pdflatex not found. Please select a different --pdf-engine or install pdflatex
+
+**Solution**: install the package that provides pdflatex. On Ubuntu/Debian, it is `sudo apt install texlive-latex-base`.
+
+---
+
+**Error** from running pandoc: `! LaTeX Error: File `xcolor.sty' not found.`
+
+**Solution**: install the package that provides it. On Ubuntu/Debian, it is texlive
+
+---
 
 **Error**: `"html5-bootstrap" is not a recognized transformation type`
 
