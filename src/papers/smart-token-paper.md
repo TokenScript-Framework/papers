@@ -232,9 +232,12 @@ Recognising these limitations, it becomes evident that Smart Contract Tokens nee
 
 #### Smart Token
 
-A "Smart Token" is a blockchain-based digital asset that incorporates programmable logic, enabling it to function as a web service and an integration point for web applications. Unlike traditional tokens, which primarily symbolise a unit of value, Smart Tokens can represent a broad spectrum of assets or rights and interact with various web services. Within the Web ecosystem, Smart Token acts as a decentralised trust anchor, addressing the centralisation issues associated with conventional trust anchors. Trust in a Smart Token is derived from its embedded smart contract rules and the reputation of its issuer. It operates in a secure, separate runtime environment from the applications it supports, ensuring robust security and trustworthiness.
+A "Smart Token" is a blockchain-based digital asset that serves as a **decentralised trust anchor** for web applications.
 
-By providing a wide array of services, Smart Tokens enable seamless interactions between applications and tokens, fostering deeper integrations and a more dynamic, user-centric web experience.
+- Unlike traditional tokens which primarily represent value, Smart Tokens can embody a wide range of assets, rights, and services. They incorporate both programmable logic and inherent trustworthiness.
+- Unlike conventional integration points that merely assume trust exists, Smart Tokens actively provide and validate trust for secure and innovative web interactions. This trust is derived from the token's embedded smart contract rules, protocol-provided trusted execution of business logic, and the reputation of its issuer.
+
+Operating in a secure, separate runtime environment, Smart Tokens ensure robust security and trustworthiness. By functioning as both a web service and a trust-providing integration point, they enable deeper, more dynamic interactions between applications, as well as deeper integrations that enables user-centric web experience. This positions Smart Tokens as building blocks for a more decentralised and innovative web ecosystem.
 
 [^Griffith]: Griffith coined this term during a casual conversation in a bar in Surry Hills, Sydney, in 2018, as the team behind this paper deliberated on the potential building blocks of Web3. At that point, Web3 was still in its budding state and had not yet been defined as an 'Internet of Value.' The phrase "Smart Token" caught on, and the team adopted the moniker "Smart Token Labs." However, the exact reasoning behind Griffith's nomenclature remains a mystery, as he was unfortunately incarcerated before he could elaborate on it. Hence, we are left to speculate why the envisioned building block for Web3 was christened as a "Smart Token."
 
@@ -323,7 +326,9 @@ The previous section delineated the prerequisites for Smart Tokens to function a
 
 TokenScript is a scripting framework that amalgamates the token code, destined to execute in the Token Runtime Environment, with the declarative components necessary for the tokens to operate as trust anchors. These components include events, mechanisms for synchronising with blockchain token status, and definitions of actions that websites can invoke.
 
-At a high level, TokenScript is an XML container that combines declarations to trigger, render, and correctly manage the code, along with the code itself, into a single, signed, deployable format. It further employs XML signatures to permit the publication of TokenScript segments that are sufficiently small to support a single use-case and modular enough to swap in and out data segments. This could include changing the language of the token user interface based on the use-case.
+It's crucial that TokenScript is not just another development framework. It is designed to enable Smart Tokens to function as decentralised trust anchors, fundamentally changing how trust is established and maintained on the Web, rather than merely making development hassle free.
+
+At a high level, TokenScript is a container that combines declarations to trigger, render, and correctly manage the code, along with the code itself, into a single, signed, deployable format. It further employs XML signatures to permit the publication of TokenScript segments that are sufficiently small to support a single use-case and modular enough to swap in and out data segments. This could include changing the language of the token user interface based on the use-case.
 
 At a more granular level, TokenScript maintains, in a declarative manner, the relationships between tokens that can function together. This includes potential modules from industry bodies for standardising sections of token behaviour, such as a standard lock-unlock function for all car-key tokens, and commands the attestation formats it can accept and the list of websites it can safely access for its dependency data. The details are necessary to fend off various forms of attack, prevent resource abuse, and inform the system that utilises it of its states.
 
@@ -335,7 +340,9 @@ TokenScript, a recommended smart token standard work in progress, is currently h
 
 The Smart Layer Network is the Token Runtime Environment designed to enable Smart Tokens through the execution of TokenScripts. In simpler terms, it's a container that runs TokenScripts, akin to a Kubernetes Engine that runs instances of tokens, similar to how Google Wallet is a container running its own tokens. This network provides RESTful APIs for the Smart Token-based Trust Anchors.
 
-However, the actual implementation is more complex as it is designed to operate as a decentralised service network. The enforcement of Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network Technical paper [@stl2023] is available[^stl-papers].
+While the Smart Layer Network provides APIs, its core function is to serve as a decentralised runtime environment for Smart Tokens. This is fundamentally different from traditional backend services, as it enables the creation and maintenance of decentralised trust anchors.
+
+In order to enable decentralisation of trust anchors, it enforces Service Level Agreements, the mechanism to ensure the network is ready to instantiate specific types of tokens, reward token hosting nodes, as well as load balancing and token/node assignment are specific challenges that the design needs to address. The Smart Layer Network Technical paper [@stl2023] is available[^stl-papers].
 
 [^stl-papers]:  https://github.com/SmartTokenLabs/papers/releases/
 
@@ -360,6 +367,8 @@ Secondly, we will use the Smart Car token as an example. While continuing the li
 Thirdly, we cover the Health Token. This cross-section between SoulBound Tokens and Smart Tokens provides us with the opportunity to compare the two concepts and grounds our understanding.
 
 Lastly, we briefly touch upon our experimental Smart Car token. This token represents a "what if" scenario, stemming from a simple exploratory approach: "what if we provided everyone with a Smart Token to engage with as they please?" The primary aim of this experiment is not to facilitate deep and meaningful integrations but rather to gauge public acceptance and understanding of such concepts.
+
+These integrations are made possible not through traditional APIs or frameworks, but through the trust established by Smart Tokens acting as decentralised trust anchors. This is a fundamental shift from how integrations work in Web 2.0.
 
 ## Smart Flight Ticket: A Demonstration of the Broad Array of Web Applications Enabled by a Simple Trust Anchor
 
@@ -430,17 +439,17 @@ The Health Token introduces a significant paradigm shift in the way health data 
 
 The implementation of the Health Token presents two significant challenges.
 
-Firstly, securely storing health data presents a substantial challenge. When the Smart Token's Runtime Environment is located within a user's wallet, such as smartphones equipped with a healthcare centre feature, data security is relatively high. However, the complexity escalates when server-side execution of Smart Tokens is required, often on nodes within a decentralized network like the Smart Layer. This network provides detailed considerations for designing such a runtime environment, but a universally applicable solution remains elusive. A working solution will likely crucially depend on Fully Homomorphic Encryption (FHE) technologies, particularly those compatible with Ethereum Virtual Machine (EVM) systems like FHEVM. FHE allows computations on encrypted data without ever decrypting it, thus offering a groundbreaking approach to maintaining data privacy and security in decentralized networks.
+Firstly, securely storing health data presents a substantial challenge. When the Smart Token's Runtime Environment is located within a user's wallet, such as smartphones equipped with a healthcare centre feature, data security is relatively high. However, the complexity escalates when server-side execution of Smart Tokens is required, often on nodes within a decentralised network like the Smart Layer. This network provides detailed considerations for designing such a runtime environment, but a universally applicable solution remains elusive. A working solution will likely crucially depend on Fully Homomorphic Encryption (FHE) technologies, particularly those compatible with Ethereum Virtual Machine (EVM) systems like FHEVM. FHE allows computations on encrypted data without ever decrypting it, thus offering a groundbreaking approach to maintaining data privacy and security in decentralised networks.
 
 Secondly, the co-computation of data, such as filtering through product listings for an optimal shopping experience, demands computation on encrypted data, a task well-suited for FHE. Traditionally, Multi-Party Computation (MPC) protocols have been used for this purpose. MPC enables secure computations on encrypted data by allowing multiple parties to jointly compute a function while keeping their inputs private. However, integrating FHEVM can offer a more streamlined and efficient approach. FHEVM, with its EVM compatibility, can potentially handle such computations with greater efficiency and less complexity compared to traditional MPC protocols.
 
-The challenges in implementing these advanced cryptographic protocols can be categorized as follows:
+The challenges in implementing these advanced cryptographic protocols can be categorised as follows:
 
 - The need for complex cryptographic techniques and meticulous protocol design to ensure privacy and accuracy. FHEVM's compatibility with EVM could streamline this process, leveraging existing Ethereum-based smart contract infrastructure.
 - The traditional slower and more resource-intensive nature of MPC protocols could be mitigated by FHEVM's more efficient processing capabilities.
 - Practical deployment considerations, such as network architecture, trust models, and the reliability of participating parties, become more manageable with FHEVM's integration into existing Ethereum networks and smart contract ecosystems.
 
-In conclusion, while the Health Token has the potential to revolutionize the sharing and utilization of health data on the web, realizing this potential hinges on overcoming significant technical challenges in secure data storage and computation. The integration of FHE technologies, particularly FHEVM for Ethereum-compatible environments, represents a promising advancement towards this goal. It is poised to become a pivotal element in the widespread adoption and practical implementation of Health Tokens and may mark the beginning of a new era in secure, privacy-preserving Smart Tokens.
+In conclusion, while the Health Token has the potential to revolutionise the sharing and utilisation of health data on the web, realising this potential hinges on overcoming significant technical challenges in secure data storage and computation. The integration of FHE technologies, particularly FHEVM for Ethereum-compatible environments, represents a promising advancement towards this goal. It is poised to become a pivotal element in the widespread adoption and practical implementation of Health Tokens and may mark the beginning of a new era in secure, privacy-preserving Smart Tokens.
 
 ## Smart Cat: An Experimental Approach
 
